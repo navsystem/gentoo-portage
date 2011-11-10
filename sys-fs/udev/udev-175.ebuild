@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-175.ebuild,v 1.2 2011/11/08 16:49:35 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-175.ebuild,v 1.5 2011/11/09 22:53:09 williamh Exp $
 
 EAPI=4
 
@@ -35,9 +35,6 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="build selinux debug +rule_generator hwdb acl gudev introspection
 	keymap floppy edd doc"
-[[ ${PV} == "9999" ]] && IUSE="${IUSE} test"
-
-RESTRICT="test? ( userpriv )"
 
 COMMON_DEPEND="selinux? ( sys-libs/libselinux )
 	acl? ( sys-apps/acl dev-libs/glib:2 )
@@ -54,15 +51,14 @@ DEPEND="${COMMON_DEPEND}
 
 if [[ $PV == "9999" ]]
 then
+	RESTRICT="test? ( userpriv )"
+	IUSE="${IUSE} test"
 	DEPEND="${DEPEND}
+		dev-util/gtk-doc
 		test? ( app-text/tree )"
-fi
-
-if [[ ${PV} == "9999" ]] || use doc
-then
-	# for documentation processing with xsltproc
+else
 	DEPEND="${DEPEND}
-		dev-util/gtk-doc"
+		doc? ( dev-util/gtk-doc )"
 fi
 
 RDEPEND="${COMMON_DEPEND}
@@ -352,6 +348,16 @@ postinst_init_scripts()
 	fi
 }
 
+# This function determines if a directory is a mount point.
+# It was lifted from dracut.
+ismounted()
+{
+	while read a m a; do
+		[ "$m" = "$1" ] && return 0
+	done < "${EROOT}"/proc/mounts
+    return 1
+}
+
 pkg_postinst()
 {
 	fix_old_persistent_net_rules
@@ -433,6 +439,18 @@ pkg_postinst()
 	ewarn
 	ewarn "action_modeswitch has been removed by upstream."
 	ewarn "Please use sys-apps/usb_modeswitch."
+
+	if ismounted /usr
+	then
+		ewarn
+		ewarn "Your system has /usr on a separate partition. This means"
+		ewarn "you will need to use an initramfs to pre-mount /usr before"
+		ewarn "udev runs."
+		ewarn "This must be set up before your next reboot, or you may"
+		ewarn "experience failures which are very difficult to troubleshoot."
+		ewarn "For a more detailed explanation, see the following URL:"
+		ewarn "http://www.freedesktop.org/wiki/Software/systemd/separate-usr-is-broken"
+	fi
 
 	elog
 	elog "For more information on udev on Gentoo, writing udev rules, and"
