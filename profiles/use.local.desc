@@ -2043,6 +2043,7 @@ mail-client/thunderbird:ipc - Use inter-process communication between tabs and p
 mail-client/thunderbird:lightning - Enable calendar support
 mail-client/thunderbird:mozdom - Enable Mozilla's DOM inspector
 mail-client/thunderbird:system-sqlite - Use the system-wide dev-db/sqlite installation with secure-delete enabled
+mail-client/thunderbird:webm - Use system media-libs/libvpx for HTML5 WebM video support.
 mail-filter/amavisd-new:courier - Add courier support
 mail-filter/amavisd-new:dkim - Add DomainKeys Identified Mail support
 mail-filter/amavisd-new:qmail - Add qmail support
