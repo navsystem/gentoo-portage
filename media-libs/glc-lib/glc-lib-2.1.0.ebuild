@@ -14,7 +14,7 @@ DESCRIPTION="OpenGL Library Class"
 HOMEPAGE="http://www.glc-lib.net/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug"
 
 DEPEND="x11-libs/qt-opengl:4

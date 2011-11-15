@@ -17,7 +17,6 @@ www-client/icecat amd64 x86
 net-libs/xulrunner amd64 x86
 dev-libs/nspr amd64 x86
 dev-libs/nss amd64 x86
-media-libs/glc-lib amd64 x86
 ~media-libs/libpng-1.4.7 amd64 x86
 ~app-emulation/wine-1.3.18 amd64 x86
 
