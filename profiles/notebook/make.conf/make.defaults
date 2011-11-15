@@ -1,0 +1,35 @@
+USE="${USE} kde qt4 qt3support -qt3 postgres dbus X opengl sql svg webkit assistant jpeg bluetooth sqlite sqlite3
+tiff samba mp3 theora faac mp4 alsa x264 xvid v4l threads fbcon fbcondecor xinerama sdl lzma
+exif laptop consolekit policykit udev vorbis mad ogg truetype usb xv xcb
+gif flac mpeg mikmod spell libnotify acpi mng png mmx -pulseaudio sse sse2 lcms sasl icq jabber rdp xml gd icu xmpp
+networkmanager private-headers declarative bash-completion pm-utils vnc rdesktop system-sqlite lxde udisks -openrc systemd
+-handbook -crashreporter plymouth vaapi libkms vdpau pdfimport
+
+input_devices_evdev video_cards_intel video_cards_nouveau video_cards_radeon video_cards_vesa
+-input_devices_acecad -input_devices_aiptek -input_devices_elographics -input_devices_fpit -input_devices_joystick
+-input_devices_keyboard -input_devices_mouse -input_devices_penmount input_devices_synaptics -input_devices_tslib
+-input_devices_virtualbox -input_devices_vmmouse -input_devices_void -input_devices_wacom -video_cards_apm -video_cards_ark
+-video_cards_ast -video_cards_chips -video_cards_cirrus -video_cards_dummy -video_cards_epson -video_cards_fbdev
+-video_cards_fglrx -video_cards_geode -video_cards_glint -video_cards_i128 -video_cards_i740 -video_cards_impact
+-video_cards_mach64 -video_cards_mga -video_cards_neomagic -video_cards_newport -video_cards_nv -video_cards_nvidia
+-video_cards_r128 -video_cards_rendition -video_cards_s3 -video_cards_s3virge -video_cards_savage -video_cards_siliconmotion
+-video_cards_sis -video_cards_sisusb -video_cards_sunbw2 -video_cards_suncg14 -video_cards_suncg3 -video_cards_suncg6
+-video_cards_sunffb -video_cards_sunleo -video_cards_suntcx -video_cards_tdfx -video_cards_tga -video_cards_trident
+-video_cards_tseng -video_cards_v4l -video_cards_via -video_cards_virtualbox -video_cards_vmware -video_cards_voodoo -video_cards_xgi
+
+
+dracut_modules_plymouth
+
+"
+
+AUTOCLEAN="yes"
+FEATURES="metadata-transfer fixlafiles parallel-install"
+LINGUAS="ru en"
+LDFLAGS="-Wl,--as-needed"
+PORTAGE_NICENESS=10
+EMERGE_DEFAULT_OPTS="-j2 --keep-going --binpkg-respect-use=n"
+http_proxy="http://192.168.99.111:3128/"
+GENTOO_MIRRORS="http://mirror.yandex.ru/gentoo-distfiles"
+
+PORTAGE_NICENESS="19"
+PORTAGE_IONICE_COMMAND="ionice -c 3 -p \${PID}"

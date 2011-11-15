@@ -1,0 +1,60 @@
+app-admin/testdisk ntfs reiserfs
+dev-vcs/git -gtk perl
+media-gfx/splashutils fbcondecor
+net-fs/samba quota
+sys-fs/aufs2 inotify kernel-patch
+
+#fix update xorg
+sys-fs/udev extras
+
+#disable Xorg dependence
+media-fonts/terminus-font -pcf -X
+
+#for accemble splashutils
+media-libs/jpeg static-libs
+media-libs/lcms static-libs
+media-libs/libpng static-libs
+virtual/jpeg static-libs
+media-libs/freetype static-libs
+media-libs/libmng static-libs
+app-arch/bzip2 static static-libs
+
+app-office/openoffice java kde odk
+app-office/libreoffice java kde odk
+
+dev-libs/libgcrypt static-libs
+sys-apps/hal -crypt -X
+virtual/ffmpeg encode
+
+dev-util/qt-creator examples git mercurial perforce qml qtscript
+app-misc/mc -X slang -ncurses
+dev-vcs/subversion -dso extras
+gnome-base/gvfs gdu
+sys-block/parted device-mapper
+kde-base/kopete oscar
+media-libs/libpng apng
+app-office/openoffice -bash-completion
+net-im/psi extras
+
+dev-libs/ecore curl
+dev-libs/e_dbus connman ofono
+dev-libs/ecore -directfb
+net-im/pidgin -zeroconf
+media-libs/elementary weather
+
+app-arch/p7zip rar
+dev-db/sqlite secure-delete unlock-notify
+
+dev-vcs/git -perl -subversion
+
+#required by app-emulation/virt-manager
+app-emulation/libvirt python
+net-libs/gtk-vnc python
+net-misc/spice-gtk python
+sys-devel/gdb python
+
+x11-libs/vte python
+dev-libs/libxml2 python
+app-office/libreoffice python gtk
+app-text/poppler cairo
+net-libs/webkit-efl curl

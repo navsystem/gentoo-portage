@@ -1,0 +1,17 @@
+net-misc/networkmanager-pptp  amd64
+net-misc/networkmanager  amd64
+~sys-apps/systemd-29  amd64
+sys-apps/systemd-units  amd64
+net-dialup/ppp  amd64
+~sys-apps/util-linux-2.19.1  amd64
+<sys-fs/udev-9999  amd64
+sys-apps/dbus  amd64
+sys-kernel/linux-headers  amd64
+sys-auth/consolekit  amd64
+net-misc/modemmanager  amd64
+<sys-boot/plymouth-9999  amd64
+<sys-kernel/dracut-9999  amd64
+
+net-misc/connman amd64
+net-misc/ofono amd64
+~net-wireless/bluez-4.96 amd64

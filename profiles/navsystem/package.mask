@@ -1,0 +1,9 @@
+# mask all device-mapper for using lvm2
+sys-fs/device-mapper
+
+#>=x11-base/xorg-server-1.10
+
+# app-emulation/haspd was replaced to app-emulation/hasp
+# Please, execute rc-update del haspd && rc-update add aksusbd
+# after installing app-emulation/hasp
+app-emulation/haspd

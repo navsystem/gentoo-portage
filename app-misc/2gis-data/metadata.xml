@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>Egorov_EY@navsystem.ru</herd>
+	<use>
+		<flag name='omsk'>The map of Omsk for <pkg>app-misc/2gis</pkg></flag>
+		<flag name='nsk'>The map of Novosibirsk for <pkg>app-misc/2gis</pkg></flag>
+	</use>
+</pkgmetadata>

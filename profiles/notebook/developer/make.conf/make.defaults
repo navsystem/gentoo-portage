@@ -1,0 +1,2 @@
+MAKEOPTS="-j10"
+FEATURES="${FEATURES} buildpkg"

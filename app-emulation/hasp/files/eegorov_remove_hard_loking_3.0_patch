@@ -1,0 +1,18 @@
+diff -Nur aksparlnx-1.7-x86_64_orig/aksparpub.c aksparlnx-1.7-x86_64/aksparpub.c
+--- aksparlnx/aksparpub.c	2011-06-01 16:33:35.000000000 +0700
++++ aksparlnx/aksparpub.c	2011-06-01 16:34:16.132916064 +0700
+@@ -265,14 +265,10 @@
+ 
+     switch(cmd) {
+         case HLAPI_CALL:
+-            lock_kernel();
+             ret = hl_api_ioctl(file, cmd, arg, USER32);
+-            unlock_kernel();
+             break;
+         default:
+-            lock_kernel();
+             ret = hl_ioctl(file->f_dentry->d_inode, file, cmd, arg);
+-            unlock_kernel();
+             break;
+     }
+     return ret;

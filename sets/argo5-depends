@@ -1,0 +1,14 @@
+dev-python/PythonQt
+app-text/poppler
+x11-libs/qwt:5
+dev-libs/qextserialport
+dev-python/mailer
+media-libs/glc-lib
+dev-python/psycopg
+virtual/ooo
+media-libs/phonon
+app-emulation/hasp
+!app-emulation/haspd
+dev-python/xlwt
+app-misc/pip
+
