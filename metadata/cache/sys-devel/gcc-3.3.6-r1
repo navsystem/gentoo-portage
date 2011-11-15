@@ -8,7 +8,7 @@ GPL-2 LGPL-2.1
 The GNU Compiler Collection
 ~amd64 ~x86
 eutils fixheadtails flag-o-matic gnuconfig libtool multilib portability toolchain toolchain-funcs user versionator
-build multislot nls nptl test vanilla altivec fortran nocxx nopie boundschecking nossp bootstrap doc gcj gtk hardened libffi multilib objc
+build multislot nls nptl test vanilla altivec cxx fortran nocxx nopie boundschecking nossp bootstrap doc gcj gtk hardened libffi multilib objc
 
 >=sys-devel/gcc-config-1.4
 
