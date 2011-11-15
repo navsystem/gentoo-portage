@@ -3,7 +3,7 @@
 <pkgmetadata>
 <herd>net-im</herd>
 <maintainer>
-  <email>pva@gentoo.org</email>
+  <email>rion@notthegmail.com</email>
 </maintainer>
 <maintainer>
   <email>nikoli@lavabit.com</email>
@@ -18,6 +18,5 @@
 	<flag name='powersave'>Disable some non critical timers for much less CPU usage</flag>
 	<flag name='webkit'>Enable chatlog rendering using webkit</flag>
 	<flag name='whiteboarding'>Enable experimental interactive SVG drawing</flag>
-	<flag name='xscreensaver'>Use X screensaver protocol extension to monitor idle/active status based on mouse/keyboard events</flag>
 </use>
 </pkgmetadata>
