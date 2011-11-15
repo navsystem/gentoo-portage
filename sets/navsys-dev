@@ -1,5 +1,4 @@
 @argo5-depends
-@navsys-main
 dev-db/pgadmin3
 kde-misc/yakuake
 dev-vcs/kdesvn
