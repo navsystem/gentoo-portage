@@ -29,7 +29,7 @@ dev-libs/nss amd64 x86
 =app-portage/gentoopm-0.2 x86 amd64
 =app-portage/smart-live-rebuild-1.1.4 x86 amd64
 
-~x11-base/xorg-server-1.11.1 x86 amd64
+~x11-base/xorg-server-1.11.2 x86 amd64
 ~x11-base/xorg-drivers-1.11 x86 amd64
 
 ~dev-db/pgadmin3-1.14.0 x86 amd64
