@@ -11,7 +11,7 @@ net-libs/xulrunner amd64 x86
 dev-libs/nspr amd64 x86
 dev-libs/nss amd64 x86
 media-libs/glc-lib amd64 x86
-~x11-base/xorg-server-1.11.1 x86 amd64
+~x11-base/xorg-server-1.11.2 x86 amd64
 ~x11-base/xorg-drivers-1.11 x86 amd64
 ~dev-db/pgadmin3-1.14.0 x86 amd64
 dev-vcs/hgview x86 amd64
