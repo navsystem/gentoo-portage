@@ -1,5 +1,5 @@
 dev-libs/icu
-!sys-apps/gdisk
+
 0
 mirror://sourceforge/project/gptfdisk/gptfdisk/0.8.0/gptfdisk-0.8.0.tar.gz
 
