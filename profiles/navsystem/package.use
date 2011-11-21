@@ -60,3 +60,4 @@ app-text/poppler cairo
 net-libs/webkit-efl curl
 
 app-misc/2gis-data omsk
+app-emulation/libvirt -policykit
