@@ -8,7 +8,7 @@ BSD-2
 OpenRC manages the services, startup and shutdown of a host
 
 eutils flag-o-matic git-2 multilib pam portability toolchain-funcs user
-debug elibc_glibc ncurses pam selinux unicode kernel_linux kernel_FreeBSD
+debug elibc_glibc ncurses pam selinux unicode kernel_linux kernel_FreeBSD static-libs
 
 
 

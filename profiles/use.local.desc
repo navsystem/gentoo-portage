@@ -562,6 +562,8 @@ app-misc/freemind:groovy - Build plugin for scripting via Groovy
 app-misc/freemind:latex - Build plugin for inserting mathematical formulas in LaTeX syntax
 app-misc/freemind:pdf - Build plugin for exporting mindmaps to SVG and PDF
 app-misc/freemind:svg - Build plugin for exporting mindmaps to SVG and PDF
+app-misc/gcstar:stats - Enable statistics reporting
+app-misc/gcstar:tellico - Enable support for kde-misc/tellico files
 app-misc/geneweb:ocamlopt - Enable ocamlopt support (dev-lang/ocaml native code compiler)
 app-misc/geoclue:geonames - Install geonames.org provider
 app-misc/geoclue:gpsd - Install sci-geosciences/gpsd provider
@@ -1055,6 +1057,7 @@ dev-java/rxtx:lfd - Installs and uses LockFileServer daemon (lfd)
 dev-java/sun-jdk:derby - Enable Installation of Bundled Derby (Java DB)
 dev-java/sun-jdk:jce - Enable Java Cryptographic Extension Unlimited Strength Policy files
 dev-java/sun-jre-bin:jce - Enable Java Cryptographic Extension Unlimited Strength Policy files
+dev-java/swt:webkit - Embedded browser support via net-libs/webkit-gtk:2, replacing former xulrunner-based browser.
 dev-java/swt:xulrunner - Embedded browser support via xulrunner-1.9 (1.8 for swt-3.3). Xulrunner 2.0 is not supported, will be replaced by webkit in 3.7.
 dev-lang/bas:lr0 - Use the LR0 parser instead of the recursive descending parser
 dev-lang/erlang:halfword - Enable halfword emulator
@@ -1194,6 +1197,7 @@ dev-libs/igraph:gprof - Enables profiling support
 dev-libs/igraph:lapack - Use external lapack numerical library
 dev-libs/jemalloc:stats - Enable statistics calculation/reporting
 dev-libs/json-glib:introspection - Use dev-libs/gobject-introspection for introspection
+dev-libs/libappindicator:introspection - Use dev-libs/gobject-introspection for introspection
 dev-libs/libburn:track-src-odirect - Read track input with O_DIRECT (see man 2 open), this may deliver a better write performance in some situations
 dev-libs/libcdio:minimal - Only build the libcdio library and little more, just to be used to link against from multimedia players. With this USE flag enabled, none of the command-line utilities are built, nor is the CDDA library.
 dev-libs/libcgroup:daemon - Install the configuration tools and init/config files.
@@ -1411,6 +1415,7 @@ dev-python/scrapy:ibl - Use Instace Based Learning alrogirithm for automatic ext
 dev-python/spyder:ipython - Add support for dev-python/ipython
 dev-python/spyder:matplotlib - Add support for dev-python/matplotlib
 dev-python/spyder:numpy - Add support for dev-python/numpy
+dev-python/spyder:pep8 - Add support for dev-python/pep8
 dev-python/spyder:pyflakes - Add support for dev-python/pyflakes
 dev-python/spyder:pylint - Add support for dev-python/pylint
 dev-python/spyder:rope - Add support for sci-libs/rope
@@ -1526,7 +1531,10 @@ dev-util/cppcheck:htmlreport - install cppcheck-htmlreport
 dev-util/ctags:ada - Enable Ada support
 dev-util/dialog:minimal - Disable library, install command-line program only
 dev-util/geany:vte - Enable Terminal support (x11-libs/vte)
+dev-util/geany-plugins:debugger - Enable the debugger plugin which interfaces with sys-devel/gdb
+dev-util/geany-plugins:devhelp - Enable the devhelp plugin which integrates dev-util/devhelp
 dev-util/geany-plugins:enchant - Enable spell checking using enchant
+dev-util/geany-plugins:gpg - Enable geanypg plugin which integrates GPG using app-crypt/gpgme
 dev-util/geany-plugins:gtkspell - Use gtkspell for dictionary support
 dev-util/geany-plugins:soup - Enable updatechecker plugin which requires net-libs/libsoup
 dev-util/geany-plugins:webkit - Enable webhelper plugin which requires net-libs/webkit-gtk
@@ -1641,7 +1649,6 @@ games-arcade/lbreakout2:themes - Install additional themes
 games-arcade/moleinvasion:music - Download and install the music files
 games-arcade/slimevolley:net - Enable network support
 games-arcade/smc:music - Download and install the music files
-games-arcade/stepmania:force-oss - Force using OSS
 games-arcade/triplexinvaders:psyco - psyco python accelerator
 games-arcade/tuxanci:physfs - Use dev-games/physfs instead of dev-libs/libzip to load compressed data
 games-arcade/tuxanci:sound - Enable sound
@@ -1786,6 +1793,7 @@ gnome-base/gvfs:archive - Enables support for accessing files in archives transp
 gnome-base/gvfs:bluray - Enable playback of Blu-ray filesystems using media-libs/libbluray
 gnome-base/gvfs:fuse - Enables fuse mount points in $HOME/.gvfs for legacy application access
 gnome-base/gvfs:gdu - Enable sys-apps/gnome-disk-utility integration
+gnome-base/gvfs:gnome - Enable support for reading settings from gnome-base/gconf and for the special network:/// URL
 gnome-base/gvfs:http - Enable the HTTP/DAV backend using net-libs/libsoup-gnome
 gnome-base/gvfs:udev - Enable udev base replacement code for cdda feature
 gnome-base/libgnomecanvas:glade - Enable glade support
@@ -2307,6 +2315,7 @@ media-libs/freeverb3:sse3 - Enable SSE3 support
 media-libs/freeverb3:sse4 - Enable SSE4 support
 media-libs/gegl:umfpack - Enable sparse solving via sci-libs/umfpack.
 media-libs/giflib:rle - Build converters for RLE format (utah raster toolkit)
+media-libs/gmtk:dconf - Enable support for gnome-base/dconf
 media-libs/grilo:introspection - Use dev-libs/gobject-introspection for introspection
 media-libs/grilo:network - Enable network access for media discovery using net-libs/libsoup
 media-libs/grilo:test-ui - Build and install a test UI for the library
@@ -2367,6 +2376,7 @@ media-libs/mesa:gbm - Enable the Graphics Buffer Manager for EGL on KMS.
 media-libs/mesa:gles - Enable GLES support.
 media-libs/mesa:llvm - Enable LLVM backend for Gallium3D.
 media-libs/mesa:openvg - Enable the OpenVG 2D acceleration API for Gallium3D.
+media-libs/mesa:osmesa - Build the Mesa library for off-screen rendering.
 media-libs/mesa:pax_kernel - Enable if the user plans to run the package under a pax enabled hardened kernel
 media-libs/mesa:pic - disable optimized assembly code that is not PIC friendly
 media-libs/mesa:shared-dricore - Enable sharing of common code for classic DRI drivers.
@@ -2566,7 +2576,7 @@ media-sound/gmpc:xspf - Enable support for reading and saving XSPF playlists
 media-sound/gmusicbrowser:webkit - Enables gtk WebKit support
 media-sound/google-musicmanager:log - Enables advanced logging through dev-libs/log4cxx
 media-sound/gpodder:webkit - Enable the webkit rendering engine for HTML episode shownotes
-media-sound/guayadeque:indicate - App indicator support via dev-libs/libindicate
+media-sound/guayadeque:ayatana - Build in support for Ayatana notification using the libindicate plugin.
 media-sound/herrie:http - Enable http streaming
 media-sound/herrie:xspf - Enable support for reading and saving XSPF playlists
 media-sound/hydrogen:archive - Use libarchive instead of libtar
@@ -2623,6 +2633,8 @@ media-sound/pianobooster:fluidsynth - Enable Fluidsynth MIDI software synthesis
 media-sound/picard:coverart - Install plugin for direct coverart dowload
 media-sound/pms:regex - Enable regular expression searches using dev-libs/boost
 media-sound/podcatcher:bittorrent - Enable support for bittorrent downloads
+media-sound/pragha:glyr - Enable music metadata searchengine support using media-libs/glyr
+media-sound/pragha:lastfm - Enable last.fm support using media-libs/libclastfm
 media-sound/puddletag:cover - Enables editing of FLAC cover art
 media-sound/puddletag:musicbrainz - Enables support for musicbrainz, needs dev-python/python-musicbrainz
 media-sound/puddletag:quodlibet - Enables support for editing media-sound/quodlibet databases
@@ -2827,6 +2839,7 @@ media-video/ffmpeg:vdpau - Enables VDPAU decoders (requires nVidia video cards t
 media-video/ffmpeg:vis - Adds support for SIMD optimizations for UltraSPARC processors.
 media-video/ffmpeg:vpx - Enables vp8 codec support using libvpx: Decoding vp8 does not require this to be enabled but libvpx can also be used for decoding; encoding vp8 requires this useflag to be enabled though.
 media-video/ffmpeg2theora:kate - Adds support for Ogg Kate subtitles via libkate.
+media-video/gnome-mplayer:dconf - Enable support for gnome-base/dconf
 media-video/google2srt:html - Install HTML documentation
 media-video/griffith:csv - Enable proper support for csv import (respectively auto-detection encoding of csv files)
 media-video/h264enc:ogm - Support for OGM container format
@@ -2862,6 +2875,17 @@ media-video/libav:vis - Adds support for SIMD optimizations for UltraSPARC proce
 media-video/libav:vpx - Enable vp8 encoding support using libvpx.
 media-video/lives:libvisual - Enable libvisual support
 media-video/mjpegtools:sdlgfx - Enables y4mhist to display a graphical histogram
+media-video/mjpg-streamer:input_control - Plugin giving ability to control camera movement (only specific cameras)
+media-video/mjpg-streamer:input_file - Plugin that watches given directory and send it's content
+media-video/mjpg-streamer:input_testpicture - Plugin for sending compiled in, test pictures
+media-video/mjpg-streamer:input_uvc - Plugin that sends video stream from UVC compatible camera
+media-video/mjpg-streamer:output_autofocus - Auto focusing plugin
+media-video/mjpg-streamer:output_file - Plugin that saves received content under given location
+media-video/mjpg-streamer:output_http - Small HTTP server plugin which sends WWW directory content and streams image content
+media-video/mjpg-streamer:output_rtsp - Plugin which provides a mechanism to take snapshots with a trigger from a UDP packet
+media-video/mjpg-streamer:output_udp - Plugin receiving content over UDP and storing to a directory
+media-video/mjpg-streamer:v4l - Uses media-libs/libv4l function mapping for input_uvc plugin
+media-video/mjpg-streamer:www - Installs WWW content
 media-video/motiontrack:multiprocess - Enables multi-process support (SMP/cluster) for motiontrack programs
 media-video/mplayer:3dnowext - Enable 3dnowext cpu instructions
 media-video/mplayer:amr - Enables Adaptive Multi-Rate format support
@@ -3351,7 +3375,7 @@ net-im/centerim:gadu - Enable support for the Gadu-Gadu protocol
 net-im/centerim:irc - Enable support for the IRC protocol
 net-im/centerim:lj - Enable support for the LiveJournal weblog system
 net-im/centerim:otr - Enable encrypted conversations
-net-im/choqok:indicate - Support for dev-libs/libindicate-qt notifications
+net-im/choqok:ayatana - Build in support for Ayatana notification using the libindicate-qt plugin.
 net-im/climm:otr - Enable encrypted conversations
 net-im/ejabberd:captcha - Support for CAPTCHA Forms (XEP-158)
 net-im/ejabberd:mod_irc - Build irc gateway
@@ -4979,6 +5003,7 @@ x11-base/xorg-server:xnest - Build the Xnest server
 x11-base/xorg-server:xorg - Build the Xorg X server (HIGHLY RECOMMENDED)
 x11-base/xorg-server:xvfb - Build the Xvfb server
 x11-drivers/ati-drivers:modules - Build the kernel modules
+x11-drivers/ati-drivers:opencl - Install OpenCL libraries
 x11-drivers/ati-drivers:qt4 - Install qt4 dependent optional tools (e.g Catalyst Control Panel)
 x11-drivers/xf86-video-intel:sna - Enable SandyBridge's New Acceleration (useful on all chipsets, not just SandyBridge)
 x11-drivers/xf86-video-qxl:xspice - Build the xspice driver
@@ -5230,4 +5255,5 @@ xfce-extra/xfce4-mpc-plugin:libmpd - Build using media-libs/libmpd backend, inst
 xfce-extra/xfce4-playercontrol-plugin:audacious - Enable Audacious support
 xfce-extra/xfce4-playercontrol-plugin:mpd - Enable Music Player Daemon support
 xfce-extra/xfce4-sensors-plugin:nvidia - Use nvctrl to obtain Nvidia GPU temperature value
+xfce-extra/xfce4-soundmenu-plugin:glyr - Enable music metadata searchengine support using media-libs/glyr
 xfce-extra/xfce4-soundmenu-plugin:lastfm - Enable last.fm support using media-libs/libclastfm

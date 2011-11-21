@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13250 2011/11/17 16:11:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13261 2011/11/19 19:01:27 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,9 +31,32 @@
 
 #--- END OF EXAMPLES ---
 
-# Tony Vroon <chainsaw@gentoo.org> (15 Nov 2011)
-# Fails to load any modules on hardened, needs more love
-=net-misc/asterisk-10.0.0*
+# Markos Chandras <hwoarang@gentoo.org> (19 Nov 2011)
+# Masking rc release
+~dev-util/qt-creator-2.4.0_rc
+
+# Samuli Suominen <ssuominen@gentoo.org> (19 Nov 2011)
+# Incompatible with security bumped fmod wrt #390919
+# Fails to fetch game files wrt #308883
+# Broken permission handling wrt #300284
+# Removal in 30 days
+games-strategy/savage2-bin
+
+# Samuli Suominen <ssuominen@gentoo.org> (19 Nov 2011)
+# Start masking and removing low hanging reverse dependencies 
+# of (obsolete) gnome-base/gnome-vfs package
+#
+# Removal in 30 days
+app-cdr/serpentine
+gnome-extra/gcursor
+x11-misc/gtodo
+x11-libs/libelysium
+x11-libs/libelysiumui
+net-misc/emphetamine
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (19 Nov 2011)
+# Keep masked until the distfile is published somewhere sane.
+=sys-devel/crossdev-20111118
 
 # Christoph Junghans <ottxor@gentoo.org> (15 Nov 2011)
 # current version of google-talkplugin never clear what you get
@@ -157,10 +180,6 @@ x11-themes/polyester
 # Mask for testing and until we can add all ruby targets again.
 =dev-ruby/rake-0.9*
 
-# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (31 Oct 2011)
-# mask development release
-=x11-drivers/xf86-video-intel-2.16.902
-
 # Markos Chandras <hwoarang@gentoo.org> (31 Oct 2011)
 # Masking 4.8 rc release. The ebuilds are still work in
 # progress.
@@ -241,18 +260,6 @@ dev-java/jnlp-bin
 # This package is obsolete and depends on dev-java/jnlp-bin
 # (bug https://bugs.gentoo.org/show_bug.cgi?id=377967)
 app-misc/openjnlp
-
-# Jeroen Roovers <jer@gentoo.org> (18 Oct 2011)
-# Masked for removal on 18 Nov 2011
-# https://bugs.gentoo.org/377695
-sys-apps/lsparisc
-
-# Michael Sterrett <mr_bones_@gentoo.org> (17 Oct 2011)
-# Masked for removal on 20111116
-# https://bugs.gentoo.org/show_bug.cgi?id=295776
-# https://bugs.gentoo.org/show_bug.cgi?id=308375
-# https://bugs.gentoo.org/show_bug.cgi?id=383101
-games-arcade/stepmania
 
 # Markos Chandras <hwoarang@gentoo.org> (16 Oct 2011)
 # Does not build with newer kernels. Open bug for version bump
@@ -574,11 +581,6 @@ dev-php/roadsend-php
 >=perl-core/ExtUtils-ParseXS-3.0
 >=virtual/perl-ExtUtils-ParseXS-3.0
 
-# Tomáš Chvátal <scarabeus@gentoo.org> (28 Aug 2011)
-# Masked until documentation guys consolidate the guide and approve
-# it for usage.
-~sys-boot/grub-1.99
-
 # Ole Markus With <olemarkus@gentoo.org> (21 Aug 2011)
 # Masking php:5.2. No longer maintained by upstream
 # Will be removed in a few months, depending on how much noise this will create
@@ -825,11 +827,6 @@ gnome-extra/sushi
 # Tim Harder <radhermit@gentoo.org> (3 Jun 2011)
 # Mask release candidates
 =app-office/scribus-1.4.0_rc*
-
-# Markos Chandras <hwoarang@gentoo.org> (28 May 2011)
-# emesene-2 is on early stage of development and very 
-# unstable
-=net-im/emesene-2*
 
 # Michael Sterrett <mr_bones_@gentoo.org> (25 May 2011)
 # Needs an old version of bison that isn't in the tree anymore.
@@ -1078,38 +1075,6 @@ app-crypt/hmaccalc
 # Masked for testing, and some testsuite failures.
 # Bug 313769
 =sys-libs/db-5.0*
-
-# Michael Sterrett <mr_bones_@gentoo.org> (14 Apr 2010)
-# gtk+-1 is old and nasty.
-# Will be removed 20111116 
-# Read man 5 portage about package.unmask to unmask the package locally.
-games-arcade/cervi
-games-emulation/darcnes
-games-emulation/epsxe
-games-emulation/gtuxnes
-games-emulation/infones
-games-emulation/pcsx
-games-emulation/pcsx2
-games-emulation/ps2emu-cddvdlinuz
-games-emulation/ps2emu-cdvdiso
-games-emulation/ps2emu-dev9null
-games-emulation/ps2emu-gssoft
-games-emulation/ps2emu-padxwin
-games-emulation/ps2emu-spu2null
-games-emulation/ps2emu-usbnull
-games-emulation/psemu-cdriso
-games-emulation/psemu-padjoy
-games-emulation/psemu-padxwin
-games-emulation/psemu-peopssoftgpu
-games-emulation/psemu-peopsspu
-games-fps/wmquake
-games-kids/gtans
-games-mud/gMOO
-games-puzzle/codebreaker
-games-puzzle/glickomania
-games-puzzle/xpuyopuyo
-games-simulation/corewars
-games-strategy/xscorch
 
 # Pacho Ramos <pacho@gentoo.org> (10 Apr 2010)
 # This version provides packages from testing to let people using
