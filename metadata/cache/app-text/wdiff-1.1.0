@@ -1,7 +1,7 @@
 sys-apps/diffutils sys-apps/less test? ( app-misc/screen )
 sys-apps/diffutils sys-apps/less
 0
-mirror://gnu/wdiff/wdiff-1.0.1.tar.gz
+mirror://gnu/wdiff/wdiff-1.1.0.tar.gz
 
 http://www.gnu.org/software/wdiff/
 GPL-3
