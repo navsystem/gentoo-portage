@@ -1418,8 +1418,9 @@ dev-python/spyder:numpy - Add support for dev-python/numpy
 dev-python/spyder:pep8 - Add support for dev-python/pep8
 dev-python/spyder:pyflakes - Add support for dev-python/pyflakes
 dev-python/spyder:pylint - Add support for dev-python/pylint
-dev-python/spyder:rope - Add support for sci-libs/rope
+dev-python/spyder:rope - Add support for dev-python/rope
 dev-python/spyder:scipy - Add support for sci-libs/scipy
+dev-python/spyder:sphinx - Add support for dev-python/sphinx
 dev-python/sympy:imaging - Add support for dev-python/imaging
 dev-python/sympy:ipython - Add support for dev-python/ipython
 dev-python/sympy:mathml - Add support for mathml
@@ -4130,11 +4131,6 @@ net-voip/ekiga:static - Statically link to opal and ptlib
 net-voip/ekiga:xcap - Enable XML Configuration Access Protocal
 net-voip/linphone:video - Enable video support (display/capture)
 net-voip/sflphone:iax - Support for IAX (Inter Asterisk eXchange)
-net-voip/telepathy-connection-managers:irc - Enable Internet Relay Chat (IRC) support.
-net-voip/telepathy-connection-managers:jabber - Enable XMPP protocol handler (this is also Google Talk).
-net-voip/telepathy-connection-managers:sip - Enable SIP/SIMPLE messaging and calling.
-net-voip/telepathy-connection-managers:yahoo - Enable Yahoo! messaging support.
-net-voip/telepathy-connection-managers:zeroconf - Enable Link-Local Messaging via the zeroconf or Bonjour protocol.
 net-voip/yate:h323 - Build H.323 Channel plugin
 net-voip/yate:ilbc - Build ILBC codec plugin
 net-voip/yate:sctp - Support for Stream Control Transmission Protocol
@@ -4660,6 +4656,7 @@ sys-devel/gdb:multitarget - Support all known targets in one gdb binary
 sys-devel/gettext:git - When running `autopoint`, use git to store the internal development files; this requires git at runtime, but will be faster/smaller than raw archives
 sys-devel/kgcc64:multislot - Allow for SLOTs to include minor version (eg. 3.3.4 instead of just 3.3)
 sys-devel/libperl:ithreads - Enable Perl threads, has some compatibility problems
+sys-devel/llvm:gold - Build the gold linker plugin
 sys-devel/llvm:llvm-gcc - Build LLVM with sys-devel/llvm-gcc
 sys-devel/llvm:multitarget - Build all host targets (default: host only)
 sys-devel/llvm:udis86 - Enable support for dev-libs/udis86 disassembler library
