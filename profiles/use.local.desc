@@ -2545,10 +2545,10 @@ media-sound/audacity:soundtouch - Enables soundtouch library support
 media-sound/audacity:twolame - Enables twolame support (MPEG Audio Layer 2 encoder)
 media-sound/audacity:vamp - Enables vamp plugins support (Audio analysing plugins)
 media-sound/banshee:boo - Use external Boo instead of the bundled one
+media-sound/banshee:bpm - Build beats per minute detection extension
 media-sound/banshee:cdda - Build with audio CD support
 media-sound/banshee:daap - Build with Daap support
 media-sound/banshee:karma - Build with karma support
-media-sound/banshee:podcast - Build with podcasting support
 media-sound/banshee:web - Enable support for plugins that access web-based services such as Amazon and wikipedia (requires net-libs/webkit-gtk)
 media-sound/banshee:youtube - Enable the Youtube plugin
 media-sound/clementine:ayatana - Build in support for Ayatana notification using the libindicate-qt plugin.
@@ -3472,6 +3472,11 @@ net-im/qutim:mrim - Enable mrim plugin
 net-im/qutim:vkontakte - Enable vkontakte plugin
 net-im/qutim:yandexnarod - Enable yanderx.narod plugin
 net-im/skype:qt-static - Installs binaries statically linked to Qt
+net-im/telepathy-connection-managers:irc - Enable Internet Relay Chat (IRC) support.
+net-im/telepathy-connection-managers:jabber - Enable XMPP protocol handler (this is also Google Talk).
+net-im/telepathy-connection-managers:sip - Enable SIP/SIMPLE messaging and calling.
+net-im/telepathy-connection-managers:yahoo - Enable Yahoo! messaging support.
+net-im/telepathy-connection-managers:zeroconf - Enable Link-Local Messaging via the zeroconf or Bonjour protocol.
 net-im/telepathy-logger:introspection - Use dev-libs/gobject-introspection for introspection
 net-im/telepathy-mission-control:upower - Use sys-power/upower to detect suspend and resume
 net-im/tkabber:extras - Enables extra non official patches
@@ -4475,6 +4480,7 @@ sys-apps/memtest86:serial - Compile with serial console support
 sys-apps/memtest86+:floppy - Install a script to create floppy disks containing memtest86+ binaries.
 sys-apps/memtest86+:serial - Compile with serial console support
 sys-apps/moreutils:perl - Install scripts written in Perl
+sys-apps/net-tools:old-output - use old ifconfig output style (useful for when new output breaks scripts)
 sys-apps/pacman:gpg - Support verifying packages signed with GPG using app-crypt/gpgme
 sys-apps/paludis:pbins - Enable binary package support. Adds dependency upon app-arch/libarchive
 sys-apps/paludis:pink - Use a less boring colourscheme than the default
