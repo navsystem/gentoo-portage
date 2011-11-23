@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.9.4.ebuild,v 1.3 2011/11/21 03:11:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.9.4.ebuild,v 1.5 2011/11/22 09:20:51 xarthisius Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ DESCRIPTION="OpenRC manages the services, startup and shutdown of a host"
 HOMEPAGE="http://www.gentoo.org/proj/en/base/openrc/"
 if [[ ${PV} != "9999" ]] ; then
 	SRC_URI="mirror://gentoo/${P}.tar.bz2"
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 fi
 
 LICENSE="BSD-2"
@@ -418,10 +418,6 @@ pkg_postinst() {
 
 	# update the dependency tree after touching all files #224171
 	[[ "${ROOT}" = "/" ]] && "${ROOT}/${LIBDIR}"/rc/bin/rc-depend -u
-
-	# baselayout leaves behind a lot of .keep files, so let's clean them up
-	find "${ROOT}"/lib*/rcscripts/ -name .keep -exec rm -f {} +
-	find "${ROOT}"/lib*/rcscripts/ -depth -type d -exec rmdir {} + 2>/dev/null
 
 	elog "You should now update all files in /etc, using etc-update"
 	elog "or equivalent before restarting any services or this host."
