@@ -1,8 +1,8 @@
-net-libs/libnet tcpd? ( sys-apps/tcp-wrappers ) dev-lang/perl
-net-libs/libnet tcpd? ( sys-apps/tcp-wrappers )
+tcpd? ( sys-apps/tcp-wrappers ) dev-lang/perl
+tcpd? ( sys-apps/tcp-wrappers )
 0
-http://www.rutschle.net/tech/sslh-1.7a.tar.gz
-
+http://www.rutschle.net/tech/sslh-1.10.tar.gz
+test
 http://www.rutschle.net/tech/sslh.shtml
 GPL-2
 SSLH lets one accept both HTTPS and SSH connections on the same port
@@ -12,7 +12,7 @@ tcpd
 
 
 
-2
+4
 
 compile install prepare
 
