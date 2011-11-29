@@ -1031,6 +1031,7 @@ dev-java/ibm-jdk-bin:javacomm - Enable Java Communications API support
 dev-java/icedtea:cacao - Use the CACAO virtual machine instead of HotSpot on x86, amd64 or SPARC architectures.
 dev-java/icedtea:hs20 - Use the new version of HotSpot (20).
 dev-java/icedtea:jamvm - Use the JamVM virtual machine instead of HotSpot.
+dev-java/icedtea:jbootstrap - If possible, recompile the final IcedTea executables with itself.
 dev-java/icedtea:nio2 - Enable backport of NIO2 to OpenJDK6.
 dev-java/icedtea:nsplugin - Enable browser plugin (NPPlugin), requires also the webstart flag to be enabled.
 dev-java/icedtea:nss - Enable NSS security provider support.
@@ -4280,6 +4281,7 @@ sci-geosciences/googleearth:qt-bundled - Use bundled Qt4 libraries instead of sy
 sci-geosciences/gpsd:ntp - Enable net-misc/ntp shared memory interface and PPS kernel support for GPS time
 sci-geosciences/grass:gmath - Enable gmath wrapper for BLAS/Lapack (virtual/blas, virtual/lapack)
 sci-geosciences/mapnik:gdal - Enable sci-libs/gdal library support
+sci-geosciences/mapnik:geos - Enable sci-libs/geos library support
 sci-geosciences/mapnik:nobfonts - Enable Dejavu fonts instead of built-in fonts
 sci-geosciences/mapserver:gdal - Enable sci-libs/gdal library support
 sci-geosciences/mapserver:geos - Enable sci-libs/geos library support
