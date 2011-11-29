@@ -1,5 +1,5 @@
-net-misc/networkmanager-pptp  amd64
-net-misc/networkmanager  amd64
+<net-misc/networkmanager-pptp-0.9  amd64
+<net-misc/networkmanager-0.9  amd64
 ~sys-apps/systemd-29  amd64
 sys-apps/systemd-units  amd64
 net-dialup/ppp  amd64
