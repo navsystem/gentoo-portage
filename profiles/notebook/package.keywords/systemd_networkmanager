@@ -15,3 +15,4 @@ net-misc/modemmanager  amd64
 net-misc/connman amd64
 net-misc/ofono amd64
 ~net-wireless/bluez-4.96 amd64
+~net-wireless/wpa_supplicant-0.7.3 amd64
