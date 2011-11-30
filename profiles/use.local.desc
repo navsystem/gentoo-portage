@@ -922,6 +922,7 @@ dev-db/postgresql-base:pg-intdatetime - Enable --enable-integer-datetimes config
 dev-db/postgresql-base:pg_legacytimestamp - Use double precision floating-point numbers instead of 64-bit integers for timestamp storage.
 dev-db/postgresql-server:pg_legacytimestamp - Use double precision floating-point numbers instead of 64-bit integers for timestamp storage.
 dev-db/postgresql-server:uuid - Enable server side UUID generation (via dev-libs/ossp-uuid)
+dev-db/redis:jemalloc - Use dev-libs/jemalloc for allocations.
 dev-db/redis:tcmalloc - Use the dev-util/google-perftools libraries to replace the malloc() implementation with a possibly faster one.
 dev-db/spatialite:geos - Add the sci-libs/geos library for exact topological tests
 dev-db/spatialite:proj - Add the sci-libs/proj library for reprojection features
