@@ -43,3 +43,7 @@ dev-vcs/hgview x86 amd64
 ~app-emulation/spice-protocol-0.8.2 x86 amd64
 
 ~app-emulation/hasp-3.2_p7 x86 amd64
+sys-block/megarc amd64
+sys-block/megamgr amd64
+sys-block/megactl amd64
+sys-block/megacli amd64
