@@ -7,14 +7,14 @@ http://open-mesh.net/
 GPL-2
 Better approach to mobile Ad-Hoc networking
 ~amd64 ~x86
-eutils multilib portability toolchain-funcs user
+multilib toolchain-funcs
 
 
 
 
+2
 
-
-compile install unpack
+compile install prepare
 
 
 
