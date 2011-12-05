@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13293 2011/11/30 16:29:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13302 2011/12/04 06:43:11 eras Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,37 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Eray Aslan <eras@gentoo.org> (04 Dec 2011)
+# Masking rc release
+~net-mail/dovecot-2.1_rc
+
+# Samuli Suominen <ssuominen@gentoo.org> (02 Dec 2011)
+# Still using deprecated thunar-vfs compability library.
+# Masking for removal in 30 days per advise from upstream.
+# Use file-roller as replacement, or use squeeze from Xfce git
+# and help upstream with development by providing patches.
+app-arch/squeeze
+
+# Bernard Cafarelli <voyageur@gentoo.Org> (02 Dec 2011)
+# Last rites, no longer supported upstream, multiple Gentoo bugs open
+# Replacements: sys-devel/dragonegg, sys-devel/clang
+# Removal in 30 days, bug #392951
+sys-devel/llvm-gcc
+
+# Torsten Veller <tove@gentoo.org> (02 Dec 2011)
+# Mask DBD-SQLite for testing
+=dev-perl/DBD-SQLite-1.350.0
+
+# Andreas K. Huettel <dilfridge@gentoo.org> (1 Dec 2011)
+# The phonon xine backend is unmaintained and makes trouble 
+media-libs/phonon-xine
+
+# Torsten Veller <tove@gentoo.org> (01 Dec 2011)
+# Mask dev-perl/Test-SimpleUnit for removal
+# It was removed from CPAN. Test-SimpleUnit was added seven years ago for a
+# package that never made it into the tree
+dev-perl/Test-SimpleUnit
 
 # Samuli Suominen <ssuominen@gentoo.org> (30 Nov 2011)
 # Everything is (or should be) using slotted vala by now
@@ -196,12 +227,6 @@ net-p2p/bittornado
 # It's dead Jim.
 games-fps/fuhquake-bin
 
-# Bernard Cafarelli <voyageur@gentoo.org> (9 Nov 2011)
-# Mask release candidates
-=sys-devel/llvm-3.0_rc*
-=sys-devel/clang-3.0_rc*
-=sys-devel/dragonegg-3.0_rc*
-
 # Andreas K. Huettel <dilfridge@gentoo.org> (8 Nov 2011)
 # Dead project, and has started crashing KDE apps, see bug 388261 and
 # the comments on its homepage. Masked for lastriting
@@ -232,11 +257,6 @@ x11-themes/polyester
 =net-misc/radvd-1.7
 =net-misc/radvd-1.8
 =net-misc/radvd-1.8.1
-
-# Jeroen Roovers <jer@gentoo.org> (04 Nov 2011)
-# Masked www-client/opera snapshots
-# http://my.opera.com/desktopteam/blog/2011/11/04/opera-11-60
->www-client/opera-11.60.1147
 
 # Alexis Ballier <aballier@gentoo.org> (04 Nov 2011)
 # Pre-releases of vlc 1.2. Mask it until final version is out
@@ -348,8 +368,6 @@ dev-python/pypax
 =dev-ruby/ruby-activeldap-1.2.1
 
 # Michael Sterrett <mr_bones_@gentoo.org> (29 Sep 2011)
-# Don't use this on production boxes.  This version of
-# syslog-ng leaks memory with some configs, etc.
 # This version is added for ebuild testing only.
 # Bug reports about anything other than the package
 # install should be directed upstream at:

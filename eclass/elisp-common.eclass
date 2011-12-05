@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.76 2011/10/09 09:10:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.78 2011/12/03 20:43:21 ulm Exp $
 #
 # @ECLASS: elisp-common.eclass
 # @MAINTAINER:
@@ -329,7 +329,7 @@ elisp-site-regen() {
 		return 1
 	fi
 
-	einfon "Regenerating site-gentoo.el for GNU Emacs (${EBUILD_PHASE}) ..."
+	ebegin "Regenerating site-gentoo.el for GNU Emacs (${EBUILD_PHASE})"
 
 	# Until January 2009, elisp-common.eclass sometimes created an
 	# auxiliary file for backwards compatibility. Remove any such file.
@@ -376,10 +376,11 @@ elisp-site-regen() {
 		# was actually no change.
 		# A case is a remerge where we have doubled output.
 		rm -f "${T}"/site-gentoo.el
-		echo " no changes."
+		eend
+		einfo "... no changes."
 	else
 		mv "${T}"/site-gentoo.el "${sitelisp}"/site-gentoo.el
-		echo
+		eend
 		case ${#sflist[@]} in
 			0) ewarn "... Huh? No site initialisation files found." ;;
 			1) einfo "... ${#sflist[@]} site initialisation file included." ;;
