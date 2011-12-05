@@ -1,7 +1,7 @@
 media-libs/libsdl[video] media-libs/sdl-ttf media-libs/sdl-image[png] media-fonts/dejavu || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 sys-devel/libtool
 media-libs/libsdl[video] media-libs/sdl-ttf media-libs/sdl-image[png] media-fonts/dejavu
 0
-mirror://sourceforge/xye/xye-0.11.2.tar.gz
+mirror://sourceforge/xye/xye-0.12.0.tar.gz
 
 http://xye.sourceforge.net/
 ZLIB
