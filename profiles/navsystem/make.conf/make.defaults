@@ -1,4 +1,4 @@
-USE="${USE} kde qt4 qt3support -qt3 postgres dbus X opengl sql svg webkit assistant jpeg bluetooth sqlite sqlite3
+USE="${USE} kde qt4 qt3support -qt3 postgres dbus dvd X opengl sql svg webkit assistant jpeg bluetooth sqlite sqlite3
 tiff samba mp3 theora faac mp4 alsa x264 xvid v4l v4l2 threads fbcon fbcondecor freetds xinerama sdl lzma ieee1394
 exif semantic-desktop laptop consolekit mysql mssql policykit subversion udev vorbis mad ogg truetype usb ppds xv xcb
 gif flac mpeg mikmod spell libnotify acpi mng png mmx -pulseaudio spice sse sse2 lcms sasl icq jabber rdp xml gd icu xmpp virt-network apache2
