@@ -1,4 +1,4 @@
->=virtual/jdk-1.4 sys-apps/findutils app-arch/unzip app-admin/eselect-ecj >=dev-java/java-config-2.1.9-r1
+<virtual/jdk-1.7 sys-apps/findutils app-arch/unzip app-admin/eselect-ecj >=dev-java/java-config-2.1.9-r1
 >=virtual/jre-1.4 app-admin/eselect-ecj >=dev-java/java-config-2.1.9-r1
 3.3
 http://archive.eclipse.org/eclipse/downloads/drops/R-3.3-200706251500/ecjsrc.zip
