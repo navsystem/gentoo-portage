@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20111215.ebuild,v 1.1 2011/12/15 12:37:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20111215.ebuild,v 1.3 2011/12/17 13:01:33 aballier Exp $
 
 EAPI=4
 
@@ -87,7 +87,7 @@ RDEPEND+="
 	alsa? ( media-libs/alsa-lib )
 	ass? ( ${FONT_RDEPS} >=media-libs/libass-0.9.10[enca?] )
 	bidi? ( dev-libs/fribidi )
-	bluray? ( media-libs/libbluray )
+	bluray? ( >=media-libs/libbluray-0.2.1 )
 	bs2b? ( media-libs/libbs2b )
 	cdio? ( dev-libs/libcdio )
 	cdparanoia? ( !cdio? ( media-sound/cdparanoia ) )
@@ -634,10 +634,10 @@ src_compile() {
 			has ${i} ${ALLOWED_LINGUAS} && BUILT_DOCS+=" ${i}"
 		done
 		if [[ -z $BUILT_DOCS ]]; then
-			emake -j1 -C DOCS/xml html-chunked
+			emake -j1 html-chunked
 		else
 			for i in ${BUILT_DOCS}; do
-				emake -j1 -C DOCS/xml html-chunked-${i}
+				emake -j1 html-chunked-${i}
 			done
 		fi
 	fi

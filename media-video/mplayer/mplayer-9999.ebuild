@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.108 2011/12/15 12:48:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.118 2011/12/17 18:02:24 aballier Exp $
 
 EAPI=4
 
@@ -10,14 +10,11 @@ ESVN_REPO_URI="svn://svn.mplayerhq.hu/mplayer/trunk"
 
 inherit toolchain-funcs eutils flag-o-matic multilib base ${SVN_ECLASS}
 
-# BUMP ME PLZ, NO COOKIES OTHERWISE
-[[ ${PV} != *9999* ]] && MPLAYER_REVISION=SVN-r33094
-
 IUSE="3dnow 3dnowext +a52 aalib +alsa altivec aqua +ass bidi bindist bl bluray
-bs2b cddb +cdio cdparanoia cpudetection custom-cpuopts debug dga
+bs2b cddb +cdio cdparanoia cpudetection debug dga
 directfb doc +dts +dv dvb +dvd +dvdnav dxr3 +enca +encode esd faac +faad fbcon
 ftp gif ggi gsm +iconv ipv6 jack joystick jpeg jpeg2k kernel_linux ladspa
-libcaca libmpeg2 lirc +live lzo mad md5sum +mmx mmxext mng +mp3 mpg123 nas
+libcaca libmpeg2 lirc +live lzo mad md5sum +mmx mmxext mng +mp3 nas
 +network nut openal +opengl +osdmenu oss png pnm pulseaudio pvr +quicktime
 radio +rar +real +rtc rtmp samba +shm sdl +speex sse sse2 ssse3
 tga +theora +tremor +truetype +toolame +twolame +unicode v4l vdpau vidix
@@ -85,9 +82,9 @@ RDEPEND+="
 	a52? ( media-libs/a52dec )
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
-	ass? ( ${FONT_RDEPS} >=media-libs/libass-0.9.10[enca?] )
+	ass? ( >=media-libs/libass-0.9.10[enca?] )
 	bidi? ( dev-libs/fribidi )
-	bluray? ( media-libs/libbluray )
+	bluray? ( >=media-libs/libbluray-0.2.1 )
 	bs2b? ( media-libs/libbs2b )
 	cdio? ( dev-libs/libcdio )
 	cdparanoia? ( !cdio? ( media-sound/cdparanoia ) )
@@ -102,7 +99,7 @@ RDEPEND+="
 	encode? (
 		!twolame? ( toolame? ( media-sound/toolame ) )
 		twolame? ( media-sound/twolame )
-		faac? ( !bindist? ( media-libs/faac ) )
+		faac? ( media-libs/faac )
 		mp3? ( media-sound/lame )
 		x264? ( >=media-libs/x264-0.0.20100423 )
 		xvid? ( media-libs/xvid )
@@ -124,7 +121,7 @@ RDEPEND+="
 	lzo? ( >=dev-libs/lzo-2 )
 	mad? ( media-libs/libmad )
 	mng? ( media-libs/libmng )
-	mpg123? ( media-sound/mpg123 )
+	mp3? ( media-sound/mpg123 )
 	nas? ( media-libs/nas )
 	nut? ( >=media-libs/libnut-661 )
 	openal? ( media-libs/openal )
@@ -186,10 +183,10 @@ fi
 # libvorbis require external tremor to work
 # radio requires oss or alsa backend
 # xvmc requires xvideo support
-REQUIRED_USE="bindist? ( !faac !win32codecs )"
-
-PATCHES=(
-)
+REQUIRED_USE="bindist? ( !faac !win32codecs )
+	dvdnav? ( dvd )
+	ass? ( truetype )
+	truetype? ( iconv )"
 
 pkg_setup() {
 	if [[ ${PV} == *9999* ]]; then
@@ -210,23 +207,6 @@ pkg_setup() {
 		ewarn "You won't need this turned on if you are only building"
 		ewarn "mplayer for this system. Also, if your compile fails, try"
 		ewarn "disabling this use flag."
-	fi
-
-	if use custom-cpuopts; then
-		ewarn
-		ewarn "You are using the custom-cpuopts flag which will"
-		ewarn "specifically allow you to enable / disable certain"
-		ewarn "CPU optimizations."
-		ewarn
-		ewarn "Most desktop users won't need this functionality, but it"
-		ewarn "is included for corner cases like cross-compiling and"
-		ewarn "certain profiles. If unsure, disable this flag and MPlayer"
-		ewarn "will automatically detect and use your available CPU"
-		ewarn "optimizations."
-		ewarn
-		ewarn "Using this flag means your build is unsupported, so"
-		ewarn "please make sure your CPU optimization use flags (3dnow"
-		ewarn "3dnowext mmx mmxext sse sse2 ssse3) are properly set."
 	fi
 }
 
@@ -252,14 +232,15 @@ src_unpack() {
 }
 
 src_prepare() {
+	local svf=snapshot_version
 	if [[ ${PV} = *9999* ]]; then
 		# Set SVN version manually
 		subversion_wc_info
-		sed -i -e "s/UNKNOWN/${ESVN_WC_REVISION}/" "${S}/version.sh" || die
-	else
-		# Set version #
-		sed -i -e "s/UNKNOWN/${MPLAYER_REVISION}/" "${S}/version.sh" || die
+		printf "${ESVN_WC_REVISION}" > $svf
 	fi
+	[ -f "$svf" ] || die "Missing ${svf}. Did you generate your snapshot with prepare_mplayer.sh?"
+	local sv=$(<$svf)
+	printf "SVN-r${sv} (Gentoo)" > VERSION
 
 	# fix path to bash executable in configure scripts
 	sed -i -e "1c\#!${EPREFIX}/bin/bash" configure version.sh || die
@@ -298,18 +279,12 @@ src_configure() {
 	for i in ${uses}; do
 		use ${i} || myconf+=" --disable-${i}"
 	done
-	use bidi || myconf+=" --disable-fribidi"
-	use ipv6 || myconf+=" --disable-inet6"
-	use nut || myconf+=" --disable-libnut"
-	use rar || myconf+=" --disable-unrarexec"
+	use bidi  || myconf+=" --disable-fribidi"
+	use ipv6  || myconf+=" --disable-inet6"
+	use nut   || myconf+=" --disable-libnut"
+	use rar   || myconf+=" --disable-unrarexec"
 	use samba || myconf+=" --disable-smb"
-	if ! use lirc; then
-		myconf+="
-			--disable-lirc
-			--disable-lircc
-			--disable-apple-ir
-		"
-	fi
+	use lirc  || myconf+=" --disable-lirc --disable-lircc --disable-apple-ir"
 
 	# libcdio support: prefer libcdio over cdparanoia
 	# don't check for cddb w/cdio
@@ -330,14 +305,8 @@ src_configure() {
 	#
 	# use external libdvdcss, dvdread and dvdnav
 	myconf+=" --disable-dvdread-internal --disable-libdvdcss-internal"
-	if use dvd; then
-		use dvdnav || myconf+=" --disable-dvdnav"
-	else
-		myconf+="
-			--disable-dvdnav
-			--disable-dvdread
-		"
-	fi
+	use dvd || myconf+=" --disable-dvdread"
+	use dvdnav || myconf+=" --disable-dvdnav"
 
 	#############
 	# Subtitles #
@@ -346,15 +315,8 @@ src_configure() {
 	# SRT/ASS/SSA (subtitles) requires freetype support
 	# freetype support requires iconv
 	# iconv optionally can use unicode
-	if ! use ass && ! use truetype; then
-		myconf+=" --disable-freetype"
-		if ! use iconv; then
-			myconf+="
-				--disable-iconv
-				--charset=noconv
-			"
-		fi
-	fi
+	use truetype || myconf+=" --disable-freetype"
+	use iconv || myconf+=" --disable-iconv --charset=noconv"
 	use iconv && use unicode && myconf+=" --charset=UTF-8"
 
 	#####################################
@@ -398,10 +360,16 @@ src_configure() {
 	myconf+=" --disable-musepack" # Use internal musepack codecs for SV7 and SV8 support
 	myconf+=" --disable-libmpeg2-internal" # always use system media-libs/libmpeg2
 	use dts || myconf+=" --disable-libdca"
+	# Disable internal mp3lib, bug #384849
+	# Samuli Suominen: Looks like MPlayer in Portage is using internal mp3lib by
+	# default, where as mpg123 upstream has incorporated all the optimizations
+	# from mplayer's mp3lib	in libmpg123 and more.
+	# It makes very little sense to use the internal copy as default anymore.
+	myconf+=" --disable-mp3lib"
 	if ! use mp3; then
 		myconf+="
 			--disable-mp3lame
-			--disable-mp3lib
+			--disable-mpg123
 		"
 	fi
 	uses="a52 bs2b dv gsm lzo rtmp"
@@ -409,7 +377,7 @@ src_configure() {
 		use ${i} || myconf+=" --disable-lib${i}"
 	done
 
-	uses="faad gif jpeg libmpeg2 live mad mng mpg123 png pnm speex tga theora xanim"
+	uses="faad gif jpeg libmpeg2 live mad mng png pnm speex tga theora xanim"
 	for i in ${uses}; do
 		use ${i} || myconf+=" --disable-${i}"
 	done
@@ -430,10 +398,6 @@ src_configure() {
 		for i in ${uses}; do
 			use ${i} || myconf+=" --disable-${i}"
 		done
-		if use bindist && use faac; then
-			ewarn "faac is nonfree and cannot be distributed; disabling faac support."
-			myconf+=" --disable-faac"
-		fi
 	else
 		myconf+=" --disable-mencoder"
 		for i in ${uses}; do
@@ -520,16 +484,10 @@ src_configure() {
 	# Platform specific flags, hardcoded on amd64 (see below)
 	use cpudetection && myconf+=" --enable-runtime-cpudetection"
 
-	# Turning off CPU optimizations usually will break the build.
-	# However, this use flag, if enabled, will allow users to completely
-	# specify which ones to use. If disabled, mplayer will automatically
-	# enable all CPU optimizations that the host build supports.
-	if use custom-cpuopts; then
-		uses="3dnow 3dnowext altivec mmx mmxext shm sse sse2 ssse3"
-		for i in ${uses}; do
-			myconf+=" $(use_enable ${i})"
-		done
-	fi
+	uses="3dnow 3dnowext altivec mmx mmxext shm sse sse2 ssse3"
+	for i in ${uses}; do
+		myconf+=" $(use_enable ${i})"
+	done
 
 	use debug && myconf+=" --enable-debug=3"
 
@@ -634,10 +592,10 @@ src_compile() {
 			has ${i} ${ALLOWED_LINGUAS} && BUILT_DOCS+=" ${i}"
 		done
 		if [[ -z $BUILT_DOCS ]]; then
-			emake -j1 -C DOCS/xml html-chunked
+			emake -j1 html-chunked
 		else
 			for i in ${BUILT_DOCS}; do
-				emake -j1 -C DOCS/xml html-chunked-${i}
+				emake -j1 html-chunked-${i}
 			done
 		fi
 	fi
@@ -669,7 +627,7 @@ src_install() {
 		dohtml -r "${S}"/DOCS/HTML/*
 	fi
 
-	if ! use ass && ! use truetype; then
+	if ! use truetype; then
 		dodir /usr/share/mplayer/fonts
 		# Do this generic, as the mplayer people like to change the structure
 		# of their zips ...
@@ -693,7 +651,7 @@ _EOF_
 		doins "${S}/etc/menu.conf"
 	fi
 
-	if use ass || use truetype; then
+	if use truetype; then
 		cat >> "${ED}/etc/mplayer/mplayer.conf" << _EOF_
 fontconfig=1
 subfont-osd-scale=4
