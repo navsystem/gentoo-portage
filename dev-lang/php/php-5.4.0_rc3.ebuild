@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.4.0_rc3.ebuild,v 1.3 2011/12/14 22:48:49 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.4.0_rc3.ebuild,v 1.5 2011/12/18 09:00:26 olemarkus Exp $
 
 EAPI=4
 
@@ -110,7 +110,7 @@ IUSE="${IUSE} bcmath berkdb bzip2 calendar cdb cjk
 	readline recode +session sharedmem
 	+simplexml snmp soap sockets spell sqlite3 ssl
 	sybase-ct sysvipc tidy +tokenizer truetype unicode wddx
-	xml xmlreader xmlwriter xmlrpc xpm xsl zip zlib"
+	+xml xmlreader xmlwriter xmlrpc xpm xsl zip zlib"
 
 # Enable suhosin if available
 [[ -n $SUHOSIN_VERSION ]] && IUSE="${IUSE} suhosin"
@@ -325,7 +325,7 @@ eblit-pkg() {
 eblit-pkg pkg_setup v3
 
 src_prepare() { eblit-run src_prepare v4 ; }
-src_configure() { eblit-run src_configure v3 ; }
+src_configure() { eblit-run src_configure v54 ; }
 src_compile() { eblit-run src_compile v2 ; }
 src_install() { eblit-run src_install v3 ; }
 src_test() { eblit-run src_test v1 ; }
