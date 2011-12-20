@@ -1,7 +1,7 @@
 !<=dev-cpp/tbb-2.1.016
 !<=dev-cpp/tbb-2.1.016
 0
-http://www.threadingbuildingblocks.org/uploads/78/166/3.0%20update%206/tbb30_174oss_src.tgz
+http://www.threadingbuildingblocks.org/uploads/78/179/4.0%20update%202/tbb40_278oss_src.tgz
 
 http://www.threadingbuildingblocks.org/
 GPL-2-with-exceptions
@@ -12,7 +12,7 @@ debug doc examples
 
 
 
-3
+4
 
 compile install prepare test
 
