@@ -6,7 +6,7 @@ linguas_ca? ( mirror://kde/unstable/calligra-2.3.84/calligra-l10n//calligra-l10n
 http://www.kde.org/
 GPL-2
 Calligra localization package
-~amd64 ~ppc ~ppc64 ~x86
+~amd64 ~x86
 base cmake-utils eutils fdo-mime flag-o-matic gnome2-utils kde4-base kde4-functions multilib portability toolchain-funcs user versionator virtualx
 doc linguas_ca linguas_ca@valencia linguas_cs linguas_da linguas_de linguas_el linguas_en_GB linguas_es linguas_et linguas_fr linguas_it linguas_kk linguas_nb linguas_nds linguas_nl linguas_pl linguas_pt linguas_pt_BR linguas_ru linguas_sv linguas_uk linguas_zh_TW aqua kdeenablefinal
 
