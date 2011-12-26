@@ -56,10 +56,6 @@ my_add_town msk Moscow 2011 4
 #my_add_town tom Tomsk 2004 12
 #my_add_town ufa Ufa 2008 3
 
-pkg_setup() {
-	check_license "${FILESDIR%/files}"/../../licenses/${LICENSE}
-}
-
 src_install() {
 	insinto /opt/2gis
 	# Only required data files were unpacked, so it should be safe to
