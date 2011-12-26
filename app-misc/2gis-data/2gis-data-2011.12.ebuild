@@ -49,6 +49,7 @@ my_add_town nsk Novosibirsk 1998 9
 #my_add_town nvar Nizhnevartovsk 2006 5
 #my_add_town odes Odessa 2007 2
 my_add_town omsk Omsk 2004 8
+my_add_town msk Moscow 2011 4
 #my_add_town perm Perm 2007 12
 #my_add_town sam Samara 2008 7
 #my_add_town tim Tyumen 2006 11
