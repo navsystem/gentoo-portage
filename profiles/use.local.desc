@@ -916,6 +916,7 @@ dev-db/mysql:minimal - Install client programs only, no server
 dev-db/mysql:pbxt - Add experimental support for PBXT storage engine
 dev-db/mysql:profiling - Add support for statement profiling (requires USE=community).
 dev-db/mysql:raid - Deprecated option, removed in the 5.0 series
+dev-db/mysql:systemtap - Build support for profiling and tracing using dev-util/systemtap
 dev-db/mysql:test - Install upstream testsuites for end use.
 dev-db/mysql:xtradb - Add experimental support for Percona's InnoDB replacement: XtraDB
 dev-db/mysql-connector-c++:gcov - Build coverage support
@@ -1092,9 +1093,12 @@ dev-lang/erlang:hipe - HIgh Performance Erlang extension
 dev-lang/erlang:kpoll - Enable kernel polling support
 dev-lang/erlang:sctp - Support for Stream Control Transmission Protocol
 dev-lang/fpc:ide - Build and install the Free Pascal Compiler IDE
-dev-lang/gdl:grib - Adds support for the meteorological GRIB format
-dev-lang/gdl:hdf - Adds support for the Hierarchical Data Format
-dev-lang/gdl:udunits - Support for manipulating units of physical quantities
+dev-lang/gdl:grib - Add support for the meteorological GRIB format with sci-libs/grib_api
+dev-lang/gdl:gshhs - Add support for projection adn continent maps with sci-geosciences/gshhs-data
+dev-lang/gdl:hdf - Add support for the Hierarchical Data Format v.4
+dev-lang/gdl:proj - Add support for sci-libs/proj (geographic projections)
+dev-lang/gdl:ps - Add support for Postscript with dev-libs/pslib
+dev-lang/gdl:udunits - Add support for manipulating units of physical quantities
 dev-lang/gforth:force-reg - Enable a possibly unstable GCC flag for possibly large performance gains
 dev-lang/ghc:binary - Install the binary version directly, rather than using it to build the source version.
 dev-lang/ghc:ghcbootstrap - Internal: Bootstrap GHC from an existing GHC installation.
@@ -1181,6 +1185,8 @@ dev-libs/antlr-c:debugger - Compiles debug info into the library
 dev-libs/apr:older-kernels-compatibility - Enable binary compatibility with older kernels
 dev-libs/apr:urandom - Use /dev/urandom instead of /dev/random
 dev-libs/apr:uuid - Enable UUID support
+dev-libs/apr-util:nss - Install apr_crypto_nss module
+dev-libs/apr-util:openssl - Install apr_crypto_openssl module
 dev-libs/atk:introspection - Use dev-libs/gobject-introspection for introspection
 dev-libs/boost:eselect - Run "eselect boost update" even if version is already selected
 dev-libs/boost:tools - Build and install the boost tools (bcp, quickbook, inspect, wave)
@@ -2139,7 +2145,6 @@ mail-filter/maildrop:authlib - Add courier-authlib support
 mail-filter/maildrop:tools - Install maildirmake and deliverquota tools
 mail-filter/mimedefang:poll - Use poll instead of select
 mail-filter/opendkim:asyncdns - Use inbuilt asynchronous DNS library for queries
-mail-filter/opendkim:db - Include features like stats, querycache, popauth, report intervals and bodylengthdb that include berkdb
 mail-filter/opendkim:ldap - Enable openldap as a dataset facilitator or keys, determining domains to sign for, and any other dataset that opendkim supports.
 mail-filter/opendkim:lua - Enables control over signature verification, filtering and policy to be controlled by user defined lua scripts.
 mail-filter/opendkim:opendbx - Use opendbx backend to facilitate dataset driven OpenDKIM configuration options like stats, bodylengthdb, etc. against a wide variety of database types
@@ -4327,6 +4332,7 @@ sci-geosciences/gpsd:ntp - Enable net-misc/ntp shared memory interface and PPS k
 sci-geosciences/gpsd:shm - export gpsd over shared memory
 sci-geosciences/gpsd:sockets - export gpsd over unix sockets
 sci-geosciences/grass:gmath - Enable gmath wrapper for BLAS/Lapack (virtual/blas, virtual/lapack)
+sci-geosciences/gshhs:data - Add earth data with sci-geosciences/gshhs-data
 sci-geosciences/mapnik:gdal - Enable sci-libs/gdal library support
 sci-geosciences/mapnik:geos - Enable sci-libs/geos library support
 sci-geosciences/mapnik:nobfonts - Enable Dejavu fonts instead of built-in fonts
@@ -4678,6 +4684,7 @@ sys-cluster/pacemaker:ais - Enable sys-cluster/openais support.
 sys-cluster/pacemaker:cman - Enable sys-cluster/cman support.
 sys-cluster/pacemaker:heartbeat - Enable sys-cluster/heartbeat support.
 sys-cluster/pacemaker:smtp - Enable SMTP support via net-libs/libsmtp
+sys-cluster/pacemaker-gui:gtk - Enable the GTK+ based GUI client.
 sys-cluster/pacemaker-gui:heartbeat - Enable support for heartbeat based sys-cluster/pacemaker.
 sys-cluster/resource-agents:libnet - Force use of net-libs/libnet
 sys-cluster/slurm:maui - Enable maui scheduler support
