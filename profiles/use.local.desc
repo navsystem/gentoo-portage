@@ -2566,6 +2566,7 @@ media-sound/amarok:daap - Enable the scripts for music sharing through DAAP. Thi
 media-sound/amarok:embedded - Use libmysqld, MySQL embedded server library. Try disabling this if you encounter -PIC related in amarok, it will make amarok rely only on standalone MySQL server.
 media-sound/amarok:lastfm - Enable Last.fm streaming services support through media-libs/liblastfm
 media-sound/amarok:mp3tunes - Enable mp3tunes integration
+media-sound/amarok:ofa - Use media-libs/libofa to compute MusicDNS acoustic fingerprints (used by MusicBrainz)
 media-sound/amarok:playdar - Build the playdar collection
 media-sound/amarok:player - Build the player
 media-sound/amarok:upnp - Support for upnp servers
@@ -5067,6 +5068,7 @@ www-servers/nginx:nginx_modules_http_upload_progress - This module adds the abil
 www-servers/nginx:nginx_modules_mail_imap - Enables IMAP proxy support
 www-servers/nginx:nginx_modules_mail_pop3 - Enables POP3 proxy support
 www-servers/nginx:nginx_modules_mail_smtp - Enables SMTP proxy support
+www-servers/nginx:pcre-jit - Enable JIT for pcre
 www-servers/ocsigen:ocamlduce - Enables ocamlduce XML typechecking for generated web pages
 www-servers/pound:dynscaler - Enable dynamic rescaling of back-end priorities
 www-servers/pshs:magic - Enable automatic detection of Content-Type using libmagic (sys-apps/file)
