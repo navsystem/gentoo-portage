@@ -2302,7 +2302,7 @@ media-gfx/k3d:cuda - Use nvidia cuda toolkit for speeding up computations
 media-gfx/k3d:gts - Add Support for the GNU Triangulated Surface Library sci-libs/gts
 media-gfx/kphotoalbum:geolocation - Add support for kde-base/marble
 media-gfx/kphotoalbum:kipi - Support for the KDE Image Plugin Interface
-media-gfx/mcomix:rar - Enable support for rar (.cbr) archives
+media-gfx/mcomix:rar - Enable support for .cbr archives using rar/unrar.
 media-gfx/nip2:goffice - use x11-libs/goffice to show plots
 media-gfx/openclipart:gzip - Compresses clip art using gzip
 media-gfx/potrace:metric - default to a4 paper size and metric measurement
@@ -4441,6 +4441,7 @@ sci-mathematics/yacas:server - Build the network server version
 sci-misc/boinc:cuda - Use nvidia cuda toolkit for speeding up computations. NOTE: works only for subset of nvidia graphic cards so make sure your card is supported before opening bug about it.
 sci-misc/h5utils:hdf - Build hdf to hdf5 (and vice-versa) converter
 sci-misc/h5utils:octave - Build Octave plugins
+sci-misc/nco:dap - Support for remote data access with the NETCDF DAP client
 sci-misc/nco:ncap2 - Build next generation netcdf arithmetic processor (needs dev-java/antlr)
 sci-misc/nco:udunits - Add sci-libs/udunits files support
 sci-misc/ncview:udunits - Add sci-libs/udunits files support
