@@ -22,3 +22,4 @@ app-misc/pip amd64
 ~app-portage/smart-live-rebuild-1.2 amd64
 ~app-portage/gentoopm-0.2.1 amd64
 ~x11-misc/vdpauinfo-0.0.6 amd64
+~media-sound/deadbeef-0.5.1 amd64
