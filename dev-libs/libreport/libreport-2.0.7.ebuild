@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libreport/libreport-2.0.7.ebuild,v 1.2 2011/12/29 17:30:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libreport/libreport-2.0.7.ebuild,v 1.4 2011/12/31 18:33:52 tetromino Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -65,7 +65,7 @@ src_prepare() {
 		   src/report-python/Makefile.* || die "sed failed"
 
 	# disable pyc compiling
-	ln -sfn $(type -P true) py-compile
+	echo '#!/bin/sh' > py-compile
 
 	mkdir m4
 	eautoreconf
