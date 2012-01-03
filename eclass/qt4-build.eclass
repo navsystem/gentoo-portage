@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.111 2011/12/27 16:04:27 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.115 2012/01/01 19:01:11 pesa Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -138,15 +138,18 @@ qt4-build_pkg_setup() {
 # Unpacks the sources.
 qt4-build_src_unpack() {
 	setqtenv
-	local target targets=
+
+	local tarball="${MY_P}.tar.gz" target= targets=
 	for target in configure LICENSE.GPL3 LICENSE.LGPL projects.pro \
-		src/{qbase,qt_targets,qt_install}.pri bin config.tests mkspecs qmake \
-		${QT4_EXTRACT_DIRECTORIES}; do
-			targets+=" ${MY_P}/${target}"
+		src/{qbase,qt_targets,qt_install}.pri bin config.tests \
+		mkspecs qmake ${QT4_EXTRACT_DIRECTORIES}
+	do
+		targets+="${MY_P}/${target} "
 	done
 
-	echo tar xzf "${DISTDIR}"/${MY_P}.tar.gz ${targets}
-	tar xzf "${DISTDIR}"/${MY_P}.tar.gz ${targets} || die
+	ebegin "Unpacking parts of ${tarball}:" ${targets//${MY_P}\/}
+	tar -xzf "${DISTDIR}/${tarball}" ${targets}
+	eend $? || die "failed to unpack"
 }
 
 # @ECLASS-VARIABLE: PATCHES
@@ -235,24 +238,32 @@ qt4-build_src_prepare() {
 		CFLAGS='${CFLAGS}'\n\
 		CXXFLAGS='${CXXFLAGS}'\n\
 		LDFLAGS='${LDFLAGS}'\n" \
-		-i configure || die "sed SYSTEM_VARIABLES failed"
+		-i configure \
+		|| die "sed SYSTEM_VARIABLES failed"
 
-	# Bug 321335
-	find config.tests/unix -name '*.test' -type f -exec grep -lZ \$MAKE '{}' \; | xargs -0 \
-		sed -e "s:\(\$MAKE\):\1 CC='$(tc-getCC)' CXX='$(tc-getCXX)' LINK='$(tc-getCXX)':g" \
-			-i || die "sed test compilers failed"
+	# Respect CC, CXX, LINK and *FLAGS in config.tests
+	find config.tests/unix -name '*.test' -type f -print0 | xargs -0 \
+		sed -i -e "/bin\/qmake/ s: \"QT_BUILD_TREE=: \
+			'QMAKE_CC=$(tc-getCC)'    'QMAKE_CXX=$(tc-getCXX)'      'QMAKE_LINK=$(tc-getCXX)' \
+			'QMAKE_CFLAGS+=${CFLAGS}' 'QMAKE_CXXFLAGS+=${CXXFLAGS}' 'QMAKE_LFLAGS+=${LDFLAGS}'&:" \
+		|| die "sed config.tests failed"
+
+	# Strip predefined CFLAGS from mkspecs (bug 312689)
+	sed -i -e '/^QMAKE_CFLAGS_RELEASE/s:+=.*:+=:' mkspecs/common/g++.conf || die
 
 	# Bug 172219
-	sed -e "s:X11R6/::" -i mkspecs/$(qt_mkspecs_dir)/qmake.conf || die
+	sed -e 's:/X11R6/:/:' -i mkspecs/$(qt_mkspecs_dir)/qmake.conf || die
 
 	if [[ ${CHOST} == *-darwin* ]]; then
 		# Set FLAGS *and* remove -arch, since our gcc-apple is multilib
 		# crippled (by design) :/
-		sed -e "s:QMAKE_CFLAGS_RELEASE.*=.*:QMAKE_CFLAGS_RELEASE=${CFLAGS}:" \
+		sed \
+			-e "s:QMAKE_CFLAGS_RELEASE.*=.*:QMAKE_CFLAGS_RELEASE=${CFLAGS}:" \
 			-e "s:QMAKE_CXXFLAGS_RELEASE.*=.*:QMAKE_CXXFLAGS_RELEASE=${CXXFLAGS}:" \
 			-e "s:QMAKE_LFLAGS_RELEASE.*=.*:QMAKE_LFLAGS_RELEASE=-headerpad_max_install_names ${LDFLAGS}:" \
 			-e "s:-arch\s\w*::g" \
-			-i mkspecs/common/mac-g++.conf || die "sed mkspecs/common/mac-g++.conf failed"
+			-i mkspecs/common/mac-g++.conf \
+			|| die "sed mkspecs/common/mac-g++.conf failed"
 
 		# Fix configure's -arch settings that appear in qmake/Makefile and also
 		# fix arch handling (automagically duplicates our -arch arg and breaks
@@ -267,36 +278,34 @@ qt4-build_src_prepare() {
 			-e "s:CFG_MAC_XARCH=yes:CFG_MAC_XARCH=no:g" \
 			-e "s:-Xarch_x86_64::g" \
 			-e "s:-Xarch_ppc64::g" \
-			-i configure mkspecs/common/mac-g++.conf || die "sed -arch/-Xarch failed"
+			-i configure mkspecs/common/mac-g++.conf \
+			|| die "sed -arch/-Xarch failed"
 
 		# On Snow Leopard don't fall back to 10.5 deployment target.
 		if [[ ${CHOST} == *-apple-darwin10 ]] ; then
 			sed -e "s:QMakeVar set QMAKE_MACOSX_DEPLOYMENT_TARGET.*:QMakeVar set QMAKE_MACOSX_DEPLOYMENT_TARGET 10.6:g" \
 				-e "s:-mmacosx-version-min=10.[0-9]:-mmacosx-version-min=10.6:g" \
-				-i configure mkspecs/common/mac-g++.conf || die "sed deployment target failed"
+				-i configure mkspecs/common/mac-g++.conf \
+				|| die "sed deployment target failed"
 		fi
 	fi
 
 	# this one is needed for all systems with a separate -liconv, apart from
 	# Darwin, for which the sources already cater for -liconv
 	if use !elibc_glibc && [[ ${CHOST} != *-darwin* ]] ; then
-		sed \
-			-e "s|mac:LIBS += -liconv|LIBS += -liconv|g" \
+		sed -e 's|mac:\(LIBS += -liconv\)|\1|g' \
 			-i config.tests/unix/iconv/iconv.pro \
-			|| die "sed on iconv.pro failed"
+			|| die "sed iconv.pro failed"
 	fi
 
 	# we need some patches for Solaris
-	sed -i \
-		-e '/^QMAKE_LFLAGS_THREAD/a\QMAKE_LFLAGS_DYNAMIC_LIST = -Wl,--dynamic-list,' \
+	sed -i -e '/^QMAKE_LFLAGS_THREAD/a\QMAKE_LFLAGS_DYNAMIC_LIST = -Wl,--dynamic-list,' \
 		mkspecs/$(qt_mkspecs_dir)/qmake.conf || die
 	# use GCC over SunStudio
 	sed -i -e '/PLATFORM=solaris-cc/s/cc/g++/' configure || die
-	# don't flirt with non-Prefix stuff, we're quite possessive
+	# do not flirt with non-Prefix stuff, we're quite possessive
 	sed -i -e '/^QMAKE_\(LIB\|INC\)DIR\(_X11\|_OPENGL\|\)\t/s/=.*$/=/' \
 		mkspecs/$(qt_mkspecs_dir)/qmake.conf || die
-	# strip predefined CFLAGS from qmake ( bug #312689 )
-	sed -i '/^QMAKE_CFLAGS_RELEASE/s:+=.*:+=:' mkspecs/common/g++.conf
 
 	base_src_prepare
 }
@@ -338,7 +347,7 @@ qt4-build_src_configure() {
 			# We are crazy and build cocoa + qt3support :-)
 			if use qt3support; then
 				sed -e "/case \"\$PLATFORM,\$CFG_MAC_COCOA\" in/,/;;/ s|CFG_QT3SUPPORT=\"no\"|CFG_QT3SUPPORT=\"yes\"|" \
-					-i configure
+					-i configure || die
 			fi
 
 			# We need the source's headers, not the installed ones.
@@ -388,7 +397,7 @@ fix_includes() {
 		dodir "${QTHEADERDIR#${EPREFIX}}"/Qt
 
 		# Fake normal headers when frameworks are installed... eases life later on
-		local dest f
+		local dest f h
 		for frw in "${D}${QTLIBDIR}"/*.framework; do
 			[[ -e "${frw}"/Headers ]] || continue
 			f=$(basename ${frw})
@@ -417,7 +426,7 @@ qt4-build_src_install() {
 	fix_includes
 
 	# remove .la files since we are building only shared Qt libraries
-	find "${D}"${QTLIBDIR} -name "*.la" -print0 | xargs -0 rm
+	find "${D}"${QTLIBDIR} -type f -name '*.la' -print0 | xargs -0 rm -f
 }
 
 # @FUNCTION: setqtenv
@@ -453,8 +462,9 @@ setqtenv() {
 standard_configure_options() {
 	local myconf="-prefix ${QTPREFIXDIR} -bindir ${QTBINDIR} -libdir ${QTLIBDIR}
 		-docdir ${QTDOCDIR} -headerdir ${QTHEADERDIR} -plugindir ${QTPLUGINDIR}
-		-importdir ${QTIMPORTDIR} -datadir ${QTDATADIR} -translationdir ${QTTRANSDIR}
-		-sysconfdir ${QTSYSCONFDIR} -examplesdir ${QTEXAMPLESDIR} -demosdir ${QTDEMOSDIR}
+		$(version_is_at_least 4.7 && echo -importdir ${QTIMPORTDIR})
+		-datadir ${QTDATADIR} -translationdir ${QTTRANSDIR} -sysconfdir ${QTSYSCONFDIR}
+		-examplesdir ${QTEXAMPLESDIR} -demosdir ${QTDEMOSDIR}
 		-opensource -confirm-license -shared -fast -largefile -stl -verbose
 		-platform $(qt_mkspecs_dir) -nomake examples -nomake demos"
 
