@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13368 2012/01/02 14:42:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13381 2012/01/07 03:39:15 tester Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,39 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (06 Jan 2012)
+# Incompatible with stable transcode-1.1.7 wrt #397375 and
+# last upstream release 2004.
+# Removal in 30 days.
+media-video/ripmake
+
+# Mike Gilbert <floppym@gentoo.org> (05 Jan 2012)
+# Dev channel releases are only for people who are developers or want more
+# experimental features and accept a more unstable release.
+>=www-client/chromium-18
+>=www-client/google-chrome-18
+
+# Mike Gilbert <floppym@gentoo.org> (05 Jan 2012)
+# Mask v8 versions used for www-client/chromium dev channel releases.
+>=dev-lang/v8-3.8
+
+# Ralph Sennhauser <sera@gentoo.org> (04 Jan 2012)
+# Outdated Java version, fails to fetch, no upstream. #228929
+# Removal in 30 days.
+dev-java/jrockit-jdk-bin
+
+# Nirbheek Chauhan <nirbheek@gentoo.org> (04 Jan 2012)
+# Outdated and unused sound daemon. Why is this still in the tree?
+# Removal of esd and deps in 30 days.
+# In exceptional cases, you may use Pulseaudio's esound wrapper.
+media-sound/esound
+games-arcade/monkey-bubble
+gpe-base/libsoundgen
+media-plugins/gst-plugins-esd
+media-sound/extace
+x11-plugins/wmpop
+x11-plugins/wsoundserver
 
 # Markos Chandras <hwoarang@gentoo.org> (02 Jan 2012)
 # Parallel build does not work. Upstream report:
@@ -84,15 +117,10 @@ www-apps/tikiwiki
 www-client/opera-next
 =www-client/opera-11.61*
 
-# Samuli Suominen <ssuominen@gentoo.org> (23 Dec 2011)
-# Missing fltk-1.3 support and forced downgrade of fltk
-# in the same stabilization level which makes this gentoo-x86
-# incompatible package. Bug 395747. Removal in 30 days.
-media-radio/fldigi
-
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (19 Dec 2011)
 # Mask prerelease x11 packages
 =x11-base/xorg-server-1.11.99*
+=x11-libs/libX11-1.4.99*
 =x11-libs/libXi-1.5.99*
 =x11-libs/libpciaccess-0.12.902
 =x11-proto/inputproto-2.1.99*
@@ -108,19 +136,14 @@ kde-misc/kcheckgmail
 # Can be unmasked when a new pam_mount version is released.
 =sys-libs/libhx-3.12
 
-# Peter Volkov <pva@gentoo.org> (13 Dec 2011)
-# Broken, unmaintained, see #378617
-# Pending removal on 2012-01-14
-net-libs/wt
-
 # Ulrich Mueller <ulm@gentoo.org> (13 Dec 2011)
 # SLOTs 21 and 22 of app-editors/emacs, corresponding to
 # GNU Emacs versions 21.4 and 22.3. These versions were
 # released in February 2005 and September 2008, respectively.
 # Please upgrade to app-editors/emacs-23.3 and update your
 # Emacs Lisp packages with emacs-updater.
-# Masked for removal in 60 days, or after the release of
-# GNU Emacs 24.1, whatever will occur later. Bug 394589.
+# Keeping these versions in the tree masked indefinitely,
+# by popular request. Bug 394589.
 =app-editors/emacs-21*
 =app-editors/emacs-22*
 <virtual/emacs-23
@@ -136,7 +159,6 @@ dev-php/PEAR-DB_Table
 # Maxim Koltsov <maksbotan@gentoo.org> (11 Dec 2011)
 # Mask until big testing by proxy maintainer is finished
 dev-util/febootstrap
-app-emulation/libguestfs
 
 # Daniel Pielmeier <billie@gentoo.org> (09 Dec 2011)
 # Masked for removal in 30 days. Not needed anymore as cups-1.4
@@ -277,21 +299,6 @@ net-mail/vmailmgr-tools
 # Pre-releases of vlc 1.2. Mask it until final version is out
 >=media-video/vlc-1.2_pre
 
-# Mike Gilbert <floppym@gentoo.org> (03 Nov 2011)
-# Dev channel releases are only for people who are developers or want more
-# experimental features and accept a more unstable release.
->=www-client/google-chrome-17
-
-# Pawel Hajdan jr <phajdan.jr@gentoo.org> (03 Nov 2011)
-# Dev channel releases are only for people who are developers or want more
-# experimental features and accept a more unstable release.
->=www-client/chromium-17
-
-# Pawel Hajdan jr <phajdan.jr@gentoo.org> (03 Nov 2011)
-# Mask v8 versions used for www-client/chromium dev channel releases.
-# Currently v8-3.7 versions are used for chromium-17.x versions.
->=dev-lang/v8-3.7
-
 # Markos Chandras <hwoarang@gentoo.org> (31 Oct 2011)
 # Masking 4.8 rc release. The ebuilds are still work in
 # progress.
@@ -383,16 +390,6 @@ dev-perl/perl-PBS
 # soprano-2.[67].1 as it introduces major breakage.
 ~dev-libs/soprano-2.6.1
 ~dev-libs/soprano-2.7.1
-
-# Olivier Crete <tester@gentoo.org> (20 Sep 2011)
-# Masked because the API was broken and it will  causes crashes in 
-# Empathy, Pidgin and aMSN
->=net-libs/gupnp-0.17
->=net-libs/gssdp-0.11
->=net-libs/gupnp-av-0.10.1
->=net-libs/gupnp-igd-0.2
->=net-misc/rygel-0.12.0
->=net-libs/gupnp-vala-0.10
 
 # Tim Harder <radhermit@gentoo.org> (19 Sep 2011)
 # Mask development releases

@@ -735,6 +735,16 @@ app-office/lyx:rtf - Add support for RTF import/export packages
 app-office/lyx:xetex - Add support for XeTeX typesetting
 app-office/rabbit:gs - Ghostscript support (app-text/ghostscript-gpl)
 app-office/rabbit:tgif - tgif support (media-gfx/tgif)
+app-office/scribus:linguas_cs_CZ - Language support for cs_CZ
+app-office/scribus:linguas_da_DK - Language support for da_DK
+app-office/scribus:linguas_de_1901 - Language support for de_1901
+app-office/scribus:linguas_de_CH - Language support for de_CH
+app-office/scribus:linguas_en_AU - Language support for en_AU
+app-office/scribus:linguas_lt_LT - Language support for lt_LT
+app-office/scribus:linguas_pl_PL - Language support for pl_PL
+app-office/scribus:linguas_sa - Language support for sa
+app-office/scribus:linguas_sk_SK - Language support for sk_SK
+app-office/scribus:linguas_th_TH - Language support for th_TH
 app-office/scribus:minimal - Don't install headers (only required for e.g. plug-in developers)
 app-office/scribus:templates - Document tamplates
 app-office/texmacs:netpbm - Add support for media-libs/netpbm
@@ -1418,6 +1428,8 @@ dev-python/atpy:fits - Enable support for reading and FITS with dev-python/pyfit
 dev-python/atpy:votable - Enable support for reading and VOTABLE with dev-python/vo.
 dev-python/bpython:urwid - Backend based on dev-python/urwid
 dev-python/cgkit:3ds - Enable support for importing 3D Studio models
+dev-python/cvxopt:dsdp - Use interior point library sci-libs/dsdp
+dev-python/cvxopt:glpk - Use GNU Linear Programming Kit sci-mathematics/glpk
 dev-python/cython:numpy - Enable support for dev-python/numpy
 dev-python/dap:server - Enable OpenDAP server support
 dev-python/django-extensions:graphviz - Create a diagram of your database entity relationships using dev-python/pygraphviz.
@@ -1489,7 +1501,6 @@ dev-ruby/ruby-sdl:image - Enable media-libs/sdl-image support
 dev-ruby/ruby-sdl:mixer - Enable media-libs/sdl-mixer support
 dev-ruby/ruby-sdl:sge - Enable sdl-sge support
 dev-ruby/rubygems:server - Install support for the rubygems server
-dev-ruby/sqlite3-ruby:swig - Use dev-lang/swig to generate bindings
 dev-scheme/bigloo:bglpkg - Build bglpkg binary, which can be use to access scmpkg servers (requires web)
 dev-scheme/bigloo:calendar - Build the embedded library for calendar programming
 dev-scheme/bigloo:crypto - Build the embedded cryptographic library
@@ -1609,19 +1620,20 @@ dev-util/perf:demangle - Enable C++ symbol name demangling, using libbfd from sy
 dev-util/perf:doc - Build documentation and man pages. With this USE flag disabled, the --help parameter for perf and its sub-tools will not be available. This is optional because it depends on a few documentation handling tools that are not always welcome on user systems.
 dev-util/perf:perl - Add support for Perl as a scripting language for perf tools.
 dev-util/qdevelop:plugins - Build and install additional plugins
-dev-util/qt-creator:bazaar - Add support for bazaar version control system
-dev-util/qt-creator:bineditor - enable bineditor plugin
-dev-util/qt-creator:bookmarks - enable bookmarks plugin
+dev-util/qt-creator:bazaar - Add support for dev-vcs/bzr version control system
+dev-util/qt-creator:bineditor - Enable bineditor plugin
+dev-util/qt-creator:bookmarks - Enable bookmarks plugin
 dev-util/qt-creator:botan-bundled - Use the bundled copy of dev-libs/botan
-dev-util/qt-creator:cmake - enable cmake project manager plugin
-dev-util/qt-creator:designer - enable designer plugin
-dev-util/qt-creator:fakevim - enable vim-like key bindings plugin
-dev-util/qt-creator:git - enable git plugin
-dev-util/qt-creator:mercurial - enable mercurial plugin
-dev-util/qt-creator:perforce - enable perforce software configuration manager plugin
-dev-util/qt-creator:qml - Simple way of building UIs based on Qt Declarative module
-dev-util/qt-creator:qtscript - enable qt script editor plugin
-dev-util/qt-creator:subversion - enable subversion plugin
+dev-util/qt-creator:cmake - Enable cmake project manager plugin
+dev-util/qt-creator:designer - Enable Qt Designer integration
+dev-util/qt-creator:fakevim - Enable support for vim-like key bindings
+dev-util/qt-creator:git - Add support for dev-vcs/git version control system
+dev-util/qt-creator:madde - Enable integration with MADDE (Maemo Application Development and Debugging Environment)
+dev-util/qt-creator:mercurial - Add support for dev-vcs/mercurial version control system
+dev-util/qt-creator:perforce - Enable perforce software configuration manager plugin
+dev-util/qt-creator:qml - Build QML support and many other QML-related tools (recommended)
+dev-util/qt-creator:qtscript - Enable QtScript editor plugin
+dev-util/qt-creator:valgrind - Add support for memory debugging using dev-util/valgrind
 dev-util/radare:gui - Enable the graphical user interface of radare (broken)
 dev-util/schroot:btrfs - Enable support for chroots using btrfs snapshots.
 dev-util/schroot:dchroot - Enables the building of a wrapper named "dchroot", replacing sys-apps/dchroot.
@@ -2243,7 +2255,6 @@ media-gfx/darktable:opencl - Enable opencl support
 media-gfx/darktable:rawspeed - Enable the rawspeed backend
 media-gfx/darktable:slideshow - Build the opengl slideshow viewer
 media-gfx/digikam:addressbook - Add support for kdepim
-media-gfx/digikam:geolocation - Add support for marble
 media-gfx/digikam:linguas_ha - Hausa translation
 media-gfx/digikam:linguas_mi - Maori translation
 media-gfx/digikam:linguas_tt - ?? translation
@@ -2324,6 +2335,7 @@ media-libs/alsa-lib:alisp - Enable support for ALISP (ALSA LISP) interpreter for
 media-libs/alure:dumb - Enable media-libs/dumb module library support
 media-libs/alure:fluidsynth - Enables Fluidsynth MIDI software synthesis
 media-libs/babl:introspection - Use dev-libs/gobject-introspection for introspection
+media-libs/babl:vala - Enable bindings for dev-lang/vala
 media-libs/cal3d:16bit-indices - Enables use of 16bit indices
 media-libs/clutter:gtk - Use gdk-pixbuf from x11-libs/gtk+ as image rendering backend
 media-libs/clutter:introspection - Use dev-libs/gobject-introspection for introspection
@@ -2356,6 +2368,7 @@ media-libs/freeverb3:sse4 - Enable SSE4 support
 media-libs/gegl:introspection - Use dev-libs/gobject-introspection for introspection.
 media-libs/gegl:lensfun - Enable support for media-libs/lensfun.
 media-libs/gegl:umfpack - Enable sparse solving via sci-libs/umfpack.
+media-libs/gegl:vala - Enable bindings for dev-lang/vala
 media-libs/giflib:rle - Build converters for RLE format (utah raster toolkit)
 media-libs/gmtk:dconf - Enable support for gnome-base/dconf
 media-libs/grilo:introspection - Use dev-libs/gobject-introspection for introspection
@@ -2468,20 +2481,14 @@ media-libs/win32codecs:real - Installs the real video codecs
 media-libs/x264:10bit - Set output bit depth to 10, this may not be compatible with all decoders
 media-libs/x264:interlaced - enable interlaced encoding support, this can decrease encoding speed by up to 2%
 media-libs/x264:pic - disable optimized assembly code that is not PIC friendly
-media-libs/xine-lib:antialiasing - Enable anti-aliasing in OSD fonts
-media-libs/xine-lib:asf - Provide support for Microsoft's advanced systems format media container
+media-libs/xine-lib:bluray - Enable playback of Blu-ray filesystems using media-libs/libbluray
 media-libs/xine-lib:dxr3 - Enable support for DXR3 mpeg acceleration cards.
 media-libs/xine-lib:flac - Build the media-libs/flac based FLAC demuxer and decoder. This flag is not needed for playing FLAC content, neither standalone nor in Ogg container (OggFLAC), but might have better support for exotic features like 24-bit samples or 96kHz sample rates.
 media-libs/xine-lib:fusion - Enable support for the Fusion audio sub system
-media-libs/xine-lib:gdk-pixbuf - Build the gdkpixbuf-based image decoder plugin
-media-libs/xine-lib:glu - Make use of the OpenGL Utility Toolkit (GLUT) library
-media-libs/xine-lib:gnome - Build the gnome-base/gnome-vfs based input plugin. This plugin is used to access any resource that can be accessed through Nautilus's (and others') URLs.
 media-libs/xine-lib:gtk - Build the gdkpixbuf-based image decoder plugin.
 media-libs/xine-lib:imagemagick - Build the ImageMagick-based image decoder plugin.
-media-libs/xine-lib:libv4l - Enables Libv4l Video4Linux support
 media-libs/xine-lib:mad - Build the media-libs/libmad based mp3 decoder. This mp3 decoder has superior support compared to the one coming from FFmpeg that is used as a fallback. If you experience any bad behaviour with mp3 files (skipping, distorted sound) make sure you enabled this USE flag.
 media-libs/xine-lib:mmap - Use mmap() function while reading file from local disks. Using mmap() will use more virtual memory space, but leaves to the Kernel the task of caching the file's data. mmap() access should be faster, but might misbehave if the device where the file resides in is removed during playback.
-media-libs/xine-lib:nosefart - Enables support for NSF (Nintendo Entertainment System Sound Format)
 media-libs/xine-lib:real - Enable support for loading and using RealPlayer binary codecs on x86 and amd64 Linux. Enabling this USE flag might make the package non-redistributable in binary form.
 media-libs/xine-lib:truetype - Use media-libs/freetype for font rendering and media-libs/fontconfig for font discovery. Enabling this USE flag will allow OSD (such as subtitles) to use more advanced font and to more easily select which font to use. The support for TrueType fonts in xine-lib is still experimental, and might not be as good looking as the bitmap fonts used with this USE flag disabled.
 media-libs/xine-lib:vdpau - Enables VDPAU decoders (requires nVidia video cards to offload CPU processing to video card
@@ -2597,7 +2604,9 @@ media-sound/banshee:karma - Build with karma support
 media-sound/banshee:web - Enable support for plugins that access web-based services such as Amazon and wikipedia (requires net-libs/webkit-gtk)
 media-sound/banshee:youtube - Enable the Youtube plugin
 media-sound/clementine:ayatana - Build in support for Ayatana notification using the libindicate-qt plugin.
+media-sound/clementine:kde - Enable plasma krunner global search
 media-sound/clementine:lastfm - Enable Last.fm streaming services support through media-libs/liblastfm
+media-sound/clementine:ofa - Support for Open Fingerprint Architecture (OFA)
 media-sound/clementine:projectm - Build with ProjectM visualization
 media-sound/clementine:wiimote - Enable support for Wii remote
 media-sound/cmus:pidgin - install support script for net-im/pidgin
@@ -3566,6 +3575,7 @@ net-im/vacuum:socksstreams - Enable initiating SOCKS5 data streams between two X
 net-im/vacuum:vcard - Enable obtaining peer's personal contact information
 net-im/vacuum:vcs-revision - Add VCS revision to version number, INSECURE.
 net-im/vacuum:xmppuriqueries - Allow other plugins to handle XMPP URI queries
+net-irc/atheme-services:cracklib - Enable nickserv/cracklib module for enforcing strong account passwords
 net-irc/atheme-services:largenet - Enable support/tweaks for large networks
 net-irc/atheme-services:ldap - Enable ldap-backed authentication module
 net-irc/atheme-services:perl - Install a perl module which wraps around the services' XML-RPC interface
@@ -4428,7 +4438,10 @@ sci-mathematics/maxima:sbcl - Compile maxima with Steel Bank Common Lisp (dev-li
 sci-mathematics/minisat:extended-solver - Build extended version of SAT solver with additional features.
 sci-mathematics/normaliz:extras - Install sci-mathematics/Macaulay2 and sci-mathematics/singular packages as shipped by upstream
 sci-mathematics/nusmv:minisat - Enable support for MiniSat
-sci-mathematics/octave:sparse - Enable enhanced support for sparse matrix algebra
+sci-mathematics/octave:glpk - Add support for sci-libs/glpk for linear programming
+sci-mathematics/octave:qhull - Add support for sci-libs/qhull, to allow `delaunay', `convhull', and related functions
+sci-mathematics/octave:qrupdate - Add support for sci-libs/qrupdatefor QR and Cholesky update functions.
+sci-mathematics/octave:sparse - Add enhanced support for sparse matrix algebra
 sci-mathematics/pari:data - Add additional data (elldata, galdata, seadata, nftables)
 sci-mathematics/polymake:libpolymake - Build the polymake library to build applications using the C++ interface.
 sci-mathematics/singular:boost - Compile against external boost headers (dev-libs/boost)
@@ -4538,7 +4551,6 @@ sys-apps/iproute2:iptables - include support for iptables filtering
 sys-apps/irqbalance:numa - Support balancing IRQs across NUMA nodes
 sys-apps/kexec-tools:lzma - Enables support for LZMA compressed kernel images
 sys-apps/kexec-tools:xen - Enable extended xen support
-sys-apps/kmod:rootfs-install - Install the library into rootfs, to satisfy dependencies of udev when using separate /usr.
 sys-apps/kmod:tools - Install module loading/unloading tools.
 sys-apps/lm_sensors:sensord - Enable sensord - a daemon that can be used to periodically log sensor readings from hardware health-monitoring chips
 sys-apps/memtest86:serial - Compile with serial console support
@@ -4608,6 +4620,7 @@ sys-auth/pambase:pam_ssh - Enable pam_ssh module on system auth stack for authen
 sys-auth/pambase:passwdqc - Enable pam_passwdqc module on system auth stack for password quality validation. This is an alternative to pam_cracklib producing warnings, rejecting or providing example passwords when changing your system password. It is used by default by OpenWall GNU/*/Linux and by FreeBSD.
 sys-auth/pambase:sha512 - Switch Linux-PAM's pam_unix module to use sha512 for passwords hashes rather than MD5. This option requires >=sys-libs/pam-1.0.1 built against >=sys-libs/glibc-2.7, if it's built against an earlier version, it will silently be ignored, and MD5 hashes will be used. All the passwords changed after this USE flag is enabled will be saved to the shadow file hashed using SHA512 function. The password previously saved will be left untouched. Please note that while SHA512-hashed passwords will still be recognised if the USE flag is removed, the shadow file will not be compatible with systems using an earlier glibc version.
 sys-auth/polkit:introspection - Use dev-libs/gobject-introspection for introspection
+sys-auth/polkit:systemd - Use sys-apps/systemd instead of sys-auth/consolekit for session tracking
 sys-auth/sssd:glib - Use dev-libs/glib as UTF-8 string library
 sys-auth/sssd:libunistring - Use dev-libs/libunistring as UTF-8 string library
 sys-auth/sssd:locator - Install sssd's Kerberos plugin
@@ -5334,7 +5347,6 @@ x11-wm/xpra:parti - Runtime support for partioning window manager
 x11-wm/xpra:server - Build server-side code
 x11-wm/xpra:ssh - Runtime support for secure shell communication
 xfce-base/libxfce4ui:glade - Build support for Glade 3's GtkBuilder implementation
-xfce-base/libxfce4ui:vanilla - Don't apply extra keyboard shortcuts patch from Fedora
 xfce-base/libxfcegui4:glade - Build glade bindings
 xfce-base/xfce-utils:lock - Enable screen locking
 xfce-base/xfce4-session:consolekit - Enable authentication support using sys-auth/consolekit
@@ -5347,6 +5359,5 @@ xfce-extra/tumbler:odf - Enable support for .odf thumbnailers by using gnome-ext
 xfce-extra/xfce4-mpc-plugin:libmpd - Build using media-libs/libmpd backend, instead of native fallback which is preferred
 xfce-extra/xfce4-playercontrol-plugin:audacious - Enable Audacious support
 xfce-extra/xfce4-playercontrol-plugin:mpd - Enable Music Player Daemon support
-xfce-extra/xfce4-sensors-plugin:nvidia - Use nvctrl to obtain Nvidia GPU temperature value
 xfce-extra/xfce4-soundmenu-plugin:glyr - Enable music metadata searchengine support using media-libs/glyr
 xfce-extra/xfce4-soundmenu-plugin:lastfm - Enable last.fm support using media-libs/libclastfm
