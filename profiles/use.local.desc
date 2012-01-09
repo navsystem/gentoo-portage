@@ -830,6 +830,7 @@ app-text/poppler:introspection - Enable GObject introspection.
 app-text/poppler:utils - Install command-line PDF converters and various utilities.
 app-text/poppler:xpdf-headers - 
 app-text/sgmltools-lite:jadetex - Add support for app-text/jadetex (for processing tex files produced by the TeX backend of Jade)
+app-text/stardict:editor - Build and install the stardict-editor utility
 app-text/stardict:espeak - Enable text to speech synthesizer using espeak engine
 app-text/stardict:festival - Enable text to speech synthesizer using festival engine
 app-text/stardict:gucharmap - Enable gucharmap dictionary plugin
@@ -1439,6 +1440,7 @@ dev-python/django-extensions:s3 - Upload your media files to S3.
 dev-python/django-extensions:vcard - Export your users email addresses to the vcard format.
 dev-python/docutils:glep - Install support for GLEPs
 dev-python/icalendar:doc - Generate examples and other extra documentation
+dev-python/ipython:notebook - Install requirements for the web notebook based on www-servers/tornado
 dev-python/jinja:i18n - Enables support for i18n with dev-python/Babel
 dev-python/kaa-base:tls - SSL/TLS support via dev-python/tlslite
 dev-python/ldaptor:web - enable the web front end for ldaptor (uses dev-python/nevow)
@@ -4569,6 +4571,7 @@ sys-apps/iproute2:iptables - include support for iptables filtering
 sys-apps/irqbalance:numa - Support balancing IRQs across NUMA nodes
 sys-apps/kexec-tools:lzma - Enables support for LZMA compressed kernel images
 sys-apps/kexec-tools:xen - Enable extended xen support
+sys-apps/kmod:compat - Install module-init-tools compatible symlinks.
 sys-apps/kmod:tools - Install module loading/unloading tools.
 sys-apps/lm_sensors:sensord - Enable sensord - a daemon that can be used to periodically log sensor readings from hardware health-monitoring chips
 sys-apps/memtest86:serial - Compile with serial console support

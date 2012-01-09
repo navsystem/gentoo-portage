@@ -1,5 +1,5 @@
-zlib? ( sys-libs/zlib ) lzma? ( app-arch/xz-utils ) || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 sys-devel/libtool
-zlib? ( sys-libs/zlib ) lzma? ( app-arch/xz-utils )
+compat? ( !!sys-apps/module-init-tools ) lzma? ( app-arch/xz-utils ) zlib? ( sys-libs/zlib ) || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 sys-devel/libtool
+compat? ( !!sys-apps/module-init-tools ) lzma? ( app-arch/xz-utils ) zlib? ( sys-libs/zlib )
 0
 http://packages.profusion.mobi/kmod/kmod-3.tar.xz
 
@@ -8,8 +8,8 @@ LGPL-2
 library and tools for managing linux kernel modules
 ~amd64 ~x86
 autotools eutils libtool multilib portability toolchain-funcs user
-debug lzma static-libs +tools zlib
-
++compat debug lzma static-libs +tools zlib
+compat? ( tools )
 
 
 4
