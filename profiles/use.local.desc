@@ -673,6 +673,7 @@ app-office/abiword:ots - Enable Text Summarizer plugin
 app-office/abiword:plugins - Enable plugins build (see http://www.abisource.com/wiki/PluginMatrix for more information). If your file cannot be opened due lack of support, try enabling this.
 app-office/abiword:thesaurus - Enable thesaurus support
 app-office/abiword:wordperfect - Enable wordperfect file support via app-text/libwpd
+app-office/calligra:attica - Get hot stuff with dev-libs/libattica
 app-office/calligra:eigen - Enable dev-cpp/eigen mathematical templates support
 app-office/calligra:glew - Enable media-libs/glew opengl extension library support
 app-office/calligra:glib - Enable support for C library routines from dev-libs/glib
@@ -1167,6 +1168,7 @@ dev-lang/php:suhosin - Add Suhosin support (patch and extension from http://www.
 dev-lang/php:xmlreader - Enable XMLReader support
 dev-lang/php:xmlwriter - Enable XMLWriter support
 dev-lang/php:zip - Enable ZIP file support
+dev-lang/polyml:portable - Build the portable interpreter version of Poly/ML instead of native.
 dev-lang/python:threads - Enable threading support. (DON'T DISABLE THIS UNLESS YOU KNOW WHAT YOU'RE DOING)
 dev-lang/python:wide-unicode - Enable wide Unicode implementation which uses 4-byte Unicode characters. Switching of this USE flag changes ABI of Python and requires reinstallation of many Python modules. (DON'T DISABLE THIS UNLESS YOU KNOW WHAT YOU'RE DOING)
 dev-lang/python:wininst - Install Windows executables required to create an executable installer for MS Windows.
@@ -2221,6 +2223,7 @@ media-fonts/liberation-fonts:fontforge - Use media-gfx/fontforge to build fonts 
 media-fonts/montecarlo:bdf - Install BDF fonts in addition to PCF
 media-fonts/mplus-outline-fonts:ipafont - Generates new fonts merged with media-fonts/ja-ipafonts
 media-fonts/sil-charis:compact - Use more compactly spaced font
+media-fonts/sil-gentium:compact - Also install more compact version of the font.
 media-fonts/terminus-font:a-like-o - Changes view of letter 'a' - a looks like o (see homepage)
 media-fonts/terminus-font:bolddiag - Boldified diagonal parts of '4', 'k', 'x' and some other chars
 media-fonts/terminus-font:distinct-l - ll2 variant with more distinctive l (lowercase L)
@@ -2720,6 +2723,7 @@ media-sound/qmmp:tray - Build tray icon
 media-sound/qsampler:libgig - Enable libgig support for loading Gigasampler files and DLS (Downloadable Sounds) Level 1/2 files
 media-sound/qtractor:dssi - Enable support for DSSI Soft Synth Interface
 media-sound/qtractor:rubberband - Enable support for in-place audio clip pitch-shifting through the rubberband library
+media-sound/qtractor:suil - Enable LV2 Plug-in UI instantiation support via media-libs/suil.
 media-sound/qtscrobbler:cli - Build commandline client
 media-sound/rezound:16bittmp - Use 16bit temporary files (default 32bit float), useful for slower computers
 media-sound/rezound:soundtouch - compile with support for soundtouch
@@ -4429,6 +4433,18 @@ sci-mathematics/geomview:netpbm - Add media-libs/netpbm support for external mod
 sci-mathematics/gretl:R - Enable support for dev-lang/R
 sci-mathematics/gretl:gtk3 - Use GTK+3 frontend instead of GTK+2
 sci-mathematics/gretl:sourceview - Enable support for x11-libs/gtksourceview
+sci-mathematics/isabelle:CCL - CCL (Classical Computational Logic)
+sci-mathematics/isabelle:CTT - CTT (Constructive Type Theory) is an extensional version of Martin-Löf's Type Theory.
+sci-mathematics/isabelle:Cube - Cube (The Lambda Cube)
+sci-mathematics/isabelle:FOL - FOL (Many-sorted First-Order Logic) provides basic classical and intuitionistic first-order logic. It is polymorphic.
+sci-mathematics/isabelle:FOLP - FOLP (FOL with Proof Terms)
+sci-mathematics/isabelle:HOL - (Higher-Order Logic) is a version of classical higher-order logic resembling that of the HOL System.
+sci-mathematics/isabelle:LCF - LCF (Logic of Computable Functions)
+sci-mathematics/isabelle:Pure - Pure is the basis for all object-logics.
+sci-mathematics/isabelle:Sequents - Sequents (first-order, modal and linear logics)
+sci-mathematics/isabelle:ZF - ZF (Set Theory) offers a formulation of Zermelo-Fraenkel set theory on top of FOL.
+sci-mathematics/isabelle:graphbrowsing - Generate theory browsing information, including HTML documents that show a theory's definition, the theorems proved in its ML file and the relationship with its ancestors and descendants.
+sci-mathematics/isabelle:proofgeneral - Add support for the app-emacs/proofgeneral proof assistant front end.
 sci-mathematics/maxima:clisp - Compile maxima with GNU CLISP (dev-lisp/clisp)
 sci-mathematics/maxima:clozurecl - Compile maxima with Clozure Common Lisp (dev-lisp/clozurecl)
 sci-mathematics/maxima:cmucl - Compile maxima with CMU Common Lisp (dev-lisp/cmucl)
@@ -4462,6 +4478,8 @@ sci-physics/cernlib-montecarlo:herwig - Build Herwig internal event generator, n
 sci-physics/clhep:exceptions - Enable zoom exceptions for user intervention
 sci-physics/espresso:examples - Installs the examples
 sci-physics/espresso:packages - Installs extra subpackages
+sci-physics/fastjet:cgal - Use sci-mathematics/cgal instead of bundled algorithms
+sci-physics/fastjet:plugins - Build all standard and C++ plugins
 sci-physics/geant:aida - Add support for Abstract Interfaces for Data Analysis
 sci-physics/geant:athena - Enable the MIT Athena (x11-libs/libXaw) widget set (default is Motif)
 sci-physics/geant:data - Add a lot of standard physics data files for geant4
@@ -5279,6 +5297,7 @@ x11-terms/rxvt-unicode:256-color - Enable 256 color support
 x11-terms/rxvt-unicode:afterimage - Enable transparency support using media-libs/libafterimage (deprecated in 9.14)
 x11-terms/rxvt-unicode:alt-font-width - Calculate the font width using a different method
 x11-terms/rxvt-unicode:blink - Enable blinking text
+x11-terms/rxvt-unicode:buffer-on-clear - Store visible output to history buffer when clearing the screen with ctrl-l. Read https://bbs.archlinux.org/viewtopic.php?id=129302
 x11-terms/rxvt-unicode:fading-colors - Enable colors fading when off focus
 x11-terms/rxvt-unicode:focused-urgency - Enable the urgent flag when a terminal window is focused
 x11-terms/rxvt-unicode:font-styles - Enable support for bold and italic fonts
