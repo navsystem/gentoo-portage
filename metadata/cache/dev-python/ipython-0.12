@@ -1,0 +1,22 @@
+dev-python/pexpect emacs? ( app-emacs/python-mode virtual/emacs ) smp? ( dev-python/pyzmq ) wxwidgets? ( dev-python/wxpython ) test? ( dev-python/nose ) >=app-admin/eselect-python-20091230 dev-lang/python
+dev-python/pexpect emacs? ( app-emacs/python-mode virtual/emacs ) smp? ( dev-python/pyzmq ) wxwidgets? ( dev-python/wxpython ) notebook? ( www-servers/tornado dev-python/pygments dev-python/pyzmq ) qt4? ( || ( dev-python/PyQt4 dev-python/pyside ) dev-python/pygments dev-python/pyzmq ) >=app-admin/eselect-python-20091230 dev-lang/python
+0
+http://archive.ipython.org/release/0.12/ipython-0.12.tar.gz
+
+http://ipython.org/
+BSD
+Advanced interactive shell for Python
+~amd64 ~x86
+distutils elisp-common eutils multilib portability python toolchain-funcs user
+doc emacs examples notebook +smp qt4 test wxwidgets
+
+
+
+4
+
+compile install postinst postrm prepare setup test
+
+
+
+
+

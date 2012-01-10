@@ -1,5 +1,5 @@
-x11-libs/gtk+:2 x11-libs/gtkglext
-x11-libs/gtk+:2 x11-libs/gtkglext
+>=media-libs/libpng-1.5 x11-libs/gtk+:2 x11-libs/gtkglext
+>=media-libs/libpng-1.5 x11-libs/gtk+:2 x11-libs/gtkglext
 0
 http://gcam.js.cx/files/gcam-2010.07.27.tar.gz
 
