@@ -1,5 +1,5 @@
-dev-python/numpy media-libs/qhull sci-libs/arpack sci-libs/superlu virtual/cblas virtual/lapack umfpack? ( sci-libs/umfpack ) dev-util/pkgconfig doc? ( app-arch/unzip ) test? ( dev-python/nose ) umfpack? ( dev-lang/swig ) >=app-admin/eselect-python-20091230 dev-lang/python
-virtual/fortran dev-python/numpy media-libs/qhull sci-libs/arpack sci-libs/superlu virtual/cblas virtual/lapack umfpack? ( sci-libs/umfpack ) dev-python/imaging >=app-admin/eselect-python-20091230 dev-lang/python
+dev-python/numpy media-libs/qhull sci-libs/arpack >=sci-libs/superlu-4.3 virtual/cblas virtual/lapack umfpack? ( sci-libs/umfpack ) dev-util/pkgconfig doc? ( app-arch/unzip ) test? ( dev-python/nose ) umfpack? ( dev-lang/swig ) >=app-admin/eselect-python-20091230 dev-lang/python
+virtual/fortran dev-python/numpy media-libs/qhull sci-libs/arpack >=sci-libs/superlu-4.3 virtual/cblas virtual/lapack umfpack? ( sci-libs/umfpack ) dev-python/imaging >=app-admin/eselect-python-20091230 dev-lang/python
 0
 mirror://sourceforge/scipy/scipy-0.10.0.tar.gz doc? ( http://docs.scipy.org/doc/scipy-0.10.0/scipy-html.zip -> scipy-0.10.0-html.zip http://docs.scipy.org/doc/scipy-0.10.0/scipy-ref.pdf -> scipy-0.10.0-ref.pdf )
 
