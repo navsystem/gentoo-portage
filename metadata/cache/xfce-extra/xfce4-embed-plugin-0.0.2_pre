@@ -1,0 +1,22 @@
+>=x11-libs/gtk+-2.20:2 x11-libs/libX11 >=xfce-base/libxfce4ui-4.8 >=xfce-base/libxfce4util-4.8 >=xfce-base/xfce4-panel-4.8 dev-util/intltool dev-util/pkgconfig sys-devel/gettext >=sys-apps/sed-4
+>=x11-libs/gtk+-2.20:2 x11-libs/libX11 >=xfce-base/libxfce4ui-4.8 >=xfce-base/libxfce4util-4.8 >=xfce-base/xfce4-panel-4.8
+0
+http://goodies.xfce.org/_media/projects/panel-plugins/xfce4-embed-plugin-0.0.2git-17b7aa3.tar.bz2
+
+http://goodies.xfce.org/projects/panel-plugins/xfce4-embed-plugin
+GPL-2 LGPL-2
+A plug-in for embedding arbitrary application windows into the Xfce panel
+~amd64 ~x86
+autotools base eutils fdo-mime gnome2-utils libtool multilib portability toolchain-funcs user xfconf
+debug
+
+
+
+4
+
+compile configure install postinst postrm preinst prepare setup unpack
+
+
+
+
+
