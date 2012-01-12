@@ -1,4 +1,4 @@
-compat? ( !!sys-apps/module-init-tools ) lzma? ( app-arch/xz-utils ) zlib? ( sys-libs/zlib ) dev-vcs/git || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 sys-devel/libtool
+compat? ( !!sys-apps/module-init-tools ) lzma? ( app-arch/xz-utils ) zlib? ( sys-libs/zlib ) doc? ( dev-util/gtk-doc ) dev-vcs/git || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 sys-devel/libtool
 compat? ( !!sys-apps/module-init-tools ) lzma? ( app-arch/xz-utils ) zlib? ( sys-libs/zlib )
 0
 
@@ -8,7 +8,7 @@ LGPL-2
 library and tools for managing linux kernel modules
 
 autotools eutils git-2 libtool multilib portability toolchain-funcs user
-+compat debug lzma static-libs +tools zlib
++compat doc debug lzma static-libs +tools zlib
 compat? ( tools )
 
 
