@@ -1,0 +1,22 @@
+pcre? ( dev-libs/libpcre )
+pcre? ( dev-libs/libpcre )
+0
+ftp://ftp.cs.wisc.edu/condor/classad/c++/classads-1.0.10.tar.gz
+
+http://www.cs.wisc.edu/condor/classad/
+Apache-2.0
+Condor's classified advertisement language
+~amd64 ~x86
+autotools autotools-utils eutils libtool multilib portability toolchain-funcs user
+pcre static-libs
+
+
+
+4
+
+compile configure install prepare test
+
+
+
+
+

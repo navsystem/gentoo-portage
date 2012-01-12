@@ -6,7 +6,7 @@ mirror://sourceforge/xine/xine-lib-1.2.0.tar.xz
 http://xine.sourceforge.net/
 GPL-2
 Core libraries for Xine movie player
-~amd64 ~x86 ~x86-fbsd
+~amd64 ~hppa ~x86 ~x86-fbsd
 libtool multilib toolchain-funcs
 a52 aac aalib +alsa altivec bluray +css directfb dts dvb dxr3 fbcon flac fusion gtk imagemagick ipv6 jack libcaca mad +mmap mng modplug musepack nls opengl oss pulseaudio real samba sdl speex theora truetype v4l vcd vdpau vdr vidix +vis vorbis wavpack win32codecs +X +xcb xinerama +xv xvmc
 vidix? ( || ( X fbcon ) ) xv? ( X ) xinerama? ( X )

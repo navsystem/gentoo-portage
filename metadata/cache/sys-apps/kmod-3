@@ -6,7 +6,7 @@ http://packages.profusion.mobi/kmod/kmod-3.tar.xz
 http://git.profusion.mobi/cgit.cgi/kmod.git
 LGPL-2
 library and tools for managing linux kernel modules
-~amd64 ~x86
+~amd64 ~hppa ~x86
 autotools eutils libtool multilib portability toolchain-funcs user
 +compat debug lzma static-libs +tools zlib
 compat? ( tools )
