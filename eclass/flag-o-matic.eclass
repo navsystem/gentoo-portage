@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.163 2011/12/28 06:28:55 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.166 2012/01/14 08:22:13 vapier Exp $
 
 # @ECLASS: flag-o-matic.eclass
 # @MAINTAINER:
@@ -14,20 +14,6 @@ if [[ ${___ECLASS_ONCE_FLAG_O_MATIC} != "recur -_+^+_- spank" ]] ; then
 ___ECLASS_ONCE_FLAG_O_MATIC="recur -_+^+_- spank"
 
 inherit eutils toolchain-funcs multilib
-
-################ DEPRECATED functions ################
-# The following are still present to avoid breaking existing
-# code more than necessary; however they are deprecated. Please
-# use gcc-specs-* from toolchain-funcs.eclass instead, if you
-# need to know which hardened techs are active in the compiler.
-# See bug #100974
-#
-# has_hardened
-# has_pie
-# has_pic
-# has_ssp_all
-# has_ssp
-
 
 # {C,CXX,F,FC}FLAGS that we allow in strip-flags
 # Note: shell globs and character lists are allowed
@@ -113,14 +99,13 @@ _filter-var() {
 # @FUNCTION: filter-flags
 # @USAGE: <flags>
 # @DESCRIPTION:
-# Remove particular <flags> from {C,CPP,CXX,F,FC}FLAGS.  Accepts shell globs.
+# Remove particular <flags> from {C,CPP,CXX,F,FC,LD}FLAGS.  Accepts shell globs.
 filter-flags() {
 	_filter-hardened "$@"
-	_filter-var CFLAGS "$@"
-	_filter-var CPPFLAGS "$@"
-	_filter-var CXXFLAGS "$@"
-	_filter-var FFLAGS "$@"
-	_filter-var FCFLAGS "$@"
+	local v
+	for v in C CPP CXX F FC LD ; do
+		_filter-var ${v}FLAGS "$@"
+	done
 	return 0
 }
 
@@ -528,20 +513,14 @@ get-flag() {
 	return 1
 }
 
-# DEAD FUNCS.  Remove by Dec 2011.
-test_flag()    { die "$0: deprecated, please use test-flags()!" ; }
-has_hardened() { die "$0: deprecated, please use gcc-specs-{relro,now}()!" ; }
-has_pic()      { die "$0: deprecated, please use gcc-specs-pie()!" ; }
-has_pie()      { die "$0: deprecated, please use gcc-specs-pie()!" ; }
-has_ssp_all()  { die "$0: deprecated, please use gcc-specs-ssp()!" ; }
-has_ssp()      { die "$0: deprecated, please use gcc-specs-ssp()!" ; }
-
 # @FUNCTION: has_m64
 # @DESCRIPTION:
 # This doesn't test if the flag is accepted, it tests if the flag actually
 # WORKS. Non-multilib gcc will take both -m32 and -m64. If the flag works
 # return code is 0, else the return code is 1.
 has_m64() {
+	eqawarn "${FUNCNAME}: don't use this anymore"
+
 	# this doesnt test if the flag is accepted, it tests if the flag
 	# actually -WORKS-. non-multilib gcc will take both -m32 and -m64!
 	# please dont replace this function with test_flag in some future
@@ -557,27 +536,8 @@ has_m64() {
 	return 1
 }
 
-# @FUNCTION: has_m32
-# @DESCRIPTION:
-# This doesn't test if the flag is accepted, it tests if the flag actually
-# WORKS. Non-mulilib gcc will take both -m32 and -64. If the flag works return
-# code is 0, else return code is 1.
 has_m32() {
-	# this doesnt test if the flag is accepted, it tests if the flag
-	# actually -WORKS-. non-multilib gcc will take both -m32 and -m64!
-	# please dont replace this function with test_flag in some future
-	# clean-up!
-
-	[ "$(tc-arch)" = "amd64" ] && has_multilib_profile && return 0
-
-	local temp=$(emktemp)
-	echo "int main() { return(0); }" > "${temp}".c
-	MY_CC=$(tc-getCC)
-	${MY_CC/ .*/} -m32 -o "$(emktemp)" "${temp}".c > /dev/null 2>&1
-	local ret=$?
-	rm -f "${temp}".c
-	[[ ${ret} != 1 ]] && return 0
-	return 1
+	die "${FUNCNAME}: don't use this anymore"
 }
 
 # @FUNCTION: replace-sparc64-flags
