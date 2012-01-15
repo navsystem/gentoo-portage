@@ -8,11 +8,11 @@ LGPL-2.1
 free implementation of Windows(tm) on Unix
 -* ~amd64 ~x86 ~x86-fbsd
 eutils flag-o-matic multilib portability toolchain-funcs user
-alsa capi cups custom-cflags dbus fontconfig +gecko gnutls gphoto2 gsm gstreamer hardened jpeg lcms ldap mp3 ncurses nls openal opencl +opengl +oss +perl png samba scanner ssl test +threads +truetype v4l +win32 +win64 +X xcomposite xinerama xml
+alsa capi cups custom-cflags dbus elibc_glibc fontconfig +gecko gnutls gphoto2 gsm gstreamer hardened jpeg lcms ldap mp3 ncurses nls openal opencl +opengl +oss +perl png samba scanner ssl test +threads +truetype v4l +win32 +win64 +X xcomposite xinerama xml
+elibc_glibc? ( threads )
 
 
-
-2
+4
 
 compile configure install postinst prepare unpack
 

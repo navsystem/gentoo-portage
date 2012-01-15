@@ -1,4 +1,4 @@
-dev-util/pkgconfig sys-devel/libtool doc? ( app-doc/doxygen )
+>=dev-libs/boost-1.46 dev-util/pkgconfig sys-devel/libtool doc? ( app-doc/doxygen )
 app-text/libwpd:0.9 app-text/libwpg:0.2
 0
 http://dev-www.libreoffice.org/src/libvisio-0.0.12.tar.xz

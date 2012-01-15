@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13393 2012/01/11 21:05:17 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13395 2012/01/14 22:58:15 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas K. Huettel <dilfridge@gentoo.org> (14 Jan 2012)
+# _FORTIFY_SOURCE overflows, dead project since 2003. Removal in
+# 30 days. Bug 342799.
+net-print/mtink
+
 # Samuli Suominen <ssuominen@gentoo.org> (09 Jan 2012)
 # Fails to compile against recent glibc and multiple other issues.
 # No maintainer to take care of the package. Removal in 30 days.
@@ -51,10 +56,6 @@ media-video/goggles
 # Masking new boost release for testing
 ~dev-util/boost-build-1.48.0
 ~dev-libs/boost-1.48.0
-
-# Andreas K. Huettel <dilfridge@gentoo.org> (08 Jan 2012)
-# Mask not-yet-released calligra
-~app-office/calligra-2.3.86
 
 # Samuli Suominen <ssuominen@gentoo.org> (06 Jan 2012)
 # Incompatible with stable transcode-1.1.7 wrt #397375 and
