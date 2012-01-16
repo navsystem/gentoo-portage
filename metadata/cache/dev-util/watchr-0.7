@@ -1,0 +1,22 @@
+test? ( ruby_targets_ruby18? ( dev-ruby/rev[ruby_targets_ruby18] ) ruby_targets_ruby19? ( dev-ruby/rev[ruby_targets_ruby19] ) ) ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) test? ( ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) )
+ruby_targets_ruby18? ( dev-ruby/rev[ruby_targets_ruby18] ) ruby_targets_ruby19? ( dev-ruby/rev[ruby_targets_ruby19] ) ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] )
+0
+mirror://rubygems/watchr-0.7.gem
+
+http://mynyml.com/ruby/flexible-continuous-testing
+MIT
+Modern continuous testing (flexible alternative to Autotest)
+~amd64 ~x86 ~x86-macos
+eutils java-utils-2 multilib portability ruby-fakegem ruby-ng toolchain-funcs user versionator
+test elibc_FreeBSD ruby_targets_ruby18 ruby_targets_ruby19 test
+
+
+
+2
+
+compile configure install prepare setup test unpack
+
+
+
+
+
