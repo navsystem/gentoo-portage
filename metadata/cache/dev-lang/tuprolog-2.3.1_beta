@@ -8,7 +8,7 @@ LGPL-2.1
 tuProlog is a light-weight Prolog for Internet applications and infrastructures
 ~amd64 ~ppc ~x86
 eutils java-ant-2 java-pkg-2 java-utils-2 multilib portability toolchain-funcs user versionator
-doc elibc_FreeBSD elibc_FreeBSD
+doc test elibc_FreeBSD elibc_FreeBSD
 
 
 

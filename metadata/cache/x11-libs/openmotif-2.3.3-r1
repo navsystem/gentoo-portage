@@ -2,7 +2,7 @@ x11-libs/libXmu x11-libs/libXp unicode? ( virtual/libiconv ) xft? ( x11-libs/lib
 x11-libs/libXmu x11-libs/libXp unicode? ( virtual/libiconv ) xft? ( x11-libs/libXft ) jpeg? ( virtual/jpeg ) png? ( >=media-libs/libpng-1.4 ) doc? ( app-doc/openmotif-manual )
 0
 ftp://ftp.ics.com/openmotif/2.3/2.3.3/openmotif-2.3.3.tar.gz
-!kernel_linux? ( !kernel_FreeBSD? ( !kernel_Darwin? ( !kernel_SunOS? ( fetch bindist ) ) ) )
+!kernel_linux? ( !kernel_FreeBSD? ( !kernel_Darwin? ( fetch bindist ) ) )
 http://www.motifzone.net/
 MOTIF MIT
 Open Motif
