@@ -8,7 +8,7 @@ BSD-2
 Touchpad configuration and management tool for KDE
 ~amd64 ~x86
 base cmake-utils distutils eutils fdo-mime flag-o-matic gnome2-utils kde4-base kde4-functions multilib portability python toolchain-funcs user versionator virtualx
-debug +upower +handbook aqua kdeenablefinal
+debug +upower +handbook aqua
 
 
 

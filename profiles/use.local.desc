@@ -2476,8 +2476,9 @@ media-libs/phonon-xine:xcb - Enable video support in Xine backend, via x11-libs/
 media-libs/raptor:json - Enable support for JSON parsing
 media-libs/sdif:ftruncate - Enables usage of ftruncate v. truncate
 media-libs/sdl-image:webp - support loading WEBP images
+media-libs/sdl-mixer:fluidsynth - Use media-sound/fluidsynth for MIDI support
 media-libs/sdl-mixer:midi - basic support for MIDI files
-media-libs/sdl-mixer:playtools - Install playwave and playmus tools (usefull for testing)
+media-libs/sdl-mixer:playtools - Install playwave and playmus tools (useful for testing)
 media-libs/sdl-mixer:wav - support WAVE files
 media-libs/sdl-sound:physfs - Enable physfs support
 media-libs/sge:image - enable sdl-image support

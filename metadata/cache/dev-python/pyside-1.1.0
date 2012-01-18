@@ -8,7 +8,7 @@ LGPL-2.1
 Python bindings for the Qt framework
 ~amd64 ~x86
 base cmake-utils eutils flag-o-matic multilib portability python toolchain-funcs user virtualx
-assistant debug declarative help multimedia kde opengl phonon script sql svg test webkit X xmlpatterns test
+assistant debug declarative multimedia kde opengl phonon script sql svg test webkit X xmlpatterns test
 opengl? ( X ) svg? ( X ) script? ( X ) X? ( script )
 
 
