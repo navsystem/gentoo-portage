@@ -638,7 +638,6 @@ app-misc/strigi:log - Enables advanced logging through dev-libs/log4cxx.
 app-misc/tablix:pvm - Add support for parallel virtual machine (sys-cluster/pvm)
 app-misc/tasque:hiveminder - Allows you to use http://www.hiveminder.com/ as your storage backend.
 app-misc/tasque:rememberthemilk - Allows you to use http://www.rememberthemilk.com/ as your storage backend.
-app-misc/tomboy:applet - Enable tomboy applet for gnome-base/gnome-panel
 app-misc/tomboy:galago - Add support for the galago desktop presence framework (dev-dotnet/galago-sharp)
 app-misc/towitoko:moneyplex - Makes libtowitoko work for the moneyplex home banking software
 app-misc/tracker:applet - Build tracker monitor applet
@@ -2260,7 +2259,7 @@ media-gfx/asymptote:boehm-gc - Enables using the Boehm-Demers-Weiser conservativ
 media-gfx/asymptote:sigsegv - Enables using dev-libs/libsigsegv
 media-gfx/blender:apidoc - Build GameEngine/Python/C API documentation directly from the source code using tools epydoc (dev-python/epydoc) and doxygen (app-doc/doxygen).
 media-gfx/blender:blender-game - Adds Game Engine support to Blender (2.4* ebuilds).
-media-gfx/blender:collada - Add support for Collada interchange format.
+media-gfx/blender:collada - Add support for Collada interchange format through media-libs/opencollada.
 media-gfx/blender:contrib - Install contrib scripts.
 media-gfx/blender:dds - Adds DDS textures support to Blender.
 media-gfx/blender:elbeem - Adds surface fluid simulation to Blender using El'Beem library.
@@ -2476,6 +2475,7 @@ media-libs/phonon-gstreamer:network - Enable network streaming support via libso
 media-libs/phonon-xine:xcb - Enable video support in Xine backend, via x11-libs/libxcb
 media-libs/raptor:json - Enable support for JSON parsing
 media-libs/sdif:ftruncate - Enables usage of ftruncate v. truncate
+media-libs/sdl-image:webp - support loading WEBP images
 media-libs/sdl-mixer:midi - basic support for MIDI files
 media-libs/sdl-mixer:playtools - Install playwave and playmus tools (usefull for testing)
 media-libs/sdl-mixer:wav - support WAVE files
