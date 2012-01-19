@@ -6,7 +6,7 @@ mirror://sourceforge/cdemu/libmirage-1.4.0.tar.gz
 http://cdemu.org
 GPL-2
 CD and DVD image access library
-~amd64 ~x86
+amd64 ~x86
 
 static-libs
 

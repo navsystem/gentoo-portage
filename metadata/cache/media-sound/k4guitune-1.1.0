@@ -8,7 +8,7 @@ GPL-3
 A program to tune a musical instrument using your computer and it's mic- or line- input
 ~amd64 ~x86
 base cmake-utils eutils fdo-mime flag-o-matic gnome2-utils kde4-base kde4-functions multilib portability toolchain-funcs user versionator virtualx
-debug +handbook aqua kdeenablefinal
+debug +handbook aqua
 
 
 

@@ -1,5 +1,5 @@
 
->=sys-kernel/linux-headers-2.6.29
+>=sys-kernel/linux-headers-2.6.28 <sys-kernel/linux-headers-3.0
 0
 
 
@@ -7,7 +7,7 @@ http://www.linuxtv.org
 GPL-2
 Virtual Package installing the Header files for DVB
 ~arm amd64 ~hppa ~ppc ppc64 x86
-eutils multilib portability toolchain-funcs user
+
 
 
 

@@ -1,12 +1,12 @@
 
-sys-apps/ethtool sys-apps/hdparm acpi? ( sys-power/acpid ) apm? ( sys-apps/apmd ) bluetooth? ( net-wireless/bluez ) scsi? ( sys-apps/sdparm )
+net-wireless/wireless-tools sys-apps/ethtool sys-apps/hdparm acpi? ( sys-power/acpid ) apm? ( sys-apps/apmd ) bluetooth? ( net-wireless/bluez ) scsi? ( sys-apps/sdparm )
 0
 http://www.samwel.tk/laptop_mode/tools/downloads/laptop-mode-tools_1.60.tar.gz
 
 http://www.samwel.tk/laptop_mode/
 GPL-2
 Linux kernel laptop_mode user-space utilities
-~amd64 ~ppc ~x86
+amd64 ~ppc ~x86
 
 acpi apm bluetooth scsi
 

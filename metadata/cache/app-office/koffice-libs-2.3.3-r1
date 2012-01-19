@@ -8,7 +8,7 @@ GPL-2
 Shared KOffice libraries
 amd64 x86
 base cmake-utils eutils fdo-mime flag-o-matic gnome2-utils kde4-base kde4-functions kde4-meta multilib portability toolchain-funcs user versionator virtualx
-crypt openexr reports opengl test aqua kdeenablefinal debug
+crypt openexr reports opengl test aqua debug
 
 
 
