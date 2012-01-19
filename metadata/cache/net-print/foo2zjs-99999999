@@ -1,5 +1,5 @@
-net-print/cups net-print/foomatic-db-engine net-print/foomatic-filters sys-fs/udev app-arch/unzip app-editors/vim net-misc/wget sys-apps/ed sys-devel/bc test? ( sys-process/time )
-net-print/cups net-print/foomatic-db-engine net-print/foomatic-filters sys-fs/udev
+net-print/cups net-print/foomatic-db-engine net-print/foomatic-filters sys-fs/udev !!net-print/hplip app-arch/unzip app-editors/vim net-misc/wget sys-apps/ed sys-devel/bc test? ( sys-process/time )
+net-print/cups net-print/foomatic-db-engine net-print/foomatic-filters sys-fs/udev !!net-print/hplip
 0
 
 bindist
@@ -14,7 +14,7 @@ test
 
 4
 
-install prepare unpack
+compile install prepare unpack
 
 
 

@@ -1,0 +1,22 @@
+dev-lang/php >=dev-php/pear-1.8.1
+dev-php/PEAR-Auth dev-lang/php >=dev-php/pear-1.8.1
+0
+http://pear.php.net/get/Auth_HTTP-2.1.6.tgz
+
+http://pear.php.net/Auth_HTTP
+PHP-3.01
+Create HTTP authentication systems similar to Apache's realm-based .htaccess mechanism.
+~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86
+multilib php-pear-r1 toolchain-funcs
+
+
+
+
+4
+
+install
+
+
+
+
+
