@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.9.0_rc1.ebuild,v 1.1 2012/01/18 22:19:50 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.9.0_rc1.ebuild,v 1.2 2012/01/19 16:36:24 eras Exp $
 
 EAPI=4
 
@@ -72,7 +72,7 @@ src_prepare() {
 	fi
 
 	if ! use berkdb; then
-		epatch "${FILESDIR}/${P}_no-berkdb.patch"
+		epatch "${FILESDIR}/${PN}_no-berkdb.patch"
 	fi
 
 	sed -i -e "/^#define ALIAS_DB_MAP/s|:/etc/aliases|:/etc/mail/aliases|" \
