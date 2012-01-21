@@ -3,7 +3,7 @@ dev-lang/perl >=sys-devel/automake-wrapper-2 >=sys-devel/autoconf-2.60 >=sys-app
 9999
 
 
-http://sources.redhat.com/automake/
+http://www.gnu.org/software/automake/
 GPL-3
 Used to generate Makefile.in from Makefile.am
 
@@ -12,9 +12,9 @@ eutils git-2 multilib portability toolchain-funcs user
 
 
 
+2
 
-
-compile install unpack
+configure install prepare unpack
 
 
 
