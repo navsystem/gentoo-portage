@@ -401,19 +401,26 @@ app-emulation/q4wine:icoutils - Enable icoutils support
 app-emulation/q4wine:kde - Use the kdesu sudo GUI for managing the devices
 app-emulation/q4wine:wineappdb - Enable Win AppDB browser subsystem
 app-emulation/qemu:aio - Enables support for Linux's Async IO
-app-emulation/qemu:alsa - Enable alsa output for sound emulation
 app-emulation/qemu:brltty - Adds support for braille displays using brltty
+app-emulation/qemu:curl - Adds support for read-only block device emulation based on files located on http and ftp servers
 app-emulation/qemu:esd - Enable esound output for sound emulation
 app-emulation/qemu:fdt - Enables firmware device tree support
 app-emulation/qemu:gnutls - Enable TLS support for the VNC console server
 app-emulation/qemu:kqemu - Enables the kernel acceleration module on a x86/x86-64 cpu
 app-emulation/qemu:kvm - Use the KVM (Kernel Virtual Machine) infrastructure on compatible hardware
 app-emulation/qemu:ncurses - Enable the ncurses-based console
+app-emulation/qemu:nss - Build support for Smartcard devices emulation using dev-libs/nss
 app-emulation/qemu:pulseaudio - Enable pulseaudio output for sound emulation
 app-emulation/qemu:qemu-ifup - Provides the qemu-ifup script for use with QEMU's built in bridging
+app-emulation/qemu:rbd - Enable rados block device backend support, see http://ceph.newdream.net/wiki/QEMU-RBD
 app-emulation/qemu:sdl - Enable the SDL-based console
+app-emulation/qemu:spice - Enable Spice protocol support via app-emulation/spice
+app-emulation/qemu:ssl - Enable TLS support for the VNC console server
 app-emulation/qemu:static - Enable static build, useful to chroot in user-mode emulation
 app-emulation/qemu:vde - Enable Virtual Distributed Ethernet (VDE) based networking
+app-emulation/qemu:vhost-net - Enable accelerated networking using vhost-net, see http://www.linux-kvm.org/page/VhostNet
+app-emulation/qemu:xattr - Add support for getting and setting POSIX extended attributes, through sys-apps/attr. Requisite for the virtfs backend.
+app-emulation/qemu:xen - Enables support for Xen backends
 app-emulation/qemu-kvm:aio - Enables support for Linux's Async IO
 app-emulation/qemu-kvm:alsa - Enable alsa output for sound emulation
 app-emulation/qemu-kvm:brltty - Adds support for braille displays using brltty
@@ -4418,6 +4425,9 @@ sci-libs/libghemical:mopac7 - Use sci-chemistry/mopac7 for semi-empirical calcul
 sci-libs/libghemical:mpqc - Use sci-chemistry/mpqc for quantum-mechanical calculations
 sci-libs/libsvm:tools - Install python based tool scripts
 sci-libs/linux-gpib:firmware - Install firmware
+sci-libs/lis:fma - Use the Fused Multiply Add instruction set (x86 arches)
+sci-libs/lis:quad - Enable quadruple precision operations
+sci-libs/lis:saamg - Build the Smoothed Aggregation Algebraic MultiGrid preconditioner
 sci-libs/mathgl:octave - Add bindings for sci-mathematics/octave
 sci-libs/metis:int64 - Build the 64 bits integer library (metis >=5 only)
 sci-libs/mkl:fortran95 - Installs the BLAS/LAPACK FORTRAN95 static libraries
@@ -4524,16 +4534,15 @@ sci-physics/hepmc:cm - Build with cm instead of default mm for length units
 sci-physics/hepmc:gev - Build with GeV instead of default MeV for momentum units
 sci-physics/lhapdf:octave - Add bindings for sci-mathematics/octave
 sci-physics/pythia:hepmc - Adds support for High Energy Physics Monte Carlo Generators sci-physics/hepmc
-sci-physics/root:cint7 - Build the *experimental* new C++ interpretor CINT7
-sci-physics/root:clarens - Buld the Clarens and PEAC plug-ins, to use in a GRID enabled analysis.
+sci-physics/root:clarens - Build the Clarens and PEAC plug-ins, to use in a GRID enabled analysis
 sci-physics/root:fits - Support for images and data from FITS files with sci-libs/cfitsio
-sci-physics/root:geant4 - Build the sci-physics/geant (GEANT4) navigator
+sci-physics/root:geant4 - Support for sci-physics/geant version 4
 sci-physics/root:llvm - Build the new cling interactive interpreter based on sys-devel/llvm
 sci-physics/root:math - Build all math related libraries plugins, needs sci-libs/gsl
-sci-physics/root:pythia6 - Builds the interface to Pythia-6 (sci-physics/pythia) high energy physics generation events library
-sci-physics/root:pythia8 - Builds the interface to Pythia-8 (sci-physics/pythia) high energy physics generation events library
-sci-physics/root:reflex - Builds the reflection database for the C++ interpretor
-sci-physics/root:xrootd - Build the xrootd low latency file server
+sci-physics/root:pythia6 - Build the interface for sci-physics/pythia version 6.x
+sci-physics/root:pythia8 - Build the interface for sci-physics/pythia version 8.x
+sci-physics/root:reflex - Build the reflection database for the C++ interpreter
+sci-physics/root:xrootd - Build the interface for net-libs/xrootd
 sci-visualization/gnuplot:gd - Add support for media-libs/gd. Needed for GIF, JPEG, and PNG image output.
 sci-visualization/gnuplot:thin-splines - Enable thin plate splines
 sci-visualization/gwyddion:sourceview - Enable support for x11-libs/gtksourceview
@@ -5272,7 +5281,7 @@ x11-libs/wxGTK:gstreamer - Enable the wxMediaCtrl class for playing audio and vi
 x11-libs/wxGTK:sdl - Use Simple Directmedia Layer (media-libs/libsdl) for audio.
 x11-misc/bmpanel:libev - Use the libev event loop interface
 x11-misc/bmpanel:libevent - Use the libevent event loop interface
-x11-misc/colord:gusb - Enable dev-libs/libgusb support in drivers; required for some colorimeter models, e.g. ColorHug
+x11-misc/colord:gusb - Enable dev-libs/libgusb support, needed for colorimeter drivers
 x11-misc/colord:introspection - Use dev-libs/gobject-introspection for introspection
 x11-misc/colord:vala - Generate bindings for dev-lang/vala
 x11-misc/etm:ical - Enable export of ical format files by depending on dev-python/icalendar

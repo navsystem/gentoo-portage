@@ -6,7 +6,7 @@ http://hackage.haskell.org/packages/archive/MissingH/1.1.1.0/MissingH-1.1.1.0.ta
 http://software.complete.org/missingh
 GPL-2
 Large utility library
-~amd64 ~sparc ~x86
+amd64 ~sparc ~x86
 eutils ghc-package haskell-cabal multilib portability toolchain-funcs user versionator
 test doc hscolour profile
 

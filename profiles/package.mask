@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13407 2012/01/19 16:25:38 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13415 2012/01/22 13:03:32 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,35 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pacho Ramos <pacho@gentoo.org> (22 Jan 2012)
+# Previously masked by Peter as shown below, upstream
+# released a new version but none of dotnet team is
+# willing to work on its bump, will be removed in 30
+# days if nobody volunteers to take this.
+#
+# Peter Alfredsen <loki_val@gentoo.org> (09 Sep 2009)
+# Fails to build with newest mono, causing dependency
+# conflicts (#259700). 
+dev-lang/nemerle
+
+# Ulrich Mueller <ulm@gentoo.org> (21 Jan 2012)
+# Christian Faulhammer <fauli@gentoo.org>
+# Emacs live ebuilds. Use at your own risk.
+~app-editors/emacs-vcs-23.4.9999
+~app-editors/emacs-vcs-24.0.9999
+
+# Justin Lecher <jlec@gentoo.org> (21 Jan 2012)
+# Mask for removal
+# Direct upstream is dead, doesn't build anymore
+# Most code is included in http://labplot.sourceforge.net/
+# removal #398897, labplot #399607
+sci-visualization/scidavis
+
+# Michał Górny <mgorny@gentoo.org> (21 Jan 2012)
+# Blocks sysvinit yet doesn't provide all tools provided by it.
+# Masking until we get the necessary tools out of sysvinit.
+sys-apps/systemd-sysv-utils
 
 # Eray Aslan <eras@gentoo.org> (19 Jan 2012)
 # Mask experimental software
@@ -201,14 +230,6 @@ www-client/opera-next
 =app-editors/emacs-22*
 <virtual/emacs-23
 
-# Ole Markus With <olemarkus@gentoo.org> (12 Dec 2011)
-# Masked due to dead upstream or being superseded
-# Bugs 394067, 393979, 393893, 392853
-#dev-php/PEAR-Net_LDAP
-app-admin/php-toolkit
-dev-php/PEAR-Text_Diff
-dev-php/PEAR-DB_Table
-
 # Maxim Koltsov <maksbotan@gentoo.org> (11 Dec 2011)
 # Mask until big testing by proxy maintainer is finished
 dev-util/febootstrap
@@ -263,32 +284,6 @@ dev-libs/libdebian-installer
 app-text/chasen
 app-dicts/ipadic
 dev-ruby/ruby-chasen
-
-# Pacho Ramos <pacho@gentoo.org> (23 Nov 2011)
-# Upstream stopped their development and support for a long
-# time, they are not compatible with recent monodevelop versions.
-# See bug #389473. Removal in 30 days.
-dev-util/monodevelop-boo
-dev-util/monodevelop-debugger-mdb
-
-# Pacho Ramos <pacho@gentoo.org> (22 Nov 2011)
-# Mozilla dropped support for it and nothing uses it in
-# the tree. See bug #372243. Removal in 30 days.
-dev-python/gtkmozembed-python
-
-# Pacho Ramos <pacho@gentoo.org> (21 Nov 2011)
-# Unmaintained by upstream for ages, use 
-# app-admin/system-config-printer-gnome instead.
-# Removal in 30 days. Bug #352952
-net-print/gnome-cups-manager
-
-# Pacho Ramos <pacho@gentoo.org> (21 Nov 2011)
-# Drop old gnome-python metas that are no longer needed,
-# people have to use splitted ebuilds instead, bug #108479
-# Removal in 30 days
-dev-python/gnome-python
-dev-python/gnome-python-desktop
-dev-python/gnome-python-extras
 
 # Christoph Junghans <ottxor@gentoo.org> (15 Nov 2011)
 # current version of google-talkplugin never clear what you get
@@ -649,12 +644,6 @@ net-zope/zwiki
 >=virtual/perl-ExtUtils-ParseXS-3.0
 
 # Ole Markus With <olemarkus@gentoo.org> (21 Aug 2011)
-# Masking php:5.2. No longer maintained by upstream
-# Will be removed in a few months, depending on how much noise this will create
-=dev-lang/php-5.2.17
-=virtual/httpd-php-5.2
-
-# Ole Markus With <olemarkus@gentoo.org> (21 Aug 2011)
 # Masking beta version
 =dev-php/pecl-memcached-2.0.0_beta2
 
@@ -801,12 +790,6 @@ x11-themes/qgtkstyle
 # Diego E. Pettenò <flameeyes@gentoo.org> (01 Mar 2011)
 # Messed up build system, automagic dependencies.
 dev-util/perf
-
-# Ulrich Mueller <ulm@gentoo.org> (01 Mar 2011)
-# Christian Faulhammer <fauli@gentoo.org>
-# Emacs live ebuilds. Use at your own risk.
-~app-editors/emacs-vcs-23.3.9999
-~app-editors/emacs-vcs-24.0.9999
 
 # Ryan Hill <dirtyepic@gentoo.org> (30 Mar 2011)
 # Masked indefinitely (until 0.40 is released).
@@ -1023,11 +1006,6 @@ media-sound/teamspeak-server-bin
 # Diego E. Pettenò <flameeyes@gmail.com> (9 Oct 2009)
 # Untested yet; documented only in Russian, help is appreciated.
 sys-auth/pam_keystore
-
-# Peter Alfredsen <loki_val@gentoo.org> (09 Sep 2009)
-# Fails to build with newest mono, causing dependency
-# conflicts (#259700).
-dev-lang/nemerle
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (08 Aug 2009)
 #  on behalf of QA Team
