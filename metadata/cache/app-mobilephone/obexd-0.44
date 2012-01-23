@@ -6,7 +6,7 @@ mirror://kernel/linux/bluetooth/obexd-0.44.tar.xz
 http://www.bluez.org/
 GPL-2
 OBEX Server and Client
-~amd64 ~arm ~ppc ~x86
+amd64 ~arm ~ppc ~x86
 
 -eds nokia -server usb
 
