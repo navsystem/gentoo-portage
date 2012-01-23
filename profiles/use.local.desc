@@ -847,6 +847,7 @@ app-text/stardict:festival - Enable text to speech synthesizer using festival en
 app-text/stardict:gucharmap - Enable gucharmap dictionary plugin
 app-text/stardict:pronounce - Install WyabdcRealPeopleTTS package (it is just many .wav files) to make StarDict pronounce English words
 app-text/stardict:qqwry - Enable QQWry plugin, which provides information (in Chinese language) about geographical positions, owner, etc. for IP addresses
+app-text/stardict:tools - Build and install the extra stardict tools
 app-text/sword:lucene - Enable lucene support for faster searching (dev-cpp/clucene)
 app-text/texlive:context - Add support for the ConTeXt format (dev-texlive/texlive-context)
 app-text/texlive:detex - Add support for dev-tex/detex, a filter program that removes the LaTeX (or TeX) control sequences
@@ -4194,6 +4195,10 @@ net-print/cups:java - Add support for the Java interpeter in the web server CGIs
 net-print/cups:perl - Add support for the Perl interpeter in the web server CGIs.
 net-print/cups:php - Add support for the PHP interpeter in the web server CGIs.
 net-print/cups:python - Add support for the Python interpeter in the web server CGIs.
+net-print/fax4cups:capisuite-fax - Install net-dialup/capisuite backend
+net-print/fax4cups:efax - Install net-misc/efax backend
+net-print/fax4cups:hylafax - Install net-misc/hylafax backend
+net-print/fax4cups:mgetty-fax - Install net-dialup/mgetty backend
 net-print/hplip:X - Enables scanner GUI dependencies with USE="scanner" where media-gfx/xsane is preferred over media-gfx/sane-frontends
 net-print/hplip:acl - Install udev acl rules which needs sys-fs/udev with acl support
 net-print/hplip:doc - Build documentation

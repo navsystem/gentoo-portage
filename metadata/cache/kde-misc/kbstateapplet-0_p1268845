@@ -3,9 +3,9 @@
 0
 http://dev.gentoo.org/~dilfridge/distfiles/kbstateapplet-0_p1268845.tar.xz
 
-kde-look.org
+http://websvn.kde.org/trunk/playground/base/plasma/applets/kbstateapplet
 GPL-2
-plasmoid that shows the state of keyboard leds
+Plasmoid that shows the state of keyboard leds
 ~amd64 ~x86
 base cmake-utils eutils fdo-mime flag-o-matic gnome2-utils kde4-base kde4-functions multilib portability toolchain-funcs user versionator virtualx
 debug aqua

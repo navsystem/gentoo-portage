@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.0.ebuild,v 1.1 2012/01/22 11:52:57 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.0.ebuild,v 1.3 2012/01/22 21:08:40 slyfox Exp $
 
 EAPI="2"
 
@@ -71,7 +71,7 @@ RDEPEND="
 	ssl? ( net-libs/gnutls )
 	vde? ( net-misc/vde )
 	xattr? ( sys-apps/attr )
-	xen? ( app-emulation/xen )
+	xen? ( app-emulation/xen-tools )
 
 	qemu_softmmu_targets_lm32? (
 		x11-libs/libX11
@@ -106,6 +106,9 @@ QA_WX_LOAD="${QA_PRESTRIPPED}
 	usr/bin/qemu-microblazeel
 	usr/bin/qemu-mips
 	usr/bin/qemu-mipsel
+	usr/bin/qemu-ppc
+	usr/bin/qemu-ppc64
+	usr/bin/qemu-ppc64abi32
 	usr/bin/qemu-sh4
 	usr/bin/qemu-sh4eb
 	usr/bin/qemu-sparc
