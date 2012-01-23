@@ -6,7 +6,7 @@ http://dev.gentoo.org/~ssuominen/cinelerra-20111223.tar.xz
 http://www.cinelerra.org/
 GPL-2
 The most advanced non-linear video editor and compositor
-~amd64 ~ppc ~x86
+amd64 ~ppc ~x86
 autotools eutils flag-o-matic libtool multilib portability toolchain-funcs user
 3dnow alsa altivec css ieee1394 mmx opengl oss
 

@@ -14,7 +14,7 @@ curl doc fftw +glpk +imagemagick opengl openmp +qhull +qrupdate readline +sparse
 
 4
 
-compile configure install prepare pretend test
+compile configure install prepare setup test
 
 
 

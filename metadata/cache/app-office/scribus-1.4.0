@@ -14,7 +14,7 @@ cairo debug examples +minimal +pdf spell templates linguas_af linguas_ar linguas
 
 4
 
-compile configure install postinst postrm prepare setup test unpack
+compile configure install postinst postrm preinst prepare setup test unpack
 
 
 
