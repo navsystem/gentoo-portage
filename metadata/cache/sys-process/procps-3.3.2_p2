@@ -1,0 +1,22 @@
+
+>=sys-libs/ncurses-5.2-r2[unicode?]
+0
+mirror://debian/pool/main/p/procps/procps_3.3.2.orig.tar.gz mirror://debian/pool/main/p/procps/procps_3.3.2-2.debian.tar.gz
+
+http://procps.sourceforge.net/ http://gitorious.org/procps http://packages.debian.org/sid/procps
+GPL-2
+standard informational utilities and process-handling tools
+~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
+eutils flag-o-matic multilib portability toolchain-funcs user
+static-libs unicode
+
+
+
+4
+
+configure install prepare
+
+
+
+
+
