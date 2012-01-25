@@ -3803,8 +3803,8 @@ net-libs/rest:gnome - Extract proxy information using net-libs/libsoup-gnome
 net-libs/rest:introspection - Use dev-libs/gobject-introspection for introspection
 net-libs/telepathy-glib:introspection - Use dev-libs/gobject-introspection for introspection
 net-libs/telepathy-glib:vala - Enable bindings for dev-lang/vala
-net-libs/telepathy-qt4:farsight - Enable support for farsight connection manager
-net-libs/telepathy-qt4:glib - Enable support for various telepathy/glib related packages
+net-libs/telepathy-qt:farsight - Enable support for farsight connection manager
+net-libs/telepathy-qt:glib - Enable support for various telepathy/glib related packages
 net-libs/webkit-gtk:coverage - Enable code coverage support
 net-libs/webkit-gtk:introspection - Use dev-libs/gobject-introspection for introspection
 net-libs/webkit-gtk:jit - Enable JIT javascript compiler (disabling it will cause performance penalty)
@@ -4993,6 +4993,7 @@ sys-process/fcron:pam - Enable PAM support for fcron. This means that fcron will
 sys-process/htop:openvz - Enable openvz support
 sys-process/htop:vserver - Enable vserver support
 sys-process/lsof:rpc - support looking up RPC service info
+sys-process/procps:ncurses - Build programs that use ncurses: top, slabtop, watch
 virtual/ffmpeg:vaapi - Enables VAAPI (Video Acceleration API) for hardware decoding
 virtual/ffmpeg:vdpau - Enables VDPAU decoders (requires nVidia video cards to offload CPU processing to video card
 virtual/mpi:romio - Enable romio, a high-performance portable MPI-IO

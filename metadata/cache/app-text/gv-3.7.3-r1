@@ -1,5 +1,5 @@
-app-text/ghostscript-gpl x11-libs/libICE x11-libs/libSM x11-libs/libX11 >=x11-libs/libXaw3d-1.6-r1 x11-libs/libXext x11-libs/libXmu x11-libs/libXpm x11-libs/libXt xinerama? ( x11-libs/libXinerama ) x11-proto/xproto
-app-text/ghostscript-gpl x11-libs/libICE x11-libs/libSM x11-libs/libX11 >=x11-libs/libXaw3d-1.6-r1 x11-libs/libXext x11-libs/libXmu x11-libs/libXpm x11-libs/libXt xinerama? ( x11-libs/libXinerama )
+app-text/ghostscript-gpl x11-libs/libICE x11-libs/libSM x11-libs/libX11 >=x11-libs/libXaw3d-1.6-r1[unicode?] x11-libs/libXext x11-libs/libXmu x11-libs/libXpm x11-libs/libXt xinerama? ( x11-libs/libXinerama ) dev-util/pkgconfig x11-proto/xproto
+app-text/ghostscript-gpl x11-libs/libICE x11-libs/libSM x11-libs/libX11 >=x11-libs/libXaw3d-1.6-r1[unicode?] x11-libs/libXext x11-libs/libXmu x11-libs/libXpm x11-libs/libXt xinerama? ( x11-libs/libXinerama )
 0
 mirror://gnu/gv/gv-3.7.3.tar.gz
 
@@ -8,7 +8,7 @@ GPL-3
 Viewer for PostScript and PDF documents using Ghostscript
 ~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86
 eutils flag-o-matic multilib portability toolchain-funcs user
-xinerama
+unicode xinerama
 
 
 
