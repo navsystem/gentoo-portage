@@ -409,7 +409,7 @@ app-emulation/qemu:gnutls - Enable TLS support for the VNC console server
 app-emulation/qemu:kqemu - Enables the kernel acceleration module on a x86/x86-64 cpu
 app-emulation/qemu:kvm - Use the KVM (Kernel Virtual Machine) infrastructure on compatible hardware
 app-emulation/qemu:ncurses - Enable the ncurses-based console
-app-emulation/qemu:nss - Build support for Smartcard devices emulation using dev-libs/nss
+app-emulation/qemu:nss - Enable opengl/x11 output for lm32 target.
 app-emulation/qemu:pulseaudio - Enable pulseaudio output for sound emulation
 app-emulation/qemu:qemu-ifup - Provides the qemu-ifup script for use with QEMU's built in bridging
 app-emulation/qemu:rbd - Enable rados block device backend support, see http://ceph.newdream.net/wiki/QEMU-RBD
@@ -417,6 +417,7 @@ app-emulation/qemu:sdl - Enable the SDL-based console
 app-emulation/qemu:spice - Enable Spice protocol support via app-emulation/spice
 app-emulation/qemu:ssl - Enable TLS support for the VNC console server
 app-emulation/qemu:static - Enable static build, useful to chroot in user-mode emulation
+app-emulation/qemu:usbredir - Use sys-apps/usbredir to redirect USB devices to another machine over TCP
 app-emulation/qemu:vde - Enable Virtual Distributed Ethernet (VDE) based networking
 app-emulation/qemu:vhost-net - Enable accelerated networking using vhost-net, see http://www.linux-kvm.org/page/VhostNet
 app-emulation/qemu:xattr - Add support for getting and setting POSIX extended attributes, through sys-apps/attr. Requisite for the virtfs backend.
@@ -436,6 +437,7 @@ app-emulation/qemu-kvm:rbd - Enable rados block device backend support, see http
 app-emulation/qemu-kvm:sdl - Enable the SDL-based console
 app-emulation/qemu-kvm:spice - Enable Spice protocol support via app-emulation/spice
 app-emulation/qemu-kvm:ssl - Enable TLS support for the VNC console server
+app-emulation/qemu-kvm:usbredir - Use sys-apps/usbredir to redirect USB devices to another machine over TCP
 app-emulation/qemu-kvm:vde - Enable VDE-based networking
 app-emulation/qemu-kvm:vhost-net - Enable accelerated networking using vhost-net, see http://www.linux-kvm.org/page/VhostNet
 app-emulation/qemu-kvm:xattr - Add support for getting and setting POSIX extended attributes, through sys-apps/attr. Requisite for the virtfs backend.
@@ -2346,7 +2348,6 @@ media-gfx/k3d:cuda - Use nvidia cuda toolkit for speeding up computations
 media-gfx/k3d:gts - Add Support for the GNU Triangulated Surface Library sci-libs/gts
 media-gfx/kphotoalbum:geolocation - Add support for kde-base/marble
 media-gfx/kphotoalbum:kipi - Support for the KDE Image Plugin Interface
-media-gfx/mcomix:rar - Enable support for .cbr archives using rar/unrar.
 media-gfx/nip2:goffice - use x11-libs/goffice to show plots
 media-gfx/openclipart:gzip - Compresses clip art using gzip
 media-gfx/potrace:metric - default to a4 paper size and metric measurement
@@ -4418,7 +4419,6 @@ sci-libs/gdal:geos - Add support for geometry engine (sci-libs/geos
 sci-libs/gdal:gml - Enable support for dev-libs/xerces-c C++ API
 sci-libs/gdal:hdf - Add support for the Hierarchical Data Format v. 4 (sci-libs/hdf)
 sci-libs/gdal:ogdi - Enable support for the open geographic datastore interface (sci-libs/ogdi)
-sci-libs/gerris:dx - Enable support for sci-visualization/opendx
 sci-libs/getdata:fortran - Build fortran bindings
 sci-libs/getdata:python - Build python bindings
 sci-libs/gsl:cblas-external - Link gsl with external cblas provided by (virtual/cblas) instead of shipped internal version
@@ -4460,6 +4460,7 @@ sci-libs/vtk:boost - Add support for boost
 sci-libs/vtk:cg - Use nvidia's cg shaders
 sci-libs/vtk:patented - Build patented classes
 sci-mathematics/Macaulay2:optimization - Accept upstream's choices for -O option, i.e. -O3 almost everywhere.
+sci-mathematics/agda:epic - Add support for the epic compiler.
 sci-mathematics/cgal:mpfi - Enable support for multiple recision interval arithmetic via sci-mathematics/mpfi
 sci-mathematics/dataplot:gs - Add Ghostscript support (app-text/ghostscript-gpl)
 sci-mathematics/freemat:arpack - Add sparse eigen value support via sci-libs/arpack
@@ -4877,6 +4878,7 @@ sys-fs/lvm2:lvm1 - Allow users to build lvm2 with lvm1 support
 sys-fs/lvm2:nolvmstatic - Allow users to build lvm2 dynamically
 sys-fs/ntfs3g:crypt - Add support for encrypted NTFS drives/partitions.
 sys-fs/ntfs3g:external-fuse - Use external FUSE library instead of internal one. Must be disabled for unprivileged mounting to work.
+sys-fs/ntfs3g:extras - Enable extra ntfsprogs utilities.
 sys-fs/ntfs3g:ntfsprogs - Include internal version of ntfsprogs. This will block sys-fs/ntfsprogs.
 sys-fs/ntfs3g:udev - Install udev rule to make udisks use ntfs-3g instead of the kernel NTFS driver.
 sys-fs/ntfsprogs:fuse - Build a FUSE module
@@ -5203,6 +5205,7 @@ x11-libs/libfm:demo - Build demo
 x11-libs/libmatchbox:pango - Enable x11-libs/pango support
 x11-libs/libmatchbox:xsettings - Enable the use of xsettings for settings management
 x11-libs/libnotify:introspection - Use dev-libs/gobject-introspection for introspection
+x11-libs/libnotify:symlink - Create symlink from libnotify-notify-send to notify-send
 x11-libs/libqxt:berkdb - Build the QxtBerkeley module
 x11-libs/libqxt:sql - Build the QxtSql module
 x11-libs/libqxt:web - Build the QxtWeb module

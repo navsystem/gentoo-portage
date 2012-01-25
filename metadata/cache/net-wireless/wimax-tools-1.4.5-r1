@@ -6,7 +6,7 @@ http://linuxwimax.org/Download?action=AttachFile&do=get&target=wimax-tools-1.4.5
 http://www.linuxwimax.org
 BSD
 Tools to use Intel's WiMax cards
-amd64 ~x86
+amd64 x86
 base eutils linux-info multilib portability toolchain-funcs user versionator
 static-libs
 
