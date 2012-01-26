@@ -6,7 +6,7 @@ mirror strip
 http://cggdev.org/
 freedist
 Quake III Defrag - Trickjumping challenges for Quake III
-~amd64 ~ppc ~x86
+~amd64 ~ppc x86
 base eutils games games-mods multilib portability toolchain-funcs user
 dedicated opengl dedicated opengl
 

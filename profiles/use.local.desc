@@ -386,6 +386,7 @@ app-emulation/libvirt:virtualbox - Support management of VirtualBox virtualisati
 app-emulation/libvirt:xen - Support management of Xen virtualisation (app-emulation/xen)
 app-emulation/libvirt-glib:introspection - Use dev-libs/gobject-introspection for introspection
 app-emulation/libvirt-glib:vala - Enable bindings for dev-lang/vala
+app-emulation/libvirt-sandbox:introspection - Use dev-libs/gobject-introspection for introspection
 app-emulation/lxc:vanilla - Avoid adding Gentoo Linux-specific modifications, which include the custom init script. This is present as a flag to avoid forcing dependencies over users that might not want have them around as they use LXC in contexts where the init script is not useful.
 app-emulation/mol:oldworld - Includes Macintosh's OldWorld support
 app-emulation/mol:pci - Experimental PCI proxy support
@@ -1948,9 +1949,12 @@ gnustep-base/gnustep-make:native-exceptions - Enables use of the native Objectiv
 gpe-base/gpe:games - Builds and installs GPE games.
 kde-base/ark:archive - Enable support for a variety of archive formats through libarchive
 kde-base/cantor:R - Enable R backend support
+kde-base/cantor:analitza - Enable support kde-base/analitza
 kde-base/cantor:ps - Enable rendering EPS files
 kde-base/dolphin:thumbnail - Enables video thumbnails generation for kde-base/dolphin file manager.
+kde-base/dolphin-plugins:bazaar - Enable support for the bazaar VCS
 kde-base/dolphin-plugins:git - Enable support for the git VCS
+kde-base/dolphin-plugins:mercurial - Enable support for the mercurial VCS
 kde-base/gwenview:kipi - Support for the KDE Image Plugin Interface.
 kde-base/kaccessible:speechd - Enable support for the speech-dispatcher speech synthesizer
 kde-base/kalzium:editor - Enable the embedded molecule editor/viewer
@@ -1996,6 +2000,7 @@ kde-base/kdelibs:udisks - Use udisks for block device access (e.g., automounting
 kde-base/kdelibs:upnp - Enable UPnP support
 kde-base/kdelibs:upower - Use upower for power management
 kde-base/kdenetwork-meta:ppp - Enable support for net-dialup/ppp.
+kde-base/kdepimlibs:prison - Enable support for QRcodes in contacts
 kde-base/kdeplasma-addons:attica - Enable support for dev-libs/libattica
 kde-base/kdeplasma-addons:desktopglobe - Enable Desktop Globe wallpaper using kde-base/marble
 kde-base/kdeplasma-addons:qalculate - Enable Qalculate runner using sci-libs/libqalculate
