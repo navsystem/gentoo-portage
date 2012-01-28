@@ -1,0 +1,22 @@
+alsa? ( media-libs/alsa-lib ) audacious? ( media-sound/audacious ) nas? ( media-libs/nas ) pulseaudio? ( media-sound/pulseaudio ) dev-util/pkgconfig oss? ( virtual/os-headers )
+alsa? ( media-libs/alsa-lib ) audacious? ( media-sound/audacious ) nas? ( media-libs/nas ) pulseaudio? ( media-sound/pulseaudio )
+0
+mirror://sourceforge/xmp/xmp-3.5.0.tar.gz
+
+http://xmp.sourceforge.net/
+GPL-2
+Extended Module Player
+~amd64 ~x86
+
+alsa audacious nas oss pulseaudio
+
+
+
+4
+
+configure install
+
+
+
+
+

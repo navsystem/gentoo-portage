@@ -6,7 +6,7 @@ http://freedesktop.org/software/pulseaudio/paprefs/paprefs-0.9.10.tar.xz
 http://freedesktop.org/software/pulseaudio/paprefs
 GPL-2
 PulseAudio Preferences, configuration dialog for PulseAudio
-~amd64 ~ppc ~sparc ~x86
+amd64 ~ppc ~sparc x86
 
 nls
 

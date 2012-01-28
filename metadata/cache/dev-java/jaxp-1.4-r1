@@ -6,7 +6,7 @@ mirror://gentoo/jaxp-1.4.tar.bz2
 https://jaxp.dev.java.net/
 CDDL
 The Java API for XML Processing (JAXP)
-amd64 ~ppc ~x86 ~x86-fbsd
+amd64 ~ppc x86 ~x86-fbsd
 eutils java-ant-2 java-pkg-2 java-utils-2 multilib portability toolchain-funcs user versionator
 elibc_FreeBSD doc source elibc_FreeBSD
 
