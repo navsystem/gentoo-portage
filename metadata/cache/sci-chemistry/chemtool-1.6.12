@@ -1,5 +1,5 @@
-media-gfx/transfig x11-libs/gtk+:2 x86? ( media-libs/libemf ) dev-util/pkgconfig
-media-gfx/transfig x11-libs/gtk+:2 x86? ( media-libs/libemf )
+dev-libs/glib:2 media-gfx/transfig x11-libs/gtk+:2 x11-libs/libX11 x11-libs/pango x86? ( media-libs/libemf ) dev-util/pkgconfig
+dev-libs/glib:2 media-gfx/transfig x11-libs/gtk+:2 x11-libs/libX11 x11-libs/pango x86? ( media-libs/libemf )
 0
 http://ruby.chemie.uni-freiburg.de/~martin/chemtool/chemtool-1.6.12.tar.gz
 
