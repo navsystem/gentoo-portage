@@ -6,7 +6,7 @@
 http://hardened.gentoo.org/selinux
 as-is
 SELinux policy for oidentd (meta-package for selinux-oident)
-~amd64 ~x86
+amd64 x86
 
 
 
