@@ -1,4 +1,4 @@
-ssl? ( dev-libs/openssl )
+ssl? ( dev-libs/openssl ) virtual/yacc
 ssl? ( dev-libs/openssl )
 0
 http://www1.cs.columbia.edu/~angelos/Code/keynote-2.3.tar.gz
@@ -12,7 +12,7 @@ ssl
 
 
 
-2
+4
 
 compile configure install prepare
 

@@ -1,5 +1,5 @@
 
-!~media-libs/jpeg-6b:0 !media-libs/jpeg-compat
+
 62
 mirror://gentoo/jpegsrc.v6b.tar.gz mirror://gentoo/jpeg-6b-patches-2.tar.bz2
 
@@ -12,7 +12,7 @@ eutils libtool multilib portability toolchain-funcs user
 
 
 
-2
+4
 
 compile configure install prepare
 

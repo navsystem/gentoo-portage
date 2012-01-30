@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13426 2012/01/26 15:06:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13439 2012/01/29 02:39:51 floppym Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,47 @@
 
 #--- END OF EXAMPLES ---
 
+# Aaron W. Swenson <titanofold@gentoo.org> (28 Jan 2012)
+# Masked for last rites. Package is no longer maintained upstream and
+# is not fully compatible with recent versions of PostgreSQL. Removal
+# in 60 days.
+# Alternatives: dev-db/pgadmin3 or dev-db/phppgadmin
+dev-db/pgaccess
+
+# Bjarke Istrup Pedersen <gurligebis@gentoo.org> (28 Jan 2012)
+# Mask linux-igd for last-rites since upstream is dead and it contains
+# several bugs which makes it someway obsolete.
+# Please use net-misc/miniupnpd instead. Removal in 30 days.
+net-misc/linux-igd
+
+# Samuli Suominen <ssuominen@gentoo.org> (28 Jan 2012)
+# Missing native ConsoleKit support and upstream has
+# stopped development.
+# Use lightdm, gdm, kdm, lxdm, slim (only latest), or xdm (only latest).
+# Removal in 30 days.
+x11-misc/enter
+
+# Ralph Sennhauser <sera@gentoo.org> (28 Jan 2012)
+# Hopelessly outdated, contains broken jars. #91484
+# Removal in 30 days.
+dev-java/sun-j2ee
+
+# Krzysztof Pawlik <nelchael@gentoo.org> (27 Jan 2012)
+# Deprecated, please migrate your code to dev-python/xhtml2pdf.
+# Removal by end of February.
+dev-python/pisa
+
+# Andreas K. Hüttel <dilfridge@gentoo.org> (27 Jan 2012)
+# Has developed into an unmaintainable mess, and everyone who
+# knows about it is either retired or missing in action. 
+# Several minor bugs and one ugly security issues (#386271).
+# Masked for removal because of lack of maintainer.
+app-text/xpdf
+
+# Andreas K. Hüttel <dilfridge@gentoo.org> (27 Jan 2012)
+# Mask this until qt-4.8 is in tree
+=kde-base/kstyles-4.7.4-r10
+
 # Samuli Suominen <ssuominen@gentoo.org> (26 Jan 2012)
 # Too broken ebuild to be shipped wrt bugs #400815, #400865
 # and #400923
@@ -55,9 +96,14 @@ media-fonts/gnu-gs-fonts-other
 # boost changes. These packages are fixed but they will be
 # unmasked once boost-1.48 finds its way to ~testing tree
 # See: http://archives.gentoo.org/gentoo-dev/msg_ab39d8366b714ecacfc7fa64cd48ad00.xml
+=dev-python/cgkit-2.0.0_alpha9-r1
+=dev-python/pycuda-2011.2.2-r1
+=dev-python/pyopencl-2011.2-r1
 =dev-python/pythonmagick-0.9.7-r1
 =dev-python/tagpy-0.94.8-r1
-=dev-python/cgkit-2.0.0_alpha9-r1
+=dev-python/visual-5.72-r1
+=net-libs/rb_libtorrent-0.15.9-r1
+=net-mail/libpst-0.6.54-r1
 
 # Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (22 Jan 2012)
 # Mask compiz for last-rites unless someone steps up
@@ -145,11 +191,6 @@ dev-php/PEAR-I18N
 # No longer used and only for Gnome 2.x wrt #398639
 # Removal in 30 days
 dev-dotnet/gnome-panel-sharp
-
-# Andreas K. Huettel <dilfridge@gentoo.org> (14 Jan 2012)
-# _FORTIFY_SOURCE overflows, dead project since 2003. Removal in
-# 30 days. Bug 342799.
-net-print/mtink
 
 # Samuli Suominen <ssuominen@gentoo.org> (09 Jan 2012)
 # Fails to compile against recent glibc and multiple other issues.
@@ -316,13 +357,6 @@ dev-perl/Test-SimpleUnit
 # Tim Harder <radhermit@gentoo.org> (29 Nov 2011)
 # Masked until gcc-4.6 is unmasked
 >=media-video/mkvtoolnix-5.1.0
-
-# Jeremy Olexa <darkside@gentoo.org> (29 Nov 2011)
-# Broken, doesn't validate releases. Bug 387565 Use dev-util/debootstrap instead
-# Removal in 30 days.
-dev-util/cdebootstrap
-# Nothing uses libdebian-installer except cdebootstrap, remove as well
-dev-libs/libdebian-installer
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (24 Nov 2011)
 # GNOME 2 versions of seed are largely untested
@@ -755,19 +789,9 @@ dev-tex/pdftex
 # Mask until it is bumped
 sci-chemistry/webmo
 
-# Andreas K. Huettel <dilfridge@gentoo.org> (18 Jun 2011)
-# Mask cups-1.5, too new and still needs a lot of testing
->=net-print/cups-1.4.9999
-
 # Torsten Veller <tove@gentoo.org> (18 Jun 2011)
 # Mask perl-5.14. See tracker bug #356171
 =dev-lang/perl-5.14*
-
-# Stuart Longland <redhatter@gentoo.org> (17 Jun 2011)
-# Masked for removal within 30 days.  Will be replacing it with updated
-# ebuilds to address numerous issues.  See bugs #336993, #336199, #369881
-# and #335307.
-=media-radio/svxlink-090426
 
 # Eray Aslan <eras@gentoo.org> (15 Jun 2011)
 # Mask experimental software
@@ -803,11 +827,6 @@ dev-lang/open64
 # development branch of argus/-clients
 =net-analyzer/argus-3.0.5*
 =net-analyzer/argus-clients-3.0.5*
-
-# Daniel Gryniewicz <dang@gentoo.org> (13 Apr 2011)
-# Masked for removal in 30 days. Functionality is merged into and maintained in
-# the upstream kernel.  Use any kernel (e.g. gentoo-sources) instead.
-sys-kernel/usermode-sources
 
 # Patrick Lauer <patrick@gentoo.org> (12 Apr 2011)
 # lacks most features and sanity, waiting for upstream to improve it

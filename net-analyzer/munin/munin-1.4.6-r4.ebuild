@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-1.4.6-r4.ebuild,v 1.2 2011/12/18 18:13:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-1.4.6-r4.ebuild,v 1.4 2012/01/28 01:56:12 flameeyes Exp $
 
 EAPI=2
 
@@ -12,18 +12,20 @@ SRC_URI="mirror://sourceforge/munin/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ~ppc ~x86"
+KEYWORDS="amd64 ~mips ppc x86"
 IUSE="asterisk doc irc java memcached minimal mysql postgres ssl"
 
 # Upstream's listing of required modules is NOT correct!
 # Some of the postgres plugins use DBD::Pg, while others call psql directly.
-# The mysql plugins use mysqladmin directly.
+# Some of the mysql plugins use DBD::mysql, while others call mysqladmin directly.
 DEPEND_COM="dev-lang/perl
 			sys-process/procps
 			asterisk? ( dev-perl/Net-Telnet )
 			irc? ( dev-perl/Net-IRC )
 			java? ( >=virtual/jdk-1.5 )
-			mysql? ( virtual/mysql dev-perl/Cache-Cache )
+			mysql? ( virtual/mysql
+					 dev-perl/Cache-Cache
+					 dev-perl/DBD-mysql )
 			ssl? ( dev-perl/Net-SSLeay )
 			postgres? ( dev-perl/DBD-Pg dev-db/postgresql-base )
 			memcached? ( dev-perl/Cache-Memcached )

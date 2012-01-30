@@ -6,7 +6,7 @@ gtk? ( ~app-admin/packagekit-gtk-0.6.19 ) qt4? ( ~app-admin/packagekit-qt4-0.6.1
 http://www.packagekit.org/
 GPL-2
 PackageKit Package Manager interface (meta package)
-~amd64 ~x86
+~amd64 ~arm ~x86
 
 gtk qt4
 

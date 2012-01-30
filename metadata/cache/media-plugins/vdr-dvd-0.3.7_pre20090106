@@ -6,7 +6,7 @@ mirror://gentoo/vdr-dvd-cvs-20090106.tar.bz2
 http://sourceforge.net/projects/dvdplugin
 GPL-2
 VDR Plugin: DVD-Player
-~amd64 ~x86
+amd64 x86
 base eutils flag-o-matic multilib portability toolchain-funcs user vdr-plugin
 
 

@@ -6,7 +6,7 @@ http://hackage.haskell.org/packages/archive/uuagc/0.9.24/uuagc-0.9.24.tar.gz
 http://www.cs.uu.nl/wiki/HUT/WebHome
 GPL-2
 Attribute Grammar System of Universiteit Utrecht
-amd64 ~ppc ~ppc64 ~sparc ~x86
+amd64 ~ppc ~ppc64 ~sparc x86
 eutils ghc-package haskell-cabal multilib portability toolchain-funcs user versionator
 doc profile
 
