@@ -52,6 +52,7 @@ app-emulation/libvirt python
 net-libs/gtk-vnc python
 net-misc/spice-gtk python
 sys-devel/gdb python
+dev-libs/boost python
 
 x11-libs/vte python
 dev-libs/libxml2 python
