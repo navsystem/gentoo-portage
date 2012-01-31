@@ -1,5 +1,5 @@
-mpi? ( virtual/mpi ) blas? ( virtual/blas ) lapack? ( virtual/lapack ) fortran? ( virtual/fortran ) dev-util/pkgconfig
-mpi? ( virtual/mpi ) blas? ( virtual/blas ) lapack? ( virtual/lapack )
+sci-libs/superlu blas? ( virtual/blas ) lapack? ( virtual/lapack ) mpi? ( virtual/mpi ) dev-util/pkgconfig fortran? ( virtual/fortran )
+sci-libs/superlu blas? ( virtual/blas ) lapack? ( virtual/lapack ) mpi? ( virtual/mpi )
 0
 https://computation.llnl.gov/casc/hypre/download/hypre-2.8.0b.tar.gz
 

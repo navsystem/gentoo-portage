@@ -1,5 +1,5 @@
-x11-libs/libX11 x11-libs/qt-dbus:4 x11-libs/qt-gui:4 !x11-misc/notification-daemon !x11-misc/notify-osd
-x11-libs/libX11 x11-libs/qt-dbus:4 x11-libs/qt-gui:4 !x11-misc/notification-daemon !x11-misc/notify-osd
+x11-libs/libX11 x11-libs/qt-dbus:4 x11-libs/qt-gui:4 x11-libs/qt-qt3support:4 !x11-misc/notification-daemon !x11-misc/notify-osd
+x11-libs/libX11 x11-libs/qt-dbus:4 x11-libs/qt-gui:4 x11-libs/qt-qt3support:4 !x11-misc/notification-daemon !x11-misc/notify-osd
 0
 mirror://sourceforge/qtnotifydaemon/qtnotifydaemon_1.0.14.orig.tar.gz
 

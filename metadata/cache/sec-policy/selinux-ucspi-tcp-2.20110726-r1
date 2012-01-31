@@ -6,7 +6,7 @@
 http://hardened.gentoo.org/selinux
 as-is
 SELinux policy for ucspi-tcp (meta-package for selinux-ucspitcp)
-~amd64 ~x86
+amd64 x86
 
 
 
