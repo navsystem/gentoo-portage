@@ -17,3 +17,4 @@ net-misc/connman amd64
 net-misc/ofono amd64
 ~net-wireless/bluez-4.96 amd64
 ~net-wireless/wpa_supplicant-0.7.3 amd64
+=sys-apps/sysvinit-2.88-r3 amd64
