@@ -8,13 +8,13 @@ GPL-3
 High-level interactive language for numerical computations
 ~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux
 autotools autotools-utils eutils libtool multilib portability toolchain-funcs user
-curl doc fftw +glpk +imagemagick opengl openmp +qhull +qrupdate readline +sparse static-libs X zlib
+curl doc fftw +glpk +imagemagick opengl +qhull +qrupdate readline +sparse static-libs X zlib
 
 
 
 4
 
-compile configure install prepare setup test
+compile configure install prepare test
 
 
 

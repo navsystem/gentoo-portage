@@ -4,7 +4,7 @@ ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:
 mirror://rubygems/map-5.2.0.gem
 
 http://github.com/ahoward/map
-Ruby
+|| ( Ruby BSD-2 )
 A string/symbol indifferent ordered hash that works in all rubies.
 ~amd64
 eutils java-utils-2 multilib portability ruby-fakegem ruby-ng toolchain-funcs user versionator

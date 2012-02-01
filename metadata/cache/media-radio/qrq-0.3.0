@@ -7,7 +7,7 @@ http://fkurz.net/ham/qrq.html
 GPL-2
 Yet another CW trainer for Linux/Unix
 amd64 ~x86
-
+multilib toolchain-funcs
 pulseaudio
 
 
