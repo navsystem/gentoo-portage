@@ -6,7 +6,7 @@ http://download.transmissionbt.com/transmission/files/transmission-2.42.tar.xz h
 http://www.transmissionbt.com/
 GPL-2 MIT
 A Fast, Easy and Free BitTorrent client
-~amd64 ~x86
+~amd64 ~ppc ~ppc64 ~x86
 autotools base eutils fdo-mime gnome2-utils libtool multilib portability qt4-r2 toolchain-funcs user
 ayatana gtk kde nls qt4
 ayatana? ( gtk ) gtk? ( nls )

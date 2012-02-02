@@ -6,7 +6,7 @@ http://dev.gentoo.org/~tomka/files/wicd-1.7.1_pre20120127.tar.gz mac4lin? ( http
 http://wicd.sourceforge.net/
 GPL-2
 A lightweight wired and wireless network manager for Linux
-amd64 ~ppc ~ppc64 x86
+amd64 ppc ~ppc64 x86
 distutils eutils multilib portability python systemd toolchain-funcs user
 X +gtk ioctl libnotify mac4lin ncurses nls +pm-utils
 
