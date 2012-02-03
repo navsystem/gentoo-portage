@@ -6,7 +6,7 @@ http://pear.horde.org/get/Horde_Url-1.0.0.tgz
 http://www.horde.org/
 LGPL-2
 Horde Url class
-~amd64
+~amd64 ~ppc ~ppc64 ~x86
 multilib php-pear-r1 toolchain-funcs
 
 

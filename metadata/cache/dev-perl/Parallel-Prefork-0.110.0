@@ -1,0 +1,22 @@
+>=dev-perl/Proc-Wait3-0.30.0 dev-perl/List-MoreUtils >=dev-perl/Class-Accessor-Lite-0.40.0 dev-perl/Scope-Guard >=virtual/perl-ExtUtils-MakeMaker-6.420.0 test? ( dev-perl/Test-Requires ) dev-lang/perl[-build]
+>=dev-perl/Proc-Wait3-0.30.0 dev-perl/List-MoreUtils >=dev-perl/Class-Accessor-Lite-0.40.0 dev-perl/Scope-Guard dev-lang/perl[-build]
+0
+mirror://cpan/authors/id/K/KA/KAZUHO/Parallel-Prefork-0.11.tar.gz
+
+http://search.cpan.org/dist/Parallel-Prefork/
+|| ( Artistic GPL-1 GPL-2 GPL-3 )
+A simple prefork server framework
+~amd64 ~x86
+base eutils multilib perl-module portability toolchain-funcs user
+test
+
+
+
+4
+
+compile configure install prepare test unpack
+
+
+
+
+

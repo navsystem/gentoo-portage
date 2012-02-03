@@ -1,0 +1,22 @@
+dev-perl/Devel-StackTrace virtual/perl-Filter dev-lang/perl[-build]
+dev-perl/Devel-StackTrace virtual/perl-Filter dev-lang/perl[-build]
+0
+mirror://cpan/authors/id/M/MI/MIYAGAWA/Devel-StackTrace-AsHTML-0.11.tar.gz
+
+http://search.cpan.org/dist/Devel-StackTrace-AsHTML/
+|| ( Artistic GPL-1 GPL-2 GPL-3 )
+Displays stack trace in HTML
+~amd64 ~x86
+base eutils multilib perl-module portability toolchain-funcs user
+
+
+
+
+4
+
+compile configure install prepare test unpack
+
+
+
+
+

@@ -6,13 +6,13 @@ http://biord-software.org/downloads/qdevelop-v0.28.tar.gz
 http://biord-software.org/qdevelop/
 GPL-2
 A development environment entirely dedicated to Qt4.
-~amd64 ~x86
+amd64 x86
 base cmake-utils eutils flag-o-matic multilib portability toolchain-funcs user
 debug plugins
 
 
 
-2
+4
 
 compile configure install postinst prepare test unpack
 
