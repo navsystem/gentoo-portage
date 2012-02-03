@@ -6,7 +6,7 @@ test
 http://dev.gentoo.org/~joker/ccze/ccze.txt
 GPL-2
 A flexible and fast logfile colorizer
-~amd64 ~ppc ~sparc ~x86 ~x86-fbsd
+amd64 ~ppc ~sparc ~x86 ~x86-fbsd
 autotools eutils fixheadtails libtool multilib portability toolchain-funcs user
 
 
