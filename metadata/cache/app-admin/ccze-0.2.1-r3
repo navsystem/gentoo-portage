@@ -1,5 +1,5 @@
-dev-libs/libpcre >=sys-apps/sed-4 || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 sys-devel/libtool
-dev-libs/libpcre
+dev-libs/libpcre sys-libs/ncurses >=sys-apps/sed-4 || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 sys-devel/libtool
+dev-libs/libpcre sys-libs/ncurses
 0
 mirror://gentoo/ccze-0.2.1.tar.gz
 test
@@ -12,9 +12,9 @@ autotools eutils fixheadtails libtool multilib portability toolchain-funcs user
 
 
 
+4
 
-
-compile install unpack
+prepare
 
 
 

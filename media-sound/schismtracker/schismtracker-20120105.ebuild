@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/schismtracker/schismtracker-20100101.ebuild,v 1.1 2010/10/31 14:22:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/schismtracker/schismtracker-20120105.ebuild,v 1.1 2012/02/03 10:46:30 ssuominen Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils
 
 DESCRIPTION="a free reimplementation of Impulse Tracker, a program used to create high quality music"
@@ -15,25 +15,22 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="media-libs/alsa-lib
-	>=media-libs/libsdl-1.2
+	>=media-libs/libsdl-1.2[X]
 	x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXv
 	x11-libs/libXxf86misc"
 DEPEND="${RDEPEND}
+	virtual/os-headers
 	x11-proto/kbproto
 	x11-proto/xf86miscproto
 	x11-proto/xproto"
 
-src_configure() {
-	econf \
-		--disable-dependency-tracking
-}
+DOCS="AUTHORS NEWS README TODO"
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS NEWS README TODO
-	doicon icons/schism-icon.svg
-	newicon icons/schism-icon-48.png schism-icon.png
-	make_desktop_entry ${PN} "Schism Tracker" schism-icon
+	default
+
+	domenu sys/fd.org/*.desktop
+	doicon icons/schism{,-itf}-icon-128.png
 }

@@ -1,7 +1,7 @@
 emboss? ( >=sci-biology/emboss-5.0.0 )
 emboss? ( >=sci-biology/emboss-5.0.0 )
 0
-mirror://gentoo/rebase-1103.tar.xz http://dev.gentoo.org/~jlec/distfiles/rebase-1103.tar.xz
+mirror://gentoo/rebase-1202.tar.xz http://dev.gentoo.org/~jlec/distfiles/rebase-1202.tar.xz
 binchecks strip
 http://rebase.neb.com
 public-domain
