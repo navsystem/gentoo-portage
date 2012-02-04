@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-3.0.1.ebuild,v 1.4 2012/01/28 11:07:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-3.0.1.ebuild,v 1.2 2011/11/30 19:05:10 nelchael Exp $
 
 EAPI="4"
 
@@ -13,14 +13,10 @@ SRC_URI="mirror://sourceforge/scintilla/${PN}${MY_PV}.tgz"
 
 LICENSE="Scintilla"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="lua"
 
-RDEPEND="dev-libs/glib
-	x11-libs/cairo
-	x11-libs/gtk+:2
-	x11-libs/gdk-pixbuf
-	x11-libs/pango
+RDEPEND="x11-libs/gtk+:2
 	lua? ( >=dev-lang/lua-5 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -34,7 +30,6 @@ src_prepare() {
 		-e "s#^CXXFLAGS=#CXXFLAGS=${CXXFLAGS} #" \
 		-e "s#^\(CXXFLAGS=.*\)-Os#\1#" \
 		-e "s#^CC =\(.*\)#CC = $(tc-getCXX)#" \
-		-e "s#^CCOMP =\(.*\)#CCOMP = $(tc-getCC)#" \
 		-e "s#-Os##" \
 		|| die "error patching makefile"
 
@@ -50,7 +45,6 @@ src_prepare() {
 		-e "s#^CXXFLAGS=#CXXFLAGS=${CXXFLAGS} #" \
 		-e "s#^\(CXXFLAGS=.*\)-Os#\1#" \
 		-e "s#^CC =\(.*\)#CC = $(tc-getCXX)#" \
-		-e "s#^CCOMP =\(.*\)#CCOMP = $(tc-getCC)#" \
 		-e 's#${D}##' \
 		-e 's#-g root#-g 0#' \
 		-e "s#-Os##" \

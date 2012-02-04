@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/jpgraph/jpgraph-3.0.7.ebuild,v 1.2 2012/01/28 14:04:18 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/jpgraph/jpgraph-3.0.7.ebuild,v 1.1 2011/04/09 19:21:37 olemarkus Exp $
 
-EAPI="4"
+EAPI="2"
 
-inherit eutils
+inherit php-lib-r1 eutils
 
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 
@@ -19,11 +19,14 @@ DEPEND=""
 RDEPEND="truetype? ( media-fonts/corefonts )
 	dev-lang/php[gd]
 	"
-S="${WORKDIR}"
+
+need_php_by_category
 
 [[ -z "${JPGRAPH_CACHEDIR}" ]] && JPGRAPH_CACHEDIR="/var/cache/jpgraph-php5/"
 
 pkg_setup() {
+	has_php
+
 	# check to which user:group the cache dir will go
 	if has_version "www-servers/apache" ; then
 		HTTPD_USER="apache"
@@ -72,13 +75,13 @@ src_install() {
 
 	# install php files
 	einfo "Building list of files to install"
-	insinto "/usr/share/php/${PN}"
-	doins -r src/
+	php-lib-r1_src_install src `cd src ; find . -type f -print`
 
 	# install documentation
 	einfo "Installing documentation"
-	dodoc -r docportal/*
-	dodoc README
+	dodoc-php README
+	insinto /usr/share/doc/${CATEGORY}/${PF}
+	doins -r docportal/*
 
 	# setup the cache dir
 	einfo "Setting up the cache dir"

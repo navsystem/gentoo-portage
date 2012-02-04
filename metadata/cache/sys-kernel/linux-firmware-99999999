@@ -3,7 +3,7 @@ dev-vcs/git
 0
 
 
-http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git
+http://www.kernel.org/pub/linux/kernel/people/dwmw2/firmware
 GPL-1 GPL-2 GPL-3 BSD freedist
 Linux firmware files
 

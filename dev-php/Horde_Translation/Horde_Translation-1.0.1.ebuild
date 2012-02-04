@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/Horde_Translation/Horde_Translation-1.0.1.ebuild,v 1.2 2012/02/02 14:46:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/Horde_Translation/Horde_Translation-1.0.1.ebuild,v 1.1 2011/09/17 12:24:20 a3li Exp $
 
 EAPI=4
 
 inherit php-pear-r1
 
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64"
 SLOT="0"
 DESCRIPTION="Horde translation library"
 LICENSE="LGPL-2"

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-4.7.4.ebuild,v 1.3 2012/01/16 23:29:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-4.7.4.ebuild,v 1.1 2011/12/11 18:52:18 alexxy Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ OPENGL_REQUIRED="optional"
 inherit kde4-meta
 
 DESCRIPTION="KDE window manager"
-KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug gles xinerama"
 
 COMMONDEPEND="

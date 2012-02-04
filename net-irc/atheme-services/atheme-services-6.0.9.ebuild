@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/atheme-services-6.0.9.ebuild,v 1.5 2012/02/03 01:24:17 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/atheme-services-6.0.9.ebuild,v 1.2 2011/12/15 15:23:44 ago Exp $
 
 EAPI=4
 
@@ -12,11 +12,10 @@ SRC_URI="http://atheme.net/downloads/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~sparc x86 ~x86-fbsd ~amd64-linux"
+KEYWORDS="amd64 ~sparc ~x86 ~x86-fbsd ~amd64-linux"
 IUSE="largenet ldap nls +pcre perl profile ssl"
 
-RDEPEND="dev-libs/libmowgli:0
-	sys-libs/cracklib
+RDEPEND="dev-libs/libmowgli
 	ldap? ( net-nds/openldap )
 	nls? ( sys-devel/gettext )
 	pcre? ( dev-libs/libpcre )

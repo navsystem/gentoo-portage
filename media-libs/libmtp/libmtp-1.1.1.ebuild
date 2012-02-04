@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/libmtp-1.1.1.ebuild,v 1.6 2012/02/01 15:06:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/libmtp-1.1.1.ebuild,v 1.3 2011/12/02 22:14:54 hwoarang Exp $
 
-EAPI=4
+EAPI=2
 inherit eutils multilib
 
 DESCRIPTION="An implementation of Microsoft's Media Transfer Protocol (MTP)."
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 hppa ~ppc ppc64 x86"
+KEYWORDS="amd64 ~hppa ~ppc ~ppc64 x86"
 IUSE="doc examples static-libs"
 
 RDEPEND="virtual/libusb:0"
@@ -28,15 +28,17 @@ src_configure() {
 		--enable-shared \
 		$(use_enable static-libs static) \
 		$(use_enable doc doxygen) \
+		--with-udev=/$(get_libdir)/udev/ \
+		--with-udev-rules="65-mtp.rules" \
 		--with-udev-group="plugdev" \
 		--with-udev-mode="0660"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	emake DESTDIR="${D}" install || die
 	find "${D}" -name '*.la' -exec rm -f {} +
 
-	dodoc AUTHORS ChangeLog README TODO
+	dodoc AUTHORS ChangeLog README TODO || die
 
 	if use examples; then
 		docinto examples

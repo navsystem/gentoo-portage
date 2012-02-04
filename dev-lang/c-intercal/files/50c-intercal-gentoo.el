@@ -1,3 +1,6 @@
+
+;;; c-intercal site-lisp configuration
+
 (add-to-list 'load-path "@SITELISP@")
 (autoload 'intercal-mode "intercal"
   "A major editing mode for the language Intercal." t)

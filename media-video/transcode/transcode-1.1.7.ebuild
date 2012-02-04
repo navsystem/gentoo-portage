@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.7.ebuild,v 1.7 2012/02/01 14:37:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.7.ebuild,v 1.2 2011/12/06 13:21:48 ssuominen Exp $
 
 EAPI=4
 inherit eutils libtool multilib
@@ -11,11 +11,11 @@ SRC_URI="http://bitbucket.org/france/${PN}-tcforge/downloads/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ppc ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="3dnow a52 aac alsa altivec dv dvd +iconv imagemagick jpeg lzo mjpeg mmx mp3 mpeg nuv ogg oss pic postproc quicktime sdl sse sse2 theora truetype v4l vorbis X x264 xml xvid"
 
 RDEPEND="
-	>=virtual/ffmpeg-0.6.90
+	virtual/ffmpeg
 	a52? ( media-libs/a52dec )
 	aac? ( media-libs/faac )
 	alsa? ( media-libs/alsa-lib )
@@ -29,7 +29,7 @@ RDEPEND="
 	mp3? ( media-sound/lame )
 	mpeg? ( media-libs/libmpeg2 )
 	ogg? ( media-libs/libogg )
-	postproc? ( >=virtual/ffmpeg-0.6.90 )
+	postproc? ( media-video/ffmpeg )
 	quicktime? ( >=media-libs/libquicktime-1 )
 	sdl? ( >=media-libs/libsdl-1.2.5[X?] )
 	theora? ( media-libs/libtheora )
@@ -56,10 +56,7 @@ REQUIRED_USE="
 	"
 
 src_prepare() {
-	epatch \
-		"${FILESDIR}"/${P}-ffmpeg.patch \
-		"${FILESDIR}"/${P}-ffmpeg-0.10.patch
-
+	epatch "${FILESDIR}"/${P}-ffmpeg.patch
 	elibtoolize
 }
 

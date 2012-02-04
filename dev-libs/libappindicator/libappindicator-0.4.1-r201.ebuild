@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libappindicator/libappindicator-0.4.1-r201.ebuild,v 1.5 2012/01/25 14:59:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libappindicator/libappindicator-0.4.1-r201.ebuild,v 1.4 2011/11/28 16:49:48 ssuominen Exp $
 
 EAPI=4
 
@@ -43,7 +43,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-no-mono.patch
 	eautoreconf
 
-	>py-compile
+	rm -f py-compile
+	ln -s $(type -P true) py-compile
 }
 
 src_configure() {

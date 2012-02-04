@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-9999.ebuild,v 1.23 2012/02/03 14:29:44 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-9999.ebuild,v 1.20 2011/11/14 15:02:31 voyageur Exp $
 
 EAPI=3
 
@@ -32,14 +32,14 @@ src_unpack() {
 
 src_prepare() {
 	# Same as llvm doc patches
-#	epatch "${FILESDIR}"/${PN}-2.7-fixdoc.patch
+	epatch "${FILESDIR}"/${PN}-2.7-fixdoc.patch
 
 	# multilib-strict
 	sed -e "/PROJ_headers/s#lib/clang#$(get_libdir)/clang#" \
 		-i tools/clang/lib/Headers/Makefile \
 		|| die "clang Makefile failed"
 	# Fix cxx_include_root path for Gentoo
-	epatch "${FILESDIR}"/${PN}-3.1-fix_cxx_include_root.patch
+	epatch "${FILESDIR}"/${PN}-3.0-fix_cxx_include_root.patch
 	# fix the static analyzer for in-tree install
 	sed -e 's/import ScanView/from clang \0/'  \
 		-i tools/clang/tools/scan-view/scan-view \
@@ -47,10 +47,6 @@ src_prepare() {
 	sed -e "/scanview.css\|sorttable.js/s#\$RealBin#${EPREFIX}/usr/share/${PN}#" \
 		-i tools/clang/tools/scan-build/scan-build \
 		|| die "scan-build sed failed"
-	# Set correct path for gold plugin
-	sed -e "/LLVMgold.so/s#lib/#$(get_libdir)/llvm/#" \
-		-i  tools/clang/lib/Driver/Tools.cpp \
-		|| die "gold plugin path sed failed"
 	# Specify python version
 	python_convert_shebangs 2 tools/clang/tools/scan-view/scan-view
 
@@ -65,10 +61,6 @@ src_prepare() {
 	sed -e 's,\$(RPATH) -Wl\,\$(\(ToolDir\|LibDir\)),$(RPATH) -Wl\,'"${EPREFIX}"/usr/$(get_libdir)/llvm, \
 		-e '/OmitFramePointer/s/-fomit-frame-pointer//' \
 		-i Makefile.rules || die "rpath sed failed"
-
-	# Use system llc (from llvm ebuild) for tests
-	sed -e "/^llc_props =/s/os.path.join(llvm_tools_dir, 'llc')/'llc'/" \
-		-i tools/clang/test/lit.cfg  || die "test path sed failed"
 }
 
 src_configure() {

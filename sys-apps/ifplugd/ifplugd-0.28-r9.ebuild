@@ -1,8 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ifplugd-0.28-r9.ebuild,v 1.7 2011/12/28 14:47:06 scarabeus Exp $
-
-EAPI=4
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ifplugd-0.28-r9.ebuild,v 1.5 2008/02/05 18:06:53 jer Exp $
 
 inherit eutils
 
@@ -12,7 +10,7 @@ SRC_URI="http://0pointer.de/lennart/projects/ifplugd/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~arm amd64 hppa ppc x86"
+KEYWORDS="amd64 hppa ppc x86"
 IUSE="doc"
 
 DEPEND="dev-util/pkgconfig
@@ -21,29 +19,33 @@ DEPEND="dev-util/pkgconfig
 RDEPEND=">=dev-libs/libdaemon-0.5
 	>=sys-apps/baselayout-1.12"
 
-src_prepare() {
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
 	epatch "${FILESDIR}/${P}-nlapi.diff"
 	epatch "${FILESDIR}/${P}-interface.patch"
 	epatch "${FILESDIR}/${P}-strictalias.patch"
 	epatch "${FILESDIR}/${P}-noip.patch"
 }
 
-src_configure() {
-	econf \
-		$(use_enable doc lynx) \
+src_compile() {
+	econf $(use_enable doc lynx) \
 		--with-initdir=/etc/init.d \
 		--disable-xmltoman \
-		--disable-subversion
+		--disable-subversion \
+		|| die "econf failed"
+	emake || die "emake failed"
 }
 
 src_install() {
-	default
+	make DESTDIR="${D}" install || die "make install failed"
 
 	# Remove init.d configuration as we no longer use it
 	rm -rf "${D}/etc/ifplugd" "${D}/etc/init.d/${PN}"
 
+	dodir "/etc/${PN}"
 	exeinto "/etc/${PN}"
-	newexe "${FILESDIR}/${PN}.action" "${PN}.action"
+	newexe "${FILESDIR}/${PN}.action" "${PN}.action" || die
 
 	cd "${S}/doc"
 	dodoc README SUPPORTED_DRIVERS

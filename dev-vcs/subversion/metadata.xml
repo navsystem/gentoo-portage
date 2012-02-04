@@ -2,8 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>tommy@gentoo.org</email>
-		<name>Thomas Sachau</name>
+		<email>chainsaw@gentoo.org</email>
+		<name>Tony Vroon</name>
 	</maintainer>
 	<use>
 		<flag name="ctypes-python">Build and install Ctypes Python bindings</flag>

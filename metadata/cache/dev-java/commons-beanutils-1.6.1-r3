@@ -3,11 +3,11 @@
 1.6
 mirror://apache/jakarta/commons/beanutils/source/commons-beanutils-1.6.1-src.tar.gz
 test
-http://commons.apache.org/beanutils/
+http://jakarta.apache.org/commons/beanutils/
 Apache-1.1
 Provides easy-to-use wrappers around Reflection and Introspection APIs
-amd64 ppc ppc64 x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos
-eutils java-ant-2 java-pkg-2 java-utils-2 multilib portability toolchain-funcs user versionator
+amd64 ~ia64 ppc ppc64 x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos
+eutils java-ant-2 java-pkg-2 java-utils-2 multilib portability toolchain-funcs versionator
 doc source elibc_FreeBSD doc source elibc_FreeBSD
 
 

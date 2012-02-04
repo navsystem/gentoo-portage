@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/npapi-vlc/npapi-vlc-9999.ebuild,v 1.4 2012/01/07 15:06:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/npapi-vlc/npapi-vlc-9999.ebuild,v 1.2 2011/09/21 08:43:31 mgorny Exp $
 
 EAPI=3
 
@@ -25,13 +25,13 @@ if [ "${PV%9999}" = "${PV}" ] ; then
 else
 	KEYWORDS=""
 fi
-IUSE="gtk"
+IUSE=""
 
 RDEPEND=">=media-video/vlc-1.1
-	>=net-misc/npapi-sdk-0.27
+	>=net-libs/xulrunner-1.9.2
 	x11-libs/libX11
-	!gtk? ( x11-libs/libXpm x11-libs/libSM x11-libs/libICE )
-	gtk? ( x11-libs/gtk+:2 )
+	x11-libs/libXpm
+	x11-libs/libXt
 	!<media-video/vlc-1.2[nsplugin]"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
@@ -40,11 +40,6 @@ src_prepare() {
 	if [ "${PV%9999}" != "${PV}" ] ; then
 		eautoreconf
 	fi
-}
-
-src_configure() {
-	econf \
-		$(use_with gtk)
 }
 
 src_install() {

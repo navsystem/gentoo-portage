@@ -1,44 +1,42 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pkcrack/pkcrack-1.2.2.ebuild,v 1.8 2012/01/25 22:23:06 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pkcrack/pkcrack-1.2.2.ebuild,v 1.7 2009/03/22 15:58:07 arfrever Exp $
 
-EAPI="4"
 inherit toolchain-funcs
 
 DESCRIPTION="PkZip cipher breaker"
 HOMEPAGE="http://www.unix-ag.uni-kl.de/~conrad/krypto/pkcrack.html"
 SRC_URI="http://www.unix-ag.uni-kl.de/~conrad/krypto/pkcrack/${P}.tar.gz"
-
 LICENSE="pkcrack"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="test"
-
-DEPEND="test? ( app-arch/zip[crypt] )"
+DEPEND="test? ( app-arch/zip )"
 RDEPEND="!<app-text/html-xml-utils-5.3"
 
-src_prepare() {
+src_unpack() {
+	unpack ${A}
 	cd "${S}/src"
 	sed -i -e "s/^CC=.*/CC=$(tc-getCC)/" \
 		-e "/^CFLAGS=.*/d" \
 		-e "s/CFLAGS/LDFLAGS/" \
-		Makefile
-	sed -i -e "s:void main:int main:" *.c
+		Makefile || die "sed Makefile failed"
+	sed -i -e "s:void main:int main:" *.c || die "sed *.c failed"
 }
 
 src_compile() {
 	cd "${S}/src"
-	emake
+	emake || die "emake failed"
 }
 
 src_test() {
 	cd "${S}/test"
-	make CC="$(tc-getCC)" all
+	make CC="$(tc-getCC)" all || die "self test failed"
 }
 
 src_install() {
 	cd "${S}/src"
-	dobin pkcrack zipdecrypt findkey extract makekey
+	dobin pkcrack zipdecrypt findkey extract makekey || die "dobin failed"
 	dodoc "${S}/doc/"*
 }
 
@@ -51,4 +49,5 @@ pkg_postinst() {
 	elog "    Germany"
 	elog
 	elog "See: http://www.unix-ag.uni-kl.de/~conrad/krypto/pkcrack/pkcrack-readme.html"
+	epause 5
 }

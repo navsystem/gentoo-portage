@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-3.2.1.ebuild,v 1.3 2012/01/22 01:34:18 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-3.2.1.ebuild,v 1.1 2011/11/03 06:18:47 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -150,7 +150,8 @@ src_prepare() {
 	#fi
 
 	# disable pyc compiling
-	echo > py-compile
+	mv py-compile py-compile.orig
+	ln -s $(type -P true) py-compile
 
 	gnome2_src_prepare
 }
@@ -170,5 +171,5 @@ pkg_postinst() {
 
 pkg_postrm() {
 	gnome2_pkg_postrm
-	use python && python_mod_cleanup /usr/$(get_libdir)/totem/plugins
+	python_mod_cleanup /usr/$(get_libdir)/totem/plugins
 }

@@ -3,8 +3,13 @@
 <pkgmetadata>
 	<herd>tools-portage</herd>
 	<maintainer>
-		<email>dolsen@gentoo.org</email>
+		<email>idl0r@gentoo.org</email>
+		<name>Christian Ruppert</name>
+	</maintainer>
+	<maintainer>
+		<email>brian.dolbec@gmail.com</email>
 		<name>Brian Dolbec</name>
+		<description>Proxied co-maintainer, please CC on all bugs</description>
 	</maintainer>
 	<use>
 		<flag name="bazaar">Support <pkg>dev-vcs/bzr</pkg> based overlays</flag>

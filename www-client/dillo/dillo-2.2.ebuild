@@ -1,14 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/dillo-2.2.ebuild,v 1.11 2012/01/05 18:12:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/dillo-2.2.ebuild,v 1.10 2010/11/08 12:38:58 nelchael Exp $
 
-EAPI=2
+EAPI="2"
 inherit eutils flag-o-matic multilib
 
 DESCRIPTION="Lean FLTK2-based web browser"
 HOMEPAGE="http://www.dillo.org/"
-SRC_URI="http://www.dillo.org/download/${P}.tar.bz2
-	mirror://gentoo/${PN}.png"
+SRC_URI="http://www.dillo.org/download/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -18,14 +17,13 @@ IUSE="doc +gif ipv6 +jpeg +png ssl"
 RDEPEND="x11-libs/fltk:2[-cairo,jpeg=,png=]
 	sys-libs/zlib
 	jpeg? ( virtual/jpeg )
-	png? ( media-libs/libpng:0 )
-	ssl? ( dev-libs/openssl:0 )"
+	png? ( media-libs/libpng )
+	ssl? ( dev-libs/openssl )"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
 src_prepare() {
-	epatch \
-		"${FILESDIR}"/dillo2-inbuf.patch \
+	epatch "${FILESDIR}"/dillo2-inbuf.patch \
 		"${FILESDIR}"/${P}-libpng14.patch
 }
 
@@ -40,25 +38,25 @@ src_configure() {
 }
 
 src_compile() {
-	emake || die
-	if use doc; then
-		doxygen Doxyfile || die
+	emake || die "make failed"
+	if use doc ; then
+		doxygen Doxyfile || die "doxygen failed"
 	fi
 }
 
 src_install() {
 	dodir /etc
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die "install failed"
 
 	if use doc; then
-		dohtml html/* || die
+		dohtml html/* || die "install documentation failed"
 	fi
 	dodoc AUTHORS ChangeLog README NEWS
 	docinto doc
 	dodoc doc/*.txt doc/README
 
-	doicon "${DISTDIR}"/dillo.png
-	make_desktop_entry dillo Dillo
+	doicon "${FILESDIR}"/dillo.png
+	make_desktop_entry dillo Dillo dillo
 }
 
 pkg_postinst() {

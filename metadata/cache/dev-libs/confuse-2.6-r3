@@ -4,10 +4,10 @@ nls? ( virtual/libintl )
 http://bzero.se/confuse/confuse-2.6.tar.gz
 
 http://www.nongnu.org/confuse/
-ISC
+LGPL-2
 a configuration file parser library
 alpha amd64 hppa ia64 ppc ppc64 sparc ~sparc-fbsd x86 ~x86-fbsd
-eutils multilib portability toolchain-funcs user
+eutils multilib portability toolchain-funcs
 nls
 
 

@@ -1,11 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d1x-rebirth/d1x-rebirth-0.56.ebuild,v 1.4 2012/01/18 12:42:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d1x-rebirth/d1x-rebirth-0.56.ebuild,v 1.2 2011/06/20 09:20:19 tupone Exp $
 
 EAPI=2
-
-CDROM_OPTIONAL="yes"
-inherit eutils cdrom scons-utils games
+inherit eutils scons-utils games
 
 DV=1
 DESCRIPTION="Descent Rebirth - enhanced Descent ${DV} engine"
@@ -20,7 +18,7 @@ SRC_URI="mirror://sourceforge/dxx-rebirth/${PN}_v${PV}-src.tar.gz
 LICENSE="D1X GPL-2 as-is"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="ipv6 linguas_de opengl timidity"
+IUSE="cdinstall ipv6 linguas_de opengl timidity"
 
 RDEPEND="opengl? ( virtual/opengl virtual/glu )
 	dev-games/physfs[hog,zip]

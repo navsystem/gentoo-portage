@@ -1,42 +1,38 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/geomview-1.9.4.ebuild,v 1.7 2012/01/26 17:10:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/geomview-1.9.4.ebuild,v 1.6 2010/10/10 21:49:01 ulm Exp $
 
 EAPI=1
 
 inherit elisp-common eutils flag-o-matic fdo-mime
 
 DESCRIPTION="Interactive Geometry Viewer"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://geomview.sourceforge.net"
-SRC_URI="
-	mirror://sourceforge/${PN}/${P}.tar.bz2
-	http://dev.gentoo.org/~jlec/distfiles/geomview.png.tar"
 
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 LICENSE="LGPL-2.1"
 SLOT="0"
 IUSE="avg bzip2 debug emacs netpbm pdf zlib"
 
-DEPEND="
-	>=x11-libs/openmotif-2.3:0
-	virtual/opengl
+DEPEND="zlib? ( sys-libs/zlib )
 	emacs? ( virtual/emacs )
-	zlib? ( sys-libs/zlib )"
+	>=x11-libs/openmotif-2.3:0
+	virtual/opengl"
+
 RDEPEND="${DEPEND}
-	app-arch/gzip
-	virtual/w3m
-	bzip2? ( app-arch/bzip2 )
 	netpbm? ( >=media-libs/netpbm-10.37.0 )
-	pdf? (
-		|| ( app-text/xpdf
-			app-text/gv
-			app-text/gsview
-			app-text/epdfview
-			app-text/acroread )
-	)"
+	bzip2? ( app-arch/bzip2 )
+	app-arch/gzip
+	pdf? ( || ( app-text/xpdf
+		app-text/gv
+		app-text/gsview
+		app-text/epdfview
+		app-text/acroread )
+		)
+	virtual/w3m"
 
 S="${WORKDIR}/${P/_/-}"
-
 SITEFILE=50${PN}-gentoo.el
 
 src_compile() {
@@ -49,7 +45,8 @@ src_compile() {
 	fi
 
 	econf ${myconf} $(use_enable debug d1debug) $(use_with zlib) \
-		$(use_enable avg motion-averaging)
+		$(use_enable avg motion-averaging) \
+		|| die "could not configure"
 
 	emake || die "make failed"
 
@@ -63,15 +60,15 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
-	doicon "${WORKDIR}"/geomview.png || die
+	doicon "${FILESDIR}"/geomview.png
 	make_desktop_entry geomview "GeomView ${PV}" \
 		"/usr/share/pixmaps/geomview.png" \
 		"Science;Math;Education"
 
-	dodoc AUTHORS ChangeLog NEWS INSTALL.Geomview || die
+	dodoc AUTHORS ChangeLog NEWS INSTALL.Geomview
 
 	if ! use pdf; then
-		rm "${D}"/usr/share/doc/${PF}/${PN}.pdf || die
+		rm "${D}"/usr/share/doc/${PF}/${PN}.pdf
 	fi
 
 	if use emacs; then
@@ -86,7 +83,7 @@ pkg_postinst() {
 
 	elog "GeomView expects you to have both Firefox and Xpdf installed for"
 	elog "viewing the documentation (this can be changed at runtime)."
-	echo ""
+	elog ""
 	elog "The w3m virtual should handle the HTML browser part, and if"
 	elog "you wish to use an alternate PDF viewer, feel free to remove"
 	elog "xpdf and use the viewer of your choice (see the docs for how"

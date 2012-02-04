@@ -1,29 +1,26 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_skey/pam_skey-1.1.5-r2.ebuild,v 1.5 2012/01/06 21:13:27 ulm Exp $
-
-EAPI=4
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_skey/pam_skey-1.1.5-r2.ebuild,v 1.4 2010/10/10 10:38:31 phajdan.jr Exp $
 
 inherit eutils pam autotools multilib
 
 DESCRIPTION="PAM interface for the S/Key authentication system"
 HOMEPAGE="http://freshmeat.net/projects/pam_skey/"
 SRC_URI="http://dkorunic.net/tarballs/${P}.tar.gz
-	mirror://gentoo/${P}-patches-3.tar.xz"
+	mirror://gentoo/${P}-patches-2.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-RDEPEND=">=sys-libs/pam-0.78-r3
+DEPEND=">=sys-libs/pam-0.78-r3
 	>=sys-auth/skey-1.1.5-r4"
-DEPEND="${RDEPEND}
-	app-arch/xz-utils"
+RDEPEND="${DEPEND}"
 
-DOCS="README INSTALL"
-
-src_prepare() {
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
 	EPATCH_SUFFIX=patch epatch
 
 	cd autoconf
@@ -32,8 +29,15 @@ src_prepare() {
 	mv configure defs.h.in .. || die "mv failed"
 }
 
-src_configure() {
-	econf --libdir="/$(get_libdir)" CFLAGS="${CFLAGS} -fPIC"
+src_compile() {
+	econf --libdir="/$(get_libdir)" CFLAGS="${CFLAGS} -fPIC" \
+		|| die "econf failed"
+	emake || die "emake failed"
+}
+
+src_install() {
+	emake DESTDIR="${D}" install || die "install failed"
+	dodoc README INSTALL
 }
 
 pkg_postinst() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-3.0.ebuild,v 1.4 2012/01/25 21:14:57 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-3.0.ebuild,v 1.2 2011/07/30 09:59:10 swegener Exp $
 
 EAPI=2
 
@@ -21,14 +21,12 @@ RDEPEND="mysql? ( virtual/mysql )
 	sqlite? ( =dev-db/sqlite-2.8* )
 	sqlite3? ( =dev-db/sqlite-3* )
 	opendbx? ( dev-db/opendbx )
-	!static? ( >=dev-libs/boost-1.34 )"
+	>=dev-libs/boost-1.34"
 DEPEND="${RDEPEND}
-	static? ( >=dev-libs/boost-1.34[static-libs] )
 	doc? ( app-doc/doxygen )"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-lua-config.patch \
-		"${FILESDIR}"/${PN}-3.0-verbose-logging.patch
+	epatch "${FILESDIR}"/${P}-lua-config.patch
 	eautoreconf
 }
 
@@ -69,7 +67,7 @@ src_compile() {
 }
 
 src_install () {
-	emake DESTDIR="${D}" install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 
 	mv "${D}"/etc/powerdns/pdns.conf{-dist,}
 
@@ -90,8 +88,6 @@ src_install () {
 	doins pdns/*.hh
 	insinto /usr/include/pdns/backends/gsql
 	doins pdns/backends/gsql/*.hh
-
-	rm -f "${D}"/usr/$(get_libdir)/powerdns/*.{a,la}
 }
 
 pkg_preinst() {

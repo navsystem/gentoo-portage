@@ -1,10 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-openid/php-openid-2.2.2.ebuild,v 1.2 2012/01/28 14:08:19 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-openid/php-openid-2.2.2.ebuild,v 1.1 2010/08/02 17:12:50 mabi Exp $
 
-EAPI="4"
+EAPI="2"
 MY_P="openid-php-openid-2.2.2-0-ga287b2d"
 MY_P2="openid-php-openid-782224d"
+
+inherit php-lib-r1
 
 PHP_LIB_NAME="Auth"
 DESCRIPTION="PHP OpenID implementation"
@@ -24,10 +26,14 @@ RDEPEND="|| ( dev-lang/php[gmp] dev-lang/php[bcmath] )
 S="${WORKDIR}/${MY_P2}"
 
 src_install() {
-	insinto "/usr/share/php/${PN}"
-	cd "${S}/Auth" && doins -r .
+	cd "${S}"/Auth
+	php-lib-r1_src_install . * */*
 
-	use examples && dodoc -r ../examples
+	if use examples; then
+		cd "${S}"
+		insinto /usr/share/doc/${PF}/examples
+		doins -r examples/*
+	fi
 }
 
 pkg_postinst() {

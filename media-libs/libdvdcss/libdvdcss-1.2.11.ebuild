@@ -1,9 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/libdvdcss-1.2.11.ebuild,v 1.10 2012/01/28 04:14:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/libdvdcss-1.2.11.ebuild,v 1.2 2011/11/26 01:10:32 radhermit Exp $
 
 EAPI=4
-inherit autotools
+
+inherit eutils autotools-utils
 
 DESCRIPTION="A portable abstraction library for DVD decryption"
 HOMEPAGE="http://www.videolan.org/developers/libdvdcss.html"
@@ -11,22 +12,26 @@ SRC_URI="http://www.videolan.org/pub/${PN}/${PV}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="1.2"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE="doc static-libs"
 
-RDEPEND=""
-DEPEND="${RDEPEND}
-	doc? (
+DEPEND="doc? (
 		app-doc/doxygen
 		virtual/latex-base
 		dev-tex/xcolor
 		dev-texlive/texlive-latexextra
-		)"
+	)"
+RDEPEND=""
 
-DOCS="AUTHORS ChangeLog NEWS README"
+AUTOTOOLS_IN_SOURCE_BUILD=1
+
+DOCS=( AUTHORS ChangeLog NEWS README )
 
 src_prepare() {
-	sed -i -e 's:noinst_PROGRAMS:check_PROGRAMS:' test/Makefile.am || die
+	sed -i -e 's:noinst_PROGRAMS:check_PROGRAMS:' \
+		"${S}"/test/Makefile.am \
+		|| die "unable to disable tests building"
+
 	eautoreconf
 }
 
@@ -42,9 +47,7 @@ src_configure() {
 }
 
 src_install() {
-	default
-
-	find "${ED}" -name '*.la' -exec rm -f {} +
+	autotools-utils_src_install
 
 	use doc && dohtml doc/html/*
 	use doc && dodoc doc/latex/refman.ps

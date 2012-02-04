@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmag/kmag-4.7.4.ebuild,v 1.3 2012/01/16 22:50:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmag/kmag-4.7.4.ebuild,v 1.1 2011/12/11 18:52:38 alexxy Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ fi
 inherit ${kde_eclass}
 
 DESCRIPTION="KDE screen magnifier"
-KEYWORDS="amd64 ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 RDEPEND="

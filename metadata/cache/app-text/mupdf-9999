@@ -12,9 +12,9 @@ X vanilla
 
 
 
-4
+2
 
-compile install prepare unpack
+compile install postinst prepare unpack
 
 
 

@@ -1,12 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.32.0-r2.ebuild,v 1.10 2012/01/22 01:34:18 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.32.0-r2.ebuild,v 1.7 2011/11/25 15:52:19 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
 PYTHON_DEPEND="python? 2"
 PYTHON_USE_WITH="threads"
-PYTHON_USE_WITH_OPT="python"
 
 inherit autotools eutils gnome2 multilib python
 
@@ -143,6 +142,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	gnome2_src_prepare
+
 	# Use fixed gnome-doc-utils.make, bug #348403 (can be dropped in next bump)
 	cp -f /usr/share/gnome-doc-utils/gnome-doc-utils.make . || die
 
@@ -155,10 +156,9 @@ src_prepare() {
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
 
-	gnome2_src_prepare
-
 	# disable pyc compiling
-	echo > py-compile
+	mv py-compile py-compile.orig
+	ln -s $(type -P true) py-compile
 }
 
 src_configure() {
@@ -198,5 +198,5 @@ pkg_postinst() {
 
 pkg_postrm() {
 	gnome2_pkg_postrm
-	use python && python_mod_cleanup /usr/$(get_libdir)/totem/plugins
+	python_mod_cleanup /usr/$(get_libdir)/totem/plugins
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.7.3-r5.ebuild,v 1.14 2012/01/08 20:53:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.7.3-r5.ebuild,v 1.9 2011/10/28 05:31:07 mgorny Exp $
 
 EAPI=4
 
@@ -12,13 +12,18 @@ SRC_URI="http://hostap.epitest.fi/releases/${P}.tar.gz"
 LICENSE="|| ( GPL-2 BSD )"
 
 SLOT="0"
-KEYWORDS="amd64 arm ~mips ~ppc ~ppc64 x86 ~x86-fbsd"
-IUSE="dbus debug gnutls eap-sim fasteap madwifi ps3 qt4 readline selinux ssl wimax wps kernel_linux kernel_FreeBSD"
+KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~x86 ~x86-fbsd"
+IUSE="dbus debug gnutls eap-sim fasteap madwifi ps3 qt4 readline ssl wimax wps kernel_linux kernel_FreeBSD"
 
 RDEPEND="dbus? ( sys-apps/dbus )
 	kernel_linux? (
 		eap-sim? ( sys-apps/pcsc-lite )
-		madwifi? ( >net-wireless/madwifi-ng-tools-0.9.3 )
+		madwifi? (
+			|| (
+				>net-wireless/madwifi-ng-tools-0.9.3
+				net-wireless/madwifi-old
+			)
+		)
 		dev-libs/libnl:1.1
 	)
 	!kernel_linux? ( net-libs/libpcap )
@@ -32,8 +37,7 @@ RDEPEND="dbus? ( sys-apps/dbus )
 	)
 	ssl? ( dev-libs/openssl )
 	!ssl? ( gnutls? ( net-libs/gnutls ) )
-	!ssl? ( !gnutls? ( dev-libs/libtommath ) )
-	selinux? ( sec-policy/selinux-networkmanager )"
+	!ssl? ( !gnutls? ( dev-libs/libtommath ) )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 

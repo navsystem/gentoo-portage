@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdiscount/rdiscount-1.6.8.ebuild,v 1.8 2012/01/17 13:55:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdiscount/rdiscount-1.6.8.ebuild,v 1.5 2011/12/04 23:28:34 naota Exp $
 
 EAPI=2
 
@@ -19,7 +19,7 @@ HOMEPAGE="http://github.com/rtomayko/rdiscount"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 ruby_add_bdepend "doc? ( app-text/ronn )"
@@ -30,9 +30,6 @@ all_ruby_prepare() {
 
 	# Remove rule that will force a rebuild when running tests.
 	sed -i -e "/task 'test:unit' => \[:build\]/d" Rakefile || die
-
-	# Provide RUBY variable no longer provided by rake.
-	sed -i -e "1 iRUBY=${RUBY}" Rakefile || die
 }
 
 each_ruby_configure() {

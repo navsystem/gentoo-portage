@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/uam/uam-0.2.1.ebuild,v 1.6 2012/01/09 15:46:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/uam/uam-0.2.1.ebuild,v 1.4 2011/11/02 14:55:30 phajdan.jr Exp $
 
 EAPI=3
 inherit autotools-utils eutils

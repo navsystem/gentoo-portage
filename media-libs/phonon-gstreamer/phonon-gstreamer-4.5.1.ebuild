@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-gstreamer/phonon-gstreamer-4.5.1.ebuild,v 1.5 2011/12/30 18:53:03 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-gstreamer/phonon-gstreamer-4.5.1.ebuild,v 1.2 2011/07/17 08:46:31 dilfridge Exp $
 
 EAPI=4
 
@@ -23,26 +23,21 @@ else
 	KEYWORDS="~amd64 ~x86"
 fi
 SLOT="0"
-IUSE="alsa debug +network"
+IUSE="alsa debug"
 
 RDEPEND="
 	media-libs/gstreamer
 	media-plugins/gst-plugins-meta[alsa?,ogg,vorbis]
-	>=media-libs/phonon-4.6.0
+	>=media-libs/phonon-4.5.0
 	>=x11-libs/qt-core-4.6.0:4[glib]
 	>=x11-libs/qt-gui-4.6.0:4[glib]
 	>=x11-libs/qt-opengl-4.6.0:4
 	virtual/opengl
-	network? ( media-plugins/gst-plugins-soup )
 "
 DEPEND="${RDEPEND}
 	>=dev-util/automoc-0.9.87
 	dev-util/pkgconfig
 "
-
-PATCHES=(
-	"${FILESDIR}/${PV}-fix-searching-for-phonon.patch"
-)
 
 S="${WORKDIR}/${MY_P}"
 

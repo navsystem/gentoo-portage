@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/siphon/siphon-666-r1.ebuild,v 1.3 2012/01/15 15:32:23 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/siphon/siphon-666-r1.ebuild,v 1.1 2010/09/07 16:33:59 jer Exp $
 
 EAPI="2"
 
@@ -14,10 +14,9 @@ HOMEPAGE="http://siphon.datanerds.net/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 DEPEND="net-libs/libpcap"
-RDEPEND="${DEPEND}"
 IUSE=""
 
 S=${WORKDIR}/${MY_P}

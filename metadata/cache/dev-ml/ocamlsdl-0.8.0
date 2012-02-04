@@ -6,7 +6,7 @@ mirror://sourceforge/ocamlsdl/ocamlsdl-0.8.0.tar.gz
 http://ocamlsdl.sourceforge.net
 LGPL-2
 OCaml SDL Bindings
-~amd64 ~ppc ~sparc x86
+~amd64 ~ppc ~sparc ~x86
 findlib
 doc opengl truetype
 

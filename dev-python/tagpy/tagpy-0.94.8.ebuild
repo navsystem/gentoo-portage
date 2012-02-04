@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tagpy/tagpy-0.94.8.ebuild,v 1.9 2012/01/23 22:29:27 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tagpy/tagpy-0.94.8.ebuild,v 1.8 2011/03/05 17:11:12 armin76 Exp $
 
-EAPI="4"
+EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* *-jython *-pypy-*"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit distutils
 
@@ -18,8 +18,8 @@ SLOT="0"
 KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE="examples"
 
-RDEPEND="<dev-libs/boost-1.48[python]
-	>=media-libs/taglib-1.4"
+RDEPEND=">=media-libs/taglib-1.4
+	|| ( >=dev-libs/boost-1.35.0-r5[python] <dev-libs/boost-1.35.0-r5 )"
 DEPEND="${RDEPEND}
 	dev-python/setuptools"
 
@@ -32,7 +32,7 @@ src_prepare() {
 
 src_configure() {
 	"$(PYTHON -f)" ./configure.py \
-		--taglib-inc-dir="${EPREFIX}/usr/include/taglib" \
+		--taglib-inc-dir="/usr/include/taglib" \
 		--boost-python-libname="boost_python-mt" || die "Configuration failed"
 }
 
@@ -41,6 +41,6 @@ src_install() {
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
-		doins test/*
+		doins test/* || die "Installation of examples failed"
 	fi
 }

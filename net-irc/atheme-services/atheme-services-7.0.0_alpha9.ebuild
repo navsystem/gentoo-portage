@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/atheme-services-7.0.0_alpha9.ebuild,v 1.4 2012/02/03 01:24:17 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/atheme-services-7.0.0_alpha9.ebuild,v 1.1 2011/11/08 02:47:43 binki Exp $
 
 EAPI=4
 
-inherit autotools eutils flag-o-matic perl-module
+inherit flag-o-matic perl-module
 
 MY_P=${P/_/-}
 
@@ -15,10 +15,9 @@ SRC_URI="http://atheme.net/downloads/${MY_P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~sparc ~x86 ~x86-fbsd ~amd64-linux"
-IUSE="cracklib largenet ldap nls +pcre perl profile ssl"
+IUSE="largenet ldap nls +pcre perl profile ssl"
 
-RDEPEND=">=dev-libs/libmowgli-0.9.95:0
-	cracklib? ( sys-libs/cracklib )
+RDEPEND=">=dev-libs/libmowgli-0.9.95
 	ldap? ( net-nds/openldap )
 	nls? ( sys-devel/gettext )
 	perl? ( dev-lang/perl )
@@ -46,12 +45,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# The first PKG_CHECK_MODULES call is conditional, causing
-	# PKG_PROG_PKG_CONFIG expansion to fail.
-	epatch "${FILESDIR}"/${P}-pkg-config.patch
-	epatch "${FILESDIR}"/${PN}-7.0.0_alpha11-cracklib-automagic.patch
-	eautoconf
-
 	# fix docdir
 	sed -i -e 's/\(^DOCDIR.*=.\)@DOCDIR@/\1@docdir@/' extra.mk.in || die
 
@@ -75,7 +68,6 @@ src_configure() {
 		--disable-warnings \
 		--enable-contrib \
 		$(use_enable largenet large-net) \
-		$(use_with cracklib) \
 		$(use_with ldap) \
 		$(use_with nls) \
 		$(use_enable profile) \

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.26 2012/01/20 18:24:09 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.25 2011/08/22 04:46:32 vapier Exp $
 
 # @ECLASS: haskell-cabal.eclass
 # @MAINTAINER:
@@ -73,7 +73,6 @@ for feature in ${CABAL_FEATURES}; do
 	case ${feature} in
 		haddock)    CABAL_USE_HADDOCK=yes;;
 		hscolour)   CABAL_USE_HSCOLOUR=yes;;
-		hoogle)     CABAL_USE_HOOGLE=yes;;
 		alex)       CABAL_USE_ALEX=yes;;
 		happy)      CABAL_USE_HAPPY=yes;;
 		c2hs)       CABAL_USE_C2HS=yes;;
@@ -176,12 +175,10 @@ cabal-bootstrap() {
 	einfo "Using cabal-$(cabal-version)."
 
 	make_setup() {
-		set -- -package "${cabalpackage}" --make "${setupmodule}" \
+		$(ghc-getghc) -package "${cabalpackage}" --make "${setupmodule}" \
 			${GHC_BOOTSTRAP_FLAGS} \
 			"$@" \
 			-o setup
-		echo $(ghc-getghc) "$@"
-		$(ghc-getghc) "$@"
 	}
 	if $(ghc-supports-shared-libraries); then
 		# some custom build systems might use external libraries,
@@ -208,22 +205,16 @@ cabal-mksetup() {
 }
 
 cabal-hscolour() {
-	set -- hscolour "$@"
-	echo ./setup "$@"
-	./setup "$@" || die "setup hscolour failed"
+	./setup hscolour || die "setup hscolour failed"
 }
 
 cabal-haddock() {
-	set -- haddock "$@"
-	echo ./setup "$@"
-	./setup "$@" || die "setup haddock failed"
+	./setup haddock || die "setup haddock failed"
 }
 
 cabal-hscolour-haddock() {
 	# --hyperlink-source implies calling 'setup hscolour'
-	set -- haddock --hyperlink-source
-	echo ./setup "$@"
-	./setup "$@" --hyperlink-source || die "setup haddock --hyperlink-source failed"
+	./setup haddock --hyperlink-source || die "setup haddock failed"
 }
 
 cabal-configure() {
@@ -288,7 +279,7 @@ cabal-configure() {
 		$(ghc-supports-shared-libraries) && \
 			cabalconf="${cabalconf} --enable-shared"
 
-	set -- configure \
+	./setup configure \
 		--ghc --prefix="${EPREFIX}"/usr \
 		--with-compiler="$(ghc-getghc)" \
 		--with-hc-pkg="$(ghc-getghcpkg)" \
@@ -300,25 +291,21 @@ cabal-configure() {
 		${cabalconf} \
 		${CABAL_CONFIGURE_FLAGS} \
 		${CABAL_EXTRA_CONFIGURE_FLAGS} \
-		"$@"
-	echo ./setup "$@"
-	./setup "$@" || die "setup configure failed"
+		"$@" || die "setup configure failed"
 }
 
 cabal-build() {
 	unset LANG LC_ALL LC_MESSAGES
-	set --  build "$@"
-	echo ./setup "$@"
-	./setup "$@" \
+	./setup build \
 		|| die "setup build failed"
 }
 
 cabal-copy() {
 	has "${EAPI:-0}" 0 1 2 && ! use prefix && ED=${D}
 
-	set -- copy --destdir="${D}" "$@"
-	echo ./setup "$@"
-	./setup "$@" || die "setup copy failed"
+	./setup copy \
+		--destdir="${D}" \
+		|| die "setup copy failed"
 
 	# cabal is a bit eager about creating dirs,
 	# so remove them if they are empty
@@ -464,9 +451,7 @@ haskell-cabal_src_test() {
 		einfo ">>> No tests for dummy library: ${CATEGORY}/${PF}"
 	else
 		einfo ">>> Test phase [cabal test]: ${CATEGORY}/${PF}"
-		set -- test "$@"
-		echo ./setup "$@"
-		./setup "$@" || die "cabal test failed"
+		./setup test || die "cabal test failed"
 	fi
 
 	popd > /dev/null

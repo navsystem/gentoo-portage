@@ -2,8 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
         <maintainer>
-                <email>chainsaw@gentoo.org</email>
-                <name>Tony Vroon</name>
+                <email>dagger@gentoo.org</email>
+                <name>Robert Piasek</name>
         </maintainer>
 	<use>
 		<flag name="ethernet">Enable ethernet support.</flag>

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.67 2011/12/29 19:32:46 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.65 2011/12/15 00:34:27 williamh Exp $
 
 EAPI=4
 
@@ -40,7 +40,7 @@ COMMON_DEPEND="selinux? ( sys-libs/libselinux )
 	acl? ( sys-apps/acl dev-libs/glib:2 )
 	gudev? ( dev-libs/glib:2 )
 	introspection? ( dev-libs/gobject-introspection )
-	>=sys-apps/util-linux-2.20
+	>=sys-apps/util-linux-2.16
 	>=sys-libs/glibc-2.10"
 
 DEPEND="${COMMON_DEPEND}
@@ -357,7 +357,7 @@ ismounted()
 	while read a m a; do
 		[ "$m" = "$1" ] && return 0
 	done < "${ROOT}"/proc/mounts
-	return 1
+    return 1
 }
 
 pkg_postinst()

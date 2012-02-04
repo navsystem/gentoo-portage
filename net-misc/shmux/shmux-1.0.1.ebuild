@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/shmux/shmux-1.0.1.ebuild,v 1.3 2012/01/11 23:08:49 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/shmux/shmux-1.0.1.ebuild,v 1.2 2008/01/26 15:58:23 armin76 Exp $
 
 DESCRIPTION="Program for executing the same command on many hosts in parallel"
 HOMEPAGE="http://web.taranis.org/shmux/"
@@ -10,10 +10,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
 IUSE="pcre"
 RESTRICT="test"
-RDEPEND="
-	pcre? ( dev-libs/libpcre )
-	sys-libs/ncurses
-"
+RDEPEND="pcre? ( dev-libs/libpcre )"
 DEPEND="${RDEPEND}
 	sys-apps/gawk"
 

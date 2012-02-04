@@ -3,11 +3,11 @@
 0
 mirror://apache/jakarta/jmeter/source/jakarta-jmeter-2.0.1_src.tgz
 
-http://jmeter.apache.org/
+http://jakarta.apache.org/jmeter
 Apache-2.0
 Load test and measure performance on HTTP/FTP services and databases.
 amd64 x86
-eutils java-ant-2 java-pkg-2 java-utils-2 multilib portability toolchain-funcs user versionator
+eutils java-ant-2 java-pkg-2 java-utils-2 multilib portability toolchain-funcs versionator
 beanshell doc elibc_FreeBSD elibc_FreeBSD
 
 

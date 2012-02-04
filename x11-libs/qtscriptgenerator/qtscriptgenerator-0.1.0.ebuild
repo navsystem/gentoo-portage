@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtscriptgenerator/qtscriptgenerator-0.1.0.ebuild,v 1.14 2012/01/20 17:03:44 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtscriptgenerator/qtscriptgenerator-0.1.0.ebuild,v 1.13 2011/03/26 16:46:57 dilfridge Exp $
 
 EAPI="2"
 
@@ -59,11 +59,11 @@ src_configure() {
 src_compile() {
 	# use only one job for compilation wrt bug 274458
 	cd "${S}"/generator
-	emake || die "make generator failed"
+	emake -j1 || die "make generator failed"
 	./generator --include-paths="/usr/include/qt4/" || die "running generator failed"
 
 	cd "${S}"/qtbindings
-	emake || die "make qtbindings failed"
+	emake -j1 || die "make qtbindings failed"
 }
 
 src_install() {
