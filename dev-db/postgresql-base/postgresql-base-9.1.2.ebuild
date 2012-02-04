@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-9.1.2.ebuild,v 1.1 2011/12/08 02:08:33 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-9.1.2.ebuild,v 1.4 2012/02/02 20:27:02 ranger Exp $
 
 EAPI="4"
 
@@ -8,7 +8,7 @@ WANT_AUTOMAKE="none"
 
 inherit autotools eutils flag-o-matic multilib prefix versionator
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~ppc-macos ~x86-solaris"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~ppc-macos ~x86-solaris"
 
 SLOT="$(get_version_component_range 1-2)"
 S="${WORKDIR}/postgresql-${PV}"
@@ -54,7 +54,7 @@ RDEPEND="!!dev-db/libpq
 "
 
 DEPEND="${RDEPEND}
-		>=sys-apps/sandbox-2.0
+		!!<sys-apps/sandbox-2.0
 		sys-devel/bison
 		sys-devel/flex
 		nls? ( sys-devel/gettext )

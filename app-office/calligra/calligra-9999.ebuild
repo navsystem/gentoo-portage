@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-9999.ebuild,v 1.5 2011/12/10 14:46:39 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-9999.ebuild,v 1.7 2012/01/22 22:26:53 dilfridge Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -24,7 +24,7 @@ HOMEPAGE="http://www.calligra-suite.org/"
 LICENSE="GPL-2"
 SLOT="4"
 [[ ${PV} == 9999 ]] || KEYWORDS="~amd64 ~x86"
-IUSE="+crypt +eigen +exif fftw +fontconfig freetds +gif glew +glib +gsf
+IUSE="attica +crypt +eigen +exif fftw +fontconfig freetds +gif glew +glib +gsf
 gsl +iconv +jpeg jpeg2k +kdcraw kdepim +lcms marble mysql +mso +okular openctl openexr
 +pdf postgres +semantic-desktop +ssl sybase test tiff +threads +truetype
 +wmf word-perfect xbase +xml +xslt"
@@ -55,13 +55,13 @@ RDEPEND="
 	!app-office/kpresenter
 	!app-office/kspread
 	!app-office/kword
-	>=dev-db/sqlite-3.7.9:3
 	dev-lang/perl
 	dev-libs/boost
 	dev-libs/libxml2
 	$(add_kdebase_dep knewstuff)
 	media-libs/libpng
 	sys-libs/zlib
+	attica? ( dev-libs/libattica )
 	crypt? ( app-crypt/qca:2 )
 	eigen? ( dev-cpp/eigen:2 )
 	exif? ( media-gfx/exiv2 )
@@ -104,9 +104,15 @@ RDEPEND="
 	)
 	xbase? ( dev-db/xbase )
 	xslt? ( dev-libs/libxslt )
-	calligra_features_kexi? ( >=dev-db/sqlite-3.7.3 )
+	calligra_features_kexi? (
+		>=dev-db/sqlite-3.7.9:3[extensions]
+		dev-libs/icu
+	)
 "
 DEPEND="${RDEPEND}"
+
+RESTRICT=test
+# bug 394273
 
 src_configure() {
 	local cal_ft
@@ -136,6 +142,7 @@ src_configure() {
 
 	# regular options
 	mycmakeargs+=(
+		$(cmake-utils_use_with attica LibAttica)
 		$(cmake-utils_use_with crypt QCA2)
 		$(cmake-utils_use_with eigen Eigen2)
 		$(cmake-utils_use_with exif Exiv2)

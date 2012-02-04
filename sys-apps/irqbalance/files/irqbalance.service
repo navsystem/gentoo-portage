@@ -1,5 +1,8 @@
+[Unit]
+Description=CPU Interrupt Balancer
+
 [Service]
-ExecStart=/sbin/irqbalance --debug
+ExecStart=/usr/sbin/irqbalance --debug
 # --debug implies a lot of cruft
 # but it's the only way to get foregrounding
 StandardOutput=null

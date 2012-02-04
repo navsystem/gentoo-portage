@@ -1,0 +1,22 @@
+dev-lang/php >=dev-php/pear-1.8.1
+dev-lang/php >=dev-php/pear-1.8.1
+0
+http://pear.php.net/get/Net_URL2-2.0.0.tgz
+
+http://pear.php.net/Net_URL2
+BSD
+Easy parsing of URLs (PHP5 port of PEAR-Net_URL package).
+~amd64 ~ppc ~ppc64 ~x86
+multilib php-pear-r1 toolchain-funcs
+
+
+
+
+4
+
+install
+
+
+
+
+

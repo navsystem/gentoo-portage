@@ -1,0 +1,22 @@
+virtual/perl-ExtUtils-MakeMaker dev-lang/perl[-build]
+dev-lang/perl[-build]
+0
+mirror://cpan/authors/id/H/HA/HANENKAMP/Tie-Simple-1.03.tar.gz
+
+http://search.cpan.org/dist/Tie-Simple/
+|| ( Artistic GPL-1 GPL-2 GPL-3 )
+Module for creating easier variable ties
+~amd64 ~x86
+base eutils multilib perl-module portability toolchain-funcs user
+
+
+
+
+4
+
+compile configure install prepare test unpack
+
+
+
+
+

@@ -1,5 +1,5 @@
-virtual/os-headers kernel_linux? ( virtual/modutils ) sys-apps/sed kernel_linux? ( virtual/linux-sources )
-kernel_linux? ( virtual/modutils )
+virtual/os-headers kernel_linux? ( sys-apps/module-init-tools ) sys-apps/sed kernel_linux? ( virtual/linux-sources )
+kernel_linux? ( sys-apps/module-init-tools )
 0
 mirror://sourceforge/parapin-driver/parapin-1.0.0.tar.gz
 
@@ -7,7 +7,7 @@ http://parapin.sourceforge.net/
 LGPL-2.1
 Parallel port pin kernel modules supported bug dev-embedded/parapin
 x86 ~amd64
-eutils linux-info linux-mod multilib portability toolchain-funcs versionator
+eutils linux-info linux-mod multilib portability toolchain-funcs user versionator
 kernel_linux
 
 

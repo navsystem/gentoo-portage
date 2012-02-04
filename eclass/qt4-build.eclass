@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.104 2011/12/16 20:02:48 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.116 2012/01/31 23:02:00 hwoarang Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -68,7 +68,7 @@ S=${WORKDIR}/${MY_P}
 
 # @FUNCTION: qt4-build_pkg_setup
 # @DESCRIPTION:
-# Sets up S, MY_P, PATH, and LD_LIBRARY_PATH
+# Sets up PATH and LD_LIBRARY_PATH.
 qt4-build_pkg_setup() {
 	[[ ${EAPI} == 2 ]] && use !prefix && EPREFIX=
 
@@ -111,11 +111,11 @@ qt4-build_pkg_setup() {
 	fi
 
 	# Make sure ebuilds use the required EAPI
-	if [[ ${EAPI} != [23] ]]; then
-		eerror "The qt4-build eclass requires EAPI=2 or EAPI=3, but this ebuild is using"
+	if [[ ${EAPI} != [234] ]]; then
+		eerror "The qt4-build eclass requires EAPI 2,3 or 4 but this ebuild is using"
 		eerror "EAPI=${EAPI:-0}. The ebuild author or editor failed. This ebuild needs to be"
-		eerror "fixed. Using qt4-build eclass without EAPI=2 or EAPI=3 will fail."
-		die "qt4-build eclass requires EAPI=2 or EAPI=3"
+		eerror "fixed. Using qt4-build eclass without EAPI 2,3 or 4 will fail."
+		die "qt4-build eclass requires EAPI 2,3 or 4"
 	fi
 
 	if ! version_is_at_least 4.1 $(gcc-version); then
@@ -125,65 +125,53 @@ qt4-build_pkg_setup() {
 
 # @ECLASS-VARIABLE: QT4_TARGET_DIRECTORIES
 # @DESCRIPTION:
-# Arguments for build_target_directories. Takes the directories, in which the
-# code should be compiled. This is a space-separated list
+# Arguments for build_target_directories. Takes the directories in which the
+# code should be compiled. This is a space-separated list.
 
 # @ECLASS-VARIABLE: QT4_EXTRACT_DIRECTORIES
 # @DESCRIPTION:
-# Space separated list including the directories that will be extracted from Qt
-# tarball
+# Space-separated list including the directories that will be extracted from
+# Qt tarball.
 
 # @FUNCTION: qt4-build_src_unpack
 # @DESCRIPTION:
-# Unpacks the sources
+# Unpacks the sources.
 qt4-build_src_unpack() {
 	setqtenv
-	local unpack_p="${MY_P}"
-	case "${PV}" in
-		4.8.0_*)
-			unpack_p="qt-everywhere-opensource-src-${PV/_*}"
-		;;
-	esac
-	local target targets=
+
+	local tarball="${MY_P}.tar.gz" target= targets=
 	for target in configure LICENSE.GPL3 LICENSE.LGPL projects.pro \
-		src/{qbase,qt_targets,qt_install}.pri bin config.tests mkspecs qmake \
-		${QT4_EXTRACT_DIRECTORIES}; do
-			targets+=" ${unpack_p}/${target}"
+		src/{qbase,qt_targets,qt_install}.pri bin config.tests \
+		mkspecs qmake ${QT4_EXTRACT_DIRECTORIES}
+	do
+		targets+="${MY_P}/${target} "
 	done
 
-	echo tar xzf "${DISTDIR}"/${MY_P}.tar.gz ${targets}
-	tar xzf "${DISTDIR}"/${MY_P}.tar.gz ${targets} || die
-	case "${PV}" in
-		4.8.0_*)
-			mv ${WORKDIR}/qt-everywhere-opensource-src-${PV/_*} \
-				${WORKDIR}/qt-everywhere-opensource-src-${MY_PV}
-		;;
-	esac
+	ebegin "Unpacking parts of ${tarball}:" ${targets//${MY_P}\/}
+	tar -xzf "${DISTDIR}/${tarball}" ${targets}
+	eend $? || die "failed to unpack"
 }
 
 # @ECLASS-VARIABLE: PATCHES
+# @DEFAULT_UNSET
 # @DESCRIPTION:
-# In case you have patches to apply, specify them in PATCHES variable. Make sure
-# to specify the full path. This variable is necessary for src_prepare phase.
-# example:
-# PATCHES="${FILESDIR}"/mypatch.patch
-#   ${FILESDIR}"/mypatch2.patch"
+# PATCHES array variable containing all various patches to be applied.
+# This variable is expected to be defined in global scope of ebuild.
+# Make sure to specify the full path. This variable is utilised in
+# src_unpack/src_prepare phase, based on EAPI.
 #
+# @CODE
+#   PATCHES=( "${FILESDIR}/mypatch.patch"
+#             "${FILESDIR}/patches_folder/" )
+# @CODE
 
 # @FUNCTION: qt4-build_src_prepare
 # @DESCRIPTION:
 # Prepare the sources before the configure phase. Strip CFLAGS if necessary, and fix
-# source files in order to respect CFLAGS/CXXFLAGS/LDFLAGS specified on /etc/make.conf.
+# the build system in order to respect CFLAGS/CXXFLAGS/LDFLAGS specified in /etc/make.conf.
 qt4-build_src_prepare() {
 	setqtenv
 	cd "${S}"
-
-	# fix qt 4.7 regression that skips -fvisibility=hidden
-	if version_is_at_least "4.7.0_beta1"; then
-		sed -e "s/^gcc|g++)/*gcc|*g++)/" \
-			-i config.tests/unix/fvisibility.test ||
-				die "visibility fixing sed failed"
-	fi
 
 	if version_is_at_least "4.7"; then
 		# fix libX11 dependency on non X packages
@@ -199,7 +187,7 @@ qt4-build_src_prepare() {
 
 		sed -e '/^CONFIG/s:app_bundle::' \
 			-e '/^CONFIG/s:plugin_no_soname:plugin_with_soname absolute_library_soname:' \
-			-i mkspecs/$(qt_mkspecs_dir)/qmake.conf || die "sed failed"
+			-i mkspecs/$(qt_mkspecs_dir)/qmake.conf || die
 	fi
 
 	if [[ ${PN} != qt-core ]]; then
@@ -234,7 +222,7 @@ qt4-build_src_prepare() {
 		append-cxxflags -fno-stack-protector
 		# Bug 253127
 		sed -e "/^QMAKE_CFLAGS\t/ s:$: -fno-stack-protector-all:" \
-		-i "${S}"/mkspecs/common/g++.conf || die "sed ${S}/mkspecs/common/g++.conf failed"
+			-i mkspecs/common/g++.conf || die
 	fi
 
 	# Bug 261632
@@ -243,30 +231,39 @@ qt4-build_src_prepare() {
 		append-flags -mminimal-toc
 	fi
 
-	# Bug 282984 && Bug 295530
-	sed -e "s:\(^SYSTEM_VARIABLES\):CC=\"$(tc-getCC)\"\nCXX=\"$(tc-getCXX)\"\nCFLAGS=\"${CFLAGS}\"\nCXXFLAGS=\"${CXXFLAGS}\"\nLDFLAGS=\"${LDFLAGS}\"\n\1:" \
-		-i configure || die "sed qmake compilers failed"
+	# Respect CC, CXX, {C,CXX,LD}FLAGS in .qmake.cache
+	sed -e "/^SYSTEM_VARIABLES=/i \
+		CC='$(tc-getCC)'\n\
+		CXX='$(tc-getCXX)'\n\
+		CFLAGS='${CFLAGS}'\n\
+		CXXFLAGS='${CXXFLAGS}'\n\
+		LDFLAGS='${LDFLAGS}'\n" \
+		-i configure \
+		|| die "sed SYSTEM_VARIABLES failed"
 
-	# Bug 321335
-	if version_is_at_least 4.6; then
-		find ./config.tests/unix -name "*.test" -type f -exec grep -lZ \$MAKE '{}' \; | \
-			xargs -0 \
-			sed -e "s:\(\$MAKE\):\1 CC=\"$(tc-getCC)\" CXX=\"$(tc-getCXX)\" LD=\"$(tc-getCXX)\" LINK=\"$(tc-getCXX)\":g" \
-				-i || die "sed test compilers failed"
-	fi
+	# Respect CC, CXX, LINK and *FLAGS in config.tests
+	find config.tests/unix -name '*.test' -type f -print0 | xargs -0 \
+		sed -i -e "/bin\/qmake/ s: \"QT_BUILD_TREE=: \
+			'QMAKE_CC=$(tc-getCC)'    'QMAKE_CXX=$(tc-getCXX)'      'QMAKE_LINK=$(tc-getCXX)' \
+			'QMAKE_CFLAGS+=${CFLAGS}' 'QMAKE_CXXFLAGS+=${CXXFLAGS}' 'QMAKE_LFLAGS+=${LDFLAGS}'&:" \
+		|| die "sed config.tests failed"
+
+	# Strip predefined CFLAGS from mkspecs (bug 312689)
+	sed -i -e '/^QMAKE_CFLAGS_RELEASE/s:+=.*:+=:' mkspecs/common/g++.conf || die
 
 	# Bug 172219
-	sed -e "s:X11R6/::" \
-		-i "${S}"/mkspecs/$(qt_mkspecs_dir)/qmake.conf || die "sed ${S}/mkspecs/$(qt_mkspecs_dir)/qmake.conf failed"
+	sed -e 's:/X11R6/:/:' -i mkspecs/$(qt_mkspecs_dir)/qmake.conf || die
 
 	if [[ ${CHOST} == *-darwin* ]]; then
 		# Set FLAGS *and* remove -arch, since our gcc-apple is multilib
 		# crippled (by design) :/
-		sed -e "s:QMAKE_CFLAGS_RELEASE.*=.*:QMAKE_CFLAGS_RELEASE=${CFLAGS}:" \
+		sed \
+			-e "s:QMAKE_CFLAGS_RELEASE.*=.*:QMAKE_CFLAGS_RELEASE=${CFLAGS}:" \
 			-e "s:QMAKE_CXXFLAGS_RELEASE.*=.*:QMAKE_CXXFLAGS_RELEASE=${CXXFLAGS}:" \
 			-e "s:QMAKE_LFLAGS_RELEASE.*=.*:QMAKE_LFLAGS_RELEASE=-headerpad_max_install_names ${LDFLAGS}:" \
 			-e "s:-arch\s\w*::g" \
-			-i mkspecs/common/mac-g++.conf || die "sed mkspecs/common/mac-g++.conf failed"
+			-i mkspecs/common/mac-g++.conf \
+			|| die "sed mkspecs/common/mac-g++.conf failed"
 
 		# Fix configure's -arch settings that appear in qmake/Makefile and also
 		# fix arch handling (automagically duplicates our -arch arg and breaks
@@ -281,36 +278,34 @@ qt4-build_src_prepare() {
 			-e "s:CFG_MAC_XARCH=yes:CFG_MAC_XARCH=no:g" \
 			-e "s:-Xarch_x86_64::g" \
 			-e "s:-Xarch_ppc64::g" \
-			-i configure mkspecs/common/mac-g++.conf || die "sed configure failed"
+			-i configure mkspecs/common/mac-g++.conf \
+			|| die "sed -arch/-Xarch failed"
 
 		# On Snow Leopard don't fall back to 10.5 deployment target.
 		if [[ ${CHOST} == *-apple-darwin10 ]] ; then
 			sed -e "s:QMakeVar set QMAKE_MACOSX_DEPLOYMENT_TARGET.*:QMakeVar set QMAKE_MACOSX_DEPLOYMENT_TARGET 10.6:g" \
 				-e "s:-mmacosx-version-min=10.[0-9]:-mmacosx-version-min=10.6:g" \
-				-i configure mkspecs/common/mac-g++.conf || die "sed configure failed"
+				-i configure mkspecs/common/mac-g++.conf \
+				|| die "sed deployment target failed"
 		fi
 	fi
 
 	# this one is needed for all systems with a separate -liconv, apart from
 	# Darwin, for which the sources already cater for -liconv
 	if use !elibc_glibc && [[ ${CHOST} != *-darwin* ]] ; then
-		sed \
-			-e "s|mac:LIBS += -liconv|LIBS += -liconv|g" \
+		sed -e 's|mac:\(LIBS += -liconv\)|\1|g' \
 			-i config.tests/unix/iconv/iconv.pro \
-			|| die "sed on iconv.pro failed"
+			|| die "sed iconv.pro failed"
 	fi
 
 	# we need some patches for Solaris
-	sed -i \
-		-e '/^QMAKE_LFLAGS_THREAD/a\QMAKE_LFLAGS_DYNAMIC_LIST = -Wl,--dynamic-list,' \
+	sed -i -e '/^QMAKE_LFLAGS_THREAD/a\QMAKE_LFLAGS_DYNAMIC_LIST = -Wl,--dynamic-list,' \
 		mkspecs/$(qt_mkspecs_dir)/qmake.conf || die
 	# use GCC over SunStudio
 	sed -i -e '/PLATFORM=solaris-cc/s/cc/g++/' configure || die
-	# don't flirt with non-Prefix stuff, we're quite possessive
+	# do not flirt with non-Prefix stuff, we're quite possessive
 	sed -i -e '/^QMAKE_\(LIB\|INC\)DIR\(_X11\|_OPENGL\|\)\t/s/=.*$/=/' \
 		mkspecs/$(qt_mkspecs_dir)/qmake.conf || die
-	# strip predefined CFLAGS from qmake ( bug #312689 )
-	sed -i '/^QMAKE_CFLAGS_RELEASE/s:+=.*:+=:' mkspecs/common/g++.conf
 
 	base_src_prepare
 }
@@ -352,7 +347,7 @@ qt4-build_src_configure() {
 			# We are crazy and build cocoa + qt3support :-)
 			if use qt3support; then
 				sed -e "/case \"\$PLATFORM,\$CFG_MAC_COCOA\" in/,/;;/ s|CFG_QT3SUPPORT=\"no\"|CFG_QT3SUPPORT=\"yes\"|" \
-					-i configure
+					-i configure || die
 			fi
 
 			# We need the source's headers, not the installed ones.
@@ -366,10 +361,6 @@ qt4-build_src_configure() {
 		# use -I from configure
 		myconf+=" $(pkg-config --cflags freetype2)"
 	fi
-
-	# Disable SSE4.x, since auto-detection is currently broken
-	# Upstream bug http://bugreports.qt.nokia.com/browse/QTBUG-13623
-	[[ ${PV} == "4.7.1" ]] && myconf+=" -no-sse4.1 -no-sse4.2"
 
 	echo ./configure ${myconf}
 	./configure ${myconf} || die "./configure failed"
@@ -398,7 +389,7 @@ qt4-build_src_test() {
 
 # @FUNCTION: fix_includes
 # @DESCRIPTION:
-# For MacOSX we need to add some symlinks when frameworks are
+# For MacOS X we need to add some symlinks when frameworks are
 # being used, to avoid complications with some more or less stupid packages.
 fix_includes() {
 	if use aqua && [[ ${CHOST##*-darwin} -ge 9 ]] ; then
@@ -406,7 +397,7 @@ fix_includes() {
 		dodir "${QTHEADERDIR#${EPREFIX}}"/Qt
 
 		# Fake normal headers when frameworks are installed... eases life later on
-		local dest f
+		local dest f h
 		for frw in "${D}${QTLIBDIR}"/*.framework; do
 			[[ -e "${frw}"/Headers ]] || continue
 			f=$(basename ${frw})
@@ -435,56 +426,75 @@ qt4-build_src_install() {
 	fix_includes
 
 	# remove .la files since we are building only shared Qt libraries
-	find "${D}"${QTLIBDIR} -name "*.la" -print0 | xargs -0 rm
+	find "${D}"${QTLIBDIR} -type f -name '*.la' -print0 | xargs -0 rm -f
 }
 
 # @FUNCTION: setqtenv
+# @INTERNAL
 setqtenv() {
 	# Set up installation directories
-	QTBASEDIR=${EPREFIX}/usr/$(get_libdir)/qt4
 	QTPREFIXDIR=${EPREFIX}/usr
 	QTBINDIR=${EPREFIX}/usr/bin
 	QTLIBDIR=${EPREFIX}/usr/$(get_libdir)/qt4
-	QMAKE_LIBDIR_QT=${QTLIBDIR}
 	QTPCDIR=${EPREFIX}/usr/$(get_libdir)/pkgconfig
-	QTDATADIR=${EPREFIX}/usr/share/qt4
 	QTDOCDIR=${EPREFIX}/usr/share/doc/qt-${PV}
 	QTHEADERDIR=${EPREFIX}/usr/include/qt4
 	QTPLUGINDIR=${QTLIBDIR}/plugins
 	QTIMPORTDIR=${QTLIBDIR}/imports
-	QTSYSCONFDIR=${EPREFIX}/etc/qt4
+	QTDATADIR=${EPREFIX}/usr/share/qt4
 	QTTRANSDIR=${QTDATADIR}/translations
+	QTSYSCONFDIR=${EPREFIX}/etc/qt4
 	QTEXAMPLESDIR=${QTDATADIR}/examples
 	QTDEMOSDIR=${QTDATADIR}/demos
+	QMAKE_LIBDIR_QT=${QTLIBDIR}
 	QT_INSTALL_PREFIX=${EPREFIX}/usr/$(get_libdir)/qt4
+
 	PLATFORM=$(qt_mkspecs_dir)
 
 	unset QMAKESPEC
 }
 
 # @FUNCTION: standard_configure_options
+# @INTERNAL
 # @DESCRIPTION:
 # Sets up some standard configure options, like libdir (if necessary), whether
 # debug info is wanted or not.
 standard_configure_options() {
-	local myconf=
+	local myconf="-prefix ${QTPREFIXDIR} -bindir ${QTBINDIR} -libdir ${QTLIBDIR}
+		-docdir ${QTDOCDIR} -headerdir ${QTHEADERDIR} -plugindir ${QTPLUGINDIR}
+		$(version_is_at_least 4.7 && echo -importdir ${QTIMPORTDIR})
+		-datadir ${QTDATADIR} -translationdir ${QTTRANSDIR} -sysconfdir ${QTSYSCONFDIR}
+		-examplesdir ${QTEXAMPLESDIR} -demosdir ${QTDEMOSDIR}
+		-opensource -confirm-license -shared -fast -largefile -stl -verbose
+		-platform $(qt_mkspecs_dir) -nomake examples -nomake demos"
 
 	[[ $(get_libdir) != lib ]] && myconf+=" -L${EPREFIX}/usr/$(get_libdir)"
 
-	# Disable visibility explicitly if gcc version isn't 4
-	if [[ $(gcc-major-version) -lt 4 ]]; then
-		myconf+=" -no-reduce-exports"
-	fi
-
-	# precompiled headers doesn't work on hardened, where the flag is masked.
-	myconf+=" $(qt_use pch)"
-
+	# debug/release
 	if use debug; then
 		myconf+=" -debug"
 	else
 		myconf+=" -release"
 	fi
 	myconf+=" -no-separate-debug-info"
+
+	# exceptions USE flag
+	local exceptions="-exceptions"
+	in_iuse exceptions && exceptions="$(qt_use exceptions)"
+	myconf+=" ${exceptions}"
+
+	# disable RPATH on Qt >= 4.8 (bug 380415)
+	version_is_at_least 4.8 && myconf+=" -no-rpath"
+
+	# precompiled headers don't work on hardened, where the flag is masked
+	myconf+=" $(qt_use pch)"
+
+	# -reduce-relocations
+	# This flag seems to introduce major breakage to applications,
+	# mostly to be seen as a core dump with the message "QPixmap: Must
+	# construct a QApplication before a QPaintDevice" on Solaris.
+	#   -- Daniel Vergien
+	[[ ${CHOST} != *-solaris* ]] && myconf+=" -reduce-relocations"
 
 	use aqua && myconf+=" -no-framework"
 
@@ -502,36 +512,17 @@ standard_configure_options() {
 		*) die "$(tc-arch) is unsupported by this eclass. Please file a bug." ;;
 	esac
 
-	# exceptions USE flag
-	local exceptions="-exceptions"
-	in_iuse exceptions && exceptions="$(qt_use exceptions)"
-
-	# note about -reduce-relocations:
-	# That flag seems to introduce major breakage to applications,
-	# mostly to be seen as a core dump with the message "QPixmap: Must
-	# construct a QApplication before a QPaintDevice" on Solaris
-	#   -- Daniel Vergien
-	[[ ${CHOST} != *-solaris* ]] && myconf+=" -reduce-relocations"
-
-	myconf+=" -platform $(qt_mkspecs_dir) -stl -verbose -largefile -confirm-license
-		-prefix ${QTPREFIXDIR} -bindir ${QTBINDIR} -libdir ${QTLIBDIR}
-		-datadir ${QTDATADIR} -docdir ${QTDOCDIR} -headerdir ${QTHEADERDIR}
-		-plugindir ${QTPLUGINDIR} -sysconfdir ${QTSYSCONFDIR}
-		-translationdir ${QTTRANSDIR} -examplesdir ${QTEXAMPLESDIR}
-		-demosdir ${QTDEMOSDIR} -importdir ${QTIMPORTDIR} -silent -fast -opensource
-		${exceptions}
-		-nomake examples -nomake demos"
-
 	echo "${myconf}"
 }
 
 # @FUNCTION: prepare_directories
 # @USAGE: < directories >
+# @INTERNAL
 # @DESCRIPTION:
-# Generates makefiles for the directories set in $QT4_TARGET_DIRECTORIES
+# Generates Makefiles for the given list of directories.
 prepare_directories() {
 	for x in "$@"; do
-		pushd "${S}"/${x} >/dev/null
+		pushd "${S}"/${x} >/dev/null || die
 		einfo "Running qmake in: ${x}"
 		# avoid running over the maximum argument number, bug #299810
 		{
@@ -542,34 +533,36 @@ prepare_directories() {
 			-e "s:\$\$\[QT_INSTALL_PLUGINS\]:${QTPLUGINDIR}:g" \
 			|| die
 		"${S}"/bin/qmake "LIBS+=-L${QTLIBDIR}" "CONFIG+=nostrip" || die "qmake failed"
-		popd >/dev/null
+		popd >/dev/null || die
 	done
 }
 
 
 # @FUNCTION: build_directories
 # @USAGE: < directories >
+# @INTERNAL
 # @DESCRIPTION:
-# Compiles the code in $QT4_TARGET_DIRECTORIES
+# Compiles the code in the given list of directories.
 build_directories() {
 	for x in "$@"; do
-		pushd "${S}"/${x} >/dev/null
+		pushd "${S}"/${x} >/dev/null || die
 		emake CC="$(tc-getCC)" \
 			CXX="$(tc-getCXX)" \
 			LINK="$(tc-getCXX)" || die "emake failed"
-		popd >/dev/null
+		popd >/dev/null || die
 	done
 }
 
 # @FUNCTION: install_directories
 # @USAGE: < directories >
+# @INTERNAL
 # @DESCRIPTION:
-# run emake install in the given directories, which are separated by spaces
+# Runs emake install in the given directories, which are separated by spaces.
 install_directories() {
 	for x in "$@"; do
-		pushd "${S}"/${x} >/dev/null || die "Can't pushd ${S}/${x}"
+		pushd "${S}"/${x} >/dev/null || die
 		emake INSTALL_ROOT="${D}" install || die "emake install failed"
-		popd >/dev/null || die "Can't popd from ${S}/${x}"
+		popd >/dev/null || die
 	done
 }
 
@@ -589,8 +582,9 @@ install_directories() {
 : ${QCONFIG_DEFINE:=}
 
 # @FUNCTION: install_qconfigs
+# @INTERNAL
 # @DESCRIPTION:
-# Install gentoo-specific mkspecs configurations
+# Install gentoo-specific mkspecs configurations.
 install_qconfigs() {
 	local x
 	if [[ -n ${QCONFIG_ADD} || -n ${QCONFIG_REMOVE} ]]; then
@@ -611,8 +605,9 @@ install_qconfigs() {
 }
 
 # @FUNCTION: generate_qconfigs
+# @INTERNAL
 # @DESCRIPTION:
-# Generates gentoo-specific configurations
+# Generates gentoo-specific qconfig.{h,pri}.
 generate_qconfigs() {
 	if [[ -n ${QCONFIG_ADD} || -n ${QCONFIG_REMOVE} || -n ${QCONFIG_DEFINE} || ${CATEGORY}/${PN} == x11-libs/qt-core ]]; then
 		local x qconfig_add qconfig_remove qconfig_new
@@ -671,40 +666,39 @@ generate_qconfigs() {
 
 # @FUNCTION: qt4-build_pkg_postrm
 # @DESCRIPTION:
-# Generate configurations when the package is completely removed
+# Regenerate configuration when the package is completely removed.
 qt4-build_pkg_postrm() {
 	generate_qconfigs
 }
 
 # @FUNCTION: qt4-build_pkg_postinst
 # @DESCRIPTION:
-# Generate configuration, plus throws a message about possible
+# Regenerate configuration, plus throw a message about possible
 # breakages and proposed solutions.
 qt4-build_pkg_postinst() {
 	generate_qconfigs
 }
 
 # @FUNCTION: skip_qmake_build
+# @INTERNAL
 # @DESCRIPTION:
-# Don't need to build qmake, as it's already installed from qt-core
+# Patches configure to skip qmake compilation, as it's already installed by qt-core.
 skip_qmake_build() {
-	# Don't need to build qmake, as it's already installed from qt-core
-	sed -i -e "s:if true:if false:g" "${S}"/configure || die "sed failed"
+	sed -i -e "s:if true:if false:g" "${S}"/configure || die
 }
 
 # @FUNCTION: skip_project_generation
+# @INTERNAL
 # @DESCRIPTION:
-# Exit the script early by throwing in an exit before all of the .pro files are scanned
+# Exit the script early by throwing in an exit before all of the .pro files are scanned.
 skip_project_generation() {
-	# Exit the script early by throwing in an exit before all of the .pro files are scanned
-	sed -e "s:echo \"Finding:exit 0\n\necho \"Finding:g" \
-		-i "${S}"/configure || die "sed failed"
+	sed -i -e "s:echo \"Finding:exit 0\n\necho \"Finding:g" "${S}"/configure || die
 }
 
 # @FUNCTION: symlink_binaries_to_buildtree
+# @INTERNAL
 # @DESCRIPTION:
-# Symlink generated binaries to buildtree so they can be used during compilation
-# time
+# Symlinks generated binaries to buildtree, so they can be used during compilation time.
 symlink_binaries_to_buildtree() {
 	for bin in qmake moc uic rcc; do
 		ln -s "${QTBINDIR}"/${bin} "${S}"/bin/ || die "symlinking ${bin} to ${S}/bin failed"
@@ -712,25 +706,26 @@ symlink_binaries_to_buildtree() {
 }
 
 # @FUNCTION: fix_library_files
+# @INTERNAL
 # @DESCRIPTION:
-# Fixes the pathes in *.la, *.prl, *.pc, as they are wrong due to sandbox and
-# moves the *.pc-files into the pkgconfig directory
+# Fixes the paths in *.la, *.prl, *.pc, as they are wrong due to sandbox and
+# moves the *.pc files into the pkgconfig directory.
 fix_library_files() {
+	local libfile
 	for libfile in "${D}"/${QTLIBDIR}/{*.la,*.prl,pkgconfig/*.pc}; do
 		if [[ -e ${libfile} ]]; then
 			sed -i -e "s:${S}/lib:${QTLIBDIR}:g" ${libfile} || die "sed on ${libfile} failed"
 		fi
 	done
 
-	# pkgconfig files refer to WORKDIR/bin as the moc and uic locations.  Fix:
+	# pkgconfig files refer to WORKDIR/bin as the moc and uic locations
 	for libfile in "${D}"/${QTLIBDIR}/pkgconfig/*.pc; do
 		if [[ -e ${libfile} ]]; then
-			sed -i -e "s:${S}/bin:${QTBINDIR}:g" ${libfile} || die "sed failed"
+			sed -i -e "s:${S}/bin:${QTBINDIR}:g" ${libfile} || die "sed on ${libfile} failed"
 
 		# Move .pc files into the pkgconfig directory
 		dodir ${QTPCDIR#${EPREFIX}}
-		mv ${libfile} "${D}"/${QTPCDIR}/ \
-			|| die "moving ${libfile} to ${D}/${QTPCDIR}/ failed"
+		mv ${libfile} "${D}"/${QTPCDIR}/ || die "moving ${libfile} to ${D}/${QTPCDIR}/ failed"
 		fi
 	done
 
@@ -741,23 +736,12 @@ fix_library_files() {
 # @FUNCTION: qt_use
 # @USAGE: < flag > [ feature ] [ enableval ]
 # @DESCRIPTION:
-# This will echo "${enableval}-${feature}" if <flag> is enabled, or
-# "-no-${feature} if the flag is disabled. If [feature] is not specified <flag>
+# This will echo "-${enableval}-${feature}" if <flag> is enabled, or
+# "-no-${feature}" if it's disabled. If [feature] is not specified, <flag>
 # will be used for that. If [enableval] is not specified, it omits the
-# assignment-part
+# "-${enableval}" part.
 qt_use() {
-	local flag=$1
-	local feature=$1
-	local enableval=
-
-	[[ -n $2 ]] && feature=$2
-	[[ -n $3 ]] && enableval=-$3
-
-	if use ${flag}; then
-		echo "${enableval}-${feature}"
-	else
-		echo "-no-${feature}"
-	fi
+	use "$1" && echo "${3:+-$3}-${2:-$1}" || echo "-no-${2:-$1}"
 }
 
 # @FUNCTION: qt_mkspecs_dir
@@ -765,9 +749,7 @@ qt_use() {
 # @DESCRIPTION:
 # Allows us to define which mkspecs dir we want to use.
 qt_mkspecs_dir() {
-	# Allows us to define which mkspecs dir we want to use.
-	local spec
-
+	local spec=
 	case ${CHOST} in
 		*-freebsd*|*-dragonfly*)
 			spec=freebsd ;;
@@ -818,7 +800,7 @@ qt_mkspecs_dir() {
 }
 
 # @FUNCTION: qt_assistant_cleanup
-# @RETURN: nothing
+# @INTERNAL
 # @DESCRIPTION:
 # Tries to clean up tools.pro for qt-assistant ebuilds.
 # Meant to be called in src_prepare().
@@ -848,11 +830,10 @@ qt_assistant_cleanup() {
 }
 
 # @FUNCTION: qt_nolibx11
-# @RETURN: nothing
+# @INTERNAL
 # @DESCRIPTION:
-# Ignore X11 tests for packages that don't need X libraries installed
+# Ignore X11 tests for packages that don't need X libraries installed.
 qt_nolibx11() {
-	einfo "Removing X11 check to allow X-less compilation"
 	sed -i "/unixtests\/compile.test.*config.tests\/x11\/xlib/,/fi$/d" "${S}"/configure ||
 		die "x11 check sed failed"
 }

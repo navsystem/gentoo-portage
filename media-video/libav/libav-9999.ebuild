@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.23 2011/12/02 18:19:50 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.27 2012/01/27 10:11:41 scarabeus Exp $
 
 EAPI=4
 
@@ -29,7 +29,7 @@ SLOT="0"
 ~x64-solaris ~x86-solaris"
 IUSE="+3dnow +3dnowext aac alsa altivec amr bindist +bzip2 cdio cpudetection
 	  custom-cflags debug dirac doc +encode faac truetype frei0r +gpl gsm
-      +hardcoded-tables ieee1394 jack jpeg2k +mmx +mmxext mp3 network openssl
+	  +hardcoded-tables ieee1394 jack jpeg2k +mmx +mmxext mp3 network openssl
 	  oss pic pulseaudio +qt-faststart rtmp schroedinger sdl speex ssl +ssse3
 	  static-libs test theora threads v4l vaapi vdpau vorbis vpx X x264 xvid
 	  +zlib"
@@ -59,7 +59,7 @@ RDEPEND="
 		mp3? ( >=media-sound/lame-3.98.3 )
 		theora? ( >=media-libs/libtheora-1.1.1[encode] media-libs/libogg )
 		vorbis? ( media-libs/libvorbis media-libs/libogg )
-		x264? ( >=media-libs/x264-0.0.20110426 )
+		x264? ( >=media-libs/x264-0.0.20111017 )
 		xvid? ( >=media-libs/xvid-1.1.0 )
 	)
 	truetype? ( media-libs/freetype )
@@ -276,7 +276,8 @@ src_install() {
 	emake DESTDIR="${D}" install install-man
 
 	dodoc Changelog README INSTALL
-	dodoc doc/*
+	dodoc doc/*.txt
+	use doc && dodoc doc/*.html
 
 	if use qt-faststart; then
 		dobin tools/qt-faststart

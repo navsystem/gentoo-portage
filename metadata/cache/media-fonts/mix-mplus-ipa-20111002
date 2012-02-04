@@ -1,0 +1,22 @@
+app-arch/unzip X? ( x11-apps/mkfontdir media-fonts/encodings ) >=media-libs/fontconfig-2.4.0
+
+0
+mirror://sourceforge.jp/mix-mplus-ipa/53388/migmix-1m-20111002.zip mirror://sourceforge.jp/mix-mplus-ipa/53388/migmix-1p-20111002.zip mirror://sourceforge.jp/mix-mplus-ipa/53388/migmix-2m-20111002.zip mirror://sourceforge.jp/mix-mplus-ipa/53388/migmix-2p-20111002.zip mirror://sourceforge.jp/mix-mplus-ipa/53389/migu-1p-20111002.zip mirror://sourceforge.jp/mix-mplus-ipa/53389/migu-1c-20111002.zip mirror://sourceforge.jp/mix-mplus-ipa/53389/migu-1m-20111002.zip mirror://sourceforge.jp/mix-mplus-ipa/53389/migu-2m-20111002.zip
+
+http://mix-mplus-ipa.sourceforge.jp/
+mplus-fonts IPAfont
+Mixing mplus and IPA fonts
+~amd64 ~x86 ~x86-fbsd
+eutils font multilib portability toolchain-funcs user
+X
+
+
+
+4
+
+install postinst postrm prepare setup
+
+
+
+
+

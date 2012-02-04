@@ -20,7 +20,7 @@
    always a description without a lang attribute. Also there are no overlapping
    descriptions allowed (multiple description tags with the same language)
 
-   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.889 2011/12/15 22:56:41 pacho Exp $
+   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.894 2012/01/28 12:15:25 pacho Exp $
 
 -->
 <herds>
@@ -467,6 +467,14 @@
   <maintainer>
     <email>pesa@gentoo.org</email>
     <name>Davide Pesavento</name>
+  </maintainer>
+  <maintainer>
+    <email>johu@gentoo.org</email>
+    <name>Johannes Huber</name>
+  </maintainer>
+  <maintainer>
+  	<email>hwoarang@gentoo.org</email>
+	<name>Markos Chandras</name>
   </maintainer>
 </herd>
 <herd>
@@ -1129,6 +1137,10 @@
     <email>axs@gentoo.org</email>
     <name>Ian Stakenvicius</name>
   </maintainer>
+  <maintainer>
+    <email>jdhore@gentoo.org</email>
+    <name>Jeff Horelick</name>
+  </maintainer>
 </herd>
 <herd>
   <name>leechcraft</name>
@@ -1285,10 +1297,6 @@
     <email>titanofold@gentoo.org</email>
     <name>Aaron W. Swenson</name>
   </maintainer>
-</herd>
-<herd>
-  <name>secure-tunneling</name>
-  <description>IPSec and VPN and other secure tunneling related packages</description>
 </herd>
 <herd>
   <name>net-im</name>
@@ -1773,6 +1781,10 @@
     <email>idl0r@gentoo.org</email>
     <name>Christian Ruppert</name>
   </maintainer>
+  <maintainer>
+    <email>dolsen@gentoo.org</email>
+    <name>Brian Dolbec</name>
+  </maintainer>
 </herd>
 <herd>
   <name>net-dialup</name>
@@ -2031,6 +2043,10 @@
 	<email>binki@gentoo.org</email>
 	<name>Nathan Phillip Brink</name>
   </maintainer>
+  <maintainer>
+    <email>jdhore@gentoo.org</email>
+    <name>Jeff Horelick</name>
+  </maintainer>
 </herd>
 <herd>
   <name>s390</name>
@@ -2215,11 +2231,6 @@
   <maintainer>
     <email>matsuu@gentoo.org</email>
   </maintainer>
-</herd>
-<herd>
-  <name>utf8</name>
-  <email>utf8@gentoo.org</email>
-  <description>Improve support for UTF-8 in Gentoo</description>
 </herd>
 <herd>
   <name>media-optical</name>

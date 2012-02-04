@@ -1,9 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/xcalendar-4.0-r1.ebuild,v 1.4 2011/12/11 09:08:19 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/xcalendar-4.0-r1.ebuild,v 1.7 2012/02/04 15:47:58 ssuominen Exp $
 
-EAPI=2
-
+EAPI=4
 inherit eutils multilib
 
 DESCRIPTION="A simple interactive calendar program with a notebook capability"
@@ -12,7 +11,7 @@ SRC_URI="ftp://daemon.jp.FreeBSD.org/pub/FreeBSD-jp/ports-jp/LOCAL_PORTS/${P}+i1
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~alpha amd64 ~ppc ~ppc64 x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ppc ppc64 x86 ~x86-fbsd"
 IUSE="motif"
 
 RDEPEND="x11-libs/libX11
@@ -38,20 +37,18 @@ src_prepare() {
 
 src_compile() {
 	xmkmf -a
-	emake CC="$(tc-getCC)" CDEBUGFLAGS="${CFLAGS}" \
-		EXTRA_LDOPTIONS="${LDFLAGS}"  || die
+	emake CC="$(tc-getCC)" CDEBUGFLAGS="${CFLAGS}" EXTRA_LDOPTIONS="${LDFLAGS}"
 }
 
 src_install() {
-	dobin xcalendar || die
-	newman xcalendar.man xcalendar.1 || die
+	dobin xcalendar
+	newman xcalendar.man xcalendar.1
 
-	dodir /etc/X11/app-defaults
-	insinto /etc/X11/app-defaults
-	newins XCalendar.sed XCalendar || die
+	insinto /usr/share/X11/app-defaults
+	newins XCalendar.sed XCalendar
 
 	insinto /usr/$(get_libdir)/xcalendar
-	doins *.xbm *.hlp || die
+	doins *.xbm *.hlp
 
-	dodoc README || die
+	dodoc README
 }

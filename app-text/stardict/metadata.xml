@@ -9,6 +9,7 @@
 	 as Full-text translation, Net Dict. 
 	 </longdescription>
 	 <use>
+		 <flag name='editor'>Build and install the stardict-editor utility</flag>
 		 <flag name='espeak'>Enable text to speech synthesizer using espeak
 			 engine</flag>
 		 <flag name='festival'>Enable text to speech synthesizer using festival
@@ -19,5 +20,6 @@
 		 <flag name='qqwry'>Enable QQWry plugin, which provides information (in
 			 Chinese language) about geographical positions, owner, etc. for IP
 			 addresses</flag>
+		 <flag name='tools'>Build and install the extra stardict tools</flag>
 	</use>
 </pkgmetadata>

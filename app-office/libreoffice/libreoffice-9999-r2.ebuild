@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.18 2011/12/15 13:01:55 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.20 2012/01/13 14:56:43 scarabeus Exp $
 
 EAPI=4
 
@@ -118,7 +118,10 @@ COMMON_DEPEND="
 		gnome-base/gconf:2
 		gnome-base/orbit
 	)
-	gtk? ( >=x11-libs/gtk+-2.24:2 )
+	gtk? (
+		x11-libs/gdk-pixbuf[X]
+		>=x11-libs/gtk+-2.24:2
+	)
 	gtk3? ( >=x11-libs/gtk+-3.2:3 )
 	graphite? ( media-gfx/graphite2 )
 	gstreamer? (
@@ -379,6 +382,7 @@ src_configure() {
 		--with-system-libcdr \
 		--enable-cairo-canvas \
 		--enable-largefile \
+		--enable-mergelibs \
 		--enable-python=system \
 		--enable-randr \
 		--enable-randr-link \

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.25 2011/10/20 00:36:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.27 2012/01/07 21:33:35 vapier Exp $
 
 EAPI="3"
 
@@ -23,7 +23,7 @@ else
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-linux"
 fi
 
-LICENSE="GPL-2"
+LICENSE="GPL-2 GPL-3 LGPL-2.1 BSD-4 MIT public-domain"
 SLOT="0"
 IUSE="+cramfs crypt ddate loop-aes ncurses nls old-linux perl selinux slang static-libs uclibc unicode"
 
@@ -105,7 +105,7 @@ src_install() {
 	fi
 
 	# need the libs in /
-	gen_usr_ldscript -a blkid uuid
+	gen_usr_ldscript -a blkid mount uuid
 	# e2fsprogs-libs didnt install .la files, and .pc work fine
 	rm -f "${ED}"/usr/$(get_libdir)/*.la
 

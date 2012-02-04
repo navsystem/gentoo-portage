@@ -1,0 +1,22 @@
+dev-perl/Archive-Zip dev-perl/Capture-Tiny dev-perl/File-ShareDir dev-perl/File-Which dev-perl/Text-Patch media-libs/libsdl virtual/perl-Archive-Tar virtual/perl-Digest-SHA virtual/perl-ExtUtils-CBuilder virtual/perl-ExtUtils-MakeMaker virtual/perl-Module-Build virtual/perl-File-Spec virtual/perl-File-Temp dev-lang/perl[-build]
+dev-perl/Archive-Zip dev-perl/Capture-Tiny dev-perl/File-ShareDir dev-perl/File-Which dev-perl/Text-Patch media-libs/libsdl virtual/perl-Archive-Tar virtual/perl-Digest-SHA virtual/perl-ExtUtils-CBuilder virtual/perl-ExtUtils-MakeMaker virtual/perl-Module-Build virtual/perl-File-Spec virtual/perl-File-Temp dev-lang/perl[-build]
+0
+mirror://cpan/authors/id/F/FR/FROGGS/Alien-SDL-1.430.tar.gz
+
+http://search.cpan.org/dist/Alien-SDL/
+|| ( Artistic GPL-1 GPL-2 GPL-3 )
+building, finding and using SDL binaries
+~amd64 ~x86
+base eutils multilib perl-module portability toolchain-funcs user
+
+
+
+
+4
+
+compile configure install prepare setup test unpack
+
+
+
+
+

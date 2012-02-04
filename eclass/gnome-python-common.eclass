@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome-python-common.eclass,v 1.12 2011/07/08 11:35:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome-python-common.eclass,v 1.14 2012/01/03 12:18:17 nirbheek Exp $
 
 # Original Author: Arun Raghavan <ford_prefect@gentoo.org> (based on the
 #		   gnome-python-desktop eclass by Jim Ramsay <lack@gentoo.org>)
@@ -89,7 +89,8 @@ gnome-python-common_src_prepare() {
 	# disable pyc compiling
 	if [[ -f py-compile ]]; then
 		rm py-compile
-		ln -s $(type -P true) py-compile
+		echo > py-compile
+		chmod +x py-compile
 	fi
 
 	# The .pc file is installed by respective gnome-python*-base package
