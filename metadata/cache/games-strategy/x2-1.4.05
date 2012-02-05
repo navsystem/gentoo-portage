@@ -7,7 +7,7 @@ http://www.linuxgamepublishing.com/info.php?id=x2
 as-is
 Open-ended space opera with trading, building & fighting
 ~amd64 ~x86
-base cdrom eutils games multilib portability toolchain-funcs user
+base cdrom eutils games multilib portability toolchain-funcs unpacker user
 bonusscripts dynamic langpacks linguas_de modkit
 
 

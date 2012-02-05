@@ -1,5 +1,5 @@
 >=dev-libs/glib-2 dev-util/desktop-file-utils sys-apps/dbus x11-libs/gdk-pixbuf x11-libs/gtk+:2 x11-libs/startup-notification dev-util/intltool dev-util/pkgconfig sys-devel/gettext
->=dev-libs/glib-2 dev-util/desktop-file-utils sys-apps/dbus x11-libs/gdk-pixbuf x11-libs/gtk+:2 x11-libs/startup-notification virtual/eject virtual/freedesktop-icon-theme x11-misc/shared-mime-info kde? ( kde-base/kdesu ) !kde? ( x11-libs/gksu ) !kernel_linux? ( fam? ( virtual/fam ) ) udev? ( sys-fs/udisks sys-process/lsof )
+>=dev-libs/glib-2 dev-util/desktop-file-utils sys-apps/dbus x11-libs/gdk-pixbuf x11-libs/gtk+:2 x11-libs/startup-notification virtual/eject virtual/freedesktop-icon-theme x11-misc/shared-mime-info kde? ( || ( kde-base/kdesu x11-misc/ktsuss ) ) gtk? ( || ( x11-libs/gksu x11-misc/ktsuss ) ) !kernel_linux? ( fam? ( virtual/fam ) ) udev? ( sys-fs/udisks sys-process/lsof )
 0
 mirror://sourceforge/spacefm/spacefm-0.6.1.tar.xz
 
@@ -8,7 +8,7 @@ GPL-2 IgnorantGuru LGPL-2
 a multi-panel tabbed file manager
 ~amd64 ~x86
 fdo-mime
-fam kde kernel_linux udev
+fam gtk kde kernel_linux udev
 
 
 

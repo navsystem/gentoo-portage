@@ -7,7 +7,7 @@ http://www.unrealtournament.com/ http://utpg.org/
 as-is
 Futuristic FPS
 -* amd64 x86
-base cdrom eutils games multilib portability toolchain-funcs user
+base cdrom eutils games multilib portability toolchain-funcs unpacker user
 3dfx opengl
 
 
