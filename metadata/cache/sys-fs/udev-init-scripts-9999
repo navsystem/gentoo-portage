@@ -1,0 +1,22 @@
+dev-vcs/git
+>=sys-fs/udev-180
+0
+
+
+http://www.gentoo.org
+GPL-2
+udev startup scripts for openrc
+
+git-2
+
+
+
+
+4
+
+compile postinst unpack
+
+
+
+
+

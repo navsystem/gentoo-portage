@@ -1,7 +1,7 @@
 dev-perl/config-general dev-libs/libxslt infiniband? ( sys-infiniband/libibverbs sys-infiniband/librdmacm )
 dev-perl/config-general dev-libs/libxslt infiniband? ( sys-infiniband/libibverbs sys-infiniband/librdmacm ) sys-apps/sg3_utils
 0
-https://github.com/fujita/tgt/zipball/v1.0.22 -> tgt-1.0.22.zip
+https://github.com/fujita/tgt/tarball/v1.0.22 -> tgt-1.0.22.tar.gz
 
 http://stgt.sourceforge.net
 GPL-2

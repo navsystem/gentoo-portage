@@ -6,7 +6,7 @@ mirror://sourceforge/lineak/lineak-xosdplugin-0.9.tar.gz
 http://lineak.sourceforge.net/
 GPL-2
 Xosd plugin for LINEAK
-~amd64 ~ppc ~x86
+amd64 ppc ~x86
 eutils multilib portability toolchain-funcs user
 debug
 

@@ -6,7 +6,7 @@ mirror://sourceforge/leechcraft/leechcraft-0.4.99.tar.xz
 http://leechcraft.org/
 GPL-3
 Searches for song lyrics and displays them in LeechCraft
-~amd64 ~x86
+amd64 ~x86
 base cmake-utils eutils flag-o-matic leechcraft multilib portability toolchain-funcs user versionator
 debug
 
