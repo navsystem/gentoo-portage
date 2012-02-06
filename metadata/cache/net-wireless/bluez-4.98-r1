@@ -6,7 +6,7 @@ mirror://kernel/linux/bluetooth/bluez-4.98.tar.xz http://dev.gentoo.org/~pacho/b
 http://www.bluez.org/
 GPL-2 LGPL-2.1
 Bluetooth Tools and System Daemons for Linux
-amd64 ~arm ~hppa ~ppc ~ppc64 ~x86
+amd64 arm ~hppa ~ppc ~ppc64 ~x86
 eutils multilib portability python systemd toolchain-funcs user
 alsa caps +consolekit cups debug gstreamer pcmcia test-programs usb
 

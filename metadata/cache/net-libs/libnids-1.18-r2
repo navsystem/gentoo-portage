@@ -6,7 +6,7 @@ http://www.packetfactory.net/Projects/libnids/dist/libnids-1.18.tar.gz
 http://www.packetfactory.net/Projects/libnids/
 GPL-2
 an implementation of an E-component of Network Intrusion Detection System
-~alpha ~amd64 ~ppc ~sparc ~x86
+~amd64 ~ppc ~x86
 eutils multilib portability toolchain-funcs user
 static-libs
 
