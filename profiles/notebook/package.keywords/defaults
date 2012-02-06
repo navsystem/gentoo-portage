@@ -1,25 +1,18 @@
-~sys-apps/man-db-2.5.9 amd64 x86
+~sys-apps/man-db-2.6.0.2 amd64 x86
 ~net-analyzer/jnettop-0.13.0 amd64 x86
 <sys-apps/portage-2.3 amd64 x86
 app-portage/deltup amd64 x86
 app-portage/getdelta amd64 x86
 dev-util/bdelta amd64 x86
 ~dev-util/codeblocks-10.05 amd64 x86
-www-client/firefox amd64 x86
-www-client/icecat amd64 x86
-net-libs/xulrunner amd64 x86
-dev-libs/nspr amd64 x86
-dev-libs/nss amd64 x86
-media-libs/glc-lib amd64 x86
-~x11-base/xorg-server-1.11.2 x86 amd64
-~x11-base/xorg-drivers-1.11 x86 amd64
-~dev-db/pgadmin3-1.14.0 x86 amd64
+<app-emulation/virt-manager-9999 amd64 x86
+app-misc/pip amd64 x86
+~app-emulation/wine-1.3.18 amd64 x86
+~www-client/icecat-9.0.1 amd64 x86
 dev-vcs/hgview x86 amd64
-~app-emulation/hasp-3.2_p7 x86 amd64
-app-misc/pip amd64
-~app-emulation/wine-1.3.11 x86 amd64
 
-~app-portage/smart-live-rebuild-1.2 amd64
-~app-portage/gentoopm-0.2.1 amd64
-~x11-misc/vdpauinfo-0.0.6 amd64
-~media-sound/deadbeef-0.5.1 amd64
+~app-emulation/hasp-3.2_p7 x86 amd64
+sys-block/megarc amd64
+sys-block/megamgr amd64
+sys-block/megactl amd64
+sys-block/megacli amd64
