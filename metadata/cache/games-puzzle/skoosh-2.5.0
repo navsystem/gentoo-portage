@@ -1,4 +1,4 @@
->=gnome-base/gconf-2 >=gnome-base/libgnomeui-2 nls? ( virtual/libintl ) nls? ( sys-devel/gettext ) >=sys-apps/sed-4
+>=gnome-base/gconf-2 >=gnome-base/libgnomeui-2 nls? ( virtual/libintl ) app-text/rarian nls? ( sys-devel/gettext ) >=sys-apps/sed-4
 >=gnome-base/gconf-2 >=gnome-base/libgnomeui-2 nls? ( virtual/libintl )
 0
 http://homepages.ihug.co.nz/~trmusson/stuff/skoosh-2.5.0.tar.gz
