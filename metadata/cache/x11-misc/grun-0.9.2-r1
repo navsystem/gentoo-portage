@@ -6,7 +6,7 @@ mirror://debian/pool/main/g/grun/grun_0.9.2.orig.tar.gz mirror://debian/pool/mai
 http://packages.qa.debian.org/g/grun.html
 GPL-2
 a GTK+ application launcher with nice features such as a history
-amd64 ppc sparc x86 ~x86-fbsd
+amd64 ppc x86 ~x86-fbsd
 autotools eutils libtool multilib portability toolchain-funcs user
 nls
 

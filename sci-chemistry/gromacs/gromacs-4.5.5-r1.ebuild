@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.5.5-r1.ebuild,v 1.4 2012/01/06 02:16:45 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.5.5-r1.ebuild,v 1.6 2012/02/06 03:43:24 ottxor Exp $
 
 EAPI="4"
 
@@ -30,7 +30,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="amd64 ~ppc64 x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE="X altivec blas doc -double-precision +fftw fkernels gsl lapack
 mpi +single-precision sse2 test +threads xml zsh-completion"
 REQUIRED_USE="fkernels? ( !threads )"
@@ -238,7 +238,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	env-update && source /etc/profile
 	einfo
 	einfo  "Please read and cite:"
 	einfo  "Gromacs 4, J. Chem. Theory Comput. 4, 435 (2008). "
