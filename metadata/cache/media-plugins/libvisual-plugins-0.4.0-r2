@@ -6,7 +6,7 @@ mirror://sourceforge/libvisual/libvisual-plugins-0.4.0.tar.gz mirror://gentoo/li
 http://libvisual.sourceforge.net/
 GPL-2
 Visualization plugins for use with the libvisual framework.
-amd64 ~mips ppc ppc64 x86 ~x86-fbsd
+amd64 ~hppa ~mips ppc ppc64 x86 ~x86-fbsd
 autotools eutils libtool multilib portability toolchain-funcs user
 alsa debug esd gtk jack mplayer opengl
 

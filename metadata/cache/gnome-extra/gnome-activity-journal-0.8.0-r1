@@ -1,5 +1,5 @@
 dev-python/python-distutils-extra app-arch/xz-utils >=sys-apps/sed-4 >=app-admin/eselect-python-20091230 =dev-lang/python-2* >=sys-apps/sed-4
-dev-python/pygtk >=gnome-extra/zeitgeist-0.8.2 >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+dev-python/gconf-python dev-python/pygtk >=gnome-extra/zeitgeist-0.8.2 >=app-admin/eselect-python-20091230 =dev-lang/python-2*
 0
 http://launchpad.net/gnome-activity-journal/0.8/0.8.0/+download/gnome-activity-journal-0.8.0.tar.gz
 

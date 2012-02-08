@@ -6,7 +6,7 @@ mirror://gentoo/udev-init-scripts-8.tar.bz2
 http://www.gentoo.org
 GPL-2
 udev startup scripts for openrc
-~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86
+~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~x86
 
 
 
