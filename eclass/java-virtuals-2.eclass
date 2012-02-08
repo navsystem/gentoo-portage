@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-virtuals-2.eclass,v 1.6 2009/08/27 21:49:04 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-virtuals-2.eclass,v 1.8 2012/01/13 09:59:10 sera Exp $
 
 # Original Author: Alistair John Bush <ali_bush@gentoo.org>
 # Purpose: 	To provide a default (and only) src_install function
@@ -10,6 +10,8 @@ inherit java-utils-2
 
 DEPEND=">=dev-java/java-config-2.1.6"
 RDEPEND="${DEPEND}"
+
+S="${WORKDIR}"
 
 EXPORT_FUNCTIONS src_install
 

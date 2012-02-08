@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/gobject-introspection-0.10.8.ebuild,v 1.16 2011/09/20 19:53:20 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/gobject-introspection-0.10.8.ebuild,v 1.18 2012/02/07 21:00:27 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 PYTHON_DEPEND="2:2.5"
 
-inherit gnome2 python libtool eutils autotools
+inherit gnome2 multilib python libtool eutils autotools
 
 DESCRIPTION="Introspection infrastructure for generating gobject library bindings for various languages"
 HOMEPAGE="http://live.gnome.org/GObjectIntrospection/"
@@ -41,7 +41,7 @@ src_prepare() {
 	use doc && MAKEOPTS="-j1"
 
 	# Don't pre-compile .py
-	ln -sf $(type -P true) py-compile
+	echo '#!/bin/sh' > py-compile
 
 	# tests: build tests only on make check
 	epatch "${FILESDIR}/${P}-build-tests.patch"

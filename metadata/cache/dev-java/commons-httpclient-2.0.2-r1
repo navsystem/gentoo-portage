@@ -3,11 +3,11 @@
 0
 mirror://apache/jakarta/commons/httpclient/source/commons-httpclient-2.0.2-src.tar.gz
 test
-http://jakarta.apache.org/commons/httpclient/index.html
+http://hc.apache.org/
 Apache-2.0
 The Jakarta Commons HttpClient library
 amd64 ppc ppc64 x86 ~x86-fbsd
-eutils java-ant-2 java-pkg-2 java-utils-2 multilib portability toolchain-funcs versionator
+eutils java-ant-2 java-pkg-2 java-utils-2 multilib portability toolchain-funcs user versionator
 elibc_FreeBSD doc source elibc_FreeBSD
 
 

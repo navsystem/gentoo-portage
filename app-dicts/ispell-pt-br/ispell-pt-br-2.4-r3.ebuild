@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-pt-br/ispell-pt-br-2.4-r3.ebuild,v 1.4 2011/12/15 15:10:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-pt-br/ispell-pt-br-2.4-r3.ebuild,v 1.6 2012/02/05 17:53:11 armin76 Exp $
 
 inherit eutils multilib
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.ime.usp.br/~ueda/br.ispell/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~mips ~ppc ~sparc x86"
+KEYWORDS="alpha amd64 hppa ~mips ppc sparc x86"
 IUSE=""
 
 DEPEND="app-text/ispell

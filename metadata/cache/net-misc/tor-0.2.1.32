@@ -1,5 +1,5 @@
-dev-libs/openssl >=dev-libs/libevent-2.0 || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 sys-devel/libtool
-dev-libs/openssl >=dev-libs/libevent-2.0
+dev-libs/openssl >=dev-libs/libevent-2.0 selinux? ( sec-policy/selinux-tor ) || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 sys-devel/libtool
+dev-libs/openssl >=dev-libs/libevent-2.0 selinux? ( sec-policy/selinux-tor )
 0
 http://www.torproject.org/dist/tor-0.2.1.32.tar.gz
 
@@ -8,7 +8,7 @@ BSD
 Anonymizing overlay network for TCP
 ~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
 autotools eutils flag-o-matic libtool multilib portability toolchain-funcs user
-debug
+debug selinux
 
 
 

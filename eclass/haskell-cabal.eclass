@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.25 2011/08/22 04:46:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.27 2012/02/07 12:47:54 slyfox Exp $
 
 # @ECLASS: haskell-cabal.eclass
 # @MAINTAINER:
@@ -52,6 +52,12 @@ inherit ghc-package multilib
 # example: /etc/make.conf: CABAL_EXTRA_CONFIGURE_FLAGS=--enable-shared
 : ${CABAL_EXTRA_CONFIGURE_FLAGS:=}
 
+# @ECLASS-VARIABLE: CABAL_EXTRA_BUILD_FLAGS
+# @DESCRIPTION:
+# User-specified additional parameters passed to 'setup build'.
+# example: /etc/make.conf: CABAL_EXTRA_BUILD_FLAGS=-v
+: ${CABAL_EXTRA_BUILD_FLAGS:=}
+
 # @ECLASS-VARIABLE: GHC_BOOTSTRAP_FLAGS
 # @DESCRIPTION:
 # User-specified additional parameters for ghc when building
@@ -73,6 +79,7 @@ for feature in ${CABAL_FEATURES}; do
 	case ${feature} in
 		haddock)    CABAL_USE_HADDOCK=yes;;
 		hscolour)   CABAL_USE_HSCOLOUR=yes;;
+		hoogle)     CABAL_USE_HOOGLE=yes;;
 		alex)       CABAL_USE_ALEX=yes;;
 		happy)      CABAL_USE_HAPPY=yes;;
 		c2hs)       CABAL_USE_C2HS=yes;;
@@ -175,10 +182,12 @@ cabal-bootstrap() {
 	einfo "Using cabal-$(cabal-version)."
 
 	make_setup() {
-		$(ghc-getghc) -package "${cabalpackage}" --make "${setupmodule}" \
+		set -- -package "${cabalpackage}" --make "${setupmodule}" \
 			${GHC_BOOTSTRAP_FLAGS} \
 			"$@" \
 			-o setup
+		echo $(ghc-getghc) ${HCFLAGS} "$@"
+		$(ghc-getghc) "$@"
 	}
 	if $(ghc-supports-shared-libraries); then
 		# some custom build systems might use external libraries,
@@ -205,16 +214,22 @@ cabal-mksetup() {
 }
 
 cabal-hscolour() {
-	./setup hscolour || die "setup hscolour failed"
+	set -- hscolour "$@"
+	echo ./setup "$@"
+	./setup "$@" || die "setup hscolour failed"
 }
 
 cabal-haddock() {
-	./setup haddock || die "setup haddock failed"
+	set -- haddock "$@"
+	echo ./setup "$@"
+	./setup "$@" || die "setup haddock failed"
 }
 
 cabal-hscolour-haddock() {
 	# --hyperlink-source implies calling 'setup hscolour'
-	./setup haddock --hyperlink-source || die "setup haddock failed"
+	set -- haddock --hyperlink-source
+	echo ./setup "$@"
+	./setup "$@" --hyperlink-source || die "setup haddock --hyperlink-source failed"
 }
 
 cabal-configure() {
@@ -240,6 +255,12 @@ cabal-configure() {
 	if [[ -n "${CABAL_USE_CPPHS}" ]]; then
 		cabalconf="${cabalconf} --with-cpphs=${EPREFIX}/usr/bin/cpphs"
 	fi
+
+	local option
+	for option in ${HCFLAGS}
+	do
+		cabalconf+=" --ghc-option=$option"
+	done
 
 	# Building GHCi libs on ppc64 causes "TOC overflow".
 	if use ppc64; then
@@ -279,7 +300,7 @@ cabal-configure() {
 		$(ghc-supports-shared-libraries) && \
 			cabalconf="${cabalconf} --enable-shared"
 
-	./setup configure \
+	set -- configure \
 		--ghc --prefix="${EPREFIX}"/usr \
 		--with-compiler="$(ghc-getghc)" \
 		--with-hc-pkg="$(ghc-getghcpkg)" \
@@ -291,21 +312,25 @@ cabal-configure() {
 		${cabalconf} \
 		${CABAL_CONFIGURE_FLAGS} \
 		${CABAL_EXTRA_CONFIGURE_FLAGS} \
-		"$@" || die "setup configure failed"
+		"$@"
+	echo ./setup "$@"
+	./setup "$@" || die "setup configure failed"
 }
 
 cabal-build() {
 	unset LANG LC_ALL LC_MESSAGES
-	./setup build \
+	set --  build ${CABAL_EXTRA_BUILD_FLAGS} "$@"
+	echo ./setup "$@"
+	./setup "$@" \
 		|| die "setup build failed"
 }
 
 cabal-copy() {
 	has "${EAPI:-0}" 0 1 2 && ! use prefix && ED=${D}
 
-	./setup copy \
-		--destdir="${D}" \
-		|| die "setup copy failed"
+	set -- copy --destdir="${D}" "$@"
+	echo ./setup "$@"
+	./setup "$@" || die "setup copy failed"
 
 	# cabal is a bit eager about creating dirs,
 	# so remove them if they are empty
@@ -391,7 +416,7 @@ haskell-cabal_src_configure() {
 
 		cabal-bootstrap
 
-		cabal-configure $ghc_flags "$@"
+		cabal-configure "$@"
 
 		popd > /dev/null
 	fi
@@ -451,7 +476,9 @@ haskell-cabal_src_test() {
 		einfo ">>> No tests for dummy library: ${CATEGORY}/${PF}"
 	else
 		einfo ">>> Test phase [cabal test]: ${CATEGORY}/${PF}"
-		./setup test || die "cabal test failed"
+		set -- test "$@"
+		echo ./setup "$@"
+		./setup "$@" || die "cabal test failed"
 	fi
 
 	popd > /dev/null

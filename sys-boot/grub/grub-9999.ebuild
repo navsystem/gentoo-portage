@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.47 2011/11/18 00:04:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.49 2012/01/30 09:14:59 scarabeus Exp $
 
 EAPI=4
 
@@ -163,9 +163,6 @@ grub_src_install() {
 src_prepare() {
 	local i j archs
 
-	epatch \
-		"${FILESDIR}/1.99-call_proper_grub_probe.patch"
-
 	epatch_user
 
 	# fix texinfo file name, as otherwise the grub2.info file will be
@@ -245,7 +242,7 @@ src_install() {
 		"bin/grub2-mkimage"
 	)
 	for e in ${PAX[@]}; do
-		pax-mark -mp "${ED}/${e}"
+		pax-mark -mpes "${ED}/${e}"
 	done
 
 	# can't be in docs array as we use default_src_install in different builddir

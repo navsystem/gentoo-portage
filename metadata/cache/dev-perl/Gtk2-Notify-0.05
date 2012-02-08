@@ -1,0 +1,22 @@
+dev-perl/glib-perl dev-perl/gtk2-perl >=x11-libs/libnotify-0.7 dev-perl/extutils-depends dev-perl/extutils-pkgconfig test? ( dev-perl/Test-Exception ) dev-lang/perl[-build]
+dev-perl/glib-perl dev-perl/gtk2-perl >=x11-libs/libnotify-0.7 dev-lang/perl[-build]
+0
+mirror://cpan/authors/id/F/FL/FLORA/Gtk2-Notify-0.05.tar.gz
+
+http://search.cpan.org/dist/Gtk2-Notify/
+LGPL-2
+A perl interface to the notification library
+~amd64 ~x86
+base eutils multilib perl-module portability toolchain-funcs user
+test
+
+
+
+4
+
+compile configure install prepare test unpack
+
+
+
+
+

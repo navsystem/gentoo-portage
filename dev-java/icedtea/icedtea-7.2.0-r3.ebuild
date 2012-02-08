@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-7.2.0-r3.ebuild,v 1.1 2011/12/02 12:27:17 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-7.2.0-r3.ebuild,v 1.3 2012/02/06 10:01:44 sera Exp $
 # Build written by Andrew John Hughes (gnu_andrew@member.fsf.org)
 
 # *********************************************************
@@ -129,6 +129,7 @@ DEPEND="${COMMON_DEP} ${ALSA_COMMON_DEP} ${CUPS_COMMON_DEP} ${X_COMMON_DEP}
 		dev-java/icedtea:6
 	)
 	app-arch/cpio
+	app-arch/unzip
 	app-arch/zip
 	app-misc/ca-certificates
 	>=dev-java/ant-core-1.8.1
@@ -328,12 +329,6 @@ src_install() {
 	dodoc README NEWS AUTHORS
 	dosym /usr/share/doc/${PF} /usr/share/doc/${PN}${SLOT}
 
-	# http://www.mail-archive.com/openjdk@lists.launchpad.net/msg06599.html
-	if use jamvm; then
-		dosym ${dest}/jre/lib/$(get_system_arch)/jamvm/libjvm.so \
-			${dest}/jre/lib/$(get_system_arch)
-	fi
-
 	cd openjdk.build/j2sdk-image || die
 
 	# Don't hide classes
@@ -352,6 +347,12 @@ src_install() {
 	if use examples; then
 		dodir "${dest}/share";
 		cp -vRP demo sample "${ddest}/share/" || die
+	fi
+
+	# http://www.mail-archive.com/openjdk@lists.launchpad.net/msg06599.html
+	if use jamvm; then
+		dosym ${dest}/jre/lib/$(get_system_arch)/jamvm/libjvm.so \
+			${dest}/jre/lib/$(get_system_arch)/libjvm.so
 	fi
 
 	if use source; then

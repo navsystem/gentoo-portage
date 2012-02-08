@@ -1,20 +1,20 @@
 media-libs/alsa-lib
 media-libs/alsa-lib
 0
-http://www.kokkinizita.net/linuxaudio/downloads/clalsadrv-2.0.0.tar.bz2
+mirror://gentoo/clalsadrv-2.0.0.tar.bz2
 
-http://www.kokkinizita.net/linuxaudio/
+http://packages.debian.org/libclalsadrv
 GPL-2
-An audio library by Fons Adriaensen <fons.adriaensen@skynet.be>
+ALSA driver C++ access library
 ~amd64 ~ppc ~sparc ~x86
 eutils multilib portability toolchain-funcs user
 
 
 
 
+4
 
-
-compile install unpack
+compile install prepare
 
 
 

@@ -1,0 +1,22 @@
+test? ( dev-perl/Test-Requires >=virtual/perl-Test-Simple-0.88 virtual/perl-Test-Harness ) dev-lang/perl[-build]
+dev-lang/perl[-build]
+0
+mirror://cpan/authors/id/T/TO/TOKUHIROM/Test-SharedFork-0.19.tar.gz
+
+http://search.cpan.org/dist/Test-SharedFork/
+|| ( Artistic GPL-1 GPL-2 GPL-3 )
+fork test
+~amd64 ~x86
+base eutils multilib perl-module portability toolchain-funcs user
+test
+
+
+
+4
+
+compile configure install prepare test unpack
+
+
+
+
+

@@ -1,0 +1,22 @@
+dev-lang/php >=dev-php/pear-1.8.1
+virtual/httpd-php dev-lang/php[session,imap] dev-php/PEAR-MDB2 dev-php/PEAR-Mail dev-php/PEAR-Mail_Mime mysql? ( dev-php/PEAR-MDB2_Driver_mysql ) postgres? ( dev-php/PEAR-MDB2_Driver_pgsql ) sqlite? ( dev-php/PEAR-MDB2_Driver_sqlite ) !mysql? ( !postgres? ( !sqlite? ( dev-php/PEAR-MDB2_Driver_mysql ) ) ) dev-lang/php >=dev-php/pear-1.8.1
+0
+http://pear.phpontrax.com/get/PHPonTrax-0.17.0.tgz
+
+http://www.phpontrax.org/
+MIT
+Web-application and persistance framework based on Ruby on Rails
+~amd64 ~x86
+multilib php-pear-r1 toolchain-funcs
+mysql postgres sqlite
+
+
+
+4
+
+install postinst
+
+
+
+
+

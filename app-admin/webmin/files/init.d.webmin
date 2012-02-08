@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/files/init.d.webmin,v 1.8 2011/09/18 09:56:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/files/init.d.webmin,v 1.10 2012/01/24 20:54:42 hwoarang Exp $
 
 
 # We do not give a choice to user for configuring these 'cause it will mess up
@@ -10,7 +10,7 @@ WEBMIN_EXE="%exe%"
 WEBMIN_PID="%pid%"
 WEBMIN_CONF="%conf%"
 
-opts="${opts} reload"
+extra_started_commands="reload"
 
 depend() {
 	use net logger

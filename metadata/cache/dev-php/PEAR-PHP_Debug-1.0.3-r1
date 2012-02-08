@@ -1,0 +1,22 @@
+dev-lang/php >=dev-php/pear-1.8.1
+!minimal? ( dev-php/PEAR-Text_Highlighter dev-php/PEAR-Services_W3C_HTMLValidator ) dev-lang/php >=dev-php/pear-1.8.1
+0
+http://pear.php.net/get/PHP_Debug-1.0.3.tgz
+
+http://pear.php.net/PHP_Debug
+MIT
+Provides traces, timings, executed queries, watched variables etc.
+~amd64 ~x86
+multilib php-pear-r1 toolchain-funcs
+minimal
+
+
+
+4
+
+install
+
+
+
+
+

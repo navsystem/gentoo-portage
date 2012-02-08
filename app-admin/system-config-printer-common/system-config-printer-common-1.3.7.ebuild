@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.3.7.ebuild,v 1.3 2011/10/23 21:37:20 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.3.7.ebuild,v 1.7 2012/01/18 19:55:35 maekke Exp $
 
 EAPI="3"
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://cyberelk.net/tim/software/system-config-printer/"
 SRC_URI="http://cyberelk.net/tim/data/system-config-printer/1.3/${MY_P}.tar.xz"
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc x86"
 SLOT="0"
 IUSE="doc policykit"
 
@@ -30,7 +30,7 @@ COMMON_DEPEND="
 	>=dev-python/pycups-1.9.53
 	>=dev-python/pygobject-2.21.5:2
 	>=net-print/cups-1.4.6[dbus]
-	sys-fs/udev
+	>=sys-fs/udev-164-r2
 	virtual/libusb:0
 "
 DEPEND="${COMMON_DEPEND}

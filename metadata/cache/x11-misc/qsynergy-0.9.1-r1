@@ -1,5 +1,5 @@
 x11-libs/qt-gui:4
-x11-libs/qt-gui:4 || ( x11-misc/synergy-plus x11-misc/synergy )
+x11-libs/qt-gui:4 x11-misc/synergy
 0
 mirror://sourceforge/qsynergy/qsynergy-0.9.1.tar.gz
 

@@ -1,5 +1,5 @@
-sys-process/procps ssl? ( dev-libs/openssl ) foomaticdb? ( net-print/foomatic-filters net-print/foomatic-db ) nls? ( sys-devel/gettext ) kerberos? ( app-crypt/mit-krb5 )
-sys-process/procps ssl? ( dev-libs/openssl ) foomaticdb? ( net-print/foomatic-filters net-print/foomatic-db )
+sys-process/procps ssl? ( dev-libs/openssl ) foomaticdb? ( net-print/foomatic-filters net-print/foomatic-db ) !net-print/cups nls? ( sys-devel/gettext ) kerberos? ( app-crypt/mit-krb5 )
+sys-process/procps ssl? ( dev-libs/openssl ) foomaticdb? ( net-print/foomatic-filters net-print/foomatic-db ) !net-print/cups
 0
 ftp://ftp.lprng.com/pub/LPRng/LPRng/LPRng-3.8.28.tgz
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/tuprolog-2.3.1_beta.ebuild,v 1.2 2011/05/26 06:27:07 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/tuprolog-2.3.1_beta.ebuild,v 1.4 2012/01/15 17:44:38 mr_bones_ Exp $
 
 EAPI=2
 
@@ -15,14 +15,16 @@ SRC_URI="mirror://sourceforge/tuprolog/${MY_P}.zip"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="doc"
+IUSE="doc test"
 
 RDEPEND=">=virtual/jdk-1.5
 	>=dev-java/javassist-3"
 
 DEPEND="${RDEPEND}
 	app-arch/unzip
-	dev-java/ant-core"
+	dev-java/ant-core
+	test? (	dev-java/ant-junit
+		dev-java/xalan )"
 
 S="${WORKDIR}"/2p-deploy
 

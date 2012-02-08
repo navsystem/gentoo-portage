@@ -1,6 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.68 2011/11/29 23:48:09 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.71 2012/02/05 21:57:49 maekke Exp $
+
+# Alexandre Rostovtsev <tetromono@gentoo.org> (09 Jan 2012)
+# jsc JIT compilation is supported only on amd64/arm/x86 and their prefixes, so
+# it's masked in base profile and unmasked here (bug #396313).
+net-libs/webkit-gtk -jit
 
 # Davide Pesavento <pesa@gentoo.org> (30 Nov 2011)
 # JavaScriptCore JIT is supported only on amd64/arm/x86,
@@ -9,7 +14,7 @@
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (27 Nov 2011)
 # Missing keywords on dev-libs/libgusb, bug #392057
-x11-misc/colord gusb
+=x11-misc/colord-0.1.15 gusb
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (25 Nov 2011)
 # Mask USE flags on gnome-3.2 packages due to missing keywords on deps;
@@ -123,7 +128,7 @@ dev-libs/boost mpi
 
 # missing keywords
 media-sound/sox ladspa
-media-plugins/gst-plugins-meta aac dts dv lame taglib vcd wavpack
+media-plugins/gst-plugins-meta aac dts dv lame libvisual taglib vcd wavpack
 
 # projectm not keyworded, bug #314969
 media-video/vlc projectm

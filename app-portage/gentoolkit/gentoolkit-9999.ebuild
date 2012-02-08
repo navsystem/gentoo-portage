@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-9999.ebuild,v 1.18 2011/12/04 20:21:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-9999.ebuild,v 1.20 2012/01/31 17:19:21 fuzzyray Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -25,11 +25,16 @@ IUSE="minimal"
 
 KEYWORDS=""
 
+# Note: dev-lang/python dependencies are so emerge will print a blocker if any
+# installed slot of python is not built with +xml.  This is used since
+# PYTHON_USE_WITH just dies in the middle of the emerge. See bug 399331.
 DEPEND="sys-apps/portage"
 RDEPEND="${DEPEND}
+	>=dev-lang/python-2.6[xml]
+	!>=dev-lang/python-2.6[-xml]
 	!<=app-portage/gentoolkit-dev-0.2.7
 	dev-python/argparse
-	|| ( app-misc/realpath sys-freebsd/freebsd-bin )
+	|| ( >=sys-apps/coreutils-8.15 app-misc/realpath sys-freebsd/freebsd-bin )
 	sys-apps/gawk
 	sys-apps/grep
 	!minimal? (

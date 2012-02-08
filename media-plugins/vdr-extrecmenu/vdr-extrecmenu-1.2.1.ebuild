@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-extrecmenu/vdr-extrecmenu-1.2.1.ebuild,v 1.3 2011/12/16 14:47:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-extrecmenu/vdr-extrecmenu-1.2.1.ebuild,v 1.5 2012/02/07 14:22:00 hd_brummy Exp $
 
 EAPI="3"
 
@@ -12,12 +12,12 @@ DVDARCHIVE="dvdarchive-2.3-beta.sh"
 
 DESCRIPTION="Video Disk Recorder - Extended recordings menu Plugin"
 HOMEPAGE="http://projects.vdr-developer.org/projects/show/plg-extrecmenu"
-SRC_URI="http://projects.vdr-developer.org/attachments/download/${VERSION}/${P}.tgz
+SRC_URI="mirror://vdr-developerorg/${VERSION}/${P}.tgz
 	mirror://gentoo/${DVDARCHIVE}.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=">=media-video/vdr-1.6.0"

@@ -1,0 +1,22 @@
+!sci-physics/cernlib-montecarlo[herwig] virtual/fortran || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 sys-devel/libtool
+!sci-physics/cernlib-montecarlo[herwig]
+0
+http://www.hep.phy.cam.ac.uk/theory/webber/Herwig/herwig6520.f http://www.hep.phy.cam.ac.uk/theory/webber/Herwig/herwig6520.inc http://www.hep.phy.cam.ac.uk/theory/webber/Herwig/HERWIG65.INC doc? ( http://www.hep.phy.cam.ac.uk/theory/webber/Herwig/hw65_manual.pdf )
+
+http://www.hep.phy.cam.ac.uk/theory/webber/Herwig/
+as-is
+High Energy Physics Event Generator
+~amd64 ~x86
+autotools eutils fortran-2 libtool multilib portability toolchain-funcs user versionator
+doc static-libs
+
+
+
+4
+
+configure install prepare setup unpack
+
+
+
+
+

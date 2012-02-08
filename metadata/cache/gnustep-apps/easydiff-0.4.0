@@ -6,8 +6,8 @@ ftp://ftp.gnustep.org/pub/gnustep/usr-apps/EasyDiff-0.4.0.tar.gz
 http://wiki.gnustep.org/index.php/EasyDiff.app
 GPL-2
 GNUstep app that lets you easily see the differences between two text files.
-~amd64 ~ppc ~x86
-eutils flag-o-matic gnustep-2 gnustep-base multilib portability toolchain-funcs
+amd64 ~ppc ~x86
+eutils flag-o-matic gnustep-2 gnustep-base multilib portability toolchain-funcs user
 cvs debug doc
 
 

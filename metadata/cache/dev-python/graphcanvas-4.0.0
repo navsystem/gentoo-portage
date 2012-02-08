@@ -1,5 +1,5 @@
-dev-python/setuptools test? ( dev-python/networkx dev-python/enable media-fonts/font-cursor-misc media-fonts/font-misc-misc x11-apps/xhost ) >=app-admin/eselect-python-20091230 =dev-lang/python-2* test? ( dev-python/nose ) test? ( !prefix? ( x11-base/xorg-server[xvfb] ) x11-apps/xhost )
-dev-python/networkx dev-python/enable >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+dev-python/setuptools test? ( dev-python/networkx dev-python/enable media-fonts/font-cursor-misc media-fonts/font-misc-misc x11-apps/xhost ) >=app-admin/eselect-python-20091230 dev-lang/python test? ( dev-python/nose ) test? ( !prefix? ( x11-base/xorg-server[xvfb] ) x11-apps/xhost )
+dev-python/networkx dev-python/enable >=app-admin/eselect-python-20091230 dev-lang/python
 0
 http://www.enthought.com/repo/ets/graphcanvas-4.0.0.tar.gz
 
@@ -12,9 +12,9 @@ examples test test test
 
 
 
-3
+4
 
-compile install postinst postrm prepare test
+compile install postinst postrm prepare setup test
 
 
 

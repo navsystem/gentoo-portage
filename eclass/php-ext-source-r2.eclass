@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r2.eclass,v 1.18 2011/11/24 00:04:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r2.eclass,v 1.24 2012/01/19 10:12:44 mabi Exp $
 
 # @ECLASS: php-ext-source-r2.eclass
 # @MAINTAINER:
@@ -53,7 +53,7 @@ esac
 # @ECLASS-VARIABLE: USE_PHP
 # @DESCRIPTION:
 # Lists the PHP slots compatibile the extension is compatibile with
-[[ -z "${USE_PHP}" ]] && USE_PHP="php5-3 php5-2"
+[[ -z "${USE_PHP}" ]] && USE_PHP="php5-3"
 
 # @ECLASS-VARIABLE: PHP_EXT_OPTIONAL_USE
 # @DESCRIPTION:
@@ -85,6 +85,11 @@ RDEPEND="${RDEPEND}
 	${PHPDEPEND}
 	${PHP_EXT_OPTIONAL_USE:+ )}"
 
+DEPEND="${DEPEND}
+	${PHP_EXT_OPTIONAL_USE}${PHP_EXT_OPTIONAL_USE:+? ( }
+	${PHPDEPEND}
+	${PHP_EXT_OPTIONAL_USE:+ )}
+"
 
 # @FUNCTION: php-ext-source-r2_src_unpack
 # @DESCRIPTION:
@@ -135,6 +140,9 @@ php-ext-source-r2_phpize() {
 # @DESCRIPTION:
 # Set this in the ebuild to pass configure options to econf.
 php-ext-source-r2_src_configure() {
+	# net-snmp creates this file #385403
+	addpredict /usr/share/snmp/mibs/.index
+
 	local slot
 	for slot in $(php_get_slots); do
 		php_init_slot_env ${slot}
