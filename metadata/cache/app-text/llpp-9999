@@ -1,5 +1,5 @@
-=app-text/mupdf-9999 dev-ml/lablgl[glut] dev-lang/ocaml[ocamlopt] media-libs/jbig2dec media-libs/openjpeg x11-misc/xsel dev-vcs/git
-=app-text/mupdf-9999 dev-ml/lablgl[glut] dev-lang/ocaml[ocamlopt] media-libs/jbig2dec media-libs/openjpeg x11-misc/xsel
+>=app-text/mupdf-0.8.165 dev-ml/lablgl[glut] dev-lang/ocaml[ocamlopt] media-libs/jbig2dec media-libs/openjpeg x11-misc/xsel dev-vcs/git
+>=app-text/mupdf-0.8.165 dev-ml/lablgl[glut] dev-lang/ocaml[ocamlopt] media-libs/jbig2dec media-libs/openjpeg x11-misc/xsel
 0
 
 
@@ -7,8 +7,8 @@ http://repo.or.cz/w/llpp.git
 GPL-3
 a graphical PDF viewer which aims to superficially resemble less(1)
 
-eutils git-2 multilib portability toolchain-funcs user
-
+git-2 multilib toolchain-funcs
+vanilla
 
 
 

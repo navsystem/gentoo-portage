@@ -4,9 +4,9 @@ virtual/tex-base dev-lang/icon sys-apps/debianutils emacs? ( virtual/emacs )
 http://www.eecs.harvard.edu/~nr/noweb/dist/noweb-2.11b.tgz
 
 http://www.eecs.harvard.edu/~nr/noweb/
-noweb emacs? ( GPL-2 )
+freedist emacs? ( GPL-2 )
 a literate programming tool, lighter than web
-~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86
+~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86
 elisp-common eutils multilib portability toolchain-funcs user
 emacs examples
 

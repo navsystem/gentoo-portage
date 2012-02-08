@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-2.32.0.ebuild,v 1.9 2011/12/31 20:50:06 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-2.32.0.ebuild,v 1.8 2011/03/31 04:13:01 ssuominen Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -15,16 +15,13 @@ SLOT="0"
 KEYWORDS="~alpha amd64 ~ia64 ppc sparc x86 ~x86-fbsd"
 IUSE=""
 
-COMMON_DEPEND=">=gnome-base/gconf-2.6:2
+RDEPEND=">=gnome-base/gconf-2.6:2
 	>=x11-libs/gtk+-2.10:2
 	>=dev-libs/glib-2.10:2
 	>=x11-libs/libwnck-2.10:1
 	>=net-libs/webkit-gtk-1.1.13:2
 	>=dev-libs/libunique-1:1"
-# libgnome is needed for /desktop/gnome/interface/* gconf keys
-RDEPEND="${COMMON_DEPEND}
-	gnome-base/libgnome"
-DEPEND="${COMMON_DEPEND}
+DEPEND="${RDEPEND}
 	sys-devel/gettext
 	>=dev-util/intltool-0.40
 	>=dev-util/pkgconfig-0.9"
@@ -42,7 +39,8 @@ src_prepare() {
 	gnome2_src_prepare
 
 	# disable pyc compiling
-	echo '#!/bin/sh' > py-compile
+	rm py-compile
+	ln -s $(type -P true) py-compile
 
 	# Fix build with older libunique, bug #286890
 	sed -e 's/-DG.*_SINGLE_INCLUDES//' \

@@ -1,9 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia/darwinia-1.4.0_beta9.ebuild,v 1.12 2012/02/05 06:22:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia/darwinia-1.4.0_beta9.ebuild,v 1.9 2011/12/14 17:34:34 vapier Exp $
 
-CDROM_OPTIONAL="yes"
-inherit eutils unpacker cdrom games
+inherit eutils games
 
 MY_PV=${PV/_beta/b}
 DESCRIPTION="the hyped indie game of the year. By the Uplink creators."
@@ -13,8 +12,9 @@ SRC_URI="http://www.introversion.co.uk/darwinia/downloads/${PN}-full-${MY_PV}.sh
 LICENSE="Introversion"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
-IUSE=""
+IUSE="cdinstall"
 RESTRICT="mirror strip"
+PROPERTIES="interactive"
 
 RDEPEND="
 	sys-libs/glibc

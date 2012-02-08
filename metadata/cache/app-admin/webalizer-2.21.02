@@ -6,8 +6,8 @@ ftp://ftp.mrunix.net/pub/webalizer/webalizer-2.21-02-src.tar.bz2 mirror://gentoo
 http://www.mrunix.net/webalizer/
 GPL-2
 Webserver log file analyzer
-~alpha amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86
-confutils db-use eutils multilib portability toolchain-funcs user versionator webapp
+~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86
+confutils db-use eutils multilib portability toolchain-funcs versionator webapp
 geoip nls vhosts
 
 

@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-	<email>maintainer-needed@gentoo.org</email>
+	<email>spock@gentoo.org</email>
+	<name>Michal Januszewski</name>
 </maintainer>
 <use>
 	<flag name='bittorrent'>Enable support for the BitTorrent protocol</flag>

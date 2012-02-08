@@ -14,7 +14,7 @@ bsdpty minimal multicall pam static syslog zlib savedconfig
 
 
 
-compile install postinst setup unpack
+compile install setup unpack
 
 
 

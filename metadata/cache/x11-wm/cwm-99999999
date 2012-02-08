@@ -12,9 +12,9 @@ eutils git-2 multilib portability toolchain-funcs user
 
 
 
-4
+2
 
-install prepare unpack
+compile install unpack
 
 
 

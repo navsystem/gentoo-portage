@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-175-r1.ebuild,v 1.6 2012/01/06 04:25:47 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-175-r1.ebuild,v 1.2 2011/12/09 20:43:22 vapier Exp $
 
 EAPI=4
 
@@ -34,7 +34,7 @@ HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="build selinux debug +rule_generator hwdb acl gudev introspection
-	keymap floppy edd doc zlib"
+	keymap floppy edd doc"
 
 COMMON_DEPEND="selinux? ( sys-libs/libselinux )
 	acl? ( sys-apps/acl dev-libs/glib:2 )
@@ -62,11 +62,7 @@ else
 fi
 
 RDEPEND="${COMMON_DEPEND}
-	hwdb? (
-		>=sys-apps/usbutils-0.82
-		sys-apps/pciutils[zlib=]
-		zlib? ( sys-libs/zlib )
-	)
+	hwdb? ( >=sys-apps/usbutils-0.82 sys-apps/pciutils[-zlib] )
 	acl? ( sys-apps/coreutils[acl] )
 	!sys-apps/coldplug
 	!<sys-fs/lvm2-2.02.45
@@ -135,8 +131,6 @@ src_prepare()
 		EPATCH_SOURCE="${WORKDIR}/${patchset}" EPATCH_SUFFIX="patch" \
 			EPATCH_FORCE="yes" epatch
 	fi
-
-	use hwdb && use zlib && epatch "${FILESDIR}"/${P}-zlib.patch
 
 	# change rules back to group uucp instead of dialout for now
 	sed -e 's/GROUP="dialout"/GROUP="uucp"/' \
@@ -363,7 +357,7 @@ ismounted()
 	while read a m a; do
 		[ "$m" = "$1" ] && return 0
 	done < "${EROOT}"/proc/mounts
-	return 1
+    return 1
 }
 
 pkg_postinst()

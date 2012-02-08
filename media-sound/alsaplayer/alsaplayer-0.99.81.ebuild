@@ -1,29 +1,30 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.81.ebuild,v 1.7 2012/01/21 16:22:02 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.81.ebuild,v 1.2 2010/11/09 13:33:23 ssuominen Exp $
 
-EAPI=4
+EAPI=2
 inherit autotools eutils
 
 DESCRIPTION="A heavily multi-threaded pluggable audio player."
-HOMEPAGE="http://www.alsaplayer.org/"
-SRC_URI="http://www.alsaplayer.org/${P}.tar.bz2"
+HOMEPAGE="http://www.alsaplayer.org"
+SRC_URI="http://www.${PN}.org/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~mips ~ppc ~sparc x86"
-IUSE="alsa audiofile doc flac gtk id3tag jack mad mikmod nas nls ogg opengl oss vorbis xosd"
+KEYWORDS="~amd64 ~mips ~ppc ~sparc ~x86"
+IUSE="alsa audiofile doc esd flac gtk id3tag jack mad mikmod nas nls ogg opengl oss vorbis xosd"
 
 RDEPEND="media-libs/libsndfile
 	sys-libs/zlib
 	alsa? ( media-libs/alsa-lib )
 	audiofile? ( media-libs/audiofile )
+	esd? ( media-sound/esound )
 	flac? ( media-libs/flac )
 	gtk? ( >=x11-libs/gtk+-2.10:2 )
 	id3tag? ( media-libs/libid3tag )
 	jack? ( >=media-sound/jack-audio-connection-kit-0.80 )
 	mad? ( media-libs/libmad )
-	mikmod? ( media-libs/libmikmod:0 )
+	mikmod? ( media-libs/libmikmod )
 	nas? ( media-libs/nas )
 	ogg? ( media-libs/libogg )
 	opengl? ( virtual/opengl )
@@ -32,9 +33,7 @@ RDEPEND="media-libs/libsndfile
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( app-doc/doxygen )
-	nls? ( sys-devel/gettext )
-	oss? ( virtual/os-headers )"
-REQUIRED_USE="|| ( alsa jack nas oss )"
+	nls? ( sys-devel/gettext )"
 
 src_prepare() {
 	sed -i \
@@ -52,8 +51,14 @@ src_configure() {
 	use doc || export ac_cv_prog_HAVE_DOXYGEN=false
 	use xosd || export ac_cv_lib_xosd_xosd_create=no
 
+	local myconf
+	if ! use alsa && ! use oss && ! use esd && ! use jack && ! use nas; then
+		myconf="--enable-oss"
+	fi
+
 	econf \
 		--docdir=/usr/share/doc/${PF} \
+		--disable-dependency-tracking \
 		$(use_enable nls) \
 		$(use_enable opengl) \
 		$(use_enable mikmod) \
@@ -65,16 +70,17 @@ src_configure() {
 		$(use_enable gtk systray) \
 		$(use_enable jack) \
 		$(use_enable alsa) \
-		--disable-esd \
+		$(use_enable esd) \
 		$(use_enable oss) \
 		$(use_enable gtk gtk2) \
-		$(use_enable nas)
+		$(use_enable nas) \
+		${myconf}
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog README TODO docs/*.txt
 	newicon interface/gtk2/pixmaps/logo.xpm ${PN}.xpm
 
-	find "${ED}" -name '*.la' -exec rm -f {} +
+	find "${D}" -name '*.la' -exec rm -f '{}' +
 }

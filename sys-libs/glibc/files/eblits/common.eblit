@@ -1,10 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/common.eblit,v 1.25 2011/12/22 01:09:58 vapier Exp $
-
-alt_prefix() {
-	is_crosscompile && echo /usr/${CTARGET}
-}
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/common.eblit,v 1.24 2011/11/17 21:22:53 vapier Exp $
 
 # We need to be able to set alternative headers for
 # compiling for non-native platform
@@ -12,7 +8,14 @@ alt_prefix() {
 # the whole system.
 # note: intentionally undocumented.
 alt_headers() {
-	echo ${ALT_HEADERS:=$(alt_prefix)/usr/include}
+	if [[ -z ${ALT_HEADERS} ]] ; then
+		if is_crosscompile ; then
+			ALT_HEADERS="/usr/${CTARGET}/usr/include"
+		else
+			ALT_HEADERS="/usr/include"
+		fi
+	fi
+	echo "${ALT_HEADERS}"
 }
 alt_build_headers() {
 	if [[ -z ${ALT_BUILD_HEADERS} ]] ; then
@@ -29,7 +32,11 @@ alt_build_headers() {
 }
 
 alt_usrlibdir() {
-	echo $(alt_prefix)/usr/$(get_libdir)
+	if is_crosscompile ; then
+		echo /usr/${CTARGET}/usr/$(get_libdir)
+	else
+		echo /usr/$(get_libdir)
+	fi
 }
 
 setup_target_flags() {

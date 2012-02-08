@@ -7,13 +7,13 @@ http://www.dxx-rebirth.de/
 D1X GPL-2 as-is
 Descent Rebirth - enhanced Descent 1 engine
 ~amd64 ~x86
-base cdrom eutils games multilib portability scons-utils toolchain-funcs user
-ipv6 linguas_de opengl timidity cdinstall
+base eutils games multilib portability scons-utils toolchain-funcs user
+cdinstall ipv6 linguas_de opengl timidity
 
 
 
 2
-cdinstall? ( interactive )
+
 compile configure install postinst preinst prepare setup unpack
 
 

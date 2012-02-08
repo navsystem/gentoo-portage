@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.124 2012/01/28 13:02:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.115 2011/12/17 15:57:56 aballier Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ tga +theora +tremor +truetype +toolame +twolame +unicode v4l vdpau vidix
 +vorbis win32codecs +X +x264 xanim xinerama +xscreensaver +xv +xvid xvmc
 zoran"
 
-VIDEO_CARDS="s3virge mga tdfx"
+VIDEO_CARDS="s3virge mga tdfx vesa"
 for x in ${VIDEO_CARDS}; do
 	IUSE+=" video_cards_${x}"
 done
@@ -57,28 +57,45 @@ RDEPEND+="
 	sys-libs/ncurses
 	app-arch/bzip2
 	sys-libs/zlib
-	>=media-video/ffmpeg-0.10
+	>=media-video/ffmpeg-0.9
 	!bindist? (
 		x86? (
 			win32codecs? ( media-libs/win32codecs )
 		)
 	)
+	X? (
+		${X_RDEPS}
+		dga? ( x11-libs/libXxf86dga )
+		ggi? (
+			media-libs/libggi
+			media-libs/libggiwmh
+		)
+		opengl? ( virtual/opengl )
+		vdpau? ( x11-libs/libvdpau )
+		xinerama? ( x11-libs/libXinerama )
+		xscreensaver? ( x11-libs/libXScrnSaver )
+		xv? (
+			x11-libs/libXv
+			xvmc? ( x11-libs/libXvMC )
+		)
+	)
 	a52? ( media-libs/a52dec )
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
-	ass? ( >=media-libs/libass-0.9.10[enca?] )
+	ass? ( ${FONT_RDEPS} >=media-libs/libass-0.9.10[enca?] )
 	bidi? ( dev-libs/fribidi )
 	bluray? ( >=media-libs/libbluray-0.2.1 )
 	bs2b? ( media-libs/libbs2b )
 	cdio? ( dev-libs/libcdio )
 	cdparanoia? ( !cdio? ( media-sound/cdparanoia ) )
-	dga? ( x11-libs/libXxf86dga )
 	directfb? ( dev-libs/DirectFB )
 	dts? ( media-libs/libdca )
 	dv? ( media-libs/libdv )
 	dvb? ( media-tv/linuxtv-dvb-headers )
-	dvd? ( >=media-libs/libdvdread-4.1.3 )
-	dvdnav? ( >=media-libs/libdvdnav-4.1.3 )
+	dvd? (
+		>=media-libs/libdvdread-4.1.3
+		dvdnav? ( >=media-libs/libdvdnav-4.1.3 )
+	)
 	encode? (
 		!twolame? ( toolame? ( media-sound/toolame ) )
 		twolame? ( media-sound/twolame )
@@ -90,7 +107,6 @@ RDEPEND+="
 	esd? ( media-sound/esound )
 	enca? ( app-i18n/enca )
 	faad? ( media-libs/faad2 )
-	ggi? ( media-libs/libggi media-libs/libggiwmh )
 	gif? ( media-libs/giflib )
 	gsm? ( media-sound/gsm )
 	iconv? ( virtual/libiconv )
@@ -109,7 +125,6 @@ RDEPEND+="
 	nas? ( media-libs/nas )
 	nut? ( >=media-libs/libnut-661 )
 	openal? ( media-libs/openal )
-	opengl? ( virtual/opengl )
 	png? ( media-libs/libpng )
 	pnm? ( media-libs/netpbm )
 	pulseaudio? ( media-sound/pulseaudio )
@@ -125,14 +140,8 @@ RDEPEND+="
 	speex? ( media-libs/speex )
 	theora? ( media-libs/libtheora[encode?] )
 	truetype? ( ${FONT_RDEPS} )
-	vdpau? ( x11-libs/libvdpau )
 	vorbis? ( media-libs/libvorbis )
-	X? ( ${X_RDEPS}	)
 	xanim? ( media-video/xanim )
-	xinerama? ( x11-libs/libXinerama )
-	xscreensaver? ( x11-libs/libXScrnSaver )
-	xv? ( x11-libs/libXv )
-	xvmc? ( x11-libs/libXvMC )
 "
 
 X_DEPS="
@@ -142,11 +151,13 @@ X_DEPS="
 ASM_DEP="dev-lang/yasm"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	dga? ( x11-proto/xf86dgaproto )
-	dxr3? ( media-video/em8300-libraries )
-	X? ( ${X_DEPS} )
-	xinerama? ( x11-proto/xineramaproto )
-	xscreensaver? ( x11-proto/scrnsaverproto )
+	X? (
+		${X_DEPS}
+		dga? ( x11-proto/xf86dgaproto )
+		dxr3? ( media-video/em8300-libraries )
+		xinerama? ( x11-proto/xineramaproto )
+		xscreensaver? ( x11-proto/scrnsaverproto )
+	)
 	amd64? ( ${ASM_DEP} )
 	doc? (
 		dev-libs/libxslt app-text/docbook-xml-dtd
@@ -172,21 +183,7 @@ fi
 # libvorbis require external tremor to work
 # radio requires oss or alsa backend
 # xvmc requires xvideo support
-REQUIRED_USE="bindist? ( !faac !win32codecs )
-	dvdnav? ( dvd )
-	ass? ( truetype )
-	truetype? ( iconv )
-	dxr3? ( X )
-	ggi? ( X )
-	xinerama? ( X )
-	dga? ( X )
-	opengl? ( X )
-	osdmenu? ( X )
-	vdpau? ( X )
-	vidix? ( X )
-	xscreensaver? ( X )
-	xv? ( X )
-	xvmc? ( xv )"
+REQUIRED_USE="bindist? ( !faac !win32codecs )"
 
 pkg_setup() {
 	if [[ ${PV} == *9999* ]]; then
@@ -279,12 +276,18 @@ src_configure() {
 	for i in ${uses}; do
 		use ${i} || myconf+=" --disable-${i}"
 	done
-	use bidi  || myconf+=" --disable-fribidi"
-	use ipv6  || myconf+=" --disable-inet6"
-	use nut   || myconf+=" --disable-libnut"
-	use rar   || myconf+=" --disable-unrarexec"
+	use bidi || myconf+=" --disable-fribidi"
+	use ipv6 || myconf+=" --disable-inet6"
+	use nut || myconf+=" --disable-libnut"
+	use rar || myconf+=" --disable-unrarexec"
 	use samba || myconf+=" --disable-smb"
-	use lirc  || myconf+=" --disable-lirc --disable-lircc --disable-apple-ir"
+	if ! use lirc; then
+		myconf+="
+			--disable-lirc
+			--disable-lircc
+			--disable-apple-ir
+		"
+	fi
 
 	# libcdio support: prefer libcdio over cdparanoia
 	# don't check for cddb w/cdio
@@ -305,8 +308,14 @@ src_configure() {
 	#
 	# use external libdvdcss, dvdread and dvdnav
 	myconf+=" --disable-dvdread-internal --disable-libdvdcss-internal"
-	use dvd || myconf+=" --disable-dvdread"
-	use dvdnav || myconf+=" --disable-dvdnav"
+	if use dvd; then
+		use dvdnav || myconf+=" --disable-dvdnav"
+	else
+		myconf+="
+			--disable-dvdnav
+			--disable-dvdread
+		"
+	fi
 
 	#############
 	# Subtitles #
@@ -315,8 +324,15 @@ src_configure() {
 	# SRT/ASS/SSA (subtitles) requires freetype support
 	# freetype support requires iconv
 	# iconv optionally can use unicode
-	use truetype || myconf+=" --disable-freetype"
-	use iconv || myconf+=" --disable-iconv --charset=noconv"
+	if ! use ass && ! use truetype; then
+		myconf+=" --disable-freetype"
+		if ! use iconv; then
+			myconf+="
+				--disable-iconv
+				--charset=noconv
+			"
+		fi
+	fi
 	use iconv && use unicode && myconf+=" --charset=UTF-8"
 
 	#####################################
@@ -402,7 +418,7 @@ src_configure() {
 		myconf+=" --disable-mencoder"
 		for i in ${uses}; do
 			myconf+=" --disable-${i}"
-			use ${i} && elog "Useflag \"${i}\" will only be useful for encoding, i.e., with \"encode\" useflag enabled."
+			use ${i} && elog "Useflag \"${i}\" require \"encode\" useflag enabled to work."
 		done
 	fi
 
@@ -496,25 +512,65 @@ src_configure() {
 		append-ldflags -nopie
 	fi
 
+	is-flag -O? || append-flags -O2
+
+	# workaround bug, x86 just has too few registers, see c.f.
+	# http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=402950#44
+	# and 32-bits OSX, bug 329861
+	if [[ ${CHOST} == i?86-* ]] ; then
+		use debug || append-flags -fomit-frame-pointer
+	fi
+
 	###########################
 	# X enabled configuration #
 	###########################
 	myconf+=" --disable-gui"
-	myconf+=" --disable-vesa"
-	uses="dxr3 ggi vdpau xinerama xv"
-	for i in ${uses}; do
-		use ${i} || myconf+=" --disable-${i}"
-	done
-	use dga          || myconf+=" --disable-dga1 --disable-dga2"
-	use opengl       || myconf+=" --disable-gl"
-	use osdmenu      && myconf+=" --enable-menu"
-	use vidix        || myconf+=" --disable-vidix --disable-vidix-pcidb"
-	use xscreensaver || myconf+=" --disable-xss"
-	use X            || myconf+=" --disable-x11"
-	if use xvmc; then
-		myconf+=" --enable-xvmc --with-xvmclib=XvMCW"
+	if use X; then
+		uses="dxr3 ggi xinerama"
+		for i in ${uses}; do
+			use ${i} || myconf+=" --disable-${i}"
+		done
+		use dga || myconf+=" --disable-dga1 --disable-dga2"
+		use opengl || myconf+=" --disable-gl"
+		use osdmenu && myconf+=" --enable-menu"
+		use vdpau || myconf+=" --disable-vdpau"
+		use video_cards_vesa || myconf+=" --disable-vesa"
+		use vidix || myconf+=" --disable-vidix --disable-vidix-pcidb"
+		use xscreensaver || myconf+=" --disable-xss"
+
+		if use xv; then
+			if use xvmc; then
+				myconf+=" --enable-xvmc --with-xvmclib=XvMCW"
+			else
+				myconf+=" --disable-xvmc"
+			fi
+		else
+			myconf+="
+				--disable-xv
+				--disable-xvmc
+			"
+			use xvmc && elog "Disabling xvmc because it requires \"xv\" useflag enabled."
+		fi
 	else
-		myconf+=" --disable-xvmc"
+		myconf+="
+			--disable-dga1
+			--disable-dga2
+			--disable-dxr3
+			--disable-ggi
+			--disable-gl
+			--disable-vdpau
+			--disable-vidix
+			--disable-vidix-pcidb
+			--disable-xinerama
+			--disable-xss
+			--disable-xv
+			--disable-xvmc
+			--disable-x11
+		"
+		uses="dga dxr3 ggi opengl osdmenu vdpau vidix xinerama xscreensaver xv"
+		for i in ${uses}; do
+			use ${i} && elog "Useflag \"${i}\" require \"X\" useflag enabled to work."
+		done
 	fi
 
 	############################
@@ -587,7 +643,7 @@ src_install() {
 		dohtml -r "${S}"/DOCS/HTML/*
 	fi
 
-	if ! use truetype; then
+	if ! use ass && ! use truetype; then
 		dodir /usr/share/mplayer/fonts
 		# Do this generic, as the mplayer people like to change the structure
 		# of their zips ...
@@ -611,7 +667,7 @@ _EOF_
 		doins "${S}/etc/menu.conf"
 	fi
 
-	if use truetype; then
+	if use ass || use truetype; then
 		cat >> "${ED}/etc/mplayer/mplayer.conf" << _EOF_
 fontconfig=1
 subfont-osd-scale=4

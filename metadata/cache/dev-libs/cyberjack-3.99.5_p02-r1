@@ -6,7 +6,7 @@ http://support.reiner-sct.de/downloads/LINUX/V3.99.5_SP02/pcsc-cyberjack_3.99.5f
 http://www.reiner-sct.de/ http://www.libchipcard.de/
 GPL-2 LGPL-2.1
 REINER SCT cyberJack pinpad/e-com USB user space driver library
-amd64 x86
+~amd64 ~x86
 multilib toolchain-funcs
 fox kernel_linux xml
 

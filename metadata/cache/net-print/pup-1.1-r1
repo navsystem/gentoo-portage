@@ -1,5 +1,5 @@
-x11-libs/gtk+:1 sys-libs/zlib dev-libs/glib:1
-x11-libs/gtk+:1 sys-libs/zlib dev-libs/glib:1
+=x11-libs/gtk+-1.2*
+=x11-libs/gtk+-1.2*
 0
 mirror://sourceforge/pup/pup_1.1_src.tar.gz http://alfter.us/files/pup-1.1-manpage-install.patch.gz
 

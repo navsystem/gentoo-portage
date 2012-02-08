@@ -1,19 +1,19 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-1.6.2.ebuild,v 1.7 2012/02/05 17:48:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-1.6.2.ebuild,v 1.3 2011/04/25 13:44:57 tomjbe Exp $
 
-EAPI=4
-inherit eutils fdo-mime gnome2-utils versionator
+EAPI="2"
 
-MY_P=${PN}-gaf-${PV}
+inherit fdo-mime versionator gnome2-utils
 
+MY_P="${PN}-gaf-${PV}"
 DESCRIPTION="GPL Electronic Design Automation (gEDA):gaf core package"
 HOMEPAGE="http://www.gpleda.org/"
 SRC_URI="http://geda.seul.org/release/v$(get_version_component_range 1-2)/${PV}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="debug doc examples nls stroke threads"
 
 CDEPEND="
@@ -34,18 +34,14 @@ DEPEND="${CDEPEND}
 RDEPEND="${CDEPEND}
 	sci-electronics/electronics-menu"
 
-S=${WORKDIR}/${MY_P}
-
-DOCS="AUTHORS NEWS README"
+S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-correct_glib_include.patch
-
 	if ! use doc ; then
-		sed -i -e '/^SUBDIRS = /s/docs//' Makefile.in || die
+		sed -i -e '/^SUBDIRS = /s/docs//' Makefile.in || die "sed failed"
 	fi
 	if ! use examples ; then
-		sed -i -e 's/\texamples$//' Makefile.in || die
+		sed -i -e 's/\texamples$//' Makefile.in || die "sed failed"
 	fi
 }
 
@@ -57,12 +53,18 @@ src_configure() {
 		$(use_enable nls) \
 		$(use_enable debug assert) \
 		--disable-doxygen \
+		--disable-dependency-tracking \
 		--disable-rpath \
 		--disable-update-xdg-database
 }
 
+src_install() {
+	emake DESTDIR="${D}" install || die "install failed"
+	dodoc AUTHORS NEWS README
+}
+
 src_test() {
-	emake -j1 check
+	emake -j1 check || die "test failed"
 }
 
 pkg_preinst() {

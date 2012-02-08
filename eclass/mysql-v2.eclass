@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-v2.eclass,v 1.14 2012/01/09 10:42:19 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-v2.eclass,v 1.10 2011/11/17 16:04:02 dev-zero Exp $
 
 # @ECLASS: mysql-v2.eclass
 # @MAINTAINER:
@@ -53,7 +53,7 @@ inherit eutils flag-o-matic gnuconfig ${MYSQL_EXTRAS} ${BUILD_INHERIT} mysql_fx 
 #
 
 case "${EAPI:-0}" in
-	3|4) ;;
+	2|3|4) ;;
 	*) die "Unsupported EAPI: ${EAPI}" ;;
 esac
 
@@ -227,8 +227,6 @@ IUSE="${IUSE} berkdb"
 && mysql_version_is_at_least "5.2.5" \
 && IUSE="${IUSE} sphinx"
 
-mysql_version_is_at_least "5.5.7" \
-&& IUSE="${IUSE} systemtap"
 
 #
 # DEPENDENCIES:
@@ -280,9 +278,6 @@ mysql_version_is_at_least "5.5.8" \
 [[ "${PN}" == "mariadb" ]] \
 && mysql_version_is_at_least "5.2.5" \
 && DEPEND="${DEPEND} sphinx? ( app-misc/sphinx )"
-
-mysql_version_is_at_least "5.5.7" \
-&& DEPEND="${DEPEND} systemtap? ( >=dev-util/systemtap-1.3 )"
 
 # dev-perl/DBD-mysql is needed by some scripts installed by MySQL
 PDEPEND="perl? ( >=dev-perl/DBD-mysql-2.9004 )"
@@ -387,7 +382,7 @@ mysql-v2_pkg_setup() {
 
 	if has test ${FEATURES} ; then
 		if ! use minimal ; then
-			if ! has userpriv ${FEATURES} ; then
+			if [[ $UID -eq 0 ]]; then
 				eerror "Testing with FEATURES=-userpriv is no longer supported by upstream. Tests MUST be run as non-root."
 			fi
 		fi
@@ -501,7 +496,7 @@ mysql-v2_pkg_postinst() {
 	mysql_init_vars
 
 	# Check FEATURES="collision-protect" before removing this
-	[[ -d "${ROOT}${MY_LOGDIR}" ]] || install -d -m0750 -o mysql -g mysql "${ROOT}${MY_LOGDIR}"
+	[[ -d "${ROOT}/var/log/mysql" ]] || install -d -m0750 -o mysql -g mysql "${ROOT}${MY_LOGDIR}"
 
 	# Secure the logfiles
 	touch "${ROOT}${MY_LOGDIR}"/mysql.{log,err}
@@ -603,8 +598,8 @@ mysql-v2_pkg_config() {
 	local pwd2="b"
 	local maxtry=15
 
-	if [ -z "${MYSQL_ROOT_PASSWORD}" -a -f "${EROOT}/root/.my.cnf" ]; then
-		MYSQL_ROOT_PASSWORD="$(sed -n -e '/^password=/s,^password=,,gp' "${EROOT}/root/.my.cnf")"
+	if [ -z "${MYSQL_ROOT_PASSWORD}" -a -f "${ROOT}/root/.my.cnf" ]; then
+		MYSQL_ROOT_PASSWORD="$(sed -n -e '/^password=/s,^password=,,gp' "${ROOT}/root/.my.cnf")"
 	fi
 
 	if [[ -d "${ROOT}/${MY_DATADIR}/mysql" ]] ; then
@@ -645,10 +640,10 @@ mysql-v2_pkg_config() {
 	help_tables="${TMPDIR}/fill_help_tables.sql"
 
 	pushd "${TMPDIR}" &>/dev/null
-	"${EROOT}/usr/bin/mysql_install_db" "--basedir=${EPREFIX}/usr" >"${TMPDIR}"/mysql_install_db.log 2>&1
+	"${ROOT}/usr/bin/mysql_install_db" --basedir=/usr >"${TMPDIR}"/mysql_install_db.log 2>&1
 	if [ $? -ne 0 ]; then
 		grep -B5 -A999 -i "ERROR" "${TMPDIR}"/mysql_install_db.log 1>&2
-		die "Failed to run mysql_install_db. Please review ${EPREFIX}/var/log/mysql/mysqld.err AND ${TMPDIR}/mysql_install_db.log"
+		die "Failed to run mysql_install_db. Please review /var/log/mysql/mysqld.err AND ${TMPDIR}/mysql_install_db.log"
 	fi
 	popd &>/dev/null
 	[[ -f "${ROOT}/${MY_DATADIR}/mysql/user.frm" ]] \
@@ -658,7 +653,7 @@ mysql-v2_pkg_config() {
 
 	# Figure out which options we need to disable to do the setup
 	helpfile="${TMPDIR}/mysqld-help"
-	${EROOT}/usr/sbin/mysqld --verbose --help >"${helpfile}" 2>/dev/null
+	${ROOT}/usr/sbin/mysqld --verbose --help >"${helpfile}" 2>/dev/null
 	for opt in grant-tables host-cache name-resolve networking slave-start bdb \
 		federated innodb ssl log-bin relay-log slow-query-log external-locking \
 		ndbcluster \
@@ -672,7 +667,7 @@ mysql-v2_pkg_config() {
 
 	# Filling timezones, see
 	# http://dev.mysql.com/doc/mysql/en/time-zone-support.html
-	"${EROOT}/usr/bin/mysql_tzinfo_to_sql" "${EROOT}/usr/share/zoneinfo" > "${sqltmp}" 2>/dev/null
+	"${ROOT}/usr/bin/mysql_tzinfo_to_sql" "${ROOT}/usr/share/zoneinfo" > "${sqltmp}" 2>/dev/null
 
 	if [[ -r "${help_tables}" ]] ; then
 		cat "${help_tables}" >> "${sqltmp}"
@@ -681,12 +676,12 @@ mysql-v2_pkg_config() {
 	einfo "Creating the mysql database and setting proper"
 	einfo "permissions on it ..."
 
-	local socket="${EROOT}/var/run/mysqld/mysqld${RANDOM}.sock"
-	local pidfile="${EROOT}/var/run/mysqld/mysqld${RANDOM}.pid"
-	local mysqld="${EROOT}/usr/sbin/mysqld \
+	local socket="${ROOT}/var/run/mysqld/mysqld${RANDOM}.sock"
+	local pidfile="${ROOT}/var/run/mysqld/mysqld${RANDOM}.pid"
+	local mysqld="${ROOT}/usr/sbin/mysqld \
 		${options} \
 		--user=mysql \
-		--basedir=${EROOT}/usr \
+		--basedir=${ROOT}/usr \
 		--datadir=${ROOT}/${MY_DATADIR} \
 		--max_allowed_packet=8M \
 		--net_buffer_length=16K \
@@ -711,14 +706,14 @@ mysql-v2_pkg_config() {
 	ebegin "Setting root password"
 	# Do this from memory, as we don't want clear text passwords in temp files
 	local sql="UPDATE mysql.user SET Password = PASSWORD('${MYSQL_ROOT_PASSWORD}') WHERE USER='root'"
-	"${EROOT}/usr/bin/mysql" \
+	"${ROOT}/usr/bin/mysql" \
 		--socket=${socket} \
 		-hlocalhost \
 		-e "${sql}"
 	eend $?
 
 	ebegin "Loading \"zoneinfo\", this step may require a few seconds ..."
-	"${EROOT}/usr/bin/mysql" \
+	"${ROOT}/usr/bin/mysql" \
 		--socket=${socket} \
 		-hlocalhost \
 		-uroot \
@@ -741,5 +736,5 @@ mysql-v2_pkg_config() {
 # Remove mysql symlinks.
 mysql-v2_pkg_postrm() {
 
-	: # mysql_lib_symlinks "${ED}"
+	: # mysql_lib_symlinks "${D}"
 }

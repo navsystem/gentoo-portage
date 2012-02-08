@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/etqw-demo/etqw-demo-2.0_p1.ebuild,v 1.3 2012/02/05 07:34:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/etqw-demo/etqw-demo-2.0_p1.ebuild,v 1.2 2008/05/14 23:58:52 nyhm Exp $
 
 inherit eutils versionator games
 
@@ -48,10 +48,11 @@ QA_EXECSTACK="${dir:1}/data/libstdc++.so.6
 	${dir:1}/guis/libmojosetupgui_ncurses.so"
 
 src_unpack() {
-	einfo "Ignore 'extra bytes' message from unzip"
-	unzip -q "${DISTDIR}/${A}"
-	# exit status of 1 should just be warnings, not corrupt archive
-	[[ $? -eq 0 || $? -eq 1 ]] || die "unpacking failed"
+	# unpack_makeself cannot detect the version
+	tail -c +194885 "${DISTDIR}/${MY_BODY}.run" > ${PN}.zip || die "tail"
+	unpack ./${PN}.zip
+
+	rm -f ${PN}.zip || die
 }
 
 src_install() {

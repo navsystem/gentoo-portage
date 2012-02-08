@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-29-r3.ebuild,v 1.3 2012/01/14 21:17:23 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-29-r3.ebuild,v 1.1 2011/12/12 08:17:37 mgorny Exp $
 
 EAPI=4
 
@@ -40,10 +40,8 @@ MINKV="2.6.38"
 # dbus, udev versions because of systemd units
 # blocker on old packages to avoid collisions with above
 # openrc blocker to avoid udev rules starting openrc scripts
-# systemd blocker due to /usr migration
 RDEPEND="${COMMON_DEPEND}
-	!<sys-apps/openrc-0.8.3
-	!=sys-apps/systemd-29-r4"
+	!<sys-apps/openrc-0.8.3"
 DEPEND="${COMMON_DEPEND}
 	gtk? ( dev-lang/vala:${VALASLOT} )
 	>=sys-kernel/linux-headers-${MINKV}"
@@ -98,6 +96,8 @@ src_install() {
 		mv ${i}.8 systemd.${i}.8 || die
 	done
 
+	keepdir /run
+
 	# Create /run/lock as required by new baselay/OpenRC compat.
 	insinto /usr/lib/tmpfiles.d
 	doins "${FILESDIR}"/gentoo-run.conf
@@ -114,8 +114,7 @@ optfeature() {
 }
 
 pkg_postinst() {
-	mkdir -p "${ROOT}"/run
-	if [[ ! -L "${ROOT}"/etc/mtab ]]; then
+	if [[ ! -L "${ROOT}"etc/mtab ]]; then
 		ewarn "Upstream suggests that the /etc/mtab file should be a symlink to /proc/mounts."
 		ewarn "It is known to cause users being unable to unmount user mounts. If you don't"
 		ewarn "require that specific feature, please call:"

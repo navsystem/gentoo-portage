@@ -1,14 +1,14 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/nlopt-2.2.4.ebuild,v 1.2 2012/01/20 16:56:52 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/nlopt-2.2.4.ebuild,v 1.1 2011/07/28 23:51:14 bicatali Exp $
 
-EAPI=4
+EAPI=3
 
 SUPPORT_PYTHON_ABIS="1"
 PYTHON_DEPEND="python? *"
 RESTRICT_PYTHON_ABIS="3.*"
 
-inherit python autotools-utils
+inherit eutils python
 
 DESCRIPTION="Non-linear optimization library"
 HOMEPAGE="http://ab-initio.mit.edu/nlopt/"
@@ -41,21 +41,21 @@ src_configure() {
 	else
 		export MKOCTFILE=None
 	fi
-	myeconfargs+=(
-		$(use_with cxx)
-		$(use_with guile)
-		$(use_with octave)
+	econf \
+		--enable-shared \
+		$(use_enable static-libs static) \
+		$(use_with cxx) \
+		$(use_with guile) \
+		$(use_with octave) \
 		$(use_with python)
-	)
 	use python && python_copy_sources swig
-	autotools-utils_src_configure
 }
 
 src_compile() {
-	autotools-utils_src_compile
+	default
 	if use python; then
 		compilation() {
-			autotools-utils_src_compile \
+			emake \
 				PYTHON_CPPFLAGS="-I$(python_get_includedir)" \
 				PYTHON_LDFLAGS="$(python_get_library -l)" \
 				PYTHON_SITE_PKG="$(python_get_sitedir)" \
@@ -67,17 +67,20 @@ src_compile() {
 }
 
 src_install() {
-	autotools-utils_src_install
+	emake DESTDIR="${D}" install || die "emake install failed"
 	if use python; then
 		installation() {
-			autotools-utils_src_install \
+			emake \
+				DESTDIR="${D}" \
 				pyexecdir="$(python_get_sitedir)" \
-				pythondir="$(python_get_sitedir)"
+				pythondir="$(python_get_sitedir)" \
+				install
 		}
 		python_execute_function -s --source-dir swig installation
 		python_clean_installation_image
 	fi
-	local r
+
+	dodoc AUTHORS ChangeLog NEWS README || die
 	for r in */README; do newdoc ${r} README.$(dirname ${r}); done
 }
 

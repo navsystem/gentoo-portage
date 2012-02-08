@@ -1,22 +1,29 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar-gpl/unrar-gpl-0.0.1_p20080417-r1.ebuild,v 1.2 2012/01/23 22:30:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar-gpl/unrar-gpl-0.0.1_p20080417-r1.ebuild,v 1.1 2010/06/30 21:31:57 hanno Exp $
 
-EAPI=4
+EAPI=2
 inherit autotools
 
 DESCRIPTION="Free rar unpacker for old (pre v3) rar files"
 HOMEPAGE="http://home.gna.org/unrar/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
-
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
+DEPEND=""
+S="${WORKDIR}/${PN/-gpl}"
 
-DOCS="AUTHORS README"
+src_prepare() {
+	eautoreconf || die "eautoreconf failed"
+}
 
-S=${WORKDIR}/${PN/-gpl}
+src_configure() {
+	econf --program-suffix="-gpl" || die "econf failed"
+}
 
-src_prepare() { eautoreconf; }
-src_configure() { econf --program-suffix="-gpl"; }
+src_install() {
+	make DESTDIR="${D}" install || die "install failed"
+	dodoc AUTHORS README || die "dodoc failed"
+}

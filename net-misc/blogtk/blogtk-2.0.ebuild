@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/blogtk/blogtk-2.0.ebuild,v 1.7 2012/02/05 01:51:23 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/blogtk/blogtk-2.0.ebuild,v 1.6 2011/10/24 06:20:13 tetromino Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2:2.6"
 
-inherit eutils fdo-mime multilib python
+inherit eutils fdo-mime python
 
 DESCRIPTION="GTK Blog - post entries to your blog"
 HOMEPAGE="http://blogtk.sourceforge.net"

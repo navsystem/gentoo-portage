@@ -12,9 +12,9 @@ nls
 
 
 
-4
+2
 
-compile configure
+compile configure install
 
 
 

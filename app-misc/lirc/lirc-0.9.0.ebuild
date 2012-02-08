@@ -1,8 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.9.0.ebuild,v 1.3 2012/01/09 07:19:17 ssuominen Exp $
-
-EAPI=1
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.9.0.ebuild,v 1.2 2011/06/13 12:30:21 fauli Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -77,7 +75,7 @@ LIBUSB_USED_BY_DEV="
 	imon_rsc streamzap xboxusb irlink commandir"
 
 for dev in ${LIBUSB_USED_BY_DEV}; do
-	DEPEND="${DEPEND} lirc_devices_${dev}? ( virtual/libusb:0 )"
+	DEPEND="${DEPEND} lirc_devices_${dev}? ( dev-libs/libusb )"
 done
 
 # adding only compile-time depends

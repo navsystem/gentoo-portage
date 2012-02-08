@@ -6,7 +6,7 @@ http://postgrey.schweikert.ch/pub/postgrey-1.33.tar.gz http://postgrey.schweiker
 http://postgrey.schweikert.ch/
 GPL-2
 Postgrey is a Postfix policy server implementing greylisting
-~amd64 ~hppa ~ppc ~ppc64 ~x86
+~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86
 eutils multilib portability toolchain-funcs user
 targrey
 

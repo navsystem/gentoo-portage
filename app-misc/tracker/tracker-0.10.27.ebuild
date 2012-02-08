@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.10.27.ebuild,v 1.2 2012/01/18 07:45:47 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.10.27.ebuild,v 1.1 2011/09/15 21:22:20 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -11,7 +11,7 @@ PYTHON_DEPEND="2:2.6"
 inherit eutils gnome2 linux-info python virtualx
 
 DESCRIPTION="A tagging metadata database, search tool and indexer"
-HOMEPAGE="http://projects.gnome.org/tracker/"
+HOMEPAGE="http://www.tracker-project.org/"
 
 LICENSE="GPL-2"
 SLOT="0"

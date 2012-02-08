@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.19.3-r1.ebuild,v 1.10 2012/02/02 15:22:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.19.3-r1.ebuild,v 1.1 2011/12/06 23:30:43 vapier Exp $
 
 EAPI="3"
 inherit eutils flag-o-matic savedconfig toolchain-funcs
@@ -55,17 +55,15 @@ else
 	MY_P=${PN}-${PV/_/-}
 	SRC_URI="http://www.busybox.net/downloads/${MY_P}.tar.bz2"
 fi
-
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-linux"
-IUSE="ipv6 make-symlinks mdev -pam selinux static elibc_glibc"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-linux"
+IUSE="ipv6 make-symlinks +mdev -pam selinux static elibc_glibc"
 RESTRICT="test"
 
 RDEPEND="selinux? ( sys-libs/libselinux )
 	pam? ( sys-libs/pam )"
-DEPEND="${RDEPEND}
-	>=sys-kernel/linux-headers-2.6.39"
+DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
 

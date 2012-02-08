@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/policyd-weight/policyd-weight-0.1.15.1.ebuild,v 1.4 2011/12/21 09:04:03 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/policyd-weight/policyd-weight-0.1.15.1.ebuild,v 1.1 2011/06/09 19:12:17 eras Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.policyd-weight.org/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 x86"
+KEYWORDS="~alpha ~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
@@ -25,8 +25,6 @@ pkg_setup() {
 	enewuser 'polw' -1 -1 -1 'polw'
 }
 
-src_compile() { :; }
-
 src_install() {
 	exeinto /usr/lib/postfix
 	doexe policyd-weight
@@ -35,7 +33,7 @@ src_install() {
 	doman man/man5/*.5 man/man8/*.8
 	dodoc *.txt
 
-	sed -i -e "s:^   \$LOCKPATH.*:   \$LOCKPATH = '/var/run/policyd-weight/'; # must be a directory (add:" policyd-weight.conf.sample || die
+	sed -i -e "s:^   \$LOCKPATH.*:   \$LOCKPATH = '/var/run/policyd-weight/'; # must be a directory (add:" policyd-weight.conf.sample
 	insinto /etc
 	newins policyd-weight.conf.sample policyd-weight.conf
 

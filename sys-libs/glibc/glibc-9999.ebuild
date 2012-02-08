@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-9999.ebuild,v 1.5 2012/01/17 23:51:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-9999.ebuild,v 1.3 2011/11/16 16:07:46 vapier Exp $
 
 inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib
 
@@ -39,7 +39,7 @@ LT_VER=""                                      # version of linuxthreads addon
 NPTL_KERN_VER=${NPTL_KERN_VER:-"2.6.9"}        # min kernel version nptl requires
 #LT_KERN_VER=${LT_KERN_VER:-"2.4.1"}           # min kernel version linuxthreads requires
 
-IUSE="debug gd glibc-omitfp hardened multilib selinux profile vanilla crosscompile_opts_headers-only ${LT_VER:+glibc-compat20 nptl linuxthreads}"
+IUSE="debug gd glibc-omitfp hardened multilib nls selinux profile vanilla crosscompile_opts_headers-only ${LT_VER:+glibc-compat20 nptl linuxthreads}"
 [[ -n ${RELEASE_VER} ]] && S=${WORKDIR}/glibc-${RELEASE_VER}${SNAP_VER:+-${SNAP_VER}}
 
 # Here's how the cross-compile logic breaks down ...
@@ -97,10 +97,12 @@ DEPEND=">=sys-devel/gcc-3.4.4
 	${LT_VER:+nptl? (} >=sys-kernel/linux-headers-${NPTL_KERN_VER} ${LT_VER:+)}
 	>=app-misc/pax-utils-0.1.10
 	virtual/os-headers
+	nls? ( sys-devel/gettext )
 	!<sys-apps/sandbox-1.2.18.1-r2
 	!<sys-apps/portage-2.1.2
 	selinux? ( sys-libs/libselinux )"
 RDEPEND="!sys-kernel/ps3-sources
+	nls? ( sys-devel/gettext )
 	selinux? ( sys-libs/libselinux )"
 
 if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] ; then
@@ -188,6 +190,20 @@ for x in setup {pre,post}inst ; do
 		eval "pkg_${x}() { eblit-run pkg_${x} ; }"
 	fi
 done
+
+pkg_setup() {
+	eblit-run pkg_setup
+
+	# Static binary sanity check #332927
+	if [[ ${ROOT} == "/" ]] && \
+	   has_version "<${CATEGORY}/${P}" && \
+	   built_with_use sys-apps/coreutils static
+	then
+		eerror "Please rebuild coreutils with USE=-static, then install"
+		eerror "glibc, then you may rebuild coreutils with USE=static."
+		die "Avoiding system meltdown #332927"
+	fi
+}
 
 eblit-src_unpack-post() {
 	if use hardened ; then

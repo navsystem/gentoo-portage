@@ -6,8 +6,8 @@ https://txw.dev.java.net/files/documents/3310/54821/txw2-20070407.zip
 https://txw.dev.java.net/
 CDDL
 TXW is a library that allows you to write XML documents.
-amd64 ~ppc ~x86 ~x86-fbsd
-eutils java-ant-2 java-pkg-2 java-utils-2 multilib portability toolchain-funcs user versionator
+~amd64 ~ppc ~x86 ~x86-fbsd
+eutils java-ant-2 java-pkg-2 java-utils-2 multilib portability toolchain-funcs versionator
 elibc_FreeBSD doc source elibc_FreeBSD
 
 

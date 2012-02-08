@@ -1,5 +1,5 @@
-diet? ( >=dev-libs/dietlibc-0.33_pre20090721 ) >=sys-apps/sed-4
-diet? ( >=dev-libs/dietlibc-0.33_pre20090721 )
+>=dev-libs/dietlibc-0.33_pre20090721 >=sys-apps/sed-4
+>=dev-libs/dietlibc-0.33_pre20090721
 0
 http://dl.fefe.de/libowfat-0.28.tar.bz2
 
@@ -8,13 +8,13 @@ GPL-2
 reimplement libdjb - excellent libraries from Dan Bernstein.
 ~amd64 ~hppa ~sparc ~x86
 eutils flag-o-matic multilib portability toolchain-funcs user
-diet
+
 
 
 
 2
 
-compile install prepare setup
+install prepare setup
 
 
 

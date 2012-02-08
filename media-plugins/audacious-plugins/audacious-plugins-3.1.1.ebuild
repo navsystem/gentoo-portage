@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-3.1.1.ebuild,v 1.3 2012/02/02 04:13:51 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-3.1.1.ebuild,v 1.1 2011/12/05 22:47:41 chainsaw Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux"
 IUSE="aac adplug alsa aqua bs2b cdda cue ffmpeg flac fluidsynth gnome ipv6 jack
-lame libnotify libsamplerate midi mms mp3 mtp nls oss pulseaudio scrobbler sid sndfile vorbis wavpack"
+lame libnotify libsamplerate midi mms mp3 mtp nls oss pulseaudio scrobbler sid sndfile sse2 vorbis wavpack"
 
 RDEPEND="app-arch/unzip
 	>=dev-libs/dbus-glib-0.60
@@ -65,10 +65,9 @@ mp3_warning() {
 
 src_configure() {
 	mp3_warning
-	# Turn "-z defs" into "-Wl,-z,defs" because some versions of gcc don't like
-	# it (bug 395213)
-	epatch "${FILESDIR}/audacious-plugins_ldflags.patch"
+
 	econf \
+		--enable-chardet \
 		--enable-modplug \
 		--enable-neon \
 		$(use_enable adplug) \
@@ -100,6 +99,7 @@ src_configure() {
 		$(use_enable scrobbler) \
 		$(use_enable sid) \
 		$(use_enable sndfile) \
+		$(use_enable sse2) \
 		$(use_enable vorbis) \
 		$(use_enable vorbis filewriter_vorbis) \
 		$(use_enable wavpack)

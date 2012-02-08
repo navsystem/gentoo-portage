@@ -136,9 +136,6 @@ plotutils
 lpsol
 upnp
 quvi
-bluray
-libtar
-zvbi
 
 # Unmask ARM-only video-cards
 -video_cards_omapfb

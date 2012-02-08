@@ -1,5 +1,5 @@
-dev-libs/glib:2 media-gfx/transfig x11-libs/gtk+:2 x11-libs/libX11 x11-libs/pango emf? ( media-libs/libemf ) dev-util/pkgconfig || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 sys-devel/libtool
-dev-libs/glib:2 media-gfx/transfig x11-libs/gtk+:2 x11-libs/libX11 x11-libs/pango emf? ( media-libs/libemf )
+media-gfx/transfig x11-libs/gtk+:2 emf? ( media-libs/libemf ) dev-util/pkgconfig || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 sys-devel/libtool
+media-gfx/transfig x11-libs/gtk+:2 emf? ( media-libs/libemf )
 0
 http://ruby.chemie.uni-freiburg.de/~martin/chemtool/chemtool-1.6.12.tar.gz
 

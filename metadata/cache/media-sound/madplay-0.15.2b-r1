@@ -1,5 +1,5 @@
->=media-libs/libid3tag-0.15.1b >=media-libs/libmad-0.15.1b alsa? ( media-libs/alsa-lib ) nls? ( sys-devel/gettext ) || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 sys-devel/libtool
->=media-libs/libid3tag-0.15.1b >=media-libs/libmad-0.15.1b alsa? ( media-libs/alsa-lib )
+esd? ( media-sound/esound ) ~media-libs/libmad-0.15.1b alsa? ( media-libs/alsa-lib ) ~media-libs/libid3tag-0.15.1b nls? ( >=sys-devel/gettext-0.11.2 ) || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 sys-devel/libtool
+esd? ( media-sound/esound ) ~media-libs/libmad-0.15.1b alsa? ( media-libs/alsa-lib ) ~media-libs/libid3tag-0.15.1b
 0
 mirror://sourceforge/mad/madplay-0.15.2b.tar.gz
 
@@ -8,13 +8,13 @@ GPL-2
 The MAD audio player
 alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos
 autotools eutils libtool multilib portability toolchain-funcs user
-alsa debug nls
+debug nls esd alsa
 
 
 
-4
 
-configure prepare
+
+compile install unpack
 
 
 

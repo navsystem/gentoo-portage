@@ -1,9 +1,9 @@
 #!/sbin/runscript
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/files/monit.initd-5.0,v 1.2 2011/12/31 16:28:50 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/files/monit.initd-5.0,v 1.1 2008/08/29 20:13:37 caleb Exp $
 
-extra_started_commands="reload"
+opts="${opts} reload"
 
 depend() {
 	use net

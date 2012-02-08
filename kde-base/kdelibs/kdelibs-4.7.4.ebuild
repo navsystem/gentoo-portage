@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.7.4.ebuild,v 1.6 2012/01/16 22:13:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.7.4.ebuild,v 1.2 2011/12/16 22:26:44 dilfridge Exp $
 
 EAPI=4
 
@@ -13,11 +13,11 @@ inherit kde4-base fdo-mime toolchain-funcs
 DESCRIPTION="KDE libraries needed by all KDE programs."
 HOMEPAGE="http://www.kde.org/"
 
-KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 LICENSE="LGPL-2.1"
 IUSE="3dnow acl alsa altivec bindist +bzip2 debug doc fam +handbook jpeg2k kerberos
 lzma mmx nls openexr +policykit semantic-desktop spell sse sse2 ssl +udev
-+udisks +upower zeroconf"
++udisks +upower upnp zeroconf"
 
 REQUIRED_USE="
 	udisks? ( udev )
@@ -80,6 +80,7 @@ COMMONDEPEND="
 	spell? ( app-text/enchant )
 	ssl? ( dev-libs/openssl )
 	udev? ( sys-fs/udev )
+	upnp? ( media-libs/herqq )
 	zeroconf? (
 		|| (
 			net-dns/avahi[mdnsresponder-compat]
@@ -128,7 +129,6 @@ PATCHES=(
 	"${FILESDIR}/${PN}-4.4.90-xslt.patch"
 	"${FILESDIR}/${PN}-4.6.3-no_suid_kdeinit.patch"
 	"${FILESDIR}/${PN}-4.6.3-bytecode.patch"
-	"${FILESDIR}/${PN}-4.7.4-xinelib12x.patch"
 )
 
 pkg_pretend() {
@@ -226,7 +226,7 @@ src_configure() {
 		$(cmake-utils_use_with spell ENCHANT)
 		$(cmake-utils_use_with ssl OpenSSL)
 		$(cmake-utils_use_with udev UDev)
-		-DWITH_HUpnp=OFF
+		$(cmake-utils_use_with upnp HUpnp)
 	)
 	kde4-base_src_configure
 }

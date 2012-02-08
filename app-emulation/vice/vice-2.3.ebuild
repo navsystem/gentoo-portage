@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-2.3.ebuild,v 1.6 2012/01/13 17:31:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-2.3.ebuild,v 1.5 2011/12/13 18:23:07 mr_bones_ Exp $
 
 EAPI=2
-inherit autotools eutils games toolchain-funcs
+inherit autotools eutils games
 
 DESCRIPTION="The Versatile Commodore 8-bit Emulator"
 HOMEPAGE="http://vice-emu.sourceforge.net/"
@@ -81,7 +81,7 @@ src_prepare() {
 src_configure() {
 	# don't try to actually run fc-cache (bug #280976)
 	FCCACHE=/bin/true \
-	PKG_CONFIG=$(tc-getPKG_CONFIG) \
+	PKG_CONFIG=pkg-config \
 	egamesconf \
 		--disable-dependency-tracking \
 		--enable-fullscreen \

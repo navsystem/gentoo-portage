@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-8.21.ebuild,v 1.2 2011/12/31 12:23:58 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-8.21.ebuild,v 1.1 2011/12/12 23:21:24 radhermit Exp $
 
 EAPI="4"
 
-inherit autotools eutils toolchain-funcs flag-o-matic
+inherit libtool eutils toolchain-funcs flag-o-matic
 
 DESCRIPTION="Perl-compatible regular expression library"
 HOMEPAGE="http://www.pcre.org/"
@@ -33,10 +33,7 @@ S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	sed -i -e "s:-lpcre ::" libpcrecpp.pc.in || die
-	epatch "${FILESDIR}"/${P}-static-build.patch
-	# m4 dir isn't packaged, breaks aclocal
-	sed -i -e '/ACLOCAL_AMFLAGS/s/-I \?m4//' Makefile.am || die
-	eautoreconf # otherwise elibtoolize
+	elibtoolize
 }
 
 src_configure() {

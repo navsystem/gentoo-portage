@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-2.4.ebuild,v 1.11 2012/02/05 04:50:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-2.4.ebuild,v 1.10 2011/05/10 16:00:47 darkside Exp $
 
 #
 # don't monkey with this ebuild unless contacting portage devs.
 # period.
 #
 
-inherit eutils flag-o-matic toolchain-funcs multilib unpacker
+inherit eutils flag-o-matic toolchain-funcs multilib
 
 DESCRIPTION="sandbox'd LD_PRELOAD hack"
 HOMEPAGE="http://www.gentoo.org/"
@@ -32,6 +32,14 @@ sandbox_death_notice() {
 }
 
 sb_get_install_abis() { use multilib && get_install_abis || echo ${ABI:-default} ; }
+
+src_unpack() {
+	unpack ${A}
+	if [[ ! -d ${S} ]] ; then
+		# When upgrading from older version, xz unpack may not work #271543
+		xz -dc "${DISTDIR}/${A}" | tar xof - || die
+	fi
+}
 
 src_compile() {
 	filter-lfs-flags #90228

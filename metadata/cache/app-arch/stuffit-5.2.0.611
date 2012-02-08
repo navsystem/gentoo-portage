@@ -14,7 +14,7 @@ Aladdin Software's StuffIt and StuffIt Expander
 
 
 
-install nofetch postinst
+install nofetch postinst postrm
 
 
 

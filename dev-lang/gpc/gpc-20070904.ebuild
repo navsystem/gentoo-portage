@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-20070904.ebuild,v 1.5 2012/02/06 15:32:10 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-20070904.ebuild,v 1.4 2010/02/04 18:02:35 truedfx Exp $
 
 inherit eutils flag-o-matic versionator toolchain-funcs
 
@@ -22,7 +22,6 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="nls"
 
 DEPEND=""
-RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/gcc-${GCCVER}"
 
@@ -155,7 +154,10 @@ src_install () {
 
 pkg_postinst ()
 {
+	# need to update environment, as we have installed new env.d file
+	env-update
 	einfo
-	elog "Please don't forget to source /etc/profile"
+	elog "the environment has been set to use gpc,"
+	elog "please don't forget to source /etc/profile"
 	einfo
 }

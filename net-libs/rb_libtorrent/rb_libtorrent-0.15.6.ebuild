@@ -1,13 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.15.6.ebuild,v 1.7 2012/02/05 01:32:54 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.15.6.ebuild,v 1.5 2011/05/26 21:21:00 maekke Exp $
 
 EAPI="2"
 PYTHON_DEPEND="python? 2:2.6"
 PYTHON_USE_WITH="threads"
-PYTHON_USE_WITH_OPT="python"
 
-inherit eutils multilib versionator python
+inherit eutils versionator python
 
 MY_P=${P/rb_/}
 MY_P=${MY_P/torrent/torrent-rasterbar}
@@ -23,7 +22,7 @@ KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="debug doc examples python ssl"
 RESTRICT="test"
 
-DEPEND="<dev-libs/boost-1.48[python?]
+DEPEND=">=dev-libs/boost-1.36[python?]
 	>=sys-devel/libtool-2.2
 	sys-libs/zlib
 	examples? ( !net-p2p/mldonkey )

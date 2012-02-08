@@ -6,7 +6,7 @@ ftp://tug.ctan.org/pub/tex-archive/macros/latex/contrib/curve.zip -> curve-1.16.
 http://www.ctan.org/tex-archive/macros/latex/contrib/curve/
 LPPL-1.2
 LaTeX style for a CV (curriculum vitae) with flavour option
-amd64 ~ppc ~sparc ~x86
+~amd64 ~ppc ~sparc ~x86
 base eutils latex-package multilib portability toolchain-funcs user
 doc examples
 

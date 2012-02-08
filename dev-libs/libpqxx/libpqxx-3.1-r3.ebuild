@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/libpqxx-3.1-r3.ebuild,v 1.3 2012/01/31 11:18:22 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/libpqxx-3.1-r3.ebuild,v 1.1 2011/11/12 16:58:37 titanofold Exp $
 
 EAPI="4"
 

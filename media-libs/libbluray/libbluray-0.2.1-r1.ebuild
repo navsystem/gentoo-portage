@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-0.2.1-r1.ebuild,v 1.4 2012/01/28 04:38:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-0.2.1-r1.ebuild,v 1.1 2011/12/12 22:27:34 radhermit Exp $
 
 EAPI=4
 
@@ -13,15 +13,18 @@ SRC_URI="ftp://ftp.videolan.org/pub/videolan/libbluray/${PV}/${P}.tar.bz2
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
-IUSE="aacs java static-libs utils +xml"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
+IUSE="aacs java static-libs utils xine +xml"
 
 COMMON_DEPEND="
 	xml? ( dev-libs/libxml2 )
 "
 RDEPEND="
 	${COMMON_DEPEND}
-	aacs? ( media-libs/libaacs )
+	aacs? (
+		media-libs/libaacs
+		media-video/aacskeys
+	)
 	java? ( >=virtual/jre-1.6 )
 "
 DEPEND="
@@ -31,6 +34,9 @@ DEPEND="
 		dev-java/ant-core
 	)
 	dev-util/pkgconfig
+"
+PDEPEND="
+	xine? ( ~media-libs/libbluray-xine-${PV} )
 "
 REQUIRED_USE="utils? ( static-libs )"
 

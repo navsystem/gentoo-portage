@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.7.7.ebuild,v 1.6 2012/01/28 18:53:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.7.7.ebuild,v 1.1 2011/12/15 10:34:06 johu Exp $
 
 EAPI=4
 
 if [[ "${PV}" != "9999" ]]; then
 	SRC_URI="http://dev.gentoo.org/~johu/distfiles/${P}.tar.xz"
-	KEYWORDS="alpha amd64 ~arm ia64 ppc ~ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+	KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 else
 	EGIT_REPO_URI="git://anongit.kde.org/strigi"
 	GIT_ECLASS="git-2"
@@ -25,6 +25,7 @@ IUSE="clucene +dbus debug exif fam ffmpeg hyperestraier inotify log +qt4 test"
 
 COMMONDEPEND="
 	app-arch/bzip2:0
+	dev-libs/boost
 	dev-libs/libxml2:2
 	sys-libs/zlib:0
 	virtual/libiconv
@@ -44,9 +45,8 @@ COMMONDEPEND="
 	)
 "
 DEPEND="${COMMONDEPEND}
-	dev-libs/boost
 	test? ( dev-util/cppunit )"
-RDEPEND=${COMMONDEPEND}
+RDEPEND="${COMMONDEPEND}"
 
 src_configure() {
 	# Enabled: POLLING (only reliable way to check for files changed.)

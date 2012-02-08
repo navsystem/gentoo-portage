@@ -1,5 +1,5 @@
-dev-libs/gmp kernel_linux? ( sys-apps/module-init-tools ) sys-apps/sed kernel_linux? ( virtual/linux-sources )
-kernel_linux? ( sys-apps/module-init-tools )
+dev-libs/gmp kernel_linux? ( virtual/modutils ) sys-apps/sed kernel_linux? ( virtual/linux-sources )
+kernel_linux? ( virtual/modutils )
 0
 mirror://berlios/tpm-emulator/tpm_emulator-0.5.tar.gz
 
@@ -7,7 +7,7 @@ https://developer.berlios.de/projects/tpm-emulator
 GPL-2
 Emulator driver for tpm
 ~x86 ~amd64
-eutils linux-info linux-mod multilib portability toolchain-funcs user versionator
+eutils linux-info linux-mod multilib portability toolchain-funcs versionator
 kernel_linux
 
 

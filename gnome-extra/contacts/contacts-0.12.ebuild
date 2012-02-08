@@ -1,10 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/contacts/contacts-0.12.ebuild,v 1.6 2012/01/14 17:06:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/contacts/contacts-0.12.ebuild,v 1.3 2011/02/25 22:26:52 eva Exp $
 
-EAPI="4"
+EAPI="3"
 GCONF_DEBUG="no"
-GNOME_TARBALL_SUFFIX="bz2"
 
 inherit autotools eutils gnome2
 
@@ -13,7 +12,7 @@ HOMEPAGE="http://pimlico-project.org/contacts.html"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="dbus gnome"
 
 RDEPEND=">=gnome-extra/evolution-data-server-1.8
@@ -39,6 +38,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	gnome2_src_prepare
+
 	# Fix compilation with USE="-dbus", bug #247519, upstream bug #628614
 	epatch "${FILESDIR}/${PN}-0.9-dbus.patch"
 
@@ -47,5 +48,4 @@ src_prepare() {
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
-	gnome2_src_prepare
 }

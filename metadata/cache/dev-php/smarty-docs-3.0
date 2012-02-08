@@ -6,7 +6,7 @@ html? ( http://www.smarty.net/files/docs/manual-en-3.0.zip -> smarty-docs-3.0-en
 http://www.smarty.net/documentation
 LGPL-2.1
 Documentation for Smarty, a template engine for PHP.
-~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86
+~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86
 
 pdf html linguas_en
 || ( html pdf )

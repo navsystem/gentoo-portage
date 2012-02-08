@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/base.eclass,v 1.56 2012/02/06 21:33:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/base.eclass,v 1.55 2011/12/14 23:38:09 vapier Exp $
 
 # @ECLASS: base.eclass
 # @MAINTAINER:
@@ -59,11 +59,7 @@ base_src_unpack() {
 
 	pushd "${WORKDIR}" > /dev/null
 
-	if [[ $(type -t unpacker_src_unpack) == "function" ]] ; then
-		unpacker_src_unpack
-	elif [[ -n ${A} ]] ; then
-		unpack ${A}
-	fi
+	[[ -n "${A}" ]] && unpack ${A}
 	has src_prepare ${BASE_EXPF} || base_src_prepare
 
 	popd > /dev/null

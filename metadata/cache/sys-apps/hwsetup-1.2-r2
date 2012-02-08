@@ -6,7 +6,7 @@ http://debian-knoppix.alioth.debian.org/sources/hwsetup_1.2-7.tar.gz
 http://www.knopper.net/
 GPL-2
 Hardware setup program from Knoppix - used only on LiveCD
-~alpha amd64 ~ia64 -mips ppc ~ppc64 ~sparc ~x86
+~alpha ~amd64 ~ia64 -mips ~ppc ~ppc64 ~sparc ~x86
 eutils flag-o-matic multilib portability toolchain-funcs user
 zlib
 

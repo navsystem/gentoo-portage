@@ -6,13 +6,13 @@ ftp://daemon.jp.FreeBSD.org/pub/FreeBSD-jp/ports-jp/LOCAL_PORTS/xcalendar-4.0+i1
 http://www.freebsd.org/
 as-is
 A simple interactive calendar program with a notebook capability
-~alpha amd64 ppc ppc64 x86 ~x86-fbsd
+~alpha amd64 ~ppc ~ppc64 x86 ~x86-fbsd
 eutils multilib portability toolchain-funcs user
 motif
 
 
 
-4
+2
 
 compile install prepare
 

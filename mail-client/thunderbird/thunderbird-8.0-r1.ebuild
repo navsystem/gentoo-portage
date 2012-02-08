@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-8.0-r1.ebuild,v 1.6 2012/01/28 05:31:11 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-8.0-r1.ebuild,v 1.4 2011/12/08 14:48:01 phajdan.jr Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -14,7 +14,7 @@ EMVER="1.3.3"
 DESCRIPTION="Thunderbird Mail Client"
 HOMEPAGE="http://www.mozilla.com/en-US/thunderbird/"
 
-KEYWORDS="~alpha amd64 ~arm x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 ~arm ~ppc ~ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="bindist gconf +crashreporter +crypt +ipc +lightning mozdom +webm"
@@ -50,8 +50,6 @@ if ! [[ ${PV} =~ alpha|beta ]]; then
 	done
 fi
 
-ASM_DEPEND=">=dev-lang/yasm-1.1"
-
 RDEPEND=">=sys-devel/binutils-2.16.1
 	>=dev-libs/nss-3.12.10
 	>=dev-libs/nspr-4.8.8
@@ -73,10 +71,7 @@ RDEPEND=">=sys-devel/binutils-2.16.1
 		=app-crypt/gnupg-1.4*
 	) )"
 
-DEPEND="${RDEPEND}
-	dev-util/pkgconfig
-	webm? ( x86? ( ${ASM_DEPEND} )
-		amd64? ( ${ASM_DEPEND} ) )"
+DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"/comm-release
 

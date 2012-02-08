@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-6.0.0.ebuild,v 1.6 2012/01/15 17:10:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-6.0.0.ebuild,v 1.1 2011/05/23 09:01:20 jlec Exp $
 
-EAPI=4
+EAPI="3"
 
 inherit eutils qt4-r2
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://qwt.sourceforge.net/"
 SRC_URI="mirror://sourceforge/project/${PN}/${PN}/${PV/_/-}/${MY_P}.tar.bz2"
 
 LICENSE="qwt"
-KEYWORDS="~alpha amd64 hppa ~ia64 ~ppc ~ppc64 sparc x86 ~x86-macos"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-macos"
 SLOT="6"
 IUSE="doc examples svg"
 
@@ -73,17 +73,17 @@ src_prepare() {
 
 src_compile() {
 	# split compilation to allow parallel building
-	emake sub-src
-	emake
+	emake sub-src || die "emake library failed"
+	emake || die "emake failed"
 }
 
 src_install () {
 	qt4-r2_src_install
 	if use doc; then
-		dohtml -r doc/html/*
+		dohtml -r doc/html/* || die
 	fi
 	if use examples; then
 		insinto /usr/share/doc/${PF}
-		doins -r examples
+		doins -r examples || die
 	fi
 }

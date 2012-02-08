@@ -1,10 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.8.5-r1.ebuild,v 1.5 2012/01/30 19:36:18 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.8.5-r1.ebuild,v 1.2 2011/11/26 04:49:25 dirtyepic Exp $
 
 EAPI="3"
-WANT_AUTOCONF="2.1"
-inherit autotools eutils toolchain-funcs multilib python versionator pax-utils
+inherit eutils toolchain-funcs multilib python versionator pax-utils
 
 MY_PN="js"
 TARBALL_PV="$(replace_all_version_separators '' $(get_version_component_range 1-3))"
@@ -39,8 +38,6 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-fix-install-symlinks.patch"
 	# https://bugzilla.mozilla.org/show_bug.cgi?id=638056#c9
 	epatch "${FILESDIR}/${P}-fix-ppc64.patch"
-	# https://bugs.gentoo.org/show_bug.cgi?id=400727
-	epatch "${FILESDIR}/${P}-arm_resprect_cflags-1.patch"
 
 	epatch_user
 
@@ -48,9 +45,6 @@ src_prepare() {
 		# Don't try to be smart, this does not work in cross-compile anyway
 		ln -sfn "${BUILDDIR}/config/Linux_All.mk" "${S}/config/$(uname -s)$(uname -r).mk"
 	fi
-
-	cd "${S}"/js/src
-	eautoconf
 }
 
 src_configure() {

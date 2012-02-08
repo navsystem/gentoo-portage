@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-2.2.0.ebuild,v 1.13 2012/01/30 22:33:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-2.2.0.ebuild,v 1.10 2009/09/06 21:25:59 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils gnome2-utils perl-module games
@@ -12,14 +12,14 @@ SRC_URI="http://www.frozen-bubble.org/data/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 # there seems to be color issues on big endian hosts
-KEYWORDS="amd64 hppa x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc sparc x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/perl-5.6.1
 	>=media-libs/sdl-mixer-1.2.3[mikmod,vorbis]
 	media-libs/sdl-pango
 	media-libs/sdl-image[gif,png]
-	dev-perl/SDL
+	dev-perl/sdl-perl
 	dev-perl/Locale-gettext"
 DEPEND="${RDEPEND}
 	sys-devel/autoconf"

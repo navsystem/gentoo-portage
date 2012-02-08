@@ -6,8 +6,8 @@ mirror://cpan/authors/id/A/AD/ADAMK/Task-Weaken-1.01.tar.gz
 http://search.cpan.org/search?query=Task-Weaken
 || ( Artistic GPL-2 )
 Ensure that a platform has weaken support
-amd64 ~ppc x86
-base eutils multilib perl-module portability toolchain-funcs user
+amd64 ~ppc sparc x86
+base eutils multilib perl-module portability toolchain-funcs
 
 
 

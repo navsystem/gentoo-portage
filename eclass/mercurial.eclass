@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mercurial.eclass,v 1.18 2012/02/05 19:14:16 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mercurial.eclass,v 1.16 2011/08/03 19:01:16 nelchael Exp $
 
 # @ECLASS: mercurial.eclass
 # @MAINTAINER:
@@ -113,9 +113,7 @@ function mercurial_fetch {
 	elif [[ -z "${EHG_OFFLINE}" ]]; then
 		einfo "Updating ${EHG_STORE_DIR}/${EHG_PROJECT}/${module} from ${EHG_REPO_URI}"
 		cd "${module}" || die "failed to cd to ${module}"
-		${EHG_PULL_CMD}
-		# mercurial-2.1: hg pull returns 1 if there are no incoming changesets
-		[[ $? -eq 0 || $? -eq 1 ]] || die "update failed"
+		${EHG_PULL_CMD} || die "update failed"
 	fi
 
 	# Checkout working copy:

@@ -6,7 +6,7 @@ ftp://cag.lcs.mit.edu/pub/tuna/xearth-1.1.tar.gz ftp://ftp.cs.colorado.edu/users
 http://hewgill.com/xearth/original/
 xearth
 Xearth sets the X root window to an image of the Earth
-~alpha amd64 ppc ~ppc64 ~sparc ~x86
+~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86
 eutils multilib portability toolchain-funcs user
 
 

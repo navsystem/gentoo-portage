@@ -5,7 +5,4 @@
 	<maintainer>
 		<email>haskell@gentoo.org</email>
 	</maintainer>
-	<longdescription>
-		Draw pretty sequence diagrams of D-Bus traffic
-	</longdescription>
 </pkgmetadata>

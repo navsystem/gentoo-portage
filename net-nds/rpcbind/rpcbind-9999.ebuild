@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/rpcbind-9999.ebuild,v 1.7 2012/01/26 01:02:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/rpcbind-9999.ebuild,v 1.6 2011/09/21 08:18:29 mgorny Exp $
 
 EAPI="2"
 
@@ -19,11 +19,9 @@ HOMEPAGE="http://sourceforge.net/projects/rpcbind/"
 
 LICENSE="BSD"
 SLOT="0"
-IUSE="selinux tcpd"
+IUSE=""
 
-RDEPEND="net-libs/libtirpc
-	selinux? ( sec-policy/selinux-rpcbind )
-	tcpd? ( sys-apps/tcp-wrappers )"
+RDEPEND="net-libs/libtirpc"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
@@ -37,9 +35,7 @@ src_prepare() {
 }
 
 src_configure() {
-	econf \
-		--bindir=/sbin \
-		$(use_enable tcpd libwrap)
+	econf --bindir=/sbin
 }
 
 src_install() {

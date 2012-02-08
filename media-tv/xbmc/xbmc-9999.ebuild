@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.100 2012/02/04 19:53:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.93 2011/10/12 22:53:27 vapier Exp $
 
-EAPI="4"
+EAPI="2"
 
 inherit eutils python
 
@@ -22,8 +22,7 @@ HOMEPAGE="http://xbmc.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="airplay alsa altivec avahi bluray css debug goom joystick midi mysql profile +projectm pulseaudio pvr +rsxs rtmp +samba sse sse2 udev vaapi vdpau webserver +xrandr"
-REQUIRED_USE="pvr? ( mysql )"
+IUSE="airplay alsa altivec avahi bluray css debug goom joystick midi profile +projectm pulseaudio +rsxs rtmp +samba sse sse2 udev vaapi vdpau webserver +xrandr"
 
 COMMON_DEPEND="virtual/opengl
 	app-arch/bzip2
@@ -39,7 +38,6 @@ COMMON_DEPEND="virtual/opengl
 	>=dev-libs/lzo-2.04
 	dev-libs/yajl
 	>=dev-python/pysqlite-2
-	dev-python/simplejson
 	media-libs/alsa-lib
 	media-libs/flac
 	media-libs/fontconfig
@@ -68,7 +66,7 @@ COMMON_DEPEND="virtual/opengl
 	media-libs/tiff
 	pulseaudio? ( media-sound/pulseaudio )
 	media-sound/wavpack
-	>=virtual/ffmpeg-0.6[encode]
+	>=virtual/ffmpeg-0.6
 	rtmp? ( media-video/rtmpdump )
 	avahi? ( net-dns/avahi )
 	webserver? ( net-libs/libmicrohttpd )
@@ -76,7 +74,7 @@ COMMON_DEPEND="virtual/opengl
 	samba? ( >=net-fs/samba-3.4.6[smbclient] )
 	sys-apps/dbus
 	sys-libs/zlib
-	mysql? ( virtual/mysql )
+	virtual/mysql
 	x11-apps/xdpyinfo
 	x11-apps/mesa-progs
 	vaapi? ( x11-libs/libva )
@@ -111,10 +109,6 @@ src_unpack() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-11.0-libpng-1.5.patch #380127
-	epatch "${FILESDIR}"/${PN}-9999-nomythtv.patch
-	epatch "${FILESDIR}"/${PN}-9999-no-arm-flags.patch #400617
-
 	# some dirs ship generated autotools, some dont
 	local d
 	for d in \
@@ -125,6 +119,7 @@ src_prepare() {
 	do
 		[[ -e ${d}/configure ]] && continue
 		pushd ${d} >/dev/null
+		einfo "Generating autotools in ${d}"
 		eautoreconf
 		popd >/dev/null
 	done
@@ -179,11 +174,9 @@ src_configure() {
 		--disable-hal \
 		$(use_enable joystick) \
 		$(use_enable midi mid) \
-		$(use_enable mysql) \
 		$(use_enable profile profiling) \
 		$(use_enable projectm) \
 		$(use_enable pulseaudio pulse) \
-		$(use_enable pvr mythtv) \
 		$(use_enable rsxs) \
 		$(use_enable rtmp) \
 		$(use_enable samba) \
@@ -194,8 +187,8 @@ src_configure() {
 }
 
 src_install() {
-	default
-	rm "${ED}"/usr/share/doc/*/{LICENSE.GPL,copying.txt}*
+	emake install DESTDIR="${D}" || die
+	prepalldocs
 
 	insinto /usr/share/applications
 	doins tools/Linux/xbmc.desktop

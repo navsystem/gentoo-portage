@@ -1,16 +1,15 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_learn/scikits_learn-0.9.ebuild,v 1.4 2012/02/05 01:58:26 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_learn/scikits_learn-0.9.ebuild,v 1.1 2011/11/25 22:13:57 bicatali Exp $
 
 EAPI="3"
-inherit flag-o-matic
 
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 DISTUTILS_SRC_TEST="setup.py"
 
-inherit distutils multilib
+inherit distutils
 
 MYPN="${PN/scikits_/scikit-}"
 
@@ -20,7 +19,7 @@ SRC_URI="mirror://sourceforge/${MYPN}/${MYPN}-${PV}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc examples"
 
 CDEPEND="sci-libs/scipy
@@ -43,10 +42,6 @@ src_prepare() {
 		library_dirs=${EPREFIX}/usr/$(get_libdir)
 		include_dirs=${EPREFIX}/usr/include/
 	EOF
-	# bug #397605
-	[[ ${CHOST} == *-darwin* ]] \
-		&& append-ldflags -bundle "-undefined dynamic_lookup" \
-		|| append-ldflags -shared
 }
 
 src_compile() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.15.1-r1.ebuild,v 1.5 2012/01/22 21:23:30 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.15.1-r1.ebuild,v 1.2 2011/11/21 18:11:11 jmbsvicetto Exp $
 
 #BACKPORTS=1
 
@@ -21,7 +21,7 @@ else
 	${BACKPORTS:+
 		http://dev.gentoo.org/~flameeyes/${PN}/${P}-backports-${BACKPORTS}.tar.bz2
 		http://dev.gentoo.org/~cardoe/distfiles/${P}-backports-${BACKPORTS}.tar.bz2}"
-	KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
+	KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 fi
 
 DESCRIPTION="QEMU + Kernel-based Virtual Machine userland tools"
@@ -88,13 +88,14 @@ RDEPEND="
 	ssl? ( net-libs/gnutls )
 	vde? ( net-misc/vde )
 	xattr? ( sys-apps/attr )
-	xen? ( app-emulation/xen-tools )
+	xen? ( app-emulation/xen )
 "
 
 DEPEND="${RDEPEND}
 	app-text/texi2html
-	dev-util/pkgconfig
-	>=sys-kernel/linux-headers-2.6.35"
+	>=sys-kernel/linux-headers-2.6.35
+	ssl? ( dev-util/pkgconfig )
+"
 
 kvm_kern_warn() {
 	eerror "Please enable KVM support in your kernel, found at:"

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.2-r2.ebuild,v 1.21 2012/01/15 22:10:58 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.2-r2.ebuild,v 1.19 2011/08/20 05:20:14 ulm Exp $
 
 EAPI=3
 
@@ -18,8 +18,9 @@ IUSE="doc examples jpeg png static-libs unicode xft"
 RESTRICT="!kernel_linux? (
 	!kernel_FreeBSD? (
 	!kernel_Darwin? (
+	!kernel_SunOS? (
 		fetch bindist
-	) ) )"
+	) ) ) )"
 
 RDEPEND="x11-libs/libXmu
 	x11-libs/libXp
@@ -31,22 +32,49 @@ DEPEND="${RDEPEND}
 	sys-devel/flex
 	x11-misc/xbitmaps"
 RDEPEND="${RDEPEND}
+	!x11-libs/motif-config
+	!x11-libs/lesstif
 	doc? ( app-doc/openmotif-manual )"
 
 pkg_nofetch() {
 	local line
 	while read line; do einfo "${line}"; done <<-EOF
-	From the Open Motif license: "The rights granted under this license are
-	limited solely to distribution and sublicensing of the contribution(s)
-	on, with, or for operating systems which are themselves open source
-	programs. Contact The Open Group for a license allowing distribution and
-	sublicensing of the original program on, with, or for operating systems
-	which are not open source programs."
+	From the Open Motif license: "This software is subject to an open
+	license. It may only be used on, with or for operating systems which
+	are themselves open source systems. You must contact The Open Group
+	for a license allowing distribution and sublicensing of this software
+	on, with, or for operating systems which are not open source programs."
 
-	If above conditions are fulfilled, you may download the file:
+	If you have got such a license, you may download the file:
 	${SRC_URI}
 	and place it in ${DISTDIR}.
 	EOF
+}
+
+pkg_setup() {
+	# clean up orphaned cruft left over by motif-config
+	local i l count=0
+	for i in "${EROOT}"/usr/bin/{mwm,uil,xmbind} \
+		"${EROOT}"/usr/include/{Xm,uil,Mrm} \
+		"${EROOT}"/usr/$(get_libdir)/lib{Xm,Uil,Mrm}.*; do
+		[[ -L "${i}" ]] || continue
+		l=$(readlink "${i}")
+		if [[ ${l} == *openmotif-* || ${l} == *lesstif-* ]]; then
+			einfo "Cleaning up orphaned ${i} symlink ..."
+			rm -f "${i}"
+		fi
+	done
+
+	cd "${EROOT}"/usr/share/man
+	for i in $(find . -type l); do
+		l=$(readlink "${i}")
+		if [[ ${l} == *-openmotif-* || ${l} == *-lesstif-* ]]; then
+			(( count++ ))
+			rm -f "${i}"
+		fi
+	done
+	[[ ${count} -ne 0 ]] && \
+		einfo "Cleaned up ${count} orphaned symlinks in ${EROOT}/usr/share/man"
 }
 
 src_prepare() {

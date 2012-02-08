@@ -83,7 +83,6 @@ frei0r
 lpsol
 libev
 prelude
-ladspa
 
 # Stuff that doesn't compile on ia64
 chicken

@@ -7,7 +7,7 @@ http://fdm.sourceforge.net
 BSD
 fetch, filter and deliver mail
 amd64 x86
-eutils multilib portability toolchain-funcs user
+eutils multilib portability toolchain-funcs
 courierauth examples pcre
 
 

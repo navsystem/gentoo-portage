@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/tftp-hpa-5.1.ebuild,v 1.9 2011/12/19 20:21:21 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/tftp-hpa-5.1.ebuild,v 1.8 2011/11/30 04:03:53 vapier Exp $
 
 EAPI="4"
 
@@ -20,8 +20,7 @@ RDEPEND="selinux? ( sec-policy/selinux-tftpd )
 	tcpd? ( sys-apps/tcp-wrappers )
 	!net-ftp/atftp
 	!net-ftp/netkit-tftp"
-DEPEND="${RDEPEND}
-	app-arch/xz-utils"
+DEPEND="${RDEPEND}"
 
 src_prepare() {
 	sed -i "/^AR/s:ar:$(tc-getAR):" MCONFIG.in || die

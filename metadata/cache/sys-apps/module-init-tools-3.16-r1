@@ -1,5 +1,5 @@
 sys-libs/zlib
-sys-libs/zlib !<sys-apps/baselayout-2.0.1 !sys-apps/kmod !sys-apps/modutils
+sys-libs/zlib !<sys-apps/baselayout-2.0.1 !sys-apps/modutils
 0
 mirror://kernel/linux/utils/kernel/module-init-tools/module-init-tools-3.16.tar.bz2 mirror://gentoo/module-init-tools-3.16-man.tar.bz2
 test
