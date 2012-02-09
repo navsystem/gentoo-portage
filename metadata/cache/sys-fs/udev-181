@@ -1,0 +1,22 @@
+selinux? ( sys-libs/libselinux ) acl? ( sys-apps/acl dev-libs/glib:2 ) gudev? ( dev-libs/glib:2 ) introspection? ( dev-libs/gobject-introspection ) ~sys-apps/kmod-5 >=sys-apps/util-linux-2.20 >=sys-libs/glibc-2.10 keymap? ( dev-util/gperf ) dev-util/pkgconfig virtual/os-headers !<sys-kernel/linux-headers-2.6.34 doc? ( dev-util/gtk-doc ) !<sys-apps/systemd-29-r4 !=sys-apps/systemd-37-r1
+selinux? ( sys-libs/libselinux ) acl? ( sys-apps/acl dev-libs/glib:2 ) gudev? ( dev-libs/glib:2 ) introspection? ( dev-libs/gobject-introspection ) ~sys-apps/kmod-5 >=sys-apps/util-linux-2.20 >=sys-libs/glibc-2.10 hwdb? ( >=sys-apps/usbutils-0.82 sys-apps/pciutils[-zlib] ) acl? ( sys-apps/coreutils[acl] ) sys-fs/udev-init-scripts !sys-apps/coldplug !<sys-fs/lvm2-2.02.45 !sys-fs/device-mapper >=sys-apps/baselayout-1.12.5
+0
+mirror://kernel/linux/utils/kernel/hotplug/udev-181.tar.bz2
+
+http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html
+GPL-2
+Linux dynamic and persistent device naming support (aka userspace devfs)
+~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86
+eutils flag-o-matic libtool linux-info multilib portability systemd toolchain-funcs user versionator
+build selinux debug +rule_generator hwdb acl gudev introspection keymap floppy edd doc static-libs
+
+
+
+4
+
+configure install postinst prepare setup
+
+
+
+
+
