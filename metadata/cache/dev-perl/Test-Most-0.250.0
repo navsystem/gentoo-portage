@@ -6,7 +6,7 @@ mirror://cpan/authors/id/O/OV/OVID/Test-Most-0.25.tar.gz
 http://search.cpan.org/dist/Test-Most/
 || ( Artistic GPL-1 GPL-2 GPL-3 )
 Most commonly needed test functions and features
-~amd64 ~x86
+~amd64 ~hppa ~x86
 base eutils multilib perl-module portability toolchain-funcs user
 
 
