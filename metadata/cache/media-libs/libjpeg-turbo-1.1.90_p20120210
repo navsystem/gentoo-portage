@@ -1,7 +1,7 @@
 !media-libs/jpeg:0 amd64? ( || ( dev-lang/nasm dev-lang/yasm ) ) x86? ( || ( dev-lang/nasm dev-lang/yasm ) ) amd64-linux? ( || ( dev-lang/nasm dev-lang/yasm ) ) x86-linux? ( || ( dev-lang/nasm dev-lang/yasm ) ) java? ( >=virtual/jdk-1.5 ) || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 sys-devel/libtool java? ( >=dev-java/java-config-2.1.9-r1 )
 !media-libs/jpeg:0 java? ( >=virtual/jre-1.5 ) java? ( >=dev-java/java-config-2.1.9-r1 )
 0
-http://dev.gentoo.org/~ssuominen/libjpeg-turbo-1.1.90_p20120129.tar.xz mirror://debian/pool/main/libj/libjpeg8/libjpeg8_8c-2.debian.tar.gz
+http://dev.gentoo.org/~ssuominen/libjpeg-turbo-1.1.90_p20120210.tar.xz mirror://debian/pool/main/libj/libjpeg8/libjpeg8_8c-2.debian.tar.gz
 
 http://libjpeg-turbo.virtualgl.org/ http://sourceforge.net/projects/libjpeg-turbo/
 BSD
