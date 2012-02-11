@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.55 2012/02/05 18:16:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.58 2012/02/10 21:28:53 mattst88 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -alpha
@@ -141,6 +141,12 @@ video_cards_trident
 video_cards_tseng
 video_cards_vesa
 
+# Matt Turner <mattst88@gentoo.org>
+# Mask more VIDEO_CARDs added with mesa-8.0
+video_cards_i915
+video_cards_i965
+# vmware wasn't added with mesa-8.0, but it should still be masked
+video_cards_vmware
 
 # dspam and dspam-web use this one
 # We've never supported cyrus-imapd because nobody asked for
@@ -171,3 +177,11 @@ topal
 # Matt Turner <mattst88@gentoo.org> (13 Dec 2010)
 # We don't have sys-devel/llvm
 llvm
+
+# Matt Turner <mattst88@gentoo.org) (10 Feb 2012)
+# mask d3d since we don't have wine
+d3d
+
+# Matt Turner <mattst88@gentoo.org) (10 Feb 2012)
+# mask wayland since dev-libs/wayland isn't keyworded
+wayland

@@ -9,7 +9,7 @@ C toolkit to manipulate virtual machines
 
 autotools eutils git-2 libtool multilib portability python toolchain-funcs user
 avahi caps debug iscsi +json +libvirtd lvm +lxc macvtap nfs nls numa openvz parted pcap phyp policykit python qemu sasl selinux +udev uml virtualbox virt-network xen elibc_glibc
-|| ( lxc openvz qemu uml virtualbox xen )
+libvirtd? ( || ( lxc openvz qemu uml virtualbox xen ) ) lxc? ( libvirtd ) openvz? ( libvirtd ) qemu? ( libvirtd ) uml? ( libvirtd ) virtualbox? ( libvirtd ) xen? ( libvirtd )
 
 
 4

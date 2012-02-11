@@ -1,5 +1,5 @@
-debug-utils? ( dev-python/matplotlib ) acl? ( sys-apps/acl sys-fs/e2fsprogs )
-debug-utils? ( dev-python/matplotlib ) acl? ( sys-apps/acl sys-fs/e2fsprogs )
+sys-libs/zlib debug-utils? ( dev-python/matplotlib ) acl? ( sys-apps/acl sys-fs/e2fsprogs )
+sys-libs/zlib debug-utils? ( dev-python/matplotlib ) acl? ( sys-apps/acl sys-fs/e2fsprogs )
 0
 http://www.kernel.org/pub/linux/kernel/people/mason/btrfs/btrfs-progs-0.19.tar.bz2 mirror://gentoo/btrfs-progs-0.19-redhat.patch.bz2
 
