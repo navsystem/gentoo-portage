@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13475 2012/02/10 22:49:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13480 2012/02/12 11:21:09 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,18 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pacho Ramos <pacho@gentoo.org> (12 Feb 2012)
+# Completely unmaintained, broken and with different bugs
+# opened. Use kernel drivers instead or go ahead to maintain
+# this (bug #350164). Removal in 30 days.
+media-sound/alsa-driver
+
+# Ole Markus With <olemarkus@gentoo.org> (11 Feb 2012)
+# Made obsolete by PHP 5.3. Bugs #402862, #402865.
+# Masked for removal on 11 Mar 2012
+dev-php/pecl-idn
+dev-php/pecl-enchant
 
 # Markos Chandras <hwoarang@gentoo.org> (10 Feb 2012)
 # Unmaintained. Does not build with recent kernels. Bug #381263
@@ -430,6 +442,7 @@ net-mail/vmailmgr-tools
 ~sys-fs/udev-180
 ~sys-fs/udev-181
 <sys-apps/kmod-9999
+~sys-fs/udev-init-scripts-8
 >=sys-apps/systemd-30
 
 # Michael Weber <xmw@gentoo.org> (04 Nov 2011)
@@ -1098,10 +1111,6 @@ app-portage/layman-dbtools
 # Federico Ferri <mescalinum@gentoo.org> (08 Aug 2009)
 # Doesn't build with Tcl 8.5, has several bugs open
 =dev-tcltk/tcl-debug-2.0
-
-# Steve Dibb <beandog@gentoo.org> (31 Jul 2009)
-# Unsupported, but popular.  No plans for removal.
-media-sound/alsa-driver
 
 # Marijn Schouten <hkBst@gentoo.org> (29 Jul 2009)
 # Masked for increasingly many problems. Upstream is flaky and hasn't released since 2005.
