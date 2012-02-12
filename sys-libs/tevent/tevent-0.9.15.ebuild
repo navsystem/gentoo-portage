@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/tevent-0.9.14.ebuild,v 1.2 2011/10/31 16:02:11 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/tevent-0.9.15.ebuild,v 1.1 2012/02/12 11:43:28 maksbotan Exp $
 
-EAPI=3
+EAPI=4
 PYTHON_DEPEND="2"
 
 inherit waf-utils python
@@ -23,8 +23,23 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 WAF_BINARY="${S}/buildtools/bin/waf"
+PATCHES=( "${FILESDIR}"/add-py-file.patch )
 
 pkg_setup() {
 	python_set_active_version 2
 	python_pkg_setup
+}
+
+src_install() {
+	waf-utils_src_install
+	insinto $(python_get_sitedir)
+	doins tevent.py
+}
+
+pkg_postinst() {
+	python_mod_optimize tevent.py
+}
+
+pkg_postrm() {
+	python_mod_cleanup tevent.py
 }
