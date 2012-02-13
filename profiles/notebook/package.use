@@ -66,3 +66,4 @@ sys-apps/systemd gtk
 sys-apps/systemd-units server
 sys-fs/udev gudev extras
 net-misc/connman google ntpd ofono openvpn vpnc
+media-libs/mesa g3dvl
