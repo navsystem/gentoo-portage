@@ -7,7 +7,7 @@ http://gcc.gnu.org/
 GPL-3 LGPL-3 || ( GPL-3 libgcc libstdc++ gcc-runtime-library-exception-3.1 ) FDL-1.2
 The GNU Compiler Collection for MSP430 microcontrollers
 ~amd64 ~x86
-eutils fixheadtails flag-o-matic gnuconfig libtool multilib portability toolchain toolchain-funcs user versionator
+eutils fixheadtails flag-o-matic gnuconfig libtool multilib pax-utils portability toolchain toolchain-funcs user versionator
 build multislot nls nptl test vanilla altivec cxx fortran nocxx bootstrap doc gcj gtk hardened libffi multilib objc objc-gc mudflap libssp objc++ openmp fixed-point graphite go
 
 >=sys-devel/gcc-config-1.4

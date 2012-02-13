@@ -6,7 +6,7 @@ mirror://cpan/authors/id/M/MU/MUIR/modules/Time-modules-2011.0517.tar.gz
 http://search.cpan.org/dist/Time-modules/
 as-is
 A Date/Time Parsing Perl Module
-~alpha amd64 ~ia64 ppc ~ppc64 ~sparc ~x86
+amd64 ppc ~ppc64 x86
 base eutils multilib perl-module portability toolchain-funcs user
 
 
