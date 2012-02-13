@@ -1,5 +1,5 @@
-x11-libs/gtk+:2 avahi? ( net-dns/avahi ) crypt? ( dev-libs/libgcrypt ) nls? ( virtual/libintl ) ssh? ( net-libs/libssh[sftp] ) unique? ( dev-libs/libunique:1 ) vte? ( x11-libs/vte:0 ) dev-util/intltool dev-util/pkgconfig nls? ( sys-devel/gettext ) || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 sys-devel/libtool dev-vcs/git >=sys-apps/sed-4
-x11-libs/gtk+:2 avahi? ( net-dns/avahi ) crypt? ( dev-libs/libgcrypt ) nls? ( virtual/libintl ) ssh? ( net-libs/libssh[sftp] ) unique? ( dev-libs/libunique:1 ) vte? ( x11-libs/vte:0 )
+x11-libs/gtk+:2 ayatana? ( dev-libs/libappindicator ) avahi? ( net-dns/avahi ) crypt? ( dev-libs/libgcrypt ) freerdp? ( net-misc/freerdp ) ssh? ( net-libs/libssh[sftp] ) !net-misc/remmina-plugins dev-util/intltool dev-util/pkgconfig nls? ( sys-devel/gettext ) >=sys-apps/sed-4 >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) dev-vcs/git
+x11-libs/gtk+:2 ayatana? ( dev-libs/libappindicator ) avahi? ( net-dns/avahi ) crypt? ( dev-libs/libgcrypt ) freerdp? ( net-misc/freerdp ) ssh? ( net-libs/libssh[sftp] ) !net-misc/remmina-plugins
 0
 
 
@@ -7,14 +7,14 @@ http://remmina.sourceforge.net/
 GPL-2
 A GTK+ RDP, VNC, XDMCP and SSH client
 
-autotools eutils git-2 gnome2-utils libtool multilib portability toolchain-funcs user
-avahi crypt debug nls ssh unique vte
+base cmake-utils eutils flag-o-matic git-2 gnome2-utils multilib portability toolchain-funcs user
+ayatana avahi crypt debug freerdp nls ssh unique vte
 
 
 
-2
+4
 
-configure install postinst postrm preinst prepare unpack
+compile configure install postinst postrm preinst prepare test unpack
 
 
 

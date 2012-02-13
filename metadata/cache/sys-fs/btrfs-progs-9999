@@ -1,5 +1,5 @@
-debug-utils? ( dev-python/matplotlib ) acl? ( sys-apps/acl sys-fs/e2fsprogs ) dev-vcs/git
-debug-utils? ( dev-python/matplotlib ) acl? ( sys-apps/acl sys-fs/e2fsprogs )
+sys-libs/zlib debug-utils? ( dev-python/matplotlib ) acl? ( sys-apps/acl sys-fs/e2fsprogs ) dev-vcs/git
+sys-libs/zlib debug-utils? ( dev-python/matplotlib ) acl? ( sys-apps/acl sys-fs/e2fsprogs )
 0
 
 

@@ -1,11 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.8.ebuild,v 1.1 2011/12/13 16:29:25 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.8.ebuild,v 1.5 2012/02/10 19:13:10 flameeyes Exp $
 
 #BACKPORTS=2
 #AUTOTOOLIZE=yes
 
-EAPI="3"
+EAPI="4"
 
 MY_P="${P/_rc/-rc}"
 
@@ -15,7 +15,7 @@ if [[ ${PV} = *9999* ]]; then
 	AUTOTOOLIZE=yes
 fi
 
-PYTHON_DEPEND="python? 2:2.4"
+PYTHON_DEPEND="python? 2:2.5"
 #RESTRICT_PYTHON_ABIS="3.*"
 #SUPPORT_PYTHON_ABIS="1"
 
@@ -39,9 +39,12 @@ HOMEPAGE="http://www.libvirt.org/"
 LICENSE="LGPL-2.1"
 SLOT="0"
 IUSE="avahi caps debug iscsi +json +libvirtd lvm +lxc macvtap nfs \
-	nls numa openvz parted pcap phyp policykit python qemu sasl selinux udev \
+	nls numa openvz parted pcap phyp policykit python qemu sasl selinux +udev \
 	uml virtualbox virt-network xen elibc_glibc"
 # IUSE=one : bug #293416 & bug #299011
+REQUIRED_USE="libvirtd? ( || ( lxc openvz qemu uml virtualbox xen ) )
+	lxc? ( libvirtd ) openvz? ( libvirtd ) qemu? ( libvirtd ) uml? ( libvirtd )
+	virtualbox? ( libvirtd ) xen? ( libvirtd )"
 
 # gettext.sh command is used by the libvirt command wrappers, and it's
 # non-optional, so put it into RDEPEND.
@@ -51,6 +54,7 @@ RDEPEND="sys-libs/readline
 	>=dev-libs/libxml2-2.7.6
 	>=dev-libs/libnl-1.1:1.1
 	>=net-libs/gnutls-1.0.25
+	sys-apps/dmidecode
 	>=sys-apps/util-linux-2.17
 	sys-devel/gettext
 	>=net-analyzer/netcat6-1.0-r2

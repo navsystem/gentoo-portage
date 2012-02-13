@@ -1,0 +1,22 @@
+xml? ( dev-libs/libxml2 ) dev-util/pkgconfig || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 sys-devel/libtool
+xml? ( dev-libs/libxml2 )
+0
+http://cgit.freedesktop.org/evtest/snapshot/evtest-1.29.tar.bz2 mirror://gentoo/evtest-1.29-mans.tar.xz
+
+http://cgit.freedesktop.org/evtest/
+GPL-2
+test program for capturing input device events
+~amd64 ~arm ~x86
+autotools eutils libtool multilib portability toolchain-funcs user
++xml
+
+
+
+4
+
+prepare
+
+
+
+
+

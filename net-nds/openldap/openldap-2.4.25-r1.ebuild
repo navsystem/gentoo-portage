@@ -1,9 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.25-r1.ebuild,v 1.2 2012/02/02 08:42:07 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.25-r1.ebuild,v 1.4 2012/02/12 00:54:14 robbat2 Exp $
 
 EAPI="3"
-inherit db-use eutils flag-o-matic multilib ssl-cert versionator toolchain-funcs
+WANT_AUTOMAKE=none
+inherit db-use eutils flag-o-matic multilib ssl-cert versionator toolchain-funcs autotools
 
 DESCRIPTION="LDAP suite of application and development tools"
 HOMEPAGE="http://www.OpenLDAP.org/"
@@ -16,7 +17,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE_DAEMON="crypt icu samba slp tcpd experimental minimal"
 IUSE_BACKEND="+berkdb"
 IUSE_OVERLAY="overlays perl"
-IUSE_OPTIONAL="gnutls iodbc sasl ssl odbc debug ipv6 syslog selinux"
+IUSE_OPTIONAL="gnutls iodbc sasl ssl odbc debug ipv6 +syslog selinux"
 IUSE_CONTRIB="smbkrb5passwd kerberos"
 IUSE_CONTRIB="${IUSE_CONTRIB} -cxx"
 IUSE="${IUSE_DAEMON} ${IUSE_BACKEND} ${IUSE_OVERLAY} ${IUSE_OPTIONAL} ${IUSE_CONTRIB}"
@@ -237,6 +238,9 @@ src_prepare() {
 	# bug #233633
 	epatch "${FILESDIR}"/${PN}-2.4.17-fix-lmpasswd-gnutls-symbols.patch
 
+	# bug #281495
+	epatch "${FILESDIR}"/${PN}-2.4.28-gnutls-gcrypt.patch
+
 	cd "${S}"/build
 	einfo "Making sure upstream build strip does not do stripping too early"
 	sed -i.orig \
@@ -247,6 +251,11 @@ src_prepare() {
 	sed -i \
 		-e 's|/bin/sh|/bin/bash|g' \
 		"${S}"/tests/scripts/* || die "sed failed"
+
+	cd "${S}"
+	#sed '/AM_INIT_AUTOMAKE/s,^,#,g' -i configure.in || die "sed failed"
+	eautoreconf
+	#sed '/AM_INIT_AUTOMAKE/s,^#,,g' -i configure.in || die "sed failed"
 }
 
 build_contrib_module() {
