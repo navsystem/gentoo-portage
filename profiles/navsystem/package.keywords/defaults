@@ -19,3 +19,4 @@ sys-block/megactl amd64
 sys-block/megacli amd64
 
 ~dev-libs/libpipeline-1.2.0 amd64 x86
+~dev-db/pgpool2-3.0.4 amd64
