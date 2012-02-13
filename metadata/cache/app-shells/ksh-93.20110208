@@ -1,7 +1,7 @@
 
 !app-shells/pdksh
 0
-http://dev.gentoo.org/~floppym/distfiles/INIT.2012-01-01.tgz http://dev.gentoo.org/~floppym/distfiles/ast-ksh.2011-02-08.tgz
+http://dev.gentoo.org/~floppym/distfiles/INIT.2012-01-01.tgz http://dev.gentoo.org/~floppym/distfiles/ast-base.2011-02-08.tgz
 
 http://www.kornshell.com/
 CPL-1.0 EPL-1.0
