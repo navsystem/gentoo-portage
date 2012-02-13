@@ -3,7 +3,6 @@ app-emulation/wine
 sci-mathematics/scilab
 app-editors/gvim
 media-sound/audacity
-virtual/mozilla-browser
 app-admin/sudo
 media-video/smplayer
 kde-base/kopete

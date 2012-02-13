@@ -1,3 +1,4 @@
 media-libs/mesa  amd64
 x11-drivers/xf86-video-ati amd64
 ~sys-devel/llvm-2.9 amd64
+~x11-misc/vdpauinfo-0.0.6 amd64

@@ -16,3 +16,6 @@ sys-block/megarc amd64
 sys-block/megamgr amd64
 sys-block/megactl amd64
 sys-block/megacli amd64
+
+~media-sound/deadbeef-0.5.1 amd64
+~app-portage/smart-live-rebuild-1.2.1 amd64
