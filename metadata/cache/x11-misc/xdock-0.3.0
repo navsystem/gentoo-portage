@@ -1,0 +1,22 @@
+x11-libs/libX11 || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+x11-libs/libX11
+0
+mirror://sourceforge/xdock/xdock-0.3.0.tar.gz
+
+http://xdock.sourceforge.net
+GPL-2
+emulates Window Maker docks (runs in any window manager)
+~amd64 ~x86
+autotools eutils libtool multilib portability toolchain-funcs user
+
+
+
+
+4
+
+install prepare
+
+
+
+
+

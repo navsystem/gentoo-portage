@@ -1,5 +1,5 @@
-sys-libs/zlib x11-libs/qt-gui:4 >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
-sys-libs/zlib x11-libs/qt-gui:4
+sys-libs/zlib x11-libs/qt-core:4 >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+sys-libs/zlib x11-libs/qt-core:4
 0
 mirror://sourceforge/quazip/quazip-0.4.3.tar.gz
 

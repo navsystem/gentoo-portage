@@ -1,5 +1,5 @@
-|| ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 sys-devel/libtool
-
+!dev-perl/Mail-SRS || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+!dev-perl/Mail-SRS
 0
 http://www.libsrs2.org/srs/libsrs2-1.0.18.tar.gz
 
