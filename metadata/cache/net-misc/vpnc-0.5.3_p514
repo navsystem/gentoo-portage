@@ -1,0 +1,22 @@
+dev-lang/perl dev-libs/libgcrypt >=sys-apps/iproute2-2.6.19.20061214[-minimal] bindist? ( net-libs/gnutls ) !bindist? ( openssl? ( dev-libs/openssl ) !openssl? ( net-libs/gnutls ) )
+dev-lang/perl dev-libs/libgcrypt >=sys-apps/iproute2-2.6.19.20061214[-minimal] bindist? ( net-libs/gnutls ) !bindist? ( openssl? ( dev-libs/openssl ) !openssl? ( net-libs/gnutls ) ) resolvconf? ( net-dns/openresolv )
+0
+http://dev.gentoo.org/~jlec/distfiles/vpnc-0.5.3_p514.tar.xz
+
+http://www.unix-ag.uni-kl.de/~massar/vpnc/
+GPL-2 BSD
+Free client for Cisco VPN routing software
+~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86
+eutils multilib portability toolchain-funcs user
+resolvconf openssl bindist
+
+
+
+4
+
+install postinst prepare
+
+
+
+
+

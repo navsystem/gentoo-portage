@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.9999.ebuild,v 1.7 2012/01/13 14:56:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.9999.ebuild,v 1.9 2012/02/14 19:29:27 scarabeus Exp $
 
 EAPI=4
 
@@ -107,7 +107,7 @@ COMMON_DEPEND="
 	sci-mathematics/lpsolve
 	>=sys-libs/db-4.8
 	virtual/jpeg
-	>=x11-libs/cairo-1.10.0
+	>=x11-libs/cairo-1.10.0[X]
 	x11-libs/libXinerama
 	x11-libs/libXrandr
 	x11-libs/libXrender
@@ -443,7 +443,7 @@ src_configure() {
 		$(use_enable odk) \
 		$(use_enable opengl) \
 		$(use_enable pdfimport ext-pdfimport) \
-		$(use_enable postgres ext-postgresql-sdbc) \
+		$(use_enable postgres postgresql-sdbc) \
 		$(use_enable svg librsvg system) \
 		$(use_enable test linkoo) \
 		$(use_enable vba) \

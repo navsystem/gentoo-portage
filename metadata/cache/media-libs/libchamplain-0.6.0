@@ -14,7 +14,7 @@ debug doc gtk html +introspection python debug
 
 3
 
-compile configure install postinst postrm preinst prepare unpack
+compile configure install postinst postrm preinst prepare setup unpack
 
 
 

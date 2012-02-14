@@ -1,5 +1,5 @@
->=dev-lang/python-2.5 >=dev-python/m2crypto-0.16 >=dev-python/wxpython-2.8 >=dev-python/apsw-3.6 >=media-video/vlc-1.0.1 >=dev-libs/openssl-0.9.8 app-arch/unzip
->=dev-lang/python-2.5 >=dev-python/m2crypto-0.16 >=dev-python/wxpython-2.8 >=dev-python/apsw-3.6 >=media-video/vlc-1.0.1 >=dev-libs/openssl-0.9.8
+>=dev-lang/python-2.5[sqlite] >=dev-python/m2crypto-0.16 >=dev-python/wxpython-2.8 >=dev-python/apsw-3.6 >=media-video/vlc-1.0.1 >=dev-libs/openssl-0.9.8 app-arch/unzip
+>=dev-lang/python-2.5[sqlite] >=dev-python/m2crypto-0.16 >=dev-python/wxpython-2.8 >=dev-python/apsw-3.6 >=media-video/vlc-1.0.1 >=dev-libs/openssl-0.9.8
 0
 http://dl.tribler.org/tribler_5.5.10-1ubuntu1_all.deb
 
