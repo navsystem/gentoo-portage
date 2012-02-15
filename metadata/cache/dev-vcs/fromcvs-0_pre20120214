@@ -1,0 +1,22 @@
+test? ( ruby_targets_ruby18? ( dev-ruby/rcsparse[ruby_targets_ruby18] >=dev-ruby/rbtree-0.3.0-r2[ruby_targets_ruby18] sqlite? ( dev-ruby/sqlite3-ruby[ruby_targets_ruby18] ) ) ruby_targets_ree18? ( dev-ruby/rcsparse[ruby_targets_ree18] >=dev-ruby/rbtree-0.3.0-r2[ruby_targets_ree18] sqlite? ( dev-ruby/sqlite3-ruby[ruby_targets_ree18] ) ) ) ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ree18? ( dev-lang/ruby-enterprise:1.8 )
+git? ( dev-vcs/git ) mercurial? ( dev-vcs/mercurial ) ruby_targets_ruby18? ( dev-ruby/rcsparse[ruby_targets_ruby18] >=dev-ruby/rbtree-0.3.0-r2[ruby_targets_ruby18] sqlite? ( dev-ruby/sqlite3-ruby[ruby_targets_ruby18] ) ) ruby_targets_ree18? ( dev-ruby/rcsparse[ruby_targets_ree18] >=dev-ruby/rbtree-0.3.0-r2[ruby_targets_ree18] sqlite? ( dev-ruby/sqlite3-ruby[ruby_targets_ree18] ) ) ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ree18? ( dev-lang/ruby-enterprise:1.8 )
+0
+http://dev.gentoo.org/fromcvs-20120214.tar.gz
+
+http://gitorious.org/fromcvs
+AGPL-3
+fromcvs converts cvs to git, hg or sqlite database
+~amd64
+eutils java-utils-2 multilib portability ruby-ng toolchain-funcs user versionator
++git mercurial sqlite test elibc_FreeBSD ruby_targets_ruby18 ruby_targets_ree18
+|| ( ruby_targets_ruby18 ruby_targets_ree18 )
+
+
+4
+
+compile configure install prepare setup test unpack
+
+
+
+
+
