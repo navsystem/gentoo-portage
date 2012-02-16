@@ -1,0 +1,22 @@
+
+
+0
+mirror://sourceforge/thinkfan/thinkfan-0.8_alpha2.tar.gz
+
+http://thinkfan.sourceforge.net
+GPL-3
+simple fan control program for thinkpads
+~amd64 ~x86
+eutils multilib portability toolchain-funcs user
+
+
+
+
+4
+
+install postinst prepare
+
+
+
+
+

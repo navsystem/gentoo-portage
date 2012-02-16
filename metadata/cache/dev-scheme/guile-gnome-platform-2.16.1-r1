@@ -1,0 +1,22 @@
+dev-libs/atk dev-libs/g-wrap dev-libs/glib:2 dev-scheme/guile:12 dev-scheme/guile-cairo dev-scheme/guile-lib gnome-base/gconf:2 gnome-base/gnome-vfs:2 gnome-base/libbonobo gnome-base/libglade:2.0 gnome-base/libgnomecanvas gnome-base/libgnomeui gnome-base/orbit:2 x11-libs/gtk+:2 x11-libs/pango dev-util/pkgconfig || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+dev-libs/atk dev-libs/g-wrap dev-libs/glib:2 dev-scheme/guile:12 dev-scheme/guile-cairo dev-scheme/guile-lib gnome-base/gconf:2 gnome-base/gnome-vfs:2 gnome-base/libbonobo gnome-base/libglade:2.0 gnome-base/libgnomecanvas gnome-base/libgnomeui gnome-base/orbit:2 x11-libs/gtk+:2 x11-libs/pango
+0
+http://ftp.gnu.org/pub/gnu/guile-gnome/guile-gnome-platform/guile-gnome-platform-2.16.1.tar.gz
+test
+http://www.gnu.org/software/guile-gnome/
+GPL-2
+Guile Scheme code that wraps the GNOME developer platform
+~amd64 ~ppc ~sparc ~x86
+autotools autotools-utils eutils libtool multilib portability toolchain-funcs user
+static-libs
+
+
+
+4
+
+compile configure install prepare test
+
+
+
+
+

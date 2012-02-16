@@ -6,15 +6,15 @@ http://www.pell.chi.il.us/~orc/Code/levee/levee-3.5a.tar.gz
 http://www.pell.chi.il.us/~orc/Code/
 levee
 Really tiny vi clone, for things like rescue disks
-amd64 ppc sparc x86
+amd64 ppc sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris ~x86-solaris
 eutils multilib portability toolchain-funcs user
 
 
 
 
+4
 
-
-compile install unpack
+compile configure install prepare
 
 
 

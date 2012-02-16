@@ -1,0 +1,22 @@
+>=dev-perl/DateTime-0.430.200 >=dev-perl/DateTimeX-Easy-0.85.0 >=dev-perl/Moose-0.410.0 >=dev-perl/MooseX-Types-0.140.0 >=dev-perl/MooseX-Types-DateTime-0.70.0 >=dev-perl/MooseX-Types-0.40.0 >=dev-perl/Time-Duration-Parse-0.60.0 >=dev-perl/namespace-clean-0.80.0 test? ( >=dev-perl/Test-Exception-0.270.0 >=dev-perl/Test-use-ok-0.20.0 ) dev-lang/perl[-build]
+>=dev-perl/DateTime-0.430.200 >=dev-perl/DateTimeX-Easy-0.85.0 >=dev-perl/Moose-0.410.0 >=dev-perl/MooseX-Types-0.140.0 >=dev-perl/MooseX-Types-DateTime-0.70.0 >=dev-perl/MooseX-Types-0.40.0 >=dev-perl/Time-Duration-Parse-0.60.0 >=dev-perl/namespace-clean-0.80.0 dev-lang/perl[-build]
+0
+mirror://cpan/authors/id/I/IL/ILMARI/MooseX-Types-DateTime-MoreCoercions-0.08.tar.gz
+
+http://search.cpan.org/dist/MooseX-Types-DateTime-MoreCoercions/
+|| ( Artistic GPL-1 GPL-2 GPL-3 )
+Extensions to MooseX::Types::DateTime
+~amd64 ~x86
+base eutils multilib perl-module portability toolchain-funcs user
+test
+
+
+
+4
+
+compile configure install prepare test unpack
+
+
+
+
+

@@ -1,0 +1,22 @@
+sci-chemistry/ambertools >=app-admin/eselect-python-20091230 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
+sci-chemistry/ambertools >=app-admin/eselect-python-20091230 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
+0
+http://dev.gentoo.org/~jlec/acpype-374.tar.xz
+
+http://code.google.com/p/acpype/
+GPL-3
+AnteChamber PYthon Parser interfacE
+~amd64 ~x86 ~amd64-linux
+multilib python toolchain-funcs
+
+
+
+
+4
+
+install prepare setup
+
+
+
+
+

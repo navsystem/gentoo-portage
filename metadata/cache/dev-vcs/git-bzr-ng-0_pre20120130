@@ -1,0 +1,22 @@
+app-arch/xz-utils >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+>=dev-vcs/bzr-2.2 dev-vcs/git >=dev-vcs/bzr-fastimport-0.10 dev-python/python-fastimport >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+0
+http://dev.gentoo.org/~tetromino/distfiles/git-bzr-ng/git-bzr-ng-0_pre20120130.tar.xz
+
+https://github.com/termie/git-bzr-ng
+BSD
+Git subcommand providing a bidirectional bridge to Bazaar repositories
+~amd64 ~x86
+multilib python toolchain-funcs
+
+
+
+
+4
+
+install prepare setup
+
+
+
+
+

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/wmakerconf-2.12-r1.ebuild,v 1.1 2012/02/10 18:28:36 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/wmakerconf-2.12-r1.ebuild,v 1.3 2012/02/14 20:23:34 voyageur Exp $
 
 EAPI=4
 inherit eutils
@@ -15,13 +15,13 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="imlib nls perl"
 
 RDEPEND="x11-libs/gtk+:2
-	>=x11-wm/windowmaker-0.95.0
+	>=x11-wm/windowmaker-0.95.2
 	imlib? ( media-libs/imlib )
 	perl? ( dev-lang/perl
 		dev-perl/HTML-Parser
-		dev-perl/libwww-perl
+		|| ( dev-perl/libwww-perl
 		www-client/lynx
-		net-misc/wget )"
+		net-misc/wget ) )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	dev-util/pkgconfig"

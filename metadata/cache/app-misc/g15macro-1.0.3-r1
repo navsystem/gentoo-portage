@@ -6,7 +6,7 @@ mirror://sourceforge/g15daemon/g15macro-1.0.3.tar.gz
 http://g15daemon.sourceforge.net/
 GPL-2
 Macro recording plugin to G15daemon
-~amd64 ~ppc ~ppc64 ~x86
+amd64 ~ppc ~ppc64 x86
 
 
 

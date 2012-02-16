@@ -1,0 +1,22 @@
+sys-libs/ncurses
+sys-libs/ncurses
+0
+http://www.mirrorservice.org/sites/ftp.i-scream.org/pub/i-scream/libstatgrab/libstatgrab-0.17.tar.gz
+
+http://www.i-scream.org/libstatgrab/
+|| ( GPL-2 LGPL-2.1 )
+A tool to provide access to statistics about the system on which it's run.
+~amd64 ~ia64 ~ppc ~x86
+autotools autotools-utils eutils libtool multilib portability toolchain-funcs user
+static-libs
+
+
+
+4
+
+compile configure install prepare test
+
+
+
+
+

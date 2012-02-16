@@ -4,7 +4,7 @@
 mirror://pypi/p/pyudev/pyudev-0.13.tar.gz
 
 http://packages.python.org/pyudev/ http://pypi.python.org/pypi/pyudev
-MIT
+LGPL-2.1
 Python binding to libudev
 ~amd64 ~x86
 distutils multilib python toolchain-funcs
