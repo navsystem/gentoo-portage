@@ -1,4 +1,4 @@
-usb? ( virtual/libusb:0 ) !dev-db/xbase media-tv/linuxtv-dvb-headers
+usb? ( virtual/libusb:0 ) !dev-db/xbase virtual/linuxtv-dvb-headers
 usb? ( virtual/libusb:0 ) !dev-db/xbase
 0
 mirror://gentoo/linuxtv-dvb-apps-20100223.tar.bz2

@@ -6,7 +6,7 @@ mirror://kde/stable/phonon/4.5.1/src/phonon-4.5.1.tar.xz
 https://projects.kde.org/projects/kdesupport/phonon
 LGPL-2.1
 KDE multimedia API
-amd64 ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos
+amd64 ppc ~ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos
 base cmake-utils eutils flag-o-matic multilib portability toolchain-funcs user
 aqua debug +gstreamer pulseaudio vlc
 || ( aqua gstreamer vlc )

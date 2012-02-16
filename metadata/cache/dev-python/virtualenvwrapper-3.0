@@ -8,7 +8,7 @@ BSD
 virtualenvwrapper is a set of extensions to Ian Bicking's virtualenv tool
 ~amd64 ~x86
 distutils multilib python toolchain-funcs
-
+test
 
 
 
