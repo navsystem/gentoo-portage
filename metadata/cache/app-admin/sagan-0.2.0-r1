@@ -1,5 +1,5 @@
 dev-util/pkgconfig
-dev-libs/libpcre app-admin/sagan-rules smtp? ( net-libs/libesmtp ) pcap? ( net-libs/libpcap ) mysql? ( virtual/mysql ) postgres? ( dev-db/postgresql-base ) prelude? ( dev-libs/libprelude ) lognorm? ( dev-libs/liblognorm ) libdnet? ( dev-libs/libdnet )
+dev-libs/libpcre app-admin/sagan-rules[lognorm?] smtp? ( net-libs/libesmtp ) pcap? ( net-libs/libpcap ) mysql? ( virtual/mysql ) postgres? ( dev-db/postgresql-base ) prelude? ( dev-libs/libprelude ) lognorm? ( dev-libs/liblognorm ) libdnet? ( dev-libs/libdnet )
 0
 http://sagan.softwink.com/download/sagan-0.2.0.tar.gz
 
