@@ -6,7 +6,7 @@ http://labs.nic.cz/files/labs/datove_schranky/dslib-1.7.tar.gz
 http://labs.nic.cz/page/969/datovka/
 GPL-2
 Library to access Czech eGov system "Datove schranky"
-~amd64 ~x86
+amd64 x86
 distutils multilib python toolchain-funcs
 
 

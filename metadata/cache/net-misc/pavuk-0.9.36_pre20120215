@@ -1,5 +1,5 @@
-virtual/libintl gtk? ( x11-libs/gtk+:2 ) javascript? ( dev-lang/spidermonkey ) ssl? ( dev-libs/openssl ) >=sys-apps/sed-4 sys-devel/gettext
-virtual/libintl gtk? ( x11-libs/gtk+:2 ) javascript? ( dev-lang/spidermonkey ) ssl? ( dev-libs/openssl )
+virtual/libintl gtk? ( x11-libs/gtk+:2 ) ssl? ( dev-libs/openssl ) >=sys-apps/sed-4 sys-devel/gettext
+virtual/libintl gtk? ( x11-libs/gtk+:2 ) ssl? ( dev-libs/openssl )
 0
 http://dev.gentoo.org/~pacho/maintainer-needed/pavuk-0.9.36_pre20120215.tar.xz
 
@@ -8,7 +8,7 @@ GPL-2
 Web spider and website mirroring tool
 ~amd64 ~ppc ~sparc ~x86
 autotools autotools-utils eutils libtool multilib portability toolchain-funcs user
-debug gtk javascript hammer ipv6 nls profile ssl
+debug gtk hammer ipv6 nls profile ssl
 
 
 
