@@ -1,0 +1,22 @@
+>=app-admin/eselect-python-20091230 =dev-lang/python-2* =dev-lang/python-2*[sqlite]
+fts? ( dev-libs/xapian-bindings[python] dev-python/dbus-python dev-python/pygobject dev-python/pyxdg ) geolocation? ( dev-python/dbus-python dev-python/python-geoclue ) memprofile? ( dev-python/dbus-python dev-python/pympler ) sqldebug? ( dev-python/python-sqlparse ) tracker? ( app-misc/tracker dev-python/pygobject dev-python/dbus-python ) >=app-admin/eselect-python-20091230 =dev-lang/python-2* =dev-lang/python-2*[sqlite]
+0
+http://launchpad.net/zeitgeist-extensions/trunk/fts-0.0.13/+download/zeitgeist-extensions-0.0.13.tar.gz
+
+https://launchpad.net/zeitgeist-extensions/
+GPL-3
+Extensions to the engine such as Teamgeist, Relevancy Providers and Machine Learning Algorithms
+~amd64 ~x86 ~amd64-linux ~x86-linux
+eutils multilib portability python toolchain-funcs user
+fts geolocation memprofile sqldebug tracker
+
+
+
+4
+
+install postinst postrm prepare setup
+
+
+
+
+

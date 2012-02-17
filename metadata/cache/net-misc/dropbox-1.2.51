@@ -1,5 +1,5 @@
 >=sys-apps/sed-4
-dev-libs/popt dev-libs/openssl:0.9.8 >=sys-devel/gcc-4.2.0 net-misc/wget net-misc/rsync media-libs/libpng:1.2
+dev-libs/popt dev-libs/openssl:0.9.8 >=sys-devel/gcc-4.2.0 net-misc/wget net-libs/librsync
 0
 x86? ( http://dl-web.dropbox.com/u/17/dropbox-lnx.x86-1.2.51.tar.gz ) amd64? ( http://dl-web.dropbox.com/u/17/dropbox-lnx.x86_64-1.2.51.tar.gz )
 mirror strip

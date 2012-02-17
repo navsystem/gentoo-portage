@@ -6,7 +6,7 @@ mirror://debian/pool/main/m/mac-fdisk/mac-fdisk_0.1.orig.tar.gz mirror://debian/
 ftp://ftp.mklinux.apple.com/pub/Other_Tools/
 GPL-2
 Mac/PowerMac disk partitioning utility
-amd64 ~ppc ~ppc64 ~x86
+amd64 ~ppc ~ppc64 x86
 eutils multilib portability toolchain-funcs user
 
 
