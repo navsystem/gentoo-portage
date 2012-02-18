@@ -1,5 +1,5 @@
-app-arch/unzip >=x11-libs/qt-gui-4.5.3
->=x11-libs/qt-gui-4.5.3
+app-arch/unzip >=x11-libs/qt-core-4.5.3:4 >=x11-libs/qt-gui-4.5.3:4 >=x11-libs/qt-webkit-4.5.3:4
+>=x11-libs/qt-core-4.5.3:4 >=x11-libs/qt-gui-4.5.3:4 >=x11-libs/qt-webkit-4.5.3:4
 0
 http://picturewall.googlecode.com/files/PictureWall_1.0.zip
 
@@ -8,11 +8,11 @@ GPL-2
 Qt4 picture viewer and image searching tool using google.com
 amd64 x86
 base eutils multilib portability qt4-r2 toolchain-funcs user
-debug
+debug doc
 
 
 
-2
+4
 
 compile configure install prepare unpack
 

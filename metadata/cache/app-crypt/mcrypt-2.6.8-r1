@@ -1,5 +1,5 @@
->=dev-libs/libmcrypt-2.5.8 >=app-crypt/mhash-0.9.9
->=dev-libs/libmcrypt-2.5.8 >=app-crypt/mhash-0.9.9
+>=dev-libs/libmcrypt-2.5.8 >=app-crypt/mhash-0.9.9 sys-libs/zlib
+>=dev-libs/libmcrypt-2.5.8 >=app-crypt/mhash-0.9.9 sys-libs/zlib
 0
 mirror://sourceforge/mcrypt/mcrypt-2.6.8.tar.gz
 
