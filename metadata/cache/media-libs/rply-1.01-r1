@@ -1,7 +1,7 @@
 >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 
 0
-http://w3.impa.br/~diego/software/rply/rply-1.01.tar.gz
+http://dev.gentoo.org/~tetromino/distfiles/rply/rply-1.01.tar.gz
 
 http://w3.impa.br/~diego/software/rply/
 MIT
