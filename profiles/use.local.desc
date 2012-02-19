@@ -164,6 +164,7 @@ app-admin/sagan:libdnet - Add support for dev-libs/libdnet
 app-admin/sagan:lognorm - Add support for log/rules normalizations via dev-libs/liblognorm
 app-admin/sagan:pcap - Add support for network packet capture via net-libs/libpcap
 app-admin/sagan:smtp - Build witch SMTP (E-Mail) support
+app-admin/sagan-rules:lognorm - Install normalize rules support with dev-libs/liblognorm
 app-admin/sshguard:ipfilter - Enable ipfilter firewall support (only for *bsd)
 app-admin/sudo:offensive - Let sudo print insults when the user types the wrong password.
 app-admin/syslog-ng:json - Enable support for JSON template formatting via dev-libs/json-glib
@@ -243,7 +244,7 @@ app-crypt/ccid:twinserial - Enable twinserial reader
 app-crypt/ekeyd:minimal - Only install the ekey-egd-linux service rather than the full ekeyd package.
 app-crypt/ekeyd:munin - Install a plugin for net-analyzer/munin to graph statistical data from ekeyd.
 app-crypt/ekeyd:usb - Build the libusb-based userland daemon for accessing the EntropyKey (alternative to the CDC USB driver). It is suggested to use this option by default, as the CDC driver in the kernel often seems to be fragile (or the gadget implementation on the EntropyKey is too buggy), and can cause various problems.
-app-crypt/gnupg:idea - Use the patented IDEA algorithm
+app-crypt/gnupg:idea - Add support for the IDEA algorithm
 app-crypt/gnupg:openct - Bring in dev-libs/openct as a dependency; enable scdaemon.
 app-crypt/gnupg:pcsc-lite - Bring in sys-apps/pcsc-lite as a dependency; enable scdaemon.
 app-crypt/gnupg:smartcard - Build scdaemon software. Enables usage of OpenPGP cards. For other type of smartcards, try app-crypt/gnupg-pkcs11-scd.
@@ -834,6 +835,7 @@ app-text/evince:introspection - Use dev-libs/gobject-introspection for introspec
 app-text/evince:nautilus - Enable property page extension in gnome-base/nautilus
 app-text/evince:t1lib - Enable the Type-1 fonts for the built-in DVI viewer (media-libs/t1lib)
 app-text/evince:xps - Enable XPS viewer using app-text/libgxps
+app-text/getxbook:ocr - Use app-text/tesseract for optical character recognition
 app-text/ghostscript-gpl:bindist - Disable dejavu support for binary distribution because of licensing issue
 app-text/gonzui:lha - Enable LHA archive support
 app-text/gonzui:rpm - Enable rpm support
@@ -848,6 +850,7 @@ app-text/lodgeit:vim - Install a vim plugin allowing to paste and download from 
 app-text/mathtex:png - Generate png images by default instead of gif
 app-text/pandoc:highlight - Add support for syntax highlighting with dev-haskell/highlighting-kate
 app-text/pdf2djvu:graphicsmagick - Enable media-gfx/graphicsmagick support
+app-text/pdfgrep:unac - Removing accents and ligatures before search
 app-text/pdftk:nodrm - Decrypt a document with the user_pw even if it has an owner_pw set
 app-text/podofo:boost - Add support for boost
 app-text/poppler:exceptions - Enable exceptions throwing.
@@ -968,6 +971,7 @@ dev-db/postgresql-server:uuid - Enable server side UUID generation (via dev-libs
 dev-db/recutils:curl - Enable support for remote descriptors using libcurl
 dev-db/recutils:mdb - Build the mdb2rec utility
 dev-db/redis:jemalloc - Use dev-libs/jemalloc for allocations.
+dev-db/redis:tcmalloc - Use tcmalloc from dev-util/google-perftools for allocations.
 dev-db/spatialite:geos - Add the sci-libs/geos library for exact topological tests
 dev-db/spatialite:proj - Add the sci-libs/proj library for reprojection features
 dev-db/sqlite:extensions - Enable support for dynamic loading of extensions
@@ -1122,7 +1126,6 @@ dev-java/proguard:j2me - Adds support for J2ME Wireless Toolkit
 dev-java/rxtx:lfd - Installs and uses LockFileServer daemon (lfd)
 dev-java/sun-jdk:derby - Enable Installation of Bundled Derby (Java DB)
 dev-java/sun-jdk:jce - Enable Java Cryptographic Extension Unlimited Strength Policy files
-dev-java/sun-jdk:kernel_Solaris - Enable workaround for unpacking on Solaris
 dev-java/sun-jre-bin:jce - Enable Java Cryptographic Extension Unlimited Strength Policy files
 dev-java/swt:webkit - Embedded browser support via net-libs/webkit-gtk:2, replacing former xulrunner-based browser.
 dev-java/swt:xulrunner - Embedded browser support via xulrunner-1.9 (1.8 for swt-3.3). Xulrunner 2.0 is not supported, will be replaced by webkit in 3.7.
@@ -1171,25 +1174,19 @@ dev-lang/path64:valgrind - Use dev-util/valgrind for memory debbuging
 dev-lang/perl:ithreads - Enable Perl threads, has some compatibility problems
 dev-lang/perl:perlsuid - Enable Perl SUID install. Has some risks associated.
 dev-lang/php:cli - Enable CLI SAPI
-dev-lang/php:discard-path - Switch on common security setting for CGI SAPI
 dev-lang/php:embed - Enable embed SAPI
 dev-lang/php:enchant - Add supports Enchant spelling library.
-dev-lang/php:fdftk - Add supports for Adobe's FDF toolkit.
 dev-lang/php:fileinfo - Add fileinfo extension support
 dev-lang/php:filter - Add filter extension support
-dev-lang/php:force-cgi-redirect - Switch on common security setting for CGI SAPI
 dev-lang/php:fpm - Enable the FastCGI Process Manager SAPI
 dev-lang/php:hash - Enable the hash extension
 dev-lang/php:intl - Enables the intl extension for extended internalization support
 dev-lang/php:json - Enable JSON support
 dev-lang/php:ldap-sasl - Add SASL support for the PHP LDAP extension
 dev-lang/php:mysqlnd - Use native driver for mysql, mysqli, PDO_Mysql
-dev-lang/php:pcre - Adds support for Perl Compatible Regular Expressions (deprecated: always "on" in php 5.3)
 dev-lang/php:pdo - Enable the bundled PDO extensions
 dev-lang/php:phar - Enables the phar extension to provide phar archive support
 dev-lang/php:pic - Force shared modules to build as PIC on x86 (speed tradeoff with memory usage)
-dev-lang/php:reflection - Enable the reflection extension (Reflection API) (deprecated: always "on" in php 5.3)
-dev-lang/php:spl - Adds support for the Standard PHP Library (deprecated: always "on" in php 5.3)
 dev-lang/php:suhosin - Add Suhosin support (patch and extension from http://www.suhosin.org/)
 dev-lang/php:xmlreader - Enable XMLReader support
 dev-lang/php:xmlwriter - Enable XMLWriter support
@@ -1952,7 +1949,11 @@ gnome-extra/panflute:mpd - Enable MPD support
 gnome-extra/polkit-gnome:introspection - Use dev-libs/gobject-introspection for introspection
 gnome-extra/synapse:plugins - Build support for plugins using librest
 gnome-extra/synapse:zeitgeist - Add support for Zeitgeist event tracking system
+gnome-extra/zeitgeist:extensions - Use gnome-extra/zeitgeist-extentions to enhance the internal routines
 gnome-extra/zeitgeist:fts - Enable the full text search extension
+gnome-extra/zeitgeist:passiv - Use gnome-extra/zeitgeist-datahub to passively inject events
+gnome-extra/zeitgeist:plugins - Use gnome-extra/zeitgeist-datasources to enable numerous packages to inject events
+gnome-extra/zeitgeist-datahub:download - Monitor XDG download directory
 gnome-extra/zeitgeist-datasources:bzr - Zeitgeist plugin for dev-vcs/bzr as data source
 gnome-extra/zeitgeist-datasources:chromium - Zeitgeist plugin for www-client/chromium as data source
 gnome-extra/zeitgeist-datasources:emacs - Zeitgeist plugin for emacs as data source
@@ -1966,6 +1967,11 @@ gnome-extra/zeitgeist-datasources:tomboy - Zeitgeist plugin for app-misc/tomboy 
 gnome-extra/zeitgeist-datasources:totem - Zeitgeist plugin for media-video/totem as data source
 gnome-extra/zeitgeist-datasources:vim - Zeitgeist plugin for vim as data source
 gnome-extra/zeitgeist-datasources:xchat - Zeitgeist plugin for net-irc/xchat-gnome as data source
+gnome-extra/zeitgeist-extensions:fts - Enable the full text search
+gnome-extra/zeitgeist-extensions:geolocation - Add the physical location of the computer at the moment when events are inserted
+gnome-extra/zeitgeist-extensions:memprofile - Memory profiling extension
+gnome-extra/zeitgeist-extensions:sqldebug - debug zeitgeists sql statements
+gnome-extra/zeitgeist-extensions:tracker - Notify Tracker on events
 gnome-extra/zenity:compat - Installs gdialog for compatibility with older shell scripts which uses dev-lang/perl
 gnome-extra/zenity:webkit - Enable HTML rendering using net-libs/webkit-gtk
 gnustep-apps/cdplayer:preferences - Use gnustep-apps/preferences for preferences setting
@@ -2462,6 +2468,8 @@ media-libs/gstreamer:introspection - Use dev-libs/gobject-introspection for intr
 media-libs/gupnp-dlna:introspection - Use dev-libs/gobject-introspection for introspection
 media-libs/harfbuzz:glib - Enable support for C library routines from dev-libs/glib
 media-libs/harfbuzz:graphite - Enable support for non-Roman fonts via media-gfx/graphite2
+media-libs/leptonica:utils - Install command-line utilities
+media-libs/leptonica:webp - Adds support for the WebP image format
 media-libs/libass:enca - Enables support for charset discovery and conversion.
 media-libs/libass:harfbuzz - Enables OpenType shaping via media-libs/harfbuzz.
 media-libs/libbluray:aacs - Add support for decryption of AACS
@@ -4079,6 +4087,7 @@ net-misc/openvpn:eurephia - Apply eurephia patch
 net-misc/openvpn:iproute2 - Enabled iproute2 support instead of net-tools
 net-misc/openvpn:passwordsave - Enables openvpn to save passwords
 net-misc/openvpn:pkcs11 - Enable PKCS#11 smartcard support
+net-misc/pavuk:hammer - Turn on chunky/hammer mode (DoS) in pavuk: when specified, pavuk will include features to stress test web sites using an ultrahigh performancereplay mechanism
 net-misc/plowshare:scripts - Install some additional helper scripts
 net-misc/plowshare:view-captcha - View captcha with aview
 net-misc/ps3mediaserver:multiuser - Allow renderer customization per-user.
@@ -4332,9 +4341,21 @@ net-wireless/hostapd:logwatch - Install support files for sys-app/logwatch
 net-wireless/hostapd:madwifi - Add support for madwifi (Atheros chipset)
 net-wireless/hostapd:wps - Add support for Wi-Fi Protected Setup
 net-wireless/kismet:client - Build the ncurses-based user interface
+net-wireless/kismet:ncurses - Build the ncurses-based user interface
 net-wireless/kismet:pcap - Enable packet capturing support using net-libs/libpcap
+net-wireless/kismet:pcre - Build with pcre support
+net-wireless/kismet:plugin-autowep - Build the autowep plugin
+net-wireless/kismet:plugin-btscan - Build the btscan plugin
+net-wireless/kismet:plugin-dot15d4 - Build the dot15d4 plugin
+net-wireless/kismet:plugin-ptw - Build the ptw plugin
+net-wireless/kismet:plugin-spectools - Build the spectools plugin. This uses net-wireless/spectools
+net-wireless/kismet:ruby - Build extras which are written in ruby, example plugins and the like.
+net-wireless/kismet:speech - Audio support using app-accessibility/flite
 net-wireless/kismet:suid - Install a setuid root helper binary with limited functionality; this allows running kismet as a normal user, significantly reducing security risks
 net-wireless/madwifi-ng:injection - Adds support for net-wireless/aircrack-ng aireplay-ng packet injection
+net-wireless/spectools:debug - Build the raw output client for spectools. This is only needed for developing spectools.
+net-wireless/spectools:gtk - Build the gtk-2 based client for spectools
+net-wireless/spectools:ncurses - Build the ncurses based client for spectools
 net-wireless/wepattack:john - Build with app-crypt/johntheripper support
 net-wireless/wifiscanner:wireshark - Use the net-analyzer/wireshark wtap library
 net-wireless/wireless-tools:multicall - Build the most commonly used tools as one binary
@@ -4685,6 +4706,7 @@ sys-apps/hwloc:pci - Enable PCI device discovery using libpci
 sys-apps/ipmitool:openipmi - Use the system OpenIPMI implementation.
 sys-apps/iproute2:iptables - include support for iptables filtering
 sys-apps/irqbalance:numa - Support balancing IRQs across NUMA nodes
+sys-apps/kexec-tools:booke - Include support for Book-E memory management
 sys-apps/kexec-tools:lzma - Enables support for LZMA compressed kernel images
 sys-apps/kexec-tools:xen - Enable extended xen support
 sys-apps/kmod:compat - Install module-init-tools compatible symlinks.
@@ -5003,6 +5025,8 @@ sys-infiniband/openib-files:srp - Automatically generated description for srp
 sys-infiniband/openib-files:vnic - Automatically generated description for vnic
 sys-kernel/ck-sources:deblob - Remove binary blobs from kernel sources to provide libre license compliance.
 sys-kernel/dracut:debug - Module installing additional tools like strace, file editor, ssh and more
+sys-kernel/dracut:device-mapper - Set of helper modules providing support for device mapper. You need to enable this only if emerge says so.
+sys-kernel/dracut:net - Set of helper modules providing networking support. You need to enable this only if emerge says so.
 sys-kernel/gentoo-sources:deblob - Remove binary blobs from kernel sources to provide libre license compliance.
 sys-kernel/hardened-sources:deblob - Remove binary blobs from kernel sources to provide libre license compliance.
 sys-kernel/hardened-sources:xtpax - Enable XATTR_PAX_FLAGS support (EXPERIMENTAL).
@@ -5128,6 +5152,7 @@ www-apps/viewvc:cvsgraph - Add dev-vcs/cvsgraph support to show graphical views 
 www-apps/viewvc:mod_python - Add www-apache/mod_python support
 www-apps/viewvc:mod_wsgi - Add www-apache/mod_wsgi support
 www-apps/viewvc:pygments - Add dev-python/pygments support for syntax highlighting
+www-client/dwb:gtk3 - Link against x11-libs/gtk+:3 instead of x11-libs/gtk+:2
 www-client/elinks:bittorrent - Enable support for the BitTorrent protocol
 www-client/elinks:finger - Enable support for the finger protocol
 www-client/elinks:gopher - Enable support for the gopher protocol

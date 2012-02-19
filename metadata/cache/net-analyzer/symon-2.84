@@ -1,0 +1,22 @@
+perl? ( dev-lang/perl ) symux? ( net-analyzer/rrdtool ) virtual/pmake dev-lang/perl[-build]
+perl? ( dev-lang/perl ) symux? ( net-analyzer/rrdtool ) dev-lang/perl[-build]
+0
+http://www.xs4all.nl/~wpd/symon/philes/symon-2.84.tar.gz
+
+http://www.xs4all.nl/~wpd/symon/
+BSD-2
+Performance and information monitoring tool
+~amd64 ~sparc ~x86
+base eutils multilib perl-module portability toolchain-funcs user
+perl +symon symux
+
+
+
+4
+
+compile configure install postinst prepare setup test unpack
+
+
+
+
+

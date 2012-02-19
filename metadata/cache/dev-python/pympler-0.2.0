@@ -1,0 +1,22 @@
+>=app-admin/eselect-python-20091230 dev-lang/python
+>=app-admin/eselect-python-20091230 dev-lang/python
+0
+http://dev.gentoo.org/~jlec/distfiles/pympler-0.2.0.tar.xz
+
+http://code.google.com/p/pympler/
+Apache-2.0
+memory profiling for Python applications
+~amd64 ~x86 ~amd64-linux ~x86-linux
+distutils multilib python toolchain-funcs
+
+
+
+
+4
+
+compile install postinst postrm prepare setup test
+
+
+
+
+

@@ -1,18 +1,18 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/dwm-6.0.ebuild,v 1.3 2012/01/03 20:05:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/dwm-6.0.ebuild,v 1.6 2012/02/16 13:23:10 ago Exp $
 
 EAPI="4"
 
 inherit toolchain-funcs savedconfig
 
 DESCRIPTION="a dynamic window manager for X11"
-HOMEPAGE="http://www.suckless.org/dwm/"
-SRC_URI="http://dl.suckless.org/dwm/${P}.tar.gz"
+HOMEPAGE="http://dwm.suckless.org/"
+SRC_URI="http://dl.suckless.org/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="xinerama"
 
 DEPEND="x11-libs/libX11
@@ -24,7 +24,7 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	sed -i \
-		-e "s/CFLAGS = -std=c99 -pedantic -Wall -Os/CFLAGS += -std=c99 -pedantic -Wall -g/" \
+		-e "s/CFLAGS = -std=c99 -pedantic -Wall -Os/CFLAGS += -std=c99 -pedantic -Wall/" \
 		-e "/^LDFLAGS/{s|=|+=|g;s|-s ||g}" \
 		-e "s/#XINERAMALIBS =/XINERAMALIBS ?=/" \
 		-e "s/#XINERAMAFLAGS =/XINERAMAFLAGS ?=/" \

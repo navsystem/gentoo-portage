@@ -1,4 +1,4 @@
-media-tv/linuxtv-dvb-headers
+virtual/linuxtv-dvb-headers
 
 0
 mirror://sourceforge/dvbsnoop/dvbsnoop-1.4.50.tar.gz

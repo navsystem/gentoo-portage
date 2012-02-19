@@ -6,7 +6,7 @@ http://gentoo.neysx.org/mystuff/gorg/gorg-0.6.4.tgz
 http://www.gentoo.org/proj/en/gdp/doc/gorg.xml
 GPL-2
 Back-end XSLT processor for an XML-based web site
-~amd64 ~ppc ~x86
+amd64 ~ppc x86
 eutils java-utils-2 multilib portability ruby-ng toolchain-funcs user versionator
 fastcgi mysql test elibc_FreeBSD ruby_targets_ruby18
 

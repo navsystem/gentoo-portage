@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/libdnet-1.11-r2.ebuild,v 1.1 2012/02/14 22:08:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/libdnet-1.11-r2.ebuild,v 1.3 2012/02/16 15:05:39 jer Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2"
@@ -19,7 +19,10 @@ RESTRICT="test"
 DOCS=( README THANKS TODO )
 
 pkg_setup() {
-	python_set_active_version 2
+	if use python; then
+		python_set_active_version 2
+		python_pkg_setup
+	fi
 }
 
 src_prepare() {

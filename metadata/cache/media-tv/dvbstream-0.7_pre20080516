@@ -1,4 +1,4 @@
-media-tv/linuxtv-dvb-headers
+virtual/linuxtv-dvb-headers
 dev-lang/perl
 0
 mirror://gentoo/dvbstream-snapshot-20080302.tar.bz2

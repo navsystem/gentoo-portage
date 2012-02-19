@@ -1,0 +1,22 @@
+x11-libs/gtk+:3 x11-libs/libxkbfile gnome-keyring? ( gnome-base/libgnome-keyring ) ayatana? ( dev-libs/libappindicator ) avahi? ( net-dns/avahi[gtk3] ) crypt? ( dev-libs/libgcrypt ) freerdp? ( >=net-misc/freerdp-1.0 ) ssh? ( net-libs/libssh[sftp] ) telepathy? ( net-libs/telepathy-glib ) !net-misc/remmina-plugins vte? ( x11-libs/vte:2.90 ) dev-util/intltool dev-util/pkgconfig nls? ( sys-devel/gettext ) >=sys-apps/sed-4 >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+x11-libs/gtk+:3 x11-libs/libxkbfile gnome-keyring? ( gnome-base/libgnome-keyring ) ayatana? ( dev-libs/libappindicator ) avahi? ( net-dns/avahi[gtk3] ) crypt? ( dev-libs/libgcrypt ) freerdp? ( >=net-misc/freerdp-1.0 ) ssh? ( net-libs/libssh[sftp] ) telepathy? ( net-libs/telepathy-glib ) !net-misc/remmina-plugins vte? ( x11-libs/vte:2.90 )
+0
+https://github.com/downloads/FreeRDP/Remmina/Remmina-1.0.0.tar.gz
+
+http://remmina.sourceforge.net/
+GPL-2
+A GTK+ RDP, VNC, XDMCP and SSH client
+~amd64 ~x86
+base cmake-utils eutils flag-o-matic gnome2-utils multilib portability toolchain-funcs user
+ayatana avahi crypt debug freerdp gnome-keyring nls ssh telepathy unique vte
+
+
+
+4
+
+compile configure install postinst postrm preinst prepare test unpack
+
+
+
+
+

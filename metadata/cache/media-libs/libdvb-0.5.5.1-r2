@@ -1,5 +1,5 @@
-media-tv/linuxtv-dvb-headers
-media-tv/linuxtv-dvb-headers
+virtual/linuxtv-dvb-headers
+virtual/linuxtv-dvb-headers
 0
 http://www.metzlerbros.org/dvb/libdvb-0.5.5.1.tar.gz
 

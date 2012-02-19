@@ -8,13 +8,13 @@ UoI-NCSA
 C language family frontend for LLVM
 
 eutils multilib portability python subversion toolchain-funcs user
-debug multitarget +static-analyzer +system-cxx-headers test
+debug multitarget +static-analyzer test
 
 
 
-3
+4
 
-compile configure install postinst postrm preinst prepare test unpack
+compile configure install postinst postrm preinst prepare setup test unpack
 
 
 

@@ -3,7 +3,7 @@ dev-haskell/binary >=dev-lang/ghc-6.10.1 dev-lang/ghc
 0
 http://hackage.haskell.org/packages/archive/SHA/1.5.0.0/SHA-1.5.0.0.tar.gz
 
-http://hackage.haskell.org/package/sha
+http://hackage.haskell.org/package/SHA
 BSD
 Implementations of the SHA suite of message digest functions
 ~amd64 ~x86

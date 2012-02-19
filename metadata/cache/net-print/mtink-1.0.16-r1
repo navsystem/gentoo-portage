@@ -6,7 +6,7 @@ http://xwtools.automatix.de/files/mtink-1.0.16.tar.gz
 http://xwtools.automatix.de/
 GPL-2
 mtink is a status monitor and inkjet cartridge changer for some Epson printers
-amd64 ~ppc ~sparc ~x86
+amd64 ~ppc ~sparc x86
 base eutils multilib portability toolchain-funcs user
 cups doc X
 

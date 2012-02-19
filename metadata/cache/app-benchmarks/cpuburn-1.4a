@@ -1,20 +1,20 @@
 
 amd64? ( >=app-emulation/emul-linux-x86-baselibs-1.0 )
 0
-http://pages.sbcglobal.net/redelm/cpuburn_1_4a_tar.gz
+http://dev.gentoo.org/~jlec/distfiles/cpuburn-1.4a.tar.gz
 
 http://pages.sbcglobal.net/redelm/
 GPL-2
-designed to heavily load CPU chips [testing purposes]
+Designed to heavily load CPU chips [testing purposes]
 -* amd64 x86
 eutils flag-o-matic multilib portability toolchain-funcs user
 
 
 
 
-2
+4
 
-install prepare unpack
+install prepare
 
 
 

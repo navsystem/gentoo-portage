@@ -1,0 +1,22 @@
+test? ( app-misc/geoclue ) >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+app-misc/geoclue dev-python/dbus-python >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+0
+http://www.paulocabido.com/soc/python-geoclue/python-geoclue-0.1.0.tar.gz
+
+http://live.gnome.org/gtg/soc/python_geoclue/
+GPL-3
+Geoclue python module
+~amd64 ~x86 ~amd64-linux ~x86-linux
+distutils multilib python toolchain-funcs
+test
+
+
+
+4
+
+compile install postinst postrm prepare setup test
+
+
+
+
+
