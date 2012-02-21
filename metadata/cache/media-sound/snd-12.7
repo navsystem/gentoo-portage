@@ -9,7 +9,7 @@ Snd is a sound editor
 ~amd64 ~ppc ~x86 ~x86-interix ~amd64-linux ~x86-linux
 autotools eutils flag-o-matic libtool multilib portability toolchain-funcs user
 alsa doc fam fftw gmp gsl gtk jack ladspa motif opengl oss portaudio pulseaudio readline ruby +s7
-^^ ( ( !ruby !s7 ) ( ruby !s7 ) ( !ruby s7 ) )
+portaudio? ( !pulseaudio ) pulseaudio? ( !portaudio ) ^^ ( ( !ruby !s7 ) ( ruby !s7 ) ( !ruby s7 ) )
 
 
 4
