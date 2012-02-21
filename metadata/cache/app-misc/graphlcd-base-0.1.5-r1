@@ -1,7 +1,7 @@
 
 truetype? ( media-libs/freetype media-fonts/corefonts ) unicode? ( media-libs/freetype media-fonts/corefonts ) g15? ( app-misc/g15daemon )
 0
-http://projects.vdr-developer.org/attachments/download/226/graphlcd-base-0.1.5.tgz mirror://vdrfiles/graphlcd-base/graphlcd-base-0.1.5_utf8.diff.tgz
+mirror://vdr-developerorg/226/graphlcd-base-0.1.5.tgz mirror://vdrfiles/graphlcd-base/graphlcd-base-0.1.5_utf8.diff.tgz
 
 http://projects.vdr-developer.org/projects/graphlcd
 GPL-2

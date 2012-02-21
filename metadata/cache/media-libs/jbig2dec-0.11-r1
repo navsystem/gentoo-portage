@@ -1,14 +1,14 @@
 png? ( >=media-libs/libpng-1.2:0 ) || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 png? ( >=media-libs/libpng-1.2:0 )
 0
-http://ghostscript.com/~giles/jbig2/jbig2dec/jbig2dec-0.11.tar.gz
+http://ghostscript.com/~giles/jbig2/jbig2dec/jbig2dec-0.11.tar.gz test? ( http://jbig2dec.sourceforge.net/ubc/jb2streams.zip )
 test
 http://jbig2dec.sourceforge.net/
 GPL-3
 A decoder implementation of the JBIG2 image compression format
 amd64 ~arm ~hppa ~ppc x86 ~x86-fbsd
 autotools eutils libtool multilib portability toolchain-funcs user
-png static-libs
+png static-libs test
 
 
 

@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.28-r1.ebuild,v 1.3 2012/02/12 21:39:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.28-r1.ebuild,v 1.5 2012/02/20 07:37:45 slyfox Exp $
 
 EAPI="3"
-WANT_AUTOMAKE=1.9
+
 inherit db-use eutils flag-o-matic multilib ssl-cert versionator toolchain-funcs autotools
 
 BIS_PN=rfc2307bis.schema
@@ -253,6 +253,9 @@ src_prepare() {
 	# bug #294350
 	epatch "${FILESDIR}"/${PN}-2.4.6-evolution-ntlm.patch
 
+	# unbreak /bin/sh -> dash
+	epatch "${FILESDIR}"/${PN}-2.4.28-fix-dash.patch
+
 	cd "${S}"/build
 	einfo "Making sure upstream build strip does not do stripping too early"
 	sed -i.orig \
@@ -265,7 +268,7 @@ src_prepare() {
 		"${S}"/tests/scripts/* || die "sed failed"
 
 	cd "${S}"
-	WANT_AUTOMAKE=none eautoreconf
+	AT_NOEAUTOMAKE=yes eautoreconf
 }
 
 build_contrib_module() {
