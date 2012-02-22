@@ -1,2 +1,4 @@
 <sys-apps/systemd-9999
-<sys-fs/udev-180
+~sys-fs/udev-181
+~sys-apps/kmod-5
+~sys-fs/udev-init-scripts-8

@@ -3,7 +3,7 @@
 <=kde-misc/networkmanagement-0.9.0 amd64
 ~sys-apps/systemd-39  amd64
 ~net-dialup/ppp-2.4.5  amd64
-<sys-fs/udev-180  amd64
+~sys-fs/udev-181  amd64
 #=sys-fs/udev-init-scripts-8 amd64
 #=sys-apps/kmod-9999 amd64
 ~sys-apps/dbus-1.4.16  amd64
@@ -18,3 +18,7 @@
 ~net-wireless/wpa_supplicant-0.7.3 amd64
 =sys-apps/sysvinit-2.88-r3 amd64
 =sys-apps/util-linux-2.20.1-r1 amd64
+
+
+~sys-fs/udev-init-scripts-8 amd64
+~sys-apps/kmod-5 amd64
