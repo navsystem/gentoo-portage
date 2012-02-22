@@ -1,0 +1,22 @@
+ssl? ( dev-libs/openssl ) dev-vcs/git
+ssl? ( dev-libs/openssl )
+2
+
+
+http://www.atheme.org/project/mowgli
+BSD-2
+Useful set of performance and usability-oriented extensions to C
+
+git-2
+ssl
+
+
+
+4
+
+configure install unpack
+
+
+
+
+
