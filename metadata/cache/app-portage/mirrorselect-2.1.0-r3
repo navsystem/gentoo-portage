@@ -1,5 +1,5 @@
->=app-admin/eselect-python-20091230
-dev-lang/python[xml] dev-util/dialog net-analyzer/netselect >=app-admin/eselect-python-20091230
+>=app-admin/eselect-python-20091230 =dev-lang/python-2* =dev-lang/python-2*[xml]
+dev-util/dialog net-analyzer/netselect >=app-admin/eselect-python-20091230 =dev-lang/python-2* =dev-lang/python-2*[xml]
 0
 mirror://gentoo/mirrorselect-2.1.0.tar.bz2
 
@@ -14,7 +14,7 @@ eutils multilib portability python toolchain-funcs user
 
 3
 
-install postinst postrm prepare
+install postinst postrm prepare setup
 
 
 

@@ -1,7 +1,7 @@
 ssl? ( dev-libs/openssl )
 ssl? ( dev-libs/openssl )
 0
-http://www.maier-komor.de/software/mbuffer/mbuffer-20100526.tgz
+http://www.maier-komor.de/software/mbuffer/mbuffer-20110724.tgz
 
 http://www.maier-komor.de/mbuffer.html
 GPL-2
