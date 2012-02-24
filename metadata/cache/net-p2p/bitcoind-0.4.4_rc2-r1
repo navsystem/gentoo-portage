@@ -1,0 +1,22 @@
+>=dev-libs/boost-1.41.0 dev-libs/crypto++ dev-libs/openssl[-bindist] upnp? ( net-libs/miniupnpc ) sys-libs/db:4.8[cxx] >=app-shells/bash-4.1
+>=dev-libs/boost-1.41.0 dev-libs/crypto++ dev-libs/openssl[-bindist] upnp? ( net-libs/miniupnpc ) sys-libs/db:4.8[cxx]
+0
+http://gitorious.org/bitcoin/bitcoind-stable/archive-tarball/v0.4.4rc2 -> bitcoin-v0.4.4_rc2.tgz bip17? ( http://luke.dashjr.org/programs/bitcoin/files/bip17/bip17_v0.4.0.patch -> bip17_v0.4.0_r2.patch ) eligius? ( http://luke.dashjr.org/programs/bitcoin/files/0.5.2-eligius_sendfee.patch.xz )
+
+http://bitcoin.org/
+MIT ISC
+Original Bitcoin crypto-currency wallet for automated services
+~amd64 ~x86
+db-use eutils multilib portability toolchain-funcs user versionator
++bip17 +eligius ssl upnp
+
+
+
+4
+
+compile install prepare setup
+
+
+
+
+

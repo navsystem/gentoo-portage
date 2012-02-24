@@ -6,7 +6,7 @@ http://www.libsdl.org/projects/SDL_image/release/SDL_image-1.2.12.tar.gz
 http://www.libsdl.org/projects/SDL_image/
 ZLIB
 image file loading library
-~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris
+~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris
 
 gif jpeg png static-libs tiff webp
 

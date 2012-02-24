@@ -1743,6 +1743,8 @@ games-arcade/burgerspace:network - Enable client-server support
 games-arcade/jumpnbump:music - Enable playing of background music
 games-arcade/lbreakout2:themes - Install additional themes
 games-arcade/moleinvasion:music - Download and install the music files
+games-arcade/performous:songs - Install a few demo songs
+games-arcade/performous:tools - Install tools
 games-arcade/slimevolley:net - Enable network support
 games-arcade/smc:music - Download and install the music files
 games-arcade/triplexinvaders:psyco - psyco python accelerator
@@ -1981,6 +1983,7 @@ gnustep-apps/gnumail:emoticon - Enable extra Emoticon Bundle to see smiley's in 
 gnustep-base/gnustep-back-art:xim - Enable X11 XiM input method
 gnustep-base/gnustep-back-cairo:xim - Enable X11 XiM input method
 gnustep-base/gnustep-back-xlib:xim - Enable X11 XiM input method
+gnustep-base/gnustep-gui:speech - Audio support using app-accessibility/flite
 gnustep-base/gnustep-make:libobjc2 - Enables use of the GNUstep Objective-C runtime (gnustep-base/libobjc2) with non-fragile ABI and sys-devel/clang compiler
 gnustep-base/gnustep-make:native-exceptions - Enables use of the native Objective-C exception support (@try/@catch/@finally) built-in objective-c exceptions with compilers that support it
 gnustep-base/libobjc2:boehm-gc - Enable Hans Boehm's garbage collector (dev-libs/boehm-gc)
@@ -3915,6 +3918,7 @@ net-mail/mu:gui - Build and install the experimental gui 'mug'.
 net-mail/notmuch:crypt - Support decryption and verification of PGP/MIME messages and in Emacs UI - encryption
 net-mail/notmuch:doc - Install API documentation for enabled bindings
 net-mail/notmuch:emacs - Install Notmuch client for Emacs (main client)
+net-mail/notmuch:nmbug - Install Experimental Tag Sharing / Pseudo-Bug-Tracking for Notmuch (http://notmuchmail.org/nmbug/)
 net-mail/notmuch:vim - Install Notmuch client for Vim (experimental)
 net-mail/qmailadmin:maildrop - Filter spam using maildrop
 net-mail/qpopper:apop - Enables the pop.auth file in /etc/pop.auth

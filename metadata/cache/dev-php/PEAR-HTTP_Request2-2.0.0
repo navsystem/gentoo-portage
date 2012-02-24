@@ -6,7 +6,7 @@ http://pear.php.net/get/HTTP_Request2-2.0.0.tgz
 http://pear.php.net/HTTP_Request2
 BSD
 Provides an easy way to perform HTTP requests
-~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
+~alpha amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 multilib php-pear-r1 toolchain-funcs
 +curl +fileinfo +ssl +zlib
 
