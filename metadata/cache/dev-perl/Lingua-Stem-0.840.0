@@ -6,7 +6,7 @@ mirror://cpan/authors/id/S/SN/SNOWHARE/Lingua-Stem-0.84.tar.gz
 http://search.cpan.org/dist/Lingua-Stem/
 || ( Artistic GPL-1 GPL-2 GPL-3 )
 Porter's stemming algorithm for 'generic' English
-~amd64 ~ia64 ~ppc ~sparc ~x86
+amd64 ~ia64 ~ppc ~sparc ~x86
 base eutils multilib perl-module portability toolchain-funcs user
 
 

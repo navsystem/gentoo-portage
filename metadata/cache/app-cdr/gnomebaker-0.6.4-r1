@@ -6,7 +6,7 @@ mirror://sourceforge/gnomebaker/gnomebaker-0.6.4.tar.gz
 http://sourceforge.net/projects/gnomebaker
 GPL-2
 GnomeBaker is a GTK2/Gnome cd burning application.
-~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86
+amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86
 eutils fdo-mime gnome.org gnome2 gnome2-utils libtool multilib portability toolchain-funcs user versionator
 dvdr flac libnotify mp3 vorbis
 

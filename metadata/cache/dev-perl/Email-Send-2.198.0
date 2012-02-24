@@ -6,7 +6,7 @@ mirror://cpan/authors/id/R/RJ/RJBS/Email-Send-2.198.tar.gz
 http://search.cpan.org/dist/Email-Send/
 || ( Artistic GPL-1 GPL-2 GPL-3 )
 Simply Sending Email
-~amd64 ~ppc ~ppc64 ~x86
+amd64 ~ppc ~ppc64 ~x86
 base eutils multilib perl-module portability toolchain-funcs user
 
 
