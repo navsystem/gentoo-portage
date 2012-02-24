@@ -1,0 +1,22 @@
+|| ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+sys-fs/quota
+0
+http://quotatool.ekenberg.se/quotatool-1.4.12.tar.gz
+
+http://quotatool.ekenberg.se/
+GPL-2
+command-line utility for filesystem quotas
+~amd64 ~ppc ~x86
+autotools eutils libtool multilib portability toolchain-funcs user
+
+
+
+
+4
+
+install prepare
+
+
+
+
+

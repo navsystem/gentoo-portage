@@ -6,7 +6,7 @@ mirror://sourceforge/icinga/icinga-1.6.1.tar.gz
 http://www.icinga.org/
 GPL-2
 Nagios Fork - Check daemon, CGIs, docs, IDOutils
-~amd64 ~x86
+amd64 ~x86
 depend.apache eutils multilib portability toolchain-funcs user
 +apache2 debug +idoutils lighttpd +mysql perl +plugins postgres ssl +vim-syntax +web apache2
 

@@ -1,11 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/pytables-2.3.1.ebuild,v 1.2 2011/11/28 20:09:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/pytables-2.3.1.ebuild,v 1.4 2012/02/23 20:20:42 mr_bones_ Exp $
 
 EAPI=4
 
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.* 2.7-pypy-* *-jython"
 
 MY_PN=tables
 MY_P=${MY_PN}-${PV}
@@ -29,8 +30,6 @@ RDEPEND="
 	app-arch/bzip2"
 DEPEND="${RDEPEND}
 	dev-python/cython"
-
-RESTRICT_PYTHON_ABIS="3.*"
 
 S=${WORKDIR}/${MY_P}
 

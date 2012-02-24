@@ -1,0 +1,22 @@
+
+
+0
+http://sg.danny.cz/sg/p/smp_utils-0.97.tgz
+
+http://sg.danny.cz/sg/smp_utils.html
+BSD
+Utilities for SAS management protocol (SMP)
+~amd64 ~ppc ~x86
+autotools autotools-utils eutils libtool multilib portability toolchain-funcs user
+static-libs
+
+
+
+4
+
+compile configure install prepare test
+
+
+
+
+

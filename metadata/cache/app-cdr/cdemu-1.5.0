@@ -6,7 +6,7 @@ mirror://sourceforge/cdemu/cdemu-client-1.5.0.tar.bz2
 http://cdemu.org
 GPL-2
 Command-line tool for controlling the CDEmu daemon (cdemud)
-~amd64 ~x86
+~amd64 ~hppa ~x86
 eutils multilib portability python toolchain-funcs user
 +cdemud
 
