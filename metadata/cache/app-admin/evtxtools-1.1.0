@@ -6,7 +6,7 @@ http://computer.forensikblog.de/files/evtx/Parse-Evtx-1.1.0.zip
 http://computer.forensikblog.de/en/topics/windows/vista_event_log
 GPL-2
 Read, decode and dump Windows Vista/2008/7 event log file
-~amd64 ~x86
+amd64 ~x86
 base eutils multilib perl-app perl-module portability toolchain-funcs user
 
 
