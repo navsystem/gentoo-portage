@@ -1,5 +1,5 @@
 
-sys-apps/gawk sys-apps/grep sys-apps/module-init-tools pm-utils? ( >=sys-power/pm-utils-1.4.1 )
+sys-apps/gawk sys-apps/grep virtual/modutils pm-utils? ( >=sys-power/pm-utils-1.4.1 )
 0
 mirror://debian/pool/main/p/powermgmt-base/powermgmt-base_1.31.tar.gz
 

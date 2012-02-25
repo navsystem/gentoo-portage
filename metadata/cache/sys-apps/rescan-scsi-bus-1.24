@@ -1,5 +1,5 @@
 
->=sys-apps/sg3_utils-1.24 sys-apps/module-init-tools app-shells/bash
+>=sys-apps/sg3_utils-1.24 virtual/modutils app-shells/bash
 0
 mirror://gentoo/rescan-scsi-bus.sh-1.24
 
