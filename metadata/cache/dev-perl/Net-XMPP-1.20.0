@@ -6,7 +6,7 @@ mirror://cpan/authors/id/H/HA/HACKER/Net-XMPP-1.02.tar.gz
 http://search.cpan.org/dist/Net-XMPP/
 LGPL-2
 XMPP Perl Library
-~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86
+alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86
 base eutils multilib perl-module portability toolchain-funcs user
 
 
