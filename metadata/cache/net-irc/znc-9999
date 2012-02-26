@@ -8,7 +8,7 @@ GPL-2
 An advanced IRC Bouncer
 
 base eutils git-2 multilib portability python toolchain-funcs user
-debug dns-threads extras ipv6 perl python ssl sasl tcl
+debug dns-threads ipv6 perl python ssl sasl tcl user-networks
 
 
 

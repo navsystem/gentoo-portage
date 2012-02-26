@@ -584,6 +584,7 @@ app-misc/beagle:ole - Enables OLE (Object Linking and Editing) support via dev-d
 app-misc/beagle:pdf - Enables support for indexing of the PDF (Portable Document Format) file format using `pdfinfo` and `pdftotext` from app-text/poppler
 app-misc/beagle:thunderbird - Compiles and installs the extension for either mail-client/thunderbird or mail-client/thunderbird-bin. This extension helps Beagle index your mails.
 app-misc/beagle:xscreensaver - Allow Beagle to detect when the screensaver is switched on. This allows Beagle to use more resources and index faster when the computer is not in use.
+app-misc/byobu:screen - Use app-misc/screen as the default backend
 app-misc/ddccontrol:ddcpci - enable direct PCI memory access (the setuid ddcpci util)
 app-misc/digitemp:ds2490 - Build support for the ds2490 sensor
 app-misc/digitemp:ds9097 - Build support for the ds9097 sensor
@@ -3760,6 +3761,7 @@ net-irc/xchat-xsys:audacious - Enables media-sound/audacious integration
 net-irc/znc:ares - Enables support for asynchronous DNS using the c-ares library
 net-irc/znc:dns-threads - Use threads for DNS resolving
 net-irc/znc:extras - Enable some additional modules
+net-irc/znc:user-networks - Allow non-admin users to add networks
 net-libs/aqbanking:chipcard - Enable support for DDV/RSA-chipcards
 net-libs/c-client:doc - Install RFCs related to IMAP
 net-libs/courier-authlib:vpopmail - Enable vpopmail support
@@ -4667,10 +4669,6 @@ sci-visualization/gnuplot:bitmap - Enable dot-matrix printers and pbm terminal
 sci-visualization/gnuplot:gd - Add support for media-libs/gd. Needed for GIF, JPEG, and PNG image output.
 sci-visualization/gnuplot:thin-splines - Enable thin plate splines
 sci-visualization/gwyddion:sourceview - Enable support for x11-libs/gtksourceview
-sci-visualization/hippodraw:fits - Enable HippoDraw's built-in support for reading FITS files, by using the CFITSIO library. FITS binary and ASCII tables are supported as well as images. When combine with numpy flag, it can also use the pyfits package.
-sci-visualization/hippodraw:numpy - Enable support for the numerical array manipulation and computational capabilities of numpy in python. HippoDraw can return a numerical array to Python from any of the type of objects that are supported. One can also import data to a HippoDraw from a numpy array.
-sci-visualization/hippodraw:root - Adds support for ROOT input/ouput system, storing a table of data as TBranch objects each with a single TLeaf. Files of this type can be imported by HippoDraw as a RootNTuple. Also if root flag is selected, it can use root::minuit for minimization instead of standalone minuit library.
-sci-visualization/hippodraw:wcs - Adds 10 built-in transforms to HippoDraw via the World Coordinate System library for FITS files.
 sci-visualization/opendx:cdf - Add support for sci-libs/cdf data exchange format
 sci-visualization/opendx:hdf - Add support for the Hierarchical Data Format (sci-libs/hdf)
 sci-visualization/paraview:boost - Enable the usage of dev-libs/boost
@@ -5157,9 +5155,6 @@ www-apps/otrs:mod_perl - Provide all dependencies for use of mod_perl instead of
 www-apps/postfixadmin:extras - Install contributed scripts and plugins
 www-apps/postfixadmin:tests - Install model unit tests
 www-apps/postfixadmin:vacation - Install vacation.pl script and dependencies
-www-apps/redmine:darcs - Enable support for dev-vcs/darcs
-www-apps/redmine:git - Enable support for dev-vcs/git
-www-apps/redmine:mercurial - Enable support for dev-vcs/mercurial
 www-apps/redmine:openid - Enable support for OpenID
 www-apps/redmine:passenger - Enable support for www-apache/passenger
 www-apps/rt:lighttpd - Add www-servers/lighttpd support
