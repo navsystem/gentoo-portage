@@ -1,4 +1,4 @@
-dev-lang/ocaml doc? ( dev-ml/ocaml-doc )
+app-arch/unzip dev-lang/ocaml doc? ( dev-ml/ocaml-doc )
 dev-lang/ocaml
 0
 http://tech.motion-twin.com/zip/xml-light-2.2.zip

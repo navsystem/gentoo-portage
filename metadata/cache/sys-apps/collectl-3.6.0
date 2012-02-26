@@ -5,7 +5,7 @@ mirror://sourceforge/collectl/collectl-3.6.0.src.tar.gz
 
 http://collectl.sourceforge.net/
 GPL-2 Artistic
-light-weight performance monitoring tool capable of reporting interactively as well as logging to disk
+light-weight performance monitoring tool capable of reporting interactively and logging to disk
 ~alpha ~amd64 ~ia64 ~x86
 
 

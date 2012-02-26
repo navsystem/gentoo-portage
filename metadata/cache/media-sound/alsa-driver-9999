@@ -1,5 +1,5 @@
-!media-sound/snd-aoa ~media-sound/alsa-headers-9999 virtual/linux-sources sys-apps/debianutils kernel_linux? ( sys-apps/module-init-tools ) sys-apps/sed kernel_linux? ( virtual/linux-sources ) || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 sys-devel/libtool dev-vcs/git
-!media-sound/snd-aoa kernel_linux? ( sys-apps/module-init-tools )
+!media-sound/snd-aoa ~media-sound/alsa-headers-9999 virtual/linux-sources sys-apps/debianutils kernel_linux? ( virtual/modutils ) sys-apps/sed kernel_linux? ( virtual/linux-sources ) || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool dev-vcs/git
+!media-sound/snd-aoa kernel_linux? ( virtual/modutils )
 0
 
 

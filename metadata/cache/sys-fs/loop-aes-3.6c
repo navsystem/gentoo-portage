@@ -1,5 +1,5 @@
->=sys-apps/util-linux-2.12r[crypt,loop-aes] kernel_linux? ( sys-apps/module-init-tools ) sys-apps/sed kernel_linux? ( virtual/linux-sources )
->=sys-apps/util-linux-2.12r[crypt,loop-aes] kernel_linux? ( sys-apps/module-init-tools )
+>=sys-apps/util-linux-2.12r[crypt,loop-aes] kernel_linux? ( virtual/modutils ) sys-apps/sed kernel_linux? ( virtual/linux-sources )
+>=sys-apps/util-linux-2.12r[crypt,loop-aes] kernel_linux? ( virtual/modutils )
 0
 mirror://sourceforge/loop-aes/loop-AES-v3.6c.tar.bz2
 

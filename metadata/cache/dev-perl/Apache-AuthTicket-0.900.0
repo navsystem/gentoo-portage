@@ -6,7 +6,7 @@ mirror://cpan/authors/id/M/MS/MSCHOUT/Apache-AuthTicket-0.90.tar.gz
 http://search.cpan.org/dist/Apache-AuthTicket/
 || ( Artistic-2 GPL-1 GPL-2 GPL-3 )
 Cookie based access module.
-~amd64 ~x86
+amd64 ~x86
 base eutils multilib perl-module portability toolchain-funcs user
 
 

@@ -1,5 +1,5 @@
-!sys-apps/module-init-tools lzma? ( app-arch/xz-utils ) zlib? ( sys-libs/zlib ) doc? ( dev-util/gtk-doc ) || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 sys-devel/libtool
-!sys-apps/module-init-tools lzma? ( app-arch/xz-utils ) zlib? ( sys-libs/zlib )
+!sys-apps/module-init-tools !sys-apps/modutils lzma? ( app-arch/xz-utils ) zlib? ( sys-libs/zlib ) doc? ( dev-util/gtk-doc ) || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+!sys-apps/module-init-tools !sys-apps/modutils lzma? ( app-arch/xz-utils ) zlib? ( sys-libs/zlib )
 0
 http://packages.profusion.mobi/kmod/kmod-5.tar.xz
 

@@ -1,5 +1,5 @@
-app-arch/unzip >=app-admin/eselect-python-20091230 || ( =dev-lang/python-3* =dev-lang/python-2.7* =dev-lang/python-2.6* )
->=app-admin/eselect-python-20091230 || ( =dev-lang/python-3* =dev-lang/python-2.7* =dev-lang/python-2.6* )
+app-arch/unzip >=app-admin/eselect-python-20091230 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
+>=app-admin/eselect-python-20091230 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
 0
 http://pygooglevoice.googlecode.com/files/pygooglevoice-0.5.tar.gz http://pygooglevoice.googlecode.com/files/pygooglevoice-0.5-extras.zip
 test
@@ -12,9 +12,9 @@ doc examples
 
 
 
-3
+4
 
-compile install postinst postrm prepare test
+compile install postinst postrm prepare setup test
 
 
 

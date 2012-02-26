@@ -6,7 +6,7 @@ mirror://sourceforge/cdw/cdw-0.7.0.tar.gz
 http://cdw.sourceforge.net
 GPL-2
 An ncurses based console frontend for cdrtools and dvd+rw-tools
-amd64 ~ppc ~x86
+amd64 ppc ~x86
 autotools eutils flag-o-matic libtool multilib portability toolchain-funcs user
 
 

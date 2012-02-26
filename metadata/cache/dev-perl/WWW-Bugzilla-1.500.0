@@ -6,7 +6,7 @@ mirror://cpan/authors/id/B/BM/BMC/WWW-Bugzilla-1.5.tar.gz
 http://search.cpan.org/dist/WWW-Bugzilla/
 || ( Artistic GPL-1 GPL-2 GPL-3 )
 WWW::Bugzilla - automate interaction with bugzilla
-~amd64 ~ppc ~sparc ~x86
+amd64 ~ppc ~sparc ~x86
 base eutils multilib perl-module portability toolchain-funcs user
 
 

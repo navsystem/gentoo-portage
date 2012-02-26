@@ -6,7 +6,7 @@ mirror://sourceforge/cdemu/cdemu-daemon-1.5.0.tar.bz2
 http://cdemu.org
 GPL-2
 Daemon of the CDEmu optical media image mounting suite
-~amd64 ~x86
+~amd64 ~hppa ~x86
 
 pulseaudio
 

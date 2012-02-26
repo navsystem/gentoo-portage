@@ -6,7 +6,7 @@ http://dev.gentoo.org/~ssuominen/moc-2.5.0_alpha4_p20111211.tar.xz
 http://moc.daper.net
 GPL-2
 Music On Console - ncurses interface for playing audio files
-~alpha amd64 ~ppc ~ppc64 ~sparc ~x86
+~alpha amd64 ~ppc ~ppc64 ~sparc x86
 autotools eutils libtool multilib portability toolchain-funcs user
 aac alsa curl debug ffmpeg flac jack libsamplerate mad modplug musepack oss sid sndfile speex timidity +unicode vorbis wavpack
 

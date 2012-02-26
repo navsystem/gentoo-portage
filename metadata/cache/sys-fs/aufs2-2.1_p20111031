@@ -1,5 +1,5 @@
-dev-vcs/git kernel_linux? ( sys-apps/module-init-tools ) sys-apps/sed kernel_linux? ( virtual/linux-sources )
-!sys-fs/aufs !sys-fs/aufs3 kernel_linux? ( sys-apps/module-init-tools )
+dev-vcs/git kernel_linux? ( virtual/modutils ) sys-apps/sed kernel_linux? ( virtual/linux-sources )
+!sys-fs/aufs !sys-fs/aufs3 kernel_linux? ( virtual/modutils )
 0
 http://dev.gentoo.org/~jlec/distfiles/aufs2-2.1_p20111031.tar.xz
 
