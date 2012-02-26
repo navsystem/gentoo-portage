@@ -1,7 +1,7 @@
 <net-misc/networkmanager-pptp-0.9.3.0  amd64
 <net-misc/networkmanager-0.9.3.0  amd64
 <=kde-misc/networkmanagement-0.9.0 amd64
-~sys-apps/systemd-39  amd64
+~sys-apps/systemd-43  amd64
 ~net-dialup/ppp-2.4.5  amd64
 ~sys-fs/udev-181  amd64
 #=sys-fs/udev-init-scripts-8 amd64
