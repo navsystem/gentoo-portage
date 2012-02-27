@@ -1,5 +1,5 @@
->=sys-kernel/spl-9999 dev-vcs/git kernel_linux? ( virtual/modutils ) sys-apps/sed kernel_linux? ( virtual/linux-sources )
->=sys-kernel/spl-9999 !sys-fs/zfs-fuse sys-apps/util-linux test? ( sys-fs/mdadm ) kernel_linux? ( virtual/modutils )
+>=sys-kernel/spl-9999 sys-apps/util-linux[static-libs?] sys-libs/zlib[static-libs?] test? ( sys-fs/mdadm ) dev-vcs/git kernel_linux? ( virtual/modutils ) sys-apps/sed kernel_linux? ( virtual/linux-sources )
+>=sys-kernel/spl-9999 sys-apps/util-linux[static-libs?] sys-libs/zlib[static-libs?] !sys-fs/zfs-fuse kernel_linux? ( virtual/modutils )
 0
 
 

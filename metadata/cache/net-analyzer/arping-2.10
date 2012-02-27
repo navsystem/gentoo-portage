@@ -1,7 +1,7 @@
-net-libs/libpcap >=net-libs/libnet-1.1.0-r3
-net-libs/libpcap >=net-libs/libnet-1.1.0-r3
+net-libs/libpcap net-libs/libnet:1.1
+net-libs/libpcap net-libs/libnet:1.1
 2
-ftp://ftp.habets.pp.se/pub/synscan/arping-2.08.tar.gz
+http://www.habets.pp.se/synscan/files/arping-2.10.tar.gz
 
 http://www.habets.pp.se/synscan/programs.php?prog=arping
 GPL-2
@@ -12,9 +12,9 @@ multilib toolchain-funcs
 
 
 
+4
 
-
-compile install test unpack
+install prepare test
 
 
 

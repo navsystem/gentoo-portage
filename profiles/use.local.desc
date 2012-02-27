@@ -2725,6 +2725,23 @@ media-sound/clementine:projectm - Build with ProjectM visualization
 media-sound/clementine:wiimote - Enable support for Wii remote
 media-sound/cmus:pidgin - install support script for net-im/pidgin
 media-sound/cmus:wma - add support for Windows Media Audio
+media-sound/csound:beats - Build the beats score frontend
+media-sound/csound:chua - Build the chua opcodes
+media-sound/csound:csoundac - Build the CsoundAC extension module
+media-sound/csound:doc - Install the pdf version of the manual
+media-sound/csound:double-precision - Use double-precision floating point for audio samples
+media-sound/csound:dssi - Build the DSSI opcodes
+media-sound/csound:fluidsynth - Build the fluidsynth opcodes
+media-sound/csound:html - Install the html version of the manual
+media-sound/csound:image - Build the image opcodes
+media-sound/csound:keyboard - Build Virtual MIDI keyboard
+media-sound/csound:linear - Build the linear algebra Opcodes
+media-sound/csound:portmidi - Build the PortMIDI I/O module
+media-sound/csound:samples - Install the HRTF datafiles for use with hrtfmove, hrtfmove2, hrtfstat, hrtfearly, and hrtfreverb
+media-sound/csound:stk - Build the stk opcodes
+media-sound/csound:tcl - Build the tcl interface and clients
+media-sound/csound:utils - Build stand-alone executables for utilities that can also be used via `csound -U`
+media-sound/csound:vst - Build the CsoundVST frontend
 media-sound/darkice:twolame - Build with twolame support
 media-sound/decibel-audio-player:gnome - Adds Gnome media keys support, so you can control Decibel using hotkeys.
 media-sound/decibel-audio-player:gnome-keyring - Adds support for storing your Last.fm password using gnome-keyring.
