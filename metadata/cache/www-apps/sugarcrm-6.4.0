@@ -1,0 +1,22 @@
+>=dev-lang/php-5.2.10[ssl,soap,unicode,xml,session,tokenizer,ldap?,mssql?,mysql?,mysqli?,zlib?,curl?,imap?,json?] dev-php/PEAR-DB dev-php/PEAR-Cache_Lite dev-php/PEAR-Mail_Mime virtual/httpd-cgi freetds? ( >=dev-db/freetds-0.64 mssql? ( >=dev-db/freetds-0.64[mssql] ) ) app-arch/unzip >=app-admin/webapp-config-1.50.15
+>=dev-lang/php-5.2.10[ssl,soap,unicode,xml,session,tokenizer,ldap?,mssql?,mysql?,mysqli?,zlib?,curl?,imap?,json?] dev-php/PEAR-DB dev-php/PEAR-Cache_Lite dev-php/PEAR-Mail_Mime virtual/httpd-cgi freetds? ( >=dev-db/freetds-0.64 mssql? ( >=dev-db/freetds-0.64[mssql] ) ) app-arch/unzip >=app-admin/webapp-config-1.50.15
+6.4.0
+http://www.sugarforge.org/frs/download.php/8838/SugarCE-6.4.0.zip
+
+http://www.sugarforge.org/
+GPL-3
+A complete CRM and groupware system for businesses of all sizes.
+~amd64 ~x86
+eutils multilib portability toolchain-funcs user webapp
+curl imap +json +zlib +mysql +mysqli freetds ldap mssql vhosts
+
+
+
+2
+
+install postinst prerm setup
+
+
+
+
+

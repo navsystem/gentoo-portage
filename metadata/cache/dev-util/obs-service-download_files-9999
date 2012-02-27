@@ -14,7 +14,7 @@ obs-download obs-service
 
 4
 
-install unpack
+install prepare unpack
 
 
 

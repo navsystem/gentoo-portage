@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13519 2012/02/24 18:54:09 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13522 2012/02/26 13:09:20 jlec Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -150,11 +150,6 @@ sys-power/powersoftplus
 net-dns/dlint
 
 # Pacho Ramos <pacho@gentoo.org> (12 Feb 2012)
-# Unmaintained, dead upstream, broken, bug #330419
-# Removal in 30 days
-x11-misc/genmenu
-
-# Pacho Ramos <pacho@gentoo.org> (12 Feb 2012)
 # Unmaintained for a long time, dead upstream and crashes,
 # bug #214545. Removal in 30 days.
 x11-terms/wterm
@@ -221,11 +216,6 @@ app-emulation/lib765
 # Sébastien Fabbro <bicatali@gentoo.org> (05 Feb 2012)
 # still beta software
 >=sci-libs/fftw-3.3.1_beta1
-
-# Sébastien Fabbro <bicatali@gentoo.org> (05 Feb 2012)
-# Dead upstream
-# Bugs #236435, #297701, #368445, #401387. Removal in 30 days
-sci-visualization/hippodraw
 
 # Markos Chandras <hwoarang@gentoo.org> (04 Feb 2012)
 # Dead upstream
@@ -322,7 +312,7 @@ media-fonts/gnu-gs-fonts-other
 =dev-python/pythonmagick-0.9.7-r1
 =dev-python/tagpy-0.94.8-r1
 =dev-python/visual-5.72-r1
-=net-libs/rb_libtorrent-0.15.9-r1
+>=net-libs/rb_libtorrent-0.15.9-r1
 =net-mail/libpst-0.6.54-r1
 =sci-physics/camfr-20070717-r3
 =sci-geosciences/mapnik-0.7.1-r2

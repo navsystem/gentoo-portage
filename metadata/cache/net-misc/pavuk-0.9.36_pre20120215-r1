@@ -1,0 +1,22 @@
+virtual/libintl gtk? ( x11-libs/gtk+:2 ) pcre? ( dev-libs/libpcre ) ssl? ( dev-libs/openssl ) >=sys-apps/sed-4 sys-devel/gettext
+virtual/libintl gtk? ( x11-libs/gtk+:2 ) pcre? ( dev-libs/libpcre ) ssl? ( dev-libs/openssl )
+0
+http://dev.gentoo.org/~pacho/maintainer-needed/pavuk-0.9.36_pre20120215.tar.xz
+
+http://www.pavuk.org/
+GPL-2
+Web spider and website mirroring tool
+~amd64 ~ppc ~sparc ~x86
+autotools autotools-utils eutils libtool multilib portability toolchain-funcs user
+debug gtk hammer ipv6 nls pcre profile ssl
+
+
+
+4
+
+compile configure install prepare test
+
+
+
+
+
