@@ -7,8 +7,8 @@ http://zfsonlinux.org/
 CDDL GPL-2
 Native ZFS for Linux
 
-autotools autotools-utils eutils git-2 libtool linux-info linux-mod multilib portability toolchain-funcs user versionator
-debug static-libs kernel_linux
+autotools autotools-utils eutils flag-o-matic git-2 libtool linux-info linux-mod multilib portability toolchain-funcs user versionator
+custom-cflags debug static-libs kernel_linux
 
 
 
