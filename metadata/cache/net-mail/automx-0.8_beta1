@@ -1,0 +1,22 @@
+>=app-admin/eselect-python-20091230 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
+dev-python/lxml || ( www-apache/mod_wsgi www-servers/uwsgi ) tools? ( net-dns/bind-tools ) tools? ( net-misc/wget ) >=app-admin/eselect-python-20091230 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
+0
+http://www.automx.org/download/automx-0.8_beta1.tar.gz
+
+http://www.automx.org
+GPL-3
+A mail user agent auto configuration service
+~amd64 ~x86
+multilib python toolchain-funcs
+doc +tools
+
+
+
+4
+
+install postinst postrm setup
+
+
+
+
+
