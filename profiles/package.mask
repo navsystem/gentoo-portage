@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13522 2012/02/26 13:09:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13526 2012/02/27 11:53:01 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,12 +31,9 @@
 
 #--- END OF EXAMPLES ---
 
-# Samuli Suominen <ssuominen@gentoo.org> (23 Feb 2012)
-# Last commit upstream 2010 and fails to build against
-# current e2fsprogs wrt #402633. Removal in 30 days unless
-# patch is provided.
-# Try ext3grep or ext4magic as replacement.
-sys-fs/extundelete
+# Sébastien Fabbro <bicatali@gentoo.org> (26 Feb 2012)
+# Needs development version x11-libs/wxGTK
+>=sci-visualization/fityk-1.1
 
 # Michał Górny <mgorny@gentoo.org> (21 Feb 2012)
 # Masked until all reverse dependencies have proper versioned
@@ -130,11 +127,11 @@ dev-libs/libtranslate
 # Removal in a month.
 app-arch/q7z
 
-# Michael Weber <xmw@gentoo.org (13 Feb 2012)
+# Michael Weber <xmw@gentoo.org> (13 Feb 2012)
 # Maked for testing
 >=app-laptop/thinkfan-0.8_alpha2
 
-# Pacho Ramos <pacho@gentoo.org (12 Feb 2012)
+# Pacho Ramos <pacho@gentoo.org> (12 Feb 2012)
 # Unmaintained, segfaults, bug #353556
 # Removal in 30 days
 net-im/skysentials
@@ -185,10 +182,6 @@ app-laptop/configure-thinkpad
 app-emulation/libdsk
 app-emulation/lib765
 
-# Justin Lecher <jlec@gentoo.org> (10 Feb 2012)
-# masked as boost-1.48 is still masked
-=sci-libs/cctbx-2010.03.29.2334-r6
-
 # Tim Harder <radhermit@gentoo.org> (10 Feb 2012)
 # Masked for testing
 =net-libs/gnutls-3*
@@ -232,14 +225,6 @@ app-portage/autounmask
 # No maintainer. Removal in 30 days
 www-apps/twiki
 
-# Sammuli Suominen <ssuominen@gentoo.org> (01 Feb 2012)
-# Masked for removal in 30 days for having unallowed depend for
-# unslotted <net-analyzer/rrdtool-1.2 in the same stabilization
-# level
-net-analyzer/FlowScan
-dev-perl/CUFlow
-dev-perl/JKFlow
-
 # Jeff Horelick <jdhore@gentoo.org> (31 Jan 2011)
 # Masking alpha release series.
 >=dev-libs/libmowgli-2.0.0_alpha1
@@ -256,13 +241,6 @@ dev-db/pgaccess
 # several bugs which makes it someway obsolete.
 # Please use net-misc/miniupnpd instead. Removal in 30 days.
 net-misc/linux-igd
-
-# Samuli Suominen <ssuominen@gentoo.org> (28 Jan 2012)
-# Missing native ConsoleKit support and upstream has
-# stopped development.
-# Use lightdm, gdm, kdm, lxdm, slim (only latest), or xdm (only latest).
-# Removal in 30 days.
-x11-misc/enter
 
 # Ralph Sennhauser <sera@gentoo.org> (28 Jan 2012)
 # Hopelessly outdated, contains broken jars. #91484
@@ -282,40 +260,11 @@ dev-python/pisa
 # Please try app-text/epdfview as light-weight replacement.
 app-text/xpdf
 
-# Samuli Suominen <ssuominen@gentoo.org> (26 Jan 2012)
-# Too broken ebuild to be shipped wrt bugs #400815, #400865
-# and #400923
-=net-p2p/transmission-2.42
-
-# Samuli Suominen <ssuominen@gentoo.org> (26 Jan 2012)
-# No support for stable TIFF 4.x wrt #400925 with multiple
-# other issues wrt #297150, #356083, #335864 and #318485.
-# Version bump request been open since 2011-03-30 wrt #361187
-# Unless fixed, removal in 30 days
-<net-misc/hylafax-6.0.5
-x11-misc/tkhylafax
-
 # Andreas K. Hüttel <dilfridge@gentoo.org> (24 Jan 2012)
 # Finally mask media-fonts/gnu-gs-fonts-* for last-riting, ending
 # year-long annoyance in bug 247657. Replaced by media-fonts/urw-fonts.
 media-fonts/gnu-gs-fonts-std
 media-fonts/gnu-gs-fonts-other
-
-# Markos Chandras <hwoarang@gentoo.org> (24 Jan 2012)
-# Masking boost python reverse dependencies due to upcoming
-# boost changes. These packages are fixed but they will be
-# unmasked once boost-1.48 finds its way to ~testing tree
-# See: http://archives.gentoo.org/gentoo-dev/msg_ab39d8366b714ecacfc7fa64cd48ad00.xml
-=dev-python/cgkit-2.0.0_alpha9-r1
-=dev-python/pycuda-2011.2.2-r1
-=dev-python/pyopencl-2011.2-r1
-=dev-python/pythonmagick-0.9.7-r1
-=dev-python/tagpy-0.94.8-r1
-=dev-python/visual-5.72-r1
->=net-libs/rb_libtorrent-0.15.9-r1
-=net-mail/libpst-0.6.54-r1
-=sci-physics/camfr-20070717-r3
-=sci-geosciences/mapnik-0.7.1-r2
 
 # Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (22 Jan 2012)
 # Mask compiz for last-rites unless someone steps up
@@ -373,17 +322,6 @@ sys-apps/systemd-sysv-utils
 # Eray Aslan <eras@gentoo.org> (19 Jan 2012)
 # Mask experimental software
 =mail-mta/postfix-2.10*
-
-# Samuli Suominen <ssuominen@gentoo.org> (09 Jan 2012)
-# Fails to compile against recent glibc and multiple other issues.
-# No maintainer to take care of the package. Removal in 30 days.
-# Bugs 325331, 284369, 380749, 388741, 381539, 358697, and 332395.
-sys-fs/zfs-fuse
-
-# Markos Chandras <hwoarang@gentoo.org> (08 Jan 2012)
-# Masking new boost release for testing
-~dev-util/boost-build-1.48.0
-~dev-libs/boost-1.48.0
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (04 Jan 2012)
 # Outdated and unused sound daemon. Why is this still in the tree?
@@ -893,10 +831,6 @@ sci-chemistry/webmo
 # Tim Harder <radhermit@gentoo.org> (3 Jun 2011)
 # Mask release candidates
 =app-office/scribus-1.4.0_rc*
-
-# Michael Sterrett <mr_bones_@gentoo.org> (25 May 2011)
-# Needs an old version of bison that isn't in the tree anymore.
-dev-lang/open64
 
 # Hans de Graaff <graaff@gentoo.org> (15 May 2011)
 # Mask new versions until thread-related crashes have been fixed.

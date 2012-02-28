@@ -1,5 +1,5 @@
-virtual/opengl >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
-virtual/opengl
+virtual/opengl media-libs/freeglut >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+virtual/opengl media-libs/freeglut
 0
 http://bullet.googlecode.com/files/bullet-2.79-rev2440.tgz
 
