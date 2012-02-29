@@ -6,7 +6,7 @@ mirror://cpan/authors/id/T/TU/TURNSTEP/Math-GMP-2.06.tar.gz
 http://search.cpan.org/dist/Math-GMP/
 LGPL-2
 High speed arbitrary size integer math
-alpha amd64 hppa ~ia64 ~mips ~ppc ~sparc ~x86
+alpha amd64 hppa ~ia64 ~mips ppc ~sparc ~x86
 base eutils multilib perl-module portability toolchain-funcs user
 
 

@@ -1,0 +1,22 @@
+dev-python/pep8 dev-python/setuptools >=app-admin/eselect-python-20091230 dev-lang/python dev-vcs/git
+dev-python/pep8 >=app-admin/eselect-python-20091230 dev-lang/python
+0
+
+
+https://github.com/hhatto/autopep8 http://pypi.python.org/pypi/autopep8
+MIT
+Automatically formats Python code to conform to the PEP 8 style guide
+
+distutils git-2 multilib python toolchain-funcs
+
+
+
+
+4
+
+compile install postinst postrm prepare setup test unpack
+
+
+
+
+

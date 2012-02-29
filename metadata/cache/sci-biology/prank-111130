@@ -1,0 +1,22 @@
+
+
+0
+http://prank-msa.googlecode.com/files/prank.src.111130.tgz
+
+http://code.google.com/p/prank-msa/ http://www.ebi.ac.uk/goldman-srv/prank/prank/
+GPL-3
+Probabilistic Alignment Kit
+~amd64 ~x86
+multilib toolchain-funcs
+
+
+
+
+4
+
+compile install prepare
+
+
+
+
+
