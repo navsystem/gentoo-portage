@@ -1,5 +1,5 @@
 
-dev-util/osc
+dev-util/suse-build dev-util/osc
 0
 https://api.opensuse.org/public/source/openSUSE:Tools/obs-service-format_spec_file/format_spec_file https://api.opensuse.org/public/source/openSUSE:Tools/obs-service-format_spec_file/format_spec_file.service https://api.opensuse.org/public/source/openSUSE:Tools/obs-service-format_spec_file/prepare_spec
 
