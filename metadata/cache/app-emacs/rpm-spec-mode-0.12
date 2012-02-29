@@ -1,11 +1,11 @@
 >=virtual/emacs-21
 >=virtual/emacs-21
 0
-http://dev.gentoo.org/rpm-spec-mode-0.12.el
+mirror://gentoo/rpm-spec-mode-0.12.el
 
 http://www.emacswiki.org/emacs/RpmSpecMode
 GPL-2
-Emacs mode to ease eiditing of RPM spec files
+Emacs mode to ease editing of RPM spec files
 ~amd64 ~x86
 elisp elisp-common eutils multilib portability toolchain-funcs user
 
