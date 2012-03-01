@@ -21,3 +21,4 @@ sys-block/megacli amd64
 ~dev-libs/libpipeline-1.2.0 amd64 x86
 ~dev-db/pgpool2-3.0.4 amd64
 ~app-portage/smart-live-rebuild-1.2.1 amd64 x86
+~kde-misc/customizable-weather-1.5.11 amd64 x86
