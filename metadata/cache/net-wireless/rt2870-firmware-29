@@ -1,0 +1,22 @@
+
+|| ( sys-fs/udev sys-apps/hotplug )
+0
+mirror://gentoo/rt2870-firmware-29.tar.bz2
+
+http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git http://www.ralinktech.com/en/04_support/support.php?sn=501
+ralink-firmware
+Firmware for Ralink rt2870-based WiFi adapters (rt2800usb and rt2870sta modules)
+~amd64 ~x86
+
+
+
+
+
+4
+
+install
+
+
+
+
+

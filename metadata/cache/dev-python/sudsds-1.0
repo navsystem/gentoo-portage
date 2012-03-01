@@ -1,0 +1,22 @@
+dev-python/setuptools doc? ( dev-python/epydoc ) >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+>=app-admin/eselect-python-20091230 =dev-lang/python-2*
+0
+http://www.nic.cz/public_media/datove_schranky/releases/datovka-2.0/src/sudsds-1.0.tar.gz
+
+https://labs.nic.cz/page/969/
+LGPL-3
+Lightweight SOAP client - Czech NIC labs fork
+~amd64 ~x86
+distutils multilib python toolchain-funcs
+doc
+
+
+
+4
+
+compile install postinst postrm prepare setup
+
+
+
+
+
