@@ -7,7 +7,7 @@ http://canna.sourceforge.jp/
 MIT
 A client-server based Kana-Kanji conversion system
 ~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86
-cannadic eutils multilib portability toolchain-funcs user
+cannadic eutils multilib toolchain-funcs user
 doc
 
 

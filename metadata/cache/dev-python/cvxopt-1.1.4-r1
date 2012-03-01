@@ -7,7 +7,7 @@ http://abel.ee.ucla.edu/cvxopt
 GPL-3
 Python package for convex optimization
 ~amd64 ~x86 ~amd64-linux ~x86-linux
-distutils eutils multilib portability python toolchain-funcs user
+distutils eutils multilib python toolchain-funcs user
 doc +dsdp examples fftw +glpk gsl
 
 

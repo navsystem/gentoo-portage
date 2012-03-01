@@ -7,7 +7,7 @@ http://marsoft.dyndns.info/fortunes-gentoo-ru/
 as-is
 Fortune database of quotes from gentoo.ru forum and gentoo@conference.gentoo.ru
 
-eutils mercurial multilib portability toolchain-funcs user
+eutils mercurial multilib toolchain-funcs user
 
 
 

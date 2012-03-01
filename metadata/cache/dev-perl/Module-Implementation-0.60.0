@@ -7,7 +7,7 @@ http://search.cpan.org/dist/Module-Implementation/
 Artistic-2
 Loads one of several alternate underlying implementations for a module
 ~amd64 ~hppa ~x86 ~x86-fbsd
-base eutils multilib perl-module portability toolchain-funcs user
+base eutils multilib perl-module toolchain-funcs user
 test
 
 

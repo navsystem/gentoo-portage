@@ -1,4 +1,4 @@
-|| ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 sys-devel/libtool dev-vcs/subversion net-misc/rsync
+|| ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool dev-vcs/subversion net-misc/rsync
 
 0
 
@@ -7,7 +7,7 @@ http://dvdnav.mplayerhq.hu/
 GPL-2
 Library for DVD navigation tools
 
-autotools eutils libtool multilib portability subversion toolchain-funcs user
+autotools eutils libtool multilib subversion toolchain-funcs user
 
 
 

@@ -7,7 +7,7 @@ http://www.coreboot.org/Superiotool
 GPL-2
 util to detect Super I/O chips and functionality
 
-eutils multilib portability subversion toolchain-funcs user
+eutils multilib subversion toolchain-funcs user
 pci
 
 

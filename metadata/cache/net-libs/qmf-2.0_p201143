@@ -7,7 +7,7 @@ http://qt.gitorious.org/qt-labs/messagingframework
 LGPL-2.1
 The Qt Messaging Framework
 ~amd64 ~x86
-base eutils multilib portability qt4-r2 toolchain-funcs user
+base eutils multilib qt4-r2 toolchain-funcs user
 debug doc examples test
 
 

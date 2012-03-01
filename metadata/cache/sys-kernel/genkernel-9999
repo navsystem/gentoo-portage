@@ -7,7 +7,7 @@ http://www.gentoo.org
 GPL-2
 Gentoo automatic kernel building scripts
 
-bash-completion eutils git-2 multilib portability toolchain-funcs user
+bash-completion eutils git-2 multilib toolchain-funcs user
 ibm selinux bash-completion
 
 bash-completion? ( app-shells/bash-completion )

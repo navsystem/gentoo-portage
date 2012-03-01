@@ -7,7 +7,7 @@ http://www.sptk.net/
 GPL-2 LGPL-2 LGPL-2.1
 C++ user interface toolkit for X with database and Excel support
 ~alpha amd64 ~mips ~ppc ~sparc x86
-base cmake-utils eutils flag-o-matic multilib portability toolchain-funcs user
+base cmake-utils eutils flag-o-matic multilib toolchain-funcs user
 doc examples excel fltk mysql odbc pcre postgres sqlite ssl
 
 

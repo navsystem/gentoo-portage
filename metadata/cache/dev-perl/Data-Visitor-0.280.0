@@ -7,7 +7,7 @@ http://search.cpan.org/dist/Data-Visitor/
 || ( Artistic GPL-1 GPL-2 GPL-3 )
 Visitor style traversal of Perl data structures
 ~amd64 ~x86 ~x64-macos
-base eutils multilib perl-module portability toolchain-funcs user
+base eutils multilib perl-module toolchain-funcs user
 test
 
 

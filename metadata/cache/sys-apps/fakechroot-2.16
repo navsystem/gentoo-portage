@@ -1,4 +1,4 @@
-|| ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 sys-devel/libtool
+|| ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 
 0
 mirror://debian/pool/main/f/fakechroot/fakechroot_2.16.orig.tar.gz
@@ -7,7 +7,7 @@ http://fakechroot.alioth.debian.org/
 LGPL-2.1
 Provide a faked chroot environment without requiring root privileges
 ~amd64 ~x86
-autotools eutils libtool multilib portability toolchain-funcs user
+autotools eutils libtool multilib toolchain-funcs user
 
 
 

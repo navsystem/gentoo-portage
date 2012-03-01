@@ -7,7 +7,7 @@ http://batterseapower.github.com/test-framework/
 BSD
 Framework for running and organising tests, with HUnit and QuickCheck support
 ~amd64 ~x86
-eutils ghc-package haskell-cabal multilib portability toolchain-funcs user versionator
+eutils ghc-package haskell-cabal multilib toolchain-funcs user versionator
 doc hscolour profile
 
 

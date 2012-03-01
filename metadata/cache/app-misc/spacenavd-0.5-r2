@@ -7,7 +7,7 @@ http://spacenav.sourceforge.net/
 GPL-3
 The spacenavd daemon provides free alternative to the 3dxserv daemon.
 ~amd64 ~x86
-eutils linux-info multilib portability toolchain-funcs user versionator
+eutils linux-info multilib toolchain-funcs user versionator
 X
 
 

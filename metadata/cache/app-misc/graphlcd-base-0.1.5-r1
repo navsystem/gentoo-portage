@@ -7,7 +7,7 @@ http://projects.vdr-developer.org/projects/graphlcd
 GPL-2
 Graphical LCD Driver
 amd64 x86 ~ppc
-eutils flag-o-matic multilib portability toolchain-funcs user
+eutils flag-o-matic multilib toolchain-funcs user
 truetype unicode g15
 
 

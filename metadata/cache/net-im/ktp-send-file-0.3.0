@@ -7,7 +7,7 @@ http://community.kde.org/Real-Time_Communication_and_Collaboration
 LGPL-2.1
 KDE Telepathy file manager plugin to send files to contacts
 ~amd64 ~x86
-base cmake-utils eutils fdo-mime flag-o-matic gnome2-utils kde4-base kde4-functions multilib portability toolchain-funcs user versionator virtualx
+base cmake-utils eutils fdo-mime flag-o-matic gnome2-utils kde4-base kde4-functions multilib toolchain-funcs user versionator virtualx
 debug linguas_cs linguas_da linguas_de linguas_es linguas_et linguas_ga linguas_hu linguas_it linguas_ja linguas_lt linguas_nds linguas_nl linguas_pl linguas_pt linguas_pt_BR linguas_sv linguas_uk linguas_zh_CN linguas_zh_TW aqua
 
 

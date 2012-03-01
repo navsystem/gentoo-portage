@@ -1,4 +1,4 @@
-x11-libs/wxGTK:2.8[X] app-arch/zip dev-libs/libgamin sys-devel/libtool:2 || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 sys-devel/libtool dev-vcs/subversion net-misc/rsync
+x11-libs/wxGTK:2.8[X] app-arch/zip dev-libs/libgamin sys-devel/libtool:2 || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool dev-vcs/subversion net-misc/rsync
 x11-libs/wxGTK:2.8[X]
 0
 
@@ -7,7 +7,7 @@ http://www.codeblocks.org/
 GPL-2
 The open source, cross platform, free C++ IDE.
 
-autotools eutils flag-o-matic libtool multilib portability subversion toolchain-funcs user wxwidgets
+autotools eutils flag-o-matic libtool multilib subversion toolchain-funcs user wxwidgets
 contrib debug pch static-libs
 
 

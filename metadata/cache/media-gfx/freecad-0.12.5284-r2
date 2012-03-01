@@ -7,7 +7,7 @@ http://sourceforge.net/apps/mediawiki/free-cad/
 GPL-2
 QT based Computer Aided Design application
 ~amd64 ~x86
-base cmake-utils eutils flag-o-matic fortran-2 multilib portability python toolchain-funcs user
+base cmake-utils eutils flag-o-matic fortran-2 multilib python toolchain-funcs user
 
 
 

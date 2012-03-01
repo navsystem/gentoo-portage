@@ -7,7 +7,7 @@ http://github.com/kekekeks/skypetab-ng
 LGPL-3
 An LD_PRELOAD wrapper that adds tabs to Skype for Linux
 
-base eutils git-2 multilib portability qt4-r2 toolchain-funcs user
+base eutils git-2 multilib qt4-r2 toolchain-funcs user
 
 
 

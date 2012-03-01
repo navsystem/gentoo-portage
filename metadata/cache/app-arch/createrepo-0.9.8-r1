@@ -7,7 +7,7 @@ http://createrepo.baseurl.org/
 GPL-2
 Creates a common metadata repository
 ~amd64 ~x86
-eutils multilib portability python toolchain-funcs user
+eutils multilib python toolchain-funcs user
 
 
 

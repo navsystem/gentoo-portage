@@ -1,4 +1,4 @@
-|| ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 sys-devel/libtool
+|| ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 
 0
 http://klub.com.pl/dhcpv6/dibbler/dibbler-0.8.0-src.tar.gz
@@ -7,7 +7,7 @@ http://klub.com.pl/dhcpv6/
 GPL-2
 Portable DHCPv6 implementation (server, client and relay)
 ~amd64 ~hppa ~mips ~x86
-autotools eutils flag-o-matic libtool multilib portability toolchain-funcs user
+autotools eutils flag-o-matic libtool multilib toolchain-funcs user
 doc
 
 

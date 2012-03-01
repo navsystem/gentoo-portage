@@ -7,7 +7,7 @@ http://cdemu.org
 GPL-2
 Command-line tool for controlling the CDEmu daemon (cdemud)
 ~amd64 ~hppa ~x86
-eutils multilib portability python toolchain-funcs user
+eutils multilib python toolchain-funcs user
 +cdemud
 
 

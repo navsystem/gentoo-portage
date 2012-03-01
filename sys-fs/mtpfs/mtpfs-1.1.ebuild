@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtpfs/mtpfs-1.1.ebuild,v 1.1 2012/02/29 13:07:27 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtpfs/mtpfs-1.1.ebuild,v 1.3 2012/02/29 16:03:21 xarthisius Exp $
 
 EAPI=4
 
@@ -11,19 +11,27 @@ SRC_URI="http://www.adebenham.com/files/mtp/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug"
+IUSE="debug mad"
 
 DEPEND="dev-libs/glib:2
-	media-libs/libid3tag
-	media-libs/libmad
 	>=media-libs/libmtp-1.1.2
-	sys-fs/fuse"
+	sys-fs/fuse
+	mad? (
+		media-libs/libid3tag
+		media-libs/libmad
+	)"
 RDEPEND="${DEPEND}"
 
 DOCS=(AUTHORS NEWS README)
 
+src_prepare() {
+	sed -e "/#include <string.h>/ a\
+		#include <stdlib.h>" -i mtpfs.h id3read.c || die #implicit
+}
+
 src_configure() {
-	econf $(use_enable debug)
+	econf $(use_enable debug) \
+		$(use_enable mad)
 }
 
 pkg_postinst() {

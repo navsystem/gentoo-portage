@@ -7,7 +7,7 @@ http://dragonegg.llvm.org/
 GPL-2
 GCC plugin that uses LLVM for optimization and code generation
 
-eutils multilib portability subversion toolchain-funcs user
+eutils multilib subversion toolchain-funcs user
 
 
 

@@ -7,7 +7,7 @@ http://search.cpan.org/dist/Params-Validate/
 Artistic-2
 A module to provide a flexible system for validation method/function call parameters
 ~amd64 ~hppa ~x86 ~x86-fbsd
-base eutils multilib perl-module portability toolchain-funcs user
+base eutils multilib perl-module toolchain-funcs user
 test
 
 

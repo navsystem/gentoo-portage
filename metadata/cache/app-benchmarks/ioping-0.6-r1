@@ -7,7 +7,7 @@ http://code.google.com/p/ioping/
 GPL-3
 Simple disk I/0 latency measuring tool
 ~amd64 ~x86 ~amd64-linux ~x86-linux
-eutils multilib portability toolchain-funcs user
+eutils multilib toolchain-funcs user
 
 
 

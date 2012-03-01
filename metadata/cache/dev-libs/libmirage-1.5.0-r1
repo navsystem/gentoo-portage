@@ -7,7 +7,7 @@ http://cdemu.org
 GPL-2
 CD and DVD image access library
 ~amd64 ~hppa ~x86
-autotools eutils libtool multilib portability toolchain-funcs user
+autotools eutils libtool multilib toolchain-funcs user
 static-libs
 
 

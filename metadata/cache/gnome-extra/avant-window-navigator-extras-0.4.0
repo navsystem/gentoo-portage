@@ -7,7 +7,7 @@ http://launchpad.net/awn-extras
 BSD CCPL-Attribution-ShareAlike-3.0 GPL-3 LGPL-2.1
 Applets for the Avant Window Navigator
 ~amd64 ~x86
-eutils fdo-mime gnome.org gnome2 gnome2-utils libtool multilib portability python toolchain-funcs user versionator
+eutils fdo-mime gnome.org gnome2 gnome2-utils libtool multilib python toolchain-funcs user versionator
 +gconf gstreamer webkit
 
 

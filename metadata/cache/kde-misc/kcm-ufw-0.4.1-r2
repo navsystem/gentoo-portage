@@ -7,7 +7,7 @@ http://kde-apps.org/content/show.php?content=137789
 GPL-3
 KCM module to control the Uncomplicated Firewall
 ~amd64 ~x86
-base cmake-utils eutils fdo-mime flag-o-matic gnome2-utils kde4-base kde4-functions multilib portability python toolchain-funcs user versionator virtualx
+base cmake-utils eutils fdo-mime flag-o-matic gnome2-utils kde4-base kde4-functions multilib python toolchain-funcs user versionator virtualx
 debug linguas_en linguas_es linguas_fr linguas_lt aqua
 
 

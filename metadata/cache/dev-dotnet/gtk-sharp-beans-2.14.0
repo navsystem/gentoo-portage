@@ -1,4 +1,4 @@
-dev-dotnet/gio-sharp >=dev-dotnet/glib-sharp-2.12 >=dev-dotnet/gtk-sharp-2.12 >=dev-dotnet/gtk-sharp-gapi-2.12 dev-util/pkgconfig || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 sys-devel/libtool
+dev-dotnet/gio-sharp >=dev-dotnet/glib-sharp-2.12 >=dev-dotnet/gtk-sharp-2.12 >=dev-dotnet/gtk-sharp-gapi-2.12 dev-util/pkgconfig || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 dev-dotnet/gio-sharp >=dev-dotnet/glib-sharp-2.12 >=dev-dotnet/gtk-sharp-2.12 >=dev-dotnet/gtk-sharp-gapi-2.12
 0
 http://github.com/mono/gtk-sharp-beans/tarball/2.14.0 -> gtk-sharp-beans-2.14.0.tar.gz
@@ -7,7 +7,7 @@ http://github.com/mono/gtk-sharp-beans
 LGPL-2.1
 GTK+ API C# binding
 amd64 x86
-autotools eutils libtool mono multilib portability toolchain-funcs user
+autotools eutils libtool mono multilib toolchain-funcs user
 
 
 

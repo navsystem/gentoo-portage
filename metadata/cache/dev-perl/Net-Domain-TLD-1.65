@@ -7,7 +7,7 @@ http://search.cpan.org/~rjbs/
 Artistic
 Gives ability to retrieve currently available tld names/descriptions and perform verification of given tld name
 amd64 hppa ~mips ppc ppc64 x86
-base eutils multilib perl-module portability toolchain-funcs user
+base eutils multilib perl-module toolchain-funcs user
 
 
 

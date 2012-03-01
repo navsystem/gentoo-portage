@@ -7,7 +7,7 @@ http://tortoisehg.bitbucket.org
 GPL-2
 Set of graphical tools for Mercurial
 
-distutils eutils mercurial multilib portability python toolchain-funcs user
+distutils eutils mercurial multilib python toolchain-funcs user
 doc nautilus
 
 

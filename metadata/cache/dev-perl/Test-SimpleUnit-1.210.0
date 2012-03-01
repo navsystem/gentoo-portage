@@ -7,7 +7,7 @@ http://search.cpan.org/dist/Test-SimpleUnit/
 || ( Artistic GPL-2 GPL-3 )
 Simplified Perl unit-testing framework
 amd64 ia64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos
-base eutils multilib perl-module portability toolchain-funcs user
+base eutils multilib perl-module toolchain-funcs user
 
 
 

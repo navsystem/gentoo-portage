@@ -7,7 +7,7 @@ http://sourceforge.net/projects/mjpg-streamer
 GPL-2
 MJPG-streamer takes JPGs from Linux-UVC compatible webcams
 ~x86 ~amd64
-eutils multilib portability toolchain-funcs user
+eutils multilib toolchain-funcs user
 input_testpicture input_control input_file input_uvc output_file output_udp output_http output_autofocus output_rtsp www v4l
 || ( input_testpicture input_control input_file input_uvc ) || ( output_file output_udp output_http output_autofocus output_rtsp ) v4l? ( input_uvc )
 

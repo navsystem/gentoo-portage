@@ -7,7 +7,7 @@ http://libnids.sourceforge.net/
 GPL-2
 an implementation of an E-component of Network Intrusion Detection System
 ~amd64 ~ppc ~x86
-eutils multilib portability toolchain-funcs user
+eutils multilib toolchain-funcs user
 +glib +libnet static-libs
 
 

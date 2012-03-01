@@ -7,7 +7,7 @@ http://www.gnome.org/projects/gdm/
 GPL-2
 GNOME Display Manager
 ~amd64 ~sh ~x86
-autotools eutils fdo-mime flag-o-matic gnome.org gnome2 gnome2-utils libtool multilib pam portability systemd toolchain-funcs user versionator
+autotools eutils fdo-mime flag-o-matic gnome.org gnome2 gnome2-utils libtool multilib pam systemd toolchain-funcs user versionator
 accessibility +consolekit +fallback fprint +gnome-shell ipv6 gnome-keyring +introspection selinux smartcard tcpd test xinerama +xklavier debug
 
 

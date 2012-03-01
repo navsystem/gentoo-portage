@@ -1,4 +1,4 @@
-dii? ( media-gfx/imagemagick[png] ) virtual/libiconv dii? ( media-libs/gd[png] ) python? ( >=dev-libs/boost-1.48[python] ) || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 sys-devel/libtool >=app-admin/eselect-python-20091230 python? ( =dev-lang/python-2* )
+dii? ( media-gfx/imagemagick[png] ) virtual/libiconv dii? ( media-libs/gd[png] ) python? ( >=dev-libs/boost-1.48[python] ) || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=app-admin/eselect-python-20091230 python? ( =dev-lang/python-2* )
 dii? ( media-gfx/imagemagick[png] ) >=app-admin/eselect-python-20091230 python? ( =dev-lang/python-2* )
 0
 http://www.five-ten-sg.com/libpst/packages/libpst-0.6.54.tar.gz
@@ -7,7 +7,7 @@ http://www.five-ten-sg.com/libpst/
 GPL-2
 Tools and library for reading Outlook files (.pst format)
 ~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86
-autotools eutils libtool multilib portability python toolchain-funcs user
+autotools eutils libtool multilib python toolchain-funcs user
 debug dii doc python static-libs
 
 

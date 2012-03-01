@@ -7,7 +7,7 @@ http://www.cs.unm.edu/~mccune/mace4/
 GPL-2
 This is a Graphical User Interface for Prover9 and Mace4.
 ~amd64 ~x86
-base distutils eutils multilib portability python toolchain-funcs user
+base distutils eutils multilib python toolchain-funcs user
 examples
 
 

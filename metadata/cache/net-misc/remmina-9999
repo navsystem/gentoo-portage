@@ -7,7 +7,7 @@ http://remmina.sourceforge.net/
 GPL-2
 A GTK+ RDP, VNC, XDMCP and SSH client
 
-base cmake-utils eutils flag-o-matic git-2 gnome2-utils multilib portability toolchain-funcs user
+base cmake-utils eutils flag-o-matic git-2 gnome2-utils multilib toolchain-funcs user
 ayatana avahi crypt debug freerdp gnome-keyring +gtk3 nls ssh telepathy vte
 
 

@@ -7,7 +7,7 @@ http://wiki.clutter-project.org/wiki/Mash
 LGPL-2.1
 A library for rendering 3D models with Clutter
 amd64 x86
-eutils fdo-mime gnome.org gnome2 gnome2-utils libtool multilib portability toolchain-funcs user versionator
+eutils fdo-mime gnome.org gnome2 gnome2-utils libtool multilib toolchain-funcs user versionator
 doc examples +introspection
 
 

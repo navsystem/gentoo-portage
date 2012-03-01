@@ -7,7 +7,7 @@ https://github.com/pfi/pficommon
 BSD
 General purpose C++ library for PFI
 ~amd64
-base eutils multilib portability toolchain-funcs user waf-utils
+base eutils multilib toolchain-funcs user waf-utils
 fcgi imagemagick mprpc mysql postgres test
 
 

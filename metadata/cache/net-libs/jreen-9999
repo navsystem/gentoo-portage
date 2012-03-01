@@ -7,7 +7,7 @@ https://github.com/euroelessar/jreen
 GPL-2
 Qt XMPP library
 
-base cmake-utils eutils flag-o-matic git-2 multilib portability qt4-r2 toolchain-funcs user
+base cmake-utils eutils flag-o-matic git-2 multilib qt4-r2 toolchain-funcs user
 debug
 
 

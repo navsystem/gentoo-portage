@@ -7,7 +7,7 @@ http://mediainfo.sourceforge.net
 LGPL-3
 MediaInfo supplies technical and tag information about media files
 amd64 x86
-autotools autotools-utils eutils libtool multilib portability toolchain-funcs user wxwidgets
+autotools autotools-utils eutils libtool multilib toolchain-funcs user wxwidgets
 curl mms wxwidgets
 
 

@@ -7,7 +7,7 @@ http://www.rfc1149.net/devel/recoverjpeg
 GPL-2
 Recover JPEG pictures from a possibly corrupted disk image
 amd64 ~x86
-base eutils multilib portability toolchain-funcs user
+base eutils multilib toolchain-funcs user
 
 
 

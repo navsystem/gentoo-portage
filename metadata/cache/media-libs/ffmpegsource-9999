@@ -1,4 +1,4 @@
-sys-libs/zlib >=virtual/ffmpeg-0.9 dev-util/pkgconfig dev-vcs/subversion net-misc/rsync || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 sys-devel/libtool
+sys-libs/zlib >=virtual/ffmpeg-0.9 dev-util/pkgconfig dev-vcs/subversion net-misc/rsync || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 sys-libs/zlib >=virtual/ffmpeg-0.9
 0
 
@@ -7,7 +7,7 @@ https://code.google.com/p/ffmpegsource/
 MIT
 An FFmpeg based source library for easy frame accurate access
 
-autotools autotools-utils eutils libtool multilib portability subversion toolchain-funcs user
+autotools autotools-utils eutils libtool multilib subversion toolchain-funcs user
 static-libs
 
 

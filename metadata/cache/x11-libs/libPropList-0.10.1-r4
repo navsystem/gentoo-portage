@@ -1,4 +1,4 @@
-|| ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 sys-devel/libtool
+|| ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 
 0
 ftp://ftp.windowmaker.org/pub/libs/libPropList-0.10.1.tar.gz
@@ -7,7 +7,7 @@ http://www.windowmaker.org/
 LGPL-2
 libPropList
 ~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86
-autotools eutils libtool multilib portability toolchain-funcs user
+autotools eutils libtool multilib toolchain-funcs user
 static-libs
 
 

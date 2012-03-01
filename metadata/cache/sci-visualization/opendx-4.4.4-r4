@@ -7,7 +7,7 @@ http://www.opendx.org/
 IBM
 A 3D data visualization tool
 amd64 ppc x86 ~amd64-linux
-autotools eutils flag-o-matic libtool multilib portability toolchain-funcs user
+autotools eutils flag-o-matic libtool multilib toolchain-funcs user
 hdf cdf netcdf tiff imagemagick szip smp
 
 

@@ -7,7 +7,7 @@ http://ghostscript.com/
 GPL-3 CPL-1.0
 Ghostscript is an interpreter for the PostScript language and for PDF
 ~amd64 ~arm ~hppa ~mips ~ppc ~s390 ~sh ~x86 ~sparc-fbsd ~x86-fbsd
-autotools eutils flag-o-matic libtool multilib portability toolchain-funcs user versionator
+autotools eutils flag-o-matic libtool multilib toolchain-funcs user versionator
 bindist cups dbus djvu gtk idn jpeg2k static-libs X linguas_ja linguas_ko linguas_zh_CN linguas_zh_TW
 
 

@@ -7,7 +7,7 @@ http://mg.pov.lt/gtimelog/
 GPL-2
 A small Gtk+ application for keeping track of your time
 ~amd64 ~x86
-distutils eutils multilib portability python toolchain-funcs user versionator virtualx
+distutils eutils multilib python toolchain-funcs user versionator virtualx
 ayatana test test
 
 

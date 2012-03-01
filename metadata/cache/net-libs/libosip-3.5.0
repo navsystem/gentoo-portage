@@ -1,4 +1,4 @@
-|| ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 sys-devel/libtool
+|| ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 
 2
 mirror://gnu/osip/libosip2-3.5.0.tar.gz
@@ -7,7 +7,7 @@ http://www.gnu.org/software/osip/
 LGPL-2
 a simple way to support the Session Initiation Protocol
 amd64 ppc ~sparc x86 ~ppc-macos ~x86-macos
-autotools eutils libtool multilib portability toolchain-funcs user
+autotools eutils libtool multilib toolchain-funcs user
 test
 
 

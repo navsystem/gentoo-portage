@@ -7,7 +7,7 @@ http://search.cpan.org/dist/MogileFS-Client-Async/
 || ( Artistic GPL-1 GPL-2 GPL-3 )
 MogileFS Client using AnyEvent non-blocking IO
 ~amd64 ~x86
-base eutils multilib perl-module portability toolchain-funcs user
+base eutils multilib perl-module toolchain-funcs user
 
 
 

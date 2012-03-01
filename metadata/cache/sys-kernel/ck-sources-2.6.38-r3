@@ -7,7 +7,7 @@ http://dev.gentoo.org/~mpagano/genpatches/ http://www.kernel.org/pub/linux/kerne
 GPL-2 !deblob? ( freedist )
 Con Kolivas' high performance patchset + Gentoo patchset sources
 ~amd64 ~x86
-eutils kernel-2 multilib portability toolchain-funcs user versionator
+eutils kernel-2 multilib toolchain-funcs user versionator
 symlink build deblob
 
 !build? ( virtual/dev-manager )

@@ -7,7 +7,7 @@ http://projects.gnome.org/tracker/
 GPL-2
 A tagging metadata database, search tool and indexer
 ~amd64 ~x86
-eutils fdo-mime gnome.org gnome2 gnome2-utils libtool linux-info multilib portability python toolchain-funcs user versionator
+eutils fdo-mime gnome.org gnome2 gnome2-utils libtool linux-info multilib python toolchain-funcs user versionator
 applet doc eds elibc_glibc exif firefox-bookmarks flac flickr gif gnome-keyring gsf gstreamer gtk iptc +jpeg laptop mp3 nautilus networkmanager pdf playlist rss test thunderbird +tiff upnp +vorbis xine +xml xmp
 
 nautilus? ( >=gnome-extra/nautilus-tracker-tags-0.12.7 )

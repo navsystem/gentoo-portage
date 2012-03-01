@@ -1,4 +1,4 @@
-sys-devel/gettext virtual/yacc =sys-devel/automake-1.9* >=sys-devel/autoconf-2.61 sys-devel/libtool dev-vcs/subversion net-misc/rsync
+sys-devel/gettext virtual/yacc =sys-devel/automake-1.9* >=sys-devel/autoconf-2.68 sys-devel/libtool dev-vcs/subversion net-misc/rsync
 
 0
 
@@ -7,7 +7,7 @@ http://svn.netlabs.org/kbuild/wiki
 GPL-3
 A makefile framework for writing simple makefiles for complex tasks
 
-autotools eutils libtool multilib portability subversion toolchain-funcs user
+autotools eutils libtool multilib subversion toolchain-funcs user
 
 
 

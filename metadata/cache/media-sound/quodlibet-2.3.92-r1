@@ -7,7 +7,7 @@ http://code.google.com/p/quodlibet/
 GPL-2
 audio library tagger, manager, and player for GTK+
 ~alpha amd64 ppc ppc64 ~sparc x86
-distutils eutils multilib portability python toolchain-funcs user
+distutils eutils multilib python toolchain-funcs user
 dbus gstreamer ipod
 ipod? ( dbus )
 

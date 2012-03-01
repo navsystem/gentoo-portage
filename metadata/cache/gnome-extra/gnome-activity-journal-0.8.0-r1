@@ -7,7 +7,7 @@ https://launchpad.net/gnome-activity-journal/
 GPL-3 LGPL-3
 Tool for easily browsing and finding files on your computer
 ~amd64 ~x86 ~amd64-linux ~x86-linux
-distutils eutils fdo-mime gnome.org gnome2 gnome2-utils libtool multilib portability python toolchain-funcs user versionator
+distutils eutils fdo-mime gnome.org gnome2 gnome2-utils libtool multilib python toolchain-funcs user versionator
 debug
 
 

@@ -7,7 +7,7 @@ http://www.mythtv.org
 GPL-2
 Homebrew PVR project
 ~amd64 ~x86
-base eutils flag-o-matic linux-info multilib portability python qt4 toolchain-funcs user versionator
+base eutils flag-o-matic linux-info multilib python qt4 toolchain-funcs user versionator
 altivec autostart dvb dvd bluray ieee1394 jack lcd lirc alsa jack debug profile perl python xvmc vdpau video_cards_nvidia input_devices_joystick
 
 

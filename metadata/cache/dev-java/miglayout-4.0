@@ -7,7 +7,7 @@ http://www.miglayout.com/
 BSD
 Easy to use yet very powerful Java Swing layout manager
 ~amd64
-eutils java-pkg-2 java-utils-2 multilib portability toolchain-funcs user versionator
+eutils java-pkg-2 java-utils-2 multilib toolchain-funcs user versionator
 swt elibc_FreeBSD doc examples source
 
 

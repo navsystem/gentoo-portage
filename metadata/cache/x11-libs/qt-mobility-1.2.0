@@ -7,7 +7,7 @@ http://qt.nokia.com/products/qt-addons/mobility
 LGPL-2.1
 Additional Qt APIs for mobile devices and desktop platforms
 ~amd64 ~x86
-base eutils multilib portability qt4-r2 toolchain-funcs user
+base eutils multilib qt4-r2 toolchain-funcs user
 bluetooth debug doc networkmanager opengl pulseaudio qml +tools bearer connectivity contacts feedback gallery location messaging multimedia organizer publishsubscribe sensors serviceframework systeminfo versit
 versit? ( contacts )
 connectivity? ( bluetooth? ( app-mobilephone/obexd ) ) systeminfo? ( sys-fs/udisks sys-power/upower )

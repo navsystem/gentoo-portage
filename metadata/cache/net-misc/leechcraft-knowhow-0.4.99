@@ -7,7 +7,7 @@ http://leechcraft.org/
 GPL-3
 KnowHow, plugin for showing Tips of the Day in LeechCraft
 amd64 ~x86
-base cmake-utils eutils flag-o-matic leechcraft multilib portability toolchain-funcs user versionator
+base cmake-utils eutils flag-o-matic leechcraft multilib toolchain-funcs user versionator
 debug
 
 

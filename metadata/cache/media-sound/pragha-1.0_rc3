@@ -7,7 +7,7 @@ http://pragha.wikispaces.com/
 GPL-3
 A lightweight music player for the Xfce desktop environment
 amd64 x86
-autotools base eutils fdo-mime gnome2-utils libtool multilib portability toolchain-funcs user xfconf
+autotools base eutils fdo-mime gnome2-utils libtool multilib toolchain-funcs user xfconf
 debug +glyr lastfm
 
 

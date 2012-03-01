@@ -7,7 +7,7 @@ http://gtkmmviewer.sourceforge.net/
 GPL-2
 Powerful GTK+ based image & movie viewer
 amd64 ~hppa ppc ppc64 x86
-eutils libtool multilib portability toolchain-funcs user
+eutils libtool multilib toolchain-funcs user
 mng nls mplayer svg wmf
 
 

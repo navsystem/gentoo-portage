@@ -7,7 +7,7 @@ http://www.astromatic.net/software/scamp
 CeCILL-2
 Astrometric and photometric solutions for astronomical images
 ~amd64 ~x86
-eutils multilib portability toolchain-funcs user
+eutils multilib toolchain-funcs user
 doc threads plplot
 
 

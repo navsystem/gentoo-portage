@@ -7,7 +7,7 @@ http://repo.or.cz/w/llpp.git
 GPL-3
 a graphical PDF viewer which aims to superficially resemble less(1)
 
-eutils git-2 multilib portability toolchain-funcs user
+eutils git-2 multilib toolchain-funcs user
 
 
 

@@ -7,7 +7,7 @@ http://search.cpan.org/dist/Class-Load-XS/
 Artistic-2
 XS implementation of parts of Class::Load
 ~amd64 ~x86
-base eutils multilib perl-module portability toolchain-funcs user
+base eutils multilib perl-module toolchain-funcs user
 test
 
 

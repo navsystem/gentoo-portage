@@ -7,7 +7,7 @@ http://www.vmware.com/support/developer/vix-api/
 vmware
 VMware VIX API for Linux
 -* ~amd64 ~x86
-eutils multilib portability toolchain-funcs user versionator vmware-bundle
+eutils multilib toolchain-funcs user versionator vmware-bundle
 doc
 
 

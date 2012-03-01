@@ -7,7 +7,7 @@ http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html
 GPL-2
 Linux dynamic and persistent device naming support (aka userspace devfs)
 ~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86
-eutils flag-o-matic libtool linux-info multilib portability systemd toolchain-funcs user versionator
+eutils flag-o-matic libtool linux-info multilib systemd toolchain-funcs user versionator
 build selinux debug +rule_generator hwdb acl gudev introspection keymap floppy edd doc static-libs
 
 
