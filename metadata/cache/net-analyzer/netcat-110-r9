@@ -1,5 +1,5 @@
-crypt? ( dev-libs/libmix )
-crypt? ( dev-libs/libmix )
+!static? ( crypt? ( dev-libs/libmix ) ) static? ( crypt? ( dev-libs/libmix[static-libs(+)] ) )
+!static? ( crypt? ( dev-libs/libmix ) )
 0
 mirror://sourceforge/nc110/nc110.tgz ftp://sith.mimuw.edu.pl/pub/users/baggins/IPv6/nc-v6-20000918.patch.gz mirror://gentoo/netcat-110-patches-1.0.tar.bz2
 
@@ -12,9 +12,9 @@ crypt ipv6 static
 
 
 
+4
 
-
-compile install unpack
+compile install prepare
 
 
 

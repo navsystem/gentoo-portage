@@ -6,15 +6,15 @@ test
 http://nodejs.org/
 GPL-2
 Evented IO for V8 Javascript
-~x86 ~amd64
+~amd64 ~x86 ~x64-macos
 eutils multilib pax-utils toolchain-funcs user
 
 
 
 
-2
+3
 
-compile configure install test
+compile configure install prepare test
 
 
 

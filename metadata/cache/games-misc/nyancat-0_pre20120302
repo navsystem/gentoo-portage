@@ -1,0 +1,22 @@
+
+
+0
+http://dev.gentoo.org/~ssuominen/nyancat-0_pre20120302.tar.bz2
+
+http://miku.acm.uiuc.edu/ http://github.com/klange/nyancat
+UoI-NCSA
+Nyan Cat Telnet Server
+~amd64 ~x86
+base eutils games multilib toolchain-funcs user
+
+
+
+
+2
+
+compile configure install postinst preinst prepare setup unpack
+
+
+
+
+
