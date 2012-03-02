@@ -7,7 +7,7 @@ http://csounds.com/
 LGPL-2.1
 A sound design and signal processing system providing facilities for composition and performance
 ~amd64 ~x86
-eutils java-pkg-opt-2 java-utils-2 multilib portability python scons-utils toolchain-funcs user versionator
+eutils java-pkg-opt-2 java-utils-2 multilib python scons-utils toolchain-funcs user versionator
 +alsa beats chua csoundac +cxx debug double-precision dssi examples fltk +fluidsynth html +image jack java keyboard linear lua luajit nls osc openmp doc portaudio portmidi pulseaudio python samples static-libs stk tcl test +threads +utils vim-syntax vst linguas_de linguas_en_GB linguas_en_US linguas_es_CO linguas_fr linguas_it linguas_ro linguas_ru elibc_FreeBSD java
 vst? ( csoundac ) java? ( cxx ) linear? ( double-precision ) lua? ( cxx ) python? ( cxx )
 

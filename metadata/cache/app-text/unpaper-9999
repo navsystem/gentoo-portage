@@ -1,4 +1,4 @@
-test? ( media-libs/netpbm[png] ) dev-libs/libxslt app-text/docbook-xsl-ns-stylesheets dev-vcs/git || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 sys-devel/libtool
+test? ( media-libs/netpbm[png] ) dev-libs/libxslt app-text/docbook-xsl-ns-stylesheets dev-vcs/git || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 
 0
 
@@ -7,7 +7,7 @@ http://www.flameeyes.eu/projects/unpaper
 GPL-2
 Post-processor for scanned and photocopied book pages
 
-autotools eutils git-2 libtool multilib portability toolchain-funcs user
+autotools eutils git-2 libtool multilib toolchain-funcs user
 test
 
 

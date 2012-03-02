@@ -7,7 +7,7 @@ http://sourceware.org/gdb/
 GPL-2 LGPL-2
 GNU debugger
 
-eutils flag-o-matic git-2 multilib portability toolchain-funcs user
+eutils flag-o-matic git-2 multilib toolchain-funcs user
 +client expat multitarget nls +python +server test vanilla zlib
 
 

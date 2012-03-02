@@ -7,7 +7,7 @@ https://savannah.cern.ch/projects/hepmc/
 GPL-2
 Event Record for Monte Carlo Generators
 ~amd64 ~x86
-base cmake-utils eutils flag-o-matic multilib portability toolchain-funcs user
+base cmake-utils eutils flag-o-matic multilib toolchain-funcs user
 cm doc examples gev static-libs test
 
 

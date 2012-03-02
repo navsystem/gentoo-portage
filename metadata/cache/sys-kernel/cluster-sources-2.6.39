@@ -7,7 +7,7 @@ http://dev.gentoo.org/~mpagano/genpatches/ http://dev.gentoo.org/~alexxy/cluster
 GPL-2 freedist
 Gentoo patchset + some additional cluster related patches
 ~amd64 ~x86
-eutils kernel-2 multilib portability toolchain-funcs user versionator
+eutils kernel-2 multilib toolchain-funcs user versionator
 symlink build
 
 !build? ( virtual/dev-manager )

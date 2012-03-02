@@ -7,7 +7,7 @@ http://search.cpan.org/dist/Gtk2-Notify/
 LGPL-2
 A perl interface to the notification library
 ~amd64 ~x86
-base eutils multilib perl-module portability toolchain-funcs user
+base eutils multilib perl-module toolchain-funcs user
 test
 
 

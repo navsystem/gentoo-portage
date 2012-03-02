@@ -1,4 +1,4 @@
-dev-libs/expat || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 sys-devel/libtool
+dev-libs/expat || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 dev-libs/expat
 0
 mirror://sourceforge/mamory/mamory-0.2.25.tar.gz
@@ -7,7 +7,7 @@ http://mamory.sourceforge.net/
 GPL-2
 ROM management tools and library
 ~amd64 ppc x86
-autotools base eutils games libtool multilib portability toolchain-funcs user
+autotools base eutils games libtool multilib toolchain-funcs user
 
 
 

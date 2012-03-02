@@ -1,4 +1,4 @@
-|| ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 sys-devel/libtool >=app-admin/eselect-python-20091230 test? ( =dev-lang/python-2* )
+|| ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=app-admin/eselect-python-20091230 test? ( =dev-lang/python-2* )
 >=app-admin/eselect-python-20091230 test? ( =dev-lang/python-2* )
 0
 mirror://gentoo/autodocksuite/autodocksuite-4.2.3-src.tar.gz
@@ -7,7 +7,7 @@ http://autodock.scripps.edu/
 GPL-2
 A suite of automated docking tools
 ~amd64 ~x86
-autotools eutils libtool multilib portability python toolchain-funcs user
+autotools eutils libtool multilib python toolchain-funcs user
 test
 
 

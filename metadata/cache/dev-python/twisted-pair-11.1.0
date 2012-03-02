@@ -7,7 +7,7 @@ http://www.twistedmatrix.com/
 MIT
 Twisted low-level networking
 ~amd64 ~x86
-distutils eutils multilib portability python toolchain-funcs twisted user versionator
+distutils eutils multilib python toolchain-funcs twisted user versionator
 
 
 

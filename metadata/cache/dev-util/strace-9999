@@ -7,7 +7,7 @@ http://sourceforge.net/projects/strace/
 BSD
 A useful diagnostic, instructional, and debugging tool
 
-autotools eutils flag-o-matic git-2 libtool multilib portability toolchain-funcs user
+autotools eutils flag-o-matic git-2 libtool multilib toolchain-funcs user
 static aio
 
 

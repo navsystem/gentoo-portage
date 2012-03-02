@@ -7,7 +7,7 @@ http://www.fefe.de/dietlibc/
 GPL-2
 A minimal libc
 alpha amd64 arm hppa ~mips sparc x86
-eutils flag-o-matic multilib portability toolchain-funcs user
+eutils flag-o-matic multilib toolchain-funcs user
 debug
 
 

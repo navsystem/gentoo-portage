@@ -7,7 +7,7 @@ http://leechcraft.org/
 GPL-3
 LeechCraft plugin for supporting and managing Internet data storages like Yandex.Disk
 
-base cmake-utils eutils flag-o-matic git-2 leechcraft multilib portability toolchain-funcs user versionator
+base cmake-utils eutils flag-o-matic git-2 leechcraft multilib toolchain-funcs user versionator
 +yandexdisk
 
 

@@ -7,7 +7,7 @@ https://github.com/mono/dbus-sharp
 MIT
 D-Bus for .NET
 ~amd64 ~ppc ~x86
-eutils mono multilib portability toolchain-funcs user
+eutils mono multilib toolchain-funcs user
 
 
 

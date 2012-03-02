@@ -7,7 +7,7 @@ http://ipmitool.sf.net/
 BSD
 Utility for controlling IPMI enabled devices.
 amd64 ~ia64 ppc x86
-eutils multilib portability toolchain-funcs user
+eutils multilib toolchain-funcs user
 openipmi
 
 

@@ -7,7 +7,7 @@ http://trac.enlightenment.org/e/wiki/Evas
 BSD
 hardware-accelerated retained canvas API
 ~amd64 ~x86
-enlightenment eutils libtool multilib portability toolchain-funcs user
+enlightenment eutils libtool multilib toolchain-funcs user
 altivec bidi +bmp directfb +eet fbcon +fontconfig gles gif +ico +jpeg mmx opengl +png +ppm +psd sdl sse svg static-libs tga +threads tiff X xcb xpm nls doc
 
 

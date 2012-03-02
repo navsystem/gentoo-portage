@@ -7,7 +7,7 @@ http://search.cpan.org/dist/Tie-Simple/
 || ( Artistic GPL-1 GPL-2 GPL-3 )
 Module for creating easier variable ties
 ~amd64 ~hppa ~x86
-base eutils multilib perl-module portability toolchain-funcs user
+base eutils multilib perl-module toolchain-funcs user
 
 
 

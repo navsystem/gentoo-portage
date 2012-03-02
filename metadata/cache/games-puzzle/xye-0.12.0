@@ -1,4 +1,4 @@
-media-libs/libsdl[video] media-libs/sdl-ttf media-libs/sdl-image[png] media-fonts/dejavu || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 sys-devel/libtool
+media-libs/libsdl[video] media-libs/sdl-ttf media-libs/sdl-image[png] media-fonts/dejavu || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 media-libs/libsdl[video] media-libs/sdl-ttf media-libs/sdl-image[png] media-fonts/dejavu
 0
 mirror://sourceforge/xye/xye-0.12.0.tar.gz
@@ -7,7 +7,7 @@ http://xye.sourceforge.net/
 ZLIB
 Free version of the classic game Kye
 amd64 x86
-autotools base eutils games libtool multilib portability toolchain-funcs user
+autotools base eutils games libtool multilib toolchain-funcs user
 
 
 

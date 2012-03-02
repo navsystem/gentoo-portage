@@ -7,7 +7,7 @@ http://www.broadinstitute.org/gsa/wiki/index.php/The_Genome_Analysis_Toolkit
 as-is
 The Genome Analysis Toolkit
 
-eutils java-ant-2 java-pkg-2 java-utils-2 multilib portability toolchain-funcs user versionator
+eutils java-ant-2 java-pkg-2 java-utils-2 multilib toolchain-funcs user versionator
 elibc_FreeBSD elibc_FreeBSD
 
 

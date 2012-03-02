@@ -7,7 +7,7 @@ http://wiki.portal.chalmers.se/agda/
 MIT
 A dependently typed functional programming language and proof assistant
 ~amd64 ~x86
-elisp-common eutils ghc-package haskell-cabal multilib portability toolchain-funcs user versionator
+elisp-common eutils ghc-package haskell-cabal multilib toolchain-funcs user versionator
 epic
 
 

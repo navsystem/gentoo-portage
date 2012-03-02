@@ -7,7 +7,7 @@ http://www.fh-wedel.de/~si/HXmlToolbox/index.html
 MIT
 Character properties and classes for XML and Unicode
 ~amd64 ~x86
-eutils ghc-package haskell-cabal multilib portability toolchain-funcs user versionator
+eutils ghc-package haskell-cabal multilib toolchain-funcs user versionator
 doc hscolour profile
 
 

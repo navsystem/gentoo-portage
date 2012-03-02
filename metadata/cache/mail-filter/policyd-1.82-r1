@@ -7,7 +7,7 @@ http://policyd.sf.net/
 GPL-2
 Policy daemon for postfix and other MTAs
 amd64 ~hppa x86
-eutils multilib portability toolchain-funcs user
+eutils multilib toolchain-funcs user
 
 
 

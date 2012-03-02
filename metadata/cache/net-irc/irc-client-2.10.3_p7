@@ -7,7 +7,7 @@ http://www.irc.org
 GPL-1
 A simplistic RFC compliant IRC client
 ~amd64 ppc x86
-eutils multilib portability toolchain-funcs user
+eutils multilib toolchain-funcs user
 ipv6
 
 

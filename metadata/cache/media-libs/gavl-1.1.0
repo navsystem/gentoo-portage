@@ -1,4 +1,4 @@
-doc? ( app-doc/doxygen ) || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 sys-devel/libtool
+doc? ( app-doc/doxygen ) || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 
 0
 mirror://sourceforge/gmerlin/gavl-1.1.0.tar.gz
@@ -7,7 +7,7 @@ http://gmerlin.sourceforge.net
 GPL-3
 library for handling uncompressed audio and video data
 amd64 ppc ~ppc64 x86
-autotools eutils libtool multilib portability toolchain-funcs user
+autotools eutils libtool multilib toolchain-funcs user
 doc
 
 

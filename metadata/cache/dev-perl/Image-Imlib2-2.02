@@ -7,7 +7,7 @@ http://search.cpan.org/dist/Image-Imlib2/
 || ( Artistic GPL-2 )
 Interface to the Imlib2 image library
 alpha amd64 ia64 ppc sparc x86
-base eutils multilib perl-module portability toolchain-funcs user
+base eutils multilib perl-module toolchain-funcs user
 test
 
 

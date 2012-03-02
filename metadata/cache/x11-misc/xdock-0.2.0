@@ -1,4 +1,4 @@
-x11-libs/libX11 media-libs/imlib || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 sys-devel/libtool
+x11-libs/libX11 media-libs/imlib || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 x11-libs/libX11 media-libs/imlib
 0
 mirror://sourceforge/xdock/xdock-0.2.0.tar.gz
@@ -7,7 +7,7 @@ http://xdock.sourceforge.net
 GPL-2
 emulates Window Maker docks (runs in any window manager)
 ~amd64 ~x86
-autotools eutils libtool multilib portability toolchain-funcs user
+autotools eutils libtool multilib toolchain-funcs user
 
 
 

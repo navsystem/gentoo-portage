@@ -7,7 +7,7 @@ http://www.tinc-vpn.org/
 GPL-2
 tinc is an easy to configure VPN implementation
 ~amd64 ~arm ~ppc ~sparc ~x86 ~x86-linux ~ppc-macos ~x86-macos
-eutils multilib portability toolchain-funcs user
+eutils multilib toolchain-funcs user
 +lzo +zlib raw uml vde
 
 

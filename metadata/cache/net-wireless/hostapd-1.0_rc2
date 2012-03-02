@@ -7,7 +7,7 @@ http://hostap.epitest.fi
 || ( GPL-2 BSD )
 IEEE 802.11 wireless LAN Host AP daemon
 -*
-eutils multilib portability toolchain-funcs user
+eutils multilib toolchain-funcs user
 debug ipv6 logwatch madwifi +ssl +wps
 
 

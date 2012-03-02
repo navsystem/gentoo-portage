@@ -7,7 +7,7 @@ http://portix.bitbucket.org/dwb/
 GPL-3
 Dynamic web browser based on WebKit and GTK+
 
-eutils mercurial multilib portability toolchain-funcs user
+eutils mercurial multilib toolchain-funcs user
 examples gtk3
 
 

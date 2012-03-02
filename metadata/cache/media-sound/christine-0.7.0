@@ -7,7 +7,7 @@ http://christine-project.org/
 GPL-2
 A simple gstreamer based media player
 ~amd64 ~x86
-autotools eutils libtool multilib portability python toolchain-funcs user
+autotools eutils libtool multilib python toolchain-funcs user
 libnotify nls readline
 
 

@@ -7,7 +7,7 @@ http://gummi.midnightcoding.org
 MIT
 Simple LaTeX editor for GTK+ users
 
-base eutils multilib portability subversion toolchain-funcs user
+base eutils multilib subversion toolchain-funcs user
 linguas_ca linguas_da linguas_de linguas_fr linguas_el linguas_it linguas_nl linguas_pt_BR linguas_ru linguas_zh_TW
 
 

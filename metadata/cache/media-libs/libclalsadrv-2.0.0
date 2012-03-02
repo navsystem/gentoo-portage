@@ -7,7 +7,7 @@ http://packages.debian.org/libclalsadrv
 GPL-2
 ALSA driver C++ access library
 ~amd64 ~ppc ~sparc ~x86
-eutils multilib portability toolchain-funcs user
+eutils multilib toolchain-funcs user
 
 
 

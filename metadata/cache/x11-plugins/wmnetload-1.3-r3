@@ -7,7 +7,7 @@ http://freshmeat.net/projects/wmnetload/
 GPL-2
 Network interface monitor dockapp
 amd64 ppc ~ppc64 ~sparc x86
-autotools eutils libtool multilib portability toolchain-funcs user
+autotools eutils libtool multilib toolchain-funcs user
 
 
 

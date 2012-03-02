@@ -7,7 +7,7 @@ http://npmjs.org/
 MIT
 A package manager for node.js
 ~amd64
-base eutils git-2 multilib portability toolchain-funcs user
+base eutils git-2 multilib toolchain-funcs user
 
 
 

@@ -7,7 +7,7 @@ http://www.monkey-project.com/
 GPL-2
 A small, fast, and scalable web server
 ~amd64 ~mips ~ppc ~sparc ~x86
-depend.php eutils multilib phpconfutils portability toolchain-funcs user
+depend.php eutils multilib phpconfutils toolchain-funcs user
 php
 
 

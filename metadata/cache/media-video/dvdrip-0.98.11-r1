@@ -7,7 +7,7 @@ http://www.exit1.org/dvdrip/
 || ( Artistic GPL-1 GPL-2 GPL-3 )
 dvd::rip is a graphical frontend for transcode
 amd64 ppc ppc64 x86
-base eutils flag-o-matic multilib perl-module portability toolchain-funcs user
+base eutils flag-o-matic multilib perl-module toolchain-funcs user
 ffmpeg fping mplayer ogg subtitles vcd vorbis xine xvid
 
 

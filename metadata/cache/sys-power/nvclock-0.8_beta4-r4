@@ -1,4 +1,4 @@
-gtk? ( x11-libs/gtk+:2 ) || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 sys-devel/libtool
+gtk? ( x11-libs/gtk+:2 ) || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 gtk? ( x11-libs/gtk+:2 )
 0
 http://www.linuxhardware.org/nvclock/nvclock0.8b4.tar.gz
@@ -7,7 +7,7 @@ http://www.linuxhardware.org/nvclock/
 GPL-2
 NVIDIA Overclocking Utility
 amd64 ppc x86
-autotools eutils libtool multilib portability toolchain-funcs user
+autotools eutils libtool multilib toolchain-funcs user
 gtk
 
 

@@ -14,7 +14,7 @@ test? ( crypt emacs python )
 
 4
 
-compile configure install postinst postrm prepare setup
+compile configure install postinst postrm prepare setup test
 
 
 

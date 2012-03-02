@@ -1,4 +1,4 @@
-|| ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 sys-devel/libtool >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+|| ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=app-admin/eselect-python-20091230 =dev-lang/python-2*
 >=sys-apps/ucspi-unix-0.34 virtual/qmail >=net-mail/qmail-autoresponder-0.95 >=app-admin/eselect-python-20091230 =dev-lang/python-2*
 0
 http://www.vmailmgr.org/archive/vmailmgr-0.97.tar.gz
@@ -7,7 +7,7 @@ http://www.vmailmgr.org/
 GPL-2
 virtual domains for qmail
 amd64 ~ppc sparc x86
-autotools eutils libtool multilib portability python toolchain-funcs user
+autotools eutils libtool multilib python toolchain-funcs user
 
 
 

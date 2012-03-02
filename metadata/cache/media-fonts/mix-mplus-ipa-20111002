@@ -7,7 +7,7 @@ http://mix-mplus-ipa.sourceforge.jp/
 mplus-fonts IPAfont
 Mixing mplus and IPA fonts
 ~amd64 ~x86 ~x86-fbsd
-eutils font multilib portability toolchain-funcs user
+eutils font multilib toolchain-funcs user
 X
 
 

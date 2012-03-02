@@ -7,7 +7,7 @@ http://ipython.org/
 BSD
 Advanced interactive shell for Python
 ~amd64 ~x86
-distutils elisp-common eutils multilib portability python toolchain-funcs user virtualx
+distutils elisp-common eutils multilib python toolchain-funcs user virtualx
 doc emacs examples matplotlib mongodb notebook readline +smp qt4 sqlite test wxwidgets test
 
 

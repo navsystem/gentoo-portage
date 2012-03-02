@@ -7,7 +7,7 @@ https://bitbucket.org/durin42/hgsubversion/wiki/Home http://pypi.python.org/pypi
 GPL-2
 hgsubversion is a Mercurial extension for working with Subversion repositories.
 
-distutils eutils mercurial multilib portability python toolchain-funcs user
+distutils eutils mercurial multilib python toolchain-funcs user
 test
 
 

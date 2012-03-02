@@ -1,4 +1,4 @@
-sys-cluster/torque || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 sys-devel/libtool
+sys-cluster/torque || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 sys-cluster/torque
 0
 http://www.clusterresources.com/downloads/maui/maui-3.2.6p21.tar.gz
@@ -7,7 +7,7 @@ http://www.clusterresources.com/pages/products/maui-cluster-scheduler.php
 maui
 Maui Cluster Scheduler
 ~x86 ~amd64
-autotools eutils libtool multilib portability toolchain-funcs user
+autotools eutils libtool multilib toolchain-funcs user
 
 
 

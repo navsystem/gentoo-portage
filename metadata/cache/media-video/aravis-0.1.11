@@ -7,7 +7,7 @@ http://live.gnome.org/Aravis
 LGPL-2.1
 Library for video acquisition using Genicam cameras.
 ~amd64
-eutils multilib portability toolchain-funcs user versionator
+eutils multilib toolchain-funcs user versionator
 X gstreamer
 
 

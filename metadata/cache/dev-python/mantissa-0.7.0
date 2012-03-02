@@ -7,7 +7,7 @@ http://divmod.org/trac/wiki/DivmodMantissa http://pypi.python.org/pypi/Mantissa
 MIT
 An extensible, multi-protocol, multi-user, interactive application server
 ~amd64 ~x86
-distutils eutils multilib portability python toolchain-funcs twisted user versionator
+distutils eutils multilib python toolchain-funcs twisted user versionator
 
 
 

@@ -7,7 +7,7 @@ http://trac.emma-soft.com/epdfview/
 GPL-2
 Lightweight PDF viewer using Poppler and GTK+ libraries.
 ~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
-eutils fdo-mime multilib portability toolchain-funcs user
+eutils fdo-mime multilib toolchain-funcs user
 cups nls test
 
 

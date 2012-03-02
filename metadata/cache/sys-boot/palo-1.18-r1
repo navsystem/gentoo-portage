@@ -7,7 +7,7 @@ http://parisc-linux.org/
 GPL-2
 PALO : PArisc Linux Loader
 -* hppa
-eutils flag-o-matic multilib portability toolchain-funcs user
+eutils flag-o-matic multilib toolchain-funcs user
 
 
 

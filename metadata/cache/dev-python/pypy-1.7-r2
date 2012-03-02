@@ -7,7 +7,7 @@ http://pypy.org/
 MIT
 PyPy is a fast, compliant alternative implementation of the Python language
 ~amd64 ~x86
-check-reqs eutils multilib portability python toolchain-funcs user versionator
+check-reqs eutils multilib python toolchain-funcs user versionator
 bzip2 doc examples +jit ncurses sandbox sqlite ssl xml
 
 app-admin/python-updater

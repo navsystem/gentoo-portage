@@ -7,7 +7,7 @@ http://rakudo.org/
 Artistic-2
 Not Quite Perl, a Perl 6 bootstrapping compiler
 ~amd64 ~x86
-eutils multilib portability toolchain-funcs user
+eutils multilib toolchain-funcs user
 doc
 
 

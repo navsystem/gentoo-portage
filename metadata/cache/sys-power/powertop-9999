@@ -7,7 +7,7 @@ http://www.lesswatts.org/projects/powertop/
 GPL-2
 tool that helps you find what software is using the most power
 
-eutils git-2 multilib portability toolchain-funcs user
+eutils git-2 multilib toolchain-funcs user
 unicode
 
 

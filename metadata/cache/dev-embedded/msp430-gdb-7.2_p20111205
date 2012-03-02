@@ -7,7 +7,7 @@ http://sources.redhat.com/gdb/
 GPL-2 LGPL-2
 GNU debugger for MSP430 microcontrollers
 ~amd64 ~x86
-eutils flag-o-matic multilib portability toolchain-funcs user
+eutils flag-o-matic multilib toolchain-funcs user
 expat multitarget nls python test
 
 

@@ -7,7 +7,7 @@ http://www.ch-werner.de/ck/
 BSD
 A curses based toolkit for tcl
 amd64 x86
-eutils multilib portability toolchain-funcs user
+eutils multilib toolchain-funcs user
 
 
 

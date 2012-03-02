@@ -1,4 +1,4 @@
->=dev-libs/glib-2.6:2 dev-util/pkgconfig sys-apps/help2man || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 sys-devel/libtool
+>=dev-libs/glib-2.6:2 dev-util/pkgconfig sys-apps/help2man || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 >=dev-libs/glib-2.6:2
 0
 mirror://sourceforge/preload/preload-0.6.4.tar.gz
@@ -7,7 +7,7 @@ http://sourceforge.net/projects/preload/
 GPL-2
 Adaptive readahead daemon.
 amd64 x86
-autotools eutils libtool multilib portability toolchain-funcs user
+autotools eutils libtool multilib toolchain-funcs user
 vanilla
 
 

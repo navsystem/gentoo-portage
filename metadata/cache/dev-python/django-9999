@@ -7,7 +7,7 @@ http://www.djangoproject.com/ http://pypi.python.org/pypi/Django
 BSD
 High-level Python web framework
 
-bash-completion-r1 distutils eutils multilib portability python subversion toolchain-funcs user webapp
+bash-completion-r1 distutils eutils multilib python subversion toolchain-funcs user webapp
 doc mysql postgres sqlite test vhosts
 
 

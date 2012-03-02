@@ -14,7 +14,7 @@ debug
 
 4
 
-configure postinst
+configure postinst prepare
 
 
 

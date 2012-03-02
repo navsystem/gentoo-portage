@@ -7,7 +7,7 @@ http://gcc.gnu.org/
 GPL-2 LGPL-2.1
 The GNU Compiler Collection
 alpha -hppa ia64 ~mips ppc s390 sparc x86
-eutils flag-o-matic libtool multilib portability toolchain-funcs user versionator
+eutils flag-o-matic libtool multilib toolchain-funcs user versionator
 static nls bootstrap java build
 
 sys-devel/gcc-config

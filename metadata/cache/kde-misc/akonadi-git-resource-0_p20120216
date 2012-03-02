@@ -7,7 +7,7 @@ https://projects.kde.org/projects/playground/pim/akonadi-git-resource
 GPL-2
 Git commit integration in Akonadi
 ~amd64 ~x86
-base cmake-utils eutils fdo-mime flag-o-matic gnome2-utils kde4-base kde4-functions multilib portability toolchain-funcs user versionator virtualx
+base cmake-utils eutils fdo-mime flag-o-matic gnome2-utils kde4-base kde4-functions multilib toolchain-funcs user versionator virtualx
 debug aqua
 
 

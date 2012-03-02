@@ -7,7 +7,7 @@ http://w3.impa.br/~diego/software/rply/
 MIT
 A library to read and write PLY files
 ~amd64 ~x86
-base cmake-utils eutils flag-o-matic multilib portability toolchain-funcs user
+base cmake-utils eutils flag-o-matic multilib toolchain-funcs user
 doc
 
 

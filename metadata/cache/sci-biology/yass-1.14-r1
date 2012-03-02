@@ -1,4 +1,4 @@
-dmalloc? ( dev-libs/dmalloc ) || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 sys-devel/libtool
+dmalloc? ( dev-libs/dmalloc ) || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 dmalloc? ( dev-libs/dmalloc )
 0
 http://bioinfo.lifl.fr/yass/files/yass-1.14.tar.gz
@@ -7,7 +7,7 @@ http://bioinfo.lifl.fr/yass/
 GPL-2
 Genomic similarity search with multiple transition constrained spaced seeds
 ~amd64 ~x86
-autotools eutils libtool multilib portability toolchain-funcs user
+autotools eutils libtool multilib toolchain-funcs user
 dmalloc lowmem threads
 
 

@@ -7,7 +7,7 @@ http://www.cs.unm.edu/~mccune/mace4/
 GPL-2
 Prover9 is an automated theorem prover for first-order and equational logic
 ~amd64 ~x86
-base eutils multilib portability toolchain-funcs user versionator
+base eutils multilib toolchain-funcs user versionator
 examples
 
 

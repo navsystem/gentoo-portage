@@ -7,7 +7,7 @@ http://xpra.org/
 GPL-2
 X Persistent Remote Apps (xpra) and Partitioning WM (parti) based on wimpiggy
 ~amd64 ~x86
-distutils eutils multilib portability python toolchain-funcs user
+distutils eutils multilib python toolchain-funcs user
 jpeg libnotify parti png server ssh
 
 

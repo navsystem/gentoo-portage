@@ -7,7 +7,7 @@ http://qmail-scanner.sourceforge.net/ http://toribio.apollinare.org/qmail-scanne
 GPL-2
 E-Mail virus scanner for qmail.
 ~amd64 ~ppc ~x86
-eutils fixheadtails multilib portability toolchain-funcs user
+eutils fixheadtails multilib toolchain-funcs user
 clamav spamassassin
 
 

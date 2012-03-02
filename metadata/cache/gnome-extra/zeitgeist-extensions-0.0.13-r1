@@ -7,7 +7,7 @@ https://launchpad.net/zeitgeist-extensions/
 GPL-3
 Extensions to the engine such as Teamgeist, Relevancy Providers and Machine Learning Algorithms
 ~amd64 ~x86 ~amd64-linux ~x86-linux
-eutils multilib portability python toolchain-funcs user
+eutils multilib python toolchain-funcs user
 fts geolocation memprofile sqldebug tracker
 
 

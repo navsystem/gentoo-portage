@@ -7,7 +7,7 @@ http://lericson.se/
 BSD
 A fairly simple, decently quick python interface to Amazon's S3 storage service
 ~amd64 ~x86
-distutils eutils multilib portability python toolchain-funcs user versionator
+distutils eutils multilib python toolchain-funcs user versionator
 test
 
 

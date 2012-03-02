@@ -7,7 +7,7 @@ http://git-annex.branchable.com/
 GPL-2
 manage files with git, without checking their contents into git
 ~amd64 ~x86
-eutils ghc-package haskell-cabal multilib portability toolchain-funcs user versionator
+eutils ghc-package haskell-cabal multilib toolchain-funcs user versionator
 
 
 

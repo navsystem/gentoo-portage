@@ -7,7 +7,7 @@ http://www.scribus.net/
 GPL-2
 Desktop publishing (DTP) and layout program
 
-base cmake-utils eutils fdo-mime flag-o-matic multilib portability python subversion toolchain-funcs user
+base cmake-utils eutils fdo-mime flag-o-matic multilib python subversion toolchain-funcs user
 cairo debug examples +minimal +pdf spell templates linguas_af linguas_ar linguas_bg linguas_br linguas_ca linguas_cs_CZ linguas_cy linguas_da_DK linguas_de_1901 linguas_de_CH linguas_de linguas_el linguas_en_AU linguas_en_GB linguas_en_US linguas_es_ES linguas_et linguas_eu linguas_fi linguas_fr linguas_gl linguas_hu linguas_id linguas_it linguas_ja linguas_ko linguas_lt_LT linguas_nb_NO linguas_nl linguas_pl_PL linguas_pt_BR linguas_pt linguas_ru linguas_sa linguas_sk_SK linguas_sl linguas_sq linguas_sr linguas_sv linguas_th_TH linguas_tr linguas_uk linguas_zh_CN linguas_zh_TW
 
 

@@ -7,7 +7,7 @@ http://gnomeicu.sourceforge.net/
 GPL-2
 Gnome ICQ Client
 ~alpha amd64 ~ppc ~sparc x86
-eutils fdo-mime gnome.org gnome2 gnome2-utils libtool multilib portability toolchain-funcs user versionator
+eutils fdo-mime gnome.org gnome2 gnome2-utils libtool multilib toolchain-funcs user versionator
 spell debug
 
 

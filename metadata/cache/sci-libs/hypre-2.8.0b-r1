@@ -7,7 +7,7 @@ http://acts.nersc.gov/hypre/
 LGPL-2.1
 Parallel matrix preconditioners library
 ~amd64 ~x86
-eutils fortran-2 multilib portability toolchain-funcs user
+eutils fortran-2 multilib toolchain-funcs user
 blas doc examples fortran lapack mpi
 
 

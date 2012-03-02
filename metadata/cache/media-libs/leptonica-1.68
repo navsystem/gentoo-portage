@@ -7,7 +7,7 @@ http://code.google.com/p/leptonica/
 Apache-2.0
 C library for image processing and analysis
 ~amd64 ~x86
-autotools autotools-utils eutils libtool multilib portability toolchain-funcs user
+autotools autotools-utils eutils libtool multilib toolchain-funcs user
 gif jpeg png tiff webp utils zlib static-libs
 
 

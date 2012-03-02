@@ -7,7 +7,7 @@ http://lilypond.org/mftrace/
 GPL-2
 Traces TeX fonts to PFA or PFB fonts (formerly pktrace)
 ~amd64 ~ppc ~x86
-eutils multilib portability python toolchain-funcs user
+eutils multilib python toolchain-funcs user
 truetype
 
 

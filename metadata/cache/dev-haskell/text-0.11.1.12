@@ -7,7 +7,7 @@ https://github.com/bos/text
 BSD
 An efficient packed Unicode text type.
 ~amd64 ~x86 ~x86-fbsd ~x86-macos
-eutils ghc-package haskell-cabal multilib portability toolchain-funcs user versionator
+eutils ghc-package haskell-cabal multilib toolchain-funcs user versionator
 test doc hscolour profile
 
 

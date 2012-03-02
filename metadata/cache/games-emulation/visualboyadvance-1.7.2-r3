@@ -7,7 +7,7 @@ http://vba.ngemu.com/
 GPL-2
 gameboy, gameboy color, and gameboy advance emulator
 ~amd64 ~ppc ~x86
-autotools base eutils flag-o-matic games libtool multilib portability toolchain-funcs user
+autotools base eutils flag-o-matic games libtool multilib toolchain-funcs user
 gtk mmx nls
 
 

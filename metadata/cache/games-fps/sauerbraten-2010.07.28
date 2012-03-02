@@ -7,7 +7,7 @@ http://sauerbraten.org/
 ZLIB freedist
 Cube 2: Sauerbraten is an open source game engine (Cube 2) with freeware game data (Sauerbraten)
 ~amd64 ~x86
-base eutils flag-o-matic games multilib portability toolchain-funcs user
+base eutils flag-o-matic games multilib toolchain-funcs user
 debug dedicated
 
 

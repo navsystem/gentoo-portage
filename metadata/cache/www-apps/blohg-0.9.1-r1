@@ -7,7 +7,7 @@ http://blohg.org/ http://pypi.python.org/pypi/blohg
 GPL-2
 A Mercurial-based blogging engine.
 ~amd64 ~x86
-distutils eutils multilib portability python toolchain-funcs user
+distutils eutils multilib python toolchain-funcs user
 doc test
 
 

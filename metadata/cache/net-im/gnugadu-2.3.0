@@ -7,7 +7,7 @@ http://gadu.gnu.pl/
 GPL-2
 GTK-based Gadu-Gadu, Tlen and Jabber IM client
 ~amd64 ~ppc ~sparc x86
-eutils multilib portability toolchain-funcs user
+eutils multilib toolchain-funcs user
 debug dbus tlen esd oss xosd jabber perl spell gnutls
 
 
