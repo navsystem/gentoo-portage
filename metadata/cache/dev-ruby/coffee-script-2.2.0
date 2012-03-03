@@ -6,7 +6,7 @@ mirror://rubygems/coffee-script-2.2.0.gem
 https://github.com/rails/coffee-rails
 MIT
 Ruby CoffeeScript is a bridge to the official CoffeeScript compiler.
-~amd64
+~amd64 ~x64-macos
 eutils java-utils-2 multilib ruby-fakegem ruby-ng toolchain-funcs user versionator
 test elibc_FreeBSD ruby_targets_ruby18 ruby_targets_ruby19 ruby_targets_ree18 test
 || ( ruby_targets_ruby18 ruby_targets_ruby19 ruby_targets_ree18 )
