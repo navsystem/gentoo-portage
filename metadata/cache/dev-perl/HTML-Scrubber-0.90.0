@@ -6,7 +6,7 @@ mirror://cpan/authors/id/N/NI/NIGELM/HTML-Scrubber-0.09.tar.gz
 http://search.cpan.org/dist/HTML-Scrubber/
 || ( Artistic GPL-1 GPL-2 GPL-3 )
 Perl extension for scrubbing/sanitizing html
-amd64 ppc ~ppc64 x86
+amd64 ppc ppc64 x86
 base eutils multilib perl-module toolchain-funcs user
 
 

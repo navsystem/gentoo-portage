@@ -6,7 +6,7 @@ mirror strip
 http://dropbox.com/
 CCPL-Attribution-NoDerivs-3.0 FTL MIT LGPL-2 openssl dropbox
 Dropbox daemon (pretends to be GUI-less).
-~amd64 ~x86
+amd64 ~x86
 gnome2-utils
 
 

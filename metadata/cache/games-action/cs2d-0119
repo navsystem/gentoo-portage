@@ -1,4 +1,4 @@
-
+app-arch/unzip
 x86? ( media-libs/openal ) amd64? ( app-emulation/emul-linux-x86-sdl )
 0
 http://dev.gentoo.org/~maksbotan/cs2d/cs2d_0119_linux.zip http://dev.gentoo.org/~maksbotan/cs2d/cs2d_0119_win.zip

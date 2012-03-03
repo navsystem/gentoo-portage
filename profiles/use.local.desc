@@ -1237,6 +1237,7 @@ dev-libs/cyrus-sasl:openldap - Add ldap support for saslauthd
 dev-libs/cyrus-sasl:sample - Enable sample client and server
 dev-libs/cyrus-sasl:srp - Enable SRP authentication
 dev-libs/cyrus-sasl:urandom - Use /dev/urandom instead of /dev/random
+dev-libs/dbus-c++:ecore - Use Ecore integration
 dev-libs/e_dbus:bluetooth - Enable interfacing with net-wireless/bluez DBus API.
 dev-libs/e_dbus:connman - Enable interfacing with net-misc/connman DBus API.
 dev-libs/e_dbus:ofono - Enable interfacing with net-misc/ofono DBus API.
@@ -3531,6 +3532,7 @@ net-fs/samba:swat - Enables support for swat configuration gui
 net-fs/samba:tools - Enable extra tools
 net-fs/samba:winbind - Enables support for the winbind auth daemon
 net-fs/smbnetfs:gnome - Use the gnome-base/gnome-keyring for password management.
+net-ftp/frox:transparent - Enable transparent proxying of data connections
 net-ftp/proftpd:authfile - Enable support for the auth-file module
 net-ftp/proftpd:ban - Enable support for the mod_ban module
 net-ftp/proftpd:case - Enable support for the mod_case module
@@ -3727,6 +3729,7 @@ net-irc/atheme-services:perl - Install a perl module which wraps around the serv
 net-irc/bip:freenode - Enables freenode-specific functionality. Currently that is only support for mute lists (MODE #channel +q).
 net-irc/bip:noctcp - Disable the automatic CTCP VERSION reply which is often exploited by malicious people to cause a DoS (reconnect due to flooding).
 net-irc/bip:oidentd - Enable oidentd support
+net-irc/charybdis:largenet - Enable support/tweaks for large networks
 net-irc/epic5:archive - Use app-arch/libarchive to use zip and tar archives from scripts.
 net-irc/epic5:valgrind - Compile against dev-util/valgrind headers to improve memory-leak checking when running epic5 under valgrind.
 net-irc/ezbounce:boost - Compile against dev-libs/boost libraries
@@ -3760,6 +3763,7 @@ net-irc/rbot:shorturl - Add dependency over dev-ruby/shorturl, which is needed t
 net-irc/rbot:timezone - Add dependency over dev-ruby/tzinfo to enable the "time" plugin for rbot. If the USE flag is disabled the plugin is also disabled by default.
 net-irc/rbot:toilet - Add dependency over app-misc/toilet, which is used by the "figlet" plugin for rbot. If the USE flag is disabled the plugin will be unable to use toilet; if figlet is also disabled, the plugin will be disabled.
 net-irc/rbot:translator - Add dependency over dev-ruby/mechanize, which is needed to enable the "translator" plugin for rbot. If the USE flag is disabled the plugin is also disabled by default.
+net-irc/shadowircd:largenet - Enable support/tweaks for large networks
 net-irc/srvx:bahamut - Choose bahamut protocol over p10 protocol
 net-irc/supybot:twisted - Allows supybot to use dev-python/twisted as driver
 net-irc/unrealircd:extban-stacking - Enable extended channel bans (such as +b ~c: and +b ~n:) to contain other extended bans instead of just hostmasks.
@@ -3880,6 +3884,7 @@ net-libs/opal:x264-static - Install x264 plugin statically linked with x264
 net-libs/openh323:noaudio - Disable audio codecs
 net-libs/openh323:novideo - Disable video codecs
 net-libs/ortp:srtp - Add support for Secure RTP
+net-libs/pjsip:cli - Installs pjsua, a simple command-line SIP client
 net-libs/pjsip:epoll - epoll system call support
 net-libs/pjsip:ext-sound - External sound device support
 net-libs/pjsip:g711 - Builds the G711 codec
