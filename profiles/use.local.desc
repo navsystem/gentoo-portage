@@ -2724,7 +2724,6 @@ media-sound/banshee:daap - Build with Daap support
 media-sound/banshee:karma - Build with karma support
 media-sound/banshee:web - Enable support for plugins that access web-based services such as Amazon and wikipedia (requires net-libs/webkit-gtk)
 media-sound/banshee:youtube - Enable the Youtube plugin
-media-sound/clementine:ayatana - Build in support for Ayatana notification using the libindicate-qt plugin.
 media-sound/clementine:kde - Enable plasma krunner global search
 media-sound/clementine:lastfm - Enable Last.fm streaming services support through media-libs/liblastfm
 media-sound/clementine:ofa - Support for Open Fingerprint Architecture (OFA)
@@ -3638,6 +3637,7 @@ net-im/leechcraft-azoth:herbicide - Build Herbicide, a basic antispam plugin
 net-im/leechcraft-azoth:hili - Build HiLi which allows to customize highlight settings in MUCs
 net-im/leechcraft-azoth:isterique - Build Isterique plugin for neutralizing excessive caps lock usage
 net-im/leechcraft-azoth:juick - Build plugin for the Juick.com microblogging service
+net-im/leechcraft-azoth:keeso - Build plugin for changing text into SoMEtHInG lIKe THiS
 net-im/leechcraft-azoth:lastseen - Build plugin for client-side recording of the last online/available time
 net-im/leechcraft-azoth:metacontacts - Build plugin for metacontacts support
 net-im/leechcraft-azoth:modnok - Build Modnok for in-chat LaTeX formulae rendering

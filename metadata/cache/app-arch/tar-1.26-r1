@@ -1,7 +1,7 @@
 xattr? ( sys-apps/attr ) nls? ( >=sys-devel/gettext-0.10.35 ) || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 xattr? ( sys-apps/attr )
 0
-http://ftp.gnu.org/gnu/tar/tar-1.26.tar.bz2 ftp://alpha.gnu.org/gnu/tar/tar-1.26.tar.bz2 mirror://gnu/tar/tar-1.26.tar.bz2
+http://ftp.gnu.org/gnu/tar/tar-1.26.tar.bz2 mirror://gnu-alpha/tar/tar-1.26.tar.bz2 mirror://gnu/tar/tar-1.26.tar.bz2
 
 http://www.gnu.org/software/tar/
 GPL-3

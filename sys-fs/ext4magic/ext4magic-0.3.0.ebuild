@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ext4magic/ext4magic-0.2.4.ebuild,v 1.1 2011/12/30 12:40:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ext4magic/ext4magic-0.3.0.ebuild,v 1.1 2012/03/04 15:28:41 ssuominen Exp $
 
 EAPI=4
 
@@ -13,9 +13,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=sys-apps/file-5.04
+RDEPEND="app-arch/bzip2
+	>=sys-apps/file-5.04
 	sys-apps/util-linux
-	>=sys-fs/e2fsprogs-1.41.9"
+	>=sys-fs/e2fsprogs-1.41.9
+	sys-libs/zlib"
 DEPEND="${RDEPEND}"
 
-DOCS=( AUTHORS ChangeLog NEWS README TODO )
+DOCS="AUTHORS ChangeLog NEWS README TODO"

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/darcs-2.5.2-r1.ebuild,v 1.1 2012/03/04 07:20:25 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/darcs-2.5.2-r1.ebuild,v 1.3 2012/03/04 14:17:07 gienah Exp $
 
 EAPI="4"
 CABAL_FEATURES="bin lib profile haddock hscolour"
@@ -12,7 +12,7 @@ SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 -ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE="doc test"
 
 RDEPEND="=dev-haskell/hashed-storage-0.5*[profile?]
@@ -103,7 +103,7 @@ src_test() {
 
 src_install() {
 	cabal_src_install
-	dobashcompletion "${S}/contrib/darcs_completion" "${PN}"
+	newbashcomp "${S}/contrib/darcs_completion" "${PN}"
 
 	rm "${ED}/usr/bin/unit" 2> /dev/null
 
@@ -117,7 +117,6 @@ src_install() {
 
 pkg_postinst() {
 	ghc-package_pkg_postinst
-	bash-completion_pkg_postinst
 
 	ewarn "NOTE: in order for the darcs send command to work properly,"
 	ewarn "you must properly configure your mail transport agent to relay"
