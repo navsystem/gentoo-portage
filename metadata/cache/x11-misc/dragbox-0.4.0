@@ -12,9 +12,9 @@ multilib python toolchain-funcs
 
 
 
-2
+4
 
-install postinst postrm
+install postinst postrm prepare setup
 
 
 

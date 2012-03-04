@@ -6,7 +6,7 @@ http://pear.php.net/get/Net_LDAP2-2.0.12.tgz
 http://pear.php.net/Net_LDAP2
 LGPL-2.1
 OO interface for searching and manipulating LDAP-entries
-~alpha amd64 hppa ppc ~sparc x86
+alpha amd64 hppa ppc ~sparc x86
 multilib php-pear-r1 toolchain-funcs
 
 
