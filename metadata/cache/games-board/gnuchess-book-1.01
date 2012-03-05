@@ -1,5 +1,5 @@
-games-board/gnuchess
-games-board/gnuchess
+<games-board/gnuchess-5.9
+<games-board/gnuchess-5.9
 0
 mirror://gnu/chess/book_1.01.pgn.gz
 userpriv

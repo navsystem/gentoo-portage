@@ -1,0 +1,22 @@
+sys-libs/zlib ssl? ( dev-libs/openssl ) sqlite? ( dev-db/sqlite:3 ) tcl? ( dev-lang/tcl )
+sys-libs/zlib ssl? ( dev-libs/openssl ) sqlite? ( dev-db/sqlite:3 ) tcl? ( dev-lang/tcl )
+0
+http://www.fossil-scm.org/download/fossil-src-20111213135356.tar.gz
+
+http://www.fossil-scm.org/
+BSD-2
+Simple, high-reliability, distributed software configuration management
+~amd64 ~x86
+
+sqlite +ssl tcl
+
+
+
+4
+
+configure install
+
+
+
+
+
