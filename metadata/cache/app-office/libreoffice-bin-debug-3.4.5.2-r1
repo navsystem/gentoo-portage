@@ -6,7 +6,7 @@ test strip
 http://www.libreoffice.org
 LGPL-3
 LibreOffice, a full office productivity suite. Binary package, debug info.
--* ~amd64 ~x86
+-* amd64 ~x86
 
 gnome java kde
 

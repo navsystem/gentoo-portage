@@ -1,18 +1,18 @@
->=net-libs/libnetfilter_conntrack-0.0.100 net-libs/libnetfilter_queue
+>=net-libs/libnetfilter_conntrack-0.0.100 net-libs/libnetfilter_queue || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 net-misc/l7-protocols >=net-libs/libnetfilter_conntrack-0.0.100 net-libs/libnetfilter_queue
 0
 mirror://sourceforge/l7-filter/l7-filter-userspace-0.11.tar.gz
 
-http://l7-filter.sourceforge.net
+http://l7-filter.clearfoundation.com/
 GPL-2
 Userspace utilities for layer 7 iptables QoS
 ~amd64 ~x86
-eutils multilib toolchain-funcs user
+autotools eutils libtool multilib toolchain-funcs user
 
 
 
 
-2
+4
 
 install prepare
 

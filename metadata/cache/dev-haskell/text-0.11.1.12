@@ -6,7 +6,7 @@ http://hackage.haskell.org/packages/archive/text/0.11.1.12/text-0.11.1.12.tar.gz
 https://github.com/bos/text
 BSD
 An efficient packed Unicode text type.
-~amd64 ~x86 ~x86-fbsd ~x86-macos
+~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-macos
 eutils ghc-package haskell-cabal multilib toolchain-funcs user versionator
 test doc hscolour profile
 

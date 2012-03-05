@@ -1,0 +1,22 @@
+|| ( virtual/httpd-cgi virtual/httpd-fastcgi ) >=app-admin/webapp-config-1.50.15
+virtual/httpd-php dev-lang/php[gd,pdo,postgres?,xml] mysql? ( || ( dev-lang/php[mysql] dev-lang/php[mysqli] ) ) >=app-admin/webapp-config-1.50.15
+6.25
+http://drupal.org/files/projects/drupal-6.25.tar.gz
+
+http://drupal.org/
+GPL-2
+PHP-based open-source platform and content management system
+~alpha ~amd64 ~ppc ~x86
+webapp
++mysql postgres vhosts
+|| ( mysql postgres )
+
+
+4
+
+install postinst prerm setup
+
+
+
+
+

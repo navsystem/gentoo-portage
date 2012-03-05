@@ -12,9 +12,9 @@ lzo socks5 ssl zlib
 
 
 
-2
+4
 
-configure install postinst prepare
+compile configure install postinst prepare
 
 
 

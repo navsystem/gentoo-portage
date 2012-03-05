@@ -1,0 +1,22 @@
+
+
+0
+http://www.cce.com/efax/download/efax-0.9a-001114.tar.gz mirror://debian/pool/main/e/efax/efax_0.9a-19.diff.gz
+
+http://gentoo.org
+GPL-2
+A simple fax program for single-user systems
+~amd64 ~ppc ~x86
+eutils multilib toolchain-funcs user
+
+
+
+
+4
+
+compile install prepare
+
+
+
+
+
