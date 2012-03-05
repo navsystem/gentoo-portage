@@ -3,7 +3,7 @@ dev-python/apptools dev-python/configobj dev-python/envisage dev-python/ipython 
 2
 http://www.enthought.com/repo/ets/mayavi-4.1.0.tar.gz
 
-http://code.enthought.com/projects/mayavi/ http://pypi.python.org/pypi/mayavi
+http://code.enthought.com/projects/mayavi/ http://pypi.python.org/pypi/mayavi/
 BSD
 Enthought Tool Suite: Scientific data 3-dimensional visualizer
 ~amd64 ~x86
