@@ -1,5 +1,5 @@
 dev-libs/libisoburn dev-libs/lzo sys-boot/os-prober >=sys-libs/ncurses-5.2-r5 debug? ( sdl? ( media-libs/libsdl ) ) device-mapper? ( >=sys-fs/lvm2-2.02.45 ) libzfs? ( sys-fs/zfs ) mount? ( sys-fs/fuse ) truetype? ( media-libs/freetype >=media-fonts/unifont-5 ) >=dev-lang/python-2.5.2 sys-devel/flex virtual/yacc sys-apps/texinfo >=sys-devel/autogen-5.10 sys-apps/help2man || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=dev-vcs/bzr-2.0.1
-dev-libs/libisoburn dev-libs/lzo sys-boot/os-prober >=sys-libs/ncurses-5.2-r5 debug? ( sdl? ( media-libs/libsdl ) ) device-mapper? ( >=sys-fs/lvm2-2.02.45 ) libzfs? ( sys-fs/zfs ) mount? ( sys-fs/fuse ) truetype? ( media-libs/freetype >=media-fonts/unifont-5 )
+dev-libs/libisoburn dev-libs/lzo sys-boot/os-prober >=sys-libs/ncurses-5.2-r5 debug? ( sdl? ( media-libs/libsdl ) ) device-mapper? ( >=sys-fs/lvm2-2.02.45 ) libzfs? ( sys-fs/zfs ) mount? ( sys-fs/fuse ) truetype? ( media-libs/freetype >=media-fonts/unifont-5 ) grub_platforms_efi-32? ( sys-boot/efibootmgr ) grub_platforms_efi-64? ( sys-boot/efibootmgr )
 2
 
 
