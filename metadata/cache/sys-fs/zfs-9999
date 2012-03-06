@@ -8,7 +8,7 @@ CDDL GPL-2
 Native ZFS for Linux
 
 autotools autotools-utils eutils flag-o-matic git-2 libtool linux-info linux-mod multilib toolchain-funcs user versionator
-custom-cflags debug dracut test-suite static-libs kernel_linux
+custom-cflags debug dracut test test-suite static-libs kernel_linux
 
 
 

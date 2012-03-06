@@ -1,6 +1,6 @@
 >=sys-devel/patch-2.6.1 sys-devel/gnuconfig >=sys-devel/binutils-config-1.9 zlib? ( sys-libs/zlib ) test? ( dev-util/dejagnu ) nls? ( sys-devel/gettext ) sys-devel/flex virtual/yacc
 >=sys-devel/patch-2.6.1 >=sys-devel/binutils-config-1.9 zlib? ( sys-libs/zlib )
-hppa64-pc-linux-gnu
+0
 mirror://gnu/binutils/binutils-2.22.tar.bz2 mirror://gentoo/binutils-2.22-patches-1.1.tar.bz2 http://dev.gentoo.org/~vapier/dist/binutils-2.22-patches-1.1.tar.bz2
 
 http://sources.redhat.com/binutils/
