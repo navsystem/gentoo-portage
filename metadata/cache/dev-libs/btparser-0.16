@@ -1,0 +1,22 @@
+app-arch/xz-utils >=app-admin/eselect-python-20091230 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
+>=app-admin/eselect-python-20091230 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
+0
+https://fedorahosted.org/released/btparser/btparser-0.16.tar.xz
+
+https://fedorahosted.org/btparser/
+GPL-2
+Parser and analyzer for backtraces produced by gdb
+~amd64 ~x86
+multilib python toolchain-funcs
+static-libs
+
+
+
+4
+
+configure install postinst postrm prepare setup
+
+
+
+
+
