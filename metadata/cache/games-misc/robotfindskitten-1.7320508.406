@@ -6,7 +6,7 @@ mirror://sourceforge/rfk/robotfindskitten-1.7320508.406.tar.gz
 http://robotfindskitten.org/
 GPL-2
 Help robot find kitten
-amd64 ~ppc ~sparc x86
+amd64 ppc ~sparc x86
 base eutils games multilib toolchain-funcs user
 
 

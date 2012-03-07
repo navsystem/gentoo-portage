@@ -6,7 +6,7 @@ mirror://sourceforge/freetts/freetts-1.2.1-src.zip
 http://freetts.sourceforge.net/
 jsapi? ( sun-bcla-jsapi ) freetts
 A speech synthesis system written entirely in Java
-amd64 ppc ~ppc64 x86
+amd64 ppc ppc64 x86
 eutils java-ant-2 java-pkg-2 java-utils-2 multilib toolchain-funcs user versionator
 doc jsapi mbrola elibc_FreeBSD elibc_FreeBSD
 
