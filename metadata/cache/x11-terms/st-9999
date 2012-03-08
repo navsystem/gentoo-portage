@@ -1,7 +1,7 @@
 x11-libs/libX11 sys-libs/ncurses dev-vcs/mercurial
 x11-libs/libX11
 0
-http://hg.suckless.org/st/archive/0.1.1.tar.gz
+
 
 http://st.suckless.org/
 BSD
