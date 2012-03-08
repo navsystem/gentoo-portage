@@ -1,0 +1,22 @@
+media-libs/libpng dev-util/pkgconfig || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+media-libs/libpng
+0
+http://fukuchi.org/works/qrencode/qrencode-3.2.0.tar.bz2
+
+http://fukuchi.org/works/qrencode/
+LGPL-2
+C library for encoding data in a QR Code symbol
+~amd64 ~ppc ~x86
+autotools autotools-utils eutils libtool multilib toolchain-funcs user
+
+
+
+
+4
+
+compile configure install prepare test
+
+
+
+
+

@@ -1,0 +1,22 @@
+>=sys-devel/libtool-2.2.6b >=media-sound/gsm-1.0.12-r1 alsa? ( media-libs/alsa-lib ) amr? ( media-libs/opencore-amr ) ao? ( media-libs/libao ) encode? ( >=media-sound/lame-3.98.4 ) ffmpeg? ( virtual/ffmpeg ) flac? ( media-libs/flac ) id3tag? ( media-libs/libid3tag ) ladspa? ( media-libs/ladspa-sdk ) mad? ( media-libs/libmad ) ogg? ( media-libs/libvorbis media-libs/libogg ) png? ( media-libs/libpng sys-libs/zlib ) pulseaudio? ( media-sound/pulseaudio ) sndfile? ( media-libs/libsndfile ) twolame? ( media-sound/twolame ) wavpack? ( media-sound/wavpack ) dev-util/pkgconfig
+>=sys-devel/libtool-2.2.6b >=media-sound/gsm-1.0.12-r1 alsa? ( media-libs/alsa-lib ) amr? ( media-libs/opencore-amr ) ao? ( media-libs/libao ) encode? ( >=media-sound/lame-3.98.4 ) ffmpeg? ( virtual/ffmpeg ) flac? ( media-libs/flac ) id3tag? ( media-libs/libid3tag ) ladspa? ( media-libs/ladspa-sdk ) mad? ( media-libs/libmad ) ogg? ( media-libs/libvorbis media-libs/libogg ) png? ( media-libs/libpng sys-libs/zlib ) pulseaudio? ( media-sound/pulseaudio ) sndfile? ( media-libs/libsndfile ) twolame? ( media-sound/twolame ) wavpack? ( media-sound/wavpack )
+0
+mirror://sourceforge/sox/sox-14.4.0.tar.gz
+
+http://sox.sourceforge.net
+LGPL-2.1
+The swiss army knife of sound processing programs
+~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-solaris
+eutils flag-o-matic multilib toolchain-funcs user
+alsa amr ao debug encode ffmpeg flac id3tag ladspa mad ogg openmp oss png pulseaudio sndfile static-libs twolame wavpack
+
+
+
+4
+
+configure install prepare
+
+
+
+
+

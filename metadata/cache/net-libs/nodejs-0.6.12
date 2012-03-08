@@ -1,5 +1,5 @@
->=dev-lang/v8-3.6.6.24 dev-libs/openssl
->=dev-lang/v8-3.6.6.24 dev-libs/openssl
+>=dev-lang/v8-3.6.6.24 dev-libs/openssl >=app-admin/eselect-python-20091230
+>=dev-lang/v8-3.6.6.24 dev-libs/openssl >=app-admin/eselect-python-20091230
 0
 http://nodejs.org/dist/v0.6.12/node-v0.6.12.tar.gz
 test
@@ -7,14 +7,14 @@ http://nodejs.org/
 GPL-2
 Evented IO for V8 Javascript
 ~amd64 ~x86 ~x64-macos
-eutils multilib pax-utils toolchain-funcs user
+eutils multilib pax-utils python toolchain-funcs user
 
 
 
 
 3
 
-compile configure install prepare test
+compile configure install prepare setup test
 
 
 
