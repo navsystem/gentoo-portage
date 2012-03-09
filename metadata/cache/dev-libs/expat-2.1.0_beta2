@@ -1,0 +1,22 @@
+
+
+0
+mirror://sourceforge/expat/expat-2.1.0-beta2.tar.gz
+
+http://expat.sourceforge.net/
+MIT
+XML parsing libraries
+
+eutils libtool multilib toolchain-funcs user
+elibc_FreeBSD examples static-libs unicode
+
+
+
+4
+
+compile configure install prepare unpack
+
+
+
+
+

@@ -6,7 +6,7 @@ http://wayland.freedesktop.org/releases/wayland-0.85.0.tar.xz
 http://wayland.freedesktop.org/
 CCPL-Attribution-ShareAlike-3.0 MIT
 Wayland protocol libraries
-~amd64 ~arm ~hppa ~x86
+~amd64 ~arm ~hppa ~ppc64 ~x86
 autotools eutils libtool multilib toolchain-funcs user
 static-libs
 
