@@ -6,7 +6,7 @@ mirror://cpan/authors/id/R/RR/RRA/Tie-ShadowHash-1.00.tar.gz
 http://search.cpan.org/dist/Tie-ShadowHash/
 || ( Artistic GPL-1 GPL-2 GPL-3 )
 Merge multiple data sources into a hash
-amd64 ~ia64 ~sparc ~x86
+amd64 ~ia64 ~sparc x86
 base eutils multilib perl-module toolchain-funcs user
 
 

@@ -1,0 +1,22 @@
+dev-libs/openssl:0 sys-libs/zlib || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+dev-libs/openssl:0 sys-libs/zlib
+0
+http://dev.gentoo.org/~ssuominen/unshield-0.6_p20120308.tar.xz
+
+http://github.com/twogood/unshield http://sourceforge.net/projects/synce/
+MIT
+InstallShield CAB file extractor
+~amd64 ~hppa ~ppc ~x86
+autotools eutils libtool multilib toolchain-funcs user
+static-libs
+
+
+
+4
+
+configure install prepare
+
+
+
+
+

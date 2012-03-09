@@ -6,7 +6,7 @@ http://launchpad.net/terminator/trunk/0.96/+download/terminator_0.96.tar.gz
 http://www.tenshu.net/p/terminator.html
 GPL-2
 Multiple GNOME terminals in one window
-amd64 ~x86
+amd64 x86
 distutils eutils fdo-mime gnome.org gnome2 gnome2-utils libtool multilib python toolchain-funcs user versionator
 dbus gnome debug
 

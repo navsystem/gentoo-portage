@@ -6,7 +6,7 @@ mirror://sabayon/sys-apps/entropy-1.0_rc87.tar.bz2
 http://www.sabayon.org
 GPL-2
 Entropy Package Manager foundation library
-~amd64 ~arm ~ppc ~x86
+~amd64 ~arm ~ppc ~ppc64 ~x86
 eutils multilib python toolchain-funcs user
 
 

@@ -6,7 +6,7 @@ mirror://cpan/authors/id/S/ST/STEVAN/Tree-Simple-1.18.tar.gz
 http://search.cpan.org/dist/Tree-Simple/
 || ( Artistic GPL-1 GPL-2 GPL-3 )
 A simple tree object
-amd64 ~ia64 ~ppc ~sparc ~x86
+amd64 ~ia64 ~ppc ~sparc x86
 base eutils multilib perl-module toolchain-funcs user
 test
 

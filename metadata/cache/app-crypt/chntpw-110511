@@ -1,4 +1,4 @@
-dev-libs/openssl app-arch/unzip
+dev-libs/openssl app-arch/unzip static? ( dev-libs/openssl[static-libs] )
 dev-libs/openssl
 0
 http://pogostick.net/~pnh/ntpasswd/chntpw-source-110511.zip
@@ -12,7 +12,7 @@ static
 
 
 
-2
+4
 
 compile install prepare
 
