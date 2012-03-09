@@ -3,7 +3,7 @@
 0
 
 
-http://git.profusion.mobi/cgit.cgi/kmod.git
+http://git.kernel.org/?p=utils/kernel/kmod/kmod.git
 LGPL-2
 library and tools for managing linux kernel modules
 

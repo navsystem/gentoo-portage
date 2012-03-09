@@ -1,0 +1,22 @@
+!sys-apps/module-init-tools !sys-apps/modutils lzma? ( app-arch/xz-utils ) zlib? ( sys-libs/zlib ) doc? ( dev-util/gtk-doc ) || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+!sys-apps/module-init-tools !sys-apps/modutils lzma? ( app-arch/xz-utils ) zlib? ( sys-libs/zlib )
+0
+mirror://kernel/linux/utils/kernel/kmod/kmod-6.tar.xz
+
+http://git.kernel.org/?p=utils/kernel/kmod/kmod.git
+LGPL-2
+library and tools for managing linux kernel modules
+~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~x86
+autotools eutils libtool multilib toolchain-funcs user
++compat doc debug lzma static-libs +tools zlib
+compat? ( tools )
+
+
+4
+
+configure install prepare
+
+
+
+
+

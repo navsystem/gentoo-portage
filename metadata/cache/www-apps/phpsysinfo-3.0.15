@@ -6,7 +6,7 @@ mirror://sourceforge/phpsysinfo/phpsysinfo-3.0.15.tar.gz
 http://phpsysinfo.sourceforge.net/
 GPL-2
 phpSysInfo is a nice package that will display your system stats via PHP.
-~alpha ~amd64 ~hppa ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
+~alpha ~amd64 hppa ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
 webapp
 vhosts
 
