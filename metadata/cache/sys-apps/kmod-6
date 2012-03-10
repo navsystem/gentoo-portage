@@ -8,8 +8,8 @@ LGPL-2
 library and tools for managing linux kernel modules
 ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~x86
 autotools eutils libtool multilib toolchain-funcs user
-+compat doc debug lzma static-libs +tools zlib
-compat? ( tools )
+doc debug lzma static-libs +tools zlib
+
 
 
 4
