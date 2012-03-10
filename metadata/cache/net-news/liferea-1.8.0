@@ -6,7 +6,7 @@ mirror://sourceforge/liferea/liferea-1.8.0.tar.gz
 http://liferea.sourceforge.net/
 GPL-2
 News Aggregator for RDF/RSS/CDF/Atom/Echo feeds
-amd64 ppc ~ppc64 ~x86
+amd64 ppc ppc64 ~x86
 eutils fdo-mime gnome.org gnome2 gnome2-utils libtool multilib pax-utils toolchain-funcs user versionator
 ayatana libnotify
 

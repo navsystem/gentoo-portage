@@ -6,7 +6,7 @@ mirror://cpan/authors/id/G/GB/GBROWN/Gtk2-Ex-PodViewer-0.18.tar.gz
 http://search.cpan.org/dist/Gtk2-Ex-PodViewer/
 || ( Artistic GPL-1 GPL-2 GPL-3 )
 a Gtk2 widget for displaying Plain old Documentation (POD).
-amd64 ~ia64 ~sparc ~x86
+amd64 ~ia64 ~sparc x86
 base eutils multilib perl-module toolchain-funcs user
 
 

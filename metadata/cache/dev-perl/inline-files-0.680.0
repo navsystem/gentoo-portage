@@ -6,7 +6,7 @@ mirror://cpan/authors/id/A/AM/AMBS/Inline/Inline-Files-0.68.tar.gz
 http://search.cpan.org/dist/Inline-Files/
 || ( Artistic GPL-1 GPL-2 GPL-3 )
 Multiple virtual files in a single file
-~alpha amd64 ~ia64 ppc ~sparc ~x86
+~alpha amd64 ~ia64 ppc ~sparc x86
 base eutils multilib perl-module toolchain-funcs user
 
 
