@@ -8,9 +8,9 @@ BSD
 A tiling window manager
 ~amd64 ~ppc64 ~sparc ~x86
 eutils ghc-package haskell-cabal multilib toolchain-funcs user versionator
-doc hscolour profile
++default-term doc hscolour profile
 
-
+default-term? ( x11-terms/xterm ) x11-apps/xmessage
 
 3
 

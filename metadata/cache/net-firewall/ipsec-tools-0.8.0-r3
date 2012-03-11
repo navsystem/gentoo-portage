@@ -6,7 +6,7 @@ mirror://sourceforge/ipsec-tools/ipsec-tools-0.8.0.tar.bz2
 http://ipsec-tools.sourceforge.net/
 BSD
 A port of KAME's IPsec utilities to the Linux-2.6 IPsec implementation
-~amd64 ~ppc ~x86
+~amd64 ~ppc ~ppc64 ~x86
 autotools eutils flag-o-matic libtool linux-info multilib pam toolchain-funcs user versionator
 hybrid idea ipv6 kerberos ldap nat pam rc5 readline selinux stats
 
