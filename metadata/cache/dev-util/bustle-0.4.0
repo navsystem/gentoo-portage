@@ -3,18 +3,18 @@ net-libs/libpcap sys-apps/dbus x11-libs/cairo x11-libs/pango gnome-base/libglade
 0
 http://willthompson.co.uk/bustle/releases/0.4.0/bustle-0.4.0.tar.gz http://dev.gentoo.org/~slyfox/bustle-0.4.0-tests.tar.gz
 
-http://hackage.haskell.org/package/bustle
+http://willthompson.co.uk/bustle/
 LGPL-2 GPL-2
 Draw pretty sequence diagrams of D-Bus traffic
 ~amd64 ~x86
-eutils ghc-package haskell-cabal multilib toolchain-funcs user versionator
+base eutils ghc-package haskell-cabal multilib toolchain-funcs user versionator
 test
 
 
 
 4
 
-compile configure install postinst prerm setup test
+compile configure install postinst prepare prerm setup test unpack
 
 
 

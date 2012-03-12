@@ -1,5 +1,5 @@
 gpm? ( sys-libs/gpm )
-!<x11-terms/rxvt-unicode-9.06-r3
+gpm? ( sys-libs/gpm ) !<x11-terms/rxvt-unicode-9.06-r3
 5
 mirror://gnu/ncurses/ncurses-5.9.tar.gz
 
