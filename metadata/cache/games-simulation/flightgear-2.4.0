@@ -6,7 +6,7 @@ mirror://flightgear/Source/flightgear-2.4.0.tar.bz2 mirror://flightgear/Shared/F
 http://www.flightgear.org/
 GPL-2
 Open Source Flight Simulator
-~amd64 ~ppc ~x86
+amd64 ~ppc ~x86
 autotools base eutils games libtool multilib toolchain-funcs user
 debug sdl
 

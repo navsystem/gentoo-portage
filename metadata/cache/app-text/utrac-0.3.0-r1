@@ -1,0 +1,22 @@
+
+
+0
+http://utrac.sourceforge.net/download/utrac-0.3.0.tar.gz
+
+http://utrac.sourceforge.net/
+GPL-2
+Universal Text Recognizer and Converter
+~amd64 ~x86
+eutils multilib toolchain-funcs user
+
+
+
+
+4
+
+install prepare
+
+
+
+
+
