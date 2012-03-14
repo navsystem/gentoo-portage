@@ -1,5 +1,5 @@
-!app-cdr/cdrtools unicode? ( virtual/libiconv ) kernel_linux? ( sys-libs/libcap ) hfs? ( sys-apps/file ) >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
-!app-cdr/cdrtools unicode? ( virtual/libiconv ) kernel_linux? ( sys-libs/libcap )
+app-arch/bzip2 !app-cdr/cdrtools sys-apps/file sys-libs/zlib unicode? ( virtual/libiconv ) kernel_linux? ( sys-libs/libcap ) hfs? ( sys-apps/file ) >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+app-arch/bzip2 !app-cdr/cdrtools sys-apps/file sys-libs/zlib unicode? ( virtual/libiconv ) kernel_linux? ( sys-libs/libcap )
 0
 mirror://debian/pool/main/c/cdrkit/cdrkit_1.1.11.orig.tar.gz
 
