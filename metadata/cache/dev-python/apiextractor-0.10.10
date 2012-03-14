@@ -1,10 +1,10 @@
-dev-libs/libxml2 dev-libs/libxslt >=x11-libs/qt-core-4.7.0 >=x11-libs/qt-xmlpatterns-4.7.0 dev-util/pkgconfig test? ( >=x11-libs/qt-test-4.7.0 ) >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
-dev-libs/libxml2 dev-libs/libxslt >=x11-libs/qt-core-4.7.0 >=x11-libs/qt-xmlpatterns-4.7.0
+>=dev-libs/libxml2-2.6.32 >=dev-libs/libxslt-1.1.19 >=x11-libs/qt-core-4.7.0:4 >=x11-libs/qt-xmlpatterns-4.7.0:4 test? ( >=x11-libs/qt-gui-4.7.0:4 >=x11-libs/qt-test-4.7.0:4 ) >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+>=dev-libs/libxml2-2.6.32 >=dev-libs/libxslt-1.1.19 >=x11-libs/qt-core-4.7.0:4 >=x11-libs/qt-xmlpatterns-4.7.0:4
 0
 http://www.pyside.org/files/apiextractor-0.10.10.tar.bz2
 
 http://www.pyside.org/
-LGPL-2.1
+GPL-2
 Library used to create an internal representation of an API in order to create Python bindings
 ~amd64 ~x86
 base cmake-utils eutils flag-o-matic multilib toolchain-funcs user

@@ -1,5 +1,5 @@
 x11-libs/qt-gui amd64? ( app-emulation/emul-linux-x86-qtlibs ) dev-vcs/git
-x11-libs/qt-gui amd64? ( app-emulation/emul-linux-x86-qtlibs ) net-im/skype
+x11-libs/qt-gui amd64? ( app-emulation/emul-linux-x86-qtlibs ) net-im/skype[-qt-static]
 0
 
 

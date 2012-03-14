@@ -1,7 +1,7 @@
 test? ( =dev-lang/python-2* )
 
 0
-mirror://sourceforge/uncrustify/uncrustify-0.56.tar.gz
+mirror://sourceforge/uncrustify/uncrustify-0.59.tar.gz
 
 http://uncrustify.sourceforge.net/
 GPL-2
