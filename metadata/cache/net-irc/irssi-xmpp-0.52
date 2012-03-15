@@ -1,0 +1,22 @@
+net-irc/irssi net-libs/loudmouth
+net-irc/irssi net-libs/loudmouth
+0
+http://cybione.org/~irssi-xmpp/files/irssi-xmpp-0.52.tar.gz
+
+http://cybione.org/~irssi-xmpp/
+GPL-2
+An irssi plugin providing Jabber/XMPP support
+~amd64 ~x86
+multilib toolchain-funcs
+
+
+
+
+4
+
+compile install prepare
+
+
+
+
+

@@ -1,5 +1,5 @@
-sys-apps/shadow
-sys-apps/shadow
+virtual/shadow
+virtual/shadow
 0
 http://www.pengutronix.de/software/utelnetd/utelnetd-0.1.9.tar.gz
 
