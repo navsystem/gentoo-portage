@@ -1,5 +1,5 @@
 x11-libs/qt-gui amd64? ( app-emulation/emul-linux-x86-qtlibs )
-x11-libs/qt-gui amd64? ( app-emulation/emul-linux-x86-qtlibs ) net-im/skype
+x11-libs/qt-gui amd64? ( app-emulation/emul-linux-x86-qtlibs ) net-im/skype[-qt-static]
 0
 http://dev.gentoo.org/~slyfox/skypetab-ng-0.4.9_pre20111124.tar.gz
 

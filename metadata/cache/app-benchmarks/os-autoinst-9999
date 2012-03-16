@@ -1,0 +1,22 @@
+dev-vcs/git || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+app-emulation/qemu-kvm app-text/gocr media-gfx/imagemagick media-video/ffmpeg2theora
+0
+
+
+http://os-autoinst.org/
+GPL-2
+automated testing of Operating Systems
+
+autotools eutils git-2 libtool multilib toolchain-funcs user
+
+
+
+
+4
+
+configure prepare unpack
+
+
+
+
+
