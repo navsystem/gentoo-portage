@@ -12,7 +12,7 @@ debug openmp video_cards_nvidia
 
 
 
-2
+4
 
 compile configure install prepare test unpack
 

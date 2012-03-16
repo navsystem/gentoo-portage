@@ -150,8 +150,6 @@ app-admin/packagekit-base:cron - Install cron script for auto-update
 app-admin/packagekit-base:entropy - Enable Entropy backend
 app-admin/packagekit-base:introspection - Use dev-libs/gobject-introspection Enable introspection
 app-admin/packagekit-base:pm-utils - Add pm-utils (suspend/resume) functionalities
-app-admin/packagekit-base:static-libs - Compile static archives
-app-admin/packagekit-base:udev - Add support for sys-fs/udev
 app-admin/prelude-manager:tcpwrapper - Add support for tcp_wrappers
 app-admin/puppet:augeas - Enable augeas support
 app-admin/puppet:diff - Enable diff support
@@ -268,6 +266,12 @@ app-crypt/seahorse:ldap - Enable seahorse to manipulate GPG keys on a LDAP serve
 app-crypt/seahorse-plugins:applet - Enable seahorse applet for gnome-base/gnome-panel
 app-crypt/seahorse-plugins:gedit - Enable text encryption plugin to integrate into app-editors/gedit
 app-crypt/seahorse-plugins:nautilus - Enable file encryption plugin to integrate into the gnome-base/nautilus context menu
+app-crypt/shishi:3des - Enable 3DES encryption/checksum type.
+app-crypt/shishi:aes - Enable AES encryption/checksum types.
+app-crypt/shishi:arcfour - Enable ARCFOUR encryption/checksum type.
+app-crypt/shishi:des - Enable DES related encryption/checksum types.
+app-crypt/shishi:md - Enable unkeyed MD4/MD5 checksum types.
+app-crypt/shishi:null - Enable dummy NULL encryption/checksum type.
 app-crypt/tpm-tools:pkcs11 - Build Token data management utilities based on OpenCryptoki's (dev-libs/opencryptoki) PKCS#11 implementation.
 app-dicts/aspell-be:classic - Support classic spelling by default
 app-dicts/gwaei:unique - Enable single instance support using dev-libs/libunique.
@@ -369,9 +373,12 @@ app-emulation/ganeti:lxc - Enable Linux Countainers support
 app-emulation/ganeti:sharedstorage - Enable Shared Storage support
 app-emulation/ganeti:xen - Enable Xen support
 app-emulation/lib765:libdsk - Enable support for the floppy disk emulation library app-emulation/libdsk
+app-emulation/libguestfs:erlang - Install Erlang bindings
 app-emulation/libguestfs:fuse - Enable image mount support via fuse
 app-emulation/libguestfs:haskell - Install GHC binding
+app-emulation/libguestfs:introspection - Use dev-libs/gobject-introspection for introspection
 app-emulation/libguestfs:javadoc - Install java docs
+app-emulation/libguestfs:systemtap - Use dev-util/systemtap to trace programs
 app-emulation/libspectrum:gcrypt - Use dev-libs/libgcrypt for low-level crypto of some features, including logfiles.
 app-emulation/libvirt:iscsi - Allow using an iSCSI remote storage server as pool for disk image storage
 app-emulation/libvirt:json - Support QEmu 0.13 JSON-based interface, using dev-libs/yajl.
@@ -527,6 +534,7 @@ app-i18n/anthy:canna-2ch - Enable support for app-dicts/canna-2ch
 app-i18n/fcitx:gtk3 - Use GTK+3 instead of 2
 app-i18n/fcitx:opencc - Enable OpenCC for Chinese Transform
 app-i18n/fcitx:pango - Enable support for x11-libs/pango
+app-i18n/fcitx-configtool:gtk3 - Use GTK+3 instead of 2
 app-i18n/ibus:dconf - Enable support for gnome-base/dconf
 app-i18n/ibus:gconf - Enable support for gnome-base/gconf
 app-i18n/ibus:gtk3 - Enable support for gtk+3
@@ -2034,35 +2042,7 @@ kde-base/kdebase-data:wallpapers - Install the KDE wallpapers
 kde-base/kdebase-kioslaves:sftp - Enable SFTP protocol support using net-libs/libssh
 kde-base/kdebase-meta:wallpapers - Install the KDE wallpapers
 kde-base/kdebase-startkde:wallpapers - Install the KDE wallpapers
-kde-base/kdebindings-csharp:akonadi - Compile bindings for Akonadi.
-kde-base/kdebindings-csharp:phonon - Compile bindings for Phonon.
-kde-base/kdebindings-csharp:plasma - Compile bindings for KDE's Plasma.
-kde-base/kdebindings-csharp:qimageblitz - Compile bindings for media-libs/qimageblitz.
-kde-base/kdebindings-csharp:qscintilla - Compile bindings for x11-libs/qscintilla.
-kde-base/kdebindings-csharp:webkit - Compile bindings for x11-libs/qt-webkit.
 kde-base/kdebindings-meta:csharp - Enable C# language bindings for KDE and Qt
-kde-base/kdebindings-perl:akonadi - Compile bindings for Akonadi.
-kde-base/kdebindings-perl:attica - Compile bindings for dev-libs/libattica.
-kde-base/kdebindings-perl:declarative - Compile bindings for x11-libs/qt-declarative.
-kde-base/kdebindings-perl:kate - Compile bindings for KDE Advanced Text Editor.
-kde-base/kdebindings-perl:multimedia - Compile bindings for x11-libs/qt-multimedia.
-kde-base/kdebindings-perl:okular - Compile bindings for kde-base/okular.
-kde-base/kdebindings-perl:phonon - Compile bindings for Phonon.
-kde-base/kdebindings-perl:plasma - Compile bindings for KDE's Plasma.
-kde-base/kdebindings-perl:qimageblitz - Compile bindings for media-libs/qimageblitz.
-kde-base/kdebindings-perl:qscintilla - Compile bindings for x11-libs/qscintilla.
-kde-base/kdebindings-perl:qthelp - Compile bindings for QtHelp from x11-libs/qt-assistant.
-kde-base/kdebindings-perl:qwt - Compile bindings for x11-libs/qwt.
-kde-base/kdebindings-perl:webkit - Compile bindings for x11-libs/qt-webkit.
-kde-base/kdebindings-ruby:akonadi - Compile bindings for Akonadi.
-kde-base/kdebindings-ruby:declarative - Compile bindings for x11-libs/qt-declarative.
-kde-base/kdebindings-ruby:kate - Compile bindings for KDE Advanced Text Editor.
-kde-base/kdebindings-ruby:okular - Compile bindings for kde-base/okular.
-kde-base/kdebindings-ruby:phonon - Compile bindings for Phonon.
-kde-base/kdebindings-ruby:plasma - Compile bindings for KDE's Plasma.
-kde-base/kdebindings-ruby:qscintilla - Compile bindings for x11-libs/qscintilla.
-kde-base/kdebindings-ruby:qwt - Compile bindings for x11-libs/qwt.
-kde-base/kdebindings-ruby:webkit - Compile bindings for x11-libs/qt-webkit.
 kde-base/kdelibs:opengl - Enable OpenGL support for Plasma (GLApplet)
 kde-base/kdelibs:udisks - Use udisks for block device access (e.g., automounting)
 kde-base/kdelibs:upnp - Enable UPnP support
@@ -2146,18 +2126,6 @@ kde-base/qtruby:webkit - Compile bindings for x11-libs/qt-webkit.
 kde-base/qyoto:phonon - Compile bindings for Phonon.
 kde-base/qyoto:qscintilla - Compile bindings for x11-libs/qscintilla.
 kde-base/qyoto:webkit - Compile bindings for x11-libs/qt-webkit.
-kde-base/smoke:akonadi - Compile bindings for Akonadi.
-kde-base/smoke:attica - Compile bindings for dev-libs/libattica.
-kde-base/smoke:declarative - Compile bindings for x11-libs/qt-declarative.
-kde-base/smoke:kate - Compile bindings for KDE Advanced Text Editor.
-kde-base/smoke:multimedia - Compile bindings for x11-libs/qt-multimedia.
-kde-base/smoke:okular - Compile bindings for kde-base/okular.
-kde-base/smoke:phonon - Compile bindings for Phonon.
-kde-base/smoke:qimageblitz - Compile bindings for media-libs/qimageblitz.
-kde-base/smoke:qscintilla - Compile bindings for x11-libs/qscintilla.
-kde-base/smoke:qthelp - Compile bindings for QtHelp from x11-libs/qt-assistant.
-kde-base/smoke:qwt - Compile bindings for x11-libs/qwt.
-kde-base/smoke:webkit - Compile bindings for x11-libs/qt-webkit.
 kde-base/smokekde:akonadi - Compile bindings for Akonadi.
 kde-base/smokekde:attica - Compile bindings for dev-libs/libattica.
 kde-base/smokekde:kate - Compile bindings for KDE Advanced Text Editor.
@@ -4282,10 +4250,8 @@ net-p2p/amule:daemon - Enable amule daemon
 net-p2p/amule:remote - Enable remote controlling of the client
 net-p2p/amule:stats - Enable statistic reporting
 net-p2p/amule:upnp - Enables support for Intel UPnP stack.
-net-p2p/bitcoin-qt:bip17 - Enable validation of new P2SH transactions
 net-p2p/bitcoin-qt:eligius - Enable using lower fees accepted by Eligius
 net-p2p/bitcoin-qt:upnp - Enable Universal Plug and Play
-net-p2p/bitcoind:bip17 - Enable validation of new P2SH transactions
 net-p2p/bitcoind:eligius - Enable using lower fees accepted by Eligius
 net-p2p/bitcoind:upnp - Enable Universal Plug and Play
 net-p2p/dbhub:switch_user - Enable support for switching user

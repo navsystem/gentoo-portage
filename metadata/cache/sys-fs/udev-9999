@@ -1,9 +1,9 @@
 selinux? ( sys-libs/libselinux ) gudev? ( dev-libs/glib:2 ) introspection? ( dev-libs/gobject-introspection ) >=sys-apps/kmod-5 >=sys-apps/util-linux-2.20 >=sys-libs/glibc-2.10 keymap? ( dev-util/gperf ) dev-util/pkgconfig virtual/os-headers !<sys-kernel/linux-headers-2.6.34 dev-util/gtk-doc test? ( app-text/tree ) dev-vcs/git || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool !<sys-apps/systemd-29-r4 !=sys-apps/systemd-37-r1
-selinux? ( sys-libs/libselinux ) gudev? ( dev-libs/glib:2 ) introspection? ( dev-libs/gobject-introspection ) >=sys-apps/kmod-5 >=sys-apps/util-linux-2.20 >=sys-libs/glibc-2.10 hwdb? ( >=sys-apps/usbutils-0.82 sys-apps/pciutils[-zlib] ) sys-fs/udev-init-scripts !sys-apps/coldplug !<sys-fs/lvm2-2.02.45 !sys-fs/device-mapper >=sys-apps/baselayout-1.12.5 !<sys-apps/openrc-0.9.9 !<sys-kernel/dracut-017-r1 !<sys-kernel/genkernel-3.4.25
+selinux? ( sys-libs/libselinux ) gudev? ( dev-libs/glib:2 ) introspection? ( dev-libs/gobject-introspection ) >=sys-apps/kmod-5 >=sys-apps/util-linux-2.20 >=sys-libs/glibc-2.10 hwdb? ( >=sys-apps/usbutils-0.82 || ( >=sys-apps/pciutils-3.1.9-r1[-compress-db] <sys-apps/pciutils-3.1.9-r1[-zlib] ) ) sys-fs/udev-init-scripts !sys-apps/coldplug !<sys-fs/lvm2-2.02.45 !sys-fs/device-mapper >=sys-apps/baselayout-2 !<sys-apps/openrc-0.9.9 !<sys-kernel/dracut-017-r1 !<sys-kernel/genkernel-3.4.25
 0
 
 test? ( userpriv )
-http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html
+http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev/udev.html http://git.kernel.org/?p=linux/hotplug/udev.git;a=summary
 GPL-2
 Linux dynamic and persistent device naming support (aka userspace devfs)
 

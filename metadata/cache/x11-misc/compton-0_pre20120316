@@ -1,0 +1,22 @@
+x11-libs/libX11 x11-libs/libXcomposite x11-libs/libXdamage x11-libs/libXfixes x11-libs/libXrender dev-util/pkgconfig x11-proto/xproto
+x11-libs/libX11 x11-libs/libXcomposite x11-libs/libXdamage x11-libs/libXfixes x11-libs/libXrender app-shells/bash x11-apps/xprop x11-apps/xwininfo
+0
+http://dev.gentoo.org/~ssuominen/compton-0_pre20120316.tar.xz
+
+http://github.com/chjj/compton
+MIT
+A compositor for X, and a fork of xcompmgr-dana
+~amd64 ~x86
+multilib toolchain-funcs
+
+
+
+
+4
+
+compile install prepare
+
+
+
+
+
