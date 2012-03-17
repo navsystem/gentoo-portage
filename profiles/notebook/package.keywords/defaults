@@ -22,3 +22,5 @@ sys-block/megacli amd64
 ~kde-misc/customizable-weather-1.5.11 amd64
 
 ~app-emulation/wine-1.4 amd64
+
+<sys-apps/openrc-9999 amd64
