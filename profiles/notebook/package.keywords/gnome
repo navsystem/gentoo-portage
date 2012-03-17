@@ -54,3 +54,8 @@ gnome-base/gnome-menus amd64
 =x11-libs/mx-1.4.2 amd64
 #required by gnome-base/gnome-control-center-3.2.2-r1[cups], required by gnome-extra/cinnamon-1.4, required by =gnome-extra/cinnamon-1.4 (argument)
 =net-print/cups-pk-helper-0.2.1 amd64
+
+#required by gnome-base/gnome-shell (argument)
+=gnome-base/gnome-shell-3.2.2.1 amd64
+#required by gnome-base/gnome-shell-3.2.2.1, required by gnome-base/gnome-shell (argument)
+=x11-wm/mutter-3.2.2 amd64
