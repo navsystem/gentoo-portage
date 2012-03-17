@@ -1,5 +1,5 @@
-nls? ( virtual/libintl ) acl? ( virtual/acl ) nls? ( sys-devel/gettext )
-nls? ( virtual/libintl ) acl? ( virtual/acl )
+acl? ( virtual/acl ) nls? ( virtual/libintl ) selinux? ( sys-libs/libselinux ) nls? ( sys-devel/gettext )
+acl? ( virtual/acl ) nls? ( virtual/libintl ) selinux? ( sys-libs/libselinux )
 0
 mirror://gnu/sed/sed-4.2.1.tar.bz2
 

@@ -1,5 +1,5 @@
-python? ( dev-lang/python ) perl? ( dev-lang/perl ) zlib? ( sys-libs/zlib ) || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
-python? ( dev-lang/python ) perl? ( dev-lang/perl ) zlib? ( sys-libs/zlib )
+perl? ( dev-lang/perl ) zlib? ( sys-libs/zlib ) || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=app-admin/eselect-python-20091230 python? ( =dev-lang/python-2* )
+perl? ( dev-lang/perl ) zlib? ( sys-libs/zlib ) >=app-admin/eselect-python-20091230 python? ( =dev-lang/python-2* )
 0
 http://www.clearsilver.net/downloads/clearsilver-0.10.5.tar.gz
 
@@ -7,14 +7,14 @@ http://www.clearsilver.net/
 CS-1.0
 Clearsilver is a fast, powerful, and language-neutral HTML template system.
 amd64 ppc ppc64 ~sparc x86 ~x86-fbsd
-autotools base eutils libtool multilib perl-app perl-module toolchain-funcs user
+autotools base eutils libtool multilib perl-app perl-module python toolchain-funcs user
 perl python zlib
 
 
 
+4
 
-
-compile install postinst postrm preinst prerm setup test unpack
+compile configure install prepare setup test unpack
 
 
 

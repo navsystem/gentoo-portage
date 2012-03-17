@@ -1,0 +1,22 @@
+virtual/perl-File-Spec dev-perl/Module-Install virtual/perl-ExtUtils-MakeMaker virtual/perl-Module-Build dev-lang/perl[-build]
+virtual/perl-File-Spec dev-lang/perl[-build]
+0
+mirror://cpan/authors/id/A/AU/AUDREYT/Unicode-EastAsianWidth-1.30.tar.gz
+
+http://search.cpan.org/dist/Unicode-EastAsianWidth/
+MIT
+East Asian Width properties
+~amd64 ~x86
+base eutils multilib perl-module toolchain-funcs user
+
+
+
+
+4
+
+compile configure install prepare test unpack
+
+
+
+
+

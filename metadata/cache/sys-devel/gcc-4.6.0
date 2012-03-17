@@ -10,7 +10,7 @@ The GNU Compiler Collection
 eutils fixheadtails flag-o-matic gnuconfig libtool multilib pax-utils toolchain toolchain-funcs user versionator
 build multislot nls nptl test vanilla altivec cxx fortran nocxx nopie nossp bootstrap doc gcj gtk hardened multilib objc objc-gc mudflap libssp objc++ openmp fixed-point graphite go
 
-go? ( >=sys-devel/gcc-config-1.5 ) elibc_glibc? ( >=sys-libs/glibc-2.8 ) >=sys-devel/gcc-config-1.4
+elibc_glibc? ( >=sys-libs/glibc-2.8 ) >=sys-devel/gcc-config-1.5
 
 
 

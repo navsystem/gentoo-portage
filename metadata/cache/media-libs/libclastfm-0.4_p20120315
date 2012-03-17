@@ -1,0 +1,22 @@
+net-misc/curl dev-util/pkgconfig || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+net-misc/curl
+0
+http://dev.gentoo.org/~ssuominen/libclastfm-0.4_p20120315.tar.xz
+
+http://sourceforge.net/projects/liblastfm/
+GPL-3
+An unofficial C-API to the last.fm web service
+~amd64 ~x86
+autotools eutils libtool multilib toolchain-funcs user
+static-libs
+
+
+
+4
+
+configure install prepare
+
+
+
+
+

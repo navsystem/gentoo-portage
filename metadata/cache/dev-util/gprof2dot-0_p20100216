@@ -7,14 +7,14 @@ http://code.google.com/p/jrfonseca/wiki/Gprof2Dot
 GPL-3
 Converts profiling output to dot graphs
 ~amd64 ~x86
-multilib python toolchain-funcs
+eutils multilib python toolchain-funcs user
 
 
 
 
 3
 
-install postinst postrm setup
+install postinst postrm prepare setup
 
 
 
