@@ -67,3 +67,9 @@ sys-apps/systemd-units server
 sys-fs/udev gudev extras
 net-misc/connman google ntpd ofono openvpn vpnc
 media-libs/mesa g3dvl
+
+#required by gnome-extra/cinnamon-1.4, required by =gnome-extra/cinnamon-1.4 (argument)
+gnome-base/gnome-menus python
+#required by media-sound/pulseaudio-1.1-r1[udev], required by gnome-extra/cinnamon-1.4, required by =gnome-extra/cinnamon-1.4 (argument)
+=sys-fs/udev-181 hwdb
+
