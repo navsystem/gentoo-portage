@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00_beta2.ebuild,v 1.1 2012/03/11 17:48:52 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00_beta2.ebuild,v 1.3 2012/03/18 06:41:10 floppym Exp $
 
 EAPI=4
 
@@ -117,20 +117,37 @@ grub_run_phase() {
 
 grub_src_configure() {
 	local platform=$1
-	local target=
 	local with_platform=
 
 	[[ -z ${platform} ]] && die "${FUNCNAME} [platform]"
 
-	# check if we have to specify the target (EFI)
-	# or just append correct --with-platform
-	if [[ ${platform} == efi-32 ]]; then
-		# Build 32-bit EFI on 64-bit system
-		target="--target=i386"
-	fi
+	# Used below for efi cross-building
+	tc-export CC NM OBJCOPY STRIP
+
+	estack_push CTARGET "${CTARGET}"
+	estack_push TARGET_CC "${TARGET_CC}"
+	estack_push TARGET_CFLAGS "${TARGET_CFLAGS}"
+	estack_push TARGET_CPPFLAGS "${TARGET_CPPFLAGS}"
 
 	case ${platform} in
-		efi-*) with_platform="--with-platform=${platform%-*}" ;;
+		efi-32)
+			if [[ ${CHOST} == x86_64* ]]; then
+				CTARGET="${CTARGET:-i386}"
+				TARGET_CC="${TARGET_CC:-${CC}}"
+				export TARGET_CC
+			fi
+			with_platform="--with-platform=efi"
+			;;
+		efi-64)
+			if [[ ${CHOST} == i?86* ]]; then
+				CTARGET="${CTARGET:-x86_64}"
+				TARGET_CC="${TARGET_CC:-${CC}}"
+				TARGET_CFLAGS="-Os -march=x86-64 ${TARGET_CFLAGS}"
+				TARGET_CPPFLAGS="-march=x86-64 ${TARGET_CPPFLAGS}"
+				export TARGET_CC TARGET_CFLAGS TARGET_CPPFLAGS
+			fi
+			with_platform="--with-platform=efi"
+			;;
 		guessed) ;;
 		*) with_platform="--with-platform=${platform}" ;;
 	esac
@@ -141,7 +158,6 @@ grub_src_configure() {
 		--program-prefix= \
 		--program-transform-name="s,grub,grub2," \
 		--with-grubdir=grub2 \
-		${target} \
 		${with_platform} \
 		$(use_enable debug mm-debug) \
 		$(use_enable debug grub-emu-usb) \
@@ -152,6 +168,11 @@ grub_src_configure() {
 		$(use_enable truetype grub-mkfont) \
 		$(use_enable libzfs) \
 		$(use sdl && use_enable debug grub-emu-sdl)
+
+	estack_pop CTARGET CTARGET || die
+	estack_pop TARGET_CC TARGET_CC || die
+	estack_pop TARGET_CFLAGS TARGET_CFLAGS || die
+	estack_pop TARGET_CPPFLAGS TARGET_CPPFLAGS || die
 }
 
 grub_src_compile() {

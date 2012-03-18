@@ -1,5 +1,5 @@
-x11-libs/libX11 x86-interix? ( >=sys-devel/libtool-2.2.6a sys-devel/m4 >=x11-misc/util-macros-1.15.0 >=media-fonts/font-util-1.2.0 ) ppc-aix? ( >=sys-devel/libtool-2.2.6a sys-devel/m4 >=x11-misc/util-macros-1.15.0 >=media-fonts/font-util-1.2.0 ) x86-winnt? ( >=sys-devel/libtool-2.2.6a sys-devel/m4 >=x11-misc/util-macros-1.15.0 >=media-fonts/font-util-1.2.0 ) >=dev-util/pkgconfig-0.23
-x11-libs/libX11
+x11-libs/libX11 x11-libs/libXrandr x11-proto/xproto x86-interix? ( >=sys-devel/libtool-2.2.6a sys-devel/m4 >=x11-misc/util-macros-1.15.0 >=media-fonts/font-util-1.2.0 ) ppc-aix? ( >=sys-devel/libtool-2.2.6a sys-devel/m4 >=x11-misc/util-macros-1.15.0 >=media-fonts/font-util-1.2.0 ) x86-winnt? ( >=sys-devel/libtool-2.2.6a sys-devel/m4 >=x11-misc/util-macros-1.15.0 >=media-fonts/font-util-1.2.0 ) >=dev-util/pkgconfig-0.23
+x11-libs/libX11 x11-libs/libXrandr
 0
 http://xorg.freedesktop.org/releases/individual/app/xev-1.2.0.tar.bz2
 

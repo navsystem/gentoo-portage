@@ -1,10 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.9999.ebuild,v 1.20 2012/03/09 11:44:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.9999.ebuild,v 1.26 2012/03/18 13:36:48 scarabeus Exp $
 
 EAPI=4
 
 KDE_REQUIRED="optional"
+QT_MINIMAL="4.7.4"
 KDE_SCM="git"
 CMAKE_REQUIRED="never"
 
@@ -69,7 +70,7 @@ unset ADDONS_URI
 unset EXT_URI
 unset ADDONS_SRC
 
-IUSE="binfilter +branding +cups dbus debug eds gnome +graphite gstreamer +gtk
+IUSE="binfilter +branding +cups dbus eds gnome +graphite gstreamer +gtk
 jemalloc kde mysql +nsplugin odk opengl pdfimport postgres svg test +vba
 +webdav +xmlsec"
 LICENSE="LGPL-3"
@@ -192,6 +193,8 @@ DEPEND="${COMMON_DEPEND}
 PATCHES=(
 	# this can't be upstreamed :(
 	"${FILESDIR}/${PN}-system-pyuno.patch"
+	"${FILESDIR}/${PN}-3.5-propagate-gb_FULLDEPS.patch"
+	"${FILESDIR}/${PN}-3.5-junit.patch"
 )
 
 REQUIRED_USE="
@@ -207,7 +210,7 @@ pkg_pretend() {
 
 	if [[ ${MERGE_TYPE} != binary ]]; then
 		CHECKREQS_MEMORY="512M"
-		use debug && CHECKREQS_DISK_BUILD="10G" || CHECKREQS_DISK_BUILD="6G"
+		CHECKREQS_DISK_BUILD="6G"
 		check-reqs_pkg_pretend
 
 		if [[ $(gcc-major-version) -lt 4 ]]; then
@@ -437,7 +440,6 @@ src_configure() {
 		--without-sun-templates \
 		$(use_enable binfilter) \
 		$(use_enable dbus) \
-		$(use_enable debug crashdump) \
 		$(use_enable eds evolution2) \
 		$(use_enable gnome gconf) \
 		$(use_enable gnome gio) \
@@ -493,6 +495,12 @@ src_install() {
 		insinto /usr/$(get_libdir)/${PN}/program
 		newins "${WORKDIR}/branding-sofficerc" sofficerc
 	fi
+
+	# Hack for offlinehelp, this needs fixing upstream at some point.
+	# It is broken because we send --without-help
+	# https://bugs.freedesktop.org/show_bug.cgi?id=46506
+	insinto /usr/$(get_libdir)/libreoffice/help
+	doins xmlhelp/util/main_transform.xsl
 }
 
 pkg_preinst() {

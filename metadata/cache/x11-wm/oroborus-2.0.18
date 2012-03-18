@@ -6,7 +6,7 @@ http://www.oroborus.org/debian/dists/sid/main/source/x11/oroborus_2.0.18.tar.gz
 http://www.oroborus.org
 GPL-2
 Small and fast window manager.
-amd64 ppc sparc x86
+amd64 ppc x86
 autotools eutils libtool multilib toolchain-funcs user
 gnome
 

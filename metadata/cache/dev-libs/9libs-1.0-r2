@@ -6,7 +6,7 @@ ftp://www.netlib.org/research/9libs/9libs-1.0.tar.bz2
 http://www.netlib.org/research/9libs/9libs-1.0.README
 PLAN9
 A package of Plan 9 compatibility libraries
-~amd64 ~sparc x86
+~amd64 x86
 eutils multilib toolchain-funcs user
 
 

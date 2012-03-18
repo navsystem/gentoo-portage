@@ -12,7 +12,7 @@ base eutils games gnome2-utils multilib toolchain-funcs user
 
 
 
-3
+2
 
 compile configure install postinst postrm preinst prepare setup unpack
 

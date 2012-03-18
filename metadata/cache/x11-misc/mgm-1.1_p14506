@@ -6,7 +6,7 @@ mirror://gentoo/mgm-1.1_p14506.tar.bz2
 http://www.linuxmafia.com/mgm/index.html
 as-is
 Moaning Goat Meter: load and status meter written in Perl
-~x86 ~sparc ~amd64 ~ppc
+~amd64 ~ppc ~x86
 eutils multilib toolchain-funcs user versionator
 
 

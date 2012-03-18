@@ -6,7 +6,7 @@ mirror://sourceforge/gmorgan/gmorgan_0.39.tar.gz
 http://gmorgan.sourceforge.net/
 GPL-2
 Opensource software rhythm station
-amd64 ~sparc x86
+amd64 x86
 autotools eutils libtool multilib toolchain-funcs user
 
 
