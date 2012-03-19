@@ -6,7 +6,7 @@ http://monkey-project.com/releases/0.31/monkey-0.31.0.tar.gz
 http://www.monkey-project.com/
 GPL-2
 A small, fast, and scalable web server
-~amd64 ~mips ppc ~sparc x86
+~amd64 ~mips ppc x86
 depend.php eutils multilib phpconfutils toolchain-funcs user
 php
 

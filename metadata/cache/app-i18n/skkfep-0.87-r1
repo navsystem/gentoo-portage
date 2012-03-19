@@ -1,5 +1,5 @@
-sys-libs/ncurses >=sys-apps/sed-4 sys-apps/gawk
-sys-libs/ncurses app-i18n/skk-jisyo
+>=sys-libs/ncurses-5.7-r7 >=sys-apps/sed-4 sys-apps/gawk
+>=sys-libs/ncurses-5.7-r7 app-i18n/skk-jisyo
 0
 http://homepage2.nifty.com/aito/skkfep/skkfep-0.87.tar.gz
 
@@ -12,9 +12,9 @@ eutils multilib toolchain-funcs user
 
 
 
+4
 
-
-compile install unpack
+compile install prepare
 
 
 

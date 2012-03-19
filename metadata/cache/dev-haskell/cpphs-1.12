@@ -6,7 +6,7 @@ http://hackage.haskell.org/packages/archive/cpphs/1.12/cpphs-1.12.tar.gz
 http://haskell.org/cpphs/
 GPL-2 LGPL-2.1
 A liberalised re-implementation of cpp, the C pre-processor.
-~alpha amd64 ~ia64 ppc ppc64 ~sparc x86
+alpha amd64 ia64 ppc ppc64 sparc x86
 eutils ghc-package haskell-cabal multilib toolchain-funcs user versionator
 doc hscolour profile
 

@@ -6,7 +6,7 @@ http://trash.net/~reeler/nstats/files/nstats-0.4.tar.gz
 http://trash.net/~reeler/nstats/
 Artistic
 Displays statistics about ethernet traffic including protocol breakdown
-amd64 ~ppc ~sparc x86
+amd64 ~ppc x86
 eutils multilib toolchain-funcs user
 
 

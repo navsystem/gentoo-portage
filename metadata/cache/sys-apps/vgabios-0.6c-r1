@@ -6,7 +6,7 @@ http://savannah.gnu.org/download/vgabios/vgabios-0.6c.tgz http://dev.gentoo.org/
 http://www.nongnu.org/vgabios/
 LGPL-2.1
 VGA BIOS implementation
-amd64 ~x86
+amd64 x86
 eutils multilib toolchain-funcs user
 debug
 

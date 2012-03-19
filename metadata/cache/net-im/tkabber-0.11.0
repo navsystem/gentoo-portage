@@ -6,7 +6,7 @@ http://files.jabber.ru/tkabber/tkabber-0.11.0.tar.gz plugins? ( http://files.jab
 http://tkabber.jabber.ru/
 GPL-2
 Tkabber is a Free and Open Source client for the Jabber instant messaging system, written in Tcl/Tk.
-~alpha ~amd64 ~sparc ~x86
+~amd64 ~x86
 eutils multilib toolchain-funcs user
 plugins ssl
 
