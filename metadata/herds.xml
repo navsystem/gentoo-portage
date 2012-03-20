@@ -20,7 +20,7 @@
    always a description without a lang attribute. Also there are no overlapping
    descriptions allowed (multiple description tags with the same language)
 
-   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.909 2012/03/18 18:16:55 pacho Exp $
+   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.911 2012/03/18 19:27:51 pacho Exp $
 
 -->
 <herds>
@@ -1924,10 +1924,6 @@
     <name>Peter Volkov</name>
   </maintainer>
   <maintainer>
-    <email>jokey@gentoo.org</email>
-    <name>Markus Ullmann</name>
-  </maintainer>
-  <maintainer>
       <email>cedk@gentoo.org</email>
       <name>Cédric Krier</name>
   </maintainer>
@@ -1956,10 +1952,6 @@
   <maintainer>
     <email>swegener@gentoo.org</email>
     <name>Sven Wegener</name>
-  </maintainer>
-  <maintainer>
-    <email>jokey@gentoo.org</email>
-    <name>Markus Ullmann</name>
   </maintainer>
   <maintainer>
     <email>gurligebis@gentoo.org</email>
@@ -2204,10 +2196,6 @@
   <name>www-servers</name>
   <email>www-servers@gentoo.org</email>
   <description>Web servers other than Apache</description>
-  <maintainer>
-    <email>bass@gentoo.org</email>
-    <name>José Alberto Suárez López</name>
-  </maintainer>
 </herd>
 <herd>
   <name>nx</name>
@@ -2322,10 +2310,6 @@
   <email>ldap-bugs@gentoo.org</email>
   <description>LDAP related things</description>
   <maintainer>
-    <email>jokey@gentoo.org</email>
-    <name>Markus Ullmann</name>
-  </maintainer>
-  <maintainer>
     <email>robbat2@gentoo.org</email>
     <name>Robin H. Johnson</name>
   </maintainer>
@@ -2362,9 +2346,6 @@
   <name>lcd</name>
   <email>lcd@gentoo.org</email>
   <description>Software related to LCD control</description>
-  <maintainer>
-    <email>jokey@gentoo.org</email>
-  </maintainer>
 </herd>
 <herd>
   <name>rox</name>
