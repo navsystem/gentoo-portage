@@ -1,5 +1,5 @@
->=app-admin/eselect-python-20091230 dev-lang/python dev-lang/python[xml]
->=app-admin/eselect-python-20091230 dev-lang/python dev-lang/python[xml]
+dev-lang/python dev-lang/python[xml]
+dev-lang/python dev-lang/python[xml]
 0
 http://www.hartwork.org/public/gprof2dot-0_p20100216.tar.bz2
 

@@ -1,5 +1,5 @@
->=app-admin/eselect-python-20091230 =dev-lang/python-2*
->=app-admin/eselect-python-20091230 =dev-lang/python-2*
+=dev-lang/python-2*
+=dev-lang/python-2*
 0
 mirror://berlios/pycifrw/PyCifRW-3.3.tar.gz
 

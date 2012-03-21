@@ -1,5 +1,5 @@
-dev-python/pyparsing media-gfx/graphviz dev-python/setuptools >=app-admin/eselect-python-20091230 =dev-lang/python-2*
-dev-python/pyparsing media-gfx/graphviz >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+dev-python/pyparsing media-gfx/graphviz dev-python/setuptools =dev-lang/python-2*
+dev-python/pyparsing media-gfx/graphviz =dev-lang/python-2*
 0
 http://pydot.googlecode.com/files/pydot-1.0.28.tar.gz
 

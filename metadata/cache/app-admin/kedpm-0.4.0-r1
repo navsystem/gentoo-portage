@@ -1,5 +1,5 @@
-dev-python/pycrypto gtk? ( >=dev-python/pygtk-2 ) >=app-admin/eselect-python-20091230 =dev-lang/python-2*
-dev-python/pycrypto gtk? ( >=dev-python/pygtk-2 ) >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+dev-python/pycrypto gtk? ( >=dev-python/pygtk-2 ) =dev-lang/python-2*
+dev-python/pycrypto gtk? ( >=dev-python/pygtk-2 ) =dev-lang/python-2*
 0
 mirror://sourceforge/kedpm/kedpm-0.4.0.tar.gz
 

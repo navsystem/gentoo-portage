@@ -1,5 +1,5 @@
-dev-python/pyode dev-python/pygame dev-python/pyopengl >=app-admin/eselect-python-20091230 =dev-lang/python-2*
-dev-python/pyode dev-python/pygame dev-python/pyopengl >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+dev-python/pyode dev-python/pygame dev-python/pyopengl =dev-lang/python-2*
+dev-python/pyode dev-python/pygame dev-python/pyopengl =dev-lang/python-2*
 0
 mirror://sourceforge/accelerator3d/accelerator-0.1.1.tar.bz2
 

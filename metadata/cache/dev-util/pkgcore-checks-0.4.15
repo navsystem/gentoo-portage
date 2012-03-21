@@ -1,5 +1,5 @@
->=sys-apps/pkgcore-0.7.3 >=dev-python/snakeoil-0.4.4 >=app-admin/eselect-python-20091230 dev-lang/python
->=sys-apps/pkgcore-0.7.3 >=dev-python/snakeoil-0.4.4 >=app-admin/eselect-python-20091230 dev-lang/python
+>=sys-apps/pkgcore-0.7.3 >=dev-python/snakeoil-0.4.4 dev-lang/python
+>=sys-apps/pkgcore-0.7.3 >=dev-python/snakeoil-0.4.4 dev-lang/python
 0
 http://pkgcore-checks.googlecode.com/files/pkgcore-checks-0.4.15.tar.bz2
 

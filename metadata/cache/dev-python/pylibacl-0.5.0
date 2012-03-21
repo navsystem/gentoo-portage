@@ -1,5 +1,5 @@
-sys-apps/acl dev-python/setuptools >=app-admin/eselect-python-20091230 dev-lang/python
-sys-apps/acl >=app-admin/eselect-python-20091230 dev-lang/python
+sys-apps/acl dev-python/setuptools dev-lang/python
+sys-apps/acl dev-lang/python
 0
 mirror://sourceforge/pylibacl/pylibacl-0.5.0.tar.gz
 test

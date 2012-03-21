@@ -6,7 +6,7 @@ mirror://cpan/authors/id/G/GB/GBARR/Convert-BER-1.32.tar.gz
 http://search.cpan.org/dist/Convert-BER/
 || ( Artistic GPL-1 GPL-2 GPL-3 )
 Class for encoding/decoding BER messages
-alpha amd64 ~ia64 ppc ~sparc x86
+alpha amd64 ppc x86
 base eutils multilib perl-module toolchain-funcs user
 
 

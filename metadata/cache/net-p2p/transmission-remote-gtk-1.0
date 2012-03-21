@@ -6,7 +6,7 @@ http://transmission-remote-gtk.googlecode.com/files/transmission-remote-gtk-1.0.
 http://code.google.com/p/transmission-remote-gtk
 GPL-2
 GTK client for management of the Transmission BitTorrent client, over HTTP RPC
-~amd64 ~x86
+amd64 ~x86
 gnome2-utils
 debug geoip libproxy unique
 

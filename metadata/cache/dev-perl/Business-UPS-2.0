@@ -6,7 +6,7 @@ mirror://cpan/authors/id/J/JW/JWHEELER/Business-UPS-2.0.tar.gz
 http://search.cpan.org/dist/Business-UPS/
 || ( Artistic GPL-2 )
 A UPS Interface Module
-amd64 ia64 sparc x86
+amd64 x86
 base eutils multilib perl-module toolchain-funcs user
 
 

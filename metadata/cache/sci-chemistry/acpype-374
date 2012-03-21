@@ -1,5 +1,5 @@
-sci-chemistry/ambertools >=app-admin/eselect-python-20091230 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
-sci-chemistry/ambertools >=app-admin/eselect-python-20091230 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
+sci-chemistry/ambertools || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
+sci-chemistry/ambertools || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
 0
 http://dev.gentoo.org/~jlec/distfiles/acpype-374.tar.xz
 

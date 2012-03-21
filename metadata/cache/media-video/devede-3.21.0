@@ -1,5 +1,5 @@
->=app-admin/eselect-python-20091230 =dev-lang/python-2.7*
-dev-python/dbus-python dev-python/pycairo dev-python/pygobject:2 >=dev-python/pygtk-2.16 media-video/dvdauthor media-video/mplayer media-video/vcdimager virtual/cdrtools ffmpeg? ( virtual/ffmpeg[mp3] ) >=app-admin/eselect-python-20091230 =dev-lang/python-2.7*
+=dev-lang/python-2.7*
+dev-python/dbus-python dev-python/pycairo dev-python/pygobject:2 >=dev-python/pygtk-2.16 media-video/dvdauthor media-video/mplayer media-video/vcdimager virtual/cdrtools ffmpeg? ( virtual/ffmpeg[mp3] ) =dev-lang/python-2.7*
 0
 http://www.rastersoft.com/descargas/devede-3.21.0.tar.bz2
 

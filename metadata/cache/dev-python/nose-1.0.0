@@ -1,5 +1,5 @@
-dev-python/setuptools doc? ( >=dev-python/sphinx-0.6 ) test? ( dev-python/twisted ) >=app-admin/eselect-python-20091230 dev-lang/python
-dev-python/setuptools >=app-admin/eselect-python-20091230 dev-lang/python
+dev-python/setuptools doc? ( >=dev-python/sphinx-0.6 ) test? ( dev-python/twisted ) dev-lang/python
+dev-python/setuptools dev-lang/python
 0
 http://somethingaboutorange.com/mrl/projects/nose/nose-1.0.0.tar.gz
 

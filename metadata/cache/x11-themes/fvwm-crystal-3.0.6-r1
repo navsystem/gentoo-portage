@@ -1,5 +1,5 @@
->=app-admin/eselect-python-20091230 =dev-lang/python-2.7*
-|| ( media-gfx/imagemagick[png] media-gfx/graphicsmagick[imagemagick,png] ) x11-apps/xwd || ( x11-misc/habak x11-misc/hsetroot ) || ( x11-misc/stalonetray x11-misc/trayer ) >=x11-wm/fvwm-2.6.2[png] >=app-admin/eselect-python-20091230 =dev-lang/python-2.7*
+=dev-lang/python-2.7*
+|| ( media-gfx/imagemagick[png] media-gfx/graphicsmagick[imagemagick,png] ) x11-apps/xwd || ( x11-misc/habak x11-misc/hsetroot ) || ( x11-misc/stalonetray x11-misc/trayer ) >=x11-wm/fvwm-2.6.2[png] =dev-lang/python-2.7*
 0
 http://download.gna.org/fvwm-crystal/3.0.6/fvwm-crystal-3.0.6.tar.gz
 

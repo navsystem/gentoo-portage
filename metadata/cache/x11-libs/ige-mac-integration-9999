@@ -1,5 +1,5 @@
-x11-libs/gtk+:2 dev-python/pygtk:2 dev-util/pkgconfig || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool dev-vcs/git >=app-admin/eselect-python-20091230
-x11-libs/gtk+:2 dev-python/pygtk:2 >=app-admin/eselect-python-20091230
+x11-libs/gtk+:2 dev-python/pygtk:2 dev-util/pkgconfig || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool dev-vcs/git
+x11-libs/gtk+:2 dev-python/pygtk:2
 0
 
 

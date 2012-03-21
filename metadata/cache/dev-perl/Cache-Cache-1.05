@@ -6,7 +6,7 @@ mirror://cpan/authors/id/D/DC/DCLINTON/Cache-Cache-1.05.tar.gz
 http://www.cpan.org/authors/id/D/DC/DCLINTON/
 || ( Artistic GPL-2 )
 Generic cache interface and implementations
-alpha amd64 hppa ia64 ppc ppc64 sparc x86
+alpha amd64 hppa ppc ppc64 x86
 base eutils multilib perl-module toolchain-funcs user
 
 

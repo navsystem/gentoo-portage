@@ -1,5 +1,5 @@
-doc? ( >=dev-python/docutils-0.7 virtual/latex-base ) >=app-admin/eselect-python-20091230 dev-lang/python >=virtual/emacs-21
->=app-admin/eselect-python-20091230 dev-lang/python >=virtual/emacs-21
+doc? ( >=dev-python/docutils-0.7 virtual/latex-base ) dev-lang/python >=virtual/emacs-21
+dev-lang/python >=virtual/emacs-21
 0
 mirror://gentoo/pymacs-0.24_beta2.tar.gz
 

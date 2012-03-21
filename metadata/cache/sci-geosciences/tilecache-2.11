@@ -1,5 +1,5 @@
-dev-python/imaging dev-python/paste dev-python/setuptools >=app-admin/eselect-python-20091230 =dev-lang/python-2*
-dev-python/imaging dev-python/paste >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+dev-python/imaging dev-python/paste dev-python/setuptools =dev-lang/python-2*
+dev-python/imaging dev-python/paste =dev-lang/python-2*
 0
 http://tilecache.org/tilecache-2.11.tar.gz
 

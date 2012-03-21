@@ -1,5 +1,5 @@
->=app-admin/eselect-python-20091230 =dev-lang/python-2*
->=dev-python/pygame-1.7 >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+=dev-lang/python-2*
+>=dev-python/pygame-1.7 =dev-lang/python-2*
 0
 mirror://sourceforge/ospace/Client/0.5.67/Outer%20Space-0.5.67.tar.gz -> outerspace-0.5.67.tar.gz
 

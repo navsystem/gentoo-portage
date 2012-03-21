@@ -1,9 +1,9 @@
 sys-libs/ncurses
 sys-libs/ncurses
 0
-https://dentar.com/opensource/clockywock-0.2.3F.tar.gz
+http://dentar.com/opensource/clockywock-0.2.3F.tar.gz
 
-http://dentar.com/open-source
+http://dentar.com/ourway/opensource
 GPL-2
 ncurses based analog clock
 amd64 x86

@@ -1,5 +1,5 @@
->=dev-libs/openssl-0.9.7 >=dev-python/epsilon-0.5.0 >=dev-python/pyopenssl-0.6 >=dev-python/twisted-2.4 >=app-admin/eselect-python-20091230 =dev-lang/python-2*
->=dev-libs/openssl-0.9.7 >=dev-python/epsilon-0.5.0 >=dev-python/pyopenssl-0.6 >=dev-python/twisted-2.4 >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+>=dev-libs/openssl-0.9.7 >=dev-python/epsilon-0.5.0 >=dev-python/pyopenssl-0.6 >=dev-python/twisted-2.4 =dev-lang/python-2*
+>=dev-libs/openssl-0.9.7 >=dev-python/epsilon-0.5.0 >=dev-python/pyopenssl-0.6 >=dev-python/twisted-2.4 =dev-lang/python-2*
 0
 mirror://pypi/V/Vertex/Vertex-0.3.0.tar.gz
 

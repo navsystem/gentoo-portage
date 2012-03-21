@@ -1,5 +1,5 @@
->=dev-python/elementtree-1.2 >=dev-libs/expat-1.95.8 dev-python/setuptools >=app-admin/eselect-python-20091230 =dev-lang/python-2*
->=dev-python/elementtree-1.2 >=dev-libs/expat-1.95.8 >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+>=dev-python/elementtree-1.2 >=dev-libs/expat-1.95.8 dev-python/setuptools =dev-lang/python-2*
+>=dev-python/elementtree-1.2 >=dev-libs/expat-1.95.8 =dev-lang/python-2*
 0
 http://effbot.org/downloads/cElementTree-1.0.5-20051216.tar.gz
 

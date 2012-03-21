@@ -1,5 +1,5 @@
->=app-admin/eselect-python-20091230 dev-lang/python
->=app-admin/eselect-python-20091230 dev-lang/python
+dev-lang/python
+dev-lang/python
 0
 http://psutil.googlecode.com/files/psutil-0.4.0.tar.gz
 test

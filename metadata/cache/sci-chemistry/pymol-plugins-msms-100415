@@ -1,5 +1,5 @@
-sci-chemistry/msms-bin sci-chemistry/pymol >=app-admin/eselect-python-20091230 =dev-lang/python-2*
-sci-chemistry/msms-bin sci-chemistry/pymol >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+sci-chemistry/msms-bin sci-chemistry/pymol =dev-lang/python-2*
+sci-chemistry/msms-bin sci-chemistry/pymol =dev-lang/python-2*
 0
 http://www.biotec.tu-dresden.de/~hongboz/msms_pymol/pymol_script/msms_pymol.py -> pymol-plugins-msms-100415.py
 

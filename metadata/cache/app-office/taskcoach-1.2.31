@@ -1,5 +1,5 @@
->=dev-python/wxpython-2.8.9.2:2.8 >=app-admin/eselect-python-20091230 =dev-lang/python-2*
->=dev-python/wxpython-2.8.9.2:2.8 libnotify? ( dev-python/notify-python ) >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+>=dev-python/wxpython-2.8.9.2:2.8 =dev-lang/python-2*
+>=dev-python/wxpython-2.8.9.2:2.8 libnotify? ( dev-python/notify-python ) =dev-lang/python-2*
 0
 mirror://sourceforge/taskcoach/TaskCoach-1.2.31.tar.gz
 

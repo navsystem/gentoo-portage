@@ -1,5 +1,5 @@
->=app-admin/eselect-python-20091230 dev-lang/python
->=app-admin/eselect-python-20091230 dev-lang/python
+dev-lang/python
+dev-lang/python
 0
 mirror://pypi/d/distribute/distribute-0.6.25.tar.gz
 

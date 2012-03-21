@@ -1,5 +1,5 @@
->=app-admin/eselect-python-20091230 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
-app-portage/gentoolkit server? ( dev-python/lxml dev-libs/libgamin[python] ) >=app-admin/eselect-python-20091230 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
+|| ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
+app-portage/gentoolkit server? ( dev-python/lxml dev-libs/libgamin[python] ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
 0
 ftp://ftp.mcs.anl.gov/pub/bcfg/bcfg2-1.2.0.tar.gz
 

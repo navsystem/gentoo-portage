@@ -1,5 +1,5 @@
-app-crypt/mit-krb5 >=app-admin/eselect-python-20091230 =dev-lang/python-2*
-app-crypt/mit-krb5 >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+app-crypt/mit-krb5 =dev-lang/python-2*
+app-crypt/mit-krb5 =dev-lang/python-2*
 0
 http://dev.gentoo.org/~maksbotan/pykerberos-1.1.tar.bz2
 

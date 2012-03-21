@@ -1,5 +1,5 @@
->=dev-python/pyprotocols-1.0_pre2306 dev-python/setuptools >=app-admin/eselect-python-20091230 =dev-lang/python-2*
->=dev-python/pyprotocols-1.0_pre2306 >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+>=dev-python/pyprotocols-1.0_pre2306 dev-python/setuptools =dev-lang/python-2*
+>=dev-python/pyprotocols-1.0_pre2306 =dev-lang/python-2*
 0
 mirror://gentoo/RuleDispatch-0.5a0.dev-r2306.tar.gz
 

@@ -1,5 +1,5 @@
-=dev-python/gst-python-0.10* dev-python/pycairo dev-python/pygobject:2 =dev-python/pygtk-2* media-libs/mutagen libnotify? ( dev-python/notify-python ) readline? ( sys-libs/readline ) dev-util/pkgconfig nls? ( dev-util/intltool ) || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=app-admin/eselect-python-20091230 =dev-lang/python-2.7* =dev-lang/python-2.7*[sqlite]
-=dev-python/gst-python-0.10* dev-python/pycairo dev-python/pygobject:2 =dev-python/pygtk-2* media-libs/mutagen libnotify? ( dev-python/notify-python ) readline? ( sys-libs/readline ) =media-plugins/gst-plugins-meta-0.10* >=app-admin/eselect-python-20091230 =dev-lang/python-2.7* =dev-lang/python-2.7*[sqlite]
+=dev-python/gst-python-0.10* dev-python/pycairo dev-python/pygobject:2 =dev-python/pygtk-2* media-libs/mutagen libnotify? ( dev-python/notify-python ) readline? ( sys-libs/readline ) dev-util/pkgconfig nls? ( dev-util/intltool ) || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool =dev-lang/python-2.7* =dev-lang/python-2.7*[sqlite]
+=dev-python/gst-python-0.10* dev-python/pycairo dev-python/pygobject:2 =dev-python/pygtk-2* media-libs/mutagen libnotify? ( dev-python/notify-python ) readline? ( sys-libs/readline ) =media-plugins/gst-plugins-meta-0.10* =dev-lang/python-2.7* =dev-lang/python-2.7*[sqlite]
 0
 mirror://sourceforge/christine/christine-0.7.0.tar.bz2
 

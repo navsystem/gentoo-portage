@@ -1,5 +1,5 @@
->=app-admin/eselect-python-20091230 =dev-lang/python-2*
-virtual/ooo >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+=dev-lang/python-2*
+virtual/ooo =dev-lang/python-2*
 0
 http://dev.gentooexperimental.org/~scarabeus/unoconv-20110923.tar.xz
 

@@ -1,5 +1,5 @@
-dev-python/imaging media-libs/opencv >=app-admin/eselect-python-20091230 =dev-lang/python-2*
-dev-python/imaging media-libs/opencv >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+dev-python/imaging media-libs/opencv =dev-lang/python-2*
+dev-python/imaging media-libs/opencv =dev-lang/python-2*
 0
 http://www.pedemonte.eu/pyqr/files/PyQrcodec_Linux.tar.gz
 

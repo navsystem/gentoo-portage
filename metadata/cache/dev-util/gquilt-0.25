@@ -1,5 +1,5 @@
-dev-python/pygtk:2 dev-util/quilt >=app-admin/eselect-python-20091230 =dev-lang/python-2*
-dev-python/pygtk:2 dev-util/quilt >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+dev-python/pygtk:2 dev-util/quilt =dev-lang/python-2*
+dev-python/pygtk:2 dev-util/quilt =dev-lang/python-2*
 0
 mirror://sourceforge/gquilt/gquilt-0.25.tar.gz
 

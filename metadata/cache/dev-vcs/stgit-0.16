@@ -1,5 +1,5 @@
->=dev-vcs/git-1.6.3.3 doc? ( =app-text/asciidoc-8.2* app-text/xmlto dev-lang/perl ) >=app-admin/eselect-python-20091230 =dev-lang/python-2*
->=dev-vcs/git-1.6.3.3 >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+>=dev-vcs/git-1.6.3.3 doc? ( =app-text/asciidoc-8.2* app-text/xmlto dev-lang/perl ) =dev-lang/python-2*
+>=dev-vcs/git-1.6.3.3 =dev-lang/python-2*
 0
 http://download.gna.org/stgit/stgit-0.16.tar.gz mirror://gentoo/stgit-0.16-missing-patches.tar.gz
 

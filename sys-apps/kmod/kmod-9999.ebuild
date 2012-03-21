@@ -1,16 +1,16 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.14 2012/03/09 23:51:10 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.19 2012/03/20 17:08:34 williamh Exp $
 
 EAPI=4
 
 EGIT_REPO_URI="git://git.kernel.org/pub/scm/utils/kernel/${PN}/${PN}.git"
 
-[[ "${PV}" == "9999" ]] && vcs=git-2
-inherit ${vcs}  autotools eutils toolchain-funcs
+[[ ${PV} == 9999 ]] && vcs=git-2
+inherit ${vcs} autotools eutils toolchain-funcs
 unset vcs
 
-if [[ "${PV}" != "9999" ]] ; then
+if [[ ${PV} != 9999 ]] ; then
 	SRC_URI="mirror://kernel/linux/utils/kernel/kmod/${P}.tar.xz"
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 fi
@@ -20,7 +20,7 @@ HOMEPAGE="http://git.kernel.org/?p=utils/kernel/kmod/kmod.git"
 
 LICENSE="LGPL-2"
 SLOT="0"
-IUSE="doc debug lzma static-libs +tools zlib"
+IUSE="debug doc lzma static-libs +tools zlib"
 
 COMMON_DEPEND="!sys-apps/module-init-tools
 	!sys-apps/modutils
@@ -31,11 +31,17 @@ DEPEND="${COMMON_DEPEND}
 	doc? ( dev-util/gtk-doc )"
 RDEPEND="${COMMON_DEPEND}"
 
+# Upstream does not support running the test suite with custom configure flags.
+# I was also told that the test suite is intended for kmod developers.
+# So we have to restrict it.
+# See bug #408915.
+RESTRICT="test"
+
 src_prepare()
 {
 	if [ ! -e configure ]; then
 		if use doc; then
-			gtkdocize --copy --docdir libkmod/docs ||  die "gtkdocize failed"
+			gtkdocize --copy --docdir libkmod/docs || die
 		else
 			touch libkmod/docs/gtk-doc.make
 		fi
@@ -47,28 +53,31 @@ src_prepare()
 
 src_configure()
 {
+	local myconf
+	[[ ${PV} == 9999 ]] && myconf="$(use_enable doc gtk-doc)"
+
 	econf \
-		$(use_enable debug) \
-		$(use_enable doc gtk-doc) \
-		$(use_with lzma xz) \
 		$(use_enable static-libs static) \
 		$(use_enable tools) \
-		$(use_with zlib)
+		$(use_enable debug) \
+		$(use_with lzma xz) \
+		$(use_with zlib) \
+		${myconf}
 }
 
 src_install()
 {
 	default
 
-	# we have a .pc file for people to use
-	find "${D}" -name libkmod.la -delete
+	find "${D}" -name libkmod.la -exec rm -f {} +
 
 	if use tools; then
-	dodir /bin
-dosym /usr/bin/kmod /bin/lsmod
+		dodir /bin
+		dosym /usr/bin/kmod /bin/lsmod
 		dodir /sbin
+		local cmd
 		for cmd in depmod insmod modinfo modprobe rmmod; do
-			dosym /usr/bin/kmod /sbin/$cmd
+			dosym /usr/bin/kmod /sbin/${cmd}
 		done
 	fi
 }

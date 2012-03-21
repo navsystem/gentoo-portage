@@ -1,5 +1,5 @@
->=dev-lang/ocaml-3.10[ocamlopt?] dev-ml/sexplib emacs? ( virtual/emacs ) ocaml? ( dev-ml/findlib ) pcre? ( dev-ml/pcre-ocaml ) doc? ( virtual/latex-base dev-texlive/texlive-latexextra dev-texlive/texlive-fontsextra ) >=app-admin/eselect-python-20091230 python? ( =dev-lang/python-2* )
->=dev-lang/ocaml-3.10[ocamlopt?] dev-ml/sexplib emacs? ( virtual/emacs ) ocaml? ( dev-ml/findlib ) pcre? ( dev-ml/pcre-ocaml ) vim-syntax? ( || ( app-editors/vim app-editors/gvim ) ) >=app-admin/eselect-python-20091230 python? ( =dev-lang/python-2* )
+>=dev-lang/ocaml-3.10[ocamlopt?] dev-ml/sexplib emacs? ( virtual/emacs ) ocaml? ( dev-ml/findlib ) pcre? ( dev-ml/pcre-ocaml ) doc? ( virtual/latex-base dev-texlive/texlive-latexextra dev-texlive/texlive-fontsextra ) python? ( =dev-lang/python-2* )
+>=dev-lang/ocaml-3.10[ocamlopt?] dev-ml/sexplib emacs? ( virtual/emacs ) ocaml? ( dev-ml/findlib ) pcre? ( dev-ml/pcre-ocaml ) vim-syntax? ( || ( app-editors/vim app-editors/gvim ) ) python? ( =dev-lang/python-2* )
 0
 http://coccinelle.lip6.fr/distrib/coccinelle-1.0.0-rc10.tgz
 

@@ -1,0 +1,22 @@
+net-analyzer/nagios-plugins net-libs/ldns || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+net-analyzer/nagios-plugins net-libs/ldns
+0
+mirror://gentoo/check_dnssec-0.1_p28.tar.bz2
+
+https://svn.durchmesser.ch/trac/check_dnssec
+GPL-3
+check_dnssec is a set of Nagios plugins to monitor DNSSEC services.
+~x86 ~amd64
+autotools eutils libtool multilib toolchain-funcs user
+
+
+
+
+4
+
+configure install prepare
+
+
+
+
+

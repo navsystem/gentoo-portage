@@ -1,5 +1,5 @@
-perl? ( dev-lang/perl ) zlib? ( sys-libs/zlib ) || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=app-admin/eselect-python-20091230 python? ( =dev-lang/python-2* )
-perl? ( dev-lang/perl ) zlib? ( sys-libs/zlib ) >=app-admin/eselect-python-20091230 python? ( =dev-lang/python-2* )
+perl? ( dev-lang/perl ) zlib? ( sys-libs/zlib ) || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool python? ( =dev-lang/python-2* )
+perl? ( dev-lang/perl ) zlib? ( sys-libs/zlib ) python? ( =dev-lang/python-2* )
 0
 http://www.clearsilver.net/downloads/clearsilver-0.10.5.tar.gz
 

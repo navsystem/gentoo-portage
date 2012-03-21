@@ -1,5 +1,5 @@
->=dev-libs/dbus-glib-0.98 >=sys-apps/dbus-1.4.16 dev-util/pkgconfig doc? ( =dev-python/epydoc-3* ) test? ( dev-python/pygobject:2 dev-python/pygobject:3 ) >=app-admin/eselect-python-20091230 || ( =dev-lang/python-3* =dev-lang/python-2.7* =dev-lang/python-2.6* )
->=dev-libs/dbus-glib-0.98 >=sys-apps/dbus-1.4.16 >=app-admin/eselect-python-20091230 || ( =dev-lang/python-3* =dev-lang/python-2.7* =dev-lang/python-2.6* )
+>=dev-libs/dbus-glib-0.98 >=sys-apps/dbus-1.4.16 dev-util/pkgconfig doc? ( =dev-python/epydoc-3* ) test? ( dev-python/pygobject:2 dev-python/pygobject:3 ) || ( =dev-lang/python-3* =dev-lang/python-2.7* =dev-lang/python-2.6* )
+>=dev-libs/dbus-glib-0.98 >=sys-apps/dbus-1.4.16 || ( =dev-lang/python-3* =dev-lang/python-2.7* =dev-lang/python-2.6* )
 0
 http://dbus.freedesktop.org/releases/dbus-python/dbus-python-1.0.0.tar.gz
 

@@ -1,5 +1,5 @@
-=dev-libs/qrosscore-9999 >=app-admin/eselect-python-20091230 =dev-lang/python-2* >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) dev-vcs/git
-=dev-libs/qrosscore-9999 >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+=dev-libs/qrosscore-9999 =dev-lang/python-2* >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) dev-vcs/git
+=dev-libs/qrosscore-9999 =dev-lang/python-2*
 0
 
 

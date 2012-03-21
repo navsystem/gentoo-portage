@@ -1,5 +1,5 @@
-sys-apps/pcsc-lite >=app-admin/eselect-python-20091230 =dev-lang/python-2*
-sys-apps/pcsc-lite >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+sys-apps/pcsc-lite =dev-lang/python-2*
+sys-apps/pcsc-lite =dev-lang/python-2*
 0
 mirror://sourceforge/pyscard/pyscard-1.6.12.tar.gz
 

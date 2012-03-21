@@ -1,5 +1,5 @@
-dev-vcs/git >=app-admin/eselect-python-20091230 =dev-lang/python-2* =dev-lang/python-2*[xml]
-app-portage/layman >=app-admin/eselect-python-20091230 =dev-lang/python-2* =dev-lang/python-2*[xml]
+dev-vcs/git =dev-lang/python-2* =dev-lang/python-2*[xml]
+app-portage/layman =dev-lang/python-2* =dev-lang/python-2*[xml]
 0
 
 

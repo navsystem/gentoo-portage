@@ -1,5 +1,5 @@
-dev-python/setuptools test? ( dev-python/mox ) >=app-admin/eselect-python-20091230 =dev-lang/python-2* test? ( dev-python/nose ) dev-vcs/git
-dev-python/simplejson dev-python/httplib2 >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+dev-python/setuptools test? ( dev-python/mox ) =dev-lang/python-2* test? ( dev-python/nose ) dev-vcs/git
+dev-python/simplejson dev-python/httplib2 =dev-lang/python-2*
 0
 
 

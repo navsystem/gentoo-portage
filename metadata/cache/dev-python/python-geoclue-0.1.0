@@ -1,5 +1,5 @@
-test? ( app-misc/geoclue ) >=app-admin/eselect-python-20091230 =dev-lang/python-2*
-app-misc/geoclue dev-python/dbus-python >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+test? ( app-misc/geoclue ) =dev-lang/python-2*
+app-misc/geoclue dev-python/dbus-python =dev-lang/python-2*
 0
 http://www.paulocabido.com/soc/python-geoclue/python-geoclue-0.1.0.tar.gz
 

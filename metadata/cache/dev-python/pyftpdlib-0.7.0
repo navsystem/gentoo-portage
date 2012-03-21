@@ -1,5 +1,5 @@
-ssl? ( dev-lang/python:2.7 dev-python/pyopenssl ) >=app-admin/eselect-python-20091230 =dev-lang/python-2* ssl? ( =dev-lang/python-2*[ssl] )
-ssl? ( dev-lang/python:2.7 dev-python/pyopenssl ) >=app-admin/eselect-python-20091230 =dev-lang/python-2* ssl? ( =dev-lang/python-2*[ssl] )
+ssl? ( dev-lang/python:2.7 dev-python/pyopenssl ) =dev-lang/python-2* ssl? ( =dev-lang/python-2*[ssl] )
+ssl? ( dev-lang/python:2.7 dev-python/pyopenssl ) =dev-lang/python-2* ssl? ( =dev-lang/python-2*[ssl] )
 0
 http://pyftpdlib.googlecode.com/files/pyftpdlib-0.7.0.tar.gz
 

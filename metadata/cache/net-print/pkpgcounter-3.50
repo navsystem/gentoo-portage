@@ -1,5 +1,5 @@
-dev-python/imaging x86? ( psyco? ( dev-python/psyco ) ) >=app-admin/eselect-python-20091230 =dev-lang/python-2*
-dev-python/imaging x86? ( psyco? ( dev-python/psyco ) ) >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+dev-python/imaging x86? ( psyco? ( dev-python/psyco ) ) =dev-lang/python-2*
+dev-python/imaging x86? ( psyco? ( dev-python/psyco ) ) =dev-lang/python-2*
 0
 http://www.pykota.com/software/pkpgcounter/download/tarballs/pkpgcounter-3.50.tar.gz
 

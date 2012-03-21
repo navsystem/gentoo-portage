@@ -1,5 +1,5 @@
->=app-admin/eselect-python-20091230 =dev-lang/python-2* dev-vcs/git
-virtual/ooo >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+=dev-lang/python-2* dev-vcs/git
+virtual/ooo =dev-lang/python-2*
 0
 
 

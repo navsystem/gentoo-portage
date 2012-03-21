@@ -1,5 +1,5 @@
->=app-admin/eselect-python-20091230 =dev-lang/python-2*
->=app-admin/eselect-python-20091230 =dev-lang/python-2*
+=dev-lang/python-2*
+=dev-lang/python-2*
 0
 http://muth.org/Robert/Apetag/apetag.1.12.tar.gz
 

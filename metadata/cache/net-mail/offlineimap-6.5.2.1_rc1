@@ -1,5 +1,5 @@
-doc? ( dev-python/docutils ) >=app-admin/eselect-python-20091230 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) || ( =dev-lang/python-2.7*[threads,ssl?] =dev-lang/python-2.6*[threads,ssl?] )
->=app-admin/eselect-python-20091230 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) || ( =dev-lang/python-2.7*[threads,ssl?] =dev-lang/python-2.6*[threads,ssl?] )
+doc? ( dev-python/docutils ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) || ( =dev-lang/python-2.7*[threads,ssl?] =dev-lang/python-2.6*[threads,ssl?] )
+|| ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) || ( =dev-lang/python-2.7*[threads,ssl?] =dev-lang/python-2.6*[threads,ssl?] )
 0
 https://github.com/downloads/spaetz/offlineimap/offlineimap-v6.5.2.1-rc1.tar.gz -> offlineimap-6.5.2.1_rc1.tar.gz
 

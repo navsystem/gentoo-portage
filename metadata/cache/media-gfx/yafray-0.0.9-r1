@@ -1,5 +1,5 @@
-sys-libs/zlib virtual/jpeg openexr? ( media-libs/openexr ) dev-util/scons >=app-admin/eselect-python-20091230
-sys-libs/zlib virtual/jpeg openexr? ( media-libs/openexr ) >=app-admin/eselect-python-20091230
+sys-libs/zlib virtual/jpeg openexr? ( media-libs/openexr ) dev-util/scons
+sys-libs/zlib virtual/jpeg openexr? ( media-libs/openexr )
 0
 http://www.yafray.org/sec/2/downloads/yafray-0.0.9.tar.gz
 

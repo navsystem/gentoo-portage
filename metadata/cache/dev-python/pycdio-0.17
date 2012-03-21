@@ -1,5 +1,5 @@
-dev-libs/libcdio dev-lang/swig dev-python/setuptools >=app-admin/eselect-python-20091230 =dev-lang/python-2* test? ( dev-python/nose )
-dev-libs/libcdio >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+dev-libs/libcdio dev-lang/swig dev-python/setuptools =dev-lang/python-2* test? ( dev-python/nose )
+dev-libs/libcdio =dev-lang/python-2*
 0
 mirror://pypi/p/pycdio/pycdio-0.17.tar.gz
 

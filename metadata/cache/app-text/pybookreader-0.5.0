@@ -1,5 +1,5 @@
-dev-python/pygtk dev-libs/libxml2[python] >=app-admin/eselect-python-20091230 =dev-lang/python-2*
-dev-python/pygtk dev-libs/libxml2[python] >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+dev-python/pygtk dev-libs/libxml2[python] =dev-lang/python-2*
+dev-python/pygtk dev-libs/libxml2[python] =dev-lang/python-2*
 0
 mirror://sourceforge/pybookreader/PyBookReader-0.5.0.tar.gz
 

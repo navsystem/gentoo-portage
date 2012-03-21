@@ -1,5 +1,5 @@
->=app-admin/eselect-python-20091230 =dev-lang/python-2*
-app-admin/conky >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+=dev-lang/python-2*
+app-admin/conky =dev-lang/python-2*
 0
 https://launchpad.net/~conky-companions/+archive/ppa/+files/conkyforecast_2.24.tar.gz
 

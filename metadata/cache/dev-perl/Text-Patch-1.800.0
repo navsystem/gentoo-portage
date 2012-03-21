@@ -6,7 +6,7 @@ mirror://cpan/authors/id/C/CA/CADE/Text-Patch-1.8.tar.gz
 http://search.cpan.org/dist/Text-Patch/
 GPL-2
 Patches text with given patch
-~amd64 ~hppa ~x86
+amd64 hppa ~x86
 base eutils multilib perl-module toolchain-funcs user
 
 

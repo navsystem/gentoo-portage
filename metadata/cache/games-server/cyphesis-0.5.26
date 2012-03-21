@@ -1,5 +1,5 @@
->=media-libs/skstream-0.3.8 >=dev-games/wfmath-0.3.11 >=dev-games/mercator-0.3.0 dev-libs/libgcrypt dev-libs/libsigc++:2 sys-libs/ncurses sys-libs/readline =media-libs/atlas-c++-0.6* >=media-libs/varconf-0.6.4 dev-db/postgresql-base dev-libs/libxml2 dev-util/pkgconfig || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=app-admin/eselect-python-20091230 =dev-lang/python-2*
->=media-libs/skstream-0.3.8 >=dev-games/wfmath-0.3.11 >=dev-games/mercator-0.3.0 dev-libs/libgcrypt dev-libs/libsigc++:2 sys-libs/ncurses sys-libs/readline =media-libs/atlas-c++-0.6* >=media-libs/varconf-0.6.4 dev-db/postgresql-base >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+>=media-libs/skstream-0.3.8 >=dev-games/wfmath-0.3.11 >=dev-games/mercator-0.3.0 dev-libs/libgcrypt dev-libs/libsigc++:2 sys-libs/ncurses sys-libs/readline =media-libs/atlas-c++-0.6* >=media-libs/varconf-0.6.4 dev-db/postgresql-base dev-libs/libxml2 dev-util/pkgconfig || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool =dev-lang/python-2*
+>=media-libs/skstream-0.3.8 >=dev-games/wfmath-0.3.11 >=dev-games/mercator-0.3.0 dev-libs/libgcrypt dev-libs/libsigc++:2 sys-libs/ncurses sys-libs/readline =media-libs/atlas-c++-0.6* >=media-libs/varconf-0.6.4 dev-db/postgresql-base =dev-lang/python-2*
 0
 mirror://sourceforge/worldforge/cyphesis-0.5.26.tar.bz2
 

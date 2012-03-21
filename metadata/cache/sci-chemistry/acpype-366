@@ -1,5 +1,5 @@
-sci-chemistry/ambertools >=app-admin/eselect-python-20091230
-sci-chemistry/ambertools >=app-admin/eselect-python-20091230
+sci-chemistry/ambertools
+sci-chemistry/ambertools
 0
 mirror://gentoo/acpype-366.tar.xz
 

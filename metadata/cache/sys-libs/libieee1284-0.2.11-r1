@@ -1,5 +1,5 @@
-doc? ( app-text/docbook-sgml-utils >=app-text/docbook-sgml-dtd-4.1 app-text/docbook-dsssl-stylesheets dev-perl/XML-RegExp ) >=app-admin/eselect-python-20091230 python? ( =dev-lang/python-2* )
->=app-admin/eselect-python-20091230 python? ( =dev-lang/python-2* )
+doc? ( app-text/docbook-sgml-utils >=app-text/docbook-sgml-dtd-4.1 app-text/docbook-dsssl-stylesheets dev-perl/XML-RegExp ) python? ( =dev-lang/python-2* )
+python? ( =dev-lang/python-2* )
 0
 mirror://sourceforge/libieee1284/libieee1284-0.2.11.tar.bz2
 

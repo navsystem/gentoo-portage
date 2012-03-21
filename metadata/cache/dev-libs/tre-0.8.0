@@ -1,5 +1,5 @@
-!app-misc/glimpse !app-text/agrep dev-util/pkgconfig nls? ( sys-devel/gettext ) >=app-admin/eselect-python-20091230 =dev-lang/python-2*
-!app-misc/glimpse !app-text/agrep >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+!app-misc/glimpse !app-text/agrep dev-util/pkgconfig nls? ( sys-devel/gettext ) =dev-lang/python-2*
+!app-misc/glimpse !app-text/agrep =dev-lang/python-2*
 0
 http://laurikari.net/tre/tre-0.8.0.tar.bz2
 

@@ -1,5 +1,5 @@
-app-arch/xz-utils >=app-admin/eselect-python-20091230 =dev-lang/python-2* =dev-lang/python-2*[xml]
-!<=x11-libs/gtk+-2.24.10:2 >=app-admin/eselect-python-20091230 =dev-lang/python-2* =dev-lang/python-2*[xml]
+app-arch/xz-utils =dev-lang/python-2* =dev-lang/python-2*[xml]
+!<=x11-libs/gtk+-2.24.10:2 =dev-lang/python-2* =dev-lang/python-2*[xml]
 0
 mirror://gnome/sources/gtk+/2.24/gtk+-2.24.10.tar.xz
 

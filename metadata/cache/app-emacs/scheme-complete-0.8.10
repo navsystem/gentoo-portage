@@ -1,0 +1,22 @@
+>=virtual/emacs-21
+>=virtual/emacs-21
+0
+http://synthcode.com/emacs/scheme-complete-0.8.10.el.gz
+
+http://synthcode.com/
+public-domain
+Scheme tab-completion and word-completion for Emacs
+~alpha ~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~x86-macos
+elisp elisp-common eutils multilib toolchain-funcs user
+
+
+
+
+4
+
+compile configure install postinst postrm prepare setup unpack
+
+
+
+
+

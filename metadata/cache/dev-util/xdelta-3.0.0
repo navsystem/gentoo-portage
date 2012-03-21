@@ -1,5 +1,5 @@
-test? ( app-arch/ncompress ) >=app-admin/eselect-python-20091230 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
->=app-admin/eselect-python-20091230 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
+test? ( app-arch/ncompress ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
+|| ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
 3
 http://xdelta.googlecode.com/files/xdelta3.0.0.tar.gz
 

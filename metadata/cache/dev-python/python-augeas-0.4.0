@@ -1,5 +1,5 @@
-app-admin/augeas >=app-admin/eselect-python-20091230 =dev-lang/python-2*
-app-admin/augeas >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+app-admin/augeas =dev-lang/python-2*
+app-admin/augeas =dev-lang/python-2*
 0
 http://augeas.net/download/python/python-augeas-0.4.0.tar.gz
 

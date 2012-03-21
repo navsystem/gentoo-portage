@@ -1,5 +1,5 @@
-dev-python/nose dev-lang/swig doc? ( dev-python/epydoc ) >=app-admin/eselect-python-20091230 =dev-lang/python-2*
-sci-libs/scipy >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+dev-python/nose dev-lang/swig doc? ( dev-python/epydoc ) =dev-lang/python-2*
+sci-libs/scipy =dev-lang/python-2*
 0
 mirror://pypi/C/CosmoloPy/CosmoloPy-0.1.103.tar.gz
 

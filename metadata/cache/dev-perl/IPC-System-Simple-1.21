@@ -6,7 +6,7 @@ mirror://cpan/authors/id/P/PJ/PJF/IPC-System-Simple-1.21.tar.gz
 http://search.cpan.org/dist/IPC-System-Simple/
 || ( Artistic GPL-1 GPL-2 GPL-3 )
 Run commands simply, with detailed diagnostics
-~amd64 ~x86
+amd64 ~x86
 base eutils multilib perl-module toolchain-funcs user
 
 

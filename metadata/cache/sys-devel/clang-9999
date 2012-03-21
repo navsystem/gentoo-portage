@@ -1,5 +1,5 @@
-static-analyzer? ( dev-lang/perl ) dev-vcs/subversion net-misc/rsync >=app-admin/eselect-python-20091230
-~sys-devel/llvm-9999[multitarget=] >=app-admin/eselect-python-20091230
+static-analyzer? ( dev-lang/perl ) dev-vcs/subversion net-misc/rsync
+~sys-devel/llvm-9999[multitarget=]
 0
 
 

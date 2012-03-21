@@ -1,5 +1,5 @@
->=app-admin/eselect-python-20091230 dev-lang/python
->=app-admin/eselect-python-20091230 dev-lang/python
+dev-lang/python
+dev-lang/python
 0
 http://ipaddr-py.googlecode.com/files/ipaddr-2.1.10.tar.gz
 

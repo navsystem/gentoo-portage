@@ -1,5 +1,5 @@
->=dev-lang/python-2.5[sqlite] >=dev-python/m2crypto-0.16 >=dev-python/wxpython-2.8 >=dev-python/apsw-3.6 >=dev-libs/openssl-0.9.8 vlc? ( >=media-video/vlc-1.0.1 ) app-arch/unzip >=app-admin/eselect-python-20091230 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
->=dev-lang/python-2.5[sqlite] >=dev-python/m2crypto-0.16 >=dev-python/wxpython-2.8 >=dev-python/apsw-3.6 >=dev-libs/openssl-0.9.8 vlc? ( >=media-video/vlc-1.0.1 ) >=app-admin/eselect-python-20091230 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
+>=dev-lang/python-2.5[sqlite] >=dev-python/m2crypto-0.16 >=dev-python/wxpython-2.8 >=dev-python/apsw-3.6 >=dev-libs/openssl-0.9.8 vlc? ( >=media-video/vlc-1.0.1 ) app-arch/unzip || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
+>=dev-lang/python-2.5[sqlite] >=dev-python/m2crypto-0.16 >=dev-python/wxpython-2.8 >=dev-python/apsw-3.6 >=dev-libs/openssl-0.9.8 vlc? ( >=media-video/vlc-1.0.1 ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
 0
 http://dl.tribler.org/tribler_5.5.23-1ubuntu1_all.deb
 

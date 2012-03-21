@@ -1,5 +1,5 @@
-doc? ( dev-python/sphinx ) test? ( dev-python/mock ) >=app-admin/eselect-python-20091230 dev-lang/python test? ( dev-python/nose )
-dev-python/setuptools >=app-admin/eselect-python-20091230 dev-lang/python
+doc? ( dev-python/sphinx ) test? ( dev-python/mock ) dev-lang/python test? ( dev-python/nose )
+dev-python/setuptools dev-lang/python
 0
 https://github.com/pypa/virtualenv/tarball/1.7.1.2 -> virtualenv-1.7.1.2-new.tar.gz
 

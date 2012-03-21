@@ -1,5 +1,5 @@
-sys-libs/zlib python? ( dev-python/setuptools ) >=app-admin/eselect-python-20091230 python? ( =dev-lang/python-2* )
-sys-libs/zlib >=app-admin/eselect-python-20091230 python? ( =dev-lang/python-2* )
+sys-libs/zlib python? ( dev-python/setuptools ) python? ( =dev-lang/python-2* )
+sys-libs/zlib python? ( =dev-lang/python-2* )
 0
 mirror://sourceforge/cracklib/cracklib-2.8.18.tar.gz
 

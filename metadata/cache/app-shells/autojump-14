@@ -1,5 +1,5 @@
->=app-admin/eselect-python-20091230 dev-lang/python
-gtk? ( dev-python/pygtk:2 ) bash-completion? ( >=app-shells/bash-4 ) zsh-completion? ( app-shells/zsh app-shells/zsh-completion ) >=app-admin/eselect-python-20091230 dev-lang/python
+dev-lang/python
+gtk? ( dev-python/pygtk:2 ) bash-completion? ( >=app-shells/bash-4 ) zsh-completion? ( app-shells/zsh app-shells/zsh-completion ) dev-lang/python
 0
 mirror://gentoo/autojump_v14.tar.gz
 

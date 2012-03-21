@@ -1,5 +1,5 @@
-dev-python/numpy >=app-admin/eselect-python-20091230 dev-lang/python test? ( dev-python/nose )
-dev-python/numpy >=app-admin/eselect-python-20091230 dev-lang/python
+dev-python/numpy dev-lang/python test? ( dev-python/nose )
+dev-python/numpy dev-lang/python
 0
 mirror://pypi/a/asciitable/asciitable-0.8.0.tar.gz
 
