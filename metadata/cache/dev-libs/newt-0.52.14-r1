@@ -1,4 +1,4 @@
-=sys-libs/slang-2* >=dev-libs/popt-1.6 elibc_uclibc? ( sys-libs/ncurses ) gpm? ( sys-libs/gpm ) tcl? ( =dev-lang/tcl-8.5* ) =dev-lang/python-2* || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+=sys-libs/slang-2* >=dev-libs/popt-1.6 elibc_uclibc? ( sys-libs/ncurses ) gpm? ( sys-libs/gpm ) tcl? ( =dev-lang/tcl-8.5* ) =dev-lang/python-2* || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 =sys-libs/slang-2* >=dev-libs/popt-1.6 elibc_uclibc? ( sys-libs/ncurses ) gpm? ( sys-libs/gpm ) tcl? ( =dev-lang/tcl-8.5* ) =dev-lang/python-2*
 0
 https://fedorahosted.org/releases/n/e/newt/newt-0.52.14.tar.gz

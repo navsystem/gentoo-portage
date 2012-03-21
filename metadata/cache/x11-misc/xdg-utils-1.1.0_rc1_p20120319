@@ -1,7 +1,7 @@
 
 dev-util/desktop-file-utils x11-misc/shared-mime-info x11-apps/xprop x11-apps/xset perl? ( dev-perl/File-MimeInfo )
 0
-http://dev.gentoo.org/~ssuominen/xdg-utils-1.1.0_rc1_p20120319.tar.xz
+mirror://gentoo/xdg-utils-1.1.0_rc1_p20120319.tar.xz
 test
 http://portland.freedesktop.org/
 MIT

@@ -1,4 +1,4 @@
-dev-libs/boost dev-libs/libedit dev-libs/crypto++ sys-apps/keyutils fuse? ( sys-fs/fuse ) libatomic? ( dev-libs/libatomic_ops ) gtk? ( x11-libs/gtk+:2 dev-cpp/gtkmm:2.4 gnome-base/librsvg ) radosgw? ( dev-libs/fcgi dev-libs/expat ) tcmalloc? ( dev-util/google-perftools ) dev-util/pkgconfig || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+dev-libs/boost dev-libs/libedit dev-libs/crypto++ sys-apps/keyutils fuse? ( sys-fs/fuse ) libatomic? ( dev-libs/libatomic_ops ) gtk? ( x11-libs/gtk+:2 dev-cpp/gtkmm:2.4 gnome-base/librsvg ) radosgw? ( dev-libs/fcgi dev-libs/expat ) tcmalloc? ( dev-util/google-perftools ) dev-util/pkgconfig || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 dev-libs/boost dev-libs/libedit dev-libs/crypto++ sys-apps/keyutils fuse? ( sys-fs/fuse ) libatomic? ( dev-libs/libatomic_ops ) gtk? ( x11-libs/gtk+:2 dev-cpp/gtkmm:2.4 gnome-base/librsvg ) radosgw? ( dev-libs/fcgi dev-libs/expat ) tcmalloc? ( dev-util/google-perftools ) sys-fs/btrfs-progs
 0
 http://ceph.newdream.net/download/ceph-0.40.tar.gz

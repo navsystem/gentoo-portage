@@ -1,4 +1,4 @@
->=dev-libs/lzo-1.07 kernel_linux? ( iproute2? ( sys-apps/iproute2[-minimal] ) !iproute2? ( sys-apps/net-tools ) ) !minimal? ( pam? ( virtual/pam ) ) selinux? ( sec-policy/selinux-openvpn ) ssl? ( >=dev-libs/openssl-0.9.6 ) pkcs11? ( >=dev-libs/pkcs11-helper-1.05 ) || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool dev-vcs/git
+>=dev-libs/lzo-1.07 kernel_linux? ( iproute2? ( sys-apps/iproute2[-minimal] ) !iproute2? ( sys-apps/net-tools ) ) !minimal? ( pam? ( virtual/pam ) ) selinux? ( sec-policy/selinux-openvpn ) ssl? ( >=dev-libs/openssl-0.9.6 ) pkcs11? ( >=dev-libs/pkcs11-helper-1.05 ) || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool dev-vcs/git
 >=dev-libs/lzo-1.07 kernel_linux? ( iproute2? ( sys-apps/iproute2[-minimal] ) !iproute2? ( sys-apps/net-tools ) ) !minimal? ( pam? ( virtual/pam ) ) selinux? ( sec-policy/selinux-openvpn ) ssl? ( >=dev-libs/openssl-0.9.6 ) pkcs11? ( >=dev-libs/pkcs11-helper-1.05 )
 0
 

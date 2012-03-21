@@ -1,4 +1,4 @@
-X? ( x11-libs/libXmu x11-libs/libXfixes x11-libs/libX11 x11-proto/xproto ) app-doc/doxygen || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+X? ( x11-libs/libXmu x11-libs/libXfixes x11-libs/libX11 x11-proto/xproto ) app-doc/doxygen || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 X? ( x11-libs/libXmu x11-libs/libXfixes x11-libs/libX11 x11-proto/xproto )
 0
 mirror://sourceforge/oyranos/libXcm/libXcm-0.4.x/libXcm-0.5.0.tar.bz2

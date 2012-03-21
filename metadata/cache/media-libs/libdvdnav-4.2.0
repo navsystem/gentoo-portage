@@ -1,4 +1,4 @@
->=media-libs/libdvdread-4.2.0 || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+>=media-libs/libdvdread-4.2.0 || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 >=media-libs/libdvdread-4.2.0
 0
 http://dvdnav.mplayerhq.hu/releases/libdvdnav-4.2.0.tar.bz2

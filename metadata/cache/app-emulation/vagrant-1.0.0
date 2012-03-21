@@ -1,0 +1,22 @@
+test? ( ruby_targets_ruby18? ( ~dev-ruby/archive-tar-minitar-0.5.2[ruby_targets_ruby18] >=dev-ruby/childprocess-0.3.1[ruby_targets_ruby18] >=dev-ruby/erubis-2.7.0[ruby_targets_ruby18] >=dev-ruby/i18n-0.6.0[ruby_targets_ruby18] >=dev-ruby/json-1.5.1[ruby_targets_ruby18] >=dev-ruby/log4r-1.1.9[ruby_targets_ruby18] >=dev-ruby/net-scp-1.0.4[ruby_targets_ruby18] >=dev-ruby/net-ssh-2.2.2[ruby_targets_ruby18] ) ruby_targets_ruby19? ( ~dev-ruby/archive-tar-minitar-0.5.2[ruby_targets_ruby19] >=dev-ruby/childprocess-0.3.1[ruby_targets_ruby19] >=dev-ruby/erubis-2.7.0[ruby_targets_ruby19] >=dev-ruby/i18n-0.6.0[ruby_targets_ruby19] >=dev-ruby/json-1.5.1[ruby_targets_ruby19] >=dev-ruby/log4r-1.1.9[ruby_targets_ruby19] >=dev-ruby/net-scp-1.0.4[ruby_targets_ruby19] >=dev-ruby/net-ssh-2.2.2[ruby_targets_ruby19] ) ) ruby_targets_ruby18? ( dev-ruby/rake[ruby_targets_ruby18] test? ( dev-ruby/mocha[ruby_targets_ruby18] virtual/ruby-minitest[ruby_targets_ruby18] ) ) ruby_targets_ruby19? ( dev-ruby/rake[ruby_targets_ruby19] test? ( dev-ruby/mocha[ruby_targets_ruby19] virtual/ruby-minitest[ruby_targets_ruby19] ) ) ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby18? ( doc? ( dev-ruby/rake[ruby_targets_ruby18] ) ) ruby_targets_ruby19? ( doc? ( dev-ruby/rake[ruby_targets_ruby19] ) ) ruby_targets_ruby18? ( test? ( dev-ruby/rake[ruby_targets_ruby18] ) ) ruby_targets_ruby19? ( test? ( dev-ruby/rake[ruby_targets_ruby19] ) ) ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) test? ( ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) )
+|| ( app-emulation/virtualbox app-emulation/virtualbox-bin ) ruby_targets_ruby18? ( ~dev-ruby/archive-tar-minitar-0.5.2[ruby_targets_ruby18] >=dev-ruby/childprocess-0.3.1[ruby_targets_ruby18] >=dev-ruby/erubis-2.7.0[ruby_targets_ruby18] >=dev-ruby/i18n-0.6.0[ruby_targets_ruby18] >=dev-ruby/json-1.5.1[ruby_targets_ruby18] >=dev-ruby/log4r-1.1.9[ruby_targets_ruby18] >=dev-ruby/net-scp-1.0.4[ruby_targets_ruby18] >=dev-ruby/net-ssh-2.2.2[ruby_targets_ruby18] ) ruby_targets_ruby19? ( ~dev-ruby/archive-tar-minitar-0.5.2[ruby_targets_ruby19] >=dev-ruby/childprocess-0.3.1[ruby_targets_ruby19] >=dev-ruby/erubis-2.7.0[ruby_targets_ruby19] >=dev-ruby/i18n-0.6.0[ruby_targets_ruby19] >=dev-ruby/json-1.5.1[ruby_targets_ruby19] >=dev-ruby/log4r-1.1.9[ruby_targets_ruby19] >=dev-ruby/net-scp-1.0.4[ruby_targets_ruby19] >=dev-ruby/net-ssh-2.2.2[ruby_targets_ruby19] ) ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] )
+0
+mirror://rubygems/vagrant-1.0.0.gem
+test
+http://vagrantup.com/
+MIT
+A tool for building and distributing virtual machines using VirtualBox
+~amd64 ~x86
+eutils java-utils-2 multilib ruby-fakegem ruby-ng toolchain-funcs user versionator
+test elibc_FreeBSD ruby_targets_ruby18 ruby_targets_ruby19 doc test test
+|| ( ruby_targets_ruby18 ruby_targets_ruby19 )
+
+
+4
+
+compile configure install prepare setup test unpack
+
+
+
+
+

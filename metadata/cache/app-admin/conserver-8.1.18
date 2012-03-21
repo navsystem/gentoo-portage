@@ -1,4 +1,4 @@
-ssl? ( >=dev-libs/openssl-0.9.6g ) pam? ( virtual/pam ) tcpd? ( sys-apps/tcp-wrappers ) debug? ( dev-libs/dmalloc ) kerberos? ( virtual/krb5 net-libs/libgssglue ) ssl? ( dev-libs/openssl ) || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+ssl? ( >=dev-libs/openssl-0.9.6g ) pam? ( virtual/pam ) tcpd? ( sys-apps/tcp-wrappers ) debug? ( dev-libs/dmalloc ) kerberos? ( virtual/krb5 net-libs/libgssglue ) ssl? ( dev-libs/openssl ) || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 ssl? ( >=dev-libs/openssl-0.9.6g ) pam? ( virtual/pam ) tcpd? ( sys-apps/tcp-wrappers ) debug? ( dev-libs/dmalloc ) kerberos? ( virtual/krb5 net-libs/libgssglue ) pam? ( >=sys-auth/pambase-20080219.1 )
 0
 http://www.conserver.com/conserver-8.1.18.tar.gz

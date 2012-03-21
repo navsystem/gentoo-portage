@@ -1,4 +1,4 @@
->=media-libs/alsa-lib-1.0.25 ffmpeg? ( virtual/ffmpeg media-libs/alsa-lib ) jack? ( >=media-sound/jack-audio-connection-kit-0.98 ) libsamplerate? ( media-libs/libsamplerate media-libs/alsa-lib ) pulseaudio? ( media-sound/pulseaudio ) speex? ( media-libs/speex media-libs/alsa-lib ) !media-plugins/alsa-jack dev-util/pkgconfig || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+>=media-libs/alsa-lib-1.0.25 ffmpeg? ( virtual/ffmpeg media-libs/alsa-lib ) jack? ( >=media-sound/jack-audio-connection-kit-0.98 ) libsamplerate? ( media-libs/libsamplerate media-libs/alsa-lib ) pulseaudio? ( media-sound/pulseaudio ) speex? ( media-libs/speex media-libs/alsa-lib ) !media-plugins/alsa-jack dev-util/pkgconfig || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 >=media-libs/alsa-lib-1.0.25 ffmpeg? ( virtual/ffmpeg media-libs/alsa-lib ) jack? ( >=media-sound/jack-audio-connection-kit-0.98 ) libsamplerate? ( media-libs/libsamplerate media-libs/alsa-lib ) pulseaudio? ( media-sound/pulseaudio ) speex? ( media-libs/speex media-libs/alsa-lib ) !media-plugins/alsa-jack
 0
 mirror://alsaproject/plugins/alsa-plugins-1.0.25.tar.bz2

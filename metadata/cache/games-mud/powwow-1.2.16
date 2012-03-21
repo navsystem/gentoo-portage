@@ -1,4 +1,4 @@
-sys-libs/ncurses || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+sys-libs/ncurses || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 sys-libs/ncurses
 0
 http://hoopajoo.net/static/projects/powwow-1.2.16.tar.gz

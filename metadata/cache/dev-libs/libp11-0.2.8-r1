@@ -1,4 +1,4 @@
-dev-libs/openssl dev-util/pkgconfig doc? ( app-doc/doxygen ) || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+dev-libs/openssl dev-util/pkgconfig doc? ( app-doc/doxygen ) || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 dev-libs/openssl
 0
 http://www.opensc-project.org/files/libp11/libp11-0.2.8.tar.gz

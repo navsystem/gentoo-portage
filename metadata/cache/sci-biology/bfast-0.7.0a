@@ -1,4 +1,4 @@
-|| ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+|| ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 dev-perl/XML-Simple
 0
 mirror://sourceforge/bfast/bfast-0.7.0a.tar.gz

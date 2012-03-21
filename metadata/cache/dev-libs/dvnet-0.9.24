@@ -1,5 +1,5 @@
-dev-libs/dvutil
-dev-libs/dvutil
+>=dev-libs/dvutil-1.0.10-r2
+>=dev-libs/dvutil-1.0.10-r2
 0
 http://tinf2.vub.ac.be/~dvermeir/software/dv/dvnet/download/dvnet-0.9.24.tar.gz
 
@@ -8,13 +8,13 @@ GPL-2
 Provides an interface wrapping sockets into streams
 ~amd64 ~ppc ~x86
 
-doc
+doc static-libs
 
 
 
 4
 
-install prepare setup
+configure install prepare
 
 
 

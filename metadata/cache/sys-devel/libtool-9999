@@ -1,4 +1,4 @@
-sys-devel/gnuconfig >=sys-devel/autoconf-2.65 >=sys-devel/automake-1.11.1 test? ( !<sys-devel/binutils-2.20 ) app-arch/xz-utils sys-apps/help2man || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 dev-vcs/git
+sys-devel/gnuconfig >=sys-devel/autoconf-2.65 >=sys-devel/automake-1.11.1 test? ( !<sys-devel/binutils-2.20 ) app-arch/xz-utils sys-apps/help2man || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 dev-vcs/git
 sys-devel/gnuconfig >=sys-devel/autoconf-2.65 >=sys-devel/automake-1.11.1
 2
 

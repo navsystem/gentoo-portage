@@ -1,4 +1,4 @@
-dev-libs/libedit dev-libs/icu >=dev-util/btyacc-3.0-r2 doc? ( app-arch/unzip ) || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+dev-libs/libedit dev-libs/icu >=dev-util/btyacc-3.0-r2 doc? ( app-arch/unzip ) || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 dev-libs/libedit dev-libs/icu xinetd? ( virtual/inetd ) !sys-cluster/ganglia
 0
 mirror://sourceforge/firebird/Firebird-2.5.1.26351-0.tar.bz2 doc? ( ftp://ftpc.inprise.com/pub/interbase/techpubs/ib_b60_doc.zip )

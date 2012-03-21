@@ -1,4 +1,4 @@
-net-analyzer/nagios-plugins net-libs/ldns || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+net-analyzer/nagios-plugins net-libs/ldns || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 net-analyzer/nagios-plugins net-libs/ldns
 0
 mirror://gentoo/check_dnssec-0.1_p28.tar.bz2

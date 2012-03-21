@@ -1,4 +1,4 @@
->=app-arch/unrar-4.1.4-r2 sys-fs/fuse || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+>=app-arch/unrar-4.1.4-r2 sys-fs/fuse || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 >=app-arch/unrar-4.1.4-r2 sys-fs/fuse
 0
 http://rar2fs.googlecode.com/files/rar2fs-1.14.0.tar.gz

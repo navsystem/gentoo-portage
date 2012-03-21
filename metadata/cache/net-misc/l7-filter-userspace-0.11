@@ -1,4 +1,4 @@
->=net-libs/libnetfilter_conntrack-0.0.100 net-libs/libnetfilter_queue || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+>=net-libs/libnetfilter_conntrack-0.0.100 net-libs/libnetfilter_queue || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 net-misc/l7-protocols >=net-libs/libnetfilter_conntrack-0.0.100 net-libs/libnetfilter_queue
 0
 mirror://sourceforge/l7-filter/l7-filter-userspace-0.11.tar.gz

@@ -1,4 +1,4 @@
-media-libs/libsdl media-libs/openal media-libs/freealut || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+media-libs/libsdl media-libs/openal media-libs/freealut || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 media-libs/libsdl media-libs/openal media-libs/freealut
 0
 http://www.fishies.org.uk/apricots-0.2.6.tar.gz

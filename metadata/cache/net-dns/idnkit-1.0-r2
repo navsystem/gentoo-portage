@@ -1,4 +1,4 @@
-virtual/libiconv || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=sys-apps/sed-4
+virtual/libiconv || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=sys-apps/sed-4
 
 0
 http://www.nic.ad.jp/ja/idn/idnkit/download/sources/idnkit-1.0-src.tar.gz

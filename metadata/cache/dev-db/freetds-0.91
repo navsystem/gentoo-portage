@@ -1,4 +1,4 @@
-iodbc? ( dev-db/libiodbc ) kerberos? ( virtual/krb5 ) odbc? ( dev-db/unixODBC ) || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+iodbc? ( dev-db/libiodbc ) kerberos? ( virtual/krb5 ) odbc? ( dev-db/unixODBC ) || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 iodbc? ( dev-db/libiodbc ) kerberos? ( virtual/krb5 ) odbc? ( dev-db/unixODBC )
 0
 http://ibiblio.org/pub/Linux/ALPHA/freetds/stable/freetds-0.91.tar.gz
