@@ -1,0 +1,22 @@
+=dev-lang/python-2*
+dev-python/twisted dev-python/txAMQP =dev-lang/python-2*
+0
+mirror://pypi/c/carbon/carbon-0.9.9.tar.gz
+
+http://graphite.wikidot.com/
+Apache-2.0
+Backend data caching and persistence daemon for Graphite
+~amd64 ~x86
+distutils multilib python toolchain-funcs
+
+
+
+
+3
+
+compile install postinst postrm prepare
+
+
+
+
+
