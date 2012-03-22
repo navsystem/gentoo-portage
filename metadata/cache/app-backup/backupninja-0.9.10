@@ -1,4 +1,4 @@
-dev-util/dialog || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+dev-util/dialog || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 dev-util/dialog
 0
 https://labs.riseup.net/code/attachments/download/242/backupninja-0.9.10.tar.gz

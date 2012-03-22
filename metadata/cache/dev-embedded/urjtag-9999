@@ -1,4 +1,4 @@
-ftdi? ( dev-embedded/libftdi ) readline? ( sys-libs/readline ) usb? ( virtual/libusb:1 ) dev-vcs/git || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+ftdi? ( dev-embedded/libftdi ) readline? ( sys-libs/readline ) usb? ( virtual/libusb:1 ) dev-vcs/git || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 ftdi? ( dev-embedded/libftdi ) readline? ( sys-libs/readline ) usb? ( virtual/libusb:1 ) !dev-embedded/jtag
 0
 

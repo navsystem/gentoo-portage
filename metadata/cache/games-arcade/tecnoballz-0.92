@@ -1,4 +1,4 @@
-media-libs/libsdl media-libs/sdl-mixer media-libs/sdl-image[png] media-libs/libmikmod:0 || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+media-libs/libsdl media-libs/sdl-mixer media-libs/sdl-image[png] media-libs/libmikmod:0 || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 media-libs/libsdl media-libs/sdl-mixer media-libs/sdl-image[png] media-libs/libmikmod:0
 0
 http://linux.tlk.fr/games/TecnoballZ/download/tecnoballz-0.92.tgz

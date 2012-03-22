@@ -1,4 +1,4 @@
-=net-mail/dovecot-2.0* || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+=net-mail/dovecot-2.0* || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 =net-mail/dovecot-2.0*
 0
 http://dev.gentoo.org/~radhermit/distfiles/dovecot-antispam-2.0_pre20101222.tar.bz2

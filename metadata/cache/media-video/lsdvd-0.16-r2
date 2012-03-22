@@ -1,4 +1,4 @@
-media-libs/libdvdread || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+media-libs/libdvdread || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 media-libs/libdvdread
 0
 mirror://gentoo/lsdvd-0.16.tar.gz

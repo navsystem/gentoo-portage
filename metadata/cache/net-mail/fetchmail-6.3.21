@@ -1,4 +1,4 @@
-hesiod? ( net-dns/hesiod ) ssl? ( >=dev-libs/openssl-0.9.6 ) kerberos? ( virtual/krb5 >=dev-libs/openssl-0.9.6 ) nls? ( virtual/libintl ) elibc_FreeBSD? ( sys-libs/e2fsprogs-libs ) socks? ( net-proxy/dante ) sys-devel/flex nls? ( sys-devel/gettext ) tk? ( =dev-lang/python-2* ) tk? ( =dev-lang/python-2*[tk] ) || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+hesiod? ( net-dns/hesiod ) ssl? ( >=dev-libs/openssl-0.9.6 ) kerberos? ( virtual/krb5 >=dev-libs/openssl-0.9.6 ) nls? ( virtual/libintl ) elibc_FreeBSD? ( sys-libs/e2fsprogs-libs ) socks? ( net-proxy/dante ) sys-devel/flex nls? ( sys-devel/gettext ) tk? ( =dev-lang/python-2* ) tk? ( =dev-lang/python-2*[tk] ) || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 hesiod? ( net-dns/hesiod ) ssl? ( >=dev-libs/openssl-0.9.6 ) kerberos? ( virtual/krb5 >=dev-libs/openssl-0.9.6 ) nls? ( virtual/libintl ) elibc_FreeBSD? ( sys-libs/e2fsprogs-libs ) socks? ( net-proxy/dante ) tk? ( =dev-lang/python-2* ) tk? ( =dev-lang/python-2*[tk] )
 0
 mirror://berlios/fetchmail/fetchmail-6.3.21.tar.bz2

@@ -1,4 +1,4 @@
-|| ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool test? ( =dev-lang/python-2* )
+|| ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool test? ( =dev-lang/python-2* )
 test? ( =dev-lang/python-2* )
 0
 mirror://gentoo/autodocksuite/autodocksuite-4.2.3-src.tar.gz

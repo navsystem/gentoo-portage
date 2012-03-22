@@ -1,4 +1,4 @@
->=dev-libs/glib-2.22 >=x11-libs/gtk+-2.14:2 >=xfce-base/exo-0.6 >=xfce-base/libxfce4ui-4.8 >=xfce-base/libxfce4util-4.8 >=xfce-base/xfce4-panel-4.8 libnotify? ( >=x11-libs/libnotify-0.7 ) dev-util/intltool dev-util/pkgconfig >=sys-apps/sed-4 >=dev-util/xfce4-dev-tools-4.9.1 || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+>=dev-libs/glib-2.22 >=x11-libs/gtk+-2.14:2 >=xfce-base/exo-0.6 >=xfce-base/libxfce4ui-4.8 >=xfce-base/libxfce4util-4.8 >=xfce-base/xfce4-panel-4.8 libnotify? ( >=x11-libs/libnotify-0.7 ) dev-util/intltool dev-util/pkgconfig >=sys-apps/sed-4 >=dev-util/xfce4-dev-tools-4.9.1 || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 >=dev-libs/glib-2.22 >=x11-libs/gtk+-2.14:2 >=xfce-base/exo-0.6 >=xfce-base/libxfce4ui-4.8 >=xfce-base/libxfce4util-4.8 >=xfce-base/xfce4-panel-4.8 libnotify? ( >=x11-libs/libnotify-0.7 )
 0
 mirror://xfce/src/panel-plugins/xfce4-places-plugin/1.2/xfce4-places-plugin-1.2.0.tar.bz2 mirror://debian/pool/main/x/xfce4-places-plugin/xfce4-places-plugin_1.2.0-3.debian.tar.gz

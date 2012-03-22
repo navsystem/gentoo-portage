@@ -1,4 +1,4 @@
->=dev-lang/lua-5.1.4 || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+>=dev-lang/lua-5.1.4 || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 >=dev-lang/lua-5.1.4
 0
 http://cgit.freedesktop.org/sbox2/snapshot/sbox2-2.0.tar.bz2

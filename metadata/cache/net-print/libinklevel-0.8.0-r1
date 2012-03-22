@@ -1,4 +1,4 @@
->=sys-libs/libieee1284-0.2.11 || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+>=sys-libs/libieee1284-0.2.11 || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 >=sys-libs/libieee1284-0.2.11
 0
 mirror://sourceforge/libinklevel/libinklevel-0.8.0.tar.gz

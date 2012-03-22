@@ -1,4 +1,4 @@
-media-libs/libsdl x11-libs/libX11 virtual/opengl || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+media-libs/libsdl x11-libs/libX11 virtual/opengl || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 media-libs/libsdl x11-libs/libX11 virtual/opengl
 0
 http://somewhere.fscked.org/proj/fireflies/files/fireflies-2.07.tar.gz

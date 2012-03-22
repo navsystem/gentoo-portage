@@ -1,4 +1,4 @@
-bzip2? ( app-arch/bzip2 ) lzma? ( app-arch/xz-utils ) || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool python? ( =dev-lang/python-2* )
+bzip2? ( app-arch/bzip2 ) lzma? ( app-arch/xz-utils ) || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool python? ( =dev-lang/python-2* )
 bzip2? ( app-arch/bzip2 ) lzma? ( app-arch/xz-utils ) python? ( =dev-lang/python-2* )
 0
 mirror://sourceforge/project/getdata/getdata/0.6.3/getdata-0.6.3.tar.bz2

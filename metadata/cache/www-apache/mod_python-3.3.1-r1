@@ -1,4 +1,4 @@
-=www-servers/apache-2* || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool =dev-lang/python-2*
+=www-servers/apache-2* || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool =dev-lang/python-2*
 =www-servers/apache-2* =dev-lang/python-2*
 0
 mirror://apache/httpd/modpython/mod_python-3.3.1.tgz

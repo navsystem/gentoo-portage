@@ -1,0 +1,22 @@
+sci-libs/gsl || ( sci-biology/probcons sci-biology/mafft sci-biology/t-coffee sci-biology/kalign sci-biology/clustalw sci-biology/muscle ) dev-util/pkgconfig
+sci-libs/gsl || ( sci-biology/probcons sci-biology/mafft sci-biology/t-coffee sci-biology/kalign sci-biology/clustalw sci-biology/muscle )
+0
+http://www.theseus3d.org/src/theseus_1.6.2.tar.gz
+
+http://www.theseus3d.org/
+GPL-3
+maximum likelihood superpositioning and analysis of macromolecular structures
+~amd64 ~x86 ~amd64-linux ~x86-linux
+multilib toolchain-funcs
+examples
+
+
+
+4
+
+install prepare
+
+
+
+
+

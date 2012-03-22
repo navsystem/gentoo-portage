@@ -1,4 +1,4 @@
-tpm? ( app-crypt/trousers ) dev-libs/openssl || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+tpm? ( app-crypt/trousers ) dev-libs/openssl || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 tpm? ( app-crypt/trousers ) dev-libs/openssl
 0
 mirror://sourceforge/opencryptoki/opencryptoki-2.3.3.tar.bz2 http://dev.gentoo.org/~flameeyes/opencryptoki/opencryptoki-2.3.3-backports-3.tar.bz2

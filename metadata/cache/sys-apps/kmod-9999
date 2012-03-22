@@ -1,4 +1,4 @@
-!sys-apps/module-init-tools !sys-apps/modutils lzma? ( app-arch/xz-utils ) zlib? ( sys-libs/zlib ) doc? ( dev-util/gtk-doc ) dev-vcs/git || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+!sys-apps/module-init-tools !sys-apps/modutils lzma? ( app-arch/xz-utils ) zlib? ( sys-libs/zlib ) doc? ( dev-util/gtk-doc ) dev-vcs/git || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 !sys-apps/module-init-tools !sys-apps/modutils lzma? ( app-arch/xz-utils ) zlib? ( sys-libs/zlib )
 0
 

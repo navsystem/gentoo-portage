@@ -1,4 +1,4 @@
-mad? ( media-libs/libmad ) audiofile? ( >=media-libs/audiofile-0.3.1 ) dev-util/pkgconfig nls? ( dev-util/intltool ) || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+mad? ( media-libs/libmad ) audiofile? ( >=media-libs/audiofile-0.3.1 ) dev-util/pkgconfig nls? ( dev-util/intltool ) || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 mad? ( media-libs/libmad ) audiofile? ( >=media-libs/audiofile-0.3.1 )
 0
 http://savannah.nongnu.org/download/normalize/normalize-0.7.7.tar.bz2 http://dev.gentoo.org/~radhermit/distfiles/normalize-0.7.7-m4.patch.gz

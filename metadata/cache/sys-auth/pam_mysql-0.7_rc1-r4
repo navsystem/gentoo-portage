@@ -1,4 +1,4 @@
->=sys-libs/pam-0.72 virtual/mysql || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+>=sys-libs/pam-0.72 virtual/mysql || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 >=sys-libs/pam-0.72 virtual/mysql
 0
 mirror://sourceforge/pam-mysql/pam_mysql-0.7RC1.tar.gz

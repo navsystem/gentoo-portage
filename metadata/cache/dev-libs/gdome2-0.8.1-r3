@@ -1,4 +1,4 @@
->=dev-libs/glib-2.2.0 >=dev-libs/libxml2-2.4.26 dev-util/pkgconfig || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool app-arch/xz-utils >=sys-apps/sed-4
+>=dev-libs/glib-2.2.0 >=dev-libs/libxml2-2.4.26 dev-util/pkgconfig || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool app-arch/xz-utils >=sys-apps/sed-4
 >=dev-libs/glib-2.2.0 >=dev-libs/libxml2-2.4.26
 0
 http://gdome2.cs.unibo.it/tarball/gdome2-0.8.1.tar.gz

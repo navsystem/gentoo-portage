@@ -1,4 +1,4 @@
-net-ftp/ftpbase || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+net-ftp/ftpbase || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 net-ftp/ftpbase
 0
 http://www.time-travellers.org/oftpd/oftpd-0.3.7.tar.gz ftp://ftp.deepspace6.net/pub/ds6/sources/oftpd/oftpd-0.3.6-ipv6rel2.patch.gz

@@ -1,4 +1,4 @@
-ncurses? ( >=sys-libs/ncurses-5.2-r2[unicode?] ) ncurses? ( dev-util/pkgconfig ) || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+ncurses? ( >=sys-libs/ncurses-5.2-r2[unicode?] ) ncurses? ( dev-util/pkgconfig ) || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 ncurses? ( >=sys-libs/ncurses-5.2-r2[unicode?] )
 0
 mirror://debian/pool/main/p/procps/procps_3.3.2.orig.tar.gz mirror://debian/pool/main/p/procps/procps_3.3.2-2.debian.tar.gz
