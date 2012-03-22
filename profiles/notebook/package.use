@@ -71,7 +71,7 @@ media-libs/mesa g3dvl
 #required by gnome-extra/cinnamon-1.4, required by =gnome-extra/cinnamon-1.4 (argument)
 gnome-base/gnome-menus python
 #required by media-sound/pulseaudio-1.1-r1[udev], required by gnome-extra/cinnamon-1.4, required by =gnome-extra/cinnamon-1.4 (argument)
-=sys-fs/udev-181 hwdb
+sys-fs/udev hwdb
 
 >=gnome-base/gvfs-1.10.1 cdda
 #required by net-misc/vinagre-3.2.2, required by gnome-base/gnome-extra-apps-3.2.1, required by gnome-base/gnome-3.2.1[extras], required by =gnome-3.2.1 (argument)

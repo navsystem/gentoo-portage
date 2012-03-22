@@ -1,14 +1,12 @@
 <net-misc/networkmanager-pptp-0.9.3.0  amd64
 <net-misc/networkmanager-0.9.3.0  amd64
-<=kde-misc/networkmanagement-0.9.0 amd64
+~kde-misc/networkmanagement-0.9.0 amd64
 ~sys-apps/systemd-43  amd64
 ~net-dialup/ppp-2.4.5  amd64
-~sys-fs/udev-181  amd64
-#=sys-fs/udev-init-scripts-8 amd64
-#=sys-apps/kmod-9999 amd64
+~sys-fs/udev-182  amd64
 ~sys-apps/dbus-1.4.16  amd64
 ~sys-kernel/linux-headers-3.2  amd64
-~sys-auth/consolekit-1.4.5  amd64
+~sys-auth/consolekit-0.4.5  amd64
 <sys-boot/plymouth-9999  amd64
 <sys-kernel/dracut-9999  amd64
 
@@ -20,5 +18,5 @@
 =sys-apps/util-linux-2.20.1-r1 amd64
 
 
-~sys-fs/udev-init-scripts-8 amd64
-~sys-apps/kmod-5 amd64
+~sys-fs/udev-init-scripts-10 amd64
+~sys-apps/kmod-7 amd64
