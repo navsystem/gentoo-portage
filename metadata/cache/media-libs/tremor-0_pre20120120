@@ -1,7 +1,7 @@
-media-libs/libogg dev-util/pkgconfig || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+media-libs/libogg dev-util/pkgconfig || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 media-libs/libogg
 0
-http://dev.gentoo.org/~ssuominen/tremor-0_pre20120120.tar.xz
+mirror://gentoo/tremor-0_pre20120120.tar.xz
 
 http://wiki.xiph.org/Tremor
 BSD

@@ -1,5 +1,5 @@
 
-|| ( >=sys-apps/module-init-tools-3.2 sys-apps/kmod sys-apps/modutils )
+|| ( sys-apps/kmod >=sys-apps/module-init-tools-3.2 sys-apps/modutils )
 0
 
 

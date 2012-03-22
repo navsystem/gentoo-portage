@@ -1,5 +1,5 @@
-static-analyzer? ( dev-lang/perl ) >=app-admin/eselect-python-20091230
-~sys-devel/llvm-3.0[multitarget=] >=app-admin/eselect-python-20091230
+static-analyzer? ( dev-lang/perl )
+~sys-devel/llvm-3.0[multitarget=]
 0
 http://llvm.org/releases/3.0/llvm-3.0.tar.gz http://llvm.org/releases/3.0/clang-3.0.tar.gz
 

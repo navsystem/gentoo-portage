@@ -1,5 +1,5 @@
-=dev-python/twisted-10.2* >=app-admin/eselect-python-20091230 =dev-lang/python-2*
-=dev-python/twisted-10.2* >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+=dev-python/twisted-10.2* =dev-lang/python-2*
+=dev-python/twisted-10.2* =dev-lang/python-2*
 0
 http://twistedmatrix.com/Releases/Names/10.2/TwistedNames-10.2.0.tar.bz2
 

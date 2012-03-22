@@ -1,5 +1,5 @@
-virtual/libiconv >=app-admin/eselect-python-20091230 dev-lang/python
->=app-admin/eselect-python-20091230 dev-lang/python
+virtual/libiconv dev-lang/python
+dev-lang/python
 0
 http://downloads.sourceforge.net/project/pydns/py3dns/py3dns-3.0.0.tar.gz
 

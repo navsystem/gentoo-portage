@@ -1,5 +1,5 @@
-virtual/blas virtual/cblas virtual/lapack sci-libs/cholmod sci-libs/umfpack dsdp? ( sci-libs/dsdp ) fftw? ( sci-libs/fftw:3.0 ) glpk? ( sci-mathematics/glpk ) gsl? ( sci-libs/gsl ) dev-util/pkgconfig doc? ( dev-python/sphinx ) >=app-admin/eselect-python-20091230 dev-lang/python
-virtual/blas virtual/cblas virtual/lapack sci-libs/cholmod sci-libs/umfpack dsdp? ( sci-libs/dsdp ) fftw? ( sci-libs/fftw:3.0 ) glpk? ( sci-mathematics/glpk ) gsl? ( sci-libs/gsl ) >=app-admin/eselect-python-20091230 dev-lang/python
+virtual/blas virtual/cblas virtual/lapack sci-libs/cholmod sci-libs/umfpack dsdp? ( sci-libs/dsdp ) fftw? ( sci-libs/fftw:3.0 ) glpk? ( sci-mathematics/glpk ) gsl? ( sci-libs/gsl ) dev-util/pkgconfig doc? ( dev-python/sphinx ) dev-lang/python
+virtual/blas virtual/cblas virtual/lapack sci-libs/cholmod sci-libs/umfpack dsdp? ( sci-libs/dsdp ) fftw? ( sci-libs/fftw:3.0 ) glpk? ( sci-mathematics/glpk ) gsl? ( sci-libs/gsl ) dev-lang/python
 0
 http://abel.ee.ucla.edu/cvxopt/cvxopt-1.1.4.tar.gz
 

@@ -1,5 +1,5 @@
->=app-admin/eselect-python-20091230 =dev-lang/python-2*
->=app-admin/eselect-python-20091230 =dev-lang/python-2*
+=dev-lang/python-2*
+=dev-lang/python-2*
 0
 http://trific.ath.cx/Ftp//python/levenshtein/python-Levenshtein-0.10.tar.bz2
 

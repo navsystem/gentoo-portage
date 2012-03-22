@@ -1,5 +1,5 @@
->=dev-libs/boost-1.48[python] dev-python/numpy dev-python/pytools >=virtual/opencl-0-r1 >=app-admin/eselect-python-20091230 =dev-lang/python-2*
->=dev-libs/boost-1.48[python] dev-python/numpy dev-python/pytools >=virtual/opencl-0-r1 >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+>=dev-libs/boost-1.48[python] dev-python/numpy dev-python/pytools >=virtual/opencl-0-r1 =dev-lang/python-2*
+>=dev-libs/boost-1.48[python] dev-python/numpy dev-python/pytools >=virtual/opencl-0-r1 =dev-lang/python-2*
 0
 mirror://pypi/p/pyopencl/pyopencl-2011.2.tar.gz
 

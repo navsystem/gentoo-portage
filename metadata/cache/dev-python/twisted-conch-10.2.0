@@ -1,5 +1,5 @@
-=dev-python/twisted-10.2* dev-python/pyasn1 >=dev-python/pycrypto-1.9_alpha6 >=app-admin/eselect-python-20091230 =dev-lang/python-2*
-=dev-python/twisted-10.2* dev-python/pyasn1 >=dev-python/pycrypto-1.9_alpha6 >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+=dev-python/twisted-10.2* dev-python/pyasn1 >=dev-python/pycrypto-1.9_alpha6 =dev-lang/python-2*
+=dev-python/twisted-10.2* dev-python/pyasn1 >=dev-python/pycrypto-1.9_alpha6 =dev-lang/python-2*
 0
 http://twistedmatrix.com/Releases/Conch/10.2/TwistedConch-10.2.0.tar.bz2
 

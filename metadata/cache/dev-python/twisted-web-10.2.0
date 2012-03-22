@@ -1,5 +1,5 @@
-=dev-python/twisted-10.2* soap? ( dev-python/soappy ) >=app-admin/eselect-python-20091230 =dev-lang/python-2*
-=dev-python/twisted-10.2* soap? ( dev-python/soappy ) >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+=dev-python/twisted-10.2* soap? ( dev-python/soappy ) =dev-lang/python-2*
+=dev-python/twisted-10.2* soap? ( dev-python/soappy ) =dev-lang/python-2*
 0
 http://twistedmatrix.com/Releases/Web/10.2/TwistedWeb-10.2.0.tar.bz2
 

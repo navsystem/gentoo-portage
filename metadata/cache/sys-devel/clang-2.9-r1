@@ -1,5 +1,5 @@
-static-analyzer? ( dev-lang/perl ) >=app-admin/eselect-python-20091230
-~sys-devel/llvm-2.9[multitarget=] >=app-admin/eselect-python-20091230
+static-analyzer? ( dev-lang/perl )
+~sys-devel/llvm-2.9[multitarget=]
 0
 http://llvm.org/releases/2.9/llvm-2.9.tgz http://llvm.org/releases/2.9/clang-2.9.tgz
 

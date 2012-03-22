@@ -1,4 +1,4 @@
-virtual/linuxtv-dvb-headers || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+virtual/linuxtv-dvb-headers || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 virtual/linuxtv-dvb-headers
 0
 http://www.metzlerbros.org/dvb/libdvb-0.5.5.1.tar.gz

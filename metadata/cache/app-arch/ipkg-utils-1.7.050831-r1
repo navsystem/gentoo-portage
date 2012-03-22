@@ -1,5 +1,5 @@
-!minimal? ( app-crypt/gnupg net-misc/curl ) >=app-admin/eselect-python-20091230 =dev-lang/python-2*
-!minimal? ( app-crypt/gnupg net-misc/curl ) >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+!minimal? ( app-crypt/gnupg net-misc/curl ) =dev-lang/python-2*
+!minimal? ( app-crypt/gnupg net-misc/curl ) =dev-lang/python-2*
 0
 http://handhelds.org/download/packages/ipkg-utils/ipkg-utils-050831.tar.gz
 

@@ -1,5 +1,5 @@
->=app-admin/eselect-python-20091230 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) || ( =dev-lang/python-2.7*[tk] =dev-lang/python-2.6*[tk] )
-sound? ( dev-python/pygame ) !minimal? ( dev-python/imaging[tk] dev-tcltk/tktable ) >=app-admin/eselect-python-20091230 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) || ( =dev-lang/python-2.7*[tk] =dev-lang/python-2.6*[tk] )
+|| ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) || ( =dev-lang/python-2.7*[tk] =dev-lang/python-2.6*[tk] )
+sound? ( dev-python/pygame ) !minimal? ( dev-python/imaging[tk] dev-tcltk/tktable ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) || ( =dev-lang/python-2.7*[tk] =dev-lang/python-2.6*[tk] )
 0
 mirror://sourceforge/pysolfc/PySolFC-2.0.tar.bz2 extra-cardsets? ( mirror://sourceforge/pysolfc/PySolFC-Cardsets-2.0.tar.bz2 )
 

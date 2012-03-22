@@ -1,5 +1,5 @@
-dev-python/dbus-python dev-python/libgnome-python dev-python/gconf-python dev-python/gst-python dev-python/pycairo dev-python/pygobject:2 dev-python/pygtk:2 dev-python/pyxdg gnome-extra/zeitgeist sys-apps/dbus dev-util/intltool dev-python/python-distutils-extra app-arch/xz-utils >=sys-apps/sed-4 >=app-admin/eselect-python-20091230 =dev-lang/python-2* >=sys-apps/sed-4
-dev-python/dbus-python dev-python/libgnome-python dev-python/gconf-python dev-python/gst-python dev-python/pycairo dev-python/pygobject:2 dev-python/pygtk:2 dev-python/pyxdg gnome-extra/zeitgeist sys-apps/dbus >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+dev-python/dbus-python dev-python/libgnome-python dev-python/gconf-python dev-python/gst-python dev-python/pycairo dev-python/pygobject:2 dev-python/pygtk:2 dev-python/pyxdg gnome-extra/zeitgeist sys-apps/dbus dev-util/intltool dev-python/python-distutils-extra app-arch/xz-utils >=sys-apps/sed-4 =dev-lang/python-2* >=sys-apps/sed-4
+dev-python/dbus-python dev-python/libgnome-python dev-python/gconf-python dev-python/gst-python dev-python/pycairo dev-python/pygobject:2 dev-python/pygtk:2 dev-python/pyxdg gnome-extra/zeitgeist sys-apps/dbus =dev-lang/python-2*
 0
 http://launchpad.net/gnome-activity-journal/0.8/0.8.0/+download/gnome-activity-journal-0.8.0.tar.gz
 

@@ -1,5 +1,5 @@
->=app-text/t1utils-1.25 || ( media-gfx/potrace >=media-gfx/autotrace-0.30 ) truetype? ( media-gfx/fontforge ) virtual/latex-base test? ( media-gfx/fontforge ) >=app-admin/eselect-python-20091230 =dev-lang/python-2*
->=app-text/t1utils-1.25 || ( media-gfx/potrace >=media-gfx/autotrace-0.30 ) truetype? ( media-gfx/fontforge ) virtual/latex-base >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+>=app-text/t1utils-1.25 || ( media-gfx/potrace >=media-gfx/autotrace-0.30 ) truetype? ( media-gfx/fontforge ) virtual/latex-base test? ( media-gfx/fontforge ) =dev-lang/python-2*
+>=app-text/t1utils-1.25 || ( media-gfx/potrace >=media-gfx/autotrace-0.30 ) truetype? ( media-gfx/fontforge ) virtual/latex-base =dev-lang/python-2*
 1
 http://lilypond.org/download/sources/mftrace/mftrace-1.2.18.tar.gz
 

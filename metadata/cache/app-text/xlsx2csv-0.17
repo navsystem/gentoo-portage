@@ -1,5 +1,5 @@
-app-arch/unzip >=app-admin/eselect-python-20091230 =dev-lang/python-2* =dev-lang/python-2*[xml]
->=app-admin/eselect-python-20091230 =dev-lang/python-2* =dev-lang/python-2*[xml]
+app-arch/unzip =dev-lang/python-2* =dev-lang/python-2*[xml]
+=dev-lang/python-2* =dev-lang/python-2*[xml]
 0
 mirror://github/dilshod/xlsx2csv/xlsx2csv-0.17.zip
 

@@ -1,5 +1,5 @@
-doc? ( >=dev-python/sphinx-1.0 ) >=app-admin/eselect-python-20091230 dev-lang/python
-sys-apps/portage >=app-admin/eselect-python-20091230 dev-lang/python
+doc? ( >=dev-python/sphinx-1.0 ) dev-lang/python
+sys-apps/portage dev-lang/python
 0
 http://www.g-octave.org/releases/g-octave-0.4.1.tar.gz http://github.com/rafaelmartins/g-octave-db/tarball/f8de0c5a490a9572a7e6592f0082c3f7e039ef67 -> g-octave-db-f8de0c5.tar.gz
 

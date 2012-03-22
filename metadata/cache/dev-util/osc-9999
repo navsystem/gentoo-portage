@@ -1,5 +1,5 @@
-dev-python/urlgrabber dev-python/pyxml dev-python/elementtree app-arch/rpm[python] dev-python/m2crypto >=app-admin/eselect-python-20091230 dev-lang/python dev-vcs/git
-dev-python/urlgrabber dev-python/pyxml dev-python/elementtree app-arch/rpm[python] dev-python/m2crypto >=app-admin/eselect-python-20091230 dev-lang/python
+dev-python/urlgrabber dev-python/pyxml dev-python/elementtree app-arch/rpm[python] dev-python/m2crypto dev-lang/python dev-vcs/git
+dev-python/urlgrabber dev-python/pyxml dev-python/elementtree app-arch/rpm[python] dev-python/m2crypto dev-lang/python
 0
 
 

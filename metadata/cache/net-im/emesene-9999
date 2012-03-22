@@ -1,5 +1,5 @@
->=app-admin/eselect-python-20091230 =dev-lang/python-2* =dev-lang/python-2*[sqlite] dev-vcs/git
-dev-python/pygtk:2 dev-python/papyon dev-python/notify-python jabber? ( dev-python/xmpppy ) >=app-admin/eselect-python-20091230 =dev-lang/python-2* =dev-lang/python-2*[sqlite]
+=dev-lang/python-2* =dev-lang/python-2*[sqlite] dev-vcs/git
+dev-python/pygtk:2 dev-python/papyon dev-python/notify-python jabber? ( dev-python/xmpppy ) =dev-lang/python-2* =dev-lang/python-2*[sqlite]
 2
 
 

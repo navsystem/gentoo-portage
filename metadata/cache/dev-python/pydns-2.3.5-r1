@@ -1,5 +1,5 @@
-!dev-python/pydns:0 virtual/libiconv >=app-admin/eselect-python-20091230 =dev-lang/python-2*
->=app-admin/eselect-python-20091230 =dev-lang/python-2*
+!dev-python/pydns:0 virtual/libiconv =dev-lang/python-2*
+=dev-lang/python-2*
 2
 http://downloads.sourceforge.net/project/pydns/pydns/pydns-2.3.5/pydns-2.3.5.tar.gz
 

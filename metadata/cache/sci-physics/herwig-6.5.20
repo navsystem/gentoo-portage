@@ -1,4 +1,4 @@
-!sci-physics/cernlib-montecarlo[herwig] virtual/fortran || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+!sci-physics/cernlib-montecarlo[herwig] virtual/fortran || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 !sci-physics/cernlib-montecarlo[herwig]
 0
 http://www.hep.phy.cam.ac.uk/theory/webber/Herwig/herwig6520.f http://www.hep.phy.cam.ac.uk/theory/webber/Herwig/herwig6520.inc http://www.hep.phy.cam.ac.uk/theory/webber/Herwig/HERWIG65.INC doc? ( http://www.hep.phy.cam.ac.uk/theory/webber/Herwig/hw65_manual.pdf )

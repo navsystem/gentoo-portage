@@ -1,14 +1,14 @@
-!sys-apps/module-init-tools !sys-apps/modutils lzma? ( app-arch/xz-utils ) zlib? ( sys-libs/zlib ) doc? ( dev-util/gtk-doc ) dev-vcs/git || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+!sys-apps/module-init-tools !sys-apps/modutils lzma? ( app-arch/xz-utils ) zlib? ( sys-libs/zlib ) doc? ( dev-util/gtk-doc ) dev-vcs/git || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 !sys-apps/module-init-tools !sys-apps/modutils lzma? ( app-arch/xz-utils ) zlib? ( sys-libs/zlib )
 0
 
-
+test
 http://git.kernel.org/?p=utils/kernel/kmod/kmod.git
 LGPL-2
 library and tools for managing linux kernel modules
 
 autotools eutils git-2 libtool multilib toolchain-funcs user
-doc debug lzma static-libs +tools zlib
+debug doc lzma static-libs +tools zlib
 
 
 

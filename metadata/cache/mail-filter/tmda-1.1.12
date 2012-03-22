@@ -1,5 +1,5 @@
-virtual/mta >=app-admin/eselect-python-20091230 =dev-lang/python-2*
-virtual/mta >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+virtual/mta =dev-lang/python-2*
+virtual/mta =dev-lang/python-2*
 0
 mirror://sourceforge/tmda/tmda-1.1.12.tgz
 

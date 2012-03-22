@@ -1,5 +1,5 @@
->=dev-python/decoratortools-1.4 dev-python/pyrex dev-python/setuptools >=app-admin/eselect-python-20091230 =dev-lang/python-2*
->=dev-python/decoratortools-1.4 >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+>=dev-python/decoratortools-1.4 dev-python/pyrex dev-python/setuptools =dev-lang/python-2*
+>=dev-python/decoratortools-1.4 =dev-lang/python-2*
 0
 mirror://gentoo/PyProtocols-1.0a0dev_r2306.tar.gz
 

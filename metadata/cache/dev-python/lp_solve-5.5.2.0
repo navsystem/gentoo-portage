@@ -1,5 +1,5 @@
-dev-python/numpy sci-mathematics/lpsolve dev-python/setuptools >=app-admin/eselect-python-20091230 dev-lang/python
-dev-python/numpy sci-mathematics/lpsolve >=app-admin/eselect-python-20091230 dev-lang/python
+dev-python/numpy sci-mathematics/lpsolve dev-python/setuptools dev-lang/python
+dev-python/numpy sci-mathematics/lpsolve dev-lang/python
 0
 mirror://sourceforge/lpsolve/lp_solve_5.5.2.0_Python_source.tar.gz
 

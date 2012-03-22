@@ -1,5 +1,5 @@
-dev-python/setuptools >=app-admin/eselect-python-20091230 =dev-lang/python-2*
->=app-admin/eselect-python-20091230 =dev-lang/python-2*
+dev-python/setuptools =dev-lang/python-2*
+=dev-lang/python-2*
 0
 mirror://pypi/i/icalendar/icalendar-2.1.tar.gz
 

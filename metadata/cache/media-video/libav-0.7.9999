@@ -4,7 +4,7 @@
 
 
 http://libav.org/
-LGPL-2 gpl? ( GPL-3 )
+LGPL-2.1 gpl? ( GPL-3 )
 Complete solution to record, convert and stream audio and video.
 
 eutils flag-o-matic git-2 multilib toolchain-funcs user

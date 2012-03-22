@@ -2,7 +2,7 @@
 !net-dialup/fritzcapi net-dialup/capi4k-utils kernel_linux? ( virtual/modutils )
 0
 http://opensuse.foehr-it.de/rpms/11_2/src/fcpci-0.1-0.src.rpm
-primaryuri
+mirror primaryuri
 http://opensuse.foehr-it.de/
 AVM-FC
 AVM kernel 2.6 modules for Fritz!Card PCI

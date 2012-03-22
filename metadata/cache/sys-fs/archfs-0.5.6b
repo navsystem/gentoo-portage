@@ -1,9 +1,9 @@
-sys-fs/fuse || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+sys-fs/fuse || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 sys-fs/fuse app-backup/rdiff-backup
 0
 http://archfs.googlecode.com/files/archfs-0.5.6b.tar.gz
 
-http://code.google.com/p/archfs
+http://code.google.com/p/rdiff-backup-fs/
 GPL-2
 Filesystem for rdiff-backup'ed folders
 ~x86

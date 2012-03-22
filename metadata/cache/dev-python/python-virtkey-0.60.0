@@ -1,5 +1,5 @@
-dev-libs/glib:2 x11-libs/libX11 x11-libs/libXtst x11-libs/gtk+:2 dev-util/pkgconfig >=app-admin/eselect-python-20091230 =dev-lang/python-2*
-dev-libs/glib:2 x11-libs/libX11 x11-libs/libXtst x11-libs/gtk+:2 >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+dev-libs/glib:2 x11-libs/libX11 x11-libs/libXtst x11-libs/gtk+:2 dev-util/pkgconfig =dev-lang/python-2*
+dev-libs/glib:2 x11-libs/libX11 x11-libs/libXtst x11-libs/gtk+:2 =dev-lang/python-2*
 0
 http://launchpad.net/python-virtkey/0.60/0.60.0/+download/python-virtkey-0.60.0.tar.gz
 

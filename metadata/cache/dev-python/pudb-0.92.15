@@ -1,5 +1,5 @@
-dev-python/urwid dev-python/pygments dev-python/setuptools >=app-admin/eselect-python-20091230 dev-lang/python
-dev-python/urwid dev-python/pygments >=app-admin/eselect-python-20091230 dev-lang/python
+dev-python/urwid dev-python/pygments dev-python/setuptools dev-lang/python
+dev-python/urwid dev-python/pygments dev-lang/python
 0
 mirror://pypi/p/pudb/pudb-0.92.15.tar.gz
 

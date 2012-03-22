@@ -1,4 +1,4 @@
-net-misc/curl X? ( x11-libs/libXaw media-libs/libpng ) || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+net-misc/curl X? ( x11-libs/libXaw media-libs/libpng ) || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 net-misc/curl X? ( x11-libs/libXaw media-libs/libpng )
 0
 mirror://sourceforge/crossfire/crossfire-1.11.0.tar.gz mirror://sourceforge/crossfire/crossfire-1.11.0.maps.tar.gz

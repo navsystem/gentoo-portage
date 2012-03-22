@@ -1,5 +1,5 @@
-dev-python/decorator >=sys-block/parted-3 sys-libs/ncurses test? ( dev-python/pychecker ) >=app-admin/eselect-python-20091230 =dev-lang/python-2.7*
-dev-python/decorator >=sys-block/parted-3 sys-libs/ncurses >=app-admin/eselect-python-20091230 =dev-lang/python-2.7*
+dev-python/decorator >=sys-block/parted-3 sys-libs/ncurses test? ( dev-python/pychecker ) =dev-lang/python-2.7*
+dev-python/decorator >=sys-block/parted-3 sys-libs/ncurses =dev-lang/python-2.7*
 0
 https://fedorahosted.org/releases/p/y/pyparted/pyparted-3.8.tar.gz
 

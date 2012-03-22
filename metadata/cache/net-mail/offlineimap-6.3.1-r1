@@ -1,5 +1,5 @@
-doc? ( app-text/docbook-sgml-utils ) >=app-admin/eselect-python-20091230 =dev-lang/python-2* =dev-lang/python-2*[threads,ssl?]
->=app-admin/eselect-python-20091230 =dev-lang/python-2* =dev-lang/python-2*[threads,ssl?]
+doc? ( app-text/docbook-sgml-utils ) =dev-lang/python-2* =dev-lang/python-2*[threads,ssl?]
+=dev-lang/python-2* =dev-lang/python-2*[threads,ssl?]
 0
 https://github.com/nicolas33/offlineimap/tarball/v6.3.1 -> offlineimap-6.3.1.tar.gz
 

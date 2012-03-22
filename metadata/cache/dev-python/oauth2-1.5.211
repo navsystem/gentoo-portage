@@ -1,5 +1,5 @@
-dev-python/httplib2 dev-python/setuptools test? ( dev-python/coverage dev-python/mock ) >=app-admin/eselect-python-20091230 =dev-lang/python-2*
-dev-python/httplib2 >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+dev-python/httplib2 dev-python/setuptools test? ( dev-python/coverage dev-python/mock ) =dev-lang/python-2*
+dev-python/httplib2 =dev-lang/python-2*
 0
 mirror://pypi/o/oauth2/oauth2-1.5.211.tar.gz
 

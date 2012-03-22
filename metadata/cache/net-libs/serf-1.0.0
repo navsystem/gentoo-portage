@@ -1,4 +1,4 @@
-dev-libs/apr:1 dev-libs/apr-util:1 dev-libs/openssl sys-libs/zlib || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+dev-libs/apr:1 dev-libs/apr-util:1 dev-libs/openssl sys-libs/zlib || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 dev-libs/apr:1 dev-libs/apr-util:1 dev-libs/openssl sys-libs/zlib
 1
 http://serf.googlecode.com/files/serf-1.0.0.tar.bz2

@@ -1,5 +1,5 @@
-media-libs/alsa-lib dev-python/setuptools >=app-admin/eselect-python-20091230 =dev-lang/python-2*
-media-libs/alsa-lib >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+media-libs/alsa-lib dev-python/setuptools =dev-lang/python-2*
+media-libs/alsa-lib =dev-lang/python-2*
 0
 mirror://alsaproject/pyalsa/pyalsa-1.0.25.tar.bz2
 

@@ -1,5 +1,5 @@
-dev-python/setuptools test? ( net-misc/memcached ) >=app-admin/eselect-python-20091230 =dev-lang/python-2*
->=app-admin/eselect-python-20091230 =dev-lang/python-2*
+dev-python/setuptools test? ( net-misc/memcached ) =dev-lang/python-2*
+=dev-lang/python-2*
 0
 ftp://ftp.tummy.com/pub/python-memcached/old-releases/python-memcached-1.48.tar.gz
 

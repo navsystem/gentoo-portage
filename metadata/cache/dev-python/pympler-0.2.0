@@ -1,5 +1,5 @@
->=app-admin/eselect-python-20091230 dev-lang/python
->=app-admin/eselect-python-20091230 dev-lang/python
+dev-lang/python
+dev-lang/python
 0
 http://dev.gentoo.org/~jlec/distfiles/pympler-0.2.0.tar.xz
 

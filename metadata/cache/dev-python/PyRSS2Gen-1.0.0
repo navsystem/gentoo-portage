@@ -1,5 +1,5 @@
->=app-admin/eselect-python-20091230 =dev-lang/python-2*
->=app-admin/eselect-python-20091230 =dev-lang/python-2*
+=dev-lang/python-2*
+=dev-lang/python-2*
 0
 http://www.dalkescientific.com/Python/PyRSS2Gen-1.0.0.tar.gz
 

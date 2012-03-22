@@ -1,5 +1,5 @@
-dev-python/setuptools >=dev-python/apsw-3.7.0 >=dev-python/llfuse-0.37 dev-python/pycryptopp dev-python/pyliblzma || ( >=dev-lang/python-2.7 dev-python/argparse ) sys-fs/fuse test? ( net-misc/rsync[xattr] dev-python/unittest2 ) >=app-admin/eselect-python-20091230 =dev-lang/python-2*
-dev-python/setuptools >=dev-python/apsw-3.7.0 >=dev-python/llfuse-0.37 dev-python/pycryptopp dev-python/pyliblzma || ( >=dev-lang/python-2.7 dev-python/argparse ) sys-fs/fuse >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+dev-python/setuptools >=dev-python/apsw-3.7.0 >=dev-python/llfuse-0.37 dev-python/pycryptopp dev-python/pyliblzma || ( >=dev-lang/python-2.7 dev-python/argparse ) sys-fs/fuse test? ( net-misc/rsync[xattr] dev-python/unittest2 ) =dev-lang/python-2*
+dev-python/setuptools >=dev-python/apsw-3.7.0 >=dev-python/llfuse-0.37 dev-python/pycryptopp dev-python/pyliblzma || ( >=dev-lang/python-2.7 dev-python/argparse ) sys-fs/fuse =dev-lang/python-2*
 0
 http://s3ql.googlecode.com/files/s3ql-1.10.tar.bz2
 

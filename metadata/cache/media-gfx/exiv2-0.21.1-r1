@@ -1,5 +1,5 @@
-virtual/libiconv nls? ( virtual/libintl ) xmp? ( dev-libs/expat ) zlib? ( sys-libs/zlib ) contrib? ( >=dev-libs/boost-1.37 ) doc? ( app-doc/doxygen dev-libs/libxslt dev-util/pkgconfig media-gfx/graphviz ) nls? ( sys-devel/gettext ) >=app-admin/eselect-python-20091230 =dev-lang/python-2*
-virtual/libiconv nls? ( virtual/libintl ) xmp? ( dev-libs/expat ) zlib? ( sys-libs/zlib ) >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+virtual/libiconv nls? ( virtual/libintl ) xmp? ( dev-libs/expat ) zlib? ( sys-libs/zlib ) contrib? ( >=dev-libs/boost-1.37 ) doc? ( app-doc/doxygen dev-libs/libxslt dev-util/pkgconfig media-gfx/graphviz ) nls? ( sys-devel/gettext ) =dev-lang/python-2*
+virtual/libiconv nls? ( virtual/libintl ) xmp? ( dev-libs/expat ) zlib? ( sys-libs/zlib ) =dev-lang/python-2*
 0
 http://www.exiv2.org/exiv2-0.21.1.tar.gz
 

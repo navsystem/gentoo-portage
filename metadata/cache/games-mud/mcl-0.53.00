@@ -1,5 +1,5 @@
-perl? ( dev-lang/perl ) >=app-admin/eselect-python-20091230 python? ( =dev-lang/python-2* )
-perl? ( dev-lang/perl ) >=app-admin/eselect-python-20091230 python? ( =dev-lang/python-2* )
+perl? ( dev-lang/perl ) python? ( =dev-lang/python-2* )
+perl? ( dev-lang/perl ) python? ( =dev-lang/python-2* )
 0
 http://www.andreasen.org/mcl/dist/mcl-0.53.00-src.tar.gz mirror://gentoo/mcl-0.53.00-inputlines.patch.gz
 

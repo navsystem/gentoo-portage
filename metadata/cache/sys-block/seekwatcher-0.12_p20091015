@@ -1,5 +1,5 @@
-dev-python/pyrex >=app-admin/eselect-python-20091230 =dev-lang/python-2*
-dev-python/matplotlib dev-python/numpy >=sys-block/btrace-0.0.20070730162628 >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+dev-python/pyrex =dev-lang/python-2*
+dev-python/matplotlib dev-python/numpy >=sys-block/btrace-0.0.20070730162628 =dev-lang/python-2*
 0
 http://dev.gentoo.org/~slyfox/seekwatcher-0.12_p20091015.tar.gz
 

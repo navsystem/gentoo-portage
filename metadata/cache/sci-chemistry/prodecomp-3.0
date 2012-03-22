@@ -1,5 +1,5 @@
->=app-admin/eselect-python-20091230 =dev-lang/python-2* =dev-lang/python-2*[tk]
-sci-libs/scipy >=app-admin/eselect-python-20091230 =dev-lang/python-2* =dev-lang/python-2*[tk]
+=dev-lang/python-2* =dev-lang/python-2*[tk]
+sci-libs/scipy =dev-lang/python-2* =dev-lang/python-2*[tk]
 0
 mirror://gentoo/prodecomp-3.0.tar.bz2
 

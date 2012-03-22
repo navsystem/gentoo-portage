@@ -1,5 +1,5 @@
->=app-mobilephone/gammu-1.25.0[python] >=dev-python/wxpython-2.8 bluetooth? ( || ( dev-python/pybluez net-wireless/gnome-bluetooth ) ) >=app-admin/eselect-python-20091230 =dev-lang/python-2*
->=app-mobilephone/gammu-1.25.0[python] >=dev-python/wxpython-2.8 bluetooth? ( || ( dev-python/pybluez net-wireless/gnome-bluetooth ) ) >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+>=app-mobilephone/gammu-1.25.0[python] >=dev-python/wxpython-2.8 bluetooth? ( || ( dev-python/pybluez net-wireless/gnome-bluetooth ) ) =dev-lang/python-2*
+>=app-mobilephone/gammu-1.25.0[python] >=dev-python/wxpython-2.8 bluetooth? ( || ( dev-python/pybluez net-wireless/gnome-bluetooth ) ) =dev-lang/python-2*
 0
 http://dl.cihar.com/wammu/v0/wammu-0.34.tar.bz2
 

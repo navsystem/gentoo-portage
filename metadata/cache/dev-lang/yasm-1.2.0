@@ -1,5 +1,5 @@
-nls? ( sys-devel/gettext ) python? ( >=dev-python/cython-0.14 ) >=app-admin/eselect-python-20091230 python? ( =dev-lang/python-2.7* )
-nls? ( virtual/libintl ) >=app-admin/eselect-python-20091230 python? ( =dev-lang/python-2.7* )
+nls? ( sys-devel/gettext ) python? ( >=dev-python/cython-0.14 ) python? ( =dev-lang/python-2.7* )
+nls? ( virtual/libintl ) python? ( =dev-lang/python-2.7* )
 0
 http://www.tortall.net/projects/yasm/releases/yasm-1.2.0.tar.gz
 

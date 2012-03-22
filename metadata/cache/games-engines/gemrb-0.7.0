@@ -1,5 +1,5 @@
-media-libs/freetype media-libs/libpng >=media-libs/libsdl-1.2[video] media-libs/libvorbis media-libs/openal media-libs/sdl-mixer media-libs/sdl-ttf sys-libs/zlib >=app-admin/eselect-python-20091230 =dev-lang/python-2* >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
-media-libs/freetype media-libs/libpng >=media-libs/libsdl-1.2[video] media-libs/libvorbis media-libs/openal media-libs/sdl-mixer media-libs/sdl-ttf sys-libs/zlib >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+media-libs/freetype media-libs/libpng >=media-libs/libsdl-1.2[video] media-libs/libvorbis media-libs/openal media-libs/sdl-mixer media-libs/sdl-ttf sys-libs/zlib =dev-lang/python-2* >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+media-libs/freetype media-libs/libpng >=media-libs/libsdl-1.2[video] media-libs/libvorbis media-libs/openal media-libs/sdl-mixer media-libs/sdl-ttf sys-libs/zlib =dev-lang/python-2*
 0
 mirror://sourceforge/gemrb/gemrb-0.7.0.tar.gz
 

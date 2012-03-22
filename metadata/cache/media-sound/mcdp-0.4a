@@ -6,7 +6,7 @@ http://www.mcmilk.de/projects/mcdp/dl/mcdp-0.4a.tar.bz2
 http://www.mcmilk.de/projects/mcdp/
 GPL-2
 A very small console cd player
-amd64 ~ppc sparc x86
+amd64 ~ppc x86
 eutils multilib toolchain-funcs user
 
 

@@ -1,4 +1,4 @@
-fortran? ( virtual/fortran ) mpi? ( virtual/mpi ) || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+fortran? ( virtual/fortran ) mpi? ( virtual/mpi ) || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 fortran? ( virtual/fortran ) mpi? ( virtual/mpi )
 3.0
 http://www.fftw.org/fftw-3.3.tar.gz

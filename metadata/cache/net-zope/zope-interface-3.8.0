@@ -1,5 +1,5 @@
-dev-python/setuptools net-zope/zope-fixers >=app-admin/eselect-python-20091230 dev-lang/python
->=app-admin/eselect-python-20091230 dev-lang/python
+dev-python/setuptools net-zope/zope-fixers dev-lang/python
+dev-lang/python
 0
 mirror://pypi/z/zope.interface/zope.interface-3.8.0.tar.gz
 

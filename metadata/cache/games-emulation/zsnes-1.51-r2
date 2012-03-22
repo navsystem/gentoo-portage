@@ -1,4 +1,4 @@
-media-libs/libsdl[audio,video] >=sys-libs/zlib-1.2.3-r1 amd64? ( >=app-emulation/emul-linux-x86-sdl-10.1 ) ao? ( media-libs/libao ) opengl? ( virtual/opengl ) png? ( media-libs/libpng ) dev-lang/nasm amd64? ( >=sys-apps/portage-2.1 ) || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+media-libs/libsdl[audio,video] >=sys-libs/zlib-1.2.3-r1 amd64? ( >=app-emulation/emul-linux-x86-sdl-10.1 ) ao? ( media-libs/libao ) opengl? ( virtual/opengl ) png? ( media-libs/libpng ) dev-lang/nasm amd64? ( >=sys-apps/portage-2.1 ) || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 media-libs/libsdl[audio,video] >=sys-libs/zlib-1.2.3-r1 amd64? ( >=app-emulation/emul-linux-x86-sdl-10.1 ) ao? ( media-libs/libao ) opengl? ( virtual/opengl ) png? ( media-libs/libpng )
 0
 mirror://sourceforge/zsnes/zsnes151src.tar.bz2

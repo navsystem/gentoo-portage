@@ -1,5 +1,5 @@
->=media-sound/alsa-headers-1.0.25 doc? ( >=app-doc/doxygen-1.2.6 ) || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=app-admin/eselect-python-20091230 python? ( =dev-lang/python-2* )
->=app-admin/eselect-python-20091230 python? ( =dev-lang/python-2* )
+>=media-sound/alsa-headers-1.0.25 doc? ( >=app-doc/doxygen-1.2.6 ) || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool python? ( =dev-lang/python-2* )
+python? ( =dev-lang/python-2* )
 0
 mirror://alsaproject/lib/alsa-lib-1.0.25.tar.bz2
 

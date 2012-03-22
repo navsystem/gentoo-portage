@@ -1,4 +1,4 @@
-virtual/mysql || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+virtual/mysql || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 virtual/mysql
 0
 http://libnss-mysql.sourceforge.net/snapshot/libnss-mysql-20060915.tgz

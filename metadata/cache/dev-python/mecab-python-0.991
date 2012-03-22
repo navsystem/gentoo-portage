@@ -1,5 +1,5 @@
->=app-text/mecab-0.991 >=app-admin/eselect-python-20091230 =dev-lang/python-2*
->=app-text/mecab-0.991 >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+>=app-text/mecab-0.991 =dev-lang/python-2*
+>=app-text/mecab-0.991 =dev-lang/python-2*
 0
 http://mecab.googlecode.com/files/mecab-python-0.991.tar.gz
 

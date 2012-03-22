@@ -1,5 +1,5 @@
->=sys-libs/db-3.2.9 >=app-admin/eselect-python-20091230 =dev-lang/python-2*
->=sys-libs/db-3.2.9 >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+>=sys-libs/db-3.2.9 =dev-lang/python-2*
+>=sys-libs/db-3.2.9 =dev-lang/python-2*
 0
 mirror://pypi/r/roundup/roundup-1.4.16.tar.gz
 

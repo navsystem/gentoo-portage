@@ -1,5 +1,5 @@
-dev-libs/crypto++ dev-python/setuptools >=app-admin/eselect-python-20091230 dev-lang/python
-dev-libs/crypto++ >=app-admin/eselect-python-20091230 dev-lang/python
+dev-libs/crypto++ dev-python/setuptools dev-lang/python
+dev-libs/crypto++ dev-lang/python
 0
 mirror://pypi/p/pycryptopp/pycryptopp-0.5.29.tar.gz
 

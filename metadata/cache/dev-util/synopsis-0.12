@@ -1,5 +1,5 @@
-media-gfx/graphviz dev-libs/boehm-gc net-misc/omniORB >=app-admin/eselect-python-20091230 =dev-lang/python-2*
-media-gfx/graphviz dev-libs/boehm-gc net-misc/omniORB >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+media-gfx/graphviz dev-libs/boehm-gc net-misc/omniORB =dev-lang/python-2*
+media-gfx/graphviz dev-libs/boehm-gc net-misc/omniORB =dev-lang/python-2*
 0
 http://synopsis.fresco.org/download/synopsis-0.12.tar.gz
 

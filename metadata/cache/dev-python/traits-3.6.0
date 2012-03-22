@@ -1,5 +1,5 @@
->=dev-python/enthoughtbase-3.1.0 >=dev-python/numpy-1.1 dev-python/setuptools doc? ( dev-python/sphinx ) >=app-admin/eselect-python-20091230 =dev-lang/python-2*
->=dev-python/enthoughtbase-3.1.0 >=dev-python/numpy-1.1 dev-python/setuptools >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+>=dev-python/enthoughtbase-3.1.0 >=dev-python/numpy-1.1 dev-python/setuptools doc? ( dev-python/sphinx ) =dev-lang/python-2*
+>=dev-python/enthoughtbase-3.1.0 >=dev-python/numpy-1.1 dev-python/setuptools =dev-lang/python-2*
 0
 http://www.enthought.com/repo/ETS/Traits-3.6.0.tar.gz
 

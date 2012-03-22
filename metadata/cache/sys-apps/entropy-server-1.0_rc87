@@ -1,5 +1,5 @@
-app-text/asciidoc >=app-admin/eselect-python-20091230 =dev-lang/python-2*
-~sys-apps/entropy-1.0_rc87 >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+app-text/asciidoc =dev-lang/python-2*
+~sys-apps/entropy-1.0_rc87 =dev-lang/python-2*
 0
 mirror://sabayon/sys-apps/entropy-1.0_rc87.tar.bz2
 

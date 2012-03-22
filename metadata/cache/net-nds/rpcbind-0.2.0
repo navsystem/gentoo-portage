@@ -1,4 +1,4 @@
-net-libs/libtirpc selinux? ( sec-policy/selinux-rpcbind ) tcpd? ( sys-apps/tcp-wrappers ) dev-util/pkgconfig || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+net-libs/libtirpc selinux? ( sec-policy/selinux-rpcbind ) tcpd? ( sys-apps/tcp-wrappers ) dev-util/pkgconfig || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 net-libs/libtirpc selinux? ( sec-policy/selinux-rpcbind ) tcpd? ( sys-apps/tcp-wrappers )
 0
 mirror://sourceforge/rpcbind/rpcbind-0.2.0.tar.bz2

@@ -1,5 +1,5 @@
-emacs? ( virtual/emacs ) >=app-admin/eselect-python-20091230 =dev-lang/python-2*
-emacs? ( virtual/emacs ) >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+emacs? ( virtual/emacs ) =dev-lang/python-2*
+emacs? ( virtual/emacs ) =dev-lang/python-2*
 0
 mirror://sourceforge/bashdb/pydb-1.26.tar.bz2
 

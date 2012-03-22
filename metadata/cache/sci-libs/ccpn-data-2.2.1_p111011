@@ -1,5 +1,5 @@
->=app-admin/eselect-python-20091230 =dev-lang/python-2*
-!<sci-chemistry/ccpn-2.2.1_p111011 >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+=dev-lang/python-2*
+!<sci-chemistry/ccpn-2.2.1_p111011 =dev-lang/python-2*
 0
 http://www.bio.cam.ac.uk/ccpn/download/ccpnmr/analysis2.2.1.tar.gz http://dev.gentoo.org/~jlec/distfiles/ccpn-update-2.2.1-111011.patch.xz
 binchecks strip

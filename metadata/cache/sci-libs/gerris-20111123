@@ -1,4 +1,4 @@
-dev-libs/glib:2 dev-games/ode sci-libs/netcdf sci-libs/gsl sci-libs/gts sci-libs/hypre sci-libs/lis sci-libs/proj >=sci-libs/fftw-3 virtual/lapack mpi? ( virtual/mpi ) dev-util/pkgconfig || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+dev-libs/glib:2 dev-games/ode sci-libs/netcdf sci-libs/gsl sci-libs/gts sci-libs/hypre sci-libs/lis sci-libs/proj >=sci-libs/fftw-3 virtual/lapack mpi? ( virtual/mpi ) dev-util/pkgconfig || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 dev-libs/glib:2 dev-games/ode sci-libs/netcdf sci-libs/gsl sci-libs/gts sci-libs/hypre sci-libs/lis sci-libs/proj >=sci-libs/fftw-3 virtual/lapack mpi? ( virtual/mpi )
 0
 http://dev.gentoo.org/~bicatali/distfiles/gerris-20111123.tar.gz

@@ -1,4 +1,4 @@
-doc? ( app-doc/doxygen ) !sci-biology/muscle || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+doc? ( app-doc/doxygen ) !sci-biology/muscle || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 
 0
 mirror://gentoo/libmuscle-3.7-r1.tar.bz2

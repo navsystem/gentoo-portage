@@ -1,5 +1,5 @@
-~dev-libs/libgit2-0.16.0 dev-libs/openssl sys-libs/zlib >=app-admin/eselect-python-20091230 dev-lang/python
-~dev-libs/libgit2-0.16.0 dev-libs/openssl sys-libs/zlib >=app-admin/eselect-python-20091230 dev-lang/python
+~dev-libs/libgit2-0.16.0 dev-libs/openssl sys-libs/zlib dev-lang/python
+~dev-libs/libgit2-0.16.0 dev-libs/openssl sys-libs/zlib dev-lang/python
 0
 https://github.com/libgit2/pygit2/tarball/v0.16.0 -> pygit2-0.16.0.tar.gz
 

@@ -1,5 +1,5 @@
->=app-admin/eselect-python-20091230 =dev-lang/python-2*
-dev-python/imaging dev-python/PyQt4 >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+=dev-lang/python-2*
+dev-python/imaging dev-python/PyQt4 =dev-lang/python-2*
 4
 mirror://sourceforge/ksplasher/ksplasherx2.0beta2.tar.gz
 

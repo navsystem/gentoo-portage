@@ -1,5 +1,5 @@
-dev-python/setuptools test? ( dev-python/tox ) >=app-admin/eselect-python-20091230 dev-lang/python
-dev-python/virtualenv >=app-admin/eselect-python-20091230 dev-lang/python
+dev-python/setuptools test? ( dev-python/tox ) dev-lang/python
+dev-python/virtualenv dev-lang/python
 0
 mirror://pypi/v/virtualenvwrapper/virtualenvwrapper-3.0.tar.gz
 

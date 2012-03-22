@@ -1,4 +1,4 @@
-virtual/opengl media-libs/freeglut x11-libs/libXmu x11-libs/libXt x11-libs/libICE x11-libs/libSM || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+virtual/opengl media-libs/freeglut x11-libs/libXmu x11-libs/libXt x11-libs/libICE x11-libs/libSM || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 virtual/opengl media-libs/freeglut x11-libs/libXmu x11-libs/libXt x11-libs/libICE x11-libs/libSM
 0
 http://www-users.cs.umn.edu/~wburdick/ftp/geowall/viewer-0.8.0.tar.gz

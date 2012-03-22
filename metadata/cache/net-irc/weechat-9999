@@ -1,5 +1,5 @@
-sys-libs/ncurses charset? ( virtual/libiconv ) lua? ( dev-lang/lua[deprecated] ) perl? ( dev-lang/perl ) ruby? ( ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ) ssl? ( net-libs/gnutls ) spell? ( app-text/aspell ) tcl? ( >=dev-lang/tcl-8.4.15 ) nls? ( >=sys-devel/gettext-0.15 ) >=app-admin/eselect-python-20091230 python? ( dev-lang/python ) >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) dev-vcs/git
-sys-libs/ncurses charset? ( virtual/libiconv ) lua? ( dev-lang/lua[deprecated] ) perl? ( dev-lang/perl ) ruby? ( ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ) ssl? ( net-libs/gnutls ) spell? ( app-text/aspell ) tcl? ( >=dev-lang/tcl-8.4.15 ) >=app-admin/eselect-python-20091230 python? ( dev-lang/python )
+sys-libs/ncurses charset? ( virtual/libiconv ) lua? ( dev-lang/lua[deprecated] ) perl? ( dev-lang/perl ) ruby? ( ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ) ssl? ( net-libs/gnutls ) spell? ( app-text/aspell ) tcl? ( >=dev-lang/tcl-8.4.15 ) nls? ( >=sys-devel/gettext-0.15 ) python? ( dev-lang/python ) >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) dev-vcs/git
+sys-libs/ncurses charset? ( virtual/libiconv ) lua? ( dev-lang/lua[deprecated] ) perl? ( dev-lang/perl ) ruby? ( ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ) ssl? ( net-libs/gnutls ) spell? ( app-text/aspell ) tcl? ( >=dev-lang/tcl-8.4.15 ) python? ( dev-lang/python )
 0
 
 

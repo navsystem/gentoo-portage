@@ -1,5 +1,5 @@
->=app-admin/eselect-python-20091230 =dev-lang/python-2*
-gtk? ( dev-python/pygtk:2 ) bash-completion? ( >=app-shells/bash-4 ) zsh-completion? ( app-shells/zsh app-shells/zsh-completion ) >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+=dev-lang/python-2*
+gtk? ( dev-python/pygtk:2 ) bash-completion? ( >=app-shells/bash-4 ) zsh-completion? ( app-shells/zsh app-shells/zsh-completion ) =dev-lang/python-2*
 0
 http://github.com/downloads/joelthelion/autojump/autojump_v13.tar.gz
 

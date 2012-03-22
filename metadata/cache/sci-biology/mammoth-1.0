@@ -1,4 +1,4 @@
-virtual/fortran || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+virtual/fortran || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 virtual/fortran
 0
 mammoth-1.0-src.tgz

@@ -1,5 +1,5 @@
-sys-libs/timezone-data dev-python/setuptools >=app-admin/eselect-python-20091230 =dev-lang/python-3*
-sys-libs/timezone-data >=app-admin/eselect-python-20091230 =dev-lang/python-3*
+sys-libs/timezone-data dev-python/setuptools =dev-lang/python-3*
+sys-libs/timezone-data =dev-lang/python-3*
 python-3
 http://labix.org/download/python-dateutil/python-dateutil-2.0.tar.gz
 

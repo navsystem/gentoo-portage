@@ -1,5 +1,5 @@
-=dev-vcs/bzr-2.2* >=app-admin/eselect-python-20091230 =dev-lang/python-2*
-=dev-vcs/bzr-2.2* >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+=dev-vcs/bzr-2.2* =dev-lang/python-2*
+=dev-vcs/bzr-2.2* =dev-lang/python-2*
 0
 https://launchpad.net/bzrtools/stable/2.2.0/+download/bzrtools-2.2.0.tar.gz
 test

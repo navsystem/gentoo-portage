@@ -1,4 +1,4 @@
-jpeg2k? ( || ( media-libs/jasper media-libs/openjpeg ) ) netcdf? ( sci-libs/netcdf ) png? ( media-libs/libpng ) python? ( dev-python/numpy ) || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+jpeg2k? ( || ( media-libs/jasper media-libs/openjpeg ) ) netcdf? ( sci-libs/netcdf ) png? ( media-libs/libpng ) python? ( dev-python/numpy ) || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 jpeg2k? ( || ( media-libs/jasper media-libs/openjpeg ) ) netcdf? ( sci-libs/netcdf ) png? ( media-libs/libpng ) python? ( dev-python/numpy )
 0
 http://www.ecmwf.int/products/data/software/download/software_files/grib_api-1.9.9.tar.gz

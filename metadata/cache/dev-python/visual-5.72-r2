@@ -1,5 +1,5 @@
->=dev-cpp/gtkglextmm-1.2 dev-cpp/libglademm >=dev-libs/boost-1.48[python] dev-python/numpy dev-python/polygon:2 dev-python/ttfquery dev-util/pkgconfig >=app-admin/eselect-python-20091230
->=dev-cpp/gtkglextmm-1.2 dev-cpp/libglademm >=dev-libs/boost-1.48[python] dev-python/numpy dev-python/polygon:2 dev-python/ttfquery >=app-admin/eselect-python-20091230
+>=dev-cpp/gtkglextmm-1.2 dev-cpp/libglademm >=dev-libs/boost-1.48[python] dev-python/numpy dev-python/polygon:2 dev-python/ttfquery dev-util/pkgconfig
+>=dev-cpp/gtkglextmm-1.2 dev-cpp/libglademm >=dev-libs/boost-1.48[python] dev-python/numpy dev-python/polygon:2 dev-python/ttfquery
 0
 http://www.vpython.org/contents/download/visual-5.72_release.tar.bz2
 

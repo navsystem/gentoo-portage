@@ -1,5 +1,5 @@
-dev-python/empy dev-python/imaging >=app-admin/eselect-python-20091230 =dev-lang/python-2*
-dev-python/empy dev-python/imaging >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+dev-python/empy dev-python/imaging =dev-lang/python-2*
+dev-python/empy dev-python/imaging =dev-lang/python-2*
 0
 http://www.chrisarndt.de/en/software/pylize/download/pylize-1.3b.tar.bz2
 

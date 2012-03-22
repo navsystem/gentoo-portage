@@ -1,5 +1,5 @@
->=app-admin/eselect-python-20091230 dev-lang/python
->=app-admin/eselect-python-20091230 dev-lang/python
+dev-lang/python
+dev-lang/python
 0
 mirror://pypi/p/pytrailer/pytrailer-0.5.0.tar.gz
 

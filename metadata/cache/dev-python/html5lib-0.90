@@ -1,5 +1,5 @@
-app-arch/unzip dev-python/setuptools >=app-admin/eselect-python-20091230 =dev-lang/python-2* =dev-lang/python-2*[xml]
->=app-admin/eselect-python-20091230 =dev-lang/python-2* =dev-lang/python-2*[xml]
+app-arch/unzip dev-python/setuptools =dev-lang/python-2* =dev-lang/python-2*[xml]
+=dev-lang/python-2* =dev-lang/python-2*[xml]
 0
 http://html5lib.googlecode.com/files/html5lib-0.90.zip
 

@@ -1,5 +1,5 @@
-sci-libs/scipy >=sci-libs/libsvm-2.91 dev-python/cython dev-python/setuptools doc? ( dev-python/sphinx dev-python/matplotlib ) >=app-admin/eselect-python-20091230 =dev-lang/python-2*
-sci-libs/scipy >=sci-libs/libsvm-2.91 sci-libs/scikits dev-python/matplotlib >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+sci-libs/scipy >=sci-libs/libsvm-2.91 dev-python/cython dev-python/setuptools doc? ( dev-python/sphinx dev-python/matplotlib ) =dev-lang/python-2*
+sci-libs/scipy >=sci-libs/libsvm-2.91 sci-libs/scikits dev-python/matplotlib =dev-lang/python-2*
 0
 mirror://sourceforge/scikit-learn/scikit-learn-0.10.tar.gz
 

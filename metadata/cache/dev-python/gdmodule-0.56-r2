@@ -1,5 +1,5 @@
-media-libs/gd[jpeg?,png?,truetype?,xpm?] media-libs/giflib jpeg? ( virtual/jpeg ) png? ( media-libs/libpng ) truetype? ( media-libs/freetype:2 ) xpm? ( x11-libs/libXpm ) >=app-admin/eselect-python-20091230 =dev-lang/python-2*
-media-libs/gd[jpeg?,png?,truetype?,xpm?] media-libs/giflib jpeg? ( virtual/jpeg ) png? ( media-libs/libpng ) truetype? ( media-libs/freetype:2 ) xpm? ( x11-libs/libXpm ) >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+media-libs/gd[jpeg?,png?,truetype?,xpm?] media-libs/giflib jpeg? ( virtual/jpeg ) png? ( media-libs/libpng ) truetype? ( media-libs/freetype:2 ) xpm? ( x11-libs/libXpm ) =dev-lang/python-2*
+media-libs/gd[jpeg?,png?,truetype?,xpm?] media-libs/giflib jpeg? ( virtual/jpeg ) png? ( media-libs/libpng ) truetype? ( media-libs/freetype:2 ) xpm? ( x11-libs/libXpm ) =dev-lang/python-2*
 0
 http://newcenturycomputers.net/projects/download.cgi/gdmodule-0.56.tar.gz
 

@@ -1,5 +1,5 @@
-dev-python/setuptools >=sys-libs/timezone-data-2011e >=app-admin/eselect-python-20091230 dev-lang/python
-dev-python/setuptools >=sys-libs/timezone-data-2011e >=app-admin/eselect-python-20091230 dev-lang/python
+dev-python/setuptools >=sys-libs/timezone-data-2011e dev-lang/python
+dev-python/setuptools >=sys-libs/timezone-data-2011e dev-lang/python
 0
 mirror://pypi/p/pytz/pytz-2011e.tar.bz2
 

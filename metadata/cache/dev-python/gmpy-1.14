@@ -1,5 +1,5 @@
-dev-libs/gmp app-arch/unzip >=app-admin/eselect-python-20091230 dev-lang/python
-dev-libs/gmp >=app-admin/eselect-python-20091230 dev-lang/python
+dev-libs/gmp app-arch/unzip dev-lang/python
+dev-libs/gmp dev-lang/python
 0
 http://gmpy.googlecode.com/files/gmpy-1.14.zip
 

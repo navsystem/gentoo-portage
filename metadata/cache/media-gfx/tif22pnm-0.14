@@ -1,4 +1,4 @@
->=media-libs/libpng-1.2:0 media-libs/tiff:0 || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+>=media-libs/libpng-1.2:0 media-libs/tiff:0 || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 >=media-libs/libpng-1.2:0 media-libs/tiff:0
 0
 http://sam2p.googlecode.com/files/tif22pnm-0.14.tar.gz

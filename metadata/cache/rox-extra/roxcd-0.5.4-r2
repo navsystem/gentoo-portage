@@ -1,5 +1,5 @@
->=app-admin/eselect-python-20091230 =dev-lang/python-2* || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.68 sys-devel/libtool
->=app-admin/eselect-python-20091230 =dev-lang/python-2* >=rox-base/rox-2.1.0 >=rox-base/rox-lib-1.9.14
+=dev-lang/python-2* || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+=dev-lang/python-2* >=rox-base/rox-2.1.0 >=rox-base/rox-lib-1.9.14
 0
 http://www.rdsarts.com/code/roxcd/files/RoxCD-0.5.4.tar.bz2
 

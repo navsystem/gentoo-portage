@@ -1,5 +1,5 @@
-dev-python/setuptools doc? ( dev-python/sphinx ) test? ( dev-python/numpy >=dev-python/traits-4 >=dev-python/traitsui-4 media-fonts/font-cursor-misc media-fonts/font-misc-misc x11-apps/xhost ) >=app-admin/eselect-python-20091230 dev-lang/python test? ( dev-python/nose ) test? ( !prefix? ( x11-base/xorg-server[xvfb] ) x11-apps/xhost )
-dev-python/numpy >=dev-python/traits-4 >=app-admin/eselect-python-20091230 dev-lang/python
+dev-python/setuptools doc? ( dev-python/sphinx ) test? ( dev-python/numpy >=dev-python/traits-4 >=dev-python/traitsui-4 media-fonts/font-cursor-misc media-fonts/font-misc-misc x11-apps/xhost ) dev-lang/python test? ( dev-python/nose ) test? ( !prefix? ( x11-base/xorg-server[xvfb] ) x11-apps/xhost )
+dev-python/numpy >=dev-python/traits-4 dev-lang/python
 0
 http://www.enthought.com/repo/ets/etsdevtools-4.0.0.tar.gz
 
