@@ -6,7 +6,7 @@ http://www.maradns.org/download/1.4/maradns-1.4.12.tar.bz2
 http://www.maradns.org/
 BSD-2
 A security-aware DNS server
-~amd64 ~ppc ~x86
+amd64 ~ppc ~x86
 eutils multilib toolchain-funcs user
 authonly
 

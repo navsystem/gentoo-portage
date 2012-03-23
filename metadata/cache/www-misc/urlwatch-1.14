@@ -1,5 +1,5 @@
-xmpp? ( dev-python/xmpppy ) || ( >=dev-lang/python-3.2 dev-python/futures ) || ( =dev-lang/python-3.2* =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
-xmpp? ( dev-python/xmpppy ) || ( >=dev-lang/python-3.2 dev-python/futures ) || ( =dev-lang/python-3.2* =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
+xmpp? ( dev-python/xmpppy ) dev-python/futures || ( =dev-lang/python-3.2* =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
+xmpp? ( dev-python/xmpppy ) dev-python/futures || ( =dev-lang/python-3.2* =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
 0
 mirror://pypi/u/urlwatch/urlwatch-1.14.tar.gz
 

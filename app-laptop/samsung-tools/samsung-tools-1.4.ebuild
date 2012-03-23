@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/samsung-tools/samsung-tools-1.4.ebuild,v 1.1 2011/06/22 08:56:13 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/samsung-tools/samsung-tools-1.4.ebuild,v 1.2 2012/03/23 19:59:35 angelos Exp $
 
 EAPI=3
 PYTHON_DEPEND=2
