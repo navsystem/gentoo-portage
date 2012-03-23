@@ -1,0 +1,22 @@
+test? ( ruby_targets_ruby18? ( >=dev-ruby/activemodel-3.1[ruby_targets_ruby18] >=dev-ruby/mongo-1.6[ruby_targets_ruby18] >=dev-ruby/tzinfo-0.3.22[ruby_targets_ruby18] ) ) ruby_targets_ruby18? ( test? ( dev-ruby/ammeter[ruby_targets_ruby18] dev-ruby/mocha[ruby_targets_ruby18] dev-ruby/rdoc[ruby_targets_ruby18] dev-ruby/rspec[ruby_targets_ruby18] dev-util/watchr[ruby_targets_ruby18] ) ) test? ( dev-db/mongodb ) ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby18? ( doc? ( dev-ruby/rake[ruby_targets_ruby18] ) ) ruby_targets_ruby18? ( test? ( dev-ruby/rake[ruby_targets_ruby18] ) ) ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) test? ( ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) )
+ruby_targets_ruby18? ( >=dev-ruby/activemodel-3.1[ruby_targets_ruby18] >=dev-ruby/mongo-1.6[ruby_targets_ruby18] >=dev-ruby/tzinfo-0.3.22[ruby_targets_ruby18] ) ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] )
+0
+https://github.com/mongoid/mongoid/tarball/v2.4.7 -> mongoid-2.4.7.tar.gz
+
+http://mongoid.org/
+MIT
+ODM (Object Document Mapper) Framework for MongoDB
+~amd64
+eutils java-utils-2 multilib ruby-fakegem ruby-ng toolchain-funcs user versionator
+test elibc_FreeBSD ruby_targets_ruby18 doc test test
+|| ( ruby_targets_ruby18 )
+
+
+4
+
+compile configure install prepare setup test unpack
+
+
+
+
+

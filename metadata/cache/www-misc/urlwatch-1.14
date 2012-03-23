@@ -1,0 +1,22 @@
+xmpp? ( dev-python/xmpppy ) || ( >=dev-lang/python-3.2 dev-python/futures ) || ( =dev-lang/python-3.2* =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
+xmpp? ( dev-python/xmpppy ) || ( >=dev-lang/python-3.2 dev-python/futures ) || ( =dev-lang/python-3.2* =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
+0
+mirror://pypi/u/urlwatch/urlwatch-1.14.tar.gz
+
+http://thp.io/2008/urlwatch/ http://pypi.python.org/pypi/urlwatch
+BSD
+A tool for monitoring webpages for updates
+~amd64 ~x86
+distutils eutils multilib python toolchain-funcs user
+xmpp
+
+
+
+4
+
+compile install postinst postrm prepare setup
+
+
+
+
+

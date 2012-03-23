@@ -6,7 +6,7 @@ https://github.com/speleo3/pymol-psico/tarball/3.0 -> pymol-plugins-psico-3.0.ta
 https://github.com/speleo3/pymol-psico/
 BSD-2
 Pymol ScrIpt COllection
-
+~amd64 ~x86 ~amd64-linux ~x86-linux
 distutils multilib python toolchain-funcs vcs-snapshot
 minimal
 

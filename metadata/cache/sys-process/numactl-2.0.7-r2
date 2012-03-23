@@ -8,13 +8,13 @@ GPL-2
 Utilities and libraries for NUMA systems
 ~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux
 eutils multilib toolchain-funcs user
-perl
+perl static-libs
 
 
 
-3
+4
 
-compile install test
+compile install prepare test
 
 
 
