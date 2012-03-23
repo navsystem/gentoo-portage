@@ -1,4 +1,4 @@
-dii? ( media-gfx/imagemagick[png] ) virtual/libiconv dii? ( media-libs/gd[png] ) python? ( >=dev-libs/boost-1.48[python] ) || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool python? ( =dev-lang/python-2* )
+dii? ( media-gfx/imagemagick[png] ) virtual/libiconv dii? ( media-libs/gd[png] ) python? ( >=dev-libs/boost-1.48[python] ) || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool python? ( =dev-lang/python-2* )
 dii? ( media-gfx/imagemagick[png] ) python? ( =dev-lang/python-2* )
 0
 http://www.five-ten-sg.com/libpst/packages/libpst-0.6.54.tar.gz

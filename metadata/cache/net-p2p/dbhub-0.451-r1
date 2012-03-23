@@ -1,4 +1,4 @@
-perl? ( dev-lang/perl ) switch_user? ( sys-libs/libcap ) || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+perl? ( dev-lang/perl ) switch_user? ( sys-libs/libcap ) || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 perl? ( dev-lang/perl ) switch_user? ( sys-libs/libcap )
 0
 mirror://sourceforge/dbhub/dbhub-0.451.tbz2

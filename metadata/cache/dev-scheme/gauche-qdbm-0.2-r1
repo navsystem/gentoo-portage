@@ -1,4 +1,4 @@
-dev-scheme/gauche dev-db/qdbm || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+dev-scheme/gauche dev-db/qdbm || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 dev-scheme/gauche dev-db/qdbm
 0
 mirror://sourceforge.jp/gauche/6988/Gauche-qdbm-0.2.tar.gz

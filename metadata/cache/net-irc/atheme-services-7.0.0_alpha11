@@ -1,4 +1,4 @@
-dev-libs/libmowgli:2 cracklib? ( sys-libs/cracklib ) ldap? ( net-nds/openldap ) nls? ( sys-devel/gettext ) perl? ( dev-lang/perl ) pcre? ( dev-libs/libpcre ) ssl? ( dev-libs/openssl ) dev-util/pkgconfig || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool dev-lang/perl[-build]
+dev-libs/libmowgli:2 cracklib? ( sys-libs/cracklib ) ldap? ( net-nds/openldap ) nls? ( sys-devel/gettext ) perl? ( dev-lang/perl ) pcre? ( dev-libs/libpcre ) ssl? ( dev-libs/openssl ) dev-util/pkgconfig || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool dev-lang/perl[-build]
 dev-libs/libmowgli:2 cracklib? ( sys-libs/cracklib ) ldap? ( net-nds/openldap ) nls? ( sys-devel/gettext ) perl? ( dev-lang/perl ) pcre? ( dev-libs/libpcre ) ssl? ( dev-libs/openssl ) dev-lang/perl[-build]
 0
 http://atheme.net/downloads/atheme-services-7.0.0-alpha11.tar.bz2

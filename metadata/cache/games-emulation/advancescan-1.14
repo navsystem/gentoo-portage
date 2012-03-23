@@ -1,4 +1,4 @@
-dev-libs/expat || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+dev-libs/expat || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 dev-libs/expat
 0
 mirror://sourceforge/advancemame/advancescan-1.14.tar.gz

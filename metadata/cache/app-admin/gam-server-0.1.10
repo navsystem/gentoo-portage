@@ -1,4 +1,4 @@
->=dev-libs/glib-2:2 >=dev-libs/libgamin-0.1.10 !app-admin/fam !<app-admin/gamin-0.1.10 || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+>=dev-libs/glib-2:2 >=dev-libs/libgamin-0.1.10 !app-admin/fam !<app-admin/gamin-0.1.10 || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 >=dev-libs/glib-2:2 >=dev-libs/libgamin-0.1.10 !app-admin/fam !<app-admin/gamin-0.1.10
 0
 mirror://gnome/sources/gamin/0.1/gamin-0.1.10.tar.bz2 mirror://gentoo/gamin-0.1.9-freebsd.patch.bz2 http://pkgconfig.freedesktop.org/releases/pkg-config-0.26.tar.gz

@@ -6,7 +6,7 @@ http://violating.us/projects/bigeye/download/bigeye-0.3.tgz mirror://gentoo/bige
 http://violating.us/projects/bigeye/
 GPL-2
 network utility dump and simple honeypot utility
-~amd64 ~ppc ~x86
+~amd64 ~ppc x86
 eutils multilib toolchain-funcs user
 
 

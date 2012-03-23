@@ -1,4 +1,4 @@
-x11-libs/gtk+:2 >=sys-apps/lm_sensors-3 dev-util/pkgconfig || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+x11-libs/gtk+:2 >=sys-apps/lm_sensors-3 dev-util/pkgconfig || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 x11-libs/gtk+:2 >=sys-apps/lm_sensors-3
 0
 http://www.linuxhardware.org/xsensors/xsensors-0.70.tar.gz

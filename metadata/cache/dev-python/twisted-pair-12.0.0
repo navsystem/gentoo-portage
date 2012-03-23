@@ -1,0 +1,22 @@
+=dev-python/twisted-12.0* dev-python/eunuchs =dev-lang/python-2*
+=dev-python/twisted-12.0* dev-python/eunuchs =dev-lang/python-2*
+0
+http://twistedmatrix.com/Releases/Pair/12.0/TwistedPair-12.0.0.tar.bz2
+
+http://www.twistedmatrix.com/
+MIT
+Twisted low-level networking
+~amd64 ~x86
+distutils eutils multilib python toolchain-funcs twisted user versionator
+
+
+
+
+4
+
+compile install postinst postrm prepare setup test
+
+
+
+
+

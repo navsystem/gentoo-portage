@@ -1,4 +1,4 @@
-ssl? ( dev-libs/openssl ) selinux? ( sec-policy/selinux-ntp ) !<=net-misc/ntp-4.2.0-r2 !net-misc/ntp[-openntpd] || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+ssl? ( dev-libs/openssl ) selinux? ( sec-policy/selinux-ntp ) !<=net-misc/ntp-4.2.0-r2 !net-misc/ntp[-openntpd] || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 ssl? ( dev-libs/openssl ) selinux? ( sec-policy/selinux-ntp ) !<=net-misc/ntp-4.2.0-r2 !net-misc/ntp[-openntpd]
 0
 mirror://openbsd/OpenNTPD/openntpd-3.9p1.tar.gz mirror://debian/pool/main/o/openntpd/openntpd_3.9p1+debian-8.debian.tar.gz

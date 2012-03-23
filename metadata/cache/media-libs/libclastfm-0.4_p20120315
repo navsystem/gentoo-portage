@@ -1,4 +1,4 @@
-net-misc/curl dev-util/pkgconfig || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+net-misc/curl dev-util/pkgconfig || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 net-misc/curl
 0
 http://dev.gentoo.org/~ssuominen/libclastfm-0.4_p20120315.tar.xz

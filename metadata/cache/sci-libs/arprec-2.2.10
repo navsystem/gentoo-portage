@@ -1,4 +1,4 @@
-fortran? ( virtual/fortran ) qd? ( sci-libs/qd[fortran=] ) || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+fortran? ( virtual/fortran ) qd? ( sci-libs/qd[fortran=] ) || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 fortran? ( virtual/fortran ) qd? ( sci-libs/qd[fortran=] )
 0
 http://crd.lbl.gov/~dhbailey/mpdist/arprec-2.2.10.tar.gz

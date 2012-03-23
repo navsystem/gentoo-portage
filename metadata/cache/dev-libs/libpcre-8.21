@@ -1,4 +1,4 @@
-bzip2? ( app-arch/bzip2 ) zlib? ( sys-libs/zlib ) readline? ( sys-libs/readline ) dev-util/pkgconfig userland_GNU? ( >=sys-apps/findutils-4.4.0 ) || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+bzip2? ( app-arch/bzip2 ) zlib? ( sys-libs/zlib ) readline? ( sys-libs/readline ) dev-util/pkgconfig userland_GNU? ( >=sys-apps/findutils-4.4.0 ) || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 bzip2? ( app-arch/bzip2 ) zlib? ( sys-libs/zlib ) readline? ( sys-libs/readline )
 3
 mirror://sourceforge/pcre/pcre-8.21.tar.bz2 ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.21.tar.bz2

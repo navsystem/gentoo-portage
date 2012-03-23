@@ -1,4 +1,4 @@
-!!media-gfx/hugin || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+!!media-gfx/hugin || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 !!media-gfx/hugin
 0
 mirror://sourceforge/cocom/cocom-0.996.tar.gz

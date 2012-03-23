@@ -1,4 +1,4 @@
-dev-libs/libgcrypt dev-libs/boost sys-apps/groff test? ( app-arch/sharutils ) || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+dev-libs/libgcrypt dev-libs/boost sys-apps/groff test? ( app-arch/sharutils ) || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 dev-libs/libgcrypt
 0
 mirror://sourceforge/srecord/srecord-1.58.tar.gz

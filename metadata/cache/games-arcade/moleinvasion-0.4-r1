@@ -1,5 +1,5 @@
-media-libs/libsdl media-libs/sdl-image[jpeg,png] media-libs/sdl-mixer[vorbis] media-libs/sdl-ttf
-media-libs/libsdl media-libs/sdl-image[jpeg,png] media-libs/sdl-mixer[vorbis] media-libs/sdl-ttf
+media-libs/libsdl[opengl,video] virtual/opengl media-libs/sdl-image[jpeg,png] media-libs/sdl-mixer[vorbis] media-libs/sdl-ttf
+media-libs/libsdl[opengl,video] virtual/opengl media-libs/sdl-image[jpeg,png] media-libs/sdl-mixer[vorbis] media-libs/sdl-ttf
 0
 ftp://download.tuxfamily.org/minvasion/packages/MoleInvasion-0.4.tar.bz2 music? ( mirror://gentoo/moleinvasion-music-20090731.tar.gz )
 

@@ -1,4 +1,4 @@
->=x11-libs/gtk+-3:3 >=gnome-base/libglade-2.3 dev-libs/popt password? ( dev-libs/openssl ) fam? ( virtual/fam ) gnome? ( >=gnome-base/gnome-panel-3.0 ) x11-proto/xproto x11-libs/libX11 x11-libs/pango x11-libs/gdk-pixbuf dev-util/pkgconfig || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+>=x11-libs/gtk+-3:3 >=gnome-base/libglade-2.3 dev-libs/popt password? ( dev-libs/openssl ) fam? ( virtual/fam ) gnome? ( >=gnome-base/gnome-panel-3.0 ) x11-proto/xproto x11-libs/libX11 x11-libs/pango x11-libs/gdk-pixbuf dev-util/pkgconfig || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 >=x11-libs/gtk+-3:3 >=gnome-base/libglade-2.3 dev-libs/popt password? ( dev-libs/openssl ) fam? ( virtual/fam ) gnome? ( >=gnome-base/gnome-panel-3.0 ) x11-proto/xproto x11-libs/libX11 x11-libs/pango x11-libs/gdk-pixbuf
 0
 mirror://sourceforge/gnubiff/gnubiff-2.2.15.tar.gz

@@ -1,0 +1,22 @@
+=dev-lang/python-2*
+dev-python/numpy sci-biology/biopython sci-chemistry/mmtk !minimal? ( media-libs/qhull media-video/mplayer sci-biology/stride sci-chemistry/dssp sci-chemistry/mm-align sci-chemistry/pdbmat sci-chemistry/theseus sci-chemistry/tm-align sci-mathematics/diagrtb ) =dev-lang/python-2*
+0
+https://github.com/speleo3/pymol-psico/tarball/3.0 -> pymol-plugins-psico-3.0.tar.gz
+
+https://github.com/speleo3/pymol-psico/
+BSD-2
+Pymol ScrIpt COllection
+
+distutils multilib python toolchain-funcs vcs-snapshot
+minimal
+
+
+
+4
+
+compile install postinst postrm prepare setup unpack
+
+
+
+
+

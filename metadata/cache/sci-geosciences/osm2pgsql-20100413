@@ -1,4 +1,4 @@
-app-arch/bzip2 dev-libs/libxml2:2 sci-libs/geos sci-libs/proj sys-libs/zlib dev-db/postgresql-base || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+app-arch/bzip2 dev-libs/libxml2:2 sci-libs/geos sci-libs/proj sys-libs/zlib dev-db/postgresql-base || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 app-arch/bzip2 dev-libs/libxml2:2 sci-libs/geos sci-libs/proj sys-libs/zlib dev-db/postgresql-base
 0
 http://gentoo.ccss.cz/osm2pgsql-20100413svn.tar.bz2

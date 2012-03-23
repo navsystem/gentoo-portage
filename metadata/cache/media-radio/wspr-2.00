@@ -1,4 +1,4 @@
-dev-python/imaging[tk] dev-python/numpy dev-python/pmw sci-libs/fftw:3.0 media-libs/hamlib media-libs/portaudio media-libs/libsamplerate virtual/fortran || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool =dev-lang/python-2* =dev-lang/python-2*[tk]
+dev-python/imaging[tk] dev-python/numpy dev-python/pmw sci-libs/fftw:3.0 media-libs/hamlib media-libs/portaudio media-libs/libsamplerate virtual/fortran || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool =dev-lang/python-2* =dev-lang/python-2*[tk]
 dev-python/imaging[tk] dev-python/numpy dev-python/pmw sci-libs/fftw:3.0 media-libs/hamlib media-libs/portaudio media-libs/libsamplerate virtual/fortran =dev-lang/python-2* =dev-lang/python-2*[tk]
 0
 http://www.physics.princeton.edu/pulsar/K1JT/wspr-2.00.r1714.tgz

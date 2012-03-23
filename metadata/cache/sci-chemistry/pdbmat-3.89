@@ -1,0 +1,22 @@
+>=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+
+0
+http://ecole.modelisation.free.fr/enm2011.tar.gz -> pdbmat-3.89.tar.gz
+
+http://ecole.modelisation.free.fr/modes.html
+as-is
+Calculate Tirion's model from pdb structures
+~amd64 ~x86 ~amd64-linux ~x86-linux
+base cmake-utils eutils flag-o-matic fortran-2 multilib toolchain-funcs user
+examples
+
+
+
+4
+
+compile configure install prepare setup test unpack
+
+
+
+
+

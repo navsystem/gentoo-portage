@@ -1,4 +1,4 @@
-virtual/fortran dev-python/numpy sci-chemistry/openbabel opal? ( dev-python/zsi ) || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
+virtual/fortran dev-python/numpy sci-chemistry/openbabel opal? ( dev-python/zsi ) || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
 virtual/fortran dev-python/numpy sci-chemistry/openbabel opal? ( dev-python/zsi ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
 0
 mirror://sourceforge/pdb2pqr/pdb2pqr-1.5.tar.gz

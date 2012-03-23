@@ -1,4 +1,4 @@
-fortran? ( dev-lang/cfortran ) || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+fortran? ( dev-lang/cfortran ) || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 
 0
 ftp://heasarc.gsfc.nasa.gov/software/fitsio/c/cfitsio3140.tar.gz

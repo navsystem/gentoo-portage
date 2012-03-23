@@ -1,4 +1,4 @@
-net-fs/samba sys-libs/ncurses dev-libs/popt nls? ( sys-devel/gettext ) || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+net-fs/samba sys-libs/ncurses dev-libs/popt nls? ( sys-devel/gettext ) || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 net-fs/samba sys-libs/ncurses dev-libs/popt nls? ( sys-devel/gettext )
 0
 mirror://sourceforge/smbc/smbc-1.2.2.tgz
