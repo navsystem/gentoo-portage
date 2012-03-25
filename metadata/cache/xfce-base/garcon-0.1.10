@@ -1,5 +1,5 @@
->=dev-libs/glib-2.14 >=xfce-base/libxfce4util-4.8 dev-util/intltool dev-util/pkgconfig sys-devel/gettext >=sys-apps/sed-4
->=dev-libs/glib-2.14 >=xfce-base/libxfce4util-4.8
+>=dev-libs/glib-2.14:2 >=xfce-base/libxfce4util-4.8 dev-util/intltool dev-util/pkgconfig sys-devel/gettext >=sys-apps/sed-4
+>=dev-libs/glib-2.14:2 >=xfce-base/libxfce4util-4.8
 0
 mirror://xfce/src/libs/garcon/0.1/garcon-0.1.10.tar.bz2
 

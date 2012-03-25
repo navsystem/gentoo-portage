@@ -12,9 +12,9 @@ distutils eutils multilib python toolchain-funcs twisted user versionator
 
 
 
-3
+4
 
-compile install postinst postrm prepare test
+compile install postinst postrm prepare setup test
 
 
 

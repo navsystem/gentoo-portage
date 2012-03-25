@@ -6,7 +6,7 @@ app-admin/eselect-opencl || ( video_cards_fglrx? ( >=x11-drivers/ati-drivers-12.
 
 
 Virtual for OpenCL implementations
-~amd64 ~x86
+amd64 ~x86
 
 video_cards_fglrx video_cards_nvidia
 
