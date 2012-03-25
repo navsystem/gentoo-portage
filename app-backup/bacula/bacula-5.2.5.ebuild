@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/bacula/bacula-5.2.5.ebuild,v 1.3 2012/03/13 13:22:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/bacula/bacula-5.2.5.ebuild,v 1.5 2012/03/23 15:05:35 tomjbe Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
 PYTHON_USE_WITH="threads"
 PYTHON_USE_WITH_OPT="python"
 
-inherit eutils multilib python
+inherit eutils multilib python qt4-r2
 
 MY_PV=${PV/_beta/-b}
 MY_P=${PN}-${MY_PV}
@@ -184,6 +184,13 @@ src_configure() {
 		--enable-smartalloc \
 		--host=${CHOST} \
 		${myconf}
+
+	# correct configuration for QT based bat
+	if use qt4 ; then
+		pushd src/qt-console
+		eqmake4
+		popd
+	fi
 }
 
 src_install() {

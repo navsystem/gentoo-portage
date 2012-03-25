@@ -12,9 +12,9 @@ A tool to query or alter a process' scheduling policy.
 
 
 
+4
 
-
-compile install unpack
+install prepare
 
 
 

@@ -7,14 +7,14 @@ https://github.com/twall/jna#readme
 LGPL-2.1
 Java Native Access (JNA)
 ~amd64 ~ppc ~x86
-eutils flag-o-matic java-ant-2 java-pkg-2 java-utils-2 multilib toolchain-funcs user versionator
+eutils flag-o-matic java-ant-2 java-pkg-2 java-utils-2 multilib toolchain-funcs user vcs-snapshot versionator
 +awt +nio-buffers elibc_FreeBSD test doc source elibc_FreeBSD
-
+test? ( awt nio-buffers )
 
 
 4
 
-compile configure install preinst prepare setup test
+compile configure install preinst prepare setup test unpack
 
 
 

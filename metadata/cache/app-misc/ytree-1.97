@@ -6,7 +6,7 @@ http://www.han.de/~werner/ytree-1.97.tar.gz
 http://www.han.de/~werner/ytree.html
 GPL-2
 A (curses-based) file manager
-x86
+~amd64 x86
 eutils multilib toolchain-funcs user
 
 
