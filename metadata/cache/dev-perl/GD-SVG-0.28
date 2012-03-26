@@ -6,7 +6,7 @@ mirror://cpan/authors/id/T/TW/TWH/GD-SVG-0.28.tar.gz
 http://search.cpan.org/~twh/GD-SVG-0.28/
 Artistic
 Seamlessly enable SVG output from scripts written using GD
-alpha amd64 ia64 ~ppc sparc x86
+alpha amd64 ~ppc x86
 base eutils multilib perl-module toolchain-funcs user
 
 

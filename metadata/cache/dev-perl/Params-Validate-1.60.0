@@ -6,7 +6,7 @@ mirror://cpan/authors/id/D/DR/DROLSKY/Params-Validate-1.06.tar.gz
 http://search.cpan.org/dist/Params-Validate/
 Artistic-2
 A module to provide a flexible system for validation method/function call parameters
-~amd64 ~arm ~hppa ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris
+~amd64 ~arm ~hppa ~ppc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris
 base eutils multilib perl-module toolchain-funcs user
 test
 

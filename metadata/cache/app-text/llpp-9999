@@ -1,5 +1,5 @@
-=app-text/mupdf-9999 dev-ml/lablgl[glut] dev-lang/ocaml[ocamlopt] media-libs/jbig2dec media-libs/openjpeg x11-misc/xsel dev-vcs/git
-=app-text/mupdf-9999 dev-ml/lablgl[glut] dev-lang/ocaml[ocamlopt] media-libs/jbig2dec media-libs/openjpeg x11-misc/xsel
+media-libs/freetype media-libs/jbig2dec media-libs/openjpeg virtual/jpeg x11-libs/libX11 x11-misc/xsel =app-text/mupdf-9999 dev-lang/ocaml[ocamlopt] dev-ml/lablgl[glut] dev-vcs/git
+media-libs/freetype media-libs/jbig2dec media-libs/openjpeg virtual/jpeg x11-libs/libX11 x11-misc/xsel
 0
 
 
@@ -12,9 +12,9 @@ eutils git-2 multilib toolchain-funcs user
 
 
 
-3
+4
 
-compile install prepare unpack
+compile install unpack
 
 
 

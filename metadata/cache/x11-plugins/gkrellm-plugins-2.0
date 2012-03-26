@@ -6,7 +6,7 @@
 http://www.gkrellm.net/
 GPL-2
 emerge this package to install all of the gkrellm plugins
-~ppc sparc ~x86
+~ppc ~x86
 
 wifi
 

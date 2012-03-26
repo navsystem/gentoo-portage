@@ -6,7 +6,7 @@ mirror://sourceforge/qterm/qterm-0.5.12.tar.bz2
 http://www.qterm.org/
 GPL-2
 A BBS client for Linux
-amd64 ~ppc x86
+amd64 ppc x86
 base cmake-utils eutils flag-o-matic multilib toolchain-funcs user
 
 

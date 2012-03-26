@@ -6,7 +6,7 @@ mirror://cpan/authors/id/A/AM/AMBS/XML/XML-DT-0.56.tar.gz
 http://search.cpan.org/dist/XML-DT/
 || ( Artistic GPL-1 GPL-2 GPL-3 )
 A perl XML down translate module
-~alpha amd64 hppa ~ia64 ppc ~sparc x86
+alpha amd64 hppa ppc x86
 base eutils multilib perl-module toolchain-funcs user
 test
 

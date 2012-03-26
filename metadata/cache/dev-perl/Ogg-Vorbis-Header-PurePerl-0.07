@@ -6,7 +6,7 @@ mirror://cpan/authors/id/A/AM/AMOLLOY/Ogg-Vorbis-Header-PurePerl-0.07.tar.gz
 http://search.cpan.org/~amolloy/
 Artistic
 An object-oriented interface to Ogg Vorbis information and comment fields, implemented entirely in Perl. Intended to be a drop in replacement for Ogg::Vobis::Header.
-amd64 ia64 ~ppc ~ppc64 sparc x86
+amd64 ~ppc ~ppc64 x86
 base eutils multilib perl-module toolchain-funcs user
 
 

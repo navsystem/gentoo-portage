@@ -6,7 +6,7 @@ mirror://cpan/authors/id/R/RU/RUZ/Module-Versions-Report-1.03.tar.gz
 http://search.cpan.org/~ruz/
 || ( Artistic GPL-2 )
 Report versions of all modules in memory
-amd64 ia64 ~ppc sparc x86
+amd64 ~ppc x86
 base eutils multilib perl-module toolchain-funcs user
 
 
