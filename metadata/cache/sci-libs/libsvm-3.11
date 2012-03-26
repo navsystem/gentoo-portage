@@ -5,7 +5,7 @@ http://www.csie.ntu.edu.tw/~cjlin/libsvm/libsvm-3.11.tar.gz
 
 http://www.csie.ntu.edu.tw/~cjlin/libsvm/
 BSD
-Library for Support Vector Mahcines
+Library for Support Vector Machines
 ~amd64 ~ppc ~ppc64 ~x86
 eutils flag-o-matic java-pkg-opt-2 java-utils-2 multilib python toolchain-funcs user versionator
 java openmp python tools elibc_FreeBSD java

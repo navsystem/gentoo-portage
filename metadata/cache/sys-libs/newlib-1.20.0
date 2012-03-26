@@ -12,9 +12,9 @@ nls threads unicode crosscompile_opts_headers-only
 
 
 
+4
 
-
-compile install setup unpack
+compile configure install prepare setup
 
 
 

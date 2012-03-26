@@ -1,0 +1,22 @@
+~sci-mathematics/agda-2.3.0 >=dev-haskell/cabal-1.8 >=dev-lang/ghc-6.8.2 >=dev-haskell/cabal-1.1.4
+
+0
+http://hackage.haskell.org/packages/archive/Agda-executable/2.3.0/Agda-executable-2.3.0.tar.gz
+
+http://wiki.portal.chalmers.se/agda/
+MIT
+Command-line program for type-checking and compiling Agda programs
+~amd64 ~x86
+eutils ghc-package haskell-cabal multilib toolchain-funcs user versionator
+
+
+
+
+3
+
+compile configure install postinst prepare prerm setup test
+
+
+
+
+

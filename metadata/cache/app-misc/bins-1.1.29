@@ -6,7 +6,7 @@ http://zubro.chez.tiscali.fr/BINS/bins-1.1.29.tar.gz
 http://bins.sautret.org/
 GPL-2
 Static HTML photo album generator
-alpha amd64 ppc sparc x86
+amd64 ppc x86
 eutils multilib toolchain-funcs user
 
 

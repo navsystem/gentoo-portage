@@ -6,7 +6,7 @@ mirror://cpan/authors/id/A/AU/AUDREYT/Unicode-EastAsianWidth-1.30.tar.gz
 http://search.cpan.org/dist/Unicode-EastAsianWidth/
 MIT
 East Asian Width properties
-~amd64 ~hppa ~x86
+~amd64 ~hppa ~x86 ~x64-freebsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris
 base eutils multilib perl-module toolchain-funcs user
 
 

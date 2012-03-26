@@ -6,7 +6,7 @@ mirror://cpan/authors/id/A/AD/ADAMK/Pod-Tests-0.18.tar.gz
 http://search.cpan.org/search?module=Pod-Tests
 Artistic
 Extracts embedded tests and code examples from POD
-alpha amd64 hppa ia64 ppc sparc x86
+alpha amd64 hppa ppc x86
 base eutils multilib perl-module toolchain-funcs user
 
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-9999.ebuild,v 1.9 2012/03/05 04:10:47 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-9999.ebuild,v 1.11 2012/03/25 23:06:19 xmw Exp $
 
 EAPI=4
 
@@ -30,8 +30,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.8.165-buildsystem.patch
 
 	if ! use vanilla ; then
-		epatch "${FILESDIR}"/${PN}-9999-zoom.patch
-		epatch "${FILESDIR}"/${PN}-9999-scroll.patch
+		epatch "${FILESDIR}"/${PN}-9999-zoom-1.patch
 	fi
 }
 
@@ -45,6 +44,11 @@ src_compile() {
 src_install() {
 	emake prefix="${D}usr" LIBDIR="${D}usr/$(get_libdir)" \
 		build=debug verbose=true ${my_nox11} install || die
+
+	insinto /usr/include
+	doins pdf/mupdf{,-internal}.h || die
+	doins fitz/fitz{,-internal}.h || die
+	doins xps/muxps{,-internal}.h || die
 
 	insinto /usr/$(get_libdir)/pkgconfig
 	doins debian/mupdf.pc

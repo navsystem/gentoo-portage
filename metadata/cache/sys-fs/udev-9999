@@ -14,7 +14,7 @@ build selinux debug +rule_generator hwdb gudev introspection keymap floppy doc s
 
 4
 
-configure install postinst prepare setup unpack
+configure install postinst preinst prepare setup unpack
 
 
 

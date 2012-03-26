@@ -1,0 +1,22 @@
+media-libs/freetype media-libs/jbig2dec media-libs/openjpeg virtual/jpeg x11-libs/libX11 x11-misc/xsel =app-text/mupdf-0.9_p20120221 dev-lang/ocaml[ocamlopt] dev-ml/lablgl[glut]
+media-libs/freetype media-libs/jbig2dec media-libs/openjpeg virtual/jpeg x11-libs/libX11 x11-misc/xsel
+0
+http://repo.or.cz/w/llpp.git/snapshot/c51fadb15f683d7e5c0350e25a22aacb91e88b2a.tar.gz -> llpp-11.tar.gz
+
+http://repo.or.cz/w/llpp.git
+GPL-3
+a graphical PDF viewer which aims to superficially resemble less(1)
+~amd64 ~x86
+eutils multilib toolchain-funcs user
+
+
+
+
+4
+
+compile install prepare
+
+
+
+
+

@@ -6,7 +6,7 @@ mirror://sourceforge/htmlobject/html_object-2.15.tar.gz
 http://htmlobject.sourceforge.net
 Artistic
 A HTML development and delivery Perl Module
-alpha amd64 ia64 ppc ppc64 sparc x86
+amd64 ppc ppc64 x86
 base eutils multilib perl-module toolchain-funcs user
 
 
