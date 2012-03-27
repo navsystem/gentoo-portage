@@ -1,5 +1,5 @@
-gtk? ( dev-python/pywebkitgtk ) qt4? ( x11-libs/qt-webkit:4 ) sys-devel/gettext >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) dev-vcs/git gtk? ( =dev-lang/python-2* )
-gtk? ( dev-python/pywebkitgtk ) qt4? ( x11-libs/qt-webkit:4 ) gtk? ( =dev-lang/python-2* )
+gtk? ( dev-python/pywebkitgtk ) qt4? ( x11-libs/qt-webkit:4 kde? ( kde-base/kdelibs ) ) sys-devel/gettext >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) dev-vcs/git gtk? ( =dev-lang/python-2* )
+gtk? ( dev-python/pywebkitgtk ) qt4? ( x11-libs/qt-webkit:4 kde? ( kde-base/kdelibs ) ) gtk? ( =dev-lang/python-2* )
 0
 
 
@@ -14,7 +14,7 @@ chrome gtk kde qt4
 
 4
 
-compile configure install prepare setup test unpack
+compile configure install postinst prepare setup test unpack
 
 
 
