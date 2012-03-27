@@ -19,7 +19,7 @@ sys-block/megacli amd64
 
 ~media-sound/deadbeef-0.5.1 amd64
 ~app-portage/smart-live-rebuild-1.2.1 amd64
-~kde-misc/customizable-weather-1.5.11 amd64
+~kde-misc/customizable-weather-1.5.13 amd64
 
 ~app-emulation/wine-1.4 amd64
 
