@@ -6,7 +6,7 @@ http://www.gajim.org/downloads/0.15/gajim-0.15.tar.bz2
 http://www.gajim.org/
 GPL-3
 Jabber client written in PyGTK
-~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86
+~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
 eutils multilib python toolchain-funcs user versionator
 avahi crypt dbus gmail gnome kde idle jingle libnotify networkmanager nls spell srv X xhtml
 libnotify? ( dbus ) avahi? ( dbus )

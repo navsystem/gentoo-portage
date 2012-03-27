@@ -1,5 +1,5 @@
-dev-python/setuptools =dev-lang/python-2*
-=dev-lang/python-2*
+dev-python/setuptools python_targets_python2_5? ( dev-lang/python:2_5 ) python_targets_python2_6? ( dev-lang/python:2_6 ) python_targets_python2_7? ( dev-lang/python:2_7 ) python_targets_pypy1_7? ( dv-python/pypy:1_7 ) python_targets_pypy1_8? ( dv-python/pypy:1_8 )
+python_targets_python2_5? ( dev-lang/python:2_5 ) python_targets_python2_6? ( dev-lang/python:2_6 ) python_targets_python2_7? ( dev-lang/python:2_7 ) python_targets_pypy1_7? ( dv-python/pypy:1_7 ) python_targets_pypy1_8? ( dv-python/pypy:1_8 )
 0
 http://python-gflags.googlecode.com/files/python-gflags-2.0.tar.gz
 
@@ -7,14 +7,14 @@ http://code.google.com/p/python-gflags/
 BSD
 Google's Python argument parsing library.
 ~amd64 ~x86
-distutils multilib python toolchain-funcs
+python-distutils-ng
+python_targets_python2_5 python_targets_python2_6 python_targets_python2_7 python_targets_pypy1_7 python_targets_pypy1_8
+|| ( python_targets_python2_5 python_targets_python2_6 python_targets_python2_7 python_targets_pypy1_7 python_targets_pypy1_8 )
 
 
+4
 
-
-3
-
-compile install postinst postrm prepare
+compile configure install prepare test
 
 
 

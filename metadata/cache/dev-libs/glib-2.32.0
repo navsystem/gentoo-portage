@@ -10,7 +10,7 @@ The GLib library of C routines
 autotools eutils flag-o-matic gnome.org gnome2-utils libtool multilib pax-utils python toolchain-funcs user versionator virtualx
 debug doc fam selinux static-libs systemtap test utils xattr test
 
-!<gnome-base/gvfs-1.6.4-r990
+x11-misc/shared-mime-info !<gnome-base/gvfs-1.6.4-r990
 
 4
 
