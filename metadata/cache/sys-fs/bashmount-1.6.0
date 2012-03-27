@@ -1,5 +1,5 @@
 
-app-shells/bash sys-apps/dbus sys-fs/udisks
+app-shells/bash sys-apps/dbus sys-fs/udisks:0
 0
 mirror://sourceforge/bashmount/bashmount-1.6.0.tar.gz
 

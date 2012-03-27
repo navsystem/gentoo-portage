@@ -10,7 +10,7 @@ alpha amd64 ppc x86
 eutils fdo-mime gnome.org gnome2 gnome2-utils libtool multilib toolchain-funcs user versionator
 +dbus hddtemp libnotify lm_sensors video_cards_fglrx video_cards_nvidia
 
-hddtemp? ( dbus? ( sys-fs/udisks ) )
+hddtemp? ( dbus? ( sys-fs/udisks:0 ) )
 
 2
 

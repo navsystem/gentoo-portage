@@ -1,0 +1,22 @@
+dev-lang/lua doc? ( dev-lang/python ) test? ( dev-lang/python ) =dev-lang/python-2*
+dev-lang/lua =dev-lang/python-2*
+0
+http://github.com/downloads/matricks/bam/bam-0.4.0.tar.bz2
+
+http://matricks.github.com/bam/
+ZLIB
+Fast and flexible Lua-based build system
+~amd64 ~x86
+eutils multilib python toolchain-funcs user
+doc test
+
+
+
+3
+
+compile install prepare setup
+
+
+
+
+

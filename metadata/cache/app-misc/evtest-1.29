@@ -6,7 +6,7 @@ http://cgit.freedesktop.org/evtest/snapshot/evtest-1.29.tar.bz2 mirror://gentoo/
 http://cgit.freedesktop.org/evtest/
 GPL-2
 test program for capturing input device events
-~amd64 ~arm ~x86
+amd64 arm x86
 autotools eutils libtool multilib toolchain-funcs user
 +xml
 

@@ -10,7 +10,7 @@ Additional Qt APIs for mobile devices and desktop platforms
 base eutils multilib qt4-r2 toolchain-funcs user
 bluetooth debug doc networkmanager opengl pulseaudio qml +tools bearer connectivity contacts feedback gallery location messaging multimedia organizer publishsubscribe sensors serviceframework systeminfo versit
 versit? ( contacts )
-connectivity? ( bluetooth? ( app-mobilephone/obexd ) ) systeminfo? ( sys-fs/udisks sys-power/upower )
+connectivity? ( bluetooth? ( app-mobilephone/obexd ) ) systeminfo? ( sys-fs/udisks:0 sys-power/upower )
 
 4
 

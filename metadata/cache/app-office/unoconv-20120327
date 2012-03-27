@@ -1,0 +1,22 @@
+=dev-lang/python-2*
+virtual/ooo =dev-lang/python-2*
+0
+http://dev.gentooexperimental.org/~scarabeus/unoconv-20120327.tar.xz
+
+http://dag.wieers.com/home-made/unoconv/
+GPL-2
+Convert between document formats supported by Libreoffice
+~amd64 ~x86
+eutils multilib python toolchain-funcs user
+
+
+
+
+3
+
+compile install prepare setup
+
+
+
+
+
