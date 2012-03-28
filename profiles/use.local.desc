@@ -1013,7 +1013,8 @@ dev-embedded/openocd:versaloon - Enable building support for the Versallon-lInk 
 dev-embedded/ponyprog:epiphany - Enable support for www-client/epiphany
 dev-embedded/qvfb:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
 dev-embedded/sdcc:boehm-gc - Enable Hans Boehm's garbage collector (dev-libs/boehm-gc)
-dev-embedded/urjtag:ftdi - Enable support for USB FTDI chips (dev-embedded/libftdi)
+dev-embedded/urjtag:ftd2xx - Enable support for USB FTDI chips via dev-embedded/libftd2xx
+dev-embedded/urjtag:ftdi - Enable support for USB FTDI chips via dev-embedded/libftdi
 dev-games/cegui:devil - Enable image loading via DevIL
 dev-games/cegui:irrlicht - Enable the Irrlicht renderer
 dev-games/cegui:ogre - Enable the OGRE renderer
@@ -2822,6 +2823,7 @@ media-sound/pulseaudio:oss - Enable OSS sink/source (output/input). Deprecated, 
 media-sound/pulseaudio:realtime - Makes PulseAudio use RealtimeKit (sys-auth/rtkit) to get real-time priority while running.
 media-sound/pulseaudio:ssl - Use dev-libs/openssl to provide support for RAOP (AirPort) streaming.
 media-sound/pulseaudio:system-wide - Allow preparation and installation of the system-wide init script for PulseAudio. Since this support is only supported for embedded situations, do not enable without reading the upstream instructions at http://pulseaudio.org/wiki/WhatIsWrongWithSystemMode .
+media-sound/pulseaudio:webrtc-aec - Uses the webrtc.org AudioProcessing library for enhancing VoIP calls greatly in applications that support it by performing acoustic echo cancellation, analog gain control, noise suppression and other processing.
 media-sound/qmmp:bs2b - Enable Bauer stereophonic-to-binaural headphone filter
 media-sound/qmmp:cover - Enable album cover support
 media-sound/qmmp:crossfade - Enable crossfade effect when switching tracks

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.2_p20.ebuild,v 1.10 2012/03/25 16:31:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.2_p20.ebuild,v 1.12 2012/03/28 18:13:09 vapier Exp $
 
 EAPI="1"
 
@@ -34,7 +34,7 @@ SRC_URI="mirror://gnu/bash/${MY_P}.tar.gz $(patches)"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="afs bashlogger examples mem-scramble +net nls plugins vanilla"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2
@@ -105,6 +105,9 @@ src_compile() {
 	# in the PM (and the readline ebuild itself preserves the old
 	# libs during upgrades), linking against the system copy should
 	# be safe.
+	# Exact cached version here doesn't really matter as long as it
+	# is at least what's in the DEPEND up above.
+	export ac_cv_rl_version=6.2
 
 	# Force linking with system curses ... the bundled termcap lib
 	# sucks bad compared to ncurses.  For the most part, ncurses
@@ -113,7 +116,7 @@ src_compile() {
 
 	use plugins && append-ldflags -Wl,-rpath,/usr/$(get_libdir)/bash
 	econf \
-		--with-installed-readline \
+		--with-installed-readline=. \
 		--with-curses \
 		$(use_with afs) \
 		$(use_enable net net-redirections) \
