@@ -6,7 +6,7 @@ http://yaml-cpp.googlecode.com/files/yaml-cpp-0.3.0.tar.gz
 http://code.google.com/p/yaml-cpp/
 MIT
 A YAML parser and emitter in C++
-~amd64 ~x86
+amd64 x86
 base cmake-utils eutils flag-o-matic multilib toolchain-funcs user
 
 

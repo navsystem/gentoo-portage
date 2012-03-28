@@ -1,5 +1,5 @@
-dev-perl/config-general dev-libs/libxslt infiniband? ( sys-infiniband/libibverbs sys-infiniband/librdmacm )
-dev-perl/config-general dev-libs/libxslt infiniband? ( sys-infiniband/libibverbs sys-infiniband/librdmacm ) sys-apps/sg3_utils
+dev-perl/config-general dev-libs/libxslt infiniband? ( sys-infiniband/libibverbs sys-infiniband/librdmacm ) app-text/docbook-xsl-stylesheets
+dev-perl/config-general dev-libs/libxslt infiniband? ( sys-infiniband/libibverbs sys-infiniband/librdmacm ) app-text/docbook-xsl-stylesheets sys-apps/sg3_utils
 0
 https://github.com/fujita/tgt/tarball/v1.0.24 -> tgt-1.0.24.tar.gz
 
