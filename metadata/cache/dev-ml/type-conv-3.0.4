@@ -1,4 +1,4 @@
->=dev-lang/ocaml-3.12[ocamlopt?] >=dev-ml/findlib-1.0.4-r1
+>=dev-ml/findlib-1.0.4-r1 >=dev-lang/ocaml-3.12[ocamlopt?]
 >=dev-lang/ocaml-3.12[ocamlopt?]
 0
 http://forge.ocamlcore.org/frs/download.php/697/type-conv-3.0.4.tar.gz
@@ -7,14 +7,14 @@ http://forge.ocamlcore.org/projects/type-conv/
 LGPL-2.1-linking-exception
 Mini library required for some other preprocessing libraries
 ~amd64 ~x86
-eutils findlib multilib toolchain-funcs user
-debug doc +ocamlopt
+base eutils findlib multilib oasis toolchain-funcs user
++ocamlopt debug
 
 
 
-2
+3
 
-configure install test
+compile configure install prepare test unpack
 
 
 

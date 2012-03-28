@@ -6,7 +6,7 @@ http://savannah.nongnu.org/download/gap/AClock-0.4.0.tar.gz
 http://gap.nongnu.org/aclock/
 GPL-3
 Analog dockapp clock for GNUstep
-~amd64 ~ppc ~x86
+amd64 ~ppc ~x86
 eutils flag-o-matic gnustep-2 gnustep-base multilib toolchain-funcs user
 debug doc
 

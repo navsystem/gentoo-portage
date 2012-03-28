@@ -1,5 +1,5 @@
 sys-libs/libcap app-text/docbook-sgml-utils >=sys-kernel/linux-headers-2.6.29 || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
-sys-libs/libcap vanilla? ( sys-apps/util-linux app-misc/pax-utils )
+sys-libs/libcap !vanilla? ( sys-apps/util-linux app-misc/pax-utils >=sys-apps/openrc-0.9.9.1 )
 0
 http://lxc.sourceforge.net/download/lxc/lxc-0.8.0-rc1.tar.gz
 

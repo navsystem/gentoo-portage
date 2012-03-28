@@ -1,5 +1,5 @@
->=dev-lang/ocaml-3.11[ocamlopt?] >=dev-ml/findlib-1.0.4-r1
->=dev-lang/ocaml-3.11[ocamlopt?]
+>=dev-ml/findlib-1.0.4-r1 >=dev-lang/ocaml-3.12[ocamlopt?]
+>=dev-lang/ocaml-3.12[ocamlopt?]
 0
 http://erratique.ch/software/react/releases/react-0.9.3.tbz
 
@@ -7,14 +7,14 @@ http://erratique.ch/software/react
 BSD
 OCaml module for functional reactive programming
 ~amd64 ~x86 ~x86-fbsd
-findlib multilib toolchain-funcs
+base eutils findlib multilib oasis toolchain-funcs user
 +ocamlopt debug test
 
 
 
 4
 
-compile configure install test
+compile configure install prepare test unpack
 
 
 

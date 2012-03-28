@@ -14,7 +14,7 @@ autotools eutils libtool multilib prefix toolchain-funcs user
 
 3
 
-install postinst postrm prepare prerm
+configure install postinst postrm prepare prerm
 
 
 
