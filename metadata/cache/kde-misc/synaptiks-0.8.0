@@ -3,7 +3,7 @@
 4
 mirror://pypi/s/synaptiks/synaptiks-0.8.0.tar.bz2
 
-http://pypi.python.org/pypi/synaptiks
+http://synaptiks.readthedocs.org
 BSD-2
 Touchpad configuration and management tool for KDE
 ~amd64 ~x86

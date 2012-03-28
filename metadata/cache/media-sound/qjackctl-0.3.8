@@ -1,5 +1,5 @@
-alsa? ( media-libs/alsa-lib ) x11-libs/qt-core:4 x11-libs/qt-gui:4 dbus? ( x11-libs/qt-dbus ) portaudio? ( media-libs/portaudio ) >=media-sound/jack-audio-connection-kit-0.109.2
-alsa? ( media-libs/alsa-lib ) x11-libs/qt-core:4 x11-libs/qt-gui:4 dbus? ( x11-libs/qt-dbus ) portaudio? ( media-libs/portaudio ) >=media-sound/jack-audio-connection-kit-0.109.2
+>=media-sound/jack-audio-connection-kit-0.109.2 x11-libs/qt-core:4 x11-libs/qt-gui:4 alsa? ( media-libs/alsa-lib ) dbus? ( x11-libs/qt-dbus:4 ) portaudio? ( media-libs/portaudio )
+>=media-sound/jack-audio-connection-kit-0.109.2 x11-libs/qt-core:4 x11-libs/qt-gui:4 alsa? ( media-libs/alsa-lib ) dbus? ( x11-libs/qt-dbus:4 ) portaudio? ( media-libs/portaudio )
 0
 mirror://sourceforge/qjackctl/qjackctl-0.3.8.tar.gz
 
@@ -7,14 +7,14 @@ http://qjackctl.sourceforge.net/
 GPL-2
 A Qt application to control the JACK Audio Connection Kit and ALSA sequencer connections.
 ~amd64 ~x86
-base eutils multilib qt4 toolchain-funcs user versionator
+base eutils multilib qt4-r2 toolchain-funcs user
 alsa dbus debug portaudio
 
 
 
-2
+4
 
-compile configure install prepare setup unpack
+compile configure install prepare unpack
 
 
 

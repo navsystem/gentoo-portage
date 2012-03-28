@@ -1,7 +1,7 @@
 nls? ( sys-devel/gettext )
 
 0
-ftp://alpha.gnu.org/gnu/diffutils/diffutils-2.8.7.tar.gz mirror://gentoo/diffutils-2.8.7-i18n.patch.bz2
+mirror://gnu-alpha/diffutils/diffutils-2.8.7.tar.gz mirror://gentoo/diffutils-2.8.7-i18n.patch.bz2
 
 http://www.gnu.org/software/diffutils/diffutils.html
 GPL-2
