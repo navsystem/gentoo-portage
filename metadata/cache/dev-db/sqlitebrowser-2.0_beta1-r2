@@ -1,0 +1,22 @@
+>=x11-libs/qt-core-4.6:4[qt3support] >=x11-libs/qt-gui-4.6:4[qt3support] >=x11-libs/qt-qt3support-4.6:4
+>=x11-libs/qt-core-4.6:4[qt3support] >=x11-libs/qt-gui-4.6:4[qt3support] >=x11-libs/qt-qt3support-4.6:4
+0
+mirror://sourceforge/sqlitebrowser/sqlitebrowser_200_b1_src.tar.gz
+
+http://sqlitebrowser.sourceforge.net/
+public-domain
+SQLite Database Browser
+~amd64 ~x86
+base eutils multilib qt4-r2 toolchain-funcs user
+
+
+
+
+4
+
+compile configure install prepare unpack
+
+
+
+
+
