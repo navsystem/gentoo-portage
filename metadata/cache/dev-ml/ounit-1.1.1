@@ -1,5 +1,5 @@
->=dev-lang/ocaml-3.10.2[ocamlopt?] >=dev-ml/findlib-1.0.4-r1
->=dev-lang/ocaml-3.10.2[ocamlopt?]
+>=dev-ml/findlib-1.0.4-r1 >=dev-lang/ocaml-3.12[ocamlopt?]
+>=dev-lang/ocaml-3.12[ocamlopt?]
 0
 http://forge.ocamlcore.org/frs/download.php/762/ounit-1.1.1.tar.gz
 
@@ -7,14 +7,14 @@ http://ounit.forge.ocamlcore.org/
 MIT
 Unit testing framework for OCaml
 ~amd64 ~ppc ~x86
-findlib multilib toolchain-funcs
-debug doc +ocamlopt
+base eutils findlib multilib oasis toolchain-funcs user
++ocamlopt debug doc
 
 
 
-2
+3
 
-compile configure install
+compile configure install prepare test unpack
 
 
 
