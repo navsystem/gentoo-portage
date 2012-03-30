@@ -1,5 +1,5 @@
-ftdi? ( dev-embedded/libftdi ) readline? ( sys-libs/readline ) usb? ( virtual/libusb:1 ) dev-vcs/git || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
-ftdi? ( dev-embedded/libftdi ) readline? ( sys-libs/readline ) usb? ( virtual/libusb:1 ) !dev-embedded/jtag
+ftdi? ( dev-embedded/libftdi ) ftd2xx? ( dev-embedded/libftd2xx ) readline? ( sys-libs/readline ) usb? ( virtual/libusb:1 ) dev-vcs/git || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+ftdi? ( dev-embedded/libftdi ) ftd2xx? ( dev-embedded/libftd2xx ) readline? ( sys-libs/readline ) usb? ( virtual/libusb:1 ) !dev-embedded/jtag
 0
 
 
@@ -8,7 +8,7 @@ GPL-2
 tool for communicating over JTAG with flash chips, CPUs, and many more (fork of openwince jtag)
 
 autotools eutils git-2 libtool multilib toolchain-funcs user
-ftdi readline static-libs usb
+ftd2xx ftdi readline static-libs usb
 
 
 
