@@ -18,7 +18,7 @@ video_cards_r300 video_cards_r600
 -video_cards_sunffb -video_cards_sunleo -video_cards_suntcx -video_cards_tdfx -video_cards_tga -video_cards_trident
 -video_cards_tseng -video_cards_v4l -video_cards_via -video_cards_virtualbox -video_cards_vmware -video_cards_voodoo -video_cards_xgi
 
--linguas_* linguas_ru
+-linguas_* linguas_en linguas_ru
 
 dracut_modules_plymouth
 
