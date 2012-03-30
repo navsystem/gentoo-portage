@@ -18,6 +18,7 @@ input_devices_evdev video_cards_intel video_cards_nouveau video_cards_radeon vid
 -video_cards_tseng -video_cards_v4l -video_cards_via -video_cards_virtualbox -video_cards_vmware -video_cards_voodoo -video_cards_xgi
 
 
+-linguas_* linguas_ru linguas_en
 
 "
 
