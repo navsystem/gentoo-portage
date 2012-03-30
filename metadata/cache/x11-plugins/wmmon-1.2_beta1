@@ -1,0 +1,22 @@
+x11-libs/libX11 x11-libs/libXext x11-libs/libXpm x11-proto/xextproto
+x11-libs/libX11 x11-libs/libXext x11-libs/libXpm
+0
+http://dev.gentoo.org/~voyageur/distfiles/wmmon-1.2b1.tar.bz2
+
+http://repo.or.cz/w/dockapps.git
+GPL-2
+Dockable system resources monitor applet for WindowMaker
+~amd64 ~ppc ~sparc ~x86
+eutils multilib toolchain-funcs user
+
+
+
+
+4
+
+compile install prepare
+
+
+
+
+

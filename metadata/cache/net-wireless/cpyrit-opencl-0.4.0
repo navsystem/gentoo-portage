@@ -1,0 +1,22 @@
+dev-libs/openssl sys-libs/zlib virtual/opencl || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
+dev-libs/openssl sys-libs/zlib virtual/opencl || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
+0
+http://pyrit.googlecode.com/files/cpyrit-opencl-0.4.0.tar.gz
+
+http://code.google.com/p/pyrit/
+GPL-3
+A sub-package that adds OpenCL-capability to Pyrit
+~amd64 ~x86
+distutils eutils multilib python toolchain-funcs user
+
+
+net-wireless/pyrit
+
+4
+
+compile install postinst postrm prepare setup
+
+
+
+
+

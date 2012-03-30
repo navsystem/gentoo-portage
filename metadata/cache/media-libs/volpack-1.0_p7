@@ -7,12 +7,12 @@ http://amide.sourceforge.net/packages.html
 BSD
 Volume rendering library
 ~amd64 ~x86
-eutils multilib toolchain-funcs user
+
 doc examples
 
 
 
-2
+4
 
 compile install
 
