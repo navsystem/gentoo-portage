@@ -1,5 +1,5 @@
 net-firewall/iptables sys-apps/ed sys-apps/iproute2 sys-fs/vzquota || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool dev-vcs/git
-net-firewall/iptables sys-apps/ed sys-apps/iproute2 sys-fs/vzquota bash-completion? ( app-admin/eselect )
+net-firewall/iptables sys-apps/ed sys-apps/iproute2 sys-fs/vzquota
 0
 
 
@@ -7,10 +7,10 @@ http://openvz.org/
 GPL-2
 OpenVZ ConTainers control utility
 
-autotools bash-completion eutils git-2 libtool multilib toolchain-funcs user
-bash-completion bash-completion
+autotools bash-completion-r1 eutils git-2 libtool multilib toolchain-funcs user
 
-bash-completion? ( app-shells/bash-completion )
+
+
 
 4
 

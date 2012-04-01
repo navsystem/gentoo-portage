@@ -1,0 +1,22 @@
+
+
+0
+http://userspace.selinuxproject.org/releases/20120216/libsepol-2.1.4.tar.gz
+test
+http://userspace.selinuxproject.org
+GPL-2
+SELinux binary policy representation library
+~amd64 ~x86
+eutils multilib toolchain-funcs user
+
+
+
+
+2
+
+compile install prepare
+
+
+
+
+

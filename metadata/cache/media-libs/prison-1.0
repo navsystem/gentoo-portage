@@ -6,7 +6,7 @@ mirror://kde/stable/prison/1.0/src/prison-1.0.tar.gz
 https://projects.kde.org/projects/kdesupport/prison
 GPL-2
 QRCode and data matrix barcode library
-~amd64 ~x86
+~amd64 ~arm ~x86
 base cmake-utils eutils fdo-mime flag-o-matic gnome2-utils kde4-base kde4-functions multilib toolchain-funcs user versionator virtualx
 debug aqua
 

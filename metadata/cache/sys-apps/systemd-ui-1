@@ -1,0 +1,22 @@
+!sys-apps/systemd[gtk] >=dev-libs/glib-2.26 dev-libs/libgee:0 sys-apps/dbus x11-libs/gtk+:2 >=x11-libs/libnotify-0.7 app-arch/xz-utils dev-lang/vala:0.14
+!sys-apps/systemd[gtk] >=dev-libs/glib-2.26 dev-libs/libgee:0 sys-apps/dbus x11-libs/gtk+:2 >=x11-libs/libnotify-0.7
+0
+http://www.freedesktop.org/software/systemd/systemd-ui-1.tar.xz
+
+http://www.freedesktop.org/wiki/Software/systemd
+GPL-2
+System and service manager for Linux
+~amd64 ~x86
+autotools autotools-utils eutils libtool multilib toolchain-funcs user
+
+
+
+
+4
+
+compile configure install prepare test
+
+
+
+
+

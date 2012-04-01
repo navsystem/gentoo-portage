@@ -10,7 +10,7 @@ A sub-package that adds OpenCL-capability to Pyrit
 distutils eutils multilib python toolchain-funcs user
 
 
-net-wireless/pyrit
+~net-wireless/pyrit-0.4.0
 
 4
 

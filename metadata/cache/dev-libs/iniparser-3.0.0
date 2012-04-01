@@ -1,4 +1,4 @@
-doc? ( app-doc/doxygen )
+doc? ( app-doc/doxygen ) sys-devel/libtool
 
 0
 http://ndevilla.free.fr/iniparser/iniparser-3.0.tar.gz
