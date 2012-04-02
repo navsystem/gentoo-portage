@@ -1,5 +1,5 @@
 app-arch/unzip
-dev-python/pygame dev-python/pyopengl psyco? ( dev-python/psyco )
+dev-python/pygame dev-python/pyopengl
 0
 http://acm.jhu.edu/~arthur/invaders/triplexinvaders-1.08.zip
 
@@ -8,7 +8,7 @@ MIT
 An Alien Invaders style game with 3d graphics
 ~amd64 x86
 base eutils games multilib toolchain-funcs user
-psyco
+
 
 
 

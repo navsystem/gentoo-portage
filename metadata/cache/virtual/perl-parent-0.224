@@ -6,7 +6,7 @@
 
 
 Virtual for parent
-~alpha ~amd64 ~hppa ~ppc ~x86
+~alpha ~amd64 ~hppa ~ia64 ~ppc ~s390 ~sh ~sparc ~x86
 
 
 

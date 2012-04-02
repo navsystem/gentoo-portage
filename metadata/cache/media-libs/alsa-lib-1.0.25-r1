@@ -6,7 +6,7 @@ mirror://alsaproject/lib/alsa-lib-1.0.25.tar.bz2
 http://www.alsa-project.org/
 LGPL-2.1
 Advanced Linux Sound Architecture Library
-~alpha amd64 arm hppa ~ia64 ~mips ~ppc ppc64 ~sh ~sparc x86 ~amd64-linux ~x86-linux
+alpha amd64 arm hppa ia64 ~mips ~ppc ppc64 sh sparc x86 ~amd64-linux ~x86-linux
 autotools base eutils libtool multilib python toolchain-funcs user
 doc debug alisp python
 

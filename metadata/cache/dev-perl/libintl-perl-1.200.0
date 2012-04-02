@@ -6,7 +6,7 @@ mirror://cpan/authors/id/G/GU/GUIDO/libintl-perl-1.20.tar.gz
 http://guido-flohr.net/projects/libintl-perl http://search.cpan.org/dist/libintl-perl/
 LGPL-2.1
 Perl internationalization library that aims to be compatible with the Uniforum message translations system
-~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x64-freebsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris
+~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x64-freebsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris
 base eutils multilib perl-module toolchain-funcs user
 
 

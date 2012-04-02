@@ -6,7 +6,7 @@ mirror://alsaproject/pyalsa/pyalsa-1.0.25.tar.bz2
 http://alsa-project.org/
 GPL-2
 Python bindings for ALSA library
-amd64 ~ppc ppc64 ~sparc x86
+amd64 ~ppc ppc64 sparc x86
 distutils eutils multilib python toolchain-funcs user
 
 
