@@ -1,5 +1,5 @@
-sys-apps/groff sys-libs/zlib virtual/libiconv
-sys-libs/zlib virtual/libiconv
+!app-office/unoconv sys-libs/zlib virtual/libiconv sys-apps/groff
+!app-office/unoconv sys-libs/zlib virtual/libiconv
 0
 http://stosberg.net/odt2txt/odt2txt-0.4.tar.gz
 
@@ -12,7 +12,7 @@ eutils multilib toolchain-funcs user
 
 
 
-2
+4
 
 compile install prepare
 

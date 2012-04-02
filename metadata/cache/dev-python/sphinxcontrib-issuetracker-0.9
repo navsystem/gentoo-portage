@@ -1,5 +1,5 @@
-dev-python/setuptools test? ( dev-python/pyquery ) dev-lang/python
->=dev-python/sphinx-1.0 dev-lang/python
+>=dev-python/sphinx-1.0 dev-python/setuptools test? ( dev-python/mock dev-python/pyquery ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) test? ( dev-python/pytest )
+>=dev-python/sphinx-1.0 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
 0
 mirror://pypi/s/sphinxcontrib-issuetracker/sphinxcontrib-issuetracker-0.9.tar.gz
 
@@ -8,13 +8,13 @@ BSD-2
 Extension to sphinx to create links to issue trackers
 ~amd64 ~x86
 distutils multilib python toolchain-funcs
-test
+test test
 
 
 
 4
 
-compile install postinst postrm prepare setup
+compile install postinst postrm prepare setup test
 
 
 

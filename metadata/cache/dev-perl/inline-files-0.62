@@ -6,7 +6,7 @@ mirror://cpan/authors/id/D/DC/DCONWAY/Inline-Files-0.62.tar.gz
 http://search.cpan.org/author/DCONWAY/Inline-Files-0.62
 || ( Artistic GPL-2 )
 Multiple virtual files in a single file
-alpha amd64 ia64 ppc sparc x86
+alpha amd64 ppc x86
 base eutils multilib perl-module toolchain-funcs user
 
 
