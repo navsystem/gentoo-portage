@@ -10,4 +10,4 @@ RDEPEND=>=dev-python/docutils-0.7 >=dev-python/jinja-2.3 >=dev-python/pygments-1
 SLOT=0
 SRC_URI=mirror://pypi/S/Sphinx/Sphinx-1.1.3.tar.gz
 _eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	multilib	5f4ad6cf85e365e8f0c6050ddd21659e	python	36d7e2b7aa4dce62364c72eec96610cf	toolchain-funcs	6526ac6fc9aedf391efb91fcd75ace68
-_md5_=c2ed9f8f6c76aee63b797e5d233fbd03
+_md5_=f1e10b71ef5f3694bafff503e0c6a3bd
