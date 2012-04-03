@@ -1,5 +1,5 @@
-x11-libs/qt-gui:4 >=sys-apps/sed-4
-x11-libs/qt-gui:4
+x11-libs/qt-core:4 x11-libs/qt-gui:4 >=sys-apps/sed-4
+x11-libs/qt-core:4 x11-libs/qt-gui:4
 0
 http://gottcode.org/connectagram/connectagram-1.0.1-src.tar.bz2
 
@@ -7,7 +7,7 @@ http://gottcode.org/connectagram/
 GPL-3
 A word unscrambling game
 ~amd64 x86
-base eutils games gnome2-utils multilib qt4 toolchain-funcs user versionator
+base eutils games gnome2-utils multilib qt4-r2 toolchain-funcs user
 
 
 

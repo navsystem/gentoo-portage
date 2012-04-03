@@ -6,7 +6,7 @@ mirror://gnome/sources/passepartout/0.7/passepartout-0.7.0.tar.bz2
 http://www.stacken.kth.se/project/pptout/
 BSD
 A DTP application for the X Window System
-~x86 ~amd64
+amd64 ~x86
 autotools base eutils fdo-mime gnome.org gnome2 gnome2-utils libtool multilib toolchain-funcs user versionator
 gnome debug
 

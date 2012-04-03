@@ -7,7 +7,7 @@ http://www.rdflib.net/ http://pypi.python.org/pypi/rdflib
 BSD
 RDF library containing a triple store and parser/serializer
 ~amd64 ~x86 ~x86-linux
-distutils multilib python toolchain-funcs
+distutils eutils multilib python toolchain-funcs user
 berkdb examples mysql redland sqlite test
 
 
