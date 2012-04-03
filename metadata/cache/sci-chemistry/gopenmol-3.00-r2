@@ -1,18 +1,18 @@
-=dev-lang/tk-8.4* dev-tcltk/bwidget virtual/jpeg media-libs/freeglut virtual/opengl x11-libs/libICE x11-libs/libXau x11-libs/libXdmcp x11-libs/libXi x11-libs/libXmu x11-libs/libXxf86vm =dev-lang/python-2*
-=dev-lang/tk-8.4* dev-tcltk/bwidget virtual/jpeg media-libs/freeglut virtual/opengl x11-libs/libICE x11-libs/libXau x11-libs/libXdmcp x11-libs/libXi x11-libs/libXmu x11-libs/libXxf86vm =dev-lang/python-2*
+dev-lang/tk dev-tcltk/bwidget media-libs/freeglut virtual/jpeg virtual/opengl x11-libs/libICE x11-libs/libXau x11-libs/libXdmcp x11-libs/libXi x11-libs/libXmu x11-libs/libXxf86vm =dev-lang/python-2*
+dev-lang/tk dev-tcltk/bwidget media-libs/freeglut virtual/jpeg virtual/opengl x11-libs/libICE x11-libs/libXau x11-libs/libXdmcp x11-libs/libXi x11-libs/libXmu x11-libs/libXxf86vm =dev-lang/python-2*
 0
-http://www.csc.fi/gopenmol/distribute/gopenmol-3.00-linux.tar.gz
+http://www.csc.fi/gopenmol//distribute/gopenmol-3.00-linux.tar.gz
 
-http://www.csc.fi/gopenmol
+http://www.csc.fi/gopenmol/
 as-is
 Tool for the visualization and analysis of molecular structures
-~amd64 ~x86
+~amd64 ~x86 ~amd64-linux ~x86-linux
 eutils multilib prefix python toolchain-funcs user
 
 
 
 
-3
+4
 
 compile install postinst prepare setup
 

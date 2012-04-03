@@ -1,0 +1,22 @@
+net-misc/wget
+!<sys-apps/pciutils-3.1.9-r2 !<sys-apps/usbutils-005-r1
+0
+
+
+http://git.overlays.gentoo.org/gitweb/?p=proj/hwids.git;a=summary
+|| ( GPL-2 BSD )
+Hardware (PCI, USB) IDs databases
+
+
+
+
+
+
+4
+
+compile install
+
+
+
+
+

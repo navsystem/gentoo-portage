@@ -7,14 +7,14 @@ http://projects.haskell.org/xmobar/
 BSD
 A Minimalistic Text Based Status Bar
 ~amd64 ~x86
-eutils ghc-package haskell-cabal multilib toolchain-funcs user versionator
+base eutils ghc-package haskell-cabal multilib toolchain-funcs user versionator
 xft unicode mail alsa
 
 
 
 3
 
-compile configure install postinst prerm setup test
+compile configure install postinst prepare prerm setup test unpack
 
 
 

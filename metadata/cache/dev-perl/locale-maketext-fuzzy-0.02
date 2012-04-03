@@ -6,7 +6,7 @@ mirror://cpan/authors/id/A/AU/AUTRIJUS/Locale-Maketext-Fuzzy-0.02.tar.gz
 http://www.cpan.org/authors/id/A/AU/AUTRIJUS/
 || ( Artistic GPL-2 )
 Maketext from already interpolated strings
-alpha amd64 hppa ia64 ppc sparc x86
+amd64 hppa ppc x86
 base eutils multilib perl-module toolchain-funcs user
 
 
