@@ -1,0 +1,22 @@
+>=dev-lang/ghc-6.10.1 dev-haskell/random >=dev-haskell/cabal-1.6 doc? ( dev-haskell/haddock ) hscolour? ( dev-haskell/hscolour ) >=dev-haskell/cabal-1.1.4
+>=dev-lang/ghc-6.10.1 dev-haskell/random dev-lang/ghc
+2
+http://hackage.haskell.org/packages/archive/QuickCheck/2.4.2/QuickCheck-2.4.2.tar.gz
+
+http://code.haskell.org/QuickCheck
+BSD
+Automatic testing of Haskell programs
+~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
+eutils ghc-package haskell-cabal multilib toolchain-funcs user versionator
++template_haskell doc hscolour profile
+
+
+
+3
+
+compile configure install postinst prerm setup test
+
+
+
+
+
