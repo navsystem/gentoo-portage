@@ -2,7 +2,7 @@ sys-libs/zlib app-arch/bzip2
 sys-libs/zlib app-arch/bzip2
 0
 mirror://sourceforge/advancemame/advancecomp-1.15.tar.gz
-
+test
 http://advancemame.sourceforge.net/comp-readme.html
 GPL-2 LGPL-2
 Recompress ZIP, PNG and MNG using deflate 7-Zip, considerably improving compression
@@ -12,9 +12,9 @@ png mng
 
 
 
+4
 
-
-compile install unpack
+configure install prepare
 
 
 

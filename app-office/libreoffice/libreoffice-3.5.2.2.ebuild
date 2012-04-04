@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.2.2.ebuild,v 1.3 2012/04/02 07:39:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.2.2.ebuild,v 1.9 2012/04/03 13:35:28 scarabeus Exp $
 
 EAPI=4
 
@@ -194,6 +194,10 @@ PATCHES=(
 	# this can't be upstreamed :(
 	"${FILESDIR}/${PN}-system-pyuno.patch"
 	"${FILESDIR}/${PN}-3.5-propagate-gb_FULLDEPS.patch"
+	"${FILESDIR}/${PN}-3.5-doublebuild.patch"
+	"${FILESDIR}/${PN}-3.5.2-icu-49.patch"
+	#"${FILESDIR}/${PN}-3.5.2-icu-49-part2.patch"
+	"${FILESDIR}/${PN}-3.5.2-tests-headless.patch"
 )
 
 REQUIRED_USE="
@@ -237,8 +241,11 @@ pkg_setup() {
 	python_set_active_version 2
 	python_pkg_setup
 
-	[[ ${MERGE_TYPE} != binary ]] && check-reqs_pkg_pretend
-
+	if [[ ${MERGE_TYPE} != binary ]]; then
+		CHECKREQS_MEMORY="512M"
+		CHECKREQS_DISK_BUILD="6G"
+		check-reqs_pkg_pretend
+	fi
 	if ! use gtk; then
 		ewarn "If you want the LibreOffice systray quickstarter to work"
 		ewarn "activate the 'gtk' use flag."
