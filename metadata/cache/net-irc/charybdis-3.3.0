@@ -6,7 +6,7 @@ http://www.stack.nl/~jilles/irc/charybdis-3.3.0.tbz2 http://dev.gentoo.org/~bink
 http://atheme.org/project/charybdis http://www.stack.nl/~jilles/irc/#charybdis
 GPL-2
 The atheme project's IRCd based on ratbox
-~amd64 ~x86
+amd64 ~x86
 autotools eutils libtool multilib toolchain-funcs user
 debug +ipv6 largenet ssl zlib
 
