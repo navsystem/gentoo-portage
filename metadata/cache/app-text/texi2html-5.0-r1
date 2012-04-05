@@ -1,5 +1,5 @@
->=dev-lang/perl-5.10.1 dev-perl/libintl-perl unicode? ( dev-perl/Text-Unidecode dev-perl/Unicode-EastAsianWidth )
->=dev-lang/perl-5.10.1 dev-perl/libintl-perl unicode? ( dev-perl/Text-Unidecode dev-perl/Unicode-EastAsianWidth )
+>=dev-lang/perl-5.10.1 >=dev-perl/libintl-perl-1.200 unicode? ( dev-perl/Text-Unidecode dev-perl/Unicode-EastAsianWidth )
+>=dev-lang/perl-5.10.1 >=dev-perl/libintl-perl-1.200 unicode? ( dev-perl/Text-Unidecode dev-perl/Unicode-EastAsianWidth )
 0
 mirror://nongnu/texi2html/texi2html-5.0.tar.bz2
 
