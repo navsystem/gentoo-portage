@@ -6,7 +6,7 @@ mirror://sourceforge/smplayer/smplayer-themes-20120131.tar.gz
 http://smplayer.sourceforge.net/
 CCPL-Attribution-2.5 CCPL-Attribution-ShareAlike-2.5 CCPL-Attribution-ShareAlike-3.0 GPL-2 LGPL-3
 Icon themes for smplayer
-~amd64 ~hppa ~ppc ~ppc64 ~x86 ~x86-fbsd
+~amd64 hppa ~ppc ~ppc64 ~x86 ~x86-fbsd
 
 
 

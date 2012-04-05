@@ -1,5 +1,5 @@
->=dev-lang/ghc-6.6.1 >=dev-haskell/cabal-1.2 doc? ( dev-haskell/haddock ) >=dev-haskell/cabal-1.1.4
->=dev-lang/ghc-6.6.1 dev-lang/ghc
+>=dev-lang/ghc-6.6.1 dev-haskell/random >=dev-haskell/cabal-1.2 doc? ( dev-haskell/haddock ) >=dev-haskell/cabal-1.1.4
+>=dev-lang/ghc-6.6.1 dev-haskell/random dev-lang/ghc
 1
 http://hackage.haskell.org/packages/archive/QuickCheck/1.2.0.0/QuickCheck-1.2.0.0.tar.gz
 

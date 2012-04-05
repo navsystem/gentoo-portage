@@ -14,7 +14,7 @@ eutils multilib pax-utils python subversion toolchain-funcs user
 
 4
 
-compile install postinst preinst prepare pretend setup test unpack
+compile install postinst preinst prepare setup test unpack
 
 
 
