@@ -6,7 +6,7 @@ mirror://sourceforge/mecab/mecab-python-0.98.tar.gz
 http://mecab.sourceforge.net/
 || ( BSD LGPL-2.1 GPL-2 )
 Python binding for MeCab
-amd64 ~ia64 ~ppc64 ~x86
+amd64 ~ia64 ~ppc64 x86
 distutils multilib python toolchain-funcs
 
 

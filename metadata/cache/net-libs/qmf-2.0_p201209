@@ -1,0 +1,22 @@
+dev-libs/icu sys-libs/zlib >=x11-libs/qt-core-4.6.0:4 >=x11-libs/qt-gui-4.6.0:4 >=x11-libs/qt-sql-4.6.0:4 examples? ( >=x11-libs/qt-webkit-4.6.0:4 ) dev-util/pkgconfig test? ( >=x11-libs/qt-test-4.6.0:4 ) !!<net-libs/qmf-2.0_p201209
+dev-libs/icu sys-libs/zlib >=x11-libs/qt-core-4.6.0:4 >=x11-libs/qt-gui-4.6.0:4 >=x11-libs/qt-sql-4.6.0:4 examples? ( >=x11-libs/qt-webkit-4.6.0:4 )
+0
+http://dev.gentoo.org/~pesa/distfiles/qmf-2.0_p201209.tar.gz
+
+http://qt.gitorious.org/qt-labs/messagingframework
+LGPL-2.1
+The Qt Messaging Framework
+~amd64 ~x86
+base eutils multilib qt4-r2 toolchain-funcs user
+debug doc examples test
+
+
+
+4
+
+compile configure install prepare test unpack
+
+
+
+
+
