@@ -1,0 +1,22 @@
+app-text/ispell
+
+0
+http://j3e.de/ispell/igerman98/dict/igerman98-20110609.tar.bz2
+
+http://j3e.de/ispell/igerman98/
+GPL-2
+German and Swiss dictionaries for ispell
+~alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86
+multilib toolchain-funcs
+
+
+
+
+4
+
+compile install
+
+
+
+
+

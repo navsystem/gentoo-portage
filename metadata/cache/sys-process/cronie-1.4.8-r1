@@ -8,7 +8,7 @@ ISC BSD BSD-2
 Cronie is a standard UNIX daemon cron based on the original vixie-cron.
 ~amd64 ~arm ~sparc ~x86
 cron eutils flag-o-matic multilib pam toolchain-funcs user
-anacron inotify pam
+anacron inotify pam selinux
 
 
 
