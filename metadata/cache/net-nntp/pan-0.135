@@ -7,14 +7,14 @@ http://pan.rebelbase.com/
 GPL-2
 A newsreader for GNOME
 alpha amd64 hppa ppc ppc64 sparc x86 ~x86-fbsd
-
+eutils multilib toolchain-funcs user
 spell
 
 
 
 4
 
-configure
+configure prepare
 
 
 

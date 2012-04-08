@@ -6,7 +6,7 @@ mirror://sourceforge/leechcraft/leechcraft-0.4.99.tar.xz
 http://leechcraft.org/
 GPL-3
 NetworkMonitor watches HTTP requests in for LeechCraft.
-amd64 ~x86
+amd64 x86
 base cmake-utils eutils flag-o-matic leechcraft multilib toolchain-funcs user versionator
 debug
 
