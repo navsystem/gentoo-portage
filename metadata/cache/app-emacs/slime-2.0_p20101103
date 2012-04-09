@@ -1,5 +1,5 @@
-virtual/commonlisp dev-lisp/cl-asdf doc? ( virtual/texi2dvi ) dev-lisp/common-lisp-controller >=virtual/emacs-21
-virtual/commonlisp dev-lisp/cl-asdf >=virtual/emacs-21
+virtual/commonlisp dev-lisp/asdf doc? ( virtual/texi2dvi ) dev-lisp/common-lisp-controller >=virtual/emacs-21
+virtual/commonlisp dev-lisp/asdf >=virtual/emacs-21
 0
 mirror://gentoo/slime-2.0_p20101103.tar.bz2 mirror://gentoo/slime-2.0_p20101103-patches.tar.bz2
 

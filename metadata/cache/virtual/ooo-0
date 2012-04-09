@@ -1,5 +1,5 @@
 
-|| ( app-office/libreoffice-bin app-office/libreoffice )
+|| ( app-office/libreoffice[java?] app-office/libreoffice-bin[java?] )
 0
 
 
@@ -8,7 +8,7 @@
 Virtual for OpenOffice.org/LibreOffice
 amd64 ppc x86
 
-
+java
 
 
 

@@ -6,7 +6,7 @@ mirror://sourceforge/pup/pup_1.1_src.tar.gz http://alfter.us/files/pup-1.1-manpa
 http://pup.sourceforge.net/
 GPL-2
 Printer Utility Program, setup & maintenance for certain Lexmark & HP printers
-~x86
+x86
 eutils multilib toolchain-funcs user
 
 

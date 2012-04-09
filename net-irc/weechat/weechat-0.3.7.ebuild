@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-0.3.7.ebuild,v 1.6 2012/04/05 09:27:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-0.3.7.ebuild,v 1.9 2012/04/06 09:45:52 scarabeus Exp $
 
 EAPI=3
 
@@ -24,7 +24,7 @@ SLOT="0"
 if [[ ${PV} == "9999" ]]; then
 	KEYWORDS=""
 else
-	KEYWORDS="amd64 ~ppc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+	KEYWORDS="amd64 ~ppc x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 fi
 
 NETWORKS="+irc"
@@ -62,7 +62,7 @@ done
 
 pkg_setup() {
 	use python && python_pkg_setup
-    use ruby && ruby-ng_pkg_setup
+	use ruby && ruby-ng_pkg_setup
 }
 
 src_prepare() {
@@ -107,6 +107,7 @@ src_configure() {
 		$(cmake-utils_use_enable ruby)
 		$(cmake-utils_use_enable lua)
 		$(cmake-utils_use_enable tcl)
+		$(cmake-utils_use_enable guile)
 		$(cmake-utils_use_enable doc)
 	)
 

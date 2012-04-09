@@ -1,0 +1,22 @@
+gtk? ( x11-libs/gtk+:2 ) >=sys-apps/pcsc-lite-1.2.9 xpi? ( || ( >=www-client/firefox-bin-3.6.24 >=www-client/firefox-3.6.20 ) ) !app-misc/beid-runtime app-arch/zip dev-util/pkgconfig app-arch/unzip
+gtk? ( x11-libs/gtk+:2 ) >=sys-apps/pcsc-lite-1.2.9 xpi? ( || ( >=www-client/firefox-bin-3.6.24 >=www-client/firefox-3.6.20 ) ) !app-misc/beid-runtime
+0
+http://eid-mw.googlecode.com/files/eid-mw-4.0.2-1188.tar.gz
+
+http://code.google.com/p/eid-mw
+GPL-3
+Belgian Electronic Identity Card middleware supplied by the Belgian Federal Government.
+~x86 ~amd64
+eutils mozextension multilib toolchain-funcs user versionator
++gtk +xpi
+
+
+
+4
+
+configure install
+
+
+
+
+

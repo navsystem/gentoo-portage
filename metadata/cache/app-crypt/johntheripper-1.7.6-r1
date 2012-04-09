@@ -1,5 +1,5 @@
-!minimal? ( >=dev-libs/openssl-0.9.7 ) openmp? ( >=sys-devel/gcc-4.2[openmp] )
-!minimal? ( >=dev-libs/openssl-0.9.7 )
+!minimal? ( >=dev-libs/openssl-0.9.7:0 ) openmp? ( >=sys-devel/gcc-4.2[openmp] )
+!minimal? ( >=dev-libs/openssl-0.9.7:0 )
 0
 http://www.openwall.com/john/g/john-1.7.6.tar.gz !minimal? ( http://www.openwall.com/john/contrib/john-1.7.6-jumbo-4.diff.gz )
 

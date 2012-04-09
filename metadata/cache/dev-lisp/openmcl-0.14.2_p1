@@ -1,5 +1,5 @@
-=dev-lisp/common-lisp-controller-4* >=dev-lisp/cl-asdf-1.84 dev-lisp/openmcl-build-tools
-=dev-lisp/common-lisp-controller-4* >=dev-lisp/cl-asdf-1.84 dev-lisp/openmcl-build-tools
+=dev-lisp/common-lisp-controller-4* >=dev-lisp/asdf-1.84 dev-lisp/openmcl-build-tools
+=dev-lisp/common-lisp-controller-4* >=dev-lisp/asdf-1.84 dev-lisp/openmcl-build-tools
 0
 mirror://debian/pool/main/o/openmcl/openmcl_0.14.2.p1.o.tar.gz
 

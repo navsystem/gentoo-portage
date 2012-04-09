@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-0.9_p20120221.ebuild,v 1.2 2012/03/26 07:10:16 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-0.9_p20120221.ebuild,v 1.5 2012/04/07 22:10:06 xmw Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux"
 IUSE="X vanilla"
 
 RDEPEND="media-libs/freetype:2
@@ -41,12 +41,12 @@ src_compile() {
 	use X || my_nox11="NOX11=yes MUPDF= "
 
 	emake CC="$(tc-getCC)" \
-		build=debug verbose=true ${my_nox11} -j1 || die
+		build=debug verbose=true ${my_nox11} -j1
 }
 
 src_install() {
-	emake prefix="${D}usr" LIBDIR="${D}usr/$(get_libdir)" \
-		build=debug verbose=true ${my_nox11} install || die
+	emake prefix="${ED}usr" libdir="${ED}usr/$(get_libdir)" \
+		build=debug verbose=true ${my_nox11} install
 
 	insinto /usr/include
 	doins pdf/mupdf.h fitz/fitz.h xps/muxps.h || die
