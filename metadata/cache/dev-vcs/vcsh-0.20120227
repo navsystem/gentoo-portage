@@ -1,0 +1,22 @@
+app-text/ronn
+
+0
+http://github.com/RichiH/vcsh/tarball/v0.20120227 -> vcsh-0.20120227.tar.gz
+
+https://github.com/RichiH/vcsh/blob/master/README.md
+|| ( GPL-3 GPL-2 )
+Manage config files in $HOME via fake bare git repositories
+~amd64 ~x86
+
+
+
+
+
+4
+
+prepare
+
+
+
+
+

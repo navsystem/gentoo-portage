@@ -1,0 +1,22 @@
+app-text/silvercity dev-python/PyQt4[X] app-arch/unzip || ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) || ( =dev-lang/python-2.7*[tk] =dev-lang/python-2.6*[tk] )
+app-text/silvercity dev-python/PyQt4[X] || ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) || ( =dev-lang/python-2.7*[tk] =dev-lang/python-2.6*[tk] )
+0
+mirror://sourceforge/leo/Leo-4.10-final.zip
+
+http://leo.sourceforge.net/ http://pypi.python.org/pypi/leo
+as-is
+Leo: Literate Editor with Outlines
+~amd64 ~ppc ~x86
+distutils eutils multilib python toolchain-funcs user
+
+
+
+
+3
+
+compile install postinst postrm prepare setup
+
+
+
+
+
