@@ -14,7 +14,7 @@ eutils ghc-package multilib toolchain-funcs user versionator
 
 
 
-compile install postinst prerm setup
+compile install postinst prerm
 
 
 
