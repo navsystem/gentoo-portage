@@ -1,5 +1,5 @@
-sys-libs/zlib debug-utils? ( dev-python/matplotlib ) acl? ( sys-apps/acl sys-fs/e2fsprogs ) dev-vcs/git
-sys-libs/zlib debug-utils? ( dev-python/matplotlib ) acl? ( sys-apps/acl sys-fs/e2fsprogs )
+sys-libs/zlib sys-apps/acl sys-fs/e2fsprogs dev-vcs/git
+sys-libs/zlib sys-apps/acl sys-fs/e2fsprogs
 0
 
 
@@ -7,14 +7,14 @@ http://btrfs.wiki.kernel.org/
 GPL-2
 Btrfs filesystem utilities
 
-eutils git-2 multilib toolchain-funcs user
-acl debug-utils
+git-2 multilib toolchain-funcs
 
 
 
 
+4
 
-compile install postinst unpack
+compile install postinst prepare unpack
 
 
 

@@ -6,7 +6,7 @@ mirror://sourceforge/cdemu/gcdemu-1.5.0.tar.bz2
 http://cdemu.org/
 GPL-2
 Gtk+ GUI for controlling the CDEmu daemon (cdemud)
-amd64 ~x86
+amd64 x86
 eutils fdo-mime gnome.org gnome2 gnome2-utils libtool multilib python toolchain-funcs user versionator
 debug
 

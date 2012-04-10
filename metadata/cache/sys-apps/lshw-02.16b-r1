@@ -1,0 +1,22 @@
+gtk? ( x11-libs/gtk+:2 ) sqlite? ( dev-db/sqlite:3 ) gtk? ( dev-util/pkgconfig ) sqlite? ( dev-util/pkgconfig )
+gtk? ( x11-libs/gtk+:2 ) sqlite? ( dev-db/sqlite:3 ) sys-apps/hwids
+0
+http://ezix.org/software/files/lshw-B.02.16.tar.gz
+
+http://ezix.org/project/wiki/HardwareLiSter
+GPL-2
+Hardware Lister
+~amd64
+eutils flag-o-matic multilib toolchain-funcs user
+gtk sqlite static
+static? ( !gtk )
+
+
+4
+
+compile install prepare
+
+
+
+
+

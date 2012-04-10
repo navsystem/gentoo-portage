@@ -1,9 +1,9 @@
 >=app-text/chasen-2.3.1 || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 
 0
-http://chasen.aist-nara.ac.jp/stable/ipadic/ipadic-2.7.0.tar.gz
+mirror://sourceforge.jp/ipadic/24435/ipadic-2.7.0.tar.gz
 
-http://chasen.aist-nara.ac.jp/chasen/distribution.html.en
+http://sourceforge.jp/projects/ipadic/
 ipadic
 Japanese dictionary for ChaSen
 ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos
