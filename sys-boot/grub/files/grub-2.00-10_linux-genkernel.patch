@@ -1,49 +1,41 @@
 === modified file 'util/grub.d/10_linux.in'
 --- util/grub.d/10_linux.in	2012-03-10 14:21:25 +0000
-+++ util/grub.d/10_linux.in	2012-04-07 21:24:06 +0000
-@@ -135,7 +135,7 @@
-   message="$(gettext_printf "Loading Linux %s ..." ${version})"
-   sed "s/^/$submenu_indentation/" << EOF
- 	echo	'$message'
--	linux	${rel_dirname}/${basename} root=${linux_root_device_thisversion} ro ${args}
-+	linux	${rel_dirname}/${basename} ${rootcmd}=${linux_root_device_thisversion} ro ${args}
++++ util/grub.d/10_linux.in	2012-04-11 19:26:45 +0000
+@@ -150,7 +150,8 @@
  EOF
-   if test -n "${initrd}" ; then
-     # TRANSLATORS: ramdisk isn't identifier. Should be translated.
-@@ -181,19 +181,31 @@
-   alt_version=`echo $version | sed -e "s,\.old$,,g"`
-   linux_root_device_thisversion="${LINUX_ROOT_DEVICE}"
+ }
  
-+  rootcmd=root
-   initrd=
-+  pushd "${dirname}" > /dev/null
-   for i in "initrd.img-${version}" "initrd-${version}.img" "initrd-${version}.gz" \
+-case x`uname -m` in
++machine=`uname -m`
++case "x$machine" in
+     xi?86 | xx86_64)
+ 	list=`for i in /boot/vmlinuz-* /vmlinuz-* /boot/kernel-* ; do
+                   if grub_file_is_not_garbage "$i" ; then echo -n "$i " ; fi
+@@ -161,6 +162,15 @@
+ 	     done` ;;
+ esac
+ 
++if test "x${GENKERNEL_ARCH-unset}" = xunset; then
++  case "$machine" in
++    i?86) GENKERNEL_ARCH="x86" ;;
++    mips|mips64) GENKERNEL_ARCH="mips" ;;
++    arm*) GENKERNEL_ARCH="arm" ;;
++    *) GENKERNEL_ARCH="$machine" ;;
++  esac
++fi
++
+ prepare_boot_cache=
+ prepare_root_cache=
+ boot_device_id=
+@@ -186,8 +196,8 @@
  	   "initrd-${version}" "initramfs-${version}.img" \
  	   "initrd.img-${alt_version}" "initrd-${alt_version}.img" \
--	   "initrd-${alt_version}" "initramfs-${alt_version}.img" \
+ 	   "initrd-${alt_version}" "initramfs-${alt_version}.img" \
 -	   "initramfs-genkernel-${version}" \
 -	   "initramfs-genkernel-${alt_version}"; do
--    if test -e "${dirname}/${i}" ; then
-+	   "initrd-${alt_version}" "initramfs-${alt_version}.img"; do
-+    if test -e "${i}" ; then
++	   "initramfs-genkernel-${GENKERNEL_ARCH}-${version}" \
++	   "initramfs-genkernel-${GENKERNEL_ARCH}-${alt_version}"; do
+     if test -e "${dirname}/${i}" ; then
        initrd="$i"
        break
-     fi
-   done
- 
-+  if [ "x$initrd" = x ]; then
-+    for i in "initramfs-genkernel"*"-${version}" \
-+	     "initramfs-genkernel"*"-${alt_version}"; do
-+      if test -e "${i}"; then
-+	initrd="$i"
-+	rootcmd=real_root
-+	break
-+      fi
-+    done
-+  fi
-+  popd > /dev/null
-+
-   config=
-   for i in "${dirname}/config-${version}" "${dirname}/config-${alt_version}" "/etc/kernels/kernel-config-${version}" ; do
-     if test -e "${i}" ; then
 

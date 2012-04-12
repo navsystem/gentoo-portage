@@ -7,8 +7,8 @@ http://mattmahoney.net/dc/zpaq.html
 zpaq
 Library to compress files or objects in the ZPAQ format
 ~amd64 ~x86
-autotools autotools-utils eutils libtool multilib toolchain-funcs user
-static-libs
+autotools autotools-utils eutils flag-o-matic libtool multilib toolchain-funcs user
++jit static-libs
 
 
 
