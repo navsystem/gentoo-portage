@@ -1,0 +1,22 @@
+X? ( x11-apps/mkfontdir media-fonts/encodings ) >=media-libs/fontconfig-2.4.0
+
+0
+mirror://sourceforge/mdk-ut/umeplus-fonts-20120403.tar.lzma
+strip binchecks
+http://www.geocities.jp/ep3797/modified_fonts_01.html
+as-is mplus-fonts
+UmePlus fonts are modified Ume and M+ fonts for Japanese
+~amd64 ~x86 ~ppc-macos ~x86-macos
+eutils font multilib toolchain-funcs user
+X
+
+
+
+
+
+install postinst postrm setup
+
+
+
+
+

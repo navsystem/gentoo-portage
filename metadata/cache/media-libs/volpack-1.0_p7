@@ -8,13 +8,13 @@ BSD
 Volume rendering library
 ~amd64 ~x86
 
-doc examples
+doc examples static-libs
 
 
 
 4
 
-compile install
+compile configure install
 
 
 

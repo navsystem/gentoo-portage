@@ -1,5 +1,5 @@
 x11-libs/qt-core:4 x11-libs/qt-gui:4
-x11-libs/qt-core:4 x11-libs/qt-gui:4
+
 0
 http://games.technoplaza.net/ggencoder/qt/history/ggencoder-0.91a.tar.bz2
 
@@ -7,14 +7,14 @@ http://games.technoplaza.net/ggencoder/qt/
 GPL-2
 Utility to encode and decode Game Genie (tm) codes.
 amd64 x86
-base eutils multilib qt4 toolchain-funcs user versionator
+base eutils multilib qt4-r2 toolchain-funcs user
 doc
 
 
 
-2
+4
 
-compile configure install prepare setup unpack
+compile configure install prepare unpack
 
 
 
