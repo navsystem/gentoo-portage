@@ -195,6 +195,7 @@ app-arch/libarchive:bzip2 - Allow accessing bzip2-compressed archives through li
 app-arch/libarchive:e2fsprogs - Use file flags from sys-fs/e2fsprogs headers instead of virtual/os-headers headers
 app-arch/libarchive:nettle - Use dev-libs/nettle as crypto backend
 app-arch/libarchive:zlib - Allow accessing gzip-compressed archives through sys-libs/zlib. This only affects libarchive's native support: bsdtar will keep using gunzip as a filter if that's not built-in. It's also needed for supporting extraction of ZIP files.
+app-arch/libzpaq:jit - Enable just-in-time compilation for faster compression (requires SSE2)
 app-arch/p7zip:rar - Enable support for non-free rar decoder
 app-arch/pbzip2:symlink - Install symlinks which override app-arch/bzip2 implementation
 app-arch/rar:all_sfx - Install all SFX (Self-Extracting) files rather than just the native format (allows creation of Windows EXEs on Linux ELF systems)
@@ -282,6 +283,7 @@ app-crypt/shishi:null - Enable dummy NULL encryption/checksum type.
 app-crypt/tpm-tools:pkcs11 - Build Token data management utilities based on OpenCryptoki's (dev-libs/opencryptoki) PKCS#11 implementation.
 app-dicts/aspell-be:classic - Support classic spelling by default
 app-dicts/gwaei:unique - Enable single instance support using dev-libs/libunique.
+app-doc/csound-manual:html - Install HTML documentation
 app-doc/doxygen:dot - allow to create dot graphs using media-gfx/graphviz
 app-doc/doxygen:nodot - removes graphviz dependency, along with dot graphs
 app-doc/doxygen:tcl - adds experimental support for parsing/documenting Tcl source code
@@ -923,6 +925,7 @@ app-text/yagf:tesseract - Enable support for the app-text/tesseract OCR engine.
 app-vim/gentoo-syntax:ignore-glep31 - Remove GLEP 31 (UTF-8 file encodings) settings
 app-vim/vim-latex:html - Install HTML documentation
 dev-cpp/glog:gflags - Use gflags module for flag parsing
+dev-cpp/gtkmm:wayland - Enable dev-libs/wayland backend
 dev-cpp/pficommon:fcgi - Build FCGI feature
 dev-cpp/pficommon:mprpc - Build MessagePack RPC feature
 dev-cpp/sptk:aspell - Enable support for app-text/aspell
@@ -1530,7 +1533,6 @@ dev-python/pypy:sandbox - Enable sandboxing functionality
 dev-python/pypy:shadowstack - Use a shadow stack for finding GC roots
 dev-python/pypy:stackless - Enable running with stackless features
 dev-python/pyside:X - Build QtGui, QtDesigner, QtTest and QtUiTools modules
-dev-python/pyside:assistant - Build QtHelp module
 dev-python/pyside:declarative - Build QtDeclarative module
 dev-python/pyside:help - Build QtHelp module
 dev-python/pyside:kde - Select media-sound/phonon as phonon variant, needed for KDE4
@@ -1930,6 +1932,7 @@ gnome-base/gnome-panel:introspection - Use dev-libs/gobject-introspection for in
 gnome-base/gnome-settings-daemon:colord - Support color management using x11-misc/colord
 gnome-base/gnome-settings-daemon:packagekit - Enable support for the distro-neutral package manager GUI app-admin/packagekit
 gnome-base/gnome-settings-daemon:short-touchpad-timeout - Change the touchpad timeout so that it's effective for fast typists
+gnome-base/gsettings-desktop-schemas:introspection - Use dev-libs/gobject-introspection for introspection
 gnome-base/gvfs:afp - Enables support for accessing AFP (Apple Filing Protocol) network shares
 gnome-base/gvfs:archive - Enables support for accessing files in archives transparently via app-arch/libarchive
 gnome-base/gvfs:bluray - Enable playback of Blu-ray filesystems using media-libs/libbluray
@@ -2725,11 +2728,9 @@ media-sound/cmus:wma - add support for Windows Media Audio
 media-sound/csound:beats - Build the beats score frontend
 media-sound/csound:chua - Build the chua opcodes
 media-sound/csound:csoundac - Build the CsoundAC extension module
-media-sound/csound:doc - Install the pdf version of the manual
 media-sound/csound:double-precision - Use double-precision floating point for audio samples
 media-sound/csound:dssi - Build the DSSI opcodes
 media-sound/csound:fluidsynth - Build the fluidsynth opcodes
-media-sound/csound:html - Install the html version of the manual
 media-sound/csound:image - Build the image opcodes
 media-sound/csound:keyboard - Build Virtual MIDI keyboard
 media-sound/csound:linear - Build the linear algebra Opcodes
@@ -3829,6 +3830,20 @@ net-libs/axTLS:static - Statically build axhttpd server
 net-libs/c-client:doc - Install RFCs related to IMAP
 net-libs/courier-authlib:vpopmail - Enable vpopmail support
 net-libs/cvm:vpopmail - Enable vpopmail support
+net-libs/cyassl:aes-ni - Enable Intel AES instruction support
+net-libs/cyassl:big - Choose big cache size (excludes small or huge)
+net-libs/cyassl:cyassl-hardening - Add hardening flags to CFLAGS/LDFLAGS
+net-libs/cyassl:dtls - Enable datagram TLS
+net-libs/cyassl:hc128 - Enable HC-128 support
+net-libs/cyassl:httpd - Enable features for yaSSL web server
+net-libs/cyassl:huge - Choose big cache size (excludes small or big)
+net-libs/cyassl:psk - Enable Pre-Shared Key support
+net-libs/cyassl:ripemd - Enable RIPEMD-160 support
+net-libs/cyassl:sessioncerts - Store session certificates
+net-libs/cyassl:sha512 - Enable SHA-160 support
+net-libs/cyassl:small - Choose small cache size (excludes big or huge)
+net-libs/cyassl:sniffer - Allow collection/decryption of SSL traffic
+net-libs/cyassl:testcert - Enable certificate testing
 net-libs/daq:afpacket - Build the AFPacket data acquisition module. Functions similar to the PCAP module but with better performance. Snort can run unprivileged when using this module. AFpacket supports both inline and passive modes.
 net-libs/daq:dump - Build the Dump data acquisition module. The dump DAQ allows you to test the various inline mode features available in 2.9 Snort like injection and normalization.
 net-libs/daq:ipq - Build the IPQ data acquisition module. IPQ is the old way to process iptables packets for inline deployments. Snort can not run unprivileged when using this module.
@@ -5281,6 +5296,7 @@ www-client/leechcraft-poshuku:keywords - Build Keywords for adjusting search sho
 www-client/leechcraft-poshuku:onlinebookmarks - Build OnlineBookmarks for syncing bookmarks with social bookmarking services like Read It Later.
 www-client/leechcraft-poshuku:pogooglue - Build Pogooglue for searching for selected words in Google in two clicks
 www-client/leechcraft-poshuku:wyfv - Build WYFV for replacing Flash-based video players on some sites.
+www-client/links:deprecated - Install deprecated 'links2 -> links' symlink for compability reasons temporarily
 www-client/luakit:helpers - Optional tools used by luakit
 www-client/luakit:luajit - Use the lua just-in-time compiler dev-lang/luajit instead of dev-lang/lua, which should make luakit faster.
 www-client/lynx:gnutls - Use gnutls library for HTTPS support (openssl is the default library for HTTPS support).

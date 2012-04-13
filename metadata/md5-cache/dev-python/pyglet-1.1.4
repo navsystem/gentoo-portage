@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install postinst postrm prepare
-DEPEND=dev-lang/python
+DEPEND=virtual/opengl alsa? ( media-libs/alsa-lib[alisp] ) gtk? ( x11-libs/gtk+:2 ) openal? ( media-libs/openal ) dev-lang/python
 DESCRIPTION=Cross-platform windowing and multimedia library for Python
 EAPI=2
 HOMEPAGE=http://www.pyglet.org/
@@ -10,4 +10,4 @@ RDEPEND=virtual/opengl alsa? ( media-libs/alsa-lib[alisp] ) gtk? ( x11-libs/gtk+
 SLOT=0
 SRC_URI=http://pyglet.googlecode.com/files/pyglet-1.1.4.tar.gz
 _eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	multilib	5f4ad6cf85e365e8f0c6050ddd21659e	python	36d7e2b7aa4dce62364c72eec96610cf	toolchain-funcs	6526ac6fc9aedf391efb91fcd75ace68
-_md5_=271403299d5033f4b1a50c02bb13cdc4
+_md5_=872fc677fa4da8293c69c66e3db96872
