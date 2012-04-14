@@ -1,5 +1,5 @@
-
-
+alsa? ( >=media-libs/alsa-lib-1.0.24.1 )
+alsa? ( >=media-libs/alsa-lib-1.0.24.1 )
 0
 http://www.speech.cs.cmu.edu/flite/packed/flite-1.4/flite-1.4-release.tar.bz2
 
@@ -12,7 +12,7 @@ alsa oss static-libs
 
 
 
-2
+3
 
 compile configure install postinst prepare
 

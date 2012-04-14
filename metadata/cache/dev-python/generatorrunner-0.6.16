@@ -6,7 +6,7 @@ http://www.pyside.org/files/generatorrunner-0.6.16.tar.bz2
 http://www.pyside.org/
 GPL-2
 A tool to control bindings generation
-~amd64 ~x86
+amd64 ~x86
 base cmake-utils eutils flag-o-matic multilib toolchain-funcs user
 debug test
 

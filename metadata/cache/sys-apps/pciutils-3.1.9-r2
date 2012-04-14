@@ -6,7 +6,7 @@ ftp://atrey.karlin.mff.cuni.cz/pub/linux/pci/pciutils-3.1.9.tar.gz
 http://atrey.karlin.mff.cuni.cz/~mj/pciutils.html
 GPL-2
 Various utilities dealing with the PCI bus
-~amd64 ~hppa ~x86-fbsd
+~amd64 ~hppa ~x86-fbsd ~amd64-linux ~x86-linux
 eutils multilib toolchain-funcs user
 static-libs zlib
 

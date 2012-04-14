@@ -6,7 +6,7 @@ http://ezix.org/software/files/lshw-B.02.16.tar.gz
 http://ezix.org/project/wiki/HardwareLiSter
 GPL-2
 Hardware Lister
-~amd64
+~amd64 ~amd64-linux ~x86-linux
 eutils flag-o-matic multilib toolchain-funcs user
 gtk sqlite static
 static? ( !gtk )

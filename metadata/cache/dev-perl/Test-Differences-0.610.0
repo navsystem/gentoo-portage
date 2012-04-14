@@ -6,7 +6,7 @@ mirror://cpan/authors/id/O/OV/OVID/Test-Differences-0.61.tar.gz
 http://search.cpan.org/dist/Test-Differences/
 || ( Artistic GPL-1 GPL-2 GPL-3 )
 Test strings and data structures and show differences if not ok
-amd64 hppa ~x86
+amd64 hppa x86
 base eutils multilib perl-module toolchain-funcs user
 test
 
