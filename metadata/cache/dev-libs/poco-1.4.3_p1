@@ -1,0 +1,22 @@
+>=dev-libs/libpcre-8.13 dev-libs/expat sys-libs/zlib mysql? ( virtual/mysql ) odbc? ( iodbc? ( dev-db/libiodbc ) !iodbc? ( dev-db/unixODBC ) ) ssl? ( dev-libs/openssl ) sqlite? ( dev-db/sqlite:3 )
+>=dev-libs/libpcre-8.13 dev-libs/expat sys-libs/zlib mysql? ( virtual/mysql ) odbc? ( iodbc? ( dev-db/libiodbc ) !iodbc? ( dev-db/unixODBC ) ) ssl? ( dev-libs/openssl ) sqlite? ( dev-db/sqlite:3 )
+0
+mirror://sourceforge/poco/poco-1.4.3p1-all.tar.bz2 doc? ( mirror://sourceforge/poco/poco-1.4.3-all-doc.zip )
+
+http://pocoproject.org/
+Boost-1.0
+C++ class libraries that simplify and accelerate the development of network-centric, portable applications.
+~amd64 ~arm ~x86
+eutils flag-o-matic multilib toolchain-funcs user versionator
+doc examples iodbc mysql odbc sqlite ssl test
+
+
+
+2
+
+compile configure install prepare
+
+
+
+
+

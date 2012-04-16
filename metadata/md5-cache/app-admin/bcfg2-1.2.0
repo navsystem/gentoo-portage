@@ -10,4 +10,4 @@ RDEPEND=app-portage/gentoolkit server? ( dev-python/lxml dev-libs/libgamin[pytho
 SLOT=0
 SRC_URI=ftp://ftp.mcs.anl.gov/pub/bcfg/bcfg2-1.2.0.tar.gz
 _eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	multilib	5f4ad6cf85e365e8f0c6050ddd21659e	python	36d7e2b7aa4dce62364c72eec96610cf	toolchain-funcs	6526ac6fc9aedf391efb91fcd75ace68
-_md5_=e2fa6ccad825bf266ec9f8e12b702790
+_md5_=31756cd1bd9616e8d830d44dbc0170db

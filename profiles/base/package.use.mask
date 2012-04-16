@@ -1,9 +1,26 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.338 2012/04/12 04:14:39 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.341 2012/04/13 23:26:52 tetromino Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (13 Apr 2012)
+# Masked in base and unmasked on arches where app-misc/geoclue and
+# app-accessibility/at-spi2-core are available.
+net-libs/webkit-gtk geoloc webkit2
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (13 Apr 2012)
+# Packages with optional systemd support. Masked in base and unmasked on arches
+# where sys-apps/systemd is available.
+gnome-extra/gnome-screensaver systemd
+gnome-extra/gnome-system-monitor systemd
+net-misc/networkmanager systemd
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (12 Apr 2012)
+# Temporary mask-in-base, unmask-in-arch for dev-python/mako keywording for
+# gobject-introspection[doctool], bug #411761
+dev-libs/gobject-introspection doctool
 
 # Sebastian Pipping <sping@gentoo.org> (12 Apr 2012)
 # Compilation fails due to a bug in dev-libs/gobject-introspection
@@ -30,11 +47,6 @@ dev-util/kdevelop-php doc
 # webrtc-audio-processing is only supported on x86/amd64. Possibly arm can be
 # added.
 media-sound/pulseaudio webrtc-aec
-
-# Alexandre Rostovtsev <tetromino@gentoo.org> (11 Feb 2012)
-# Requires >=sys-apps/systemd-31, which is masked and keyworded only for two
-# arches.
-net-misc/networkmanager systemd
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (27 Mar 2012)
 # Requires libxkbcommon from the x11 overlay
@@ -72,11 +84,6 @@ sys-apps/portage pypy1_8
 # Justin Lecher <jlec@gentoo.org> (13. Feb 2012)
 # Is broken somehow, upstream informed
 >=sci-chemistry/pymol-1.5.0.1 vmd
-
-# Alexandre Rostovtsev <tetromino@gentoo.org> (11 Feb 2012)
-# Requires >=sys-apps/systemd-31, which is masked and keyworded only for two
-# arches.
-gnome-extra/gnome-screensaver systemd
 
 # Samuli Suominen <ssuominen@gentoo.org> (10 Feb 2012)
 # Looks like 6.7.6.4 worksagain wrt bug #401327

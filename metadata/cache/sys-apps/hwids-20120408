@@ -6,7 +6,7 @@ http://dev.gentoo.org/~flameeyes/hwids/hwids-20120408.tar.xz
 http://git.overlays.gentoo.org/gitweb/?p=proj/hwids.git;a=summary
 || ( GPL-2 BSD )
 Hardware (PCI, USB) IDs databases
-~amd64 ~hppa ~x86-fbsd
+~amd64 ~hppa ~x86-fbsd ~amd64-linux ~x86-linux
 
 
 

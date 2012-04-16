@@ -1,0 +1,22 @@
+>=dev-libs/glib-2.18:2 >=x11-libs/gtk+-2.90:3 media-libs/libcanberra[gtk3] >=app-cdr/brasero-2.90 >=gnome-base/gconf-2:2 sys-apps/dbus media-libs/libdiscid media-libs/musicbrainz:4 >=media-libs/gstreamer-0.10.32:0.10 >=media-libs/gst-plugins-base-0.10:0.10 >=dev-util/pkgconfig-0.9 >=dev-util/intltool-0.40 >=app-text/scrollkeeper-0.3.5 app-text/gnome-doc-utils test? ( ~app-text/docbook-xml-dtd-4.3 ) app-arch/xz-utils >=sys-apps/sed-4
+>=dev-libs/glib-2.18:2 >=x11-libs/gtk+-2.90:3 media-libs/libcanberra[gtk3] >=app-cdr/brasero-2.90 >=gnome-base/gconf-2:2 sys-apps/dbus media-libs/libdiscid media-libs/musicbrainz:4 >=media-libs/gstreamer-0.10.32:0.10 >=media-libs/gst-plugins-base-0.10:0.10 gnome-base/gvfs[cdda,udev] >=media-plugins/gst-plugins-gconf-0.10:0.10 >=media-plugins/gst-plugins-gio-0.10:0.10 || ( >=media-plugins/gst-plugins-cdparanoia-0.10:0.10 >=media-plugins/gst-plugins-cdio-0.10:0.10 ) >=media-plugins/gst-plugins-meta-0.10-r2:0.10
+0
+mirror://gnome/sources/sound-juicer/3.4/sound-juicer-3.4.0.tar.xz
+
+http://www.burtonini.com/blog/computers/sound-juicer/
+GPL-2
+CD ripper for GNOME
+~amd64 ~x86
+eutils fdo-mime gnome.org gnome2 gnome2-utils libtool multilib toolchain-funcs user versionator
+test debug
+
+
+
+4
+
+compile configure install postinst postrm preinst prepare setup unpack
+
+
+
+
+
