@@ -6,7 +6,7 @@ http://www.parseerror.com/lanmap/rev/lanmap-2006-03-07-rev81.zip
 http://www.parseerror.com/lanmap
 GPL-2
 lanmap sits quietly on a network and builds a picture of what it sees
-~amd64 ~x86 ~x86-linux
+~amd64 ~x86 ~amd64-linux ~x86-linux
 eutils multilib toolchain-funcs user
 
 
