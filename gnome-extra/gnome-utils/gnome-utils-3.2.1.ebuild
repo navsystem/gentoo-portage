@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-3.2.1.ebuild,v 1.3 2012/04/15 04:45:29 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-3.2.1.ebuild,v 1.5 2012/04/16 17:32:38 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -56,20 +56,20 @@ pkg_setup() {
 
 src_prepare() {
 	# Fix missing freetype2 headers/libs with gtk+-3.4, bug #411939
-	epatch "${FILESDIR}/${PN}-3.2.1-gtk+-3.4-ft2.patch"
+	epatch "${FILESDIR}/${PN}-3.2.1-glib-2.32-gtk-3.4.patch"
 	eautoreconf
 
 	# Remove idiotic -D.*DISABLE_DEPRECATED cflags
 	# This method is kinda prone to breakage. Recheck carefully with next bump.
 	# bug 339074
-	find . -iname 'Makefile.am' -exec \
+	LC_ALL=C find . -iname 'Makefile.am' -exec \
 		sed -e '/-D[A-Z_]*DISABLE_DEPRECATED/d' -i {} + || die "sed 1 failed"
 	# Do Makefile.in after Makefile.am to avoid automake maintainer-mode
-	find . -iname 'Makefile.in' -exec \
-		sed -e '/-D[A-Z_]*DISABLE_DEPRECATED/d' -i {} + || die "sed 1 failed"
+	LC_ALL=C find . -iname 'Makefile.in' -exec \
+		sed -e '/-D[A-Z_]*DISABLE_DEPRECATED/d' -i {} + || die "sed 2 failed"
 
 	if ! use test ; then
-		sed -e 's/ tests//' -i logview/Makefile.{am,in} || die "sed 2 failed"
+		sed -e 's/ tests//' -i logview/Makefile.{am,in} || die "sed 3 failed"
 	fi
 
 	gnome2_src_prepare
