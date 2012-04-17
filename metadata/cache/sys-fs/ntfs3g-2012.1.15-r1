@@ -1,5 +1,5 @@
-!sys-fs/ntfsprogs crypt? ( >=dev-libs/libgcrypt-1.2.2 >=net-libs/gnutls-1.4.4 ) external-fuse? ( >=sys-fs/fuse-2.8.0 ) dev-util/pkgconfig sys-apps/attr
-!sys-fs/ntfsprogs crypt? ( >=dev-libs/libgcrypt-1.2.2 >=net-libs/gnutls-1.4.4 ) external-fuse? ( >=sys-fs/fuse-2.8.0 )
+!<sys-apps/util-linux-2.19 !sys-fs/ntfsprogs crypt? ( >=dev-libs/libgcrypt-1.2.2 >=net-libs/gnutls-1.4.4 ) external-fuse? ( >=sys-fs/fuse-2.8.0 ) dev-util/pkgconfig sys-apps/attr
+!<sys-apps/util-linux-2.19 !sys-fs/ntfsprogs crypt? ( >=dev-libs/libgcrypt-1.2.2 >=net-libs/gnutls-1.4.4 ) external-fuse? ( >=sys-fs/fuse-2.8.0 )
 0
 http://tuxera.com/opensource/ntfs-3g_ntfsprogs-2012.1.15.tgz
 

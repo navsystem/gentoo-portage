@@ -1,0 +1,22 @@
+>=dev-libs/glib-2 >=media-libs/libpng-1.2 doc? ( app-doc/doxygen ) >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+>=dev-libs/glib-2 >=media-libs/libpng-1.2
+0
+http://dev.gentoo.org/~dilfridge/distfiles/lensfun-0.2.5_p153.tar.xz
+
+http://lensfun.berlios.de/
+LGPL-3
+lensfun: A library for rectifying and simulating photographic lens distortions
+~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86
+base cmake-utils eutils flag-o-matic multilib python toolchain-funcs user
+doc
+
+
+
+4
+
+compile configure install prepare setup test unpack
+
+
+
+
+

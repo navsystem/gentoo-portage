@@ -1,0 +1,22 @@
+dev-lang/perl[-build]
+dev-lang/perl[-build]
+0
+mirror://cpan/authors/id/M/MN/MNEYLON/File-Grep-0.02.tar.gz
+
+http://search.cpan.org/dist/File-Grep/
+|| ( Artistic GPL-1 GPL-2 GPL-3 )
+Find matches to a pattern in a series of files and related functions
+~amd64 ~x86
+base eutils multilib perl-module toolchain-funcs user
+
+
+
+
+4
+
+compile configure install prepare test unpack
+
+
+
+
+
