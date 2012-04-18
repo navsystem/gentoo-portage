@@ -6,7 +6,7 @@ mirror://cpan/authors/id/R/RJ/RJBS/Mail-Audit-2.227.tar.gz
 http://search.cpan.org/dist/Mail-Audit/
 || ( Artistic GPL-1 GPL-2 GPL-3 )
 Mail sorting/delivery module for Perl.
-amd64 ~ppc x86
+amd64 ppc x86
 base eutils multilib perl-module toolchain-funcs user
 
 

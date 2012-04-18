@@ -1,0 +1,22 @@
+dev-python/configshell dev-python/rtslib sys-block/lio-utils =dev-lang/python-2* dev-vcs/git
+dev-python/configshell dev-python/rtslib sys-block/lio-utils =dev-lang/python-2*
+0
+
+
+http://linux-iscsi.org/
+AGPL-3
+The targetcli administration shell
+
+distutils eutils git-2 linux-info multilib python toolchain-funcs user versionator
+
+
+
+
+4
+
+compile install postinst postrm prepare setup unpack
+
+
+
+
+

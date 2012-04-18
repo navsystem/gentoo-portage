@@ -1,0 +1,22 @@
+
+app-crypt/gnupg dev-lang/perl virtual/perl-Storable virtual/perl-File-Temp virtual/perl-Getopt-Long dev-perl/Config-Simple zsh-completion? ( app-shells/zsh )
+0
+http://dev.gentoo.org/~flameeyes/sgeps/sgeps-0_pre15.tar.xz
+
+http://roland.entierement.nu/blog/2010/01/22/simple-gnupg-encrypted-password-store.html
+GPL-2
+simple GnuPG-encrypted password store written in perl
+~amd64
+
+zsh-completion
+
+
+
+4
+
+install postinst
+
+
+
+
+

@@ -1,0 +1,22 @@
+=dev-lang/python-2* dev-vcs/git
+=dev-lang/python-2*
+0
+
+
+https://github.com/Lawouach/WebSocket-for-Python
+BSD
+WebSocket support for Python
+
+distutils git-2 multilib python toolchain-funcs
+
+
+
+
+4
+
+compile install postinst postrm prepare setup unpack
+
+
+
+
+

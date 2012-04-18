@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.5.907.ebuild,v 1.1 2012/02/24 22:27:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.5.907.ebuild,v 1.3 2012/04/18 02:09:29 jdhore Exp $
 
 EAPI=4
 inherit autotools eutils fdo-mime gnome2-utils multilib nsplugins
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/xine/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 x86"
 IUSE="gnome-screensaver linguas_cs linguas_de lirc nls nsplugin udev +xcb xinerama"
 
 COMMON_DEPEND=">=media-libs/xine-lib-1.1.20
@@ -43,7 +43,8 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-0.5.905-desktop.patch \
 		"${FILESDIR}"/${PN}-0.5.905-fix-nspr-useage.patch \
-		"${FILESDIR}"/${PN}-0.5.906-endif.patch
+		"${FILESDIR}"/${PN}-0.5.906-endif.patch \
+		"${FILESDIR}"/${PN}-0.5.907-glib-2.31.patch
 
 	# need to disable calling of xine-list when running without
 	# userpriv, otherwise we get sandbox violations (bug #233847)

@@ -1,4 +1,4 @@
-!dev-perl/Mail-SRS
+!dev-perl/Mail-SRS || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 
 0
 http://srs.mirtol.com/libsrs_alt-1.0.tar.gz
@@ -6,15 +6,15 @@ http://srs.mirtol.com/libsrs_alt-1.0.tar.gz
 http://srs.mirtol.com/
 GPL-2
 Sender Rewriting Scheme library
-alpha amd64 hppa ia64 ppc ppc64 sparc x86
+alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd
+autotools eutils libtool multilib toolchain-funcs user
 
 
 
 
 
 
-
-compile install
+compile install unpack
 
 
 

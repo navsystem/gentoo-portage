@@ -3,7 +3,7 @@ app-arch/unzip >=virtual/jdk-1.6 freemail? ( >=dev-java/bcprov-1.45 ) dev-java/c
 0
 http://github.com/freenet/fred-official/zipball/build01406 -> freenet-0.7.5_p1406.zip mirror://gentoo/seednodes-20120404.fref.bz2 mirror://gentoo/freenet-ant-1.7.1.jar
 
-http://www.freenetproject.org/
+https://freenetproject.org/
 as-is GPL-2
 An encrypted network without censorship
 ~amd64 ~x86
