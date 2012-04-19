@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.5.6-r1.ebuild,v 1.2 2012/03/19 22:18:08 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.5.6-r1.ebuild,v 1.4 2012/04/18 17:51:51 ago Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="aac aften alsa amr gtk jack +mp3 nls opengl oss pulseaudio
 	qt4 sdl +truetype vorbis vpx +x264 +xv +xvid"
 
@@ -63,17 +63,19 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 "
 
-S=${WORKDIR}/${MY_P}
-BUILD_S=${WORKDIR}/${P}_build
-
 AVIDEMUX_LANGS="bg ca cs de el es fr it ja pt_BR ru sr sr@latin tr zh_TW"
 for lang in ${AVIDEMUX_LANGS}; do
 	IUSE+=" linguas_${lang}"
 done
 unset lang
 
+S=${WORKDIR}/${MY_P}
+BUILD_S=${WORKDIR}/${P}_build
+
+DOCS=( AUTHORS )
 PATCHES=(
 	"${FILESDIR}/${PN}-2.5.4-build-plugins-fix.patch"
+	"${FILESDIR}/${P}-ffmpeg-symbol-visibility.patch"
 )
 
 src_prepare() {
@@ -162,9 +164,7 @@ src_install() {
 	# install plugins
 	emake -C "${CMAKE_BUILD_DIR}/plugins" DESTDIR="${D}" install
 
-	dodoc AUTHORS
 	newicon ${PN}_icon.png ${PN}.png
-
 	use gtk && domenu avidemux2-gtk.desktop
 	use qt4 && domenu avidemux2.desktop
 }

@@ -6,7 +6,7 @@ http://www.freedesktop.org/software/accountsservice/accountsservice-0.6.15.tar.x
 http://www.fedoraproject.org/wiki/Features/UserAccountDialog
 GPL-3
 D-Bus interfaces for querying and manipulating user account information
-~amd64 ~arm ~x86
+amd64 ~arm ~x86
 eutils fdo-mime gnome.org gnome2 gnome2-utils libtool multilib systemd toolchain-funcs user versionator
 doc +introspection
 

@@ -1,0 +1,22 @@
+!sys-cluster/torque !net-analyzer/slurm mysql? ( dev-db/mysql ) munge? ( sys-auth/munge ) ypbind? ( net-nds/ypbind ) pam? ( virtual/pam ) postgres? ( dev-db/postgresql-base ) ssl? ( dev-libs/openssl ) >=sys-apps/hwloc-1.1.1-r1 dev-lang/perl[-build]
+!sys-cluster/torque !net-analyzer/slurm mysql? ( dev-db/mysql ) munge? ( sys-auth/munge ) ypbind? ( net-nds/ypbind ) pam? ( virtual/pam ) postgres? ( dev-db/postgresql-base ) ssl? ( dev-libs/openssl ) >=sys-apps/hwloc-1.1.1-r1 maui? ( sys-cluster/maui[slurm] ) dev-lang/perl[-build]
+0
+http://www.schedmd.com/download/latest/slurm-2.3.4.tar.bz2
+primaryuri
+https://computing.llnl.gov/linux/slurm/
+GPL-2
+SLURM: A Highly Scalable Resource Manager
+~amd64 ~x86
+base eutils flag-o-matic multilib pam perl-module toolchain-funcs user versionator
+maui +munge mysql pam perl postgres ssl static-libs torque ypbind
+torque? ( perl )
+
+
+4
+
+compile configure install postinst preinst prepare setup test unpack
+
+
+
+
+

@@ -1,0 +1,22 @@
+dev-lang/perl virtual/latex-base doc? ( app-text/dvipsk app-text/docbook-sgml-utils[jadetex] )
+dev-lang/perl virtual/latex-base
+0
+mirror://sourceforge/muttprint/muttprint-0.73.tar.gz
+
+http://muttprint.sourceforge.net
+GPL-2
+Script for pretty printing of your mails
+~amd64 ~ppc ~ppc64 ~x86
+autotools autotools-utils eutils libtool multilib toolchain-funcs user
+doc
+
+
+
+4
+
+compile configure install prepare test
+
+
+
+
+

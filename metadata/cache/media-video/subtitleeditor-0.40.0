@@ -6,7 +6,7 @@ http://download.gna.org/subtitleeditor/0.40/subtitleeditor-0.40.0.tar.gz
 http://home.gna.org/subtitleeditor/
 GPL-2
 GTK+2 subtitle editing tool.
-~amd64 ~x86
+amd64 ~x86
 eutils flag-o-matic multilib toolchain-funcs user versionator
 debug nls opengl
 
