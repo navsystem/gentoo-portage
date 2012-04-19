@@ -1,0 +1,22 @@
+snmp? ( net-analyzer/net-snmp ) =dev-lang/python-2* dev-vcs/git
+snmp? ( net-analyzer/net-snmp ) =dev-lang/python-2*
+0
+
+
+http://linux-iscsi.org/
+GPL-3
+Tools for controlling target_core_mod/ConfigFS
+
+distutils eutils git-2 linux-info multilib python toolchain-funcs user versionator
+snmp
+
+
+
+4
+
+compile install postinst postrm prepare setup unpack
+
+
+
+
+

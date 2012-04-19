@@ -1,7 +1,7 @@
 >=net-libs/libsoup-2.32:2.4 !gtk3? ( >=net-libs/webkit-gtk-1.4.0:2 x11-libs/gtk+:2 ) gtk3? ( >=net-libs/webkit-gtk-1.4.0:3 x11-libs/gtk+:3 ) dev-util/pkgconfig
 >=net-libs/libsoup-2.32:2.4 !gtk3? ( >=net-libs/webkit-gtk-1.4.0:2 x11-libs/gtk+:2 ) gtk3? ( >=net-libs/webkit-gtk-1.4.0:3 x11-libs/gtk+:3 )
 0
-https://bitbucket.org/portix/dwb/downloads/dwb-2012.02.01.tar.gz
+mirror://bitbucket/portix/dwb/downloads/dwb-2012.02.01.tar.gz
 
 http://portix.bitbucket.org/dwb/
 GPL-3

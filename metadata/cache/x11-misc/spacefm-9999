@@ -1,14 +1,14 @@
->=dev-libs/glib-2 dev-util/desktop-file-utils sys-apps/dbus x11-libs/gdk-pixbuf x11-libs/gtk+:2 x11-libs/startup-notification dev-util/intltool dev-util/pkgconfig sys-devel/gettext dev-vcs/git
->=dev-libs/glib-2 dev-util/desktop-file-utils sys-apps/dbus x11-libs/gdk-pixbuf x11-libs/gtk+:2 x11-libs/startup-notification virtual/eject virtual/freedesktop-icon-theme x11-misc/shared-mime-info !kernel_linux? ( fam? ( virtual/fam ) ) udev? ( sys-fs/udisks:0 sys-process/lsof ) su? ( gtk? ( x11-libs/gksu ) kde? ( kde-base/kdesu ) || ( x11-misc/ktsuss x11-libs/gksu kde-base/kdesu ) )
+dev-libs/glib:2 dev-util/desktop-file-utils sys-apps/dbus >=sys-fs/udev-143 virtual/freedesktop-icon-theme x11-libs/cairo x11-libs/gdk-pixbuf x11-libs/gtk+:2 x11-libs/pango x11-libs/startup-notification x11-misc/shared-mime-info dev-util/intltool dev-util/pkgconfig sys-devel/gettext dev-vcs/git
+dev-libs/glib:2 dev-util/desktop-file-utils sys-apps/dbus >=sys-fs/udev-143 virtual/freedesktop-icon-theme x11-libs/cairo x11-libs/gdk-pixbuf x11-libs/gtk+:2 x11-libs/pango x11-libs/startup-notification x11-misc/shared-mime-info
 0
 
 
-http://spacefm.sourceforge.net/
+http://ignorantguru.github.com/spacefm/
 GPL-2 LGPL-2.1
-a multi-panel tabbed file manager
+A multi-panel tabbed file manager
 
 fdo-mime git-2
-fam gtk kde kernel_linux su udev
+
 
 
 

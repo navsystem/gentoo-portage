@@ -1,5 +1,5 @@
 
-|| ( >=net-libs/xulrunner-1.9.1 >=www-client/firefox-5.0 >=www-client/firefox-bin-5.0 )
+|| ( >=www-client/firefox-5.0 >=www-client/firefox-bin-5.0 )
 0
 mirror://gentoo/conkeror-1.0_pre20120223.tar.gz mirror://gentoo/conkeror.png
 
