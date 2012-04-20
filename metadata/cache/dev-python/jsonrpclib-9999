@@ -1,0 +1,22 @@
+dev-lang/python dev-vcs/git
+dev-python/simplejson dev-lang/python
+0
+
+
+https://github.com/joshmarshall/jsonrpclib
+Apache-2.0
+python implementation of the JSON-RPC spec (1.0 and 2.0)
+
+distutils git-2 multilib python toolchain-funcs
+
+
+
+
+4
+
+compile install postinst postrm prepare setup unpack
+
+
+
+
+

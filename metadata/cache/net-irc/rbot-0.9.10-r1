@@ -6,7 +6,7 @@ http://www.linuxbrit.co.uk/downloads/rbot-0.9.10.gem
 http://www.linuxbrit.co.uk/rbot/
 as-is
 rbot is a ruby IRC bot
-~amd64 ~ppc ~sparc x86 ~x86-fbsd
+~amd64 ~ppc x86 ~x86-fbsd
 eutils gems multilib ruby toolchain-funcs user
 spell doc
 

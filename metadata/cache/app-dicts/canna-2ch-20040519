@@ -1,0 +1,22 @@
+canna? ( app-i18n/canna )
+
+0
+http://dev.gentoo.org/~naota/files/canna-2ch-20040519.tar.gz
+
+http://omaemona.sourceforge.net/packages/Canna/
+public-domain
+Japanese Canna dictionary for 2channelers
+~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86
+cannadic eutils multilib toolchain-funcs user
+canna
+
+
+
+
+
+compile install postinst postrm setup
+
+
+
+
+
