@@ -1,5 +1,5 @@
 >=dev-libs/glib-2.25.10 gnome-base/libgtop:2 x11-libs/cairo x11-libs/gdk-pixbuf:2 >=x11-libs/gtk+-2.90.4:3 x11-libs/pango >=dev-util/intltool-0.40 >=dev-util/pkgconfig-0.9 app-text/gnome-doc-utils sys-devel/gettext app-arch/xz-utils >=sys-apps/sed-4
->=dev-libs/glib-2.25.10 gnome-base/libgtop:2 x11-libs/cairo x11-libs/gdk-pixbuf:2 >=x11-libs/gtk+-2.90.4:3 x11-libs/pango || ( net-misc/iputils net-anaylyzer/tcptraceroute net-analyzer/traceroute sys-freebsd/freebsd-usbin ) net-analyzer/nmap net-dns/bind-tools userland_GNU? ( net-misc/netkit-fingerd net-misc/whois ) userland_BSD? ( net-misc/bsdwhois )
+>=dev-libs/glib-2.25.10 gnome-base/libgtop:2 x11-libs/cairo x11-libs/gdk-pixbuf:2 >=x11-libs/gtk+-2.90.4:3 x11-libs/pango || ( net-misc/iputils net-analyzer/tcptraceroute net-analyzer/traceroute sys-freebsd/freebsd-usbin ) net-analyzer/nmap net-dns/bind-tools userland_GNU? ( net-misc/netkit-fingerd net-misc/whois ) userland_BSD? ( net-misc/bsdwhois )
 0
 mirror://gnome/sources/gnome-nettool/3.2/gnome-nettool-3.2.0.tar.xz
 
