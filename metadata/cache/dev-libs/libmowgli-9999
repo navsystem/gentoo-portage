@@ -14,7 +14,7 @@ ssl
 
 4
 
-configure install unpack
+configure unpack
 
 
 

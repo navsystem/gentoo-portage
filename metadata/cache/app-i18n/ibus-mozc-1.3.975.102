@@ -4,7 +4,7 @@ dev-libs/glib:2 dev-libs/protobuf net-misc/curl sys-libs/zlib emacs? ( virtual/e
 http://mozc.googlecode.com/files/mozc-1.3.975.102.tar.bz2
 test
 http://code.google.com/p/mozc/
-Apache-2.0 BSD Boost-1.0 ipadic unicode
+Apache-2.0 BSD Boost-1.0 ipadic public-domain unicode
 The Mozc engine for IBus Framework
 ~amd64 ~x86
 elisp-common eutils multilib python toolchain-funcs user

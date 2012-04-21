@@ -1,0 +1,22 @@
+media-gfx/graphviz media-gfx/imagemagick
+media-gfx/graphviz
+0
+http://helllabs.org/codecgraph/codecgraph-20120114.tar.gz
+
+http://helllabs.org/codecgraph/
+GPL-2
+Generates a graph based on the ALSA description of an HD Audio codec.
+~amd64
+base eutils multilib python toolchain-funcs user
+
+
+
+
+4
+
+compile configure install prepare setup unpack
+
+
+
+
+
