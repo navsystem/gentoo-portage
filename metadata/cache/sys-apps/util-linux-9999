@@ -8,7 +8,7 @@ GPL-2 GPL-3 LGPL-2.1 BSD-4 MIT public-domain
 Various useful Linux utilities
 
 autotools eutils flag-o-matic git-2 libtool multilib toolchain-funcs user
-+cramfs crypt ddate loop-aes ncurses nls old-linux perl selinux slang static-libs uclibc unicode
++cramfs crypt ddate loop-aes ncurses nls old-linux perl selinux slang static-libs unicode
 
 
 

@@ -6,7 +6,7 @@ http://updates.metasploit.com/data/releases/framework-4.0.0.tar.bz2
 http://www.metasploit.org/
 BSD
 Advanced open-source framework for developing, testing, and using vulnerability exploit code
-~amd64 ~ppc ~sparc ~x86
+~amd64 ~ppc ~x86
 eutils multilib toolchain-funcs user
 gui mysql postgres
 

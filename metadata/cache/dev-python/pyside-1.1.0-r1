@@ -6,7 +6,7 @@ http://www.pyside.org/files/pyside-qt4.7+1.1.0.tar.bz2
 http://www.pyside.org/
 LGPL-2.1
 Python bindings for the Qt framework
-amd64 ~x86
+amd64 x86
 base cmake-utils eutils flag-o-matic multilib python toolchain-funcs user virtualx
 X declarative help multimedia kde opengl phonon script scripttools sql svg test webkit xmlpatterns test
 declarative? ( X ) help? ( X ) multimedia? ( X ) opengl? ( X ) phonon? ( X ) scripttools? ( X script ) sql? ( X ) svg? ( X ) test? ( X ) webkit? ( X )

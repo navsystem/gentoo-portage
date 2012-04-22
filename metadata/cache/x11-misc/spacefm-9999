@@ -7,14 +7,14 @@ http://ignorantguru.github.com/spacefm/
 GPL-2 LGPL-2.1
 A multi-panel tabbed file manager
 
-fdo-mime git-2
+eutils fdo-mime git-2 linux-info multilib toolchain-funcs user versionator
 
 
 
 
 4
 
-configure postinst postrm unpack
+configure postinst postrm setup unpack
 
 
 

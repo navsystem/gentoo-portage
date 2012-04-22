@@ -1,0 +1,22 @@
+plugins? ( x11-libs/gtk+:2 media-libs/libsndfile ) plugins? ( dev-util/pkgconfig ) doc? ( app-doc/doxygen dev-python/rdflib )
+plugins? ( x11-libs/gtk+:2 media-libs/libsndfile ) !<media-libs/slv2-0.4.2 !media-libs/lv2core !media-libs/lv2-ui
+0
+http://lv2plug.in/spec/lv2-1.0.0.tar.bz2
+
+http://lv2plug.in/
+MIT
+LV2 is a simple but extensible successor of LADSPA
+~amd64
+base eutils multilib toolchain-funcs user waf-utils
+doc plugins
+
+
+
+4
+
+compile configure install prepare unpack
+
+
+
+
+

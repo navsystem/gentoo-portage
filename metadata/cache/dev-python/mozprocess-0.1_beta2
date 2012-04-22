@@ -1,0 +1,22 @@
+dev-python/mozinfo dev-python/setuptools =dev-lang/python-2*
+dev-python/mozinfo =dev-lang/python-2*
+0
+mirror://pypi/m/mozprocess/mozprocess-0.1b2.tar.gz
+
+http://github.com/mozautomation/mozmill http://pypi.python.org/pypi/mozprocess
+|| ( MPL-1.1 GPL-2 LGPL-2.1 )
+Mozilla-authored process handling
+~amd64 ~x86
+distutils multilib python toolchain-funcs
+
+
+
+
+4
+
+compile install postinst postrm prepare setup
+
+
+
+
+
