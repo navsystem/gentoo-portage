@@ -1,10 +1,10 @@
->=xfce-base/libxfcegui4-4.8 >=xfce-base/xfce4-panel-4.8 >=xfce-base/libxfce4util-4.8 >=x11-libs/pango-1.8 >=x11-libs/gtk+-2.4:2 mpd? ( >=media-libs/libmpd-0.12 ) audacious? ( >=media-sound/audacious-1.4 ) dev-util/intltool dev-util/pkgconfig sys-devel/gettext >=sys-apps/sed-4
->=xfce-base/libxfcegui4-4.8 >=xfce-base/xfce4-panel-4.8 >=xfce-base/libxfce4util-4.8 >=x11-libs/pango-1.8 >=x11-libs/gtk+-2.4:2 mpd? ( >=media-libs/libmpd-0.12 ) audacious? ( >=media-sound/audacious-1.4 )
+x11-libs/gtk+:2 x11-libs/pango >=xfce-base/libxfce4util-4.8 >=xfce-base/libxfcegui4-4.8 >=xfce-base/xfce4-panel-4.8 mpd? ( >=media-libs/libmpd-0.12 ) audacious? ( >=media-sound/audacious-1.4 ) dev-util/intltool dev-util/pkgconfig sys-devel/gettext >=sys-apps/sed-4
+x11-libs/gtk+:2 x11-libs/pango >=xfce-base/libxfce4util-4.8 >=xfce-base/libxfcegui4-4.8 >=xfce-base/xfce4-panel-4.8 mpd? ( >=media-libs/libmpd-0.12 ) audacious? ( >=media-sound/audacious-1.4 )
 0
 http://www.bilimfeneri.gen.tr/ilgar/xfce4-playercontrol-plugin-0.3.0.tar.bz2
 
-http://goodies.xfce.org/projects/panel-plugins/xfce4-xmms-plugin/
-BSD
+http://goodies.xfce.org/projects/panel-plugins/xfce4-xmms-plugin
+BSD-2
 Audacious and MPD panel plugins
 ~amd64 ~x86
 autotools base eutils fdo-mime gnome2-utils libtool multilib toolchain-funcs user xfconf

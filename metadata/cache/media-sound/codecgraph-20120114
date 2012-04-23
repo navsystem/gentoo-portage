@@ -1,5 +1,5 @@
-media-gfx/graphviz media-gfx/imagemagick
-media-gfx/graphviz
+media-gfx/graphviz media-gfx/imagemagick =dev-lang/python-2*
+media-gfx/graphviz =dev-lang/python-2*
 0
 http://helllabs.org/codecgraph/codecgraph-20120114.tar.gz
 
