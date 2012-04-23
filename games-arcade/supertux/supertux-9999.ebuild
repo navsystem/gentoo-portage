@@ -1,17 +1,16 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=2
+EAPI=3
 
-inherit subversion cmake-utils eutils games
+inherit git-2 cmake-utils eutils games
 
-DESCRIPTION="A game similar to Super Mario Bros."
+DESCRIPTION="Classic 2D jump'n run sidescroller game in a style similar to the original Super Mario Bros."
 HOMEPAGE="http://super-tux.sourceforge.net"
 SRC_URI=""
 
-ESVN_REPO_URI="http://supertux.lethargik.org/svn/supertux/trunk/supertux"
-ESVN_PROJECT="${PN}"
+EGIT_REPO_URI="https://code.google.com/p/supertux/"
 
 LICENSE="GPL-2"
 SLOT="2"
@@ -25,6 +24,7 @@ RDEPEND="media-libs/libsdl[joystick]
 	media-libs/openal
 	media-libs/glew
 	x11-libs/libXt
+	dev-games/physfs
 	opengl? ( virtual/opengl )
 	curl? ( net-misc/curl )"
 DEPEND="${RDEPEND}"
@@ -32,7 +32,7 @@ DEPEND="${RDEPEND}"
 DOCS="README TODO WHATSNEW.txt data/credits.txt"
 
 src_unpack() {
-	subversion_src_unpack
+	git-2_src_unpack
 }
 
 src_configure() {
