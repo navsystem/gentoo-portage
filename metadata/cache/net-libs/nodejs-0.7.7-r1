@@ -14,7 +14,7 @@ eutils multilib pax-utils python toolchain-funcs user
 
 3
 
-compile configure install setup test
+compile configure install prepare setup test
 
 
 

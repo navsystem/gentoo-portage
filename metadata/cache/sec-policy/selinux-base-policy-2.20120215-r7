@@ -5,7 +5,7 @@ http://oss.tresys.com/files/refpolicy/refpolicy-2.20120215.tar.bz2 http://dev.ge
 
 http://www.gentoo.org/proj/en/hardened/selinux/
 GPL-2
-Based on the eutils eclass
+SELinux policy for core modules
 ~amd64 ~x86
 eutils multilib toolchain-funcs user
 
