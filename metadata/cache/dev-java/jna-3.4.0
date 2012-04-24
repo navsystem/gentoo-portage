@@ -6,7 +6,7 @@ https://github.com/twall/jna/tarball/3.4.0 -> jna-3.4.0-src.tar.gz
 https://github.com/twall/jna#readme
 LGPL-2.1
 Java Native Access (JNA)
-~amd64 ~ppc ~x86
+amd64 ~ppc ~x86
 eutils flag-o-matic java-ant-2 java-pkg-2 java-utils-2 multilib toolchain-funcs user vcs-snapshot versionator
 +awt +nio-buffers elibc_FreeBSD test doc source elibc_FreeBSD
 test? ( awt nio-buffers )

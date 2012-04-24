@@ -1,0 +1,22 @@
+media-libs/lv2 dev-util/pkgconfig
+media-libs/lv2
+0
+http://download.drobilla.net/mda-lv2-1.0.0.tar.bz2
+
+http://drobilla.net/software/mda-lv2/
+GPL-3
+LV2 port of the MDA plugins by Paul Kellett
+~amd64
+base eutils multilib toolchain-funcs user waf-utils
+
+
+
+
+4
+
+compile configure install prepare unpack
+
+
+
+
+

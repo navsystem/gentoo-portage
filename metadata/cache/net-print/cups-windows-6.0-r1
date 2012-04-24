@@ -1,7 +1,7 @@
 >=net-print/cups-1.2
 >=net-print/cups-1.2
 0
-http://ftp.easysw.com/pub/cups/windows/cups-windows-6.0-source.tar.bz2
+mirror://easysw/cups/windows/cups-windows-6.0-source.tar.bz2
 
 http://www.cups.org/links.php?V4
 GPL-2

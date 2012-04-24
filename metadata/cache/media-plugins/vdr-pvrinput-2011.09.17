@@ -1,7 +1,7 @@
 >=media-video/vdr-1.6.0 >=media-tv/gentoo-vdr-scripts-0.4.2 virtual/linuxtv-dvb-headers
 >=media-video/vdr-1.6.0 >=media-tv/gentoo-vdr-scripts-0.4.2 >=app-admin/eselect-vdr-0.0.2
 0
-http://projects.vdr-developer.org/git/vdr-plugin-pvrinput.git/snapshot/vdr-plugin-pvrinput-3ee6b964382f38715f4a4fe57bd4760044f9a58a.tar.gz -> vdr-pvrinput-2011.09.17.tgz
+mirror://gentoo/vdr-pvrinput-2011.09.17.tgz
 
 http://projects.vdr-developer.org/projects/show/plg-pvrinput
 GPL-2

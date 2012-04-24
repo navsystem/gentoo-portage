@@ -10,4 +10,4 @@ RDEPEND=fts? ( dev-libs/xapian-bindings[python] dev-python/dbus-python dev-pytho
 SLOT=0
 SRC_URI=http://launchpad.net/zeitgeist-extensions/trunk/fts-0.0.13/+download/zeitgeist-extensions-0.0.13.tar.gz
 _eclasses_=multilib	5f4ad6cf85e365e8f0c6050ddd21659e	python	36d7e2b7aa4dce62364c72eec96610cf	toolchain-funcs	6526ac6fc9aedf391efb91fcd75ace68
-_md5_=5d73f096c3ddea0ec48fa1a961cb59c6
+_md5_=4d431bbfdfed571ea13e66d54b95bef0

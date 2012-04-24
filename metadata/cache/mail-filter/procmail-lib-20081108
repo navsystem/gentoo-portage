@@ -1,7 +1,7 @@
 
 mail-filter/procmail
 0
-http://www.very-clever.com/download/nongnu/procmail-lib/procmail-lib-2008.1108.tar.gz
+mirror://nongnu/procmail-lib/procmail-lib-2008.1108.tar.gz
 
 http://freshmeat.net/projects/procmail-lib
 GPL-2
