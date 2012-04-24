@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=media-libs/lv2 >=dev-libs/serd-0.14.0 >=dev-libs/sord-0.8.0 doc? ( app-doc/doxygen ) dev-util/pkgconfig
+DESCRIPTION=Library for serialising LV2 atoms to/from RDF, particularly the Turtle syntax
+EAPI=4
+HOMEPAGE=http://drobilla.net/software/sratom/
+IUSE=doc static-libs test
+KEYWORDS=~amd64
+LICENSE=ISC
+RDEPEND=media-libs/lv2 >=dev-libs/serd-0.14.0 >=dev-libs/sord-0.8.0
+SLOT=0
+SRC_URI=http://download.drobilla.net/sratom-0.2.0.tar.bz2
+_eclasses_=base	5f35078c26d6c60556d5c8a2feb4f84f	eutils	74d9118e657da5b1db0c36f5dea88e57	multilib	5f4ad6cf85e365e8f0c6050ddd21659e	toolchain-funcs	6526ac6fc9aedf391efb91fcd75ace68	user	32a09e82e2f592bf88ad2fd08525166e	waf-utils	e54f15daf51b7d0e43b8c93f19f56447
+_md5_=01c2978fcd4f4459ae2b785f87f3022e

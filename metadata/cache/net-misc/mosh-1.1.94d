@@ -1,0 +1,22 @@
+dev-libs/protobuf dev-libs/skalibs sys-libs/ncurses:5 virtual/ssh client? ( dev-lang/perl dev-perl/IO-Tty ) utempter? ( sys-libs/libutempter ) dev-util/pkgconfig || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+dev-libs/protobuf dev-libs/skalibs sys-libs/ncurses:5 virtual/ssh client? ( dev-lang/perl dev-perl/IO-Tty ) utempter? ( sys-libs/libutempter )
+0
+mirror://gentoo/mosh-1.1.94d.tar.gz
+
+http://mosh.mit.edu
+GPL-3
+Mobile shell that supports roaming and intelligent local echo
+~amd64 ~x86
+autotools eutils libtool multilib toolchain-funcs user
++client examples +server +utempter
+|| ( client server ) examples? ( client )
+
+
+4
+
+configure install prepare
+
+
+
+
+

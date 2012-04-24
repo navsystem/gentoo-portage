@@ -1,0 +1,22 @@
+>=dev-libs/serd-0.14.0 doc? ( app-doc/doxygen ) dev-util/pkgconfig
+>=dev-libs/serd-0.14.0
+0
+http://download.drobilla.net/sord-0.8.0.tar.bz2
+
+http://drobilla.net/software/sord/
+ISC
+Library for storing RDF data in memory
+~amd64 ~x86
+base eutils multilib toolchain-funcs user waf-utils
+doc static-libs test
+
+
+
+4
+
+compile configure install prepare test unpack
+
+
+
+
+

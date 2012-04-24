@@ -6,7 +6,7 @@ http://www.sonic.net/~philf/download/HawkNL168src.tar.gz
 http://www.hawksoft.com/hawknl/
 LGPL-2.1
 A cross-platform network library designed for games
-~amd64 ~hppa ~ppc ~x86
+amd64 ~hppa ~ppc x86
 eutils multilib toolchain-funcs user
 doc
 

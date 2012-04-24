@@ -7,14 +7,14 @@ http://cutecom.sourceforge.net
 GPL-2
 CuteCom is a serial terminal, like minicom, written in qt
 amd64 ppc x86
-base cmake-utils eutils flag-o-matic multilib qt4 toolchain-funcs user versionator
+base cmake-utils eutils flag-o-matic multilib toolchain-funcs user
 
 
 
 
 1
 
-compile install setup test unpack
+compile install test unpack
 
 
 

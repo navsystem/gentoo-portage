@@ -1,0 +1,22 @@
+doc? ( app-doc/doxygen )
+
+0
+http://download.drobilla.net/serd-0.14.0.tar.bz2
+
+http://drobilla.net/software/serd/
+ISC
+Library for RDF syntax which supports reading and writing Turtle and NTriples
+~amd64 ~x86
+base eutils multilib toolchain-funcs user waf-utils
+doc static-libs test
+
+
+
+4
+
+compile configure install prepare test unpack
+
+
+
+
+

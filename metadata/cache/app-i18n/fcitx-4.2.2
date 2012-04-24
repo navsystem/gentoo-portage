@@ -1,0 +1,22 @@
+cairo? ( x11-libs/cairo[X] pango? ( x11-libs/pango[X] ) !pango? ( media-libs/fontconfig ) ) gtk? ( x11-libs/gtk+:2 dev-libs/glib:2 dev-libs/dbus-glib ) gtk3? ( x11-libs/gtk+:3 dev-libs/glib:2 dev-libs/dbus-glib ) opencc? ( app-i18n/opencc ) qt? ( x11-libs/qt-gui:4 x11-libs/qt-dbus:4 ) sys-apps/dbus x11-libs/libX11 app-arch/xz-utils dev-util/intltool dev-util/pkgconfig x11-proto/xproto >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+cairo? ( x11-libs/cairo[X] pango? ( x11-libs/pango[X] ) !pango? ( media-libs/fontconfig ) ) gtk? ( x11-libs/gtk+:2 dev-libs/glib:2 dev-libs/dbus-glib ) gtk3? ( x11-libs/gtk+:3 dev-libs/glib:2 dev-libs/dbus-glib ) opencc? ( app-i18n/opencc ) qt? ( x11-libs/qt-gui:4 x11-libs/qt-dbus:4 ) sys-apps/dbus x11-libs/libX11
+0
+http://fcitx.googlecode.com/files/fcitx-4.2.2.tar.xz http://fcitx.googlecode.com/files/pinyin.tar.gz table? ( http://fcitx.googlecode.com/files/table.tar.gz )
+
+http://www.fcitx.org/
+GPL-2
+Free Chinese Input Toy for X. Another Chinese XIM Input Method
+~amd64 ~x86
+base cmake-utils eutils flag-o-matic multilib toolchain-funcs user
++cairo debug gtk gtk3 opencc +pango qt static-libs +table test
+
+
+
+3
+
+compile configure install postinst postrm prepare test unpack
+
+
+
+
+

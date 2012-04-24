@@ -6,7 +6,7 @@ http://download.phpbb.com/pub/release/3.0/3.0.10/phpBB-3.0.10.tar.bz2
 http://www.phpbb.com/
 GPL-2
 phpBB is an open-source bulletin board package
-~alpha amd64 ~ppc ~sparc ~x86
+~alpha amd64 ~ppc ~sparc x86
 webapp
 vhosts
 

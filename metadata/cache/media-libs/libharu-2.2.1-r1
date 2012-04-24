@@ -6,7 +6,7 @@ http://libharu.org/files/libharu-2.2.1.tar.bz2
 http://www.libharu.org/
 ZLIB
 C/C++ library for PDF generation
-amd64 ppc ~x86
+amd64 ppc x86
 eutils multilib toolchain-funcs user
 png static-libs zlib
 

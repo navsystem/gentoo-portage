@@ -6,7 +6,7 @@ http://www.pyside.org/files/pyside-tools-0.2.13.tar.bz2
 http://www.pyside.org/
 BSD GPL-2
 PySide development tools (lupdate, rcc, uic)
-amd64 ~x86
+amd64 x86
 base cmake-utils eutils flag-o-matic multilib python toolchain-funcs user virtualx
 test test
 
