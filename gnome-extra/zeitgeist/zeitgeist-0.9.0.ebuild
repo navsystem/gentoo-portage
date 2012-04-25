@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/zeitgeist-0.9.0.ebuild,v 1.1 2012/04/23 19:55:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/zeitgeist-0.9.0.ebuild,v 1.3 2012/04/25 07:04:33 jlec Exp $
 
 EAPI=4
 
@@ -20,9 +20,10 @@ SRC_URI="http://launchpad.net/zeitgeist/${DIR_PV}/${PV}/+download/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+dbus extensions +fts +icu nls passiv plugins"
+IUSE="dbus extensions +fts icu nls passiv plugins"
 
 RDEPEND="
+	dev-libs/xapian
 	dev-python/dbus-python
 	dev-python/pygobject:2
 	dev-python/pyxdg
@@ -68,7 +69,6 @@ src_configure() {
 
 src_install() {
 	autotools-utils_src_install
-	python_convert_shebangs -r 2 "${ED}"
 }
 
 pkg_postinst() {

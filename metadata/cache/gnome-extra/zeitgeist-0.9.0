@@ -1,5 +1,5 @@
-dev-python/dbus-python dev-python/pygobject:2 dev-python/pyxdg dev-python/rdflib media-libs/raptor:2 dev-libs/glib:2 dev-lang/vala:0.14 dev-db/sqlite:3 extensions? ( gnome-extra/zeitgeist-extensions ) icu? ( dev-libs/dee[icu?] ) passiv? ( gnome-extra/zeitgeist-datahub ) plugins? ( gnome-extra/zeitgeist-datasources ) dev-util/pkgconfig || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool =dev-lang/python-2*
-dev-python/dbus-python dev-python/pygobject:2 dev-python/pyxdg dev-python/rdflib media-libs/raptor:2 dev-libs/glib:2 dev-lang/vala:0.14 dev-db/sqlite:3 extensions? ( gnome-extra/zeitgeist-extensions ) icu? ( dev-libs/dee[icu?] ) passiv? ( gnome-extra/zeitgeist-datahub ) plugins? ( gnome-extra/zeitgeist-datasources ) =dev-lang/python-2*
+dev-libs/xapian dev-python/dbus-python dev-python/pygobject:2 dev-python/pyxdg dev-python/rdflib media-libs/raptor:2 dev-libs/glib:2 dev-lang/vala:0.14 dev-db/sqlite:3 extensions? ( gnome-extra/zeitgeist-extensions ) icu? ( dev-libs/dee[icu?] ) passiv? ( gnome-extra/zeitgeist-datahub ) plugins? ( gnome-extra/zeitgeist-datasources ) dev-util/pkgconfig || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool =dev-lang/python-2*
+dev-libs/xapian dev-python/dbus-python dev-python/pygobject:2 dev-python/pyxdg dev-python/rdflib media-libs/raptor:2 dev-libs/glib:2 dev-lang/vala:0.14 dev-db/sqlite:3 extensions? ( gnome-extra/zeitgeist-extensions ) icu? ( dev-libs/dee[icu?] ) passiv? ( gnome-extra/zeitgeist-datahub ) plugins? ( gnome-extra/zeitgeist-datasources ) =dev-lang/python-2*
 0
 http://launchpad.net/zeitgeist/0.9/0.9.0/+download/zeitgeist-0.9.0.tar.bz2
 
@@ -8,7 +8,7 @@ GPL-2
 Service to log activities and present to other apps
 ~amd64 ~x86
 autotools autotools-utils eutils libtool multilib python toolchain-funcs user versionator
-+dbus extensions +fts +icu nls passiv plugins
+dbus extensions +fts icu nls passiv plugins
 
 
 

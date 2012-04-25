@@ -1,5 +1,5 @@
-spell? ( || ( app-text/aspell app-text/ispell ) ) dev-python/PyQt4[X] =dev-lang/python-2* =dev-lang/python-2*[xml]
-spell? ( || ( app-text/aspell app-text/ispell ) ) dev-python/PyQt4[X] =dev-lang/python-2* =dev-lang/python-2*[xml]
+spell? ( app-text/aspell ) dev-python/PyQt4[X] =dev-lang/python-2* =dev-lang/python-2*[xml]
+spell? ( app-text/aspell ) dev-python/PyQt4[X] =dev-lang/python-2* =dev-lang/python-2*[xml]
 0
 mirror://berlios/treeline/treeline-1.4.0.tar.gz linguas_de? ( mirror://berlios/treeline/treeline-i18n-1.4.0a.tar.gz ) linguas_fr? ( mirror://berlios/treeline/treeline-i18n-1.4.0a.tar.gz )
 
