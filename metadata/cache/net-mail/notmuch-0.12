@@ -7,7 +7,7 @@ http://notmuchmail.org/
 GPL-3
 The mail indexer
 ~amd64 ~x86
-distutils elisp-common multilib python toolchain-funcs
+distutils elisp-common multilib pax-utils python toolchain-funcs
 bash-completion crypt debug doc emacs nmbug python test vim zsh-completion
 test? ( crypt emacs python )
 
