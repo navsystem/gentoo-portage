@@ -1,5 +1,5 @@
 virtual/latex-base x11-libs/libXaw sys-apps/debianutils sys-process/procps
-virtual/latex-base x11-libs/libXaw sys-apps/debianutils sys-process/procps
+
 0
 http://www.axiom-developer.org/axiom-website/downloads/axiom-may2008-src.tgz
 strip
@@ -12,9 +12,9 @@ eutils flag-o-matic multilib toolchain-funcs user
 
 
 
+4
 
-
-compile install setup unpack
+compile install prepare setup
 
 
 

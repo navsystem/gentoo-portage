@@ -5,16 +5,16 @@ http://ab-initio.mit.edu/h5utils/h5utils-1.12.1.tar.gz
 
 http://ab-initio.mit.edu/h5utils/
 GPL-2
-utilities for visualization and conversion of HDF5 files
+Utilities for visualization and conversion of HDF5 files
 ~amd64 ~ppc x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools autotools-utils eutils libtool multilib toolchain-funcs user
 hdf octave
 
 
 
 4
 
-configure install prepare
+compile configure install prepare test
 
 
 

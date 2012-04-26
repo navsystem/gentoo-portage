@@ -1,5 +1,5 @@
-virtual/libiconv dev-libs/libxslt dev-libs/libpcre[cxx] >=sci-misc/lttoolbox-3.2 dev-util/pkgconfig || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
-virtual/libiconv dev-libs/libxslt dev-libs/libpcre[cxx] >=sci-misc/lttoolbox-3.2
+dev-libs/libxslt dev-libs/libpcre[cxx] >=sci-misc/lttoolbox-3.2 virtual/libiconv dev-util/pkgconfig
+dev-libs/libxslt dev-libs/libpcre[cxx] >=sci-misc/lttoolbox-3.2 virtual/libiconv
 0
 mirror://sourceforge/apertium/apertium-3.2.0.tar.gz
 
@@ -7,14 +7,14 @@ http://apertium.sourceforge.net/
 GPL-2
 Shallow-transfer machine Translation engine and toolbox
 ~amd64 ~x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools autotools-utils eutils libtool multilib toolchain-funcs user
 static-libs
 
 
 
 4
 
-compile configure prepare
+compile configure install prepare test
 
 
 
