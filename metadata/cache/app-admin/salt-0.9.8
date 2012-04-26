@@ -1,0 +1,22 @@
+python_targets_python2_6? ( dev-lang/python:2.6 ) python_targets_python2_7? ( dev-lang/python:2.7 ) python_targets_python3_1? ( dev-lang/python:3.1 ) python_targets_python3_2? ( dev-lang/python:3.2 )
+>=dev-python/pyzmq-2.1.9 dev-python/msgpack dev-python/pyyaml dev-python/m2crypto dev-python/pycrypto dev-python/pycryptopp jinja? ( dev-python/jinja ) libvirt? ( app-emulation/libvirt[python] ) mongodb? ( dev-python/pymongo ) mysql? ( dev-python/mysql-python ) redis? ( dev-python/redis-py ) python_targets_python2_6? ( dev-lang/python:2.6 ) python_targets_python2_7? ( dev-lang/python:2.7 ) python_targets_python3_1? ( dev-lang/python:3.1 ) python_targets_python3_2? ( dev-lang/python:3.2 )
+0
+mirror://github/saltstack/salt/salt-0.9.8.tar.gz
+
+http://saltstack.org/
+Apache-2.0
+Salt is a remote execution and configuration manager.
+~x86 ~amd64
+eutils multilib python-distutils-ng toolchain-funcs user
++jinja libvirt mongodb mysql redis python_targets_python2_6 python_targets_python2_7 python_targets_python3_1 python_targets_python3_2
+|| ( python_targets_python2_6 python_targets_python2_7 python_targets_python3_1 python_targets_python3_2 )
+
+
+4
+
+compile configure install prepare pretend test
+
+
+
+
+

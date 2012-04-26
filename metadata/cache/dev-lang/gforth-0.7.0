@@ -1,7 +1,7 @@
 dev-libs/ffcall emacs? ( virtual/emacs )
 dev-libs/ffcall emacs? ( virtual/emacs )
 0
-ftp://ftp.gnu.org/pub/gnu/gforth/gforth-0.7.0.tar.gz
+mirror://gnu/gforth/gforth-0.7.0.tar.gz
 
 http://www.gnu.org/software/gforth
 GPL-3

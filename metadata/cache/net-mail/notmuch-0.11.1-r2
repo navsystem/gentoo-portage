@@ -5,9 +5,9 @@ http://notmuchmail.org/releases/notmuch-0.11.1.tar.gz
 
 http://notmuchmail.org/
 GPL-3
-The mail indexer
+Thread-based e-mail indexer, supporting quick search and tagging
 amd64 x86
-distutils elisp-common multilib python toolchain-funcs
+distutils elisp-common multilib pax-utils python toolchain-funcs
 bash-completion crypt debug doc emacs nmbug python test vim zsh-completion
 test? ( crypt emacs python )
 

@@ -1,0 +1,22 @@
+sys-libs/zlib hdf5? ( sci-libs/hdf5 ) doc? ( virtual/latex-base ) || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+sys-libs/zlib hdf5? ( sci-libs/hdf5 )
+0
+mirror://sourceforge/matio/matio-1.5.0.tar.gz
+
+http://sourceforge.net/projects/matio/
+LGPL-2.1
+Library for reading and writing matlab files
+~amd64 ~x86
+autotools eutils libtool multilib toolchain-funcs user
+doc examples hdf5 sparse static-libs
+
+
+
+4
+
+compile configure install prepare
+
+
+
+
+

@@ -1,5 +1,5 @@
->=sys-apps/texinfo-4.3 >=sys-devel/m4-1.4.6 dev-lang/perl dev-vcs/git
->=sys-apps/texinfo-4.3 >=sys-devel/m4-1.4.6 dev-lang/perl >=sys-devel/autoconf-wrapper-10
+>=sys-apps/texinfo-4.3 >=sys-devel/m4-1.4.6 >=dev-lang/perl-5.6 dev-vcs/git
+>=sys-apps/texinfo-4.3 >=sys-devel/m4-1.4.6 >=dev-lang/perl-5.6 >=sys-devel/autoconf-wrapper-10
 2.5
 
 
@@ -12,7 +12,7 @@ emacs
 
 emacs? ( app-emacs/autoconf-mode )
 
-2
+3
 
 configure install prepare unpack
 

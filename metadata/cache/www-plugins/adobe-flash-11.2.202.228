@@ -8,13 +8,13 @@ AdobeFlash-10.3
 Adobe Flash Player
 -* amd64 x86
 eutils multilib nsplugins toolchain-funcs user versionator
-multilib -32bit +64bit vdpau kde
+multilib -32bit +64bit vdpau kde +sse2check
 
 
 
 4
 
-compile install postinst setup unpack
+compile install postinst pretend setup unpack
 
 
 
