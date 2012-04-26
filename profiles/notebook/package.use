@@ -12,6 +12,7 @@ media-fonts/terminus-font -pcf -X
 
 #for accemble splashutils
 media-libs/jpeg static-libs
+media-libs/libjpeg-turbo static-libs
 media-libs/lcms static-libs
 media-libs/libpng static-libs
 virtual/jpeg static-libs
