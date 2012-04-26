@@ -1,5 +1,5 @@
->=dev-lang/parrot-4.1.0[unicode] >=dev-lang/nqp-2012.04 dev-lang/perl
->=dev-lang/parrot-4.1.0[unicode] >=dev-lang/nqp-2012.04
+>=dev-lang/parrot-4.3.0[unicode] >=dev-lang/nqp-2012.04 dev-lang/perl
+>=dev-lang/parrot-4.3.0[unicode] >=dev-lang/nqp-2012.04
 0
 mirror://github/rakudo/rakudo/rakudo-2012.04.tar.gz
 

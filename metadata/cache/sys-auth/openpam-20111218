@@ -6,7 +6,7 @@ mirror://sourceforge/openpam/openpam-20111218.tar.gz
 http://www.openpam.org/
 BSD
 Open source PAM library.
-~sparc-fbsd ~x86-fbsd
+~amd64-fbsd ~sparc-fbsd ~x86-fbsd
 autotools eutils libtool multilib toolchain-funcs user
 debug vim-syntax
 

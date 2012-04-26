@@ -6,7 +6,7 @@ mirror://gentoo/freebsd-usbin-9.0.tar.bz2 mirror://gentoo/freebsd-contrib-9.0.ta
 http://www.freebsd.org/
 BSD
 FreeBSD /usr/sbin tools
-~sparc-fbsd ~x86-fbsd
+~amd64-fbsd ~sparc-fbsd ~x86-fbsd
 bsdmk eutils flag-o-matic freebsd multilib portability toolchain-funcs user versionator
 acpi atm audit bluetooth floppy ipv6 isdn minimal netware nis pam ssl usb build profile
 

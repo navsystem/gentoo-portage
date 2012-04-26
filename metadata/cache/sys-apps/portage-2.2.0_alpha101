@@ -6,7 +6,7 @@ mirror://gentoo/portage-2.2.0_alpha94.tar.bz2 http://dev.gentoo.org/~zmedico/por
 http://www.gentoo.org/proj/en/portage/index.xml
 GPL-2
 Portage is the package management and distribution system for Gentoo
-~sparc-fbsd ~x86-fbsd
+~amd64-fbsd ~sparc-fbsd ~x86-fbsd
 eutils multilib python toolchain-funcs user
 build doc epydoc +ipc linguas_pl pypy1_8 python2 python3 selinux xattr
 

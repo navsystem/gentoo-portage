@@ -1,20 +1,20 @@
-
+|| ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 
 0
 mirror://sourceforge/ta-lib/ta-lib-0.4.0-src.tar.gz
 
-http://www.ta-lib.org
+http://www.ta-lib.org/
 BSD
 Technical Analysis Library for analyzing financial markets trends
 ~amd64 ~x86
-eutils multilib toolchain-funcs user
+autotools autotools-utils eutils libtool multilib toolchain-funcs user
+static-libs
 
 
 
+4
 
-
-
-compile install test unpack
+compile configure install prepare test
 
 
 

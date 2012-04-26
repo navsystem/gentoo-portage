@@ -6,7 +6,7 @@ strip
 http://www.freebsd.org/
 BSD
 FreeBSD shared tools/files
-~sparc-fbsd ~x86-fbsd
+~amd64-fbsd ~sparc-fbsd ~x86-fbsd
 bsdmk eutils flag-o-matic freebsd multilib portability toolchain-funcs user versionator
 doc isdn
 
