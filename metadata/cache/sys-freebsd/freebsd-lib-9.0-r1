@@ -6,7 +6,7 @@ mirror://gentoo/freebsd-lib-9.0.tar.bz2 mirror://gentoo/freebsd-contrib-9.0.tar.
 http://www.freebsd.org/
 BSD
 FreeBSD's base system libraries
-~sparc-fbsd ~x86-fbsd
+~amd64-fbsd ~sparc-fbsd ~x86-fbsd
 bsdmk eutils flag-o-matic freebsd multilib portability toolchain-funcs user versionator
 atm bluetooth ssl hesiod ipv6 kerberos usb netware build bootstrap crosscompile_opts_headers-only zfs userland_GNU userland_BSD profile
 

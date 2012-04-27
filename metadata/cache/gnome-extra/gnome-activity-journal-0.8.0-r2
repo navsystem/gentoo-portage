@@ -1,0 +1,22 @@
+dev-python/dbus-python dev-python/libgnome-python dev-python/gconf-python dev-python/gst-python dev-python/pycairo dev-python/pygobject:2 dev-python/pygtk:2 dev-python/pyxdg gnome-extra/zeitgeist sys-apps/dbus dev-util/intltool dev-python/python-distutils-extra app-arch/xz-utils >=sys-apps/sed-4 =dev-lang/python-2* >=sys-apps/sed-4
+dev-python/dbus-python dev-python/libgnome-python dev-python/gconf-python dev-python/gst-python dev-python/pycairo dev-python/pygobject:2 dev-python/pygtk:2 dev-python/pyxdg gnome-extra/zeitgeist sys-apps/dbus =dev-lang/python-2*
+0
+http://launchpad.net/gnome-activity-journal/0.8/0.8.0/+download/gnome-activity-journal-0.8.0.tar.gz
+
+https://launchpad.net/gnome-activity-journal/
+GPL-3 LGPL-3
+Tool for easily browsing and finding files on your computer
+~amd64 ~x86 ~amd64-linux ~x86-linux
+distutils eutils fdo-mime gnome.org gnome2 gnome2-utils libtool multilib python toolchain-funcs user versionator
+debug
+
+
+
+4
+
+compile configure install postinst postrm preinst prepare setup unpack
+
+
+
+
+

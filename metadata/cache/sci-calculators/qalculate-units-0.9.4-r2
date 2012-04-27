@@ -1,5 +1,5 @@
->=sci-libs/libqalculate-0.9.6-r1 x11-libs/gtk+:2 nls? ( sys-devel/gettext ) dev-util/pkgconfig || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
->=sci-libs/libqalculate-0.9.6-r1 x11-libs/gtk+:2 nls? ( sys-devel/gettext )
+sci-libs/libqalculate x11-libs/gtk+:2 nls? ( sys-devel/gettext ) dev-util/pkgconfig || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+sci-libs/libqalculate x11-libs/gtk+:2 nls? ( sys-devel/gettext )
 0
 mirror://sourceforge/qalculate/qalculate-units-0.9.4.tar.gz
 
@@ -12,9 +12,9 @@ nls
 
 
 
-1
+4
 
-compile install unpack
+configure prepare
 
 
 

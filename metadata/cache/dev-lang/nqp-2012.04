@@ -1,5 +1,5 @@
->=dev-lang/parrot-3.9.0[unicode] dev-lang/perl
->=dev-lang/parrot-3.9.0[unicode]
+>=dev-lang/parrot-4.3.0[unicode] dev-lang/perl
+>=dev-lang/parrot-4.3.0[unicode]
 0
 http://github.com/perl6/nqp/tarball/2012.04 -> nqp-2012.04.tar.gz
 

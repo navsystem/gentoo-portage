@@ -1,0 +1,149 @@
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.114 2012/04/26 22:41:48 aballier Exp $
+
+# Mask useflags that require deps with missing keywords.
+# Anyone is allowed and _very welcome_ to add masks there.
+# We will pick them up and keyword as time permits and prefer having a sane
+# deptree with missing features than a broken one.
+# 
+# Syntax is: # mising dep(s)
+#            mask
+# Keep it simple, we do not really care about the date or who masked it, we want
+# to be easily able to determine what we need to keyword.
+
+# net-dns/hesiod
+sys-freebsd/freebsd-lib hesiod
+
+# dev-util/gdbus-codegen
+# dev-util/gtk-doc
+dev-libs/glib doc
+# sys-devel/gdb
+# dev-util/gdbus-codegen
+# sys-apps/dbus
+dev-libs/glib test
+# dev-util/gdbus-codegen
+dev-libs/glib utils
+
+# app-misc/datefudge
+net-libs/gnutls test
+
+# dev-util/gtk-doc
+net-libs/gnutls doc
+x11-libs/cairo doc
+dev-libs/gobject-introspection doc
+
+# net-libs/axTLS
+net-misc/curl curl_ssl_axtls
+
+# net-nds/openldap
+net-misc/curl ldap
+
+# sys-auth/pam_ssh
+sys-auth/pambase pam_ssh
+
+# gnome-base/gnome-keyring
+sys-auth/pambase gnome-keyring
+
+# sys-auth/pam_krb5
+sys-auth/pambase pam_krb5
+
+# dev-libs/icu
+dev-libs/libxml2 icu
+dev-db/sqlite icu
+
+# dev-vcs/git
+sys-devel/gettext git
+
+# virtual/jre virtual/jdk
+sys-devel/gettext java
+
+# app-emacs/po-mode
+sys-devel/gettext emacs
+
+# virtual/emacs
+dev-scheme/guile emacs
+dev-util/cscope emacs
+net-dns/libidn emacs
+dev-util/cmake emacs
+
+# dev-lang/mono
+net-dns/libidn mono
+
+# =dev-lang/python-2*[tk]
+dev-python/epydoc X
+
+# dev-tcltk/blt
+dev-lang/python tk
+# dev-python/sphinx dev-python/python-docs:SLOT
+dev-lang/python doc
+
+# app-emacs/autoconf-mode
+sys-devel/autoconf emacs
+
+# dev-libs/libnl:1.1
+net-libs/libpcap libnl
+
+# net-libs/libtirpc
+sys-apps/xinetd rpc
+
+# app-text/passivetex
+# dev-tex/xmltex
+app-text/xmlto latex
+
+# app-text/docbook-sgml-utils[jadetex]
+media-libs/fontconfig doc
+
+# virtual/latex-base
+# dev-texlive/texlive-latexextra
+dev-python/epydoc latex
+
+# media-gfx/graphviz
+app-text/asciidoc graphviz
+app-doc/doxygen dot
+dev-util/cppunit doc
+
+# sci-mathematics/glpk
+dev-libs/ppl lpsol
+
+# media-gfx/fontforge
+media-fonts/dejavu fontforge
+
+# x11-libs/qt-gui
+dev-util/cmake qt4
+app-text/poppler qt4
+app-doc/doxygen qt4
+x11-libs/cairo qt4
+
+# x11-base/xorg-server[xvfb]
+# x11-apps/xhost
+dev-util/cmake test
+
+# x11-libs/pango
+media-gfx/graphviz cairo
+
+# x11-libs/pango
+# x11-libs/gtk+:2
+media-gfx/graphviz gtk
+
+# media-libs/lasi
+media-gfx/graphviz lasi
+
+# net-print/cups
+app-text/ghostscript-gpl cups
+
+# x11-libs/gtk+:2
+app-text/ghostscript-gpl gtk
+
+# sys-apps/dbus
+app-text/ghostscript-gpl dbus
+
+# virtual/opengl
+# media-libs/freeglut
+media-libs/jasper opengl
+
+# virtual/opengl
+x11-libs/cairo opengl
+
+# app-text/texlive[extra]
+app-doc/doxygen latex

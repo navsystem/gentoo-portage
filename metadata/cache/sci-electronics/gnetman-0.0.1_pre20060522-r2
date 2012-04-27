@@ -1,5 +1,5 @@
->=dev-lang/tk-8.3 sci-electronics/geda
->=dev-lang/tk-8.3 sci-electronics/geda
+dev-lang/tk sci-electronics/geda
+dev-lang/tk sci-electronics/geda
 0
 http://www.viasic.com/opensource/gnetman-22May06.tar.gz
 
@@ -12,7 +12,7 @@ doc examples
 
 
 
-2
+4
 
 install prepare
 

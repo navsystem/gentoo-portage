@@ -6,7 +6,7 @@ test
 http://crossfire.real-time.com/
 GPL-2
 server for the crossfire clients
-~amd64 ~ppc ~x86
+amd64 ~ppc ~x86
 autotools base eutils games libtool multilib toolchain-funcs user
 X
 
