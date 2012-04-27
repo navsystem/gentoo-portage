@@ -5,7 +5,7 @@ http://cgit.freedesktop.org/libfprint/fprintd/snapshot/V_0_2_0.tar.bz2
 
 http://cgit.freedesktop.org/libfprint/fprintd/
 GPL-2
-D-Bus to offer libfprint functionality
+D-Bus service to access fingerprint readers
 ~amd64
 autotools eutils libtool multilib toolchain-funcs user versionator
 doc pam static-libs

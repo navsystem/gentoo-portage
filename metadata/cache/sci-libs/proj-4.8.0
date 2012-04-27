@@ -1,5 +1,5 @@
-app-arch/unzip
-
+app-arch/unzip java? ( >=virtual/jdk-1.5 ) java? ( >=dev-java/java-config-2.1.9-r1 )
+java? ( >=dev-java/java-config-2.1.9-r1 )
 0
 ftp://ftp.remotesensing.org/pub/proj/proj-4.8.0.tar.gz http://download.osgeo.org/proj/proj-datumgrid-1.5.zip
 
@@ -7,14 +7,14 @@ http://trac.osgeo.org/proj/
 MIT
 Proj.4 cartographic projection software with updated NAD27 grids
 ~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos
-eutils multilib toolchain-funcs user
-static-libs
+eutils flag-o-matic java-pkg-opt-2 java-utils-2 multilib toolchain-funcs user versionator
+java static-libs elibc_FreeBSD java
 
 
 
 4
 
-configure install unpack
+configure install preinst prepare setup unpack
 
 
 
