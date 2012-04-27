@@ -1,20 +1,20 @@
-virtual/cblas >=sci-libs/lapack-atlas-3.8.0 sci-libs/fftw:3.0 || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
-virtual/cblas >=sci-libs/lapack-atlas-3.8.0 sci-libs/fftw:3.0
+virtual/cblas sci-libs/lapack-atlas sci-libs/fftw:3.0 || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+virtual/cblas sci-libs/lapack-atlas sci-libs/fftw:3.0
 0
 ftp://ftp.iap.fr/pub/from_users/bertin/sextractor/sextractor-2.8.6.tar.gz
 
-http://astromatic.iap.fr/software/sextractor
+http://astromatic.iap.fr/software/sextractor/
 CeCILL-2
-Extract catalogs of sources from astronomical FITS images.
+Extract catalogs of sources from astronomical FITS images
 ~amd64 ~x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools autotools-utils eutils libtool multilib toolchain-funcs user
 doc threads
 
 
 
-2
+4
 
-configure install postinst prepare
+compile configure install postinst prepare test
 
 
 

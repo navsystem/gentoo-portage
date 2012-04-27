@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile install postinst prepare
-DEPEND=zlib? ( sys-libs/zlib )
+DEPEND=static-libs? ( zlib? ( sys-libs/zlib[static-libs(+)] ) ) !static-libs? ( zlib? ( sys-libs/zlib ) )
 DESCRIPTION=Various utilities dealing with the PCI bus
 EAPI=4
 HOMEPAGE=http://atrey.karlin.mff.cuni.cz/~mj/pciutils.html
 IUSE=static-libs zlib
 KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux
 LICENSE=GPL-2
-RDEPEND=zlib? ( sys-libs/zlib ) sys-apps/hwids
+RDEPEND=static-libs? ( zlib? ( sys-libs/zlib[static-libs(+)] ) ) !static-libs? ( zlib? ( sys-libs/zlib ) ) sys-apps/hwids
 SLOT=0
 SRC_URI=ftp://atrey.karlin.mff.cuni.cz/pub/linux/pci/pciutils-3.1.9.tar.gz
 _eclasses_=eutils	74d9118e657da5b1db0c36f5dea88e57	multilib	5f4ad6cf85e365e8f0c6050ddd21659e	toolchain-funcs	6526ac6fc9aedf391efb91fcd75ace68	user	32a09e82e2f592bf88ad2fd08525166e
-_md5_=a75f1db5f1cfb7de81bc3e1504634ada
+_md5_=971a29a718f697b1a4bead20df57f522
