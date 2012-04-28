@@ -1,5 +1,5 @@
->=dev-libs/boost-1.41.0 dev-libs/openssl[-bindist] upnp? ( net-libs/miniupnpc ) sys-libs/db:4.8[cxx] >=app-shells/bash-4.1
->=dev-libs/boost-1.41.0 dev-libs/openssl[-bindist] upnp? ( net-libs/miniupnpc ) sys-libs/db:4.8[cxx]
+>=dev-libs/boost-1.41.0 dev-libs/openssl[-bindist] logrotate? ( app-admin/logrotate ) upnp? ( net-libs/miniupnpc ) sys-libs/db:4.8[cxx] >=app-shells/bash-4.1
+>=dev-libs/boost-1.41.0 dev-libs/openssl[-bindist] logrotate? ( app-admin/logrotate ) upnp? ( net-libs/miniupnpc ) sys-libs/db:4.8[cxx]
 0
 https://nodeload.github.com/bitcoin/bitcoin/tarball/v0.6.0 -> bitcoin-v0.6.0.tgz http://luke.dashjr.org/programs/bitcoin/files/eligius_sendfee/0.6.0-eligius_sendfee.patch.xz
 
@@ -8,7 +8,7 @@ MIT ISC
 Original Bitcoin crypto-currency wallet for automated services
 ~amd64 ~arm ~x86
 db-use eutils multilib toolchain-funcs user versionator
-+eligius examples ssl upnp
++eligius examples logrotate ssl upnp
 
 
 

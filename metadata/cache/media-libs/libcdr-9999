@@ -3,7 +3,7 @@ app-text/libwpd:0.9 app-text/libwpg:0.2 media-libs/lcms:2 sys-libs/zlib
 0
 
 
-http://cgit.freedesktop.org/libreoffice/libcdr/tree/
+http://www.freedesktop.org/wiki/Software/libcdr
 LGPL-2.1
 Library parsing the Corel cdr documents
 
