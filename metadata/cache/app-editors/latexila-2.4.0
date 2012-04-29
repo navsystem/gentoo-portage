@@ -6,7 +6,7 @@ mirror://gnome/sources/latexila/2.4/latexila-2.4.0.tar.xz
 http://projects.gnome.org/latexila/
 GPL-3
 Integrated LaTeX environment for GNOME
-amd64 ~x86
+amd64 x86
 base cmake-utils eutils fdo-mime flag-o-matic gnome.org gnome2 gnome2-utils libtool multilib toolchain-funcs user versionator
 gnome +latexmk rubber vala
 

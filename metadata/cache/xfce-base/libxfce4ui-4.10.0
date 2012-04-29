@@ -1,0 +1,22 @@
+>=dev-libs/glib-2.24 >=x11-libs/gtk+-2.20:2 x11-libs/libX11 x11-libs/libICE x11-libs/libSM >=xfce-base/libxfce4util-4.10 >=xfce-base/xfconf-4.10 glade? ( dev-util/glade:3 ) startup-notification? ( x11-libs/startup-notification ) !xfce-base/xfce-utils dev-lang/perl dev-util/intltool dev-util/pkgconfig sys-devel/gettext >=sys-apps/sed-4
+>=dev-libs/glib-2.24 >=x11-libs/gtk+-2.20:2 x11-libs/libX11 x11-libs/libICE x11-libs/libSM >=xfce-base/libxfce4util-4.10 >=xfce-base/xfconf-4.10 glade? ( dev-util/glade:3 ) startup-notification? ( x11-libs/startup-notification ) !xfce-base/xfce-utils
+0
+mirror://xfce/src/xfce/libxfce4ui/4.10/libxfce4ui-4.10.0.tar.bz2
+
+http://www.xfce.org/projects/libxfce4
+LGPL-2
+Unified widgets and session management libraries for the Xfce desktop environment
+~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris
+autotools base eutils fdo-mime gnome2-utils libtool multilib toolchain-funcs user xfconf
+debug glade startup-notification
+
+
+
+4
+
+compile configure install postinst postrm preinst prepare setup unpack
+
+
+
+
+

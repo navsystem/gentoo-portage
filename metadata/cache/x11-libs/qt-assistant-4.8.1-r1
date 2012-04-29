@@ -6,7 +6,7 @@ http://get.qt.nokia.com/qt/source/qt-everywhere-opensource-src-4.8.1.tar.gz comp
 http://qt-project.org/ http://qt.nokia.com/
 || ( LGPL-2.1 GPL-3 )
 The Help module and Assistant application for the Qt toolkit
-~amd64 ~arm ~ia64 ~ppc ~ppc64 ~x86 ~ppc-macos
+~amd64 ~arm ~ia64 ~ppc ~ppc64 ~x86 ~ppc-macos ~x64-macos
 base eutils flag-o-matic multilib qt4-build toolchain-funcs user versionator
 compat doc +glib qt3support trace webkit aqua debug pch +exceptions c++0x qpa
 
