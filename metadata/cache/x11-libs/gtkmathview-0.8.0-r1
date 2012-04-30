@@ -6,7 +6,7 @@ http://helm.cs.unibo.it/mml-widget/sources/gtkmathview-0.8.0.tar.gz
 http://helm.cs.unibo.it/mml-widget/
 LGPL-3
 Rendering engine for MathML documents
-~alpha amd64 ~hppa ~ia64 ~ppc ppc64 ~sparc ~x86
+~alpha amd64 ~hppa ~ia64 ~ppc ppc64 ~sparc x86
 autotools eutils libtool multilib toolchain-funcs user
 gtk mathml svg t1lib
 

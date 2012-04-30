@@ -6,7 +6,7 @@ mirror://sourceforge/gtklp/gtklp-1.2.8a.src.tar.gz mirror://sourceforge/gtklp/lo
 http://gtklp.sourceforge.net
 GPL-2
 A GUI for cupsd
-~amd64 ~ppc ~sparc ~x86
+amd64 ~ppc ~sparc ~x86
 autotools eutils libtool multilib toolchain-funcs user
 nls ssl
 

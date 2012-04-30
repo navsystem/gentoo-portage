@@ -1,0 +1,22 @@
+
+app-shells/bash || ( >=sys-apps/coreutils-8.15 app-misc/realpath sys-freebsd/freebsd-bin ) dev-lang/perl
+0
+mirror://gentoo/perl-cleaner-2.12.tar.bz2 http://dev.gentoo.org/~tove/distfiles/app-admin/perl-cleaner/perl-cleaner-2.12.tar.bz2
+
+http://www.gentoo.org/proj/en/perl/
+GPL-2
+User land tool for cleaning up old perl installs
+~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd
+
+
+
+
+
+4
+
+install
+
+
+
+
+

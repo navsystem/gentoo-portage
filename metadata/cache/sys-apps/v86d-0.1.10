@@ -14,7 +14,7 @@ debug x86emu
 
 2
 
-compile configure install postinst setup
+compile configure install postinst prepare setup
 
 
 

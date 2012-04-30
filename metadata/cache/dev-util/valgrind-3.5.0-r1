@@ -1,5 +1,5 @@
 mpi? ( virtual/mpi ) || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
-mpi? ( virtual/mpi ) !dev-util/callgrind
+mpi? ( virtual/mpi )
 0
 http://www.valgrind.org/downloads/valgrind-3.5.0.tar.bz2
 

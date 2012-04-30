@@ -6,7 +6,7 @@ mirror://gnome/sources/libsocialweb/0.25/libsocialweb-0.25.20.tar.xz
 http://git.gnome.org/browse/libsocialweb
 LGPL-2.1
 Social web services integration framework
-amd64 ~x86
+amd64 x86
 eutils fdo-mime gnome.org gnome2 gnome2-utils libtool multilib python toolchain-funcs user versionator
 doc connman +gnome +introspection +networkmanager vala
 vala? ( introspection )
