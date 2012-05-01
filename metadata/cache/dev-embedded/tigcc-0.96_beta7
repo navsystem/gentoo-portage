@@ -6,7 +6,7 @@ strip
 http://tigcc.ticalc.org
 GPL-2
 Cross compiler for Texas Instruments TI-89, TI-92(+) and V200 calculators
-~amd64 ~ppc ~sparc ~x86
+amd64 ppc ~sparc x86
 eutils multilib toolchain-funcs user
 doc
 

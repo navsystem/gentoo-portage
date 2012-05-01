@@ -4,7 +4,7 @@ x11-libs/wxGTK:2.8[X]
 mirror://berlios/codeblocks/codeblocks-10.05-src.tar.bz2
 
 http://www.codeblocks.org/
-GPL-2
+GPL-3
 The open source, cross platform, free C++ IDE.
 ~amd64 ~ppc ~x86 ~x86-fbsd
 eutils flag-o-matic multilib toolchain-funcs user wxwidgets
@@ -12,9 +12,9 @@ contrib debug pch static-libs
 
 
 
-2
+4
 
-configure install
+configure
 
 
 

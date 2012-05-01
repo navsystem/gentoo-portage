@@ -6,7 +6,7 @@ test
 http://git.kernel.org/?p=utils/kernel/kmod/kmod.git
 LGPL-2
 library and tools for managing linux kernel modules
-~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~x86
+~amd64 ~arm ~hppa ~m68k ~mips ~ppc ~ppc64 ~s390 ~x86
 autotools eutils libtool multilib toolchain-funcs user
 debug doc lzma static-libs +tools zlib
 
