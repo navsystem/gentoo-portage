@@ -6,7 +6,7 @@ http://rubyforge.org/download.php/89/quixml-0.2.1.tar.gz
 http://quixml.rubyforge.org/
 GPL-2
 A fast Ruby XML API written in C
-hppa ppc sparc x86
+hppa ppc x86
 eutils multilib ruby toolchain-funcs user
 
 

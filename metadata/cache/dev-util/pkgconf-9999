@@ -1,0 +1,22 @@
+|| ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool dev-vcs/git
+pkg-config? ( !dev-util/pkgconfig !dev-util/pkg-config-lite )
+0
+
+
+https://github.com/nenolod/pkgconf
+BSD-1
+pkg-config compatible replacement with no dependencies other than ANSI C89
+
+autotools eutils git-2 libtool multilib toolchain-funcs user vcs-snapshot
+pkg-config
+
+
+
+4
+
+install prepare unpack
+
+
+
+
+
