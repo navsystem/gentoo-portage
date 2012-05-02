@@ -4273,6 +4273,7 @@ net-misc/sitecopy:rsh - This allows the use of rsh (remote shell) and rcp (remot
 net-misc/sitecopy:webdav - Enable WebDav (Web-based Distributed Authoring and Versioning) support. This system allows users to collaborate on websites using a web based interface. See the ebuild for an FAQ page. Enables neon as well to handle webdav support.
 net-misc/sks:optimize - Enables bytecode optimization
 net-misc/slimrat:X - Install also GUI client
+net-misc/sparkleshare:nautilus - Build the gnome-base/nautilus extension
 net-misc/spice-gtk:gtk3 - Link against x11-libs/gtk+:3 instead of x11-libs/gtk+:2
 net-misc/spice-gtk:introspection - Use dev-libs/gobject-introspection for introspection
 net-misc/spice-gtk:policykit - Enable sys-auth/polkit support for the usbredir acl helper
