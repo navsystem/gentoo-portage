@@ -14,7 +14,7 @@ bzip2 cjk gnutls idn ipv6 nls ssl unicode
 
 4
 
-compile configure install prepare setup
+configure install prepare setup
 
 
 

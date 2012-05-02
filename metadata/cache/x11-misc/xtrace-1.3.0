@@ -1,0 +1,22 @@
+x11-libs/libX11
+x11-libs/libX11
+0
+https://alioth.debian.org/frs/download.php/3694/xtrace_1.3.0.orig.tar.gz
+
+http://xtrace.alioth.debian.org/
+GPL-2
+X11 protocol trace utility
+~amd64
+autotools autotools-utils eutils libtool multilib toolchain-funcs user
+
+
+
+
+4
+
+compile configure install postinst prepare test
+
+
+
+
+

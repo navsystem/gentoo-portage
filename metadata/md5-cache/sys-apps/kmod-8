@@ -4,11 +4,11 @@ DESCRIPTION=library and tools for managing linux kernel modules
 EAPI=4
 HOMEPAGE=http://git.kernel.org/?p=utils/kernel/kmod/kmod.git
 IUSE=debug doc lzma static-libs +tools zlib
-KEYWORDS=~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~x86
+KEYWORDS=~amd64 ~arm ~hppa ~m68k ~mips ~ppc ~ppc64 ~s390 ~x86
 LICENSE=LGPL-2
 RDEPEND=!sys-apps/module-init-tools !sys-apps/modutils lzma? ( app-arch/xz-utils ) zlib? ( sys-libs/zlib )
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://kernel/linux/utils/kernel/kmod/kmod-8.tar.xz
 _eclasses_=autotools	addbdf6cce5024ac93ad2084ad5e1d2d	eutils	74d9118e657da5b1db0c36f5dea88e57	libtool	5f623f5a211fb1b2d84d88ee49959a54	multilib	5f4ad6cf85e365e8f0c6050ddd21659e	toolchain-funcs	6526ac6fc9aedf391efb91fcd75ace68	user	32a09e82e2f592bf88ad2fd08525166e
-_md5_=36440abf6d38ee671855d3e11f93431e
+_md5_=a241efd44d1b7b4683840bc30f3b2d60

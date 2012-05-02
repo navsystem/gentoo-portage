@@ -4,7 +4,7 @@ x11-libs/wxGTK:2.8[X]
 
 
 http://www.codeblocks.org/
-GPL-2
+GPL-3
 The open source, cross platform, free C++ IDE.
 
 autotools eutils flag-o-matic libtool multilib subversion toolchain-funcs user wxwidgets
@@ -12,9 +12,9 @@ contrib debug pch static-libs
 
 
 
-2
+4
 
-compile configure install preinst prepare unpack
+compile configure preinst prepare unpack
 
 
 

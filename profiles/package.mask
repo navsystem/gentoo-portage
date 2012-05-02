@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13709 2012/04/29 07:02:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13713 2012/05/01 10:09:44 johu Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ulrich Müller <ulm@gentoo.org> (30 Apr 2012)
+# Breaks app-emacs/ecb, bug 414109.
+=app-emacs/cedet-1.1
 
 # Hans de Graaff <graaff@gentoo.org> (29 Apr 2012)
 # Mask new cucumber components until the whole set it ready.
@@ -166,12 +170,6 @@ kde-base/ksecrets
 # Alpha versions of dev-libs/libevent are considered unstable
 >dev-libs/libevent-2.1
 
-# Samuli Suominen <ssuominen@gentoo.org> (03 Apr 2012)
-# - Still using the obsolete MusicBrainz RDF based database.
-# - Incompatible with latest libmp4v2 API.
-# Removal in 30 days wrt bug 409257.
-media-libs/tunepimp
-
 # Mike Gilbert <floppym@gentoo.org> (01 Apr 2012)
 # The python-3 slot is obsolete for this package.
 =dev-python/python-dateutil-2.0
@@ -181,16 +179,6 @@ media-libs/tunepimp
 # Needs too much special patching to work in Gentoo,
 # bugs: #371167, #408647. Removal in 60 days (31 May 2012).
 sys-auth/tcb
-
-# Markos Chandras <hwoarang@gentoo.org> (30 Mar 2012)
-# Unmaintained. Replaced by x11-libs/qt-gui[gtkstyle]
-# Removal in 30 days
-x11-themes/qgtkstyle
-
-# Markos Chandras <hwoarang@gentoo.org> (29 Mar 2012)
-# Does not work with twitter anymore. Dead upstream
-# Fails because of underlinking. Bug #379277
-net-im/twittare
 
 # Alex Legler <a3li@gentoo.org> (28 Mar 2012)
 # Leftover packages from a packaging attempt of Horde-4
