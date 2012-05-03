@@ -1,4 +1,4 @@
-virtual/opengl virtual/glu dev-lang/tcl media-libs/libsdl[X,audio,video] media-libs/sdl-mixer[mikmod,vorbis] media-libs/freetype:2 media-libs/libpng x11-libs/libXmu x11-libs/libXi virtual/libintl nls? ( sys-devel/gettext ) dev-util/pkgconfig
+virtual/opengl virtual/glu dev-lang/tcl media-libs/libsdl[X,audio,video] media-libs/sdl-mixer[mikmod,vorbis] media-libs/freetype:2 media-libs/libpng x11-libs/libXmu x11-libs/libXi virtual/libintl nls? ( sys-devel/gettext ) virtual/pkgconfig
 virtual/opengl virtual/glu dev-lang/tcl media-libs/libsdl[X,audio,video] media-libs/sdl-mixer[mikmod,vorbis] media-libs/freetype:2 media-libs/libpng x11-libs/libXmu x11-libs/libXi virtual/libintl
 0
 mirror://sourceforge/extremetuxracer/extremetuxracer-0.5beta.tar.gz

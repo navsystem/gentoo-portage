@@ -1,4 +1,4 @@
->=net-libs/wvstreams-4.4 dev-util/pkgconfig
+>=net-libs/wvstreams-4.4 virtual/pkgconfig
 >=net-libs/wvstreams-4.4 net-dialup/ppp
 0
 http://wvstreams.googlecode.com/files/wvdial-1.61.tar.gz

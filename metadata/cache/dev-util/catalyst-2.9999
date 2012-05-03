@@ -8,7 +8,7 @@ GPL-2
 release metatool used for creating releases based on Gentoo Linux
 
 eutils git-2 multilib python toolchain-funcs user
-ccache
+ccache kernel_linux
 
 
 

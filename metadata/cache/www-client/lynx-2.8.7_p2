@@ -1,4 +1,4 @@
-sys-libs/ncurses[unicode?] sys-libs/zlib nls? ( virtual/libintl ) ssl? ( !gnutls? ( >=dev-libs/openssl-0.9.8 ) gnutls? ( >=net-libs/gnutls-2.6.4 ) ) bzip2? ( app-arch/bzip2 ) nls? ( sys-devel/gettext ) >=dev-util/pkgconfig-0.23
+sys-libs/ncurses[unicode?] sys-libs/zlib nls? ( virtual/libintl ) ssl? ( !gnutls? ( >=dev-libs/openssl-0.9.8 ) gnutls? ( >=net-libs/gnutls-2.6.4 ) ) bzip2? ( app-arch/bzip2 ) nls? ( sys-devel/gettext ) virtual/pkgconfig
 sys-libs/ncurses[unicode?] sys-libs/zlib nls? ( virtual/libintl ) ssl? ( !gnutls? ( >=dev-libs/openssl-0.9.8 ) gnutls? ( >=net-libs/gnutls-2.6.4 ) ) bzip2? ( app-arch/bzip2 )
 0
 http://lynx.isc.org/current/lynx2.8.7rel.2.tar.bz2

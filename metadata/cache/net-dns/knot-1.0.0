@@ -1,4 +1,4 @@
-dev-libs/openssl dev-libs/userspace-rcu dev-util/pkgconfig sys-devel/flex virtual/yacc || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+dev-libs/openssl dev-libs/userspace-rcu virtual/pkgconfig sys-devel/flex virtual/yacc || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 dev-libs/openssl dev-libs/userspace-rcu
 0
 http://public.nic.cz/files/knot-dns/knot-1.0.0.tar.gz

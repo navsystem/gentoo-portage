@@ -1,4 +1,4 @@
-sys-devel/gettext dev-util/pkgconfig dev-util/intltool >=net-dialup/wvdial-1.54 gnome-base/libglade:2.0 x11-libs/gtk+:2 >=sys-apps/sed-4
+sys-devel/gettext virtual/pkgconfig dev-util/intltool >=net-dialup/wvdial-1.54 gnome-base/libglade:2.0 x11-libs/gtk+:2 >=sys-apps/sed-4
 >=net-dialup/wvdial-1.54 gnome-base/libglade:2.0 x11-libs/gtk+:2
 0
 mirror://gentoo/gnome-ppp-0.3.23.tar.bz2

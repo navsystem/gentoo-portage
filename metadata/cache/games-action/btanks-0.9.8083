@@ -1,4 +1,4 @@
->=dev-lang/lua-5.1 media-libs/libsdl[joystick,video] media-libs/libvorbis virtual/opengl dev-libs/expat media-libs/smpeg media-libs/sdl-image[jpeg,png] media-libs/sdl-gfx dev-util/pkgconfig dev-util/scons
+>=dev-lang/lua-5.1 media-libs/libsdl[joystick,video] media-libs/libvorbis virtual/opengl dev-libs/expat media-libs/smpeg media-libs/sdl-image[jpeg,png] media-libs/sdl-gfx virtual/pkgconfig dev-util/scons
 >=dev-lang/lua-5.1 media-libs/libsdl[joystick,video] media-libs/libvorbis virtual/opengl dev-libs/expat media-libs/smpeg media-libs/sdl-image[jpeg,png] media-libs/sdl-gfx
 0
 mirror://sourceforge/btanks/btanks-0.9.8083.tar.bz2

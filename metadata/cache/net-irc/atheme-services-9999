@@ -1,4 +1,4 @@
-=dev-libs/libmowgli-9999:2 cracklib? ( sys-libs/cracklib ) ldap? ( net-nds/openldap ) nls? ( sys-devel/gettext ) perl? ( dev-lang/perl ) pcre? ( dev-libs/libpcre ) ssl? ( dev-libs/openssl ) dev-util/pkgconfig dev-vcs/git dev-lang/perl[-build]
+=dev-libs/libmowgli-9999:2 cracklib? ( sys-libs/cracklib ) ldap? ( net-nds/openldap ) nls? ( sys-devel/gettext ) perl? ( dev-lang/perl ) pcre? ( dev-libs/libpcre ) ssl? ( dev-libs/openssl ) virtual/pkgconfig dev-vcs/git dev-lang/perl[-build]
 =dev-libs/libmowgli-9999:2 cracklib? ( sys-libs/cracklib ) ldap? ( net-nds/openldap ) nls? ( sys-devel/gettext ) perl? ( dev-lang/perl ) pcre? ( dev-libs/libpcre ) ssl? ( dev-libs/openssl ) dev-lang/perl[-build]
 0
 

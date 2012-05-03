@@ -1,4 +1,4 @@
-sys-libs/ncurses >=net-nds/openldap-2.2 dev-libs/popt >=dev-libs/glib-2 sys-libs/readline ssl? ( dev-libs/openssl ) dev-util/pkgconfig
+sys-libs/ncurses >=net-nds/openldap-2.2 dev-libs/popt >=dev-libs/glib-2 sys-libs/readline ssl? ( dev-libs/openssl ) virtual/pkgconfig
 sys-libs/ncurses >=net-nds/openldap-2.2 dev-libs/popt >=dev-libs/glib-2 sys-libs/readline ssl? ( dev-libs/openssl )
 0
 http://www.lichteblau.com/download/ldapvi-1.7.tar.gz
