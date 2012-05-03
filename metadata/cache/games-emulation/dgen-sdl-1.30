@@ -1,0 +1,22 @@
+media-libs/libsdl[joystick?] app-arch/libarchive opengl? ( virtual/opengl ) x86? ( dev-lang/nasm )
+media-libs/libsdl[joystick?] app-arch/libarchive opengl? ( virtual/opengl )
+0
+mirror://sourceforge/dgen/files/dgen-sdl-1.30.tar.gz
+
+http://tamentis.com/projects/dgen/
+dgen-sdl as-is LGPL-2.1 GPL-2 BSD
+A Linux/SDL-Port of the famous DGen MegaDrive/Genesis-Emulator
+~amd64 ~x86
+base eutils games multilib toolchain-funcs user
+joystick opengl
+
+
+
+2
+
+compile configure install postinst preinst prepare setup unpack
+
+
+
+
+

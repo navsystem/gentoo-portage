@@ -1,4 +1,4 @@
->=dev-libs/glib-2.16 >=x11-libs/gtk+-2.10:2 dev-util/intltool dev-util/pkgconfig >=sys-apps/sed-4
+>=dev-libs/glib-2.16 >=x11-libs/gtk+-2.10:2 dev-util/intltool virtual/pkgconfig >=sys-apps/sed-4
 >=dev-libs/glib-2.16 >=x11-libs/gtk+-2.10:2
 0
 mirror://sourceforge/xarchiver/xarchiver-0.5.2.tar.bz2

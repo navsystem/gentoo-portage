@@ -1,4 +1,4 @@
-=app-admin/gkrellm-2* dev-util/pkgconfig
+=app-admin/gkrellm-2* virtual/pkgconfig
 =app-admin/gkrellm-2*
 0
 http://tripie.sweb.cz/gkrellm/trayicons/dist/gkrellm-trayicons-1.03.tar.gz

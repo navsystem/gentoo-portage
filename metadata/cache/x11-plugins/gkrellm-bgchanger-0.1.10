@@ -1,4 +1,4 @@
-=app-admin/gkrellm-2* dev-util/pkgconfig
+=app-admin/gkrellm-2* virtual/pkgconfig
 =app-admin/gkrellm-2*
 2
 http://www.bender-suhl.de/stefan/comp/sources/gkrellmbgchg2-0.1.10.tar.gz

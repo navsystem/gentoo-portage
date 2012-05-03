@@ -1,4 +1,4 @@
->=dev-libs/nspr-4.7.0 app-arch/zip =dev-lang/python-2*[threads] dev-util/pkgconfig || ( >=sys-devel/automake-1.11.1:1.11 ) =sys-devel/autoconf-2.1* sys-devel/libtool
+>=dev-libs/nspr-4.7.0 app-arch/zip =dev-lang/python-2*[threads] virtual/pkgconfig || ( >=sys-devel/automake-1.11.1:1.11 ) =sys-devel/autoconf-2.1* sys-devel/libtool
 >=dev-libs/nspr-4.7.0
 0
 https://ftp.mozilla.org/pub/mozilla.org/js/js185-1.0.0.tar.gz

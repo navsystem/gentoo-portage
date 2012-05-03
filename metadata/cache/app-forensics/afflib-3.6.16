@@ -6,7 +6,7 @@ http://afflib.org/downloads/afflib-3.6.16.tar.gz
 http://afflib.org/
 BSD
 Library that implements the AFF image standard
-~amd64 ~hppa ~ppc ~x86
+amd64 ~hppa ~ppc ~x86
 autotools autotools-utils eutils libtool multilib python toolchain-funcs user
 fuse ncurses python qemu readline s3 static-libs threads
 

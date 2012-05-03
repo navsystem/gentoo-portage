@@ -1,4 +1,4 @@
-X? ( >=x11-libs/wxGTK-2.6.0 ) >=dev-libs/libxml2-2.0.0 net-misc/curl virtual/libusb:0 sys-libs/readline dev-util/pkgconfig
+X? ( >=x11-libs/wxGTK-2.6.0 ) >=dev-libs/libxml2-2.0.0 net-misc/curl virtual/libusb:0 sys-libs/readline virtual/pkgconfig
 X? ( >=x11-libs/wxGTK-2.6.0 ) >=dev-libs/libxml2-2.0.0 net-misc/curl virtual/libusb:0 sys-libs/readline
 0
 mirror://berlios/usbprog/usbprog-0.2.0.tar.bz2

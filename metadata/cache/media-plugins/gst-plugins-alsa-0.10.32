@@ -1,4 +1,4 @@
->=media-libs/alsa-lib-0.9.1 >=media-libs/gst-plugins-base-0.10.32 ~media-libs/gst-plugins-base-0.10.32 >=sys-apps/sed-4 dev-util/pkgconfig
+>=media-libs/alsa-lib-0.9.1 >=media-libs/gst-plugins-base-0.10.32 ~media-libs/gst-plugins-base-0.10.32 >=sys-apps/sed-4 virtual/pkgconfig
 >=media-libs/alsa-lib-0.9.1 >=media-libs/gst-plugins-base-0.10.32
 0.10
 http://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-0.10.32.tar.bz2

@@ -1,4 +1,4 @@
-=app-admin/gkrellm-2* dev-util/pkgconfig
+=app-admin/gkrellm-2* virtual/pkgconfig
 net-misc/wget =app-admin/gkrellm-2*
 0
 mirror://sourceforge/gkrellkam/gkrellkam_2.0.0.tar.gz

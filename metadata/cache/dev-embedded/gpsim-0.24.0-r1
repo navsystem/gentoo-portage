@@ -1,4 +1,4 @@
-dev-libs/glib:2 dev-libs/popt >=dev-embedded/gputils-0.12 gtk? ( >=x11-libs/gtk+extra-2 ) dev-util/pkgconfig sys-devel/flex || ( dev-util/yacc sys-devel/bison )
+dev-libs/glib:2 dev-libs/popt >=dev-embedded/gputils-0.12 gtk? ( >=x11-libs/gtk+extra-2 ) virtual/pkgconfig sys-devel/flex || ( dev-util/yacc sys-devel/bison )
 dev-libs/glib:2 dev-libs/popt >=dev-embedded/gputils-0.12 gtk? ( >=x11-libs/gtk+extra-2 )
 0
 mirror://sourceforge/gpsim/gpsim-0.24.0.tar.gz

@@ -1,4 +1,4 @@
-dev-util/pkgconfig >=dev-libs/glib-2.6 dev-libs/openssl colordiff? ( app-misc/colordiff )
+virtual/pkgconfig >=dev-libs/glib-2.6 dev-libs/openssl colordiff? ( app-misc/colordiff )
 >=dev-libs/glib-2.6 dev-libs/openssl colordiff? ( app-misc/colordiff )
 0
 mirror://gentoo/conf-update-1.0.tar.bz2

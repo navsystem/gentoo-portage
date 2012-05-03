@@ -1,4 +1,4 @@
-x11-libs/gtk+:2 nls? ( sys-devel/gettext ) >=dev-util/pkgconfig-0.9
+x11-libs/gtk+:2 nls? ( sys-devel/gettext ) virtual/pkgconfig
 x11-libs/gtk+:2
 0
 mirror://sourceforge/gtkperf/gtkperf_0.40.tar.gz
