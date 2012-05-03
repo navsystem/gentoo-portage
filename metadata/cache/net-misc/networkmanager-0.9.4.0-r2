@@ -8,7 +8,7 @@ GPL-2
 Network configuration and management in an easy way. Desktop environment independent.
 ~amd64 ~arm ~ppc ~ppc64 ~x86
 autotools eutils gnome.org libtool linux-info multilib systemd toolchain-funcs user versionator
-avahi bluetooth connection-sharing dhclient +dhcpcd doc gnutls +introspection kernel_linux +nss modemmanager +ppp resolvconf systemd wext wimax
+avahi bluetooth connection-sharing dhclient +dhcpcd doc gnutls +introspection kernel_linux +nss modemmanager +ppp resolvconf systemd +wext wimax
 modemmanager? ( ppp ) ^^ ( nss gnutls ) ^^ ( dhclient dhcpcd )
 
 

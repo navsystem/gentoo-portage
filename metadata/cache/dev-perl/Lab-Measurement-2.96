@@ -1,0 +1,22 @@
+dev-lang/perl dev-perl/Clone dev-perl/Exception-Class dev-perl/TermReadKey dev-perl/TeX-Encode dev-perl/XML-Generator dev-perl/XML-DOM dev-perl/XML-Twig dev-perl/encoding-warnings perl-core/Switch sci-visualization/gnuplot virtual/perl-Data-Dumper virtual/perl-Encode virtual/perl-Time-HiRes !dev-perl/Lab-Instrument !dev-perl/Lab-Tools virtual/perl-Module-Build
+dev-lang/perl dev-perl/Clone dev-perl/Exception-Class dev-perl/TermReadKey dev-perl/TeX-Encode dev-perl/XML-Generator dev-perl/XML-DOM dev-perl/XML-Twig dev-perl/encoding-warnings perl-core/Switch sci-visualization/gnuplot virtual/perl-Data-Dumper virtual/perl-Encode virtual/perl-Time-HiRes !dev-perl/Lab-Instrument !dev-perl/Lab-Tools
+0
+mirror://cpan/authors/id/A/AK/AKHUETTEL/Lab-Measurement-2.96.tar.gz
+
+http://www.labmeasurement.de/
+|| ( Artistic GPL-2 )
+Measurement control and automation with Perl
+~amd64 ~x86
+base eutils multilib perl-module toolchain-funcs user
+
+
+
+
+
+
+compile install postinst postrm preinst prerm setup test unpack
+
+
+
+
+
