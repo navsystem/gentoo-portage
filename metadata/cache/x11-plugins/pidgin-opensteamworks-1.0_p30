@@ -1,0 +1,22 @@
+dev-libs/glib:2 dev-libs/json-glib net-im/pidgin virtual/pkgconfig
+dev-libs/glib:2 dev-libs/json-glib net-im/pidgin
+0
+http://dev.gentoo.org/~hasufell/distfiles/pidgin-opensteamworks-1.0_p30.tar.xz
+
+http://code.google.com/p/pidgin-opensteamworks/
+GPL-3
+Steam protocol plugin for pidgin
+~amd64 ~x86
+multilib toolchain-funcs
+
+
+
+
+4
+
+prepare setup
+
+
+
+
+

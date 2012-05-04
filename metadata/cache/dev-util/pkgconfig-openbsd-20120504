@@ -1,0 +1,22 @@
+pkg-config? ( !dev-util/pkgconfig !dev-util/pkg-config-lite !dev-util/pkgconf[pkg-config] )
+pkg-config? ( !dev-util/pkgconfig !dev-util/pkg-config-lite !dev-util/pkgconf[pkg-config] ) dev-lang/perl virtual/perl-Getopt-Long
+0
+http://dev.gentoo.org/~ssuominen/pkgconfig-openbsd-20120504.tar.xz pkg-config? ( http://pkgconfig.freedesktop.org/releases/pkg-config-0.26.tar.gz )
+
+http://www.openbsd.org/cgi-bin/cvsweb/src/usr.bin/pkg-config/ http://www.openbsd.org/cgi-bin/cvsweb/src/usr.sbin/pkg_add/OpenBSD/PkgConfig.pm
+ISC pkg-config? ( GPL-2 )
+A perl based version of pkg-config from OpenBSD
+
+
+pkg-config
+
+
+
+4
+
+install prepare
+
+
+
+
+

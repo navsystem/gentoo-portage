@@ -1,5 +1,5 @@
 || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool dev-vcs/git
-pkg-config? ( !dev-util/pkgconfig !dev-util/pkg-config-lite )
+pkg-config? ( !dev-util/pkgconfig !dev-util/pkg-config-lite !dev-util/pkgconfig-openbsd[pkg-config] )
 0
 
 

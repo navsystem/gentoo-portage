@@ -1,5 +1,5 @@
-dev-libs/glib:2 >=dev-libs/popt-1.15
-dev-libs/glib:2 >=dev-libs/popt-1.15
+>=dev-libs/glib-2.28 >=dev-libs/popt-1.16 !dev-util/pkgconf[pkg-config] !dev-util/pkg-config-lite !dev-util/pkgconfig-openbsd[pkg-config]
+>=dev-libs/glib-2.28 >=dev-libs/popt-1.16 !dev-util/pkgconf[pkg-config] !dev-util/pkg-config-lite !dev-util/pkgconfig-openbsd[pkg-config]
 0
 http://pkgconfig.freedesktop.org/releases/pkg-config-0.26.tar.gz
 
