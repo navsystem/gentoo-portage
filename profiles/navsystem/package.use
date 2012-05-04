@@ -67,3 +67,6 @@ app-emulation/libvirt -policykit
 sys-apps/util-linux static-libs
 dev-libs/popt static-libs
 dev-libs/libgpg-error static-libs
+
+dev-java/swing-layout source
+dev-vcs/subversion java
