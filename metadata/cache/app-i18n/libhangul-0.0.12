@@ -1,4 +1,4 @@
-nls? ( sys-devel/gettext ) dev-util/pkgconfig test? ( dev-libs/check )
+nls? ( sys-devel/gettext ) virtual/pkgconfig test? ( dev-libs/check )
 nls? ( virtual/libintl )
 0
 http://kldp.net/frs/download.php/5855/libhangul-0.0.12.tar.gz

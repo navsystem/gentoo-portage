@@ -1,4 +1,4 @@
->=app-i18n/ibus-table-1.1 dev-util/pkgconfig
+>=app-i18n/ibus-table-1.1 virtual/pkgconfig
 
 0
 http://ibus.googlecode.com/files/ibus-table-extraphrase-1.1.0.20090415.tar.gz

@@ -6,7 +6,7 @@ test
 http://www.cups.org/
 GPL-2
 The Common Unix Printing System
-amd64 ~arm hppa ~ppc ~x86
+amd64 arm hppa ~ppc ~x86
 autotools base eutils fdo-mime flag-o-matic gnome2-utils java-pkg-opt-2 java-utils-2 libtool linux-info multilib pam perl-module python toolchain-funcs user versionator
 acl avahi dbus debug +filters gnutls java +jpeg kerberos ldap pam perl +png python slp +ssl static-libs +threads +tiff usb X xinetd linguas_da linguas_de linguas_es linguas_eu linguas_fi linguas_fr linguas_id linguas_it linguas_ja linguas_ko linguas_nl linguas_no linguas_pl linguas_pt linguas_pt_BR linguas_ru linguas_sv linguas_zh linguas_zh_TW elibc_FreeBSD java
 gnutls? ( ssl )

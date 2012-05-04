@@ -3,10 +3,10 @@ DEPEND=selinux? ( sys-libs/libselinux ) pam? ( sys-libs/pam ) >=sys-kernel/linux
 DESCRIPTION=Utilities for rescue and embedded systems
 EAPI=4
 HOMEPAGE=http://www.busybox.net/
-IUSE=ipv6 make-symlinks mdev -pam selinux sep-usr static savedconfig
+IUSE=ipv6 make-symlinks math mdev -pam selinux sep-usr static savedconfig
 LICENSE=GPL-2
 RDEPEND=selinux? ( sys-libs/libselinux ) pam? ( sys-libs/pam )
 RESTRICT=test
 SLOT=0
 _eclasses_=eutils	74d9118e657da5b1db0c36f5dea88e57	flag-o-matic	66cb710a2aa184a5687fe1289d7973ab	git-2	15733ab6a6feb34af9837b41623c2bad	multilib	5f4ad6cf85e365e8f0c6050ddd21659e	portability	536c5e70c5fb252ed3b769e04aa3f05b	savedconfig	973a6df1a0949eba28a185eac79de815	toolchain-funcs	6526ac6fc9aedf391efb91fcd75ace68	user	32a09e82e2f592bf88ad2fd08525166e
-_md5_=cc0e5e0d3e755c55dc94e577a2af5b2a
+_md5_=a5bee2f6c9bbd9241cc7099618d81e67

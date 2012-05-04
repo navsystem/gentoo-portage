@@ -1,4 +1,4 @@
-x11-libs/gtk+:2 dev-libs/glib:2 dev-util/pkgconfig
+x11-libs/gtk+:2 dev-libs/glib:2 virtual/pkgconfig
 x11-libs/gtk+:2 dev-libs/glib:2
 0
 http://fishsoup.net/software/kanjipad/kanjipad-2.0.0.tar.gz

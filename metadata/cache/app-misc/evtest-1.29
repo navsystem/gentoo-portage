@@ -1,4 +1,4 @@
-xml? ( dev-libs/libxml2 ) dev-util/pkgconfig || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+xml? ( dev-libs/libxml2 ) virtual/pkgconfig || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 xml? ( dev-libs/libxml2 )
 0
 http://cgit.freedesktop.org/evtest/snapshot/evtest-1.29.tar.bz2 mirror://gentoo/evtest-1.29-mans.tar.xz

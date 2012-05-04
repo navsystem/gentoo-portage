@@ -1,4 +1,4 @@
-app-text/texi2html dev-util/pkgconfig sys-libs/zlib[static-libs] dev-libs/glib[static-libs]
+app-text/texi2html virtual/pkgconfig sys-libs/zlib[static-libs] dev-libs/glib[static-libs]
 
 0
 http://wiki.qemu.org/download/qemu-1.0.tar.gz http://dev.gentoo.org/~lu_zero/distfiles/qemu-1.0-patches.tar.xz
