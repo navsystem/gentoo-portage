@@ -1,4 +1,4 @@
-dev-libs/libsigc++:2 dev-util/pkgconfig
+dev-libs/libsigc++:2 virtual/pkgconfig
 dev-libs/libsigc++:2
 0
 mirror://sourceforge/parchive/libpar2-0.2.tar.gz

@@ -1,4 +1,4 @@
-x11-libs/gtk+:2 dev-libs/libxml2:2 >=dev-util/pkgconfig-0.20 rox-base/zeroinstall-injector
+x11-libs/gtk+:2 dev-libs/libxml2:2 virtual/pkgconfig rox-base/zeroinstall-injector
 x11-libs/gtk+:2 dev-libs/libxml2:2
 0
 http://www.kerofin.demon.co.uk/rox/ROX-CLib-2.1.10.tar.gz

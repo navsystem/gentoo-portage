@@ -1,4 +1,4 @@
-png? ( media-libs/libpng ) mad? ( media-libs/libmad ) flac? ( media-libs/flac ) vorbis? ( media-libs/libvorbis ) iconv? ( virtual/libiconv media-libs/freetype:2 ) sys-libs/zlib x11-libs/wxGTK:2.8 dev-util/pkgconfig
+png? ( media-libs/libpng ) mad? ( media-libs/libmad ) flac? ( media-libs/flac ) vorbis? ( media-libs/libvorbis ) iconv? ( virtual/libiconv media-libs/freetype:2 ) sys-libs/zlib x11-libs/wxGTK:2.8 virtual/pkgconfig
 png? ( media-libs/libpng ) mad? ( media-libs/libmad ) flac? ( media-libs/flac ) vorbis? ( media-libs/libvorbis ) iconv? ( virtual/libiconv media-libs/freetype:2 ) sys-libs/zlib x11-libs/wxGTK:2.8
 0
 mirror://sourceforge/scummvm/scummvm-tools-1.4.0.tar.bz2

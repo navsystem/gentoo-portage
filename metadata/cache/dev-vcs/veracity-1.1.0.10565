@@ -1,4 +1,4 @@
-dev-libs/icu net-misc/curl dev-libs/nspr sys-apps/util-linux dev-db/sqlite:3 sys-libs/zlib >=dev-util/pkgconfig-0.25 test? ( app-arch/unzip ) >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+dev-libs/icu net-misc/curl dev-libs/nspr sys-apps/util-linux dev-db/sqlite:3 sys-libs/zlib virtual/pkgconfig test? ( app-arch/unzip ) >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 dev-libs/icu net-misc/curl dev-libs/nspr sys-apps/util-linux dev-db/sqlite:3 sys-libs/zlib
 0
 http://download.sourcegear.com/Veracity/release/1.1.0.10565/veracity-source-1.1.0.10565.tar.gz ftp://ftp.mozilla.org/pub/mozilla.org/js/js-1.8.0-rc1.tar.gz http://ftp.mozilla.org/pub/mozilla.org/js/js-1.8.0-rc1.tar.gz

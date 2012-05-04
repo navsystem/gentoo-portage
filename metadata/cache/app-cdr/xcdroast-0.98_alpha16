@@ -1,4 +1,4 @@
->=x11-libs/gtk+-2:2 app-cdr/cdrtools dev-util/pkgconfig >=sys-apps/sed-4
+>=x11-libs/gtk+-2:2 app-cdr/cdrtools virtual/pkgconfig >=sys-apps/sed-4
 >=x11-libs/gtk+-2:2 app-cdr/cdrtools
 0
 mirror://sourceforge/xcdroast/xcdroast-0.98alpha16.tar.gz

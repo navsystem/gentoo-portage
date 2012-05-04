@@ -1,4 +1,4 @@
-dev-libs/libpcre dev-libs/uulib gpg? ( app-crypt/gnupg ) idn? ( net-dns/libidn ) mime? ( net-mail/metamail ) net-misc/urlview nls? ( sys-devel/gettext ) sasl? ( virtual/gsasl ) socks5? ( net-proxy/dante ) sys-libs/ncurses[unicode?] unicode? ( dev-libs/icu ) dev-util/pkgconfig
+dev-libs/libpcre dev-libs/uulib gpg? ( app-crypt/gnupg ) idn? ( net-dns/libidn ) mime? ( net-mail/metamail ) net-misc/urlview nls? ( sys-devel/gettext ) sasl? ( virtual/gsasl ) socks5? ( net-proxy/dante ) sys-libs/ncurses[unicode?] unicode? ( dev-libs/icu ) virtual/pkgconfig
 dev-libs/libpcre dev-libs/uulib gpg? ( app-crypt/gnupg ) idn? ( net-dns/libidn ) mime? ( net-mail/metamail ) net-misc/urlview nls? ( sys-devel/gettext ) sasl? ( virtual/gsasl ) socks5? ( net-proxy/dante ) sys-libs/ncurses[unicode?] unicode? ( dev-libs/icu )
 0
 ftp://ftp.tin.org/pub/news/clients/tin/v2.0/tin-2.0.0.tar.bz2

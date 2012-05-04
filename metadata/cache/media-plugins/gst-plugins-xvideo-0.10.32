@@ -1,4 +1,4 @@
-x11-libs/libXv x11-libs/libXext x11-proto/videoproto x11-proto/xproto x11-proto/xextproto >=media-libs/gst-plugins-base-0.10.32 ~media-libs/gst-plugins-base-0.10.32 >=sys-apps/sed-4 dev-util/pkgconfig
+x11-libs/libXv x11-libs/libXext x11-proto/videoproto x11-proto/xproto x11-proto/xextproto >=media-libs/gst-plugins-base-0.10.32 ~media-libs/gst-plugins-base-0.10.32 >=sys-apps/sed-4 virtual/pkgconfig
 x11-libs/libXv x11-libs/libXext >=media-libs/gst-plugins-base-0.10.32
 0.10
 http://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-0.10.32.tar.bz2

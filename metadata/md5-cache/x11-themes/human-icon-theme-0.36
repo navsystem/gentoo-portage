@@ -9,5 +9,5 @@ RDEPEND=|| ( x11-themes/tangerine-icon-theme x11-themes/gnome-icon-theme )
 RESTRICT=binchecks strip
 SLOT=0
 SRC_URI=mirror://ubuntu/pool/universe/h/human-icon-theme/human-icon-theme_0.36.tar.gz http://www.gentoo.org/images/gentoo-logo.svg
-_eclasses_=gnome2-utils	9d3cc9ffeb792a88ed8580de1a099b44
+_eclasses_=gnome2-utils	dfd98be073cc8193fc79925566741ab0
 _md5_=5ed469551254510349684db880b480a9

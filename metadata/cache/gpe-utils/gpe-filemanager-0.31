@@ -1,4 +1,4 @@
-gpe-base/libgpewidget gnome-base/gnome-vfs dev-libs/dbus-glib >=dev-util/intltool-0.29 >=dev-util/pkgconfig-0.12.0
+gpe-base/libgpewidget gnome-base/gnome-vfs dev-libs/dbus-glib >=dev-util/intltool-0.29 virtual/pkgconfig
 gpe-base/gpe-icons gpe-base/libgpewidget gnome-base/gnome-vfs dev-libs/dbus-glib
 0
 http://gpe.linuxtogo.org/download/source/gpe-filemanager-0.31.tar.bz2

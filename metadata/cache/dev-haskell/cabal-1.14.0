@@ -1,5 +1,5 @@
 >=dev-lang/ghc-6.10.1
->=dev-lang/ghc-6.10.1 dev-util/pkgconfig dev-lang/ghc
+>=dev-lang/ghc-6.10.1 virtual/pkgconfig dev-lang/ghc
 0
 http://hackage.haskell.org/packages/archive/Cabal/1.14.0/Cabal-1.14.0.tar.gz
 test

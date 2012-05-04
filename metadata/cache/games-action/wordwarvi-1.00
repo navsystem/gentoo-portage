@@ -1,4 +1,4 @@
-x11-libs/gtk+:2 portaudio? ( media-libs/libvorbis >=media-libs/portaudio-19_pre1 ) dev-util/pkgconfig
+x11-libs/gtk+:2 portaudio? ( media-libs/libvorbis >=media-libs/portaudio-19_pre1 ) virtual/pkgconfig
 x11-libs/gtk+:2 portaudio? ( media-libs/libvorbis >=media-libs/portaudio-19_pre1 )
 0
 mirror://sourceforge/wordwarvi/wordwarvi-1.00.tar.gz

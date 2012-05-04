@@ -1,4 +1,4 @@
-threadsafe? ( >=dev-libs/nspr-4.8.6 ) app-arch/zip =dev-lang/python-2*[threads] dev-util/pkgconfig
+threadsafe? ( >=dev-libs/nspr-4.8.6 ) app-arch/zip =dev-lang/python-2*[threads] virtual/pkgconfig
 threadsafe? ( >=dev-libs/nspr-4.8.6 )
 0
 http://releases.mozilla.org/pub/mozilla.org/firefox/releases/3.6.15/source/firefox-3.6.15.source.tar.bz2

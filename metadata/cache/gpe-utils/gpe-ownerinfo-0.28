@@ -1,4 +1,4 @@
->=gpe-base/libgpewidget-0.117 >=dev-util/intltool-0.29 >=dev-util/pkgconfig-0.12.0
+>=gpe-base/libgpewidget-0.117 >=dev-util/intltool-0.29 virtual/pkgconfig
 >=gpe-base/libgpewidget-0.117
 0
 http://gpe.linuxtogo.org/download/source/gpe-ownerinfo-0.28.tar.gz

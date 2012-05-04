@@ -1,4 +1,4 @@
->=app-laptop/i8kutils-1.5 =app-admin/gkrellm-2* dev-util/pkgconfig
+>=app-laptop/i8kutils-1.5 =app-admin/gkrellm-2* virtual/pkgconfig
 >=app-laptop/i8kutils-1.5 =app-admin/gkrellm-2*
 0
 http://www.coding-zone.com/i8krellm-2.5.tar.gz

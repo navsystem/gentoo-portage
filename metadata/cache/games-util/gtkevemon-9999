@@ -1,4 +1,4 @@
-dev-util/pkgconfig dev-vcs/subversion net-misc/rsync
+virtual/pkgconfig dev-vcs/subversion net-misc/rsync
 dev-cpp/gtkmm:2.4 dev-libs/libxml2
 0
 

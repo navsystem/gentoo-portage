@@ -6,7 +6,7 @@ ftp://download.nvidia.com/XFree86/nvidia-settings/nvidia-settings-295.20.tar.bz2
 http://www.nvidia.com/
 GPL-2
 NVIDIA Linux X11 Settings Utility
--* ~amd64 ~x86 ~x86-fbsd
+-* amd64 ~x86 ~x86-fbsd
 eutils multilib toolchain-funcs user
 examples
 

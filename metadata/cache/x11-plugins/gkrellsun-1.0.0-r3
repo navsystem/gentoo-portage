@@ -1,4 +1,4 @@
-nls? ( sys-devel/gettext ) =app-admin/gkrellm-2* dev-util/pkgconfig
+nls? ( sys-devel/gettext ) =app-admin/gkrellm-2* virtual/pkgconfig
 nls? ( sys-devel/gettext ) =app-admin/gkrellm-2*
 1
 mirror://sourceforge/gkrellsun/gkrellsun-1.0.0.tar.gz

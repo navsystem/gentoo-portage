@@ -1,4 +1,4 @@
->=dev-libs/glib-2.0 zlib? ( sys-libs/zlib ) dev-util/pkgconfig
+>=dev-libs/glib-2.0 zlib? ( sys-libs/zlib ) virtual/pkgconfig
 >=dev-libs/glib-2.0 zlib? ( sys-libs/zlib )
 0
 mirror://sourceforge/nbd/nbd-3.0.tar.bz2

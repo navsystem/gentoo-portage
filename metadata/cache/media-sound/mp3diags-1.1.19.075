@@ -1,0 +1,22 @@
+>=dev-libs/boost-1.37 x11-libs/qt-core:4 x11-libs/qt-gui:4
+>=dev-libs/boost-1.37 x11-libs/qt-core:4 x11-libs/qt-gui:4 x11-libs/qt-svg:4
+0
+mirror://sourceforge/mp3diags/MP3Diags-unstable-1.1.19.075.tar.gz
+
+http://mp3diags.sourceforge.net
+GPL-2
+Qt-based MP3 diagnosis and repair tool
+~amd64 ~x86
+base eutils multilib qt4-r2 toolchain-funcs user
+
+
+
+
+4
+
+compile configure install prepare unpack
+
+
+
+
+

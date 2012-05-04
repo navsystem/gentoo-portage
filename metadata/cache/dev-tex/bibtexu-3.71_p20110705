@@ -1,4 +1,4 @@
->=dev-libs/kpathsea-6.0.1_p20110627 >=dev-libs/icu-4.4 dev-util/pkgconfig
+>=dev-libs/kpathsea-6.0.1_p20110627 >=dev-libs/icu-4.4 virtual/pkgconfig
 >=dev-libs/kpathsea-6.0.1_p20110627 >=dev-libs/icu-4.4
 0
 mirror://gentoo/texlive-20110705-source.tar.xz
