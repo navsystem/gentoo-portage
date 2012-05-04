@@ -1,4 +1,4 @@
->=app-emulation/libvirt-0.9.11 dev-util/pkgconfig test? ( dev-perl/Test-Pod dev-perl/Test-Pod-Coverage dev-perl/XML-XPath virtual/perl-Time-HiRes ) dev-lang/perl[-build]
+>=app-emulation/libvirt-0.9.11 virtual/pkgconfig test? ( dev-perl/Test-Pod dev-perl/Test-Pod-Coverage dev-perl/XML-XPath virtual/perl-Time-HiRes ) dev-lang/perl[-build]
 >=app-emulation/libvirt-0.9.11 dev-lang/perl[-build]
 0
 mirror://cpan/authors/id/D/DA/DANBERR/Sys-Virt-0.9.11.tar.gz

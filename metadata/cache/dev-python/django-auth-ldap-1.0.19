@@ -5,7 +5,7 @@ mirror://pypi/d/django-auth-ldap/django-auth-ldap-1.0.19.tar.gz
 
 http://pypi.python.org/pypi/django-auth-ldap http://bitbucket.org/psagers/django-auth-ldap/
 BSD
-A flexible and capable API layer for Django utilising serialisers
+Django LDAP authentication backend
 ~amd64 ~x86
 distutils multilib python toolchain-funcs
 doc

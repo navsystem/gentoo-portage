@@ -1,4 +1,4 @@
-x11-libs/gtk+:2 x11-libs/cairo dev-util/pkgconfig
+x11-libs/gtk+:2 x11-libs/cairo virtual/pkgconfig
 x11-libs/gtk+:2 x11-libs/cairo
 0
 mirror://sourceforge/gerbv/gerbv-2.6.0.tar.gz

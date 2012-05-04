@@ -1,5 +1,5 @@
-X? ( x11-libs/libX11 x11-libs/libXext xv? ( x11-libs/libXv ) ) png? ( >=media-libs/libpng-1.2 ) app-text/texi2html
-X? ( x11-libs/libX11 x11-libs/libXext xv? ( x11-libs/libXv ) ) png? ( >=media-libs/libpng-1.2 )
+png? ( media-libs/libpng:0 ) X? ( x11-libs/libX11 x11-libs/libXext xv? ( x11-libs/libXv ) ) >=app-text/texi2html-5
+png? ( media-libs/libpng:0 ) X? ( x11-libs/libX11 x11-libs/libXext xv? ( x11-libs/libXv ) )
 0
 mirror://gentoo/qemacs-0.4.0_pre20090420.tar.bz2
 test
@@ -8,7 +8,7 @@ LGPL-2.1
 QEmacs is a very small but powerful UNIX editor
 ~amd64 ~ppc ~x86
 eutils flag-o-matic multilib toolchain-funcs user
-X png unicode xv
+png unicode X xv
 
 
 

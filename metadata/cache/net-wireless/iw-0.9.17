@@ -1,4 +1,4 @@
-dev-libs/libnl:1.1 dev-util/pkgconfig
+dev-libs/libnl:1.1 virtual/pkgconfig
 dev-libs/libnl:1.1
 0
 http://wireless.kernel.org/download/iw/iw-0.9.17.tar.bz2

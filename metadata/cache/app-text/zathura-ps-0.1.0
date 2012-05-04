@@ -1,4 +1,4 @@
->=app-text/libspectre-0.2.6 >=app-text/zathura-0.1.1 dev-libs/girara:2 >=dev-libs/glib-2 x11-libs/cairo dev-util/pkgconfig
+>=app-text/libspectre-0.2.6 >=app-text/zathura-0.1.1 dev-libs/girara:2 >=dev-libs/glib-2 x11-libs/cairo virtual/pkgconfig
 >=app-text/libspectre-0.2.6 >=app-text/zathura-0.1.1 dev-libs/girara:2 >=dev-libs/glib-2 x11-libs/cairo
 0
 http://pwmt.org/projects/zathura/plugins/download/zathura-ps-0.1.0.tar.gz

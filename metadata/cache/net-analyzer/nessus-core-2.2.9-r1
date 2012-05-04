@@ -1,4 +1,4 @@
-~net-analyzer/nessus-libraries-2.2.9 ~net-analyzer/libnasl-2.2.9 tcpd? ( sys-apps/tcp-wrappers ) gtk? ( x11-libs/gtk+:2 ) prelude? ( dev-libs/libprelude ) !net-analyzer/nessus-client dev-util/pkgconfig || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+~net-analyzer/nessus-libraries-2.2.9 ~net-analyzer/libnasl-2.2.9 tcpd? ( sys-apps/tcp-wrappers ) gtk? ( x11-libs/gtk+:2 ) prelude? ( dev-libs/libprelude ) !net-analyzer/nessus-client virtual/pkgconfig || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 ~net-analyzer/nessus-libraries-2.2.9 ~net-analyzer/libnasl-2.2.9 tcpd? ( sys-apps/tcp-wrappers ) gtk? ( x11-libs/gtk+:2 ) prelude? ( dev-libs/libprelude ) !net-analyzer/nessus-client
 0
 ftp://ftp.nessus.org/pub/nessus/nessus-2.2.9/src/nessus-core-2.2.9.tar.gz

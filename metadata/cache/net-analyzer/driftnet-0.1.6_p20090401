@@ -1,4 +1,4 @@
-net-libs/libpcap gtk? ( x11-libs/gtk+:2 virtual/jpeg media-libs/giflib media-libs/libpng ) dev-util/pkgconfig
+net-libs/libpcap gtk? ( x11-libs/gtk+:2 virtual/jpeg media-libs/giflib media-libs/libpng ) virtual/pkgconfig
 net-libs/libpcap gtk? ( x11-libs/gtk+:2 virtual/jpeg media-libs/giflib media-libs/libpng ) mp3? ( media-sound/mpg123 )
 0
 mirror://github/rbu/driftnet/driftnet-0.1.6_p20090401.tar.gz

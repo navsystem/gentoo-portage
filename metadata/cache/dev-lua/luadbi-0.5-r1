@@ -1,4 +1,4 @@
->=dev-lang/lua-5.1 mysql? ( virtual/mysql ) postgres? ( dev-db/postgresql-base ) sqlite? ( >=dev-db/sqlite-3 ) dev-util/pkgconfig
+>=dev-lang/lua-5.1 mysql? ( virtual/mysql ) postgres? ( dev-db/postgresql-base ) sqlite? ( >=dev-db/sqlite-3 ) virtual/pkgconfig
 >=dev-lang/lua-5.1 mysql? ( virtual/mysql ) postgres? ( dev-db/postgresql-base ) sqlite? ( >=dev-db/sqlite-3 )
 0
 http://luadbi.googlecode.com/files/luadbi.0.5.tar.gz

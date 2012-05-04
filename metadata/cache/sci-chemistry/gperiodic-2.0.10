@@ -1,4 +1,4 @@
->=sys-libs/ncurses-5.2 x11-libs/gtk+:2 x11-libs/cairo[X] nls? ( sys-devel/gettext ) dev-util/pkgconfig
+>=sys-libs/ncurses-5.2 x11-libs/gtk+:2 x11-libs/cairo[X] nls? ( sys-devel/gettext ) virtual/pkgconfig
 >=sys-libs/ncurses-5.2 x11-libs/gtk+:2 x11-libs/cairo[X] nls? ( sys-devel/gettext )
 0
 http://www.frantz.fi/software/gperiodic-2.0.10.tar.gz

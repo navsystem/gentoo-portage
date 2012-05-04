@@ -1,4 +1,4 @@
-=x11-libs/gtk+-1* x11-libs/libXxf86vm sdl? ( media-libs/libsdl ) dev-util/pkgconfig x86? ( dev-lang/nasm ) x11-proto/xf86dgaproto x11-proto/xf86vidmodeproto
+=x11-libs/gtk+-1* x11-libs/libXxf86vm sdl? ( media-libs/libsdl ) virtual/pkgconfig x86? ( dev-lang/nasm ) x11-proto/xf86dgaproto x11-proto/xf86vidmodeproto
 =x11-libs/gtk+-1* x11-libs/libXxf86vm sdl? ( media-libs/libsdl )
 0
 mirror://sourceforge/peops/PeopsSoftGpu117.tar.gz

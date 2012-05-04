@@ -1,4 +1,4 @@
->=dev-libs/libxml2-2.6.12[python] >=dev-libs/libxslt-1.1.8 >=sys-apps/gawk-3 sys-devel/gettext >=dev-util/intltool-0.35 >=dev-util/pkgconfig-0.9 app-text/docbook-xml-dtd:4.4 app-text/scrollkeeper-dtd app-arch/xz-utils >=sys-apps/sed-4 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
+>=dev-libs/libxml2-2.6.12[python] >=dev-libs/libxslt-1.1.8 >=sys-apps/gawk-3 sys-devel/gettext >=dev-util/intltool-0.35 virtual/pkgconfig app-text/docbook-xml-dtd:4.4 app-text/scrollkeeper-dtd app-arch/xz-utils >=sys-apps/sed-4 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
 >=dev-libs/libxml2-2.6.12[python] >=dev-libs/libxslt-1.1.8 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
 0
 mirror://gnome/sources/gnome-doc-utils/0.20/gnome-doc-utils-0.20.10.tar.xz

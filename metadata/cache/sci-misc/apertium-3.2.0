@@ -1,4 +1,4 @@
-dev-libs/libxslt dev-libs/libpcre[cxx] >=sci-misc/lttoolbox-3.2 virtual/libiconv dev-util/pkgconfig
+dev-libs/libxslt dev-libs/libpcre[cxx] >=sci-misc/lttoolbox-3.2 virtual/libiconv virtual/pkgconfig
 dev-libs/libxslt dev-libs/libpcre[cxx] >=sci-misc/lttoolbox-3.2 virtual/libiconv
 0
 mirror://sourceforge/apertium/apertium-3.2.0.tar.gz

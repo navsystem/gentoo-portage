@@ -1,4 +1,4 @@
->=dev-lang/mono-1.1.10 doc? ( >=virtual/monodoc-1.1.8 ) >=dev-dotnet/gtk-sharp-2.0 >=media-libs/libnjb-2.2.4 dev-util/pkgconfig
+>=dev-lang/mono-1.1.10 doc? ( >=virtual/monodoc-1.1.8 ) >=dev-dotnet/gtk-sharp-2.0 >=media-libs/libnjb-2.2.4 virtual/pkgconfig
 >=dev-lang/mono-1.1.10 doc? ( >=virtual/monodoc-1.1.8 ) >=dev-dotnet/gtk-sharp-2.0
 0
 http://banshee-project.org/files/njb-sharp/njb-sharp-0.3.0.tar.gz

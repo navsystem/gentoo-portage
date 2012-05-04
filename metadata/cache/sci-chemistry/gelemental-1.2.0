@@ -1,4 +1,4 @@
-dev-cpp/gtkmm:2.4 dev-cpp/glibmm:2 dev-util/pkgconfig sys-devel/gettext dev-util/intltool doc? ( app-doc/doxygen ) >=sys-apps/sed-4
+dev-cpp/gtkmm:2.4 dev-cpp/glibmm:2 virtual/pkgconfig sys-devel/gettext dev-util/intltool doc? ( app-doc/doxygen ) >=sys-apps/sed-4
 dev-cpp/gtkmm:2.4 dev-cpp/glibmm:2
 0
 http://www.kdau.com/files/gelemental-1.2.0.tar.bz2

@@ -1,4 +1,4 @@
-gnome-base/libglade:2.0 x11-libs/gtk+:2 dev-libs/libxml2:2 sci-chemistry/gamess dev-util/pkgconfig
+gnome-base/libglade:2.0 x11-libs/gtk+:2 dev-libs/libxml2:2 sci-chemistry/gamess virtual/pkgconfig
 gnome-base/libglade:2.0 x11-libs/gtk+:2 dev-libs/libxml2:2 sci-chemistry/gamess
 0
 mirror://sourceforge/gtk-gamess/gtk-gamess-2.00.tar.gz

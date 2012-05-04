@@ -1,4 +1,4 @@
-x11-libs/gtk+:2 dev-util/pkgconfig dev-util/intltool sys-devel/gettext
+x11-libs/gtk+:2 virtual/pkgconfig dev-util/intltool sys-devel/gettext
 x11-libs/gtk+:2
 0
 mirror://sourceforge/lxde/lxappearance-0.4.0.tar.gz

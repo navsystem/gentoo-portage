@@ -1,4 +1,4 @@
-dev-util/pkgconfig net-libs/libtlen x11-libs/gtk+:2 x11-libs/libXScrnSaver
+virtual/pkgconfig net-libs/libtlen x11-libs/gtk+:2 x11-libs/libXScrnSaver
 net-libs/libtlen x11-libs/gtk+:2 x11-libs/libXScrnSaver
 0
 mirror://sourceforge/tleenx/TleenX2-20041125.tar.gz

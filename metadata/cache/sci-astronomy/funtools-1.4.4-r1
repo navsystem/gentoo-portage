@@ -1,4 +1,4 @@
-sys-libs/zlib sci-astronomy/wcstools sci-visualization/gnuplot dev-util/pkgconfig
+sys-libs/zlib sci-astronomy/wcstools sci-visualization/gnuplot virtual/pkgconfig
 sys-libs/zlib sci-astronomy/wcstools sci-visualization/gnuplot
 0
 http://cfa-www.harvard.edu/~john/funtools/funtools-1.4.4.tar.gz

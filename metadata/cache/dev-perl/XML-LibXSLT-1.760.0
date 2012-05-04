@@ -1,4 +1,4 @@
->=dev-libs/libxslt-1.1.8 >=dev-perl/XML-LibXML-1.70 dev-util/pkgconfig dev-lang/perl[-build]
+>=dev-libs/libxslt-1.1.8 >=dev-perl/XML-LibXML-1.70 virtual/pkgconfig dev-lang/perl[-build]
 >=dev-libs/libxslt-1.1.8 >=dev-perl/XML-LibXML-1.70 dev-lang/perl[-build]
 0
 mirror://cpan/authors/id/S/SH/SHLOMIF/XML-LibXSLT-1.76.tar.gz

@@ -1,4 +1,4 @@
->=sci-astronomy/cdsclient-3.4 virtual/cblas >=sci-libs/lapack-atlas-3.8.0 sci-libs/fftw:3.0 plplot? ( sci-libs/plplot ) dev-util/pkgconfig
+>=sci-astronomy/cdsclient-3.4 virtual/cblas >=sci-libs/lapack-atlas-3.8.0 sci-libs/fftw:3.0 plplot? ( sci-libs/plplot ) virtual/pkgconfig
 >=sci-astronomy/cdsclient-3.4 virtual/cblas >=sci-libs/lapack-atlas-3.8.0 sci-libs/fftw:3.0 plplot? ( sci-libs/plplot )
 0
 http://www.astromatic.net/download/scamp/scamp-1.7.0.tar.gz

@@ -1,4 +1,4 @@
-dev-cpp/gtkmm:2.4 sndfile? ( media-libs/libsndfile ) dev-util/pkgconfig
+dev-cpp/gtkmm:2.4 sndfile? ( media-libs/libsndfile ) virtual/pkgconfig
 dev-cpp/gtkmm:2.4 sndfile? ( media-libs/libsndfile )
 0
 mirror://sourceforge/quickplot/quickplot-0.8.13.tar.bz2

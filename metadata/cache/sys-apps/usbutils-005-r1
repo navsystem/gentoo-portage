@@ -1,4 +1,4 @@
-virtual/libusb:1 zlib? ( sys-libs/zlib ) dev-util/pkgconfig || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool python? ( || ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) )
+virtual/libusb:1 zlib? ( sys-libs/zlib ) virtual/pkgconfig || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool python? ( || ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) )
 virtual/libusb:1 zlib? ( sys-libs/zlib ) sys-apps/hwids python? ( || ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) )
 0
 mirror://debian/pool/main/u/usbutils/usbutils_005.orig.tar.gz

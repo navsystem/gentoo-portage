@@ -1,4 +1,4 @@
->=dev-util/pkgconfig-0.12.0 doc? ( app-doc/doxygen ) >=gnome-base/gnome-vfs-2.8.1 >=dev-cpp/glibmm-2.12 >=sys-apps/sed-4
+virtual/pkgconfig doc? ( app-doc/doxygen ) >=gnome-base/gnome-vfs-2.8.1 >=dev-cpp/glibmm-2.12 >=sys-apps/sed-4
 >=gnome-base/gnome-vfs-2.8.1 >=dev-cpp/glibmm-2.12
 1.1
 mirror://gnome/sources/gnome-vfsmm/2.26/gnome-vfsmm-2.26.0.tar.bz2

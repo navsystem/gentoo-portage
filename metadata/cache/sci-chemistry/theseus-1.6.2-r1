@@ -1,4 +1,4 @@
-sci-libs/gsl || ( sci-biology/probcons sci-biology/mafft sci-biology/t-coffee sci-biology/kalign sci-biology/clustalw sci-biology/muscle ) dev-util/pkgconfig
+sci-libs/gsl || ( sci-biology/probcons sci-biology/mafft sci-biology/t-coffee sci-biology/kalign sci-biology/clustalw sci-biology/muscle ) virtual/pkgconfig
 sci-libs/gsl || ( sci-biology/probcons sci-biology/mafft sci-biology/t-coffee sci-biology/kalign sci-biology/clustalw sci-biology/muscle )
 0
 http://www.theseus3d.org/src/theseus_1.6.2.tar.gz

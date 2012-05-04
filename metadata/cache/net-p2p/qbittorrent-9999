@@ -1,4 +1,4 @@
-net-libs/rb_libtorrent >=x11-libs/qt-core-4.6.1:4 X? ( >=x11-libs/qt-gui-4.6.1:4 ) dbus? ( >=x11-libs/qt-dbus-4.6.1:4 ) dev-libs/boost dev-util/pkgconfig =dev-lang/python-2* dev-vcs/git
+net-libs/rb_libtorrent >=x11-libs/qt-core-4.6.1:4 X? ( >=x11-libs/qt-gui-4.6.1:4 ) dbus? ( >=x11-libs/qt-dbus-4.6.1:4 ) dev-libs/boost virtual/pkgconfig =dev-lang/python-2* dev-vcs/git
 net-libs/rb_libtorrent >=x11-libs/qt-core-4.6.1:4 X? ( >=x11-libs/qt-gui-4.6.1:4 ) dbus? ( >=x11-libs/qt-dbus-4.6.1:4 ) dev-libs/boost geoip? ( dev-libs/geoip ) =dev-lang/python-2*
 0
 

@@ -10,5 +10,5 @@ RDEPEND=python_targets_python2_5? ( dev-lang/python:2.5 ) python_targets_python2
 REQUIRED_USE=|| ( python_targets_python2_5 python_targets_python2_6 python_targets_python2_7 python_targets_pypy1_7 python_targets_pypy1_8 )
 SLOT=0
 SRC_URI=http://python-gflags.googlecode.com/files/python-gflags-2.0.tar.gz
-_eclasses_=python-distutils-ng	d78b4ad9d4d4711dd9f40d11b845eb80
+_eclasses_=python-distutils-ng	24aca5b1d99b7c96e615cd4a67f31050
 _md5_=5d0c1c8b9c030c3ae06e256955721491

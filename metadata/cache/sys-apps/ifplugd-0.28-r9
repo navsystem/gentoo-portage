@@ -1,4 +1,4 @@
-dev-util/pkgconfig doc? ( www-client/lynx ) >=dev-libs/libdaemon-0.5
+virtual/pkgconfig doc? ( www-client/lynx ) >=dev-libs/libdaemon-0.5
 >=dev-libs/libdaemon-0.5 >=sys-apps/baselayout-1.12
 0
 http://0pointer.de/lennart/projects/ifplugd/ifplugd-0.28.tar.gz

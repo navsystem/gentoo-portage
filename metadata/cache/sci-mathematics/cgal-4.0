@@ -1,4 +1,4 @@
-dev-libs/boost dev-libs/mpfr sys-libs/zlib x11-libs/libX11 virtual/opengl gmp? ( dev-libs/gmp[cxx=] ) lapack? ( virtual/lapack ) qt4? ( x11-libs/qt-gui:4 x11-libs/qt-opengl:4 ) mpfi? ( sci-libs/mpfi ) app-arch/xz-utils dev-util/pkgconfig >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+dev-libs/boost dev-libs/mpfr sys-libs/zlib x11-libs/libX11 virtual/opengl gmp? ( dev-libs/gmp[cxx=] ) lapack? ( virtual/lapack ) qt4? ( x11-libs/qt-gui:4 x11-libs/qt-opengl:4 ) mpfi? ( sci-libs/mpfi ) app-arch/xz-utils virtual/pkgconfig >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 dev-libs/boost dev-libs/mpfr sys-libs/zlib x11-libs/libX11 virtual/opengl gmp? ( dev-libs/gmp[cxx=] ) lapack? ( virtual/lapack ) qt4? ( x11-libs/qt-gui:4 x11-libs/qt-opengl:4 ) mpfi? ( sci-libs/mpfi )
 0
 http://gforge.inria.fr/frs/download.php/30385/CGAL-4.0.tar.xz doc? ( http://gforge.inria.fr/frs/download.php/30389/CGAL-4.0-doc_html.tar.xz )

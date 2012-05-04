@@ -1,4 +1,4 @@
-sci-libs/fftw:2.1 sci-libs/gsl dev-util/pkgconfig =dev-lang/python-2*
+sci-libs/fftw:2.1 sci-libs/gsl virtual/pkgconfig =dev-lang/python-2*
 sci-libs/fftw:2.1 sci-libs/gsl =dev-lang/python-2*
 0
 mirror://gentoo/eden_V5.3.tar.gz

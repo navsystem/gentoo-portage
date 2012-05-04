@@ -1,4 +1,4 @@
->=dev-lang/mono-1.2.4 >=sys-apps/dbus-1 dev-util/pkgconfig
+>=dev-lang/mono-1.2.4 >=sys-apps/dbus-1 virtual/pkgconfig
 >=dev-lang/mono-1.2.4 >=sys-apps/dbus-1
 0
 http://www.ndesk.org/archive/ndesk-dbus/ndesk-dbus-0.6.1a.tar.gz

@@ -1,4 +1,4 @@
-gtk? ( >=x11-libs/gtk+-2.4:2 ) sys-libs/ncurses dev-util/pkgconfig
+gtk? ( >=x11-libs/gtk+-2.4:2 ) sys-libs/ncurses virtual/pkgconfig
 gtk? ( >=x11-libs/gtk+-2.4:2 ) sys-libs/ncurses
 0
 http://aa.vslib.cz/silk/projekty/pinger/download/pinger-0.32d.tar.gz mirror://gentoo/gtk-2.0-for-pinger.m4.bz2

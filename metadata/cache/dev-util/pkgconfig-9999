@@ -1,0 +1,22 @@
+!internal-glib? ( >=dev-libs/glib-2.28 ) >=dev-libs/popt-1.16 || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool dev-vcs/git
+!internal-glib? ( >=dev-libs/glib-2.28 ) >=dev-libs/popt-1.16
+0
+
+
+http://pkgconfig.freedesktop.org/wiki/
+GPL-2
+Package config system that manages compile/link flags
+
+autotools eutils flag-o-matic git-2 libtool multilib toolchain-funcs user
+elibc_FreeBSD hardened internal-glib
+
+
+
+4
+
+configure install prepare unpack
+
+
+
+
+

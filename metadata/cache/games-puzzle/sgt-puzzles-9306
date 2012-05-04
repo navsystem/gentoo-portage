@@ -1,4 +1,4 @@
-x11-libs/gtk+:2 dev-lang/perl dev-util/pkgconfig doc? ( >=app-doc/halibut-1.0 )
+x11-libs/gtk+:2 dev-lang/perl virtual/pkgconfig doc? ( >=app-doc/halibut-1.0 )
 x11-libs/gtk+:2
 0
 http://www.chiark.greenend.org.uk/~sgtatham/puzzles/puzzles-r9306.tar.gz
