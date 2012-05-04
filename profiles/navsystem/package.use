@@ -63,3 +63,7 @@ net-libs/webkit-efl curl
 
 app-misc/2gis-data omsk
 app-emulation/libvirt -policykit
+
+sys-apps/util-linux static-libs
+dev-libs/popt static-libs
+dev-libs/libgpg-error static-libs

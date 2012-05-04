@@ -15,3 +15,4 @@
 *net-analyzer/netcat6
 *sys-apps/less
 *sys-process/iotop
+*sys-fs/cryptsetup
