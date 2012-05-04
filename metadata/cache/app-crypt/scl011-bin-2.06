@@ -1,4 +1,4 @@
-sys-apps/pcsc-lite dev-util/pkgconfig
+sys-apps/pcsc-lite virtual/pkgconfig
 sys-apps/pcsc-lite
 0
 x86? ( http://www.scmmicro.com/npa/files/scl011_2.06_linux_32bit.tar.gz ) amd64? ( http://www.scmmicro.com/npa/files/scl011_2.06_linux_64bit.tar.gz )

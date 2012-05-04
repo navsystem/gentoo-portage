@@ -8,7 +8,7 @@ GPL-2
 Utilities for rescue and embedded systems
 
 eutils flag-o-matic git-2 multilib portability savedconfig toolchain-funcs user
-ipv6 make-symlinks mdev -pam selinux sep-usr static savedconfig
+ipv6 make-symlinks math mdev -pam selinux sep-usr static savedconfig
 
 
 

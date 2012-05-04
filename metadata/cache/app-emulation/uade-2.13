@@ -1,4 +1,4 @@
-media-libs/libao dev-util/pkgconfig
+media-libs/libao virtual/pkgconfig
 media-libs/libao
 0
 http://zakalwe.fi/uade/uade2/uade-2.13.tar.bz2

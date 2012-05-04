@@ -1,4 +1,4 @@
->=sys-apps/pcsc-lite-1.6.4 dev-libs/libusb-compat dev-util/pkgconfig || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+>=sys-apps/pcsc-lite-1.6.4 dev-libs/libusb-compat virtual/pkgconfig || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 >=sys-apps/pcsc-lite-1.6.4 dev-libs/libusb-compat
 0
 http://www.linuxunderground.be/ACR38_LINUX_100711_P.tar.bz2

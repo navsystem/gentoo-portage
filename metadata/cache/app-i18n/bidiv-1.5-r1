@@ -1,4 +1,4 @@
-dev-util/pkgconfig
+virtual/pkgconfig
 dev-libs/fribidi
 0
 http://ftp.ivrix.org.il/pub/ivrix/src/cmdline/bidiv-1.5.tgz
