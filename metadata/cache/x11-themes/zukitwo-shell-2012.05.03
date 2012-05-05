@@ -1,0 +1,22 @@
+app-arch/xz-utils
+>=gnome-base/gnome-shell-3.4 media-fonts/ubuntu-font-family !<=x11-themes/zukitwo-2011.12.29
+0
+http://dev.gentoo.org/~tetromino/distfiles/zukitwo/zukitwo-2012.05.03.tar.xz
+
+http://gnome-look.org/content/show.php/Zukitwo?content=140562
+GPL-3
+Zukitwo theme for GNOME Shell
+~amd64 ~x86
+
+
+
+
+
+4
+
+install
+
+
+
+
+

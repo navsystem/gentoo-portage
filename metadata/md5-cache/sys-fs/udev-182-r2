@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install postinst preinst prepare setup
-DEPEND=selinux? ( sys-libs/libselinux ) gudev? ( dev-libs/glib:2 ) introspection? ( dev-libs/gobject-introspection ) >=sys-apps/kmod-5 >=sys-apps/util-linux-2.20 !<sys-libs/glibc-2.10 keymap? ( dev-util/gperf ) dev-util/pkgconfig virtual/os-headers !<sys-kernel/linux-headers-2.6.34 doc? ( dev-util/gtk-doc ) !<sys-apps/systemd-29-r4 !=sys-apps/systemd-37-r1
+DEPEND=selinux? ( sys-libs/libselinux ) gudev? ( dev-libs/glib:2 ) introspection? ( dev-libs/gobject-introspection ) >=sys-apps/kmod-5 >=sys-apps/util-linux-2.20 !<sys-libs/glibc-2.10 keymap? ( dev-util/gperf ) virtual/pkgconfig virtual/os-headers !<sys-kernel/linux-headers-2.6.34 doc? ( dev-util/gtk-doc ) !<sys-apps/systemd-29-r4 !=sys-apps/systemd-37-r1
 DESCRIPTION=Linux dynamic and persistent device naming support (aka userspace devfs)
 EAPI=4
 HOMEPAGE=http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev/udev.html http://git.kernel.org/?p=linux/hotplug/udev.git;a=summary
@@ -10,4 +10,4 @@ RDEPEND=selinux? ( sys-libs/libselinux ) gudev? ( dev-libs/glib:2 ) introspectio
 SLOT=0
 SRC_URI=mirror://kernel/linux/utils/kernel/hotplug/udev-182.tar.bz2
 _eclasses_=eutils	74d9118e657da5b1db0c36f5dea88e57	flag-o-matic	66cb710a2aa184a5687fe1289d7973ab	libtool	5f623f5a211fb1b2d84d88ee49959a54	linux-info	cc184ad3383ffb6ffbaa82f53608e77f	multilib	5f4ad6cf85e365e8f0c6050ddd21659e	systemd	70a153740015c3457222dbdd8e07c1f7	toolchain-funcs	6526ac6fc9aedf391efb91fcd75ace68	user	32a09e82e2f592bf88ad2fd08525166e	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=1f832b30437da1167d6f60282ec998d6
+_md5_=69ea9da7f992f8d76e907f2375e08e9a

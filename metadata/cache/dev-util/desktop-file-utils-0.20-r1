@@ -1,4 +1,4 @@
->=dev-libs/glib-2.12 emacs? ( virtual/emacs ) dev-util/pkgconfig
+>=dev-libs/glib-2.12 emacs? ( virtual/emacs ) virtual/pkgconfig
 >=dev-libs/glib-2.12 emacs? ( virtual/emacs )
 0
 http://www.freedesktop.org/software/desktop-file-utils/releases/desktop-file-utils-0.20.tar.xz

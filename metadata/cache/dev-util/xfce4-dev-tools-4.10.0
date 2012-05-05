@@ -1,4 +1,4 @@
->=dev-libs/glib-2.24 dev-util/pkgconfig >=sys-apps/sed-4
+>=dev-libs/glib-2.24 virtual/pkgconfig >=sys-apps/sed-4
 >=dev-libs/glib-2.24
 0
 mirror://xfce/src/xfce/xfce4-dev-tools/4.10/xfce4-dev-tools-4.10.0.tar.bz2

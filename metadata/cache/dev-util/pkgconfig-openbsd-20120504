@@ -4,7 +4,7 @@ pkg-config? ( !dev-util/pkgconfig !dev-util/pkg-config-lite !dev-util/pkgconf[pk
 http://dev.gentoo.org/~ssuominen/pkgconfig-openbsd-20120504.tar.xz pkg-config? ( http://pkgconfig.freedesktop.org/releases/pkg-config-0.26.tar.gz )
 
 http://www.openbsd.org/cgi-bin/cvsweb/src/usr.bin/pkg-config/ http://www.openbsd.org/cgi-bin/cvsweb/src/usr.sbin/pkg_add/OpenBSD/PkgConfig.pm
-ISC pkg-config? ( GPL-2 )
+ISC
 A perl based version of pkg-config from OpenBSD
 
 

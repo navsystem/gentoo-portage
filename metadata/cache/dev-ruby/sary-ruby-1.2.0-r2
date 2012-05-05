@@ -1,4 +1,4 @@
->=app-text/sary-1.2.0 dev-util/pkgconfig ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ree18? ( dev-lang/ruby-enterprise:1.8 )
+>=app-text/sary-1.2.0 virtual/pkgconfig ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ree18? ( dev-lang/ruby-enterprise:1.8 )
 >=app-text/sary-1.2.0 ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ree18? ( dev-lang/ruby-enterprise:1.8 )
 0
 http://sary.sourceforge.net/sary-ruby-1.2.0.tar.gz

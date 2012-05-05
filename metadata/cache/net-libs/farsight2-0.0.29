@@ -1,4 +1,4 @@
->=media-libs/gstreamer-0.10.33 >=media-libs/gst-plugins-base-0.10.33 >=dev-libs/glib-2.26:2 >=net-libs/libnice-0.1.0[gstreamer] python? ( >=dev-python/pygobject-2.16:2 >=dev-python/gst-python-0.10.10 ) upnp? ( net-libs/gupnp-igd ) dev-util/pkgconfig =dev-lang/python-2*
+>=media-libs/gstreamer-0.10.33 >=media-libs/gst-plugins-base-0.10.33 >=dev-libs/glib-2.26:2 >=net-libs/libnice-0.1.0[gstreamer] python? ( >=dev-python/pygobject-2.16:2 >=dev-python/gst-python-0.10.10 ) upnp? ( net-libs/gupnp-igd ) virtual/pkgconfig =dev-lang/python-2*
 >=media-libs/gstreamer-0.10.33 >=media-libs/gst-plugins-base-0.10.33 >=dev-libs/glib-2.26:2 >=net-libs/libnice-0.1.0[gstreamer] python? ( >=dev-python/pygobject-2.16:2 >=dev-python/gst-python-0.10.10 ) upnp? ( net-libs/gupnp-igd ) >=media-libs/gst-plugins-good-0.10.17 >=media-libs/gst-plugins-bad-0.10.17 msn? ( >=media-plugins/gst-plugins-mimic-0.10.17 ) =dev-lang/python-2*
 0
 http://farsight.freedesktop.org/releases/farsight2/farsight2-0.0.29.tar.gz

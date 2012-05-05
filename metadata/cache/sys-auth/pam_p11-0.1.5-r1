@@ -1,4 +1,4 @@
-virtual/pam dev-libs/libp11 dev-libs/openssl dev-util/pkgconfig
+virtual/pam dev-libs/libp11 dev-libs/openssl virtual/pkgconfig
 virtual/pam dev-libs/libp11 dev-libs/openssl
 0
 http://www.opensc-project.org/files/pam_p11/pam_p11-0.1.5.tar.gz

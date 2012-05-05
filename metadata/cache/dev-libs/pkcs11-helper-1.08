@@ -1,4 +1,4 @@
->=dev-libs/openssl-0.9.7 gnutls? ( >=net-libs/gnutls-1.4.4 ) nss? ( dev-libs/nss ) dev-util/pkgconfig doc? ( >=app-doc/doxygen-1.4.7 )
+>=dev-libs/openssl-0.9.7 gnutls? ( >=net-libs/gnutls-1.4.4 ) nss? ( dev-libs/nss ) virtual/pkgconfig doc? ( >=app-doc/doxygen-1.4.7 )
 >=dev-libs/openssl-0.9.7 gnutls? ( >=net-libs/gnutls-1.4.4 ) nss? ( dev-libs/nss )
 0
 http://www.opensc-project.org/files/pkcs11-helper/pkcs11-helper-1.08.tar.bz2

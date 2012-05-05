@@ -1,4 +1,4 @@
->=x11-libs/libgksu-2.0.8 >=x11-libs/gtk+-2.4:2 >=gnome-base/gconf-2 gnome? ( >=gnome-base/nautilus-2 x11-terms/gnome-terminal ) dev-util/intltool dev-util/pkgconfig doc? ( dev-util/gtk-doc ) || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool app-arch/xz-utils >=sys-apps/sed-4 >=sys-apps/sed-4
+>=x11-libs/libgksu-2.0.8 >=x11-libs/gtk+-2.4:2 >=gnome-base/gconf-2 gnome? ( >=gnome-base/nautilus-2 x11-terms/gnome-terminal ) dev-util/intltool virtual/pkgconfig doc? ( dev-util/gtk-doc ) || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool app-arch/xz-utils >=sys-apps/sed-4 >=sys-apps/sed-4
 >=x11-libs/libgksu-2.0.8 >=x11-libs/gtk+-2.4:2 >=gnome-base/gconf-2 gnome? ( >=gnome-base/nautilus-2 x11-terms/gnome-terminal )
 0
 http://people.debian.org/~kov/gksu/gksu-2.0.2.tar.gz

@@ -1,4 +1,4 @@
->=dev-libs/glib-2.6:2 >=media-libs/libsndfile-1.0 sys-libs/zlib dev-util/pkgconfig
+>=dev-libs/glib-2.6:2 >=media-libs/libsndfile-1.0 sys-libs/zlib virtual/pkgconfig
 >=dev-libs/glib-2.6:2 >=media-libs/libsndfile-1.0 sys-libs/zlib
 0
 mirror://sourceforge/cdemu/libmirage-1.4.0.tar.gz

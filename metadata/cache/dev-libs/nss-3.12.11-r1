@@ -1,4 +1,4 @@
-dev-util/pkgconfig
+virtual/pkgconfig
 >=dev-libs/nspr-4.8.9 >=dev-db/sqlite-3.5
 0
 ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_12_11_RTM/src/nss-3.12.11.tar.gz

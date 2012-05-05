@@ -1,4 +1,4 @@
-dev-libs/glib:2 introspection? ( >=dev-libs/gobject-introspection-0.6.7 ) >=dev-lang/perl-5 dev-util/pkgconfig doc? ( >=dev-util/gtk-doc-1 ) nls? ( sys-devel/gettext ) >=sys-apps/sed-4
+dev-libs/glib:2 introspection? ( >=dev-libs/gobject-introspection-0.6.7 ) >=dev-lang/perl-5 virtual/pkgconfig doc? ( >=dev-util/gtk-doc-1 ) nls? ( sys-devel/gettext ) >=sys-apps/sed-4
 dev-libs/glib:2 introspection? ( >=dev-libs/gobject-introspection-0.6.7 )
 0
 mirror://gnome/sources/atk/1.32/atk-1.32.0.tar.bz2

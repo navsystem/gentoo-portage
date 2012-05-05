@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install postinst preinst prepare setup unpack
-DEPEND=selinux? ( sys-libs/libselinux ) gudev? ( dev-libs/glib:2 ) introspection? ( dev-libs/gobject-introspection ) >=sys-apps/kmod-5 >=sys-apps/util-linux-2.20 !<sys-libs/glibc-2.10 keymap? ( dev-util/gperf ) dev-util/pkgconfig virtual/os-headers !<sys-kernel/linux-headers-2.6.34 dev-util/gtk-doc test? ( app-text/tree ) dev-vcs/git || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool !<sys-apps/systemd-29-r4 !=sys-apps/systemd-37-r1
+DEPEND=selinux? ( sys-libs/libselinux ) gudev? ( dev-libs/glib:2 ) introspection? ( dev-libs/gobject-introspection ) >=sys-apps/kmod-5 >=sys-apps/util-linux-2.20 !<sys-libs/glibc-2.10 keymap? ( dev-util/gperf ) virtual/pkgconfig virtual/os-headers !<sys-kernel/linux-headers-2.6.34 dev-util/gtk-doc test? ( app-text/tree ) dev-vcs/git || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool !<sys-apps/systemd-29-r4 !=sys-apps/systemd-37-r1
 DESCRIPTION=Linux dynamic and persistent device naming support (aka userspace devfs)
 EAPI=4
 HOMEPAGE=http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev/udev.html http://git.kernel.org/?p=linux/hotplug/udev.git;a=summary
@@ -9,4 +9,4 @@ RDEPEND=selinux? ( sys-libs/libselinux ) gudev? ( dev-libs/glib:2 ) introspectio
 RESTRICT=test? ( userpriv )
 SLOT=0
 _eclasses_=autotools	addbdf6cce5024ac93ad2084ad5e1d2d	eutils	74d9118e657da5b1db0c36f5dea88e57	flag-o-matic	66cb710a2aa184a5687fe1289d7973ab	git-2	15733ab6a6feb34af9837b41623c2bad	libtool	5f623f5a211fb1b2d84d88ee49959a54	linux-info	cc184ad3383ffb6ffbaa82f53608e77f	multilib	5f4ad6cf85e365e8f0c6050ddd21659e	systemd	70a153740015c3457222dbdd8e07c1f7	toolchain-funcs	6526ac6fc9aedf391efb91fcd75ace68	user	32a09e82e2f592bf88ad2fd08525166e	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=8ea1de6620331ff3249ea17d412d9d7e
+_md5_=7ab8b62d58dceb486a6d33b1e0d62fdc

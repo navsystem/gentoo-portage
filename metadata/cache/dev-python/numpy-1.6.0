@@ -1,4 +1,4 @@
-dev-python/setuptools lapack? ( virtual/cblas virtual/lapack virtual/fortran ) doc? ( app-arch/unzip ) lapack? ( dev-util/pkgconfig ) test? ( >=dev-python/nose-0.10 ) dev-lang/python
+dev-python/setuptools lapack? ( virtual/cblas virtual/lapack virtual/fortran ) doc? ( app-arch/unzip ) lapack? ( virtual/pkgconfig ) test? ( >=dev-python/nose-0.10 ) dev-lang/python
 dev-python/setuptools lapack? ( virtual/cblas virtual/lapack virtual/fortran ) dev-lang/python
 0
 mirror://sourceforge/numpy/numpy-1.6.0.tar.gz doc? ( http://docs.scipy.org/doc/numpy-1.5.x/numpy-html.zip -> numpy-1.5-html.zip http://docs.scipy.org/doc/numpy-1.5.x/numpy-ref.pdf -> numpy-1.5-ref.pdf http://docs.scipy.org/doc/numpy-1.5.x/numpy-user.pdf -> numpy-1.5-user.pdf )

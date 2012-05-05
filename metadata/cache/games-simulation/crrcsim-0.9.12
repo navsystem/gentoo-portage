@@ -1,0 +1,22 @@
+sci-mathematics/cgal media-libs/plib media-libs/libsdl[X,audio,joystick,opengl,video] portaudio? ( media-libs/portaudio ) || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+sci-mathematics/cgal media-libs/plib media-libs/libsdl[X,audio,joystick,opengl,video] portaudio? ( media-libs/portaudio )
+0
+mirror://sourceforge/crrcsim/crrcsim-0.9.12.tar.gz
+
+http://sourceforge.net/projects/crrcsim/
+GPL-2
+model-airplane flight simulation program
+~amd64 ~x86
+autotools base eutils games libtool multilib toolchain-funcs user
+portaudio
+
+
+
+3
+
+compile configure install postinst preinst prepare setup unpack
+
+
+
+
+

@@ -1,4 +1,4 @@
-net-libs/libgssglue dev-util/pkgconfig
+net-libs/libgssglue virtual/pkgconfig
 net-libs/libgssglue
 0
 http://www.citi.umich.edu/projects/nfsv4/linux/librpcsecgss/librpcsecgss-0.19.tar.gz

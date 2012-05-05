@@ -1,4 +1,4 @@
-net-libs/libmicrohttpd x11-libs/gtk+:2 dev-util/pkgconfig
+net-libs/libmicrohttpd x11-libs/gtk+:2 virtual/pkgconfig
 net-libs/libmicrohttpd x11-libs/gtk+:2
 0
 http://houbysoft.com/download/quickshare-1.0-src.tar.gz

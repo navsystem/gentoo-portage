@@ -1,4 +1,4 @@
-dev-util/pkgconfig app-text/gnome-doc-utils ~app-text/docbook-xml-dtd-4.2 >=sys-apps/sed-4
+virtual/pkgconfig app-text/gnome-doc-utils ~app-text/docbook-xml-dtd-4.2 >=sys-apps/sed-4
 
 0
 mirror://gnome/sources/gnome-devel-docs/2.32/gnome-devel-docs-2.32.0.tar.bz2

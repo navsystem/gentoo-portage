@@ -1,4 +1,4 @@
-cddb? ( >=media-libs/libcddb-1.0.1 ) !minimal? ( >=sys-libs/ncurses-5.7-r7 ) virtual/libintl sys-devel/gettext dev-util/pkgconfig
+cddb? ( >=media-libs/libcddb-1.0.1 ) !minimal? ( >=sys-libs/ncurses-5.7-r7 ) virtual/libintl sys-devel/gettext virtual/pkgconfig
 cddb? ( >=media-libs/libcddb-1.0.1 ) !minimal? ( >=sys-libs/ncurses-5.7-r7 ) virtual/libintl
 0
 mirror://gnu/libcdio/libcdio-0.83.tar.gz

@@ -1,4 +1,4 @@
->=dev-libs/glib-2:2 dev-libs/gmp dev-util/pkgconfig doc? ( app-doc/doxygen )
+>=dev-libs/glib-2:2 dev-libs/gmp virtual/pkgconfig doc? ( app-doc/doxygen )
 >=dev-libs/glib-2:2
 0
 mirror://sourceforge/meanwhile/meanwhile-1.0.2.tar.gz

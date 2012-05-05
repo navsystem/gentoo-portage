@@ -1,5 +1,5 @@
 >=dev-libs/glib-2.31:2 >=sys-fs/udisks-1.90:2 >=x11-libs/gtk+-3.3.11:3 >=dev-util/intltool-0.50 virtual/pkgconfig app-arch/xz-utils >=sys-apps/sed-4
->=dev-libs/glib-2.31:2 >=sys-fs/udisks-1.90:2 >=x11-libs/gtk+-3.3.11:3 fat? ( sys-fs/dosfstools )
+>=dev-libs/glib-2.31:2 >=sys-fs/udisks-1.90:2 >=x11-libs/gtk+-3.3.11:3 >=x11-themes/gnome-icon-theme-symbolic-2.91 fat? ( sys-fs/dosfstools )
 0
 mirror://gnome/sources/gnome-disk-utility/3.4/gnome-disk-utility-3.4.0.tar.xz
 
