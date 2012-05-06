@@ -6,7 +6,7 @@ http://github.com/ago/pps-tools/tarball/74c32c318f63bca5b5db -> pps-tools-git-0.
 http://wiki.enneenne.com/index.php/LinuxPPS_installation
 GPL-2
 User-space tools for LinuxPPS
-~amd64 ~x86
+amd64 x86
 eutils multilib toolchain-funcs user
 
 

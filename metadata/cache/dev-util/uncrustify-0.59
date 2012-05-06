@@ -6,15 +6,15 @@ mirror://sourceforge/uncrustify/uncrustify-0.59.tar.gz
 http://uncrustify.sourceforge.net/
 GPL-2
 C/C++/C#/D/Java/Pawn code indenter and beautifier
-~amd64 ~x86 ~amd64-linux ~ppc-macos ~x86-solaris
-
+~amd64 ~x86 ~amd64-linux ~ppc-macos ~x64-macos ~x86-solaris
+eutils multilib toolchain-funcs user
 test
 
 
 
+3
 
-
-install test
+install prepare test
 
 
 

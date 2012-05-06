@@ -1,4 +1,4 @@
-media-libs/blib dev-util/pkgconfig
+media-libs/blib virtual/pkgconfig
 
 0
 http://www.blinkenlights.de/dist/blinkenthemes-0.10.tar.gz

@@ -14,7 +14,7 @@ pkg-config
 
 4
 
-install prepare unpack
+compile install prepare unpack
 
 
 

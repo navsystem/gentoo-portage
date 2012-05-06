@@ -1,4 +1,4 @@
-x11-libs/gtk+:2 x11-libs/libwnck:1 dev-util/pkgconfig
+x11-libs/gtk+:2 x11-libs/libwnck:1 virtual/pkgconfig
 x11-libs/gtk+:2 x11-libs/libwnck:1
 0
 mirror://berlios/suxpanel/suxpanel-0.4b.tar.bz2

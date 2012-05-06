@@ -1,4 +1,4 @@
-alsa? ( media-libs/alsa-lib ) jack? ( media-sound/jack-audio-connection-kit ) dev-util/pkgconfig
+alsa? ( media-libs/alsa-lib ) jack? ( media-sound/jack-audio-connection-kit ) virtual/pkgconfig
 alsa? ( media-libs/alsa-lib ) jack? ( media-sound/jack-audio-connection-kit )
 0
 http://www.portaudio.com/archives/pa_stable_v19_20110326.tgz

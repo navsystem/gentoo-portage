@@ -1,4 +1,4 @@
-nls? ( virtual/libintl ) dev-util/pkgconfig doc? ( app-doc/doxygen ) nls? ( sys-devel/gettext )
+nls? ( virtual/libintl ) virtual/pkgconfig doc? ( app-doc/doxygen ) nls? ( sys-devel/gettext )
 nls? ( virtual/libintl )
 0
 mirror://sourceforge/libexif/libexif-0.6.20.tar.bz2

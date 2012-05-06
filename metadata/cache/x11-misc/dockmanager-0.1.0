@@ -1,4 +1,4 @@
-dev-libs/dbus-glib dev-libs/glib:2 x11-libs/gtk+:2 x11-libs/libdesktop-agnostic dev-util/pkgconfig dev-lang/vala:0.10 >=sys-apps/sed-4 =dev-lang/python-2*
+dev-libs/dbus-glib dev-libs/glib:2 x11-libs/gtk+:2 x11-libs/libdesktop-agnostic virtual/pkgconfig dev-lang/vala:0.10 >=sys-apps/sed-4 =dev-lang/python-2*
 dev-libs/dbus-glib dev-libs/glib:2 x11-libs/gtk+:2 x11-libs/libdesktop-agnostic =dev-lang/python-2*
 0
 http://launchpad.net/dockmanager/trunk/0.1.0/+download/dockmanager-0.1.0.tar.gz

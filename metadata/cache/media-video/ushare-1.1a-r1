@@ -1,4 +1,4 @@
-net-libs/libupnp dlna? ( >=media-libs/libdlna-0.2.4 ) dev-util/pkgconfig
+net-libs/libupnp dlna? ( >=media-libs/libdlna-0.2.4 ) virtual/pkgconfig
 net-libs/libupnp dlna? ( >=media-libs/libdlna-0.2.4 )
 0
 http://ushare.geexbox.org/releases/ushare-1.1a.tar.bz2

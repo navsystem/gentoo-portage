@@ -1,4 +1,4 @@
-dev-libs/glib:2 dev-util/pkgconfig doc? ( app-doc/doxygen )
+dev-libs/glib:2 virtual/pkgconfig doc? ( app-doc/doxygen )
 dev-libs/glib:2
 0
 mirror://sourceforge/farsight/libmimic-1.0.4.tar.gz

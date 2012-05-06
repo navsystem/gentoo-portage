@@ -1,4 +1,4 @@
-sqlite? ( >=dev-db/sqlite-3.3 ) >=media-libs/libgig-3.3.0 media-libs/alsa-lib jack? ( media-sound/jack-audio-connection-kit ) dev-util/pkgconfig doc? ( app-doc/doxygen )
+sqlite? ( >=dev-db/sqlite-3.3 ) >=media-libs/libgig-3.3.0 media-libs/alsa-lib jack? ( media-sound/jack-audio-connection-kit ) virtual/pkgconfig doc? ( app-doc/doxygen )
 sqlite? ( >=dev-db/sqlite-3.3 ) >=media-libs/libgig-3.3.0 media-libs/alsa-lib jack? ( media-sound/jack-audio-connection-kit )
 0
 http://download.linuxsampler.org/packages/linuxsampler-1.0.0.tar.bz2

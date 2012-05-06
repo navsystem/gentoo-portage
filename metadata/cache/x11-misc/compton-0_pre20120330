@@ -1,7 +1,7 @@
-x11-libs/libX11 x11-libs/libXcomposite x11-libs/libXdamage x11-libs/libXfixes x11-libs/libXrender dev-util/pkgconfig x11-proto/xproto
+x11-libs/libX11 x11-libs/libXcomposite x11-libs/libXdamage x11-libs/libXfixes x11-libs/libXrender virtual/pkgconfig x11-proto/xproto
 x11-libs/libX11 x11-libs/libXcomposite x11-libs/libXdamage x11-libs/libXfixes x11-libs/libXrender app-shells/bash x11-apps/xprop x11-apps/xwininfo
 0
-http://dev.gentoo.org/~ssuominen/compton-0_pre20120330.tar.xz
+http://dev.gentoo.org/~hasufell/distfiles/compton-0_pre20120330.tar.xz
 
 http://github.com/chjj/compton
 MIT

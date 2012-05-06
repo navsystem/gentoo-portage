@@ -1,4 +1,4 @@
-dev-libs/boost >=dev-libs/glib-2.14.0 dev-util/pkgconfig doc? ( app-doc/doxygen )
+dev-libs/boost >=dev-libs/glib-2.14.0 virtual/pkgconfig doc? ( app-doc/doxygen )
 dev-libs/boost >=dev-libs/glib-2.14.0
 0
 http://download.drobilla.net/raul-0.7.0.tar.bz2

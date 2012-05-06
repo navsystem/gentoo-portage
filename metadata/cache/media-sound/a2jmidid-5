@@ -1,4 +1,4 @@
-media-libs/alsa-lib media-sound/jack-audio-connection-kit sys-apps/dbus dev-util/pkgconfig dev-lang/python
+media-libs/alsa-lib media-sound/jack-audio-connection-kit sys-apps/dbus virtual/pkgconfig dev-lang/python
 media-libs/alsa-lib media-sound/jack-audio-connection-kit sys-apps/dbus
 0
 http://download.gna.org/a2jmidid/a2jmidid-5.tar.bz2

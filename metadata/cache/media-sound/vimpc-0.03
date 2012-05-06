@@ -1,4 +1,4 @@
-dev-libs/libpcre[cxx] media-libs/libmpdclient dev-util/pkgconfig
+dev-libs/libpcre[cxx] media-libs/libmpdclient virtual/pkgconfig
 dev-libs/libpcre[cxx] media-libs/libmpdclient
 0
 mirror://sourceforge/project/vimpc/Release%200.03/vimpc-0.03.tar.gz

@@ -1,4 +1,4 @@
->=media-sound/gmpc-0.20.0 dev-libs/libxml2 dev-util/pkgconfig nls? ( dev-util/intltool sys-devel/gettext )
+>=media-sound/gmpc-0.20.0 dev-libs/libxml2 virtual/pkgconfig nls? ( dev-util/intltool sys-devel/gettext )
 >=media-sound/gmpc-0.20.0 dev-libs/libxml2
 0
 mirror://sourceforge/musicpd/gmpc-lyricwiki-0.20.0.tar.gz

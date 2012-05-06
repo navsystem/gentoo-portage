@@ -1,4 +1,4 @@
-x11-libs/libX11 xpm? ( x11-libs/libXpm ) xft? ( x11-libs/libXft ) dev-util/pkgconfig x11-proto/xproto
+x11-libs/libX11 xpm? ( x11-libs/libXpm ) xft? ( x11-libs/libXft ) virtual/pkgconfig x11-proto/xproto
 x11-libs/libX11 xpm? ( x11-libs/libXpm ) xft? ( x11-libs/libXft )
 0
 http://www.chatjunkies.org/fspanel/fspanel-0.8beta1.tar.gz

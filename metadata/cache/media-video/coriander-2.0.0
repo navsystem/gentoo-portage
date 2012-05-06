@@ -1,4 +1,4 @@
->=media-libs/libdc1394-2.0.0 media-libs/libsdl gnome-base/libgnomeui gnome-base/libbonoboui gnome-base/libgnomecanvas gnome-base/libgnome gnome-base/orbit dev-util/pkgconfig
+>=media-libs/libdc1394-2.0.0 media-libs/libsdl gnome-base/libgnomeui gnome-base/libbonoboui gnome-base/libgnomecanvas gnome-base/libgnome gnome-base/orbit virtual/pkgconfig
 >=media-libs/libdc1394-2.0.0 media-libs/libsdl gnome-base/libgnomeui gnome-base/libbonoboui gnome-base/libgnomecanvas gnome-base/libgnome gnome-base/orbit
 0
 mirror://sourceforge/coriander/coriander-2.0.0.tar.gz

@@ -1,4 +1,4 @@
-|| ( media-libs/lv2 >=media-libs/lv2core-6 ) >=dev-libs/serd-0.5 >=dev-libs/sord-0.5 doc? ( app-doc/doxygen ) dev-util/pkgconfig
+|| ( media-libs/lv2 >=media-libs/lv2core-6 ) >=dev-libs/serd-0.5 >=dev-libs/sord-0.5 doc? ( app-doc/doxygen ) virtual/pkgconfig
 || ( media-libs/lv2 >=media-libs/lv2core-6 ) >=dev-libs/serd-0.5 >=dev-libs/sord-0.5
 0
 http://download.drobilla.net/lilv-0.5.0.tar.bz2

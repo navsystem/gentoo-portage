@@ -1,4 +1,4 @@
-threads? ( dev-libs/glib:2 ) nls? ( sys-devel/gettext ) dev-util/pkgconfig
+threads? ( dev-libs/glib:2 ) nls? ( sys-devel/gettext ) virtual/pkgconfig
 threads? ( dev-libs/glib:2 )
 0.4
 mirror://sourceforge/libvisual/libvisual-0.4.0.tar.gz

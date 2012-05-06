@@ -1,4 +1,4 @@
-media-libs/xine-lib x11-libs/gtk+:2 >=gnome-base/gconf-2 gnome-base/gnome-vfs dev-util/pkgconfig app-arch/xz-utils >=sys-apps/sed-4
+media-libs/xine-lib x11-libs/gtk+:2 >=gnome-base/gconf-2 gnome-base/gnome-vfs virtual/pkgconfig app-arch/xz-utils >=sys-apps/sed-4
 media-libs/xine-lib x11-libs/gtk+:2 >=gnome-base/gconf-2 gnome-base/gnome-vfs
 0
 http://quark.nerdnest.org/quark-3.21.tar.gz

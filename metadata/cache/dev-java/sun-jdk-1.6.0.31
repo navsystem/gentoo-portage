@@ -1,7 +1,7 @@
 =dev-java/java-config-2*
 X? ( x11-libs/libXext x11-libs/libXi x11-libs/libXrender x11-libs/libXtst x11-libs/libX11 ) alsa? ( media-libs/alsa-lib ) doc? ( dev-java/java-sdk-docs:1.6.0 ) jce? ( dev-java/sun-jce-bin:1.6 ) kernel_SunOS? ( app-arch/unzip ) !prefix? ( sys-libs/glibc ) =dev-java/java-config-2*
 1.6
-x86? ( jdk-6u31-linux-i586.bin ) amd64? ( jdk-6u31-linux-x64.bin ) x86-solaris? ( jdk-6u31-solaris-i586.sh ) x64-solaris? ( jdk-6u31-solaris-i586.sh jdk-6u31-solaris-x64.sh ) sparc-solaris? ( jdk-6u31-solaris-sparc.sh ) sparc64-solaris? ( jdk-6u31-solaris-sparc.sh jdk-6u31-solaris-sparcv9.sh )
+x86? ( jdk-6u31-linux-i586.bin ) amd64? ( jdk-6u31-linux-x64.bin ) ia64? ( jdk-6u31-linux-ia64.bin ) x86-solaris? ( jdk-6u31-solaris-i586.sh ) x64-solaris? ( jdk-6u31-solaris-i586.sh jdk-6u31-solaris-x64.sh ) sparc-solaris? ( jdk-6u31-solaris-sparc.sh ) sparc64-solaris? ( jdk-6u31-solaris-sparc.sh jdk-6u31-solaris-sparcv9.sh )
 fetch strip
 http://www.oracle.com/technetwork/java/javase/
 Oracle-BCLA-JavaSE

@@ -1,4 +1,4 @@
-cairo? ( x11-libs/cairo ) glib? ( dev-libs/glib:2 ) graphite? ( media-gfx/graphite2 ) icu? ( dev-libs/icu ) truetype? ( media-libs/freetype:2 ) dev-util/gtk-doc-am dev-util/pkgconfig dev-util/ragel dev-vcs/git || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+cairo? ( x11-libs/cairo ) glib? ( dev-libs/glib:2 ) graphite? ( media-gfx/graphite2 ) icu? ( dev-libs/icu ) truetype? ( media-libs/freetype:2 ) dev-util/gtk-doc-am virtual/pkgconfig dev-util/ragel dev-vcs/git || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 cairo? ( x11-libs/cairo ) glib? ( dev-libs/glib:2 ) graphite? ( media-gfx/graphite2 ) icu? ( dev-libs/icu ) truetype? ( media-libs/freetype:2 )
 0
 

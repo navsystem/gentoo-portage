@@ -1,4 +1,4 @@
-media-libs/libogg dev-util/pkgconfig || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+media-libs/libogg virtual/pkgconfig || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 media-libs/libogg
 0
 mirror://gentoo/tremor-0_pre20120120.tar.xz

@@ -1,4 +1,4 @@
->=media-sound/gmpc-11.8.16 dev-libs/libxml2:2 dev-util/pkgconfig nls? ( dev-util/intltool sys-devel/gettext )
+>=media-sound/gmpc-11.8.16 dev-libs/libxml2:2 virtual/pkgconfig nls? ( dev-util/intltool sys-devel/gettext )
 >=media-sound/gmpc-11.8.16 dev-libs/libxml2:2
 0
 mirror://sourceforge/musicpd/gmpc-lyrics-11.8.16.tar.gz

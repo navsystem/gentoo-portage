@@ -1,4 +1,4 @@
-x11-libs/libX11 x11-libs/libXcomposite x11-libs/libXdamage x11-libs/libXfixes x11-libs/libXrender dev-util/pkgconfig x11-proto/xproto
+x11-libs/libX11 x11-libs/libXcomposite x11-libs/libXdamage x11-libs/libXfixes x11-libs/libXrender virtual/pkgconfig x11-proto/xproto
 x11-libs/libX11 x11-libs/libXcomposite x11-libs/libXdamage x11-libs/libXfixes x11-libs/libXrender
 0
 http://forchheimer.se/transset-df/transset-df-6.tar.gz

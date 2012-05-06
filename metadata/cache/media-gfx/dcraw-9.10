@@ -1,4 +1,4 @@
-jpeg? ( virtual/jpeg ) lcms? ( =media-libs/lcms-1* ) jpeg2k? ( media-libs/jasper ) gimp? ( media-gfx/gimp ) nls? ( sys-devel/gettext ) gimp? ( dev-util/pkgconfig )
+jpeg? ( virtual/jpeg ) lcms? ( =media-libs/lcms-1* ) jpeg2k? ( media-libs/jasper ) gimp? ( media-gfx/gimp ) nls? ( sys-devel/gettext ) gimp? ( virtual/pkgconfig )
 jpeg? ( virtual/jpeg ) lcms? ( =media-libs/lcms-1* ) jpeg2k? ( media-libs/jasper ) gimp? ( media-gfx/gimp ) media-libs/netpbm
 0
 http://www.cybercom.net/~dcoffin/dcraw/archive/dcraw-9.10.tar.gz mirror://gentoo/parse-1.73.tar.bz2 gimp? ( mirror://gentoo/rawphoto-1.32.tar.bz2 )

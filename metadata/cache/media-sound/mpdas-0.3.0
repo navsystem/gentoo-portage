@@ -1,4 +1,4 @@
-media-libs/libmpd net-misc/curl dev-util/pkgconfig
+media-libs/libmpd net-misc/curl virtual/pkgconfig
 media-libs/libmpd net-misc/curl
 0
 http://50hz.ws/mpdas/mpdas-0.3.0.tar.bz2

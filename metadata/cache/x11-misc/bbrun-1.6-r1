@@ -1,4 +1,4 @@
-x11-libs/gtk+:2 x11-libs/libXpm dev-util/pkgconfig
+x11-libs/gtk+:2 x11-libs/libXpm virtual/pkgconfig
 x11-libs/gtk+:2
 0
 http://www.darkops.net/bbrun/bbrun-1.6.tar.gz

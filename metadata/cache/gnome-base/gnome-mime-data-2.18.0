@@ -1,4 +1,4 @@
->=dev-util/pkgconfig-0.12.0 >=dev-util/intltool-0.35 >=sys-apps/sed-4
+virtual/pkgconfig >=dev-util/intltool-0.35 >=sys-apps/sed-4
 
 0
 mirror://gnome/sources/gnome-mime-data/2.18/gnome-mime-data-2.18.0.tar.bz2

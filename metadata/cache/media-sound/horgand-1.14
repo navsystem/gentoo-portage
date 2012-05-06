@@ -1,4 +1,4 @@
-x11-libs/fltk:1 x11-libs/libXpm media-libs/libsndfile media-libs/alsa-lib media-sound/alsa-utils media-sound/jack-audio-connection-kit dev-util/pkgconfig
+x11-libs/fltk:1 x11-libs/libXpm media-libs/libsndfile media-libs/alsa-lib media-sound/alsa-utils media-sound/jack-audio-connection-kit virtual/pkgconfig
 x11-libs/fltk:1 x11-libs/libXpm media-libs/libsndfile media-libs/alsa-lib media-sound/alsa-utils media-sound/jack-audio-connection-kit
 0
 mirror://berlios/horgand/horgand-1.14.tar.gz

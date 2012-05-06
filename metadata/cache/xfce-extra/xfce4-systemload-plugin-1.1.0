@@ -1,4 +1,4 @@
->=x11-libs/gtk+-2.6:2 >=xfce-base/libxfce4ui-4.8 >=xfce-base/libxfce4util-4.8 >=xfce-base/xfce4-panel-4.8 udev? ( sys-power/upower ) dev-util/intltool dev-util/pkgconfig >=sys-apps/sed-4
+>=x11-libs/gtk+-2.6:2 >=xfce-base/libxfce4ui-4.8 >=xfce-base/libxfce4util-4.8 >=xfce-base/xfce4-panel-4.8 udev? ( sys-power/upower ) dev-util/intltool virtual/pkgconfig >=sys-apps/sed-4
 >=x11-libs/gtk+-2.6:2 >=xfce-base/libxfce4ui-4.8 >=xfce-base/libxfce4util-4.8 >=xfce-base/xfce4-panel-4.8 udev? ( sys-power/upower )
 0
 mirror://xfce/src/panel-plugins/xfce4-systemload-plugin/1.1/xfce4-systemload-plugin-1.1.0.tar.bz2

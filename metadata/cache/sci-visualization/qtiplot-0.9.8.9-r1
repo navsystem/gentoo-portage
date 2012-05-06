@@ -6,7 +6,7 @@ http://dev.gentoo.org/~dilfridge/distfiles/qtiplot-0.9.8.9.tar.bz2 http://dev.ge
 http://soft.proindependent.com/qtiplot.html http://www.staff.science.uu.nl/~zeven101/qtiplot.html
 GPL-2 GPL-3
 Qt based clone of the Origin plotting package
-~amd64 ~x86 ~amd64-linux ~x86-linux
+amd64 ~x86 ~amd64-linux ~x86-linux
 base eutils fdo-mime multilib python qt4-r2 toolchain-funcs user
 bindist doc mono latex python linguas_zh_CN linguas_cs linguas_de linguas_es linguas_fr linguas_ja linguas_ro linguas_ru linguas_sv
 

@@ -1,4 +1,4 @@
-alsa? ( media-libs/alsa-lib ) nas? ( media-libs/nas ) pulseaudio? ( media-sound/pulseaudio ) dev-util/pkgconfig
+alsa? ( media-libs/alsa-lib ) nas? ( media-libs/nas ) pulseaudio? ( media-sound/pulseaudio ) virtual/pkgconfig
 alsa? ( media-libs/alsa-lib ) nas? ( media-libs/nas ) pulseaudio? ( media-sound/pulseaudio )
 0
 http://downloads.xiph.org/releases/ao/libao-1.1.0.tar.gz

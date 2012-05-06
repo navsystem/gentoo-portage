@@ -1,4 +1,4 @@
->=media-sound/gmpc-11.8.16 dev-libs/libxml2 x11-libs/libnotify dev-util/pkgconfig nls? ( dev-util/intltool sys-devel/gettext )
+>=media-sound/gmpc-11.8.16 dev-libs/libxml2 x11-libs/libnotify virtual/pkgconfig nls? ( dev-util/intltool sys-devel/gettext )
 >=media-sound/gmpc-11.8.16 dev-libs/libxml2 x11-libs/libnotify
 0
 mirror://sourceforge/musicpd/gmpc-libnotify-11.8.16.tar.gz

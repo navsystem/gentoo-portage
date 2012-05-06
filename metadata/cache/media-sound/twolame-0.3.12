@@ -1,4 +1,4 @@
->=media-libs/libsndfile-1 dev-util/pkgconfig
+>=media-libs/libsndfile-1 virtual/pkgconfig
 >=media-libs/libsndfile-1
 0
 mirror://sourceforge/twolame/twolame-0.3.12.tar.gz

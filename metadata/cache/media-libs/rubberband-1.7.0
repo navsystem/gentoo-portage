@@ -1,4 +1,4 @@
-media-libs/vamp-plugin-sdk media-libs/libsamplerate media-libs/libsndfile media-libs/ladspa-sdk sci-libs/fftw:3.0 dev-util/pkgconfig
+media-libs/vamp-plugin-sdk media-libs/libsamplerate media-libs/libsndfile media-libs/ladspa-sdk sci-libs/fftw:3.0 virtual/pkgconfig
 media-libs/vamp-plugin-sdk media-libs/libsamplerate media-libs/libsndfile media-libs/ladspa-sdk sci-libs/fftw:3.0
 0
 http://code.breakfastquay.com/attachments/download/23/rubberband-1.7.0.tar.bz2

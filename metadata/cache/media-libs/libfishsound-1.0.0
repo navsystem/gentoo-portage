@@ -1,4 +1,4 @@
-media-libs/libvorbis media-libs/libogg flac? ( media-libs/flac ) speex? ( media-libs/speex ) dev-util/pkgconfig
+media-libs/libvorbis media-libs/libogg flac? ( media-libs/flac ) speex? ( media-libs/speex ) virtual/pkgconfig
 media-libs/libvorbis media-libs/libogg flac? ( media-libs/flac ) speex? ( media-libs/speex )
 0
 http://downloads.xiph.org/releases/libfishsound/libfishsound-1.0.0.tar.gz

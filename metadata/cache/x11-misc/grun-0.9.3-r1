@@ -1,4 +1,4 @@
-dev-libs/glib x11-libs/gtk+:2 x11-libs/gdk-pixbuf dev-util/pkgconfig nls? ( sys-devel/gettext )
+dev-libs/glib x11-libs/gtk+:2 x11-libs/gdk-pixbuf virtual/pkgconfig nls? ( sys-devel/gettext )
 dev-libs/glib x11-libs/gtk+:2 x11-libs/gdk-pixbuf
 0
 http://grun.googlecode.com/files/grun-0.9.3.tar.gz

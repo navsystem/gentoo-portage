@@ -1,4 +1,4 @@
-media-libs/libsamplerate media-sound/jack-audio-connection-kit dev-util/pkgconfig || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+media-libs/libsamplerate media-sound/jack-audio-connection-kit virtual/pkgconfig || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 media-libs/libsamplerate media-sound/jack-audio-connection-kit
 0
 mirror://sourceforge/bio2jack/bio2jack-0.9.tar.gz

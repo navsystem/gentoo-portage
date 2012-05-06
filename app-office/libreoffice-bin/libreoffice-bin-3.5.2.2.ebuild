@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.5.2.2.ebuild,v 1.4 2012/05/04 20:50:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.5.2.2.ebuild,v 1.6 2012/05/06 14:05:10 ago Exp $
 
 EAPI=4
 
@@ -51,7 +51,7 @@ SRC_URI="
 IUSE="+cups debug gnome java kde"
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 ~x86"
 
 BIN_COMMON_DEPEND="
 	>=sys-libs/glibc-2.14.1-r3
@@ -107,8 +107,7 @@ COMMON_DEPEND="
 "
 
 RDEPEND="${COMMON_DEPEND}
-	!app-office/libreoffice-bin
-	!app-office/libreoffice-bin-debug
+	!app-office/libreoffice
 	!app-office/openoffice-bin
 	!app-office/openoffice
 	media-fonts/libertine-ttf
