@@ -6,7 +6,7 @@ http://github.com/inspircd/inspircd/downloads/InspIRCd-2.0.5.tar.bz2
 http://www.inspircd.org/
 GPL-2
 Inspire IRCd - The Stable, High-Performance Modular IRCd
-~amd64 ~x86
+amd64 ~x86
 eutils flag-o-matic multilib toolchain-funcs user
 gnutls ipv6 ldap mysql postgres sqlite ssl
 
