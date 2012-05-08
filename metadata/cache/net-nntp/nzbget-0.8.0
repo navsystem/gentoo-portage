@@ -1,0 +1,22 @@
+dev-libs/libxml2 ncurses? ( sys-libs/ncurses ) parcheck? ( app-arch/libpar2 dev-libs/libsigc++:2 ) ssl? ( gnutls? ( net-libs/gnutls ) !gnutls? ( dev-libs/openssl ) ) virtual/pkgconfig || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+dev-libs/libxml2 ncurses? ( sys-libs/ncurses ) parcheck? ( app-arch/libpar2 dev-libs/libsigc++:2 ) ssl? ( gnutls? ( net-libs/gnutls ) !gnutls? ( dev-libs/openssl ) )
+0
+mirror://sourceforge/nzbget/nzbget-0.8.0.tar.gz
+
+http://nzbget.sourceforge.net/
+GPL-2
+A command-line based binary newsgrapper supporting .nzb files
+~alpha ~amd64 ~ppc ~x86
+autotools eutils libtool multilib toolchain-funcs user
+debug gnutls ncurses parcheck ssl
+
+
+
+4
+
+configure install postinst preinst prepare
+
+
+
+
+
