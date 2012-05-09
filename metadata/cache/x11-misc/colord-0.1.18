@@ -6,7 +6,7 @@ test
 http://www.freedesktop.org/software/colord/
 GPL-2
 System service to accurately color manage input and output devices
-amd64 arm ~hppa ~ppc ~ppc64 x86 ~x86-fbsd
+amd64 arm ~hppa ~mips ~ppc ~ppc64 x86 ~x86-fbsd
 autotools base eutils libtool multilib systemd toolchain-funcs user
 doc examples +gusb +introspection scanner +udev vala
 

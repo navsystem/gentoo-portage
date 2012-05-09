@@ -6,7 +6,7 @@ https://github.com/jnr/jffi/tarball/1.0.11 -> jffi-1.0.11.tar.gz
 http://github.com/jnr
 || ( Apache-2.0 LGPL-3 )
 An optimized Java interface to libffi
-amd64 ~ppc ~x86
+amd64 ~ppc x86
 eutils java-ant-2 java-pkg-2 java-utils-2 multilib toolchain-funcs user versionator
 elibc_FreeBSD doc source test elibc_FreeBSD
 

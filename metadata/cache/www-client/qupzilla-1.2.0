@@ -6,7 +6,7 @@ https://github.com/nowrep/QupZilla/tarball/v1.2.0 -> qupzilla-1.2.0.tar.gz
 http://www.qupzilla.com/
 GPL-3
 Qt WebKit web browser
-~amd64 ~x86
+amd64 x86
 base eutils multilib qt4-r2 toolchain-funcs user vcs-snapshot
 debug kde
 

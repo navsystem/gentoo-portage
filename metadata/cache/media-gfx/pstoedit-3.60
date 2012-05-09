@@ -6,7 +6,7 @@ mirror://sourceforge/pstoedit/pstoedit-3.60.tar.gz
 http://sourceforge.net/projects/pstoedit/
 GPL-2
 Translate PostScript and PDF graphics into other vector formats
-~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86
+~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd
 autotools eutils libtool multilib toolchain-funcs user
 emf flash imagemagick plotutils
 
