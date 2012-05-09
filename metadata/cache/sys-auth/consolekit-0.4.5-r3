@@ -6,7 +6,7 @@ http://www.freedesktop.org/software/ConsoleKit/dist/ConsoleKit-0.4.5.tar.bz2
 http://www.freedesktop.org/wiki/Software/ConsoleKit
 GPL-2
 Framework for defining and tracking users, login sessions and seats.
-~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sh ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux
+~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sh ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux
 autotools eutils flag-o-matic libtool linux-info multilib pam systemd toolchain-funcs user versionator
 acl debug doc kernel_linux pam policykit test
 
