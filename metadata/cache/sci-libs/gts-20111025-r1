@@ -1,4 +1,4 @@
-virtual/fortran dev-libs/glib:2 dev-util/pkgconfig test? ( media-libs/netpbm ) || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+virtual/fortran dev-libs/glib:2 virtual/pkgconfig test? ( media-libs/netpbm ) || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 virtual/fortran dev-libs/glib:2
 0
 http://dev.gentoo.org/~bicatali/distfiles/gts-20111025.tar.gz

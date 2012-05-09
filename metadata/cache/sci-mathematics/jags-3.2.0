@@ -1,4 +1,4 @@
-virtual/blas virtual/lapack dev-util/pkgconfig doc? ( virtual/latex-base dev-texlive/texlive-latexextra )
+virtual/blas virtual/lapack virtual/pkgconfig doc? ( virtual/latex-base dev-texlive/texlive-latexextra )
 virtual/blas virtual/lapack
 0
 mirror://sourceforge/project/mcmc-jags/JAGS/3.x/Source/JAGS-3.2.0.tar.gz

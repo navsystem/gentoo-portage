@@ -1,4 +1,4 @@
->=xfce-base/exo-0.6 >=xfce-base/libxfce4util-4.8 >=xfce-base/libxfcegui4-4.8 >=xfce-base/xfce4-panel-4.8 >=dev-libs/libpcre-5 dbus? ( >=dev-libs/dbus-glib-0.98 ) dev-util/intltool dev-util/pkgconfig >=sys-apps/sed-4
+>=xfce-base/exo-0.6 >=xfce-base/libxfce4util-4.8 >=xfce-base/libxfcegui4-4.8 >=xfce-base/xfce4-panel-4.8 >=dev-libs/libpcre-5 dbus? ( >=dev-libs/dbus-glib-0.98 ) dev-util/intltool virtual/pkgconfig >=sys-apps/sed-4
 >=xfce-base/exo-0.6 >=xfce-base/libxfce4util-4.8 >=xfce-base/libxfcegui4-4.8 >=xfce-base/xfce4-panel-4.8 >=dev-libs/libpcre-5 dbus? ( >=dev-libs/dbus-glib-0.98 )
 0
 mirror://xfce/src/panel-plugins/xfce4-verve-plugin/1.0/xfce4-verve-plugin-1.0.0.tar.bz2

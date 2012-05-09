@@ -1,4 +1,4 @@
->=media-sound/gmpc-0.20.0 dev-libs/libxml2 media-libs/taglib net-libs/libmicrohttpd dev-util/pkgconfig
+>=media-sound/gmpc-0.20.0 dev-libs/libxml2 media-libs/taglib net-libs/libmicrohttpd virtual/pkgconfig
 >=media-sound/gmpc-0.20.0 dev-libs/libxml2 media-libs/taglib net-libs/libmicrohttpd
 0
 mirror://sourceforge/musicpd/gmpc-mserver-0.20.0.tar.gz

@@ -1,5 +1,5 @@
 dev-vcs/git
-dev-lang/perl dev-perl/libwww-perl dev-perl/XML-Fast media-video/mplayer[X,mp3,faad,x264] virtual/perl-Scalar-List-Utils
+dev-lang/perl dev-perl/libwww-perl dev-perl/XML-Fast || ( media-video/mplayer[X,network] media-video/mplayer2[X,network] ) virtual/perl-Scalar-List-Utils
 0
 
 

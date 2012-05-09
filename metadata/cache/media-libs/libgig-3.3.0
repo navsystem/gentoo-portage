@@ -1,4 +1,4 @@
->=media-libs/libsndfile-1.0.2 >=media-libs/audiofile-0.2.3 dev-util/pkgconfig doc? ( app-doc/doxygen )
+>=media-libs/libsndfile-1.0.2 >=media-libs/audiofile-0.2.3 virtual/pkgconfig doc? ( app-doc/doxygen )
 >=media-libs/libsndfile-1.0.2 >=media-libs/audiofile-0.2.3
 0
 http://download.linuxsampler.org/packages/libgig-3.3.0.tar.bz2

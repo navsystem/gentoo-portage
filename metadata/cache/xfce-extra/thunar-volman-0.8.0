@@ -1,4 +1,4 @@
->=dev-libs/glib-2.20 || ( >=sys-fs/udev-171-r5[gudev] <sys-fs/udev-171[extras] ) >=x11-libs/gtk+-2.24:2 >=xfce-base/exo-0.8 >=xfce-base/libxfce4ui-4.10 >=xfce-base/libxfce4util-4.10 >=xfce-base/xfconf-4.10 libnotify? ( >=x11-libs/libnotify-0.7 ) dev-util/intltool dev-util/pkgconfig sys-devel/gettext >=sys-apps/sed-4
+>=dev-libs/glib-2.20 || ( >=sys-fs/udev-171-r5[gudev] <sys-fs/udev-171[extras] ) >=x11-libs/gtk+-2.24:2 >=xfce-base/exo-0.8 >=xfce-base/libxfce4ui-4.10 >=xfce-base/libxfce4util-4.10 >=xfce-base/xfconf-4.10 libnotify? ( >=x11-libs/libnotify-0.7 ) dev-util/intltool sys-devel/gettext virtual/pkgconfig >=sys-apps/sed-4
 >=dev-libs/glib-2.20 || ( >=sys-fs/udev-171-r5[gudev] <sys-fs/udev-171[extras] ) >=x11-libs/gtk+-2.24:2 >=xfce-base/exo-0.8 >=xfce-base/libxfce4ui-4.10 >=xfce-base/libxfce4util-4.10 >=xfce-base/xfconf-4.10 libnotify? ( >=x11-libs/libnotify-0.7 ) >=xfce-base/thunar-1.4[udev]
 0
 mirror://xfce/src/apps/thunar-volman/0.8/thunar-volman-0.8.0.tar.bz2

@@ -1,4 +1,4 @@
->=x11-libs/cairo-1.5 >=x11-libs/gtk+-2.12:2 x11-libs/libwnck:1 dev-util/pkgconfig dev-util/intltool >=sys-apps/sed-4
+>=x11-libs/cairo-1.5 >=x11-libs/gtk+-2.12:2 x11-libs/libwnck:1 virtual/pkgconfig dev-util/intltool >=sys-apps/sed-4
 >=x11-libs/cairo-1.5 >=x11-libs/gtk+-2.12:2 x11-libs/libwnck:1
 0
 mirror://xfce/src/apps/xfce4-taskmanager/1.0/xfce4-taskmanager-1.0.0.tar.bz2

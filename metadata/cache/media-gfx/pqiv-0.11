@@ -1,4 +1,4 @@
->=x11-libs/gtk+-2.8:2 dev-util/pkgconfig
+>=x11-libs/gtk+-2.8:2 virtual/pkgconfig
 >=x11-libs/gtk+-2.8:2
 0
 http://www.pberndt.com/raw/Programme/Linux/pqiv/_download/pqiv-0.11.tbz

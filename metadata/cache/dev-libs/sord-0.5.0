@@ -1,4 +1,4 @@
->=dev-libs/serd-0.5.0 doc? ( app-doc/doxygen ) dev-util/pkgconfig
+>=dev-libs/serd-0.5.0 doc? ( app-doc/doxygen ) virtual/pkgconfig
 >=dev-libs/serd-0.5.0
 0
 http://download.drobilla.net/sord-0.5.0.tar.bz2

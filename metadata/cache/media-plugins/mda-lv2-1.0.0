@@ -1,4 +1,4 @@
-media-libs/lv2 dev-util/pkgconfig
+media-libs/lv2 virtual/pkgconfig
 media-libs/lv2
 0
 http://download.drobilla.net/mda-lv2-1.0.0.tar.bz2

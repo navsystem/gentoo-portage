@@ -1,4 +1,4 @@
-x11-libs/gtk+:2 dev-util/pkgconfig
+x11-libs/gtk+:2 virtual/pkgconfig
 x11-libs/gtk+:2
 0
 mirror://debian/pool/main/g/gtk-theme-switch/gtk-theme-switch_2.1.0.orig.tar.gz

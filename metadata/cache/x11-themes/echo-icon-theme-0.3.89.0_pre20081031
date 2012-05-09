@@ -1,4 +1,4 @@
-dev-util/pkgconfig >=x11-misc/icon-naming-utils-0.8.90 >=sys-apps/sed-4
+virtual/pkgconfig >=x11-misc/icon-naming-utils-0.8.90 >=sys-apps/sed-4
 
 0
 mirror://gentoo/echo-icon-theme-0.3.89.0_pre20081031.tar.bz2

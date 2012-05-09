@@ -1,4 +1,4 @@
->=dev-libs/glib-2.8 >=dev-libs/libIDL-0.8.2 >=dev-util/pkgconfig-0.18 doc? ( >=dev-util/gtk-doc-1 ) >=sys-apps/sed-4
+>=dev-libs/glib-2.8 >=dev-libs/libIDL-0.8.2 virtual/pkgconfig doc? ( >=dev-util/gtk-doc-1 ) >=sys-apps/sed-4
 >=dev-libs/glib-2.8 >=dev-libs/libIDL-0.8.2
 2
 mirror://gnome/sources/ORBit2/./ORBit2-2.14.19.tar.bz2

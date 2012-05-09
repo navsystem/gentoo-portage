@@ -1,4 +1,4 @@
-sys-apps/dbus dev-perl/XML-Twig dev-util/pkgconfig test? ( dev-perl/Test-Pod dev-perl/Test-Pod-Coverage ) dev-lang/perl[-build]
+sys-apps/dbus dev-perl/XML-Twig virtual/pkgconfig test? ( dev-perl/Test-Pod dev-perl/Test-Pod-Coverage ) dev-lang/perl[-build]
 sys-apps/dbus dev-perl/XML-Twig dev-lang/perl[-build]
 0
 mirror://cpan/authors/id/D/DA/DANBERR/Net-DBus-1.0.0.tar.gz

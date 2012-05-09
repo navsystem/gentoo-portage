@@ -1,4 +1,4 @@
->=dev-libs/glib-2 dev-libs/libxml2 app-arch/xz-utils dev-util/intltool dev-util/pkgconfig sys-devel/gettext
+>=dev-libs/glib-2 dev-libs/libxml2 app-arch/xz-utils dev-util/intltool virtual/pkgconfig sys-devel/gettext
 >=dev-libs/glib-2 dev-libs/libxml2
 0
 http://people.freedesktop.org/~hadess/shared-mime-info-1.0.tar.xz

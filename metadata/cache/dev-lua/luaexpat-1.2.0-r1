@@ -1,4 +1,4 @@
->=dev-lang/lua-5.1[deprecated] dev-libs/expat dev-util/pkgconfig
+>=dev-lang/lua-5.1[deprecated] dev-libs/expat virtual/pkgconfig
 >=dev-lang/lua-5.1[deprecated] dev-libs/expat
 0
 http://matthewwild.co.uk/projects/luaexpat/luaexpat-1.2.0.tar.gz

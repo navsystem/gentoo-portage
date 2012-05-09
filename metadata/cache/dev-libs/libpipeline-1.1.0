@@ -1,4 +1,4 @@
-dev-util/pkgconfig test? ( dev-libs/check )
+virtual/pkgconfig test? ( dev-libs/check )
 
 0
 mirror://nongnu/libpipeline/libpipeline-1.1.0.tar.gz

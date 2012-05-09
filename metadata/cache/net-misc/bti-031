@@ -1,4 +1,4 @@
-net-misc/curl dev-libs/libxml2 dev-libs/libpcre net-libs/liboauth dev-util/pkgconfig
+net-misc/curl dev-libs/libxml2 dev-libs/libpcre net-libs/liboauth virtual/pkgconfig
 net-misc/curl dev-libs/libxml2 dev-libs/libpcre net-libs/liboauth || ( sys-libs/readline dev-libs/libedit ) bash-completion? ( app-admin/eselect )
 0
 mirror://kernel/software/web/bti/bti-031.tar.bz2

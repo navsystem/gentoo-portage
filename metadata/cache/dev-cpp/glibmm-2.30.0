@@ -1,4 +1,4 @@
->=dev-libs/libsigc++-2.2:2 >=dev-libs/glib-2.30.0:2 dev-util/pkgconfig doc? ( app-doc/doxygen ) app-arch/xz-utils >=sys-apps/sed-4
+>=dev-libs/libsigc++-2.2:2 >=dev-libs/glib-2.30.0:2 virtual/pkgconfig doc? ( app-doc/doxygen ) app-arch/xz-utils >=sys-apps/sed-4
 >=dev-libs/libsigc++-2.2:2 >=dev-libs/glib-2.30.0:2
 2
 mirror://gnome/sources/glibmm/2.30/glibmm-2.30.0.tar.xz

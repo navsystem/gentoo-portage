@@ -1,4 +1,4 @@
-dev-util/pkgconfig >=x11-libs/gtk+-2.12.11:2 >=dev-libs/glib-2.16.5:2
+virtual/pkgconfig >=x11-libs/gtk+-2.12.11:2 >=dev-libs/glib-2.16.5:2
 >=x11-libs/gtk+-2.12.11:2 >=dev-libs/glib-2.16.5:2
 0
 http://ktsuss.googlecode.com//files/ktsuss-2.tar.gz

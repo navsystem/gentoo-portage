@@ -1,4 +1,4 @@
->=dev-libs/glib-2.24 x11-libs/gtk+:3 dev-util/pkgconfig >=sys-apps/sed-4
+>=dev-libs/glib-2.24 x11-libs/gtk+:3 virtual/pkgconfig >=sys-apps/sed-4
 >=dev-libs/glib-2.24 x11-libs/gtk+:3
 3
 mirror://xfce/src/xfce/gtk-xfce-engine/2.99/gtk-xfce-engine-2.99.0.tar.bz2

@@ -1,4 +1,4 @@
->=net-libs/libnxml-0.18.0 net-misc/curl dev-util/pkgconfig doc? ( app-doc/doxygen )
+>=net-libs/libnxml-0.18.0 net-misc/curl virtual/pkgconfig doc? ( app-doc/doxygen )
 >=net-libs/libnxml-0.18.0 net-misc/curl
 0
 http://www.autistici.org/bakunin/libmrss/libmrss-0.18.0.tar.gz

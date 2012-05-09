@@ -1,4 +1,4 @@
-dev-libs/glib:2 >=gnome-base/gnome-settings-daemon-3.0 x11-libs/gtk+:3 >=dev-util/intltool-0.40.0 dev-util/pkgconfig sys-devel/gettext app-arch/xz-utils >=sys-apps/sed-4
+dev-libs/glib:2 >=gnome-base/gnome-settings-daemon-3.0 x11-libs/gtk+:3 >=dev-util/intltool-0.40.0 virtual/pkgconfig sys-devel/gettext app-arch/xz-utils >=sys-apps/sed-4
 dev-libs/glib:2 >=gnome-base/gnome-settings-daemon-3.0 x11-libs/gtk+:3
 0
 mirror://gentoo/office-runner-0.0_pre20110916.tar.xz

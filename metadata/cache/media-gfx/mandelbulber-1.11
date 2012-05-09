@@ -1,4 +1,4 @@
-x11-libs/gtk+:2 >=media-libs/libsndfile-1 >=media-libs/libpng-1.4 virtual/jpeg dev-util/pkgconfig
+x11-libs/gtk+:2 >=media-libs/libsndfile-1 >=media-libs/libpng-1.4 virtual/jpeg virtual/pkgconfig
 x11-libs/gtk+:2 >=media-libs/libsndfile-1 >=media-libs/libpng-1.4 virtual/jpeg
 0
 mirror://sourceforge/mandelbulber/mandelbulber1.11.tar.gz

@@ -1,0 +1,22 @@
+sci-libs/scipy >=sci-libs/libsvm-2.91 dev-python/cython dev-python/setuptools doc? ( dev-python/sphinx dev-python/matplotlib ) =dev-lang/python-2*
+sci-libs/scipy >=sci-libs/libsvm-2.91 sci-libs/scikits dev-python/matplotlib =dev-lang/python-2*
+0
+mirror://sourceforge/scikit-learn/scikit-learn-0.11.tar.gz
+
+http://scikit-learn.org
+BSD
+Python modules for machine learning and data mining
+~amd64 ~x86 ~amd64-linux ~x86-linux
+distutils eutils flag-o-matic multilib python toolchain-funcs user
+doc examples
+
+
+
+4
+
+compile install postinst postrm prepare setup test
+
+
+
+
+

@@ -1,26 +1,18 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/compton/compton-0_pre20120330.ebuild,v 1.1 2012/03/30 15:55:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/compton/compton-0_pre20120330.ebuild,v 1.4 2012/05/06 00:14:51 hasufell Exp $
 
 EAPI=4
 
-unset _live_inherits
-
-if [[ ${PV} == *9999* ]]; then
-	EGIT_REPO_URI="git://github.com/chjj/compton.git"
-	_live_inherits="git-2"
-else
-	KEYWORDS="~amd64 ~x86"
-	SRC_URI="http://dev.gentoo.org/~ssuominen/${P}.tar.xz"
-fi
-
-inherit toolchain-funcs ${_live_inherits}
+inherit toolchain-funcs
 
 DESCRIPTION="A compositor for X, and a fork of xcompmgr-dana"
 HOMEPAGE="http://github.com/chjj/compton"
+SRC_URI="http://dev.gentoo.org/~hasufell/distfiles/${P}.tar.xz"
 
 LICENSE="MIT"
 SLOT="0"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 COMMON_DEPEND="x11-libs/libX11
@@ -33,7 +25,7 @@ RDEPEND="${COMMON_DEPEND}
 	x11-apps/xprop
 	x11-apps/xwininfo"
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	x11-proto/xproto"
 
 pkg_setup() {

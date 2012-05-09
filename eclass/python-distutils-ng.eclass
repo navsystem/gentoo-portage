@@ -1,14 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-distutils-ng.eclass,v 1.15 2012/05/03 00:31:58 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-distutils-ng.eclass,v 1.19 2012/05/06 03:20:45 floppym Exp $
 
 # @ECLASS: python-distutils-ng
 # @MAINTAINER:
 # Python herd <python@gentoo.org>
 # @AUTHOR:
 # Author: Krzysztof Pawlik <nelchael@gentoo.org>
-# @BLURB: An eclass for installing Python packages using distutils with proper
-# support for multiple Python slots.
+# @BLURB: Install Python packages using distutils.
 # @DESCRIPTION:
 # The Python eclass is designed to allow an easier installation of Python
 # packages and their incorporation into the Gentoo Linux system.
@@ -28,6 +27,7 @@
 #    directory (so it will not contain any implementation-specific files)
 
 # @ECLASS-VARIABLE: PYTHON_COMPAT
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # This variable contains a space separated list of implementations (see above) a
 # package is compatible to. It must be set before the `inherit' call. The
@@ -42,11 +42,13 @@ if [[ -z "${PYTHON_COMPAT}" ]]; then
 fi
 
 # @ECLASS-VARIABLE: PYTHON_OPTIONAL
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # Set the value to "yes" to make the dependency on a Python interpreter
 # optional.
 
 # @ECLASS-VARIABLE: PYTHON_DISABLE_COMPILATION
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # Set the value to "yes" to skip compilation and/or optimization of Python
 # modules.
@@ -171,37 +173,17 @@ _python-distutils-ng_default_distutils_compile() {
 # @DESCRIPTION:
 # Default src_install for distutils-based packages.
 _python-distutils-ng_default_distutils_install() {
-	"${PYTHON}" setup.py install --no-compile --root="${D}/" || die
-}
+	local compile_flags="--compile -O2"
 
-# @FUNCTION: _python-distutils-ng_has_compileall
-# @USAGE: implementation
-# @RETURN: 0 if given implementation has compileall module
-# @DESCRIPTION:
-# This function is used to decide whenever to compile Python modules for given
-# implementation.
-_python-distutils-ng_has_compileall() {
 	case "${1}" in
-		python?_?|jython?_?)
-			return 0 ;;
-		*)
-			return 1 ;;
+		jython*)
+			# Jython does not support optimizations
+			compile_flags="--compile" ;;
 	esac
-}
 
-# @FUNCTION: _python-distutils-ng_has_compileall_opt
-# @USAGE: implementation
-# @RETURN: 0 if given implementation has compileall module and supports # optimizations
-# @DESCRIPTION:
-# This function is used to decide whenever to compile and optimize Python
-# modules for given implementation.
-_python-distutils-ng_has_compileall_opt() {
-	case "${1}" in
-		python?_?)
-			return 0 ;;
-		*)
-			return 1 ;;
-	esac
+	unset PYTHONDONTWRITEBYTECODE
+	[[ -n "${PYTHON_DISABLE_COMPILATION}" ]] && compile_flags="--no-compile"
+	"${PYTHON}" setup.py install ${compile_flags} --root="${D}" || die
 }
 
 # @FUNCTION: python-distutils-ng_redoscript
@@ -213,7 +195,7 @@ _python-distutils-ng_has_compileall_opt() {
 python-distutils-ng_redoscript() {
 	local sbn="$(basename "${1}")"
 	mkdir -p "${T}/_${sbn}/" || die "failed to create directory"
-	mv "${D}/${1}" "${T}/_${sbn}/${sbn}" || die "failed to move file"
+	mv "${D}${1}" "${T}/_${sbn}/${sbn}" || die "failed to move file"
 	python-distutils-ng_doscript "${T}/_${sbn}/${sbn}" "${2}"
 }
 
@@ -390,26 +372,4 @@ python-distutils-ng_src_install() {
 		python_install_all
 		popd &> /dev/null
 	fi
-
-	for impl in ${PYTHON_COMPAT}; do
-		[[ "${PYTHON_DISABLE_COMPILATION}" = "yes" ]] && continue
-		use "python_targets_${impl}" ${PYTHON_COMPAT} || continue
-
-		PYTHON="$(_python-distutils-ng_get_binary_for_implementation "${impl}")"
-		for accessible_path in $(${PYTHON} -c 'import sys; print(" ".join(sys.path))'); do
-			[[ -d "${D}/${accessible_path}" ]] || continue
-
-			_python-distutils-ng_has_compileall "${impl}" || continue
-			ebegin "Compiling ${accessible_path} for ${impl}"
-			${PYTHON} \
-				-m compileall -q -f "${D}/${accessible_path}" || die
-			eend $?
-
-			_python-distutils-ng_has_compileall_opt "${impl}" || continue
-			ebegin "Optimizing ${accessible_path} for ${impl}"
-			PYTHONOPTIMIZE=1 ${PYTHON} \
-				-m compileall -q -f "${D}/${accessible_path}" || die
-			eend $?
-		done;
-	done
 }

@@ -1,4 +1,4 @@
-media-libs/libao media-libs/libmad media-libs/taglib dev-util/pkgconfig sys-apps/sed
+media-libs/libao media-libs/libmad media-libs/taglib virtual/pkgconfig sys-apps/sed
 media-libs/libao media-libs/libmad media-libs/taglib
 0
 https://github.com/jkramer/shell-fm/tarball/v0.8 -> shell-fm-0.8.tar.gz

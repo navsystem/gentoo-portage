@@ -1,4 +1,4 @@
-media-libs/libmtp net-misc/curl x11-libs/qt-gui:4 dev-util/pkgconfig
+media-libs/libmtp net-misc/curl x11-libs/qt-gui:4 virtual/pkgconfig
 media-libs/libmtp net-misc/curl x11-libs/qt-gui:4
 0
 mirror://sourceforge/qtscrob/qtscrob-0.10.tar.bz2

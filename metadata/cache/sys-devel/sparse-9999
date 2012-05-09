@@ -1,4 +1,4 @@
-gtk? ( x11-libs/gtk+:2 ) xml? ( dev-libs/libxml2 ) gtk? ( dev-util/pkgconfig ) xml? ( dev-util/pkgconfig ) dev-vcs/git
+gtk? ( x11-libs/gtk+:2 ) xml? ( dev-libs/libxml2 ) gtk? ( virtual/pkgconfig ) xml? ( virtual/pkgconfig ) dev-vcs/git
 gtk? ( x11-libs/gtk+:2 ) xml? ( dev-libs/libxml2 )
 0
 

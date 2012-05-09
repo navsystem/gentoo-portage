@@ -1,4 +1,4 @@
->=dev-games/physfs-2[zip] media-libs/libsdl[audio,joystick,opengl,video,X] virtual/opengl dev-libs/boost dev-util/pkgconfig app-arch/zip >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+>=dev-games/physfs-2[zip] media-libs/libsdl[audio,joystick,opengl,video,X] virtual/opengl dev-libs/boost virtual/pkgconfig app-arch/zip >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 >=dev-games/physfs-2[zip] media-libs/libsdl[audio,joystick,opengl,video,X] virtual/opengl
 0
 mirror://sourceforge/blobby/blobby2-linux-0.9c.tar.gz

@@ -1,4 +1,4 @@
-virtual/lapack dev-util/pkgconfig
+virtual/lapack virtual/pkgconfig
 virtual/lapack
 0
 http://www.mcs.anl.gov/hs/software/DSDP//DSDP5.8.tar.gz

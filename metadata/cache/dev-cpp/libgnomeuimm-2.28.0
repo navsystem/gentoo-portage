@@ -1,4 +1,4 @@
->=dev-util/pkgconfig-0.12.0 >=gnome-base/libgnomeui-2.7.1 >=dev-cpp/libgnomemm-2.16.0 >=dev-cpp/libgnomecanvasmm-2.6 >=dev-cpp/gconfmm-2.6 >=dev-cpp/libglademm-2.4 >=dev-cpp/gnome-vfsmm-2.16 >=sys-apps/sed-4
+virtual/pkgconfig >=gnome-base/libgnomeui-2.7.1 >=dev-cpp/libgnomemm-2.16.0 >=dev-cpp/libgnomecanvasmm-2.6 >=dev-cpp/gconfmm-2.6 >=dev-cpp/libglademm-2.4 >=dev-cpp/gnome-vfsmm-2.16 >=sys-apps/sed-4
 >=gnome-base/libgnomeui-2.7.1 >=dev-cpp/libgnomemm-2.16.0 >=dev-cpp/libgnomecanvasmm-2.6 >=dev-cpp/gconfmm-2.6 >=dev-cpp/libglademm-2.4 >=dev-cpp/gnome-vfsmm-2.16
 2.6
 mirror://gnome/sources/libgnomeuimm/2.28/libgnomeuimm-2.28.0.tar.bz2

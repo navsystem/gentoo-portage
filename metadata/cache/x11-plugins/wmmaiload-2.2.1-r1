@@ -1,4 +1,4 @@
-x11-libs/gtk+:2 x11-libs/libXpm dev-util/pkgconfig
+x11-libs/gtk+:2 x11-libs/libXpm virtual/pkgconfig
 x11-libs/gtk+:2 x11-libs/libXpm
 0
 http://tnemeth.free.fr/projets/programmes/wmmaiload-2.2.1.tar.gz

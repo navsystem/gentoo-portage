@@ -1,4 +1,4 @@
-net-misc/curl dev-util/pkgconfig
+net-misc/curl virtual/pkgconfig
 net-misc/curl
 0
 http://lastfmlib.googlecode.com/files/lastfmlib-0.4.0.tar.gz

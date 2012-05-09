@@ -1,4 +1,4 @@
->=dev-libs/glib-2.30 >=sys-auth/polkit-0.102 x11-libs/gtk+:3 !lxde-base/lxpolkit dev-util/intltool dev-util/pkgconfig sys-devel/gettext app-arch/xz-utils
+>=dev-libs/glib-2.30 >=sys-auth/polkit-0.102 x11-libs/gtk+:3 !lxde-base/lxpolkit dev-util/intltool virtual/pkgconfig sys-devel/gettext app-arch/xz-utils
 >=dev-libs/glib-2.30 >=sys-auth/polkit-0.102 x11-libs/gtk+:3 !lxde-base/lxpolkit
 0
 mirror://gnome/sources/polkit-gnome/0.105/polkit-gnome-0.105.tar.xz

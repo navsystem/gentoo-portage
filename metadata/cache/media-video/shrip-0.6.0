@@ -1,4 +1,4 @@
->=dev-libs/glib-2.14:2 >=media-video/ogmrip-0.13.4 dev-util/pkgconfig nls? ( dev-util/intltool sys-devel/gettext )
+>=dev-libs/glib-2.14:2 >=media-video/ogmrip-0.13.4 virtual/pkgconfig nls? ( dev-util/intltool sys-devel/gettext )
 >=dev-libs/glib-2.14:2 >=media-video/ogmrip-0.13.4
 0
 mirror://sourceforge/ogmrip/shrip-0.6.0.tar.gz

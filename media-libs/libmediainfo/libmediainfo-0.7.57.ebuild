@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/libmediainfo-0.7.57.ebuild,v 1.1 2012/05/03 13:03:47 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/libmediainfo-0.7.57.ebuild,v 1.3 2012/05/05 08:02:31 jdhore Exp $
 
 EAPI="4"
 
@@ -22,7 +22,7 @@ RDEPEND="sys-libs/zlib
 	curl? ( net-misc/curl )
 	mms? ( >=media-libs/libmms-0.6.1[static-libs=] )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( app-doc/doxygen )"
 
 S="${WORKDIR}/${MY_PN}Lib/Project/GNU/Library"
@@ -62,8 +62,9 @@ src_compile() {
 src_install() {
 	default
 
+	edos2unix ${PN}.pc #414545
 	insinto /usr/$(get_libdir)/pkgconfig
-	doins "${S}"/${PN}.pc
+	doins ${PN}.pc
 
 	for x in ./ Archive Audio Duplicate Export Image Multiple Reader Tag Text Video; do
 		insinto /usr/include/${MY_PN}/${x}

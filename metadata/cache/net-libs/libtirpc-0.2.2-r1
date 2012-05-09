@@ -1,4 +1,4 @@
-kerberos? ( net-libs/libgssglue ) app-arch/xz-utils dev-util/pkgconfig
+kerberos? ( net-libs/libgssglue ) app-arch/xz-utils virtual/pkgconfig
 kerberos? ( net-libs/libgssglue )
 0
 mirror://sourceforge/libtirpc/libtirpc-0.2.2.tar.bz2 mirror://gentoo/libtirpc-glibc-nfs.tar.xz

@@ -1,4 +1,4 @@
->=xfce-base/libxfce4ui-4.8 >=xfce-base/libxfce4util-4.8 >=xfce-base/xfce4-panel-4.8 dev-util/intltool dev-util/pkgconfig sys-devel/gettext >=sys-apps/sed-4
+>=xfce-base/libxfce4ui-4.8 >=xfce-base/libxfce4util-4.8 >=xfce-base/xfce4-panel-4.8 dev-util/intltool virtual/pkgconfig sys-devel/gettext >=sys-apps/sed-4
 >=xfce-base/libxfce4ui-4.8 >=xfce-base/libxfce4util-4.8 >=xfce-base/xfce4-panel-4.8 kernel_linux? ( sys-apps/net-tools )
 0
 mirror://xfce/src/panel-plugins/xfce4-wavelan-plugin/0.5/xfce4-wavelan-plugin-0.5.10.tar.bz2

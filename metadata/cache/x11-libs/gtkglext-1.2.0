@@ -1,4 +1,4 @@
->=dev-libs/glib-2:2 >=x11-libs/gtk+-2:2 >=x11-libs/pango-1[X] virtual/opengl dev-util/pkgconfig >=sys-apps/sed-4
+>=dev-libs/glib-2:2 >=x11-libs/gtk+-2:2 >=x11-libs/pango-1[X] virtual/opengl virtual/pkgconfig >=sys-apps/sed-4
 >=dev-libs/glib-2:2 >=x11-libs/gtk+-2:2 >=x11-libs/pango-1[X] virtual/opengl
 0
 mirror://sourceforge/gtkglext/gtkglext-1.2.0.tar.bz2

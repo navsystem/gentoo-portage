@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2011-r5.ebuild,v 1.8 2012/03/04 15:37:10 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2011-r5.ebuild,v 1.10 2012/05/06 18:15:41 armin76 Exp $
 
 EAPI=3
 
@@ -61,7 +61,7 @@ for i in ${TL_CORE_EXTRA_SRC_MODULES}; do
 done
 SRC_URI="${SRC_URI} )"
 
-KEYWORDS="alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="cjk X doc source tk xetex"
 
 MODULAR_X_DEPEND="X? (
@@ -95,7 +95,7 @@ COMMON_DEPEND="${MODULAR_X_DEPEND}
 	cjk? ( >=dev-libs/ptexenc-1.2.0_p20110705 )"
 
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-apps/ed
 	sys-devel/flex
 	app-arch/xz-utils"

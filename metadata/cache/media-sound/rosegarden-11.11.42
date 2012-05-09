@@ -1,4 +1,4 @@
-x11-libs/qt-gui:4 media-libs/ladspa-sdk x11-libs/libSM media-sound/jack-audio-connection-kit media-libs/alsa-lib >=media-libs/dssi-1.0.0 media-libs/liblo media-libs/liblrdf sci-libs/fftw:3.0 media-libs/libsamplerate[sndfile] lirc? ( app-misc/lirc ) dev-util/pkgconfig x11-misc/makedepend || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=sys-apps/sed-4
+x11-libs/qt-gui:4 media-libs/ladspa-sdk x11-libs/libSM media-sound/jack-audio-connection-kit media-libs/alsa-lib >=media-libs/dssi-1.0.0 media-libs/liblo media-libs/liblrdf sci-libs/fftw:3.0 media-libs/libsamplerate[sndfile] lirc? ( app-misc/lirc ) virtual/pkgconfig x11-misc/makedepend || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=sys-apps/sed-4
 x11-libs/qt-gui:4 media-libs/ladspa-sdk x11-libs/libSM media-sound/jack-audio-connection-kit media-libs/alsa-lib >=media-libs/dssi-1.0.0 media-libs/liblo media-libs/liblrdf sci-libs/fftw:3.0 media-libs/libsamplerate[sndfile] lirc? ( app-misc/lirc )
 0
 mirror://sourceforge/rosegarden/rosegarden-11.11.42.tar.bz2

@@ -1,11 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-1.8.15.ebuild,v 1.1 2012/01/09 06:45:04 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-1.8.15.ebuild,v 1.4 2012/05/06 14:06:36 ago Exp $
 
 EAPI="4"
 
-# jruby's own RUBY_ENGINE defaults are no longer compatible.
-USE_RUBY="ruby18 ree18 ruby19 jruby"
+USE_RUBY="ruby18 ree18 jruby"
 
 inherit ruby-ng prefix
 
@@ -15,13 +14,12 @@ LICENSE="|| ( Ruby MIT )"
 
 SRC_URI="mirror://rubyforge/${PN}/${P}.tgz"
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x64-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x64-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 SLOT="0"
 IUSE="server test"
 
 RDEPEND="
-	ruby_targets_jruby? ( >=dev-java/jruby-1.5.6-r1 )
-	ruby_targets_ruby19? ( >=dev-lang/ruby-1.9.3_rc1 )"
+	ruby_targets_jruby? ( >=dev-java/jruby-1.5.6-r1 )"
 
 # index_gem_repository.rb
 PDEPEND="server? ( dev-ruby/builder[ruby_targets_ruby18] )"
@@ -59,15 +57,20 @@ each_ruby_test() {
 	# Unset RUBYOPT to avoid interferences, bug #158455 et. al.
 	unset RUBYOPT
 
-	case ${RUBY} in
-		*jruby)
-			eqawarn "Skipping tests for jruby 1.5."
-			;;
-		*)
-			RUBYLIB="$(pwd)/lib${RUBYLIB+:${RUBYLIB}}" ${RUBY} -I.:lib:test \
-			-e 'Dir["test/**/test_*.rb"].each { |tu| require tu }' || die "tests failed"
-			;;
-	esac
+	if [[ "${EUID}" -ne "0" ]]; then
+		case ${RUBY} in
+			*jruby)
+				eqawarn "Skipping tests for jruby 1.5."
+				;;
+			*)
+				RUBYLIB="$(pwd)/lib${RUBYLIB+:${RUBYLIB}}" ${RUBY} -I.:lib:test \
+				-e 'Dir["test/**/test_*.rb"].each { |tu| require tu }' || die "tests failed"
+				;;
+		esac
+	else
+		ewarn "The userpriv feature must be enabled to run tests, bug 408951."
+		eerror "Testsuite will not be run."
+	fi
 }
 
 each_ruby_install() {

@@ -6,7 +6,7 @@ mirror://cpan/authors/id/A/AD/ADAMK/Module-Install-1.06.tar.gz
 http://search.cpan.org/dist/Module-Install/
 || ( Artistic GPL-1 GPL-2 GPL-3 )
 Standalone, extensible Perl module installer
-~amd64 ~hppa ~x86 ~x86-fbsd ~amd64-linux ~x64-macos ~x86-macos
+~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x64-macos ~x86-macos
 base eutils multilib perl-module toolchain-funcs user
 test
 

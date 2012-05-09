@@ -1,4 +1,4 @@
-sys-libs/zlib odbc? ( || ( dev-db/libiodbc dev-db/unixODBC ) ) gmp? ( dev-libs/gmp ) mysql? ( virtual/mysql ) dev-util/pkgconfig
+sys-libs/zlib odbc? ( || ( dev-db/libiodbc dev-db/unixODBC ) ) gmp? ( dev-libs/gmp ) mysql? ( virtual/mysql ) virtual/pkgconfig
 sys-libs/zlib odbc? ( || ( dev-db/libiodbc dev-db/unixODBC ) ) gmp? ( dev-libs/gmp ) mysql? ( virtual/mysql )
 0
 mirror://gnu/glpk/glpk-4.45.tar.gz

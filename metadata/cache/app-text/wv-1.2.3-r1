@@ -1,4 +1,4 @@
->=dev-libs/glib-2 >=gnome-extra/libgsf-1.13 sys-libs/zlib media-libs/libpng dev-libs/libxml2 wmf? ( >=media-libs/libwmf-0.2.2 ) >=dev-util/pkgconfig-0.9
+>=dev-libs/glib-2 >=gnome-extra/libgsf-1.13 sys-libs/zlib media-libs/libpng dev-libs/libxml2 wmf? ( >=media-libs/libwmf-0.2.2 ) virtual/pkgconfig
 >=dev-libs/glib-2 >=gnome-extra/libgsf-1.13 sys-libs/zlib media-libs/libpng dev-libs/libxml2 wmf? ( >=media-libs/libwmf-0.2.2 )
 0
 mirror://sourceforge/wvware/wv-1.2.3.tar.gz

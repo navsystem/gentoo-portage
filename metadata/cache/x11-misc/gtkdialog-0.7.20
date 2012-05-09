@@ -1,4 +1,4 @@
-x11-libs/gtk+:2 gnome-base/libglade dev-util/pkgconfig
+x11-libs/gtk+:2 gnome-base/libglade virtual/pkgconfig
 x11-libs/gtk+:2 gnome-base/libglade
 0
 ftp://linux.pte.hu/pub/gtkdialog/gtkdialog-0.7.20.tar.gz

@@ -1,4 +1,4 @@
-dev-libs/popt sdl? ( >=media-libs/libsdl-1.2.5 ) xv? ( x11-libs/libXv ) dev-util/pkgconfig
+dev-libs/popt sdl? ( >=media-libs/libsdl-1.2.5 ) xv? ( x11-libs/libXv ) virtual/pkgconfig
 dev-libs/popt sdl? ( >=media-libs/libsdl-1.2.5 ) xv? ( x11-libs/libXv )
 0
 mirror://sourceforge/libdv/libdv-1.0.0.tar.gz mirror://gentoo/libdv-1.0.0-pic.patch.bz2

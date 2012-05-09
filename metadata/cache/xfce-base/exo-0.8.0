@@ -1,4 +1,4 @@
->=dev-lang/perl-5.6 >=dev-libs/glib-2.24 dev-perl/URI >=x11-libs/gtk+-2.20:2 >=xfce-base/libxfce4ui-4.10 >=xfce-base/libxfce4util-4.10 dev-util/intltool dev-util/pkgconfig sys-devel/gettext >=sys-apps/sed-4
+>=dev-lang/perl-5.6 >=dev-libs/glib-2.24 dev-perl/URI >=x11-libs/gtk+-2.20:2 >=xfce-base/libxfce4ui-4.10 >=xfce-base/libxfce4util-4.10 dev-util/intltool virtual/pkgconfig sys-devel/gettext >=sys-apps/sed-4
 >=dev-lang/perl-5.6 >=dev-libs/glib-2.24 dev-perl/URI >=x11-libs/gtk+-2.20:2 >=xfce-base/libxfce4ui-4.10 >=xfce-base/libxfce4util-4.10
 0
 mirror://xfce/src/xfce/exo/0.8/exo-0.8.0.tar.bz2

@@ -6,7 +6,7 @@ mirror://sourceforge/translate/translate-toolkit-1.9.0.tar.bz2
 http://translate.sourceforge.net
 GPL-2
 Toolkit to convert between many translation formats
-~amd64 ~x86 ~amd64-linux ~x86-linux
+amd64 ~x86 ~amd64-linux ~x86-linux
 distutils multilib python toolchain-funcs
 doc +html +ical +ini +subtitles
 

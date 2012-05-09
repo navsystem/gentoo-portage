@@ -6,7 +6,7 @@ http://www.hwaci.com/sw/mkhdr/makeheaders.c -> makeheaders-0_p4.c http://www.hwa
 http://www.hwaci.com/sw/mkhdr/
 BSD-2
 simple utility that will automatically generate header files
-~amd64 ~x86
+amd64 ~x86
 multilib toolchain-funcs
 
 

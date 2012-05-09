@@ -6,13 +6,13 @@ http://downloads.digium.com/pub/telephony/dahdi-tools/releases/dahdi-tools-2.5.0
 http://www.asterisk.org
 LGPL-2.1
 Userspace tools to configure the kernel modules from net-misc/dahdi
-~amd64 x86
+amd64 x86
 base eutils multilib toolchain-funcs user
 ppp
 
 
 
-3
+4
 
 compile configure install prepare unpack
 

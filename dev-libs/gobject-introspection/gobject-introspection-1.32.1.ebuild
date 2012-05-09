@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/gobject-introspection-1.32.1.ebuild,v 1.2 2012/04/26 22:41:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/gobject-introspection-1.32.1.ebuild,v 1.4 2012/05/06 12:24:22 grobian Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -24,7 +24,7 @@ RDEPEND=">=dev-libs/gobject-introspection-common-${PV}
 	virtual/libffi"
 # Wants real bison, not virtual/yacc
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/bison
 	sys-devel/flex
 	doc? ( >=dev-util/gtk-doc-1.15 )"
@@ -50,6 +50,9 @@ src_prepare() {
 	gnome2_src_prepare
 
 	python_clean_py-compile_files
+
+	# avoid GNU-isms
+	sed -i -e 's/\(if test .* \)==/\1=/' configure || die
 
 	gi_skip_tests=
 	if ! has_version "x11-libs/cairo[glib]"; then

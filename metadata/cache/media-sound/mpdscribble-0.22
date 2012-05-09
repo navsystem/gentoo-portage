@@ -1,4 +1,4 @@
->=dev-libs/glib-2.16:2 >=media-libs/libmpdclient-2.2 curl? ( net-misc/curl ) !curl? ( net-libs/libsoup:2.4 ) dev-util/pkgconfig
+>=dev-libs/glib-2.16:2 >=media-libs/libmpdclient-2.2 curl? ( net-misc/curl ) !curl? ( net-libs/libsoup:2.4 ) virtual/pkgconfig
 >=dev-libs/glib-2.16:2 >=media-libs/libmpdclient-2.2 curl? ( net-misc/curl ) !curl? ( net-libs/libsoup:2.4 )
 0
 mirror://sourceforge/musicpd/mpdscribble-0.22.tar.bz2

@@ -1,4 +1,4 @@
-sys-libs/zlib >=media-libs/ilmbase-1.0.2 dev-util/pkgconfig
+sys-libs/zlib >=media-libs/ilmbase-1.0.2 virtual/pkgconfig
 sys-libs/zlib >=media-libs/ilmbase-1.0.2
 0
 http://download.savannah.gnu.org/releases/openexr/openexr-1.7.0.tar.gz

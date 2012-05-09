@@ -1,4 +1,4 @@
-dev-libs/dbus-glib >=media-sound/gmpc-11.8.16 dev-lang/vala:0.10 dev-util/pkgconfig
+dev-libs/dbus-glib >=media-sound/gmpc-11.8.16 dev-lang/vala:0.10 virtual/pkgconfig
 dev-libs/dbus-glib >=media-sound/gmpc-11.8.16
 0
 http://download.sarine.nl/Programs/gmpc/11.8/gmpc-mmkeys-11.8.16.tar.gz

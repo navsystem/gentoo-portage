@@ -1,4 +1,4 @@
-dev-libs/glib:2 x11-libs/gtk+:2 sys-devel/gettext dev-util/intltool dev-util/pkgconfig
+dev-libs/glib:2 x11-libs/gtk+:2 sys-devel/gettext dev-util/intltool virtual/pkgconfig
 dev-libs/glib:2 x11-libs/gtk+:2 lxde-base/lxde-common lxde-base/lxsession
 0
 mirror://sourceforge/lxde/lxsession-edit-0.2.0.tar.gz

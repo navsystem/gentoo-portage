@@ -1,4 +1,4 @@
-app-text/poppler[cxx] unac? ( app-text/unac ) dev-util/pkgconfig
+app-text/poppler[cxx] unac? ( app-text/unac ) virtual/pkgconfig
 app-text/poppler[cxx] unac? ( app-text/unac )
 0
 mirror://sourceforge/pdfgrep/pdfgrep-1.3.0.tar.gz

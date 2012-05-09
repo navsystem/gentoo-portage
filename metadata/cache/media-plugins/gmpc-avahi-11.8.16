@@ -1,4 +1,4 @@
->=media-sound/gmpc-11.8.16 dev-libs/libxml2 net-dns/avahi[dbus] dev-util/pkgconfig nls? ( dev-util/intltool sys-devel/gettext )
+>=media-sound/gmpc-11.8.16 dev-libs/libxml2 net-dns/avahi[dbus] virtual/pkgconfig nls? ( dev-util/intltool sys-devel/gettext )
 >=media-sound/gmpc-11.8.16 dev-libs/libxml2 net-dns/avahi[dbus]
 0
 http://download.sarine.nl/Programs/gmpc/11.8/gmpc-avahi-11.8.16.tar.gz

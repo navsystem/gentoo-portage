@@ -1,4 +1,4 @@
-dev-libs/libxml2 >=media-libs/libshout-2 >=media-libs/libvorbis-1 dev-util/pkgconfig
+dev-libs/libxml2 >=media-libs/libshout-2 >=media-libs/libvorbis-1 virtual/pkgconfig
 dev-libs/libxml2 >=media-libs/libshout-2 >=media-libs/libvorbis-1
 0
 http://downloads.xiph.org/releases/ices/ices-2.0.1.tar.bz2

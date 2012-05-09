@@ -6,7 +6,7 @@ mirror://pypi/s/synaptiks/synaptiks-0.8.0.tar.bz2
 http://synaptiks.readthedocs.org
 BSD-2
 Touchpad configuration and management tool for KDE
-amd64 ~x86
+amd64 x86
 base cmake-utils distutils eutils fdo-mime flag-o-matic gnome2-utils kde4-base kde4-functions multilib python toolchain-funcs user versionator virtualx
 debug +upower +handbook aqua
 

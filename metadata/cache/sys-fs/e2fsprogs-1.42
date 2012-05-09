@@ -1,4 +1,4 @@
-~sys-libs/e2fsprogs-libs-1.42 >=sys-apps/util-linux-2.16 nls? ( virtual/libintl ) nls? ( sys-devel/gettext ) dev-util/pkgconfig sys-apps/texinfo
+~sys-libs/e2fsprogs-libs-1.42 >=sys-apps/util-linux-2.16 nls? ( virtual/libintl ) nls? ( sys-devel/gettext ) virtual/pkgconfig sys-apps/texinfo
 ~sys-libs/e2fsprogs-libs-1.42 >=sys-apps/util-linux-2.16 nls? ( virtual/libintl )
 0
 mirror://sourceforge/e2fsprogs/e2fsprogs-1.42.tar.gz

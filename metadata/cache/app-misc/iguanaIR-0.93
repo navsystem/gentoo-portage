@@ -1,5 +1,5 @@
-
-
+dev-libs/popt virtual/libusb:0 || ( dev-lang/python:2.7 dev-lang/python:2.6 )
+dev-libs/popt virtual/libusb:0
 0
 http://iguanaworks.net/downloads/iguanaIR-0.93.tar.bz2
 
@@ -7,14 +7,14 @@ http://iguanaworks.net/index.php
 GPL-2
 library for Irman control of Unix software
 amd64 ppc ~ppc64 x86
-eutils flag-o-matic multilib toolchain-funcs user
+eutils flag-o-matic multilib python toolchain-funcs user
 
 
 
 
+4
 
-
-install setup unpack
+install prepare setup
 
 
 

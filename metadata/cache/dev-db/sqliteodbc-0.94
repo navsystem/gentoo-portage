@@ -1,0 +1,22 @@
+>=dev-db/sqlite-3.6 || ( >=dev-db/unixODBC-2.2 >=dev-db/libiodbc-3.5 )
+>=dev-db/sqlite-3.6 || ( >=dev-db/unixODBC-2.2 >=dev-db/libiodbc-3.5 )
+0
+http://www.ch-werner.de/sqliteodbc/sqliteodbc-0.94.tar.gz
+
+http://www.ch-werner.de/sqliteodbc/
+BSD
+ODBC driver to access local SQLite database files.
+~amd64 ~arm ~ppc ~x86
+eutils multilib toolchain-funcs user
+
+
+
+
+4
+
+configure install prepare setup
+
+
+
+
+

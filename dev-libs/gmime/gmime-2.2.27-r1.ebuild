@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.2.27-r1.ebuild,v 1.5 2012/04/29 14:53:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.2.27-r1.ebuild,v 1.7 2012/05/08 15:48:24 ranger Exp $
 
 EAPI="4"
 GNOME_TARBALL_SUFFIX="bz2"
@@ -15,7 +15,7 @@ SRC_URI="${SRC_URI} http://dev.gentoo.org/~pacho/gnome/gmime-sharp.snk"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ~ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="doc mono"
 
 RDEPEND=">=dev-libs/glib-2:2
@@ -24,7 +24,7 @@ RDEPEND=">=dev-libs/glib-2:2
 		dev-lang/mono
 		>=dev-dotnet/gtk-sharp-2.4.0:2 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/gtk-doc-am
 	doc? (
 		>=dev-util/gtk-doc-1.0

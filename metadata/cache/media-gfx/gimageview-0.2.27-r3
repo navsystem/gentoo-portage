@@ -1,4 +1,4 @@
-app-arch/bzip2 x11-libs/gtk+:2 >=media-libs/libpng-1.2:0 x11-libs/libXinerama wmf? ( >=media-libs/libwmf-0.2.8 ) mng? ( media-libs/libmng ) svg? ( gnome-base/librsvg ) mplayer? ( media-video/mplayer ) nls? ( sys-devel/gettext ) dev-util/pkgconfig
+app-arch/bzip2 x11-libs/gtk+:2 >=media-libs/libpng-1.2:0 x11-libs/libXinerama wmf? ( >=media-libs/libwmf-0.2.8 ) mng? ( media-libs/libmng ) svg? ( gnome-base/librsvg ) mplayer? ( media-video/mplayer ) nls? ( sys-devel/gettext ) virtual/pkgconfig
 app-arch/bzip2 x11-libs/gtk+:2 >=media-libs/libpng-1.2:0 x11-libs/libXinerama wmf? ( >=media-libs/libwmf-0.2.8 ) mng? ( media-libs/libmng ) svg? ( gnome-base/librsvg ) mplayer? ( media-video/mplayer )
 0
 mirror://sourceforge/gtkmmviewer/gimageview-0.2.27.tar.gz

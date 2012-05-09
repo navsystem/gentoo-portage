@@ -1,4 +1,4 @@
-dev-dotnet/dbus-sharp dev-dotnet/dbus-sharp-glib dev-dotnet/glib-sharp dev-lang/mono gnome-extra/zeitgeist dev-util/pkgconfig
+dev-dotnet/dbus-sharp dev-dotnet/dbus-sharp-glib dev-dotnet/glib-sharp dev-lang/mono gnome-extra/zeitgeist virtual/pkgconfig
 dev-dotnet/dbus-sharp dev-dotnet/dbus-sharp-glib dev-dotnet/glib-sharp dev-lang/mono gnome-extra/zeitgeist
 0
 http://launchpad.net/zeitgeist-sharp/0.8/0.8.0/+download/zeitgeist-sharp-0.8.0.0.tar.gz doc? ( http://launchpad.net/zeitgeist-sharp/0.8/0.8.0/+download/zeitgeist-sharp-docs-0.8.0.tar.gz )

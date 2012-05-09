@@ -1,4 +1,4 @@
->=dev-lang/lua-5.1.4 >=media-gfx/flam3-3.0.1 >=x11-libs/qt-gui-4.6:4 dev-util/pkgconfig
+>=dev-lang/lua-5.1.4 >=media-gfx/flam3-3.0.1 >=x11-libs/qt-gui-4.6:4 virtual/pkgconfig
 >=dev-lang/lua-5.1.4 >=media-gfx/flam3-3.0.1 >=x11-libs/qt-gui-4.6:4
 0
 http://qosmic.googlecode.com/files/qosmic-1.5.0.tar.bz2

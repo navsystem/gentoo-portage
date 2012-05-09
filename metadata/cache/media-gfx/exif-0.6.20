@@ -1,4 +1,4 @@
->=dev-libs/popt-1.14 >=media-libs/libexif-0.6.20 dev-util/pkgconfig
+>=dev-libs/popt-1.14 >=media-libs/libexif-0.6.20 virtual/pkgconfig
 >=dev-libs/popt-1.14 >=media-libs/libexif-0.6.20
 0
 mirror://sourceforge/libexif/exif-0.6.20.tar.gz

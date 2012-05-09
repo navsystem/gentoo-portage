@@ -1,0 +1,22 @@
+app-arch/bzip2 dev-db/sqlite:3 dev-libs/glib:2 dev-libs/libxml2:2 net-libs/gnutls sys-libs/gdbm sys-libs/ncurses:5 virtual/pkgconfig
+app-arch/bzip2 dev-db/sqlite:3 dev-libs/glib:2 dev-libs/libxml2:2 net-libs/gnutls sys-libs/gdbm sys-libs/ncurses:5
+0
+http://dev.yorhel.nl/download/ncdc-1.10.tar.gz
+
+http://dev.yorhel.nl/ncdc
+MIT
+ncurses directconnect client
+~amd64 ~ppc ~sparc ~x86
+
+
+
+
+
+4
+
+configure
+
+
+
+
+

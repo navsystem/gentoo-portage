@@ -1,4 +1,4 @@
->=mail-client/claws-mail-3.8.0 net-misc/curl dev-util/pkgconfig
+>=mail-client/claws-mail-3.8.0 net-misc/curl virtual/pkgconfig
 >=mail-client/claws-mail-3.8.0 net-misc/curl
 0
 http://www.claws-mail.org/downloads/plugins/gtkhtml2_viewer-0.32.tar.gz

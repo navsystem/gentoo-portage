@@ -1,4 +1,4 @@
-bzip2? ( app-arch/bzip2 ) zlib? ( sys-libs/zlib ) readline? ( sys-libs/readline ) dev-util/pkgconfig userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+bzip2? ( app-arch/bzip2 ) zlib? ( sys-libs/zlib ) readline? ( sys-libs/readline ) virtual/pkgconfig userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 bzip2? ( app-arch/bzip2 ) zlib? ( sys-libs/zlib ) readline? ( sys-libs/readline )
 3
 mirror://sourceforge/pcre/pcre-8.30.tar.bz2 ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.30.tar.bz2

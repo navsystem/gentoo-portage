@@ -1,4 +1,4 @@
-x11-libs/gtk+:2 gnome-base/libglade dev-util/pkgconfig sys-devel/flex virtual/yacc
+x11-libs/gtk+:2 gnome-base/libglade virtual/pkgconfig sys-devel/flex virtual/yacc
 x11-libs/gtk+:2 gnome-base/libglade
 0
 http://gtkdialog.googlecode.com/files/gtkdialog-0.8.0.tar.gz

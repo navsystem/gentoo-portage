@@ -1,4 +1,4 @@
-virtual/libiconv nls? ( virtual/libintl ) xmp? ( dev-libs/expat ) zlib? ( sys-libs/zlib ) contrib? ( >=dev-libs/boost-1.37 ) doc? ( dev-lang/python app-doc/doxygen dev-libs/libxslt dev-util/pkgconfig media-gfx/graphviz ) nls? ( sys-devel/gettext )
+virtual/libiconv nls? ( virtual/libintl ) xmp? ( dev-libs/expat ) zlib? ( sys-libs/zlib ) contrib? ( >=dev-libs/boost-1.37 ) doc? ( dev-lang/python app-doc/doxygen dev-libs/libxslt virtual/pkgconfig media-gfx/graphviz ) nls? ( sys-devel/gettext )
 virtual/libiconv nls? ( virtual/libintl ) xmp? ( dev-libs/expat ) zlib? ( sys-libs/zlib )
 0
 http://www.exiv2.org/exiv2-0.19.tar.gz

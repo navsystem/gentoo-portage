@@ -1,4 +1,4 @@
-sys-fs/fuse sys-libs/zlib dev-libs/glib:2 dev-util/pkgconfig
+sys-fs/fuse sys-libs/zlib dev-libs/glib:2 virtual/pkgconfig
 sys-fs/fuse sys-libs/zlib dev-libs/glib:2
 0
 mirror://sourceforge/fuseiso/fuseiso-20070708.tar.bz2

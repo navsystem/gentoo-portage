@@ -1,4 +1,4 @@
-x11-libs/gtk+:2 dev-libs/openssl dev-util/pkgconfig
+x11-libs/gtk+:2 dev-libs/openssl virtual/pkgconfig
 x11-libs/gtk+:2 dev-libs/openssl
 0
 http://killa.net/infosec/otpCalc/otpCalc-0.97.tar.gz
