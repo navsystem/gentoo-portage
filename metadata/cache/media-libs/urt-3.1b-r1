@@ -6,7 +6,7 @@ ftp://ftp.iastate.edu/pub/utah-raster/urt-3.1b.tar.Z
 http://www.cs.utah.edu/gdc/projects/urt/
 as-is
 the Utah Raster Toolkit is a library for dealing with raster images
-alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd
+alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd
 eutils multilib toolchain-funcs user
 gif gs tiff X
 
