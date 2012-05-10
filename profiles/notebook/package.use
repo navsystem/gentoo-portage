@@ -77,3 +77,4 @@ sys-fs/udev hwdb
 >=gnome-base/gvfs-1.10.1 cdda
 #required by net-misc/vinagre-3.2.2, required by gnome-base/gnome-extra-apps-3.2.1, required by gnome-base/gnome-3.2.1[extras], required by =gnome-3.2.1 (argument)
 =net-libs/gtk-vnc-0.4.4 gtk3
+app-misc/2gis-data msk nsk omsk
