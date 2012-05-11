@@ -4,7 +4,7 @@ app-arch/zip app-arch/unzip >=app-text/hunspell-1.3.2-r3 app-text/mythes >=app-t
 branding? ( http://dev.gentooexperimental.org/~scarabeus/libreoffice-branding-gentoo-0.4.tar.xz ) http://dev-www.libreoffice.org/src//ea91f2fb4212a21d708aced277e6e85a-vigra1.4.0.tar.gz xmlsec? ( http://dev-www.libreoffice.org/src//1f24ab1d39f4a51faf22244c94a6203f-xmlsec1-1.2.14.tar.gz ) java? ( http://dev-www.libreoffice.org/src//17410483b5b5f267aa18b7e00b65e6e0-hsqldb_1_8_0.zip ) java? ( http://dev-www.libreoffice.org/src//ada24d37d8d638b3d8a9985e80bc2978-source-9.0.0.7-bj.zip ) libreoffice_extensions_wiki-publisher? ( http://dev-www.libreoffice.org/src//a7983f859eafb2677d7ff386a023bc40-xsltml_2.1.2.zip ) odk? ( http://download.go-oo.org/extern/185d60944ea767075d27247c3162b3bc-unowinreg.dll )
 
 http://www.libreoffice.org
-LGPL-3
+|| ( LGPL-3 MPL-1.1 )
 LibreOffice, a full office productivity suite.
 
 autotools base bash-completion-r1 check-reqs eutils fdo-mime flag-o-matic git-2 gnome2-utils java-pkg-opt-2 java-utils-2 kde4-base kde4-functions libtool multilib nsplugins pax-utils prefix python toolchain-funcs user versionator virtualx

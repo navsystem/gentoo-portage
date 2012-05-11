@@ -1,5 +1,5 @@
-nss? ( dev-libs/nss curl? ( || ( net-misc/curl[ssl,nss,-gnutls] net-misc/curl[-ssl] ) ) ) !nss? ( dev-libs/openssl curl? ( || ( net-misc/curl[ssl,-nss,-gnutls] net-misc/curl[-ssl] ) ) ) net-misc/curl doc? ( app-doc/doxygen media-gfx/graphviz media-fonts/freefont-ttf ) virtual/pkgconfig
-nss? ( dev-libs/nss curl? ( || ( net-misc/curl[ssl,nss,-gnutls] net-misc/curl[-ssl] ) ) ) !nss? ( dev-libs/openssl curl? ( || ( net-misc/curl[ssl,-nss,-gnutls] net-misc/curl[-ssl] ) ) ) net-misc/curl
+nss? ( dev-libs/nss curl? ( || ( net-misc/curl[ssl,curl_ssl_nss] net-misc/curl[-ssl] ) ) ) !nss? ( dev-libs/openssl curl? ( || ( net-misc/curl[ssl,curl_ssl_openssl] net-misc/curl[-ssl] ) ) ) net-misc/curl doc? ( app-doc/doxygen media-gfx/graphviz media-fonts/freefont-ttf ) virtual/pkgconfig
+nss? ( dev-libs/nss curl? ( || ( net-misc/curl[ssl,curl_ssl_nss] net-misc/curl[-ssl] ) ) ) !nss? ( dev-libs/openssl curl? ( || ( net-misc/curl[ssl,curl_ssl_openssl] net-misc/curl[-ssl] ) ) ) net-misc/curl
 0
 mirror://sourceforge/liboauth/liboauth-0.9.6.tar.gz http://liboauth.sourceforge.net/pool/liboauth-0.9.6.tar.gz
 

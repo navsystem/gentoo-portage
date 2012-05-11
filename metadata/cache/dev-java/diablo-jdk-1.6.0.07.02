@@ -6,7 +6,7 @@ fetch
 http://www.FreeBSDFoundation.org/downloads/java.shtml
 sun-bcla-java-vm
 Java Development Kit
--* ~x86-fbsd ~x64-freebsd ~x86-freebsd
+-* ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd
 eutils fdo-mime java-vm-2 multilib pax-utils prefix toolchain-funcs user versionator
 X examples nsplugin jce
 

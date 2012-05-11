@@ -1,5 +1,5 @@
->=x11-libs/gtk+-2.8:2 virtual/pkgconfig
->=x11-libs/gtk+-2.8:2
+x11-libs/gtk+:2 virtual/pkgconfig
+x11-libs/gtk+:2
 0
 http://www.pberndt.com/raw/Programme/Linux/pqiv/_download/pqiv-0.11.tbz
 
@@ -7,14 +7,14 @@ http://www.pberndt.com/Programme/Linux/pqiv
 GPL-2
 Modern rewrite of Quick Image Viewer
 ~amd64 ~x86
-multilib toolchain-funcs
+eutils multilib toolchain-funcs user
 
 
 
 
-2
+4
 
-compile configure install
+compile configure install prepare
 
 
 
