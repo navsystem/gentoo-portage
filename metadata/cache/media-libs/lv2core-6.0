@@ -1,4 +1,4 @@
-
+dev-lang/python !dev-lang/python[-threads]
 !<media-libs/slv2-0.4.2
 0
 http://lv2plug.in/spec/lv2core-6.0.tar.bz2

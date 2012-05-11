@@ -1,4 +1,4 @@
-doc? ( app-doc/doxygen )
+doc? ( app-doc/doxygen ) dev-lang/python !dev-lang/python[-threads]
 
 0
 http://download.drobilla.net/serd-0.14.0.tar.bz2

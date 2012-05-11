@@ -1,4 +1,4 @@
-media-libs/lv2 >=media-libs/lilv-0.14.0 >=dev-libs/serd-0.4.5 >=media-libs/suil-0.6.0 >=media-libs/sratom-0.2.0 >=media-sound/jack-audio-connection-kit-0.120.0 gtk? ( >=x11-libs/gtk+-2.18.0:2 ) gtkmm? ( >=dev-cpp/gtkmm-2.20.0:2.4 ) qt4? ( x11-libs/qt-gui:4 ) virtual/pkgconfig
+media-libs/lv2 >=media-libs/lilv-0.14.0 >=dev-libs/serd-0.4.5 >=media-libs/suil-0.6.0 >=media-libs/sratom-0.2.0 >=media-sound/jack-audio-connection-kit-0.120.0 gtk? ( >=x11-libs/gtk+-2.18.0:2 ) gtkmm? ( >=dev-cpp/gtkmm-2.20.0:2.4 ) qt4? ( x11-libs/qt-gui:4 ) virtual/pkgconfig dev-lang/python !dev-lang/python[-threads]
 media-libs/lv2 >=media-libs/lilv-0.14.0 >=dev-libs/serd-0.4.5 >=media-libs/suil-0.6.0 >=media-libs/sratom-0.2.0 >=media-sound/jack-audio-connection-kit-0.120.0 gtk? ( >=x11-libs/gtk+-2.18.0:2 ) gtkmm? ( >=dev-cpp/gtkmm-2.20.0:2.4 ) qt4? ( x11-libs/qt-gui:4 )
 0
 http://download.drobilla.net/jalv-1.0.0.tar.bz2
