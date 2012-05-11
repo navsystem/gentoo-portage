@@ -3,7 +3,7 @@ sys-libs/zlib sys-apps/acl sys-fs/e2fsprogs
 0
 
 
-http://btrfs.ipv5.de/
+https://btrfs.wiki.kernel.org
 GPL-2
 Btrfs filesystem utilities
 

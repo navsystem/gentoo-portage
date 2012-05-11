@@ -1,7 +1,7 @@
 sys-libs/zlib app-arch/xz-utils
 sys-libs/zlib app-arch/xz-utils
 0
-http://fallabs.com/kyotocabinet/pkg/kyotocabinet-1.2.72.tar.gz
+http://fallabs.com/kyotocabinet/pkg/kyotocabinet-1.2.75.tar.gz
 
 http://fallabs.com/kyotocabinet/
 GPL-3
