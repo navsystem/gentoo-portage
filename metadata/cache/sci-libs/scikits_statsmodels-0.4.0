@@ -1,4 +1,4 @@
-dev-python/pandas sci-libs/scipy dev-python/setuptools doc? ( dev-python/sphinx ) test? ( dev-python/nose ) dev-lang/python test? ( dev-python/nose ) test? ( !prefix? ( x11-base/xorg-server[xvfb] ) x11-apps/xhost )
+>=dev-python/cython-0.15.1 dev-python/pandas sci-libs/scipy dev-python/setuptools doc? ( dev-python/sphinx >=dev-python/ipython-0.12 ) test? ( dev-python/nose ) dev-lang/python test? ( dev-python/nose ) test? ( !prefix? ( x11-base/xorg-server[xvfb] ) x11-apps/xhost )
 dev-python/pandas sci-libs/scikits sci-libs/scipy examples? ( dev-python/matplotlib ) dev-lang/python
 0
 mirror://pypi/s/statsmodels/statsmodels-0.4.0.tar.gz
