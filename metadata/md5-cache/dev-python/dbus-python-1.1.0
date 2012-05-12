@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test
+DEPEND=>=dev-libs/dbus-glib-0.98 >=sys-apps/dbus-1.4.20 virtual/pkgconfig doc? ( =dev-python/epydoc-3* ) test? ( dev-python/pygobject:2 dev-python/pygobject:3 ) || ( =dev-lang/python-3.2* =dev-lang/python-2.7* =dev-lang/python-2.6* )
+DESCRIPTION=Python bindings for the D-Bus messagebus
+EAPI=4
+HOMEPAGE=http://www.freedesktop.org/wiki/Software/DBusBindings http://dbus.freedesktop.org/doc/dbus-python/
+IUSE=doc examples test
+LICENSE=MIT
+RDEPEND=>=dev-libs/dbus-glib-0.98 >=sys-apps/dbus-1.4.20 || ( =dev-lang/python-3.2* =dev-lang/python-2.7* =dev-lang/python-2.6* )
+SLOT=0
+SRC_URI=http://dbus.freedesktop.org/releases/dbus-python/dbus-python-1.1.0.tar.gz
+_eclasses_=multilib	5f4ad6cf85e365e8f0c6050ddd21659e	python	36d7e2b7aa4dce62364c72eec96610cf	toolchain-funcs	f71b9936acc911ed1cc84557d3b5c2b3
+_md5_=044deb8b93fc4e30876ada9ee249c4d2

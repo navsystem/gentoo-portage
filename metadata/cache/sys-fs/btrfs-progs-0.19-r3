@@ -3,7 +3,7 @@ sys-libs/zlib debug-utils? ( dev-python/matplotlib ) acl? ( sys-apps/acl sys-fs/
 0
 mirror://gentoo/btrfs-progs-0.19.tar.bz2 mirror://gentoo/btrfs-progs-0.19-redhat.patch.bz2
 
-http://btrfs.ipv5.de/
+https://btrfs.wiki.kernel.org
 GPL-2
 Btrfs filesystem utilities
 amd64 ~arm ~mips ~ppc ~ppc64 x86

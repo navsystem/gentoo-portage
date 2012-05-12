@@ -1,0 +1,22 @@
+x11-libs/qt-gui:4
+x11-libs/qt-gui:4
+0
+https://gitorious.org/ptbatterysystemtray/ptbatterysystemtray/archive-tarball/1.0.0-rc2 -> ptbatterysystemtray-1.0.0_rc2.tar.gz
+
+https://gitorious.org/ptbatterysystemtray
+GPL-3
+A simple battery monitor in the system tray
+~amd64
+base eutils multilib qt4-r2 toolchain-funcs user
+debug
+
+
+
+4
+
+compile configure install prepare unpack
+
+
+
+
+
