@@ -2,10 +2,11 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: Exp $
 
+EAPI="2"
+
 PHP_EXT_NAME="MapServer"
 PHP_EXT_INI="yes"
 
-EAPI="2"
 inherit php-ext-source-r2 confutils subversion
 
 KEYWORDS="amd64 x86"
