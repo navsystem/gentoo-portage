@@ -7,3 +7,6 @@ sys-fs/device-mapper
 # Please, execute rc-update del haspd && rc-update add aksusbd
 # after installing app-emulation/hasp
 app-emulation/haspd
+
+# Newest version of portage don't work with ftp binhost
+>sys-apps/portage-2.2.0_alpha101
