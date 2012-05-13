@@ -6,7 +6,7 @@ strip
 http://www.openoffice.org/
 Apache-2.0
 Apache OpenOffice productivity suite.
-~amd64 x86 ~amd64-linux ~x86-linux
+amd64 x86 ~amd64-linux ~x86-linux
 eutils fdo-mime gnome2-utils multilib pax-utils prefix rpm toolchain-funcs user
 gnome java linguas_ar linguas_zh_CN linguas_zh_TW linguas_cs linguas_nl linguas_fr linguas_gl linguas_de linguas_hu linguas_it linguas_ja linguas_pt_BR linguas_ru linguas_es
 

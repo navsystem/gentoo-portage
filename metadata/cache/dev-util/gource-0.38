@@ -1,5 +1,5 @@
->=media-libs/libsdl-1.2.10[opengl,X] >=media-libs/sdl-image-1.2[jpeg,png] dev-libs/libpcre:3 >=media-libs/libpng-1.2 virtual/jpeg media-libs/mesa media-fonts/freefont-ttf >=media-libs/glew-1.5 dev-libs/tinyxml >=dev-libs/boost-1.46 virtual/pkgconfig media-libs/freetype:2 >=media-libs/glm-0.9.3 || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
->=media-libs/libsdl-1.2.10[opengl,X] >=media-libs/sdl-image-1.2[jpeg,png] dev-libs/libpcre:3 >=media-libs/libpng-1.2 virtual/jpeg media-libs/mesa media-fonts/freefont-ttf >=media-libs/glew-1.5 dev-libs/tinyxml >=dev-libs/boost-1.46
+>=media-libs/libsdl-1.2.10[video,opengl,X] >=media-libs/sdl-image-1.2[jpeg,png] dev-libs/libpcre:3 >=media-libs/libpng-1.2 virtual/jpeg media-libs/mesa media-fonts/freefont-ttf >=media-libs/glew-1.5 dev-libs/tinyxml >=dev-libs/boost-1.46 virtual/pkgconfig media-libs/freetype:2 >=media-libs/glm-0.9.3 || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+>=media-libs/libsdl-1.2.10[video,opengl,X] >=media-libs/sdl-image-1.2[jpeg,png] dev-libs/libpcre:3 >=media-libs/libpng-1.2 virtual/jpeg media-libs/mesa media-fonts/freefont-ttf >=media-libs/glew-1.5 dev-libs/tinyxml >=dev-libs/boost-1.46
 0
 http://gource.googlecode.com/files/gource-0.38.tar.gz
 
