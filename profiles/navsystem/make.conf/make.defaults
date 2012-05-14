@@ -3,7 +3,7 @@ tiff samba mp3 theora faac mp4 alsa x264 xvid v4l v4l2 threads fbcon fbcondecor 
 exif semantic-desktop laptop consolekit mysql mssql policykit subversion udev vorbis mad ogg truetype usb ppds xv xcb
 gif flac mpeg mikmod spell libnotify acpi mng png mmx -pulseaudio spice sse sse2 lcms sasl icq jabber rdp xml gd icu xmpp virt-network apache2
 networkmanager private-headers declarative bash-completion pm-utils vnc rdesktop system-sqlite lxde udisks libkms
-oscar phonon qml valgrind ebook djvu idn
+oscar phonon qml valgrind ebook djvu idn lame
 
 
 input_devices_evdev video_cards_intel video_cards_nouveau video_cards_radeon video_cards_vesa
