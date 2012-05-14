@@ -1,0 +1,22 @@
+
+>=dev-lang/gdl-0.9.2-r1
+0
+http://idlastro.gsfc.nasa.gov//ftp/astron.tar.gz -> idlastro-20120502.tar.gz
+
+http://idlastro.gsfc.nasa.gov/
+public-domain
+Astronomical user routines for IDL
+~amd64 ~x86
+
+
+
+
+
+4
+
+install
+
+
+
+
+

@@ -1,0 +1,22 @@
+>=sys-libs/libsepol-2.1.4 ruby? ( dev-lang/ruby ) ruby? ( dev-lang/swig ) python? ( dev-lang/swig ) python? ( dev-lang/python )
+>=sys-libs/libsepol-2.1.4 ruby? ( dev-lang/ruby ) python? ( dev-lang/python )
+0
+http://userspace.selinuxproject.org/releases/20120216/libselinux-2.1.9.tar.gz
+
+http://userspace.selinuxproject.org
+public-domain
+SELinux userland library
+~amd64 ~x86
+eutils multilib python toolchain-funcs user
+python ruby
+
+
+
+4
+
+compile install postinst postrm prepare setup
+
+
+
+
+

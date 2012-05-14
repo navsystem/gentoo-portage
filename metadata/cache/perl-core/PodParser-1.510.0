@@ -1,7 +1,7 @@
 dev-lang/perl[-build]
 dev-lang/perl[-build]
 0
-mirror://cpan/authors/id/M/MA/MAREKR/Pod-Parser-1.51.tar.gz
+mirror://cpan/authors/id/M/MA/MAREKR/Pod-Parser-1.51.tar.gz http://dev.gentoo.org/~tove/distfiles/perl-core/PodParser/Pod-Parser-1.54-patch.tar.bz2
 
 http://search.cpan.org/dist/Pod-Parser/
 || ( Artistic GPL-1 GPL-2 GPL-3 )

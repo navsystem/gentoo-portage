@@ -1,5 +1,5 @@
-dev-libs/openssl kerberos? ( virtual/krb5 ) ldap? ( net-nds/openldap ) pam? ( sys-libs/pam ) readline? ( sys-libs/readline ) selinux? ( sys-libs/libselinux sec-policy/selinux-ipsec-tools ) >=sys-kernel/linux-headers-2.6.30 || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
-dev-libs/openssl kerberos? ( virtual/krb5 ) ldap? ( net-nds/openldap ) pam? ( sys-libs/pam ) readline? ( sys-libs/readline ) selinux? ( sys-libs/libselinux sec-policy/selinux-ipsec-tools )
+dev-libs/openssl kerberos? ( virtual/krb5 ) ldap? ( net-nds/openldap ) pam? ( sys-libs/pam ) readline? ( sys-libs/readline ) selinux? ( sys-libs/libselinux sec-policy/selinux-ipsec ) >=sys-kernel/linux-headers-2.6.30 || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+dev-libs/openssl kerberos? ( virtual/krb5 ) ldap? ( net-nds/openldap ) pam? ( sys-libs/pam ) readline? ( sys-libs/readline ) selinux? ( sys-libs/libselinux sec-policy/selinux-ipsec )
 0
 mirror://sourceforge/ipsec-tools/ipsec-tools-0.8.0.tar.bz2
 
