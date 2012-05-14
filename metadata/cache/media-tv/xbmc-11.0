@@ -6,7 +6,7 @@ http://mirrors.xbmc.org/releases/source/xbmc-11.0.tar.gz
 http://xbmc.org/
 GPL-2
 XBMC is a free and open source media-player and entertainment hub
-~amd64 ~x86
+amd64 ~x86
 autotools eutils libtool multilib python toolchain-funcs user
 airplay alsa altivec avahi bluetooth bluray cec css debug goom joystick midi mysql profile +projectm pulseaudio pvr +rsxs rtmp +samba sse sse2 udev vaapi vdpau webserver +xrandr
 pvr? ( mysql )

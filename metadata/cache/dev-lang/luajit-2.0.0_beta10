@@ -1,0 +1,22 @@
+
+
+2
+http://luajit.org/download/LuaJIT-2.0.0-beta10.tar.gz
+
+http://luajit.org/
+MIT
+Just-In-Time Compiler for the Lua programming language
+~amd64 ~x86
+eutils multilib pax-utils toolchain-funcs user versionator
+
+
+
+
+4
+
+compile install prepare
+
+
+
+
+

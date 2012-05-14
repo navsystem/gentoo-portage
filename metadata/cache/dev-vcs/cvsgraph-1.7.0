@@ -6,7 +6,7 @@ http://www.akhphd.au.dk/~bertho/cvsgraph/release/cvsgraph-1.7.0.tar.gz
 http://www.akhphd.au.dk/~bertho/cvsgraph
 GPL-2
 CVS/RCS repository grapher
--alpha ~amd64 -ia64 ~ppc ~sparc ~x86
+-alpha amd64 -ia64 ~ppc ~sparc x86
 
 gif jpeg nls png truetype zlib
 

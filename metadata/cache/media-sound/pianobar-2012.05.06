@@ -1,0 +1,22 @@
+media-libs/libao net-libs/gnutls dev-libs/libgcrypt dev-libs/json-c aac? ( media-libs/faad2 ) mp3? ( media-libs/libmad ) virtual/pkgconfig
+media-libs/libao net-libs/gnutls dev-libs/libgcrypt dev-libs/json-c aac? ( media-libs/faad2 ) mp3? ( media-libs/libmad )
+0
+http://6xq.net/static/projects/pianobar/pianobar-2012.05.06.tar.bz2
+
+http://6xq.net/projects/pianobar/
+as-is
+A console-based replacement for Pandora's flash player
+~amd64 ~x86
+eutils flag-o-matic multilib toolchain-funcs user
+aac +mp3 static-libs
+|| ( mp3 aac )
+
+
+4
+
+compile install prepare test
+
+
+
+
+
