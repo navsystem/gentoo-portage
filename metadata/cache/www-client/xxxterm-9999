@@ -1,5 +1,5 @@
-x11-libs/gtk+:2 net-libs/webkit-gtk:2 net-libs/libsoup net-libs/gnutls dev-libs/libbsd dev-vcs/git
-x11-libs/gtk+:2 net-libs/webkit-gtk:2 net-libs/libsoup net-libs/gnutls dev-libs/libbsd
+dev-libs/glib:2 dev-libs/libbsd dev-libs/libgcrypt net-libs/libsoup net-libs/gnutls net-libs/webkit-gtk:2 x11-libs/gdk-pixbuf x11-libs/gtk+:2 x11-libs/pango dev-libs/atk dev-libs/libxml2 media-libs/fontconfig media-libs/freetype media-libs/libpng:0 x11-libs/cairo x11-libs/libdrm x11-libs/pixman dev-vcs/git
+dev-libs/glib:2 dev-libs/libbsd dev-libs/libgcrypt net-libs/libsoup net-libs/gnutls net-libs/webkit-gtk:2 x11-libs/gdk-pixbuf x11-libs/gtk+:2 x11-libs/pango
 0
 
 
@@ -8,7 +8,7 @@ ISC
 A minimalist web browser with sophisticated security features designed-in
 
 eutils fdo-mime git-2 multilib toolchain-funcs user
-
+examples
 
 
 

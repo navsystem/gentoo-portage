@@ -1,0 +1,22 @@
+
+app-shells/bash
+0
+http://f00l.de/genmenu/genmenu-1.1.0.tar.bz2
+
+http://f00l.de/genmenu/
+GPL-2
+menu generator for *box, WindowMaker, and Enlightenment
+~amd64 ~ppc ~sparc ~x86 ~x86-fbsd
+eutils multilib toolchain-funcs user
+
+
+
+
+4
+
+install prepare
+
+
+
+
+
