@@ -1,5 +1,5 @@
-media-libs/imlib2[X] x11-libs/libX11 || ( sys-process/procps virtual/init ) gtk? ( gnome-base/libglade media-libs/freetype:2 x11-libs/gdk-pixbuf:2 x11-libs/gtk+:2 ) dev-util/intltool sys-devel/gettext virtual/pkgconfig
-media-libs/imlib2[X] x11-libs/libX11 || ( sys-process/procps virtual/init ) gtk? ( gnome-base/libglade media-libs/freetype:2 x11-libs/gdk-pixbuf:2 x11-libs/gtk+:2 )
+media-libs/imlib2[X] virtual/init x11-libs/libX11 gtk? ( gnome-base/libglade media-libs/freetype:2 x11-libs/gdk-pixbuf:2 x11-libs/gtk+:2 ) dev-util/intltool sys-devel/gettext virtual/pkgconfig
+media-libs/imlib2[X] virtual/init x11-libs/libX11 gtk? ( gnome-base/libglade media-libs/freetype:2 x11-libs/gdk-pixbuf:2 x11-libs/gtk+:2 )
 0
 http://wbar.googlecode.com/files/wbar_2.3.0.orig.tar.gz
 

@@ -1,0 +1,22 @@
+dev-libs/glib:2 >=dev-libs/json-glib-0.13.1 gnome-base/gvfs[http] net-libs/libsoup:2.4 introspection? ( >=dev-libs/gobject-introspection-0.6.3 ) >=dev-util/intltool-0.35 sys-devel/gettext virtual/pkgconfig test? ( sys-apps/dbus ) >=sys-apps/sed-4
+dev-libs/glib:2 >=dev-libs/json-glib-0.13.1 gnome-base/gvfs[http] net-libs/libsoup:2.4 introspection? ( >=dev-libs/gobject-introspection-0.6.3 )
+0
+mirror://gnome/sources/geocode-glib/0.99/geocode-glib-0.99.0.tar.bz2
+
+http://git.gnome.org/browse/geocode-glib
+LGPL-2
+GLib geocoding library that uses the Yahoo! Place Finder service
+~amd64 ~x86
+eutils fdo-mime gnome.org gnome2 gnome2-utils libtool multilib toolchain-funcs user versionator
++introspection test
+
+
+
+4
+
+compile configure install postinst postrm preinst prepare test unpack
+
+
+
+
+

@@ -1,0 +1,22 @@
+>=media-video/libav-0.8 dev-vcs/git
+>=media-video/libav-0.8
+0
+
+
+http://git.videolan.org/?p=libpostproc.git;a=summary
+GPL-2
+Video post processing library
+
+eutils flag-o-matic git-2 multilib toolchain-funcs user
+pic static-libs 3dnow 3dnowext altivec mmx vis
+
+
+
+4
+
+compile configure install unpack
+
+
+
+
+
