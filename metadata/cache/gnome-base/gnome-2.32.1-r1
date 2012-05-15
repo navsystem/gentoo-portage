@@ -10,7 +10,7 @@ alpha amd64 ia64 ppc ppc64 sparc x86
 
 accessibility cdr cups dvdr ldap mono policykit
 
->=gnome-base/gvfs-1.6.6[gdu]
+|| ( >=gnome-base/gvfs-1.6.6[gdu] >=gnome-base/gvfs-1.6.6[udisks] )
 
 4
 

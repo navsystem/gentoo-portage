@@ -1,0 +1,22 @@
+sys-libs/zlib app-arch/xz-utils app-arch/bzip2 <app-arch/rpm-5 python? ( =dev-lang/python-2.7* )
+python? ( =dev-lang/python-2.7* )
+0
+http://pkgs.fedoraproject.org/repo/pkgs/deltarpm/deltarpm-git-20110223.tar.bz2/70f8884be63614ca7c3fc888cf20ebc8/deltarpm-git-20110223.tar.bz2
+
+http://gitorious.org/deltarpm/deltarpm
+BSD
+tools to create and apply deltarpms
+~amd64 ~x86
+eutils multilib python toolchain-funcs user
+python
+
+
+
+4
+
+compile prepare setup
+
+
+
+
+

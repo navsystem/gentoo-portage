@@ -1,5 +1,5 @@
->=media-video/libav-0.8 dev-vcs/git
->=media-video/libav-0.8
+>=media-video/libav-0.8.2-r2 dev-vcs/git
+>=media-video/libav-0.8.2-r2
 0
 
 
@@ -14,7 +14,7 @@ pic static-libs 3dnow 3dnowext altivec mmx vis
 
 4
 
-compile configure install unpack
+configure unpack
 
 
 
