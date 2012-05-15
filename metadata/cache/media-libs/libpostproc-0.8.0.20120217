@@ -1,0 +1,22 @@
+>=media-video/libav-0.8
+>=media-video/libav-0.8
+0
+http://dev.gentoo.org/~lu_zero/distfiles/libpostproc-0.8.0.20120217.tar.xz
+
+http://git.videolan.org/?p=libpostproc.git;a=summary
+GPL-2
+Video post processing library
+~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux
+eutils flag-o-matic multilib toolchain-funcs user
+pic static-libs 3dnow 3dnowext altivec mmx vis
+
+
+
+4
+
+compile configure install
+
+
+
+
+
