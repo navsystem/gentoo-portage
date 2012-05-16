@@ -1,0 +1,22 @@
+sys-apps/ed dev-vcs/mercurial
+bash-completion? ( app-shells/bash-completion ) emacs? ( virtual/emacs ) vim-syntax? ( app-editors/vim ) zsh-completion? ( app-shells/zsh-completion )
+0
+
+
+http://www.golang.org
+BSD
+A concurrent garbage collected and typesafe programming language
+
+bash-completion-r1 elisp-common eutils mercurial multilib toolchain-funcs user
+bash-completion emacs vim-syntax zsh-completion
+
+
+
+4
+
+compile install postinst postrm prepare test unpack
+
+
+
+
+

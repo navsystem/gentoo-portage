@@ -3,7 +3,7 @@
 0
 mirror://debian/pool/main/s/screen-message/screen-message_0.19.orig.tar.gz
 
-http://www.joachim-breitner.de/blog/archives/249-screen-message-uploaded-to-Debian.html
+http://www.joachim-breitner.de/projects#screen-message
 || ( GPL-2 GPL-3 )
 Display a multi-line message large, fullscreen, black on white
 ~amd64 ~x86
