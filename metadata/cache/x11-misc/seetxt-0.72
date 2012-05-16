@@ -1,0 +1,22 @@
+x11-libs/gtk+:2 virtual/pkgconfig
+x11-libs/gtk+:2
+0
+http://seetxt.googlecode.com/files/seetxt-0.72.tar.bz2
+
+http://code.google.com/p/seetxt/ http://seetxt.sourceforge.net/
+GPL-3
+Clever, lightweight GUI text file and manual page viewer for X windows.
+~amd64
+
+
+
+
+
+4
+
+-
+
+
+
+
+
