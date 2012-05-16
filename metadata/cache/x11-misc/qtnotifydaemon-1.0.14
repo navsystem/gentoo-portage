@@ -3,7 +3,7 @@ x11-libs/libX11 x11-libs/qt-dbus:4 x11-libs/qt-gui:4 x11-libs/qt-qt3support:4 !x
 0
 mirror://sourceforge/qtnotifydaemon/qtnotifydaemon_1.0.14.orig.tar.gz
 
-http://drull.org.ru/qtnotifydaemon/ http://sourceforge.net/projects/qtnotifydaemon/
+http://sourceforge.net/projects/qtnotifydaemon/
 GPL-3
 A flexible and configurable notification daemon
 ~amd64 ~x86

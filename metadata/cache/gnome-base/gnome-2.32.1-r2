@@ -10,7 +10,7 @@ Meta package for the GNOME desktop
 
 accessibility cdr cups dvdr ldap mono policykit
 
->=gnome-base/gvfs-1.6.6[gdu]
+|| ( >=gnome-base/gvfs-1.6.6[gdu] >=gnome-base/gvfs-1.6.6[udisks] )
 
 4
 

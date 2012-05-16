@@ -10,7 +10,7 @@ Meta package for the GNOME desktop, merge this package to install
 
 +automount
 
->=gnome-base/gvfs-1.6.6 automount? ( >=gnome-base/gvfs-1.6.6[gdu] )
+>=gnome-base/gvfs-1.6.6 automount? ( || ( >=gnome-base/gvfs-1.6.6[gdu] >=gnome-base/gvfs-1.6.6[udisks] ) )
 
 4
 
