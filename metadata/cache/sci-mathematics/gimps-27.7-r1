@@ -1,0 +1,22 @@
+
+net-misc/curl
+0
+amd64? ( ftp://mersenne.org/gimps/p95v277.linux64.tar.gz ) x86? ( ftp://mersenne.org/gimps/p95v277.linux32.tar.gz )
+binchecks
+http://mersenne.org/
+as-is
+The Great Internet Mersenne Prime Search
+-* ~amd64 ~x86
+
+
+
+
+
+4
+
+install postinst postrm
+
+
+
+
+

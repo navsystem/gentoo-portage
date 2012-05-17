@@ -2487,7 +2487,6 @@ media-libs/evas:ppm - Support PPM image loader
 media-libs/evas:psd - Support PSD image loader
 media-libs/evas:tga - Support tga image loader
 media-libs/faad2:digitalradio - Digital Radio Mondiale (warning: disables other decoders)
-media-libs/ffmpegsource:postproc - Enables image post-processing via libpostproc (part of FFmpeg).
 media-libs/flickcurl:oauth - Enable experimental OAuth support
 media-libs/flickcurl:raptor - Use media-libs/raptor for proper RDF serializing
 media-libs/freeglut:mpx - Enable support for multi-pointer-X. One pointer for each pointer device.
@@ -3981,8 +3980,8 @@ net-libs/opal:vpb - Enable Voicetronics VPB card support
 net-libs/opal:vxml - Enable VXML support
 net-libs/opal:wav - Enable WAVFILE support
 net-libs/opal:x264-static - Install x264 plugin statically linked with x264
-net-libs/openh323:noaudio - Disable audio codecs
-net-libs/openh323:novideo - Disable video codecs
+net-libs/openh323:audio - Enable audio codecs
+net-libs/openh323:video - Enable video codecs
 net-libs/ortp:srtp - Add support for Secure RTP
 net-libs/pjsip:cli - Installs pjsua, a simple command-line SIP client
 net-libs/pjsip:epoll - epoll system call support
@@ -4064,9 +4063,10 @@ net-mail/mairix:gnus - Add support for the marks propagation feature in app-emac
 net-mail/mu:gui - Build and install the experimental gui 'mug'.
 net-mail/notmuch:crypt - Support decryption and verification of PGP/MIME messages and in Emacs UI - encryption
 net-mail/notmuch:doc - Install API documentation for enabled bindings
-net-mail/notmuch:emacs - Install Notmuch client for Emacs (main client)
-net-mail/notmuch:nmbug - Install Experimental Tag Sharing / Pseudo-Bug-Tracking for Notmuch (http://notmuchmail.org/nmbug/)
-net-mail/notmuch:vim - Install Notmuch client for Vim (experimental)
+net-mail/notmuch:emacs - Install Emacs UI (the main one)
+net-mail/notmuch:mutt - Install helper script for Mutt
+net-mail/notmuch:nmbug - Install experimental tag sharing / pseudo-bug-tracking script for Notmuch (see http://notmuchmail.org/nmbug/)
+net-mail/notmuch:vim - Install Vim UI (experimental)
 net-mail/qmailadmin:maildrop - Filter spam using maildrop
 net-mail/qpopper:apop - Enables the pop.auth file in /etc/pop.auth
 net-mail/qpopper:drac - Enables DRAC support

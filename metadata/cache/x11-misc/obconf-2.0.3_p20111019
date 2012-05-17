@@ -3,7 +3,7 @@ gnome-base/libglade:2.0 x11-libs/gtk+:2 x11-libs/startup-notification >=x11-wm/o
 0
 http://dev.gentoo.org/~hwoarang/distfiles/obconf-2.0.3_p20111019.tar.gz
 
-http://icculus.org/openbox/index.php/ObConf:About
+http://openbox.org/wiki/ObConf:About
 GPL-2
 ObConf is a tool for configuring the Openbox window manager.
 ~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd

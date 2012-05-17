@@ -1,9 +1,9 @@
 
 !<sys-libs/glibc-2.3.5
 0
-ftp://munnari.oz.au/pub/tzdata2012c.tar.gz ftp://munnari.oz.au/pub/tzcode2012b.tar.gz
+http://www.iana.org/time-zones/repository/releases/tzdata2012c.tar.gz http://www.iana.org/time-zones/repository/releases/tzcode2012b.tar.gz ftp://munnari.oz.au/pub/tzdata2012c.tar.gz ftp://munnari.oz.au/pub/tzcode2012b.tar.gz
 
-http://www.twinsun.com/tz/tz-link.htm https://mm.icann.org/mailman/listinfo/tz
+http://www.iana.org/time-zones http://www.twinsun.com/tz/tz-link.htm
 BSD public-domain
 Timezone data (/usr/share/zoneinfo) and utilities (tzselect/zic/zdump)
 alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd

@@ -1,0 +1,22 @@
+dev-libs/glib:2 app-arch/xz-utils test? ( dev-libs/check ) doc? ( app-doc/doxygen[dot] ) || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+dev-libs/glib:2
+0
+http://fedorahosted.org/releases/q/u/quarterback/libqb-0.13.0.tar.xz
+
+https://github.com/asalkeld/libqb
+LGPL-2.1
+Library providing high performance logging, tracing, ipc, and poll
+~amd64 ~x86
+autotools autotools-utils eutils libtool multilib toolchain-funcs user
+debug doc examples static-libs test
+
+
+
+4
+
+compile configure install prepare test
+
+
+
+
+

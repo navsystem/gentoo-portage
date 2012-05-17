@@ -9,7 +9,7 @@ Asterisk: A Modular Open Source PBX System
 ~amd64 ~x86
 autotools base eutils libtool linux-info multilib toolchain-funcs user versionator
 ais alsa bluetooth calendar +caps curl dahdi debug doc freetds gtalk http iconv jabber jingle ldap lua mysql newt +samples odbc osplookup oss portaudio postgres radius snmp span speex srtp static syslog usb vorbis
-gtalk ( jabber )
+gtalk? ( jabber )
 net-misc/asterisk-core-sounds net-misc/asterisk-extra-sounds net-misc/asterisk-moh-opsound
 
 4
