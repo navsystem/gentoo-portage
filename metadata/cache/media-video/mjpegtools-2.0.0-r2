@@ -6,7 +6,7 @@ mirror://sourceforge/mjpeg/mjpegtools-2.0.0.tar.gz
 http://mjpeg.sourceforge.net/
 GPL-2
 Tools for MJPEG video
-~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86
+~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd
 autotools eutils flag-o-matic libtool multilib toolchain-funcs user
 dga dv gtk mmx png quicktime sdl sdlgfx static-libs v4l
 sdlgfx? ( sdl )

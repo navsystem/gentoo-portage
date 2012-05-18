@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.8.2-r2.ebuild,v 1.1 2012/05/15 06:10:50 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.8.2-r2.ebuild,v 1.3 2012/05/18 00:24:37 ssuominen Exp $
 
 EAPI=4
 
@@ -91,6 +91,8 @@ DEPEND="${RDEPEND}
 	test? ( net-misc/wget )
 	v4l? ( sys-kernel/linux-headers )
 "
+
+PDEPEND="media-libs/libpostproc"
 
 # faac can't be binary distributed
 # openssl support marked as nonfree
@@ -298,6 +300,6 @@ pkg_postinst() {
 }
 
 src_test() {
-	LD_LIBRARY_PATH="${S}/libavcore:${S}/libpostproc:${S}/libswscale:${S}/libavcodec:${S}/libavdevice:${S}/libavfilter:${S}/libavformat:${S}/libavutil" \
+	LD_LIBRARY_PATH="${S}/libavcore:${S}/libswscale:${S}/libavcodec:${S}/libavdevice:${S}/libavfilter:${S}/libavformat:${S}/libavutil" \
 		emake fate SAMPLES="${WORKDIR}/fate"
 }

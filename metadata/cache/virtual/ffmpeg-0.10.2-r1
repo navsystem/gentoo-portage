@@ -1,5 +1,5 @@
 
-|| ( >=media-video/ffmpeg-0.10.2[X=,encode=,jpeg2k=,mp3=,sdl=,theora=,threads=,truetype=,vaapi=,vdpau=,x264=] >=media-video/libav-0.8.1[X=,encode=,jpeg2k=,mp3=,sdl=,theora=,threads=,truetype=,vaapi=,vdpau=,x264=] )
+|| ( >=media-video/ffmpeg-0.10.2[X=,encode=,jpeg2k=,mp3=,sdl=,theora=,threads=,truetype=,vaapi=,vdpau=,x264=] >=media-video/libav-0.8.2[X=,encode=,jpeg2k=,mp3=,sdl=,theora=,threads=,truetype=,vaapi=,vdpau=,x264=] )
 0
 
 

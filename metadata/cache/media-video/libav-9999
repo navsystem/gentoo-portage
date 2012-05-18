@@ -10,7 +10,7 @@ Complete solution to record, convert and stream audio and video.
 eutils flag-o-matic git-2 multilib toolchain-funcs user
 aac alsa amr bindist +bzip2 cdio cpudetection custom-cflags debug doc +encode faac frei0r +gpl gsm +hardcoded-tables ieee1394 jack jpeg2k mp3 network openssl oss pic pulseaudio rtmp schroedinger sdl speex ssl static-libs test theora threads tools truetype v4l vaapi vdpau vorbis vpx X x264 xvid +zlib 3dnow 3dnowext altivec avx mmx mmxext neon ssse3 vis
 bindist? ( !faac !openssl ) rtmp? ( network ) amr? ( gpl ) aac? ( gpl ) x264? ( gpl ) X? ( gpl ) test? ( encode zlib )
-
+media-libs/libpostproc
 
 4
 
