@@ -1,12 +1,12 @@
-<net-misc/networkmanager-pptp-0.9.3.0  amd64
-<net-misc/networkmanager-0.9.3.0  amd64
-~kde-misc/networkmanagement-0.9.0.2 amd64
-~sys-apps/systemd-43  amd64
+<net-misc/networkmanager-pptp-9999  amd64
+<net-misc/networkmanager-9999  amd64
+<kde-misc/networkmanagement-9999 amd64
+<sys-apps/systemd-9999  amd64
+~sys-auth/polkit-0.105 amd64
 ~net-dialup/ppp-2.4.5  amd64
 ~sys-fs/udev-182  amd64
 ~sys-apps/dbus-1.4.16  amd64
 ~sys-kernel/linux-headers-3.2  amd64
-~sys-auth/consolekit-0.4.5_p20120320  amd64
 <sys-boot/plymouth-9999  amd64
 <sys-kernel/dracut-9999  amd64
 
