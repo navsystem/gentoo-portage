@@ -13,6 +13,4 @@ kde-base/ark
 kde-base/kuser
 kde-base/gwenview
 media-video/qt-recordmydesktop
-net-ftp/filezilla
 sys-fs/dosfstools
-sys-boot/unetbootin
