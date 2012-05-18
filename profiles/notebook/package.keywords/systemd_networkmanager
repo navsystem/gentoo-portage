@@ -5,7 +5,7 @@
 ~sys-auth/polkit-0.105 amd64
 ~net-dialup/ppp-2.4.5  amd64
 ~sys-fs/udev-182  amd64
-~sys-apps/dbus-1.4.16  amd64
+~sys-apps/dbus-1.5.12  amd64
 ~sys-kernel/linux-headers-3.2  amd64
 <sys-boot/plymouth-9999  amd64
 <sys-kernel/dracut-9999  amd64
@@ -19,4 +19,4 @@
 
 
 ~sys-fs/udev-init-scripts-10 amd64
-~sys-apps/kmod-7 amd64
+~sys-apps/kmod-8 amd64
