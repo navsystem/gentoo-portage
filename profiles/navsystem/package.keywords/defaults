@@ -22,6 +22,8 @@ sys-block/megacli amd64
 ~kde-misc/customizable-weather-1.5.14 amd64 x86
 ~app-emulation/wine-1.4 amd64 x86
 
+~media-libs/sdl-mixer-1.2.12 amd64 x86
+
 ~sys-apps/usbutils-005-r1 amd64 x86
 ~sys-apps/pciutils-3.1.9-r2 amd64 x86
 ~sys-apps/hwids-20120512 amd64 x86
