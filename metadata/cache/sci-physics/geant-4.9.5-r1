@@ -1,12 +1,12 @@
-virtual/fortran >=sci-physics/clhep-2.1.1 dawn? ( media-gfx/dawn ) gdml? ( dev-libs/xerces-c ) motif? ( x11-libs/openmotif:0 ) openinventor? ( media-libs/openinventor ) raytracerx? ( x11-libs/libX11 x11-libs/libXmu ) qt4? ( x11-libs/qt-gui:4 opengl? ( x11-libs/qt-opengl:4 ) ) zlib? ( sys-libs/zlib ) >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
-virtual/fortran >=sci-physics/clhep-2.1.1 dawn? ( media-gfx/dawn ) gdml? ( dev-libs/xerces-c ) motif? ( x11-libs/openmotif:0 ) openinventor? ( media-libs/openinventor ) raytracerx? ( x11-libs/libX11 x11-libs/libXmu ) qt4? ( x11-libs/qt-gui:4 opengl? ( x11-libs/qt-opengl:4 ) ) zlib? ( sys-libs/zlib )
+virtual/fortran >=sci-physics/clhep-2.1.1 dawn? ( media-gfx/dawn ) gdml? ( dev-libs/xerces-c ) motif? ( x11-libs/openmotif:0 ) opengl? ( virtual/opengl ) openinventor? ( media-libs/openinventor ) raytracerx? ( x11-libs/libX11 x11-libs/libXmu ) qt4? ( x11-libs/qt-gui:4 opengl? ( x11-libs/qt-opengl:4 ) ) zlib? ( sys-libs/zlib ) >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+virtual/fortran >=sci-physics/clhep-2.1.1 dawn? ( media-gfx/dawn ) gdml? ( dev-libs/xerces-c ) motif? ( x11-libs/openmotif:0 ) opengl? ( virtual/opengl ) openinventor? ( media-libs/openinventor ) raytracerx? ( x11-libs/libX11 x11-libs/libXmu ) qt4? ( x11-libs/qt-gui:4 opengl? ( x11-libs/qt-opengl:4 ) ) zlib? ( sys-libs/zlib )
 4
 http://geant4.cern.ch/support/source/geant4.9.5.tar.gz
 
 http://geant4.cern.ch/
 geant4
 Toolkit for simulation of passage of particles through matter
-~amd64 ~x86
+~amd64 ~x86 ~amd64-linux ~x86-linux
 base cmake-utils eutils flag-o-matic fortran-2 multilib toolchain-funcs user versionator
 +data dawn examples gdml geant3 granular motif opengl openinventor raytracerx qt4 static-libs test vrml zlib
 
