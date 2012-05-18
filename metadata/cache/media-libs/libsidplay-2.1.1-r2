@@ -8,11 +8,11 @@ GPL-2
 C64 SID player library
 alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd
 eutils libtool multilib toolchain-funcs user
+static-libs
 
 
 
-
-2
+4
 
 configure install prepare
 

@@ -6,7 +6,7 @@ test
 http://www.gnu.org/software/gnash/
 GPL-3
 GNU Flash movie player that supports many SWF v7,8,9 features
-amd64 ~ppc ~ppc64 ~sparc x86
+amd64 ppc ~ppc64 ~sparc x86
 autotools base eutils fdo-mime flag-o-matic gnome2-utils kde4-base kde4-functions libtool multilib nsplugins python toolchain-funcs user versionator virtualx
 X +agg cairo cygnal dbus directfb doc dump egl fbcon +ffmpeg gconf gnome gstreamer gtk kde lirc mysql +nls nsplugin opengl openvg python sdl +sdl-sound ssh ssl test vaapi aqua kde
 dump? ( agg ffmpeg ) fbcon? ( agg ) nsplugin? ( gtk ) openvg? ( egl ) python? ( gtk ) vaapi? ( agg ffmpeg ) || ( agg cairo opengl openvg ) || ( dump fbcon gtk kde sdl )

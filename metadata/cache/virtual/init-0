@@ -1,5 +1,5 @@
 
-kernel_linux? ( || ( >=sys-apps/sysvinit-2.86-r6 sys-process/runit ) ) kernel_FreeBSD? ( sys-freebsd/freebsd-sbin )
+!prefix? ( kernel_linux? ( || ( >=sys-apps/sysvinit-2.86-r6 sys-process/runit ) ) kernel_FreeBSD? ( sys-freebsd/freebsd-sbin ) )
 0
 
 

@@ -6,7 +6,7 @@ test
 http://jbig2dec.sourceforge.net/
 GPL-3
 A decoder implementation of the JBIG2 image compression format
-~alpha amd64 arm ~hppa ~ia64 ~mips ppc ppc64 ~sparc x86 ~amd64-fbsd ~x86-fbsd
+~alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~sparc x86 ~amd64-fbsd ~x86-fbsd
 autotools eutils libtool multilib toolchain-funcs user
 png static-libs test
 

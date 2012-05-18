@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RDEPEND=sys-fs/udev
 SLOT=0
 SRC_URI=http://linux.dell.com/biosdevname/biosdevname-0.3.11/biosdevname-0.3.11.tar.gz
-_md5_=9550e5b2af704ff98e0ef579ab271f4a
+_md5_=ac30aaea6b04a79d0784b1cc49bb25ac

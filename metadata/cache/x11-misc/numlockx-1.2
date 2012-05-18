@@ -1,10 +1,10 @@
-x11-libs/libX11 x11-libs/libXext x11-libs/libXtst x11-proto/xproto x11-proto/xextproto || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+x11-libs/libX11 x11-libs/libXext x11-libs/libXtst x11-proto/xextproto x11-proto/xproto || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 x11-libs/libX11 x11-libs/libXext x11-libs/libXtst
 0
-http://ktown.kde.org/~seli/numlockx/numlockx-1.2.tar.gz
+mirror://gentoo/numlockx-1.2.tar.gz
 
-http://ktown.kde.org/~seli/numlockx
-EDB
+http://home.kde.org/~seli/numlockx/
+MIT
 Turns on numlock in X
 alpha amd64 ppc ppc64 sparc x86
 autotools eutils libtool multilib toolchain-funcs user
@@ -12,9 +12,9 @@ autotools eutils libtool multilib toolchain-funcs user
 
 
 
+4
 
-
-install postinst unpack
+install postinst prepare
 
 
 
