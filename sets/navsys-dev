@@ -20,3 +20,8 @@ kde-base/okular
 app-arch/p7zip
 kde-base/kcalc
 dev-vcs/hgview
+dev-util/cmake
+kde-base/ksnapshot
+net-libs/gsoap
+net-print/foomatic-filters-ppds
+net-print/foomatic-db-ppds

@@ -8,7 +8,6 @@ dev-python/psycopg
 virtual/ooo
 media-libs/phonon
 app-emulation/hasp
-!app-emulation/haspd
 dev-python/xlwt
 app-misc/pip
 

@@ -1,3 +1,3 @@
 virtual/man		sys-apps/man-db
-virtual/ooo		app-office/openoffice
+virtual/ooo		app-office/libreoffice
 virtual/mozilla-browser	www-client/firefox

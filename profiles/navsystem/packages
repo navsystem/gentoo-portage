@@ -16,3 +16,4 @@
 *sys-apps/less
 *sys-process/iotop
 *sys-fs/cryptsetup
+*sys-boot/grub-static
