@@ -9,7 +9,7 @@ Open source web browser engine
 ~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-macos
 autotools eutils flag-o-matic gnome2-utils libtool multilib pax-utils python toolchain-funcs user virtualx
 aqua coverage debug +geoloc +gstreamer +introspection +jit spell +webgl test
-introspection? ( gstreamer )
+introspection? ( geoloc gstreamer )
 
 
 4

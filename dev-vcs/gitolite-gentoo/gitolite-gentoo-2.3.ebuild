@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite-gentoo/gitolite-gentoo-2.3.ebuild,v 1.1 2012/02/19 18:48:04 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite-gentoo/gitolite-gentoo-2.3.ebuild,v 1.3 2012/05/19 15:15:03 ago Exp $
 
 EAPI=4
 
@@ -12,10 +12,12 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="contrib vim-syntax"
 
 DEPEND="dev-lang/perl
+	virtual/perl-File-Path
+	virtual/perl-File-Temp
 	>=dev-vcs/git-1.6.6"
 RDEPEND="${DEPEND}
 	!dev-vcs/gitolite
@@ -36,11 +38,12 @@ src_prepare() {
 
 src_install() {
 	local gl_bin="${D}/usr/bin"
+	gl_bin=${gl_bin/\/\//\/}
 
 	dodir /usr/share/gitolite/{conf,hooks} /usr/bin || die
 
-	export PATH="${D}"/usr/bin:$PATH
-	./src/gl-system-install ${gl_bin//\/\///} \
+	export PATH="${gl_bin}:${PATH}"
+	./src/gl-system-install ${gl_bin} \
 		"${D}"/usr/share/gitolite/conf "${D}"/usr/share/gitolite/hooks || die
 	sed -i -e "s:${D}::g" "${D}/usr/bin/gl-setup" \
 		"${D}/usr/share/gitolite/conf/example.gitolite.rc" || die

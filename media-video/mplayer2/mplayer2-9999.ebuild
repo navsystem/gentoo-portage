@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.32 2012/05/18 05:08:06 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.35 2012/05/19 18:27:33 lu_zero Exp $
 
 EAPI=4
 
@@ -36,9 +36,10 @@ IUSE="3dnow 3dnowext +a52 aalib +alsa altivec aqua +ass bidi bindist bl bluray
 	bs2b cddb +cdio cpudetection custom-cpuopts debug directfb doc +dts +dv dvb
 	+dvd +dvdnav dxr3 +enca +faad fbcon ftp gif ggi +iconv ipv6 jack joystick
 	jpeg kernel_linux ladspa libcaca lirc mad md5sum +mmx mmxext mng +mp3 nas
-	+network nut +opengl oss png pnm pulseaudio pvr +quicktime radio +rar +real
-	+rtc samba +shm sdl +speex sse sse2 ssse3 tga +theora +truetype +unicode
-	v4l vdpau +vorbis win32codecs +X xanim xinerama +xscreensaver +xv xvid"
+	+network nut +opengl oss png pnm portaudio postproc pulseaudio pvr +quicktime
+	radio +rar +real +rtc samba +shm sdl +speex sse sse2 ssse3 tga +theora +truetype
+	+unicode v4l vdpau +vorbis win32codecs +X xanim xinerama +xscreensaver +xv
+	xvid"
 IUSE+=" symlink"
 
 VIDEO_CARDS="s3virge mga tdfx vesa"
@@ -122,6 +123,8 @@ RDEPEND+="
 	nut? ( >=media-libs/libnut-661 )
 	png? ( media-libs/libpng )
 	pnm? ( media-libs/netpbm )
+	portaudio? ( >=media-libs/portaudio-19_pre20111121 )
+	postproc? ( || ( media-libs/libpostproc media-video/ffmpeg ) )
 	pulseaudio? ( media-sound/pulseaudio )
 	rar? (
 		|| (
@@ -210,7 +213,7 @@ src_prepare() {
 		${bash_scripts} || die
 
 	if [[ -n ${NAMESUF} ]]; then
-		sed -e "/elif linux ; then/a\  _exesuf=\"${NAMESUF}\"" \
+		sed -e "/^EXESUF/s,= \$_exesuf$,= ${NAMESUF}\$_exesuf," \
 			-i configure || die
 		sed -e "\, -m 644 DOCS/man/en/mplayer,i\	mv DOCS/man/en/mplayer.1 DOCS/man/en/${PN}.1" \
 			-e "\, -m 644 DOCS/man/\$(lang)/mplayer,i\	mv DOCS/man/\$(lang)/mplayer.1 DOCS/man/\$(lang)/${PN}.1" \
@@ -395,6 +398,7 @@ src_configure() {
 	use fbcon || myconf+=" --disable-fbdev"
 	use fbcon && use video_cards_s3virge && myconf+=" --enable-s3fb"
 	use libcaca || myconf+=" --disable-caca"
+	use postproc || myconf+=" --disable-libpostproc"
 
 	if ! use kernel_linux || ! use video_cards_mga; then
 		 myconf+=" --disable-mga --disable-xmga"
@@ -420,8 +424,7 @@ src_configure() {
 	# Audio Output #
 	################
 	myconf+=" --disable-rsound" # media-sound/rsound is in pro-audio overlay only
-	myconf+=" --disable-esd"
-	uses="alsa jack ladspa nas"
+	uses="alsa jack ladspa nas portaudio"
 	for i in ${uses}; do
 		use ${i} || myconf+=" --disable-${i}"
 	done

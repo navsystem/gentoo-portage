@@ -886,7 +886,7 @@ app-text/pdftk:nodrm - Decrypt a document with the user_pw even if it has an own
 app-text/podofo:boost - Add support for boost
 app-text/poppler:exceptions - Enable exceptions throwing.
 app-text/poppler:introspection - Enable GObject introspection.
-app-text/poppler:lcms1 - Prefer liblcms1 implementation over liblcms2.
+app-text/poppler:lcms1 - Prefer liblcms1 (deprecated) implementation over liblcms2.
 app-text/poppler:utils - Install command-line PDF converters and various utilities.
 app-text/poppler:xpdf-headers - 
 app-text/sgmltools-lite:jadetex - Add support for app-text/jadetex (for processing tex files produced by the TeX backend of Jade)
@@ -3199,6 +3199,7 @@ media-video/mplayer2:mp3 - Enable support for mp3 decoding over media-sound/mpg1
 media-video/mplayer2:network - Enables network streaming support
 media-video/mplayer2:nut - Enables support for the NUT container format
 media-video/mplayer2:pnm - Add PNM video output option, to create PPM/PGM/PGMYUV images
+media-video/mplayer2:postproc - Enable image post-processing via libpostproc
 media-video/mplayer2:pvr - Enable Video4Linux2 MPEG PVR
 media-video/mplayer2:radio - Enable V4L2 radio interface and support
 media-video/mplayer2:rar - Enable Unique RAR File Library
@@ -4020,7 +4021,6 @@ net-libs/telepathy-qt:glib - Enable support for various telepathy/glib related p
 net-libs/webkit-gtk:coverage - Enable code coverage support
 net-libs/webkit-gtk:geoloc - Enable geolocation support through app-misc/geoclue
 net-libs/webkit-gtk:introspection - Use dev-libs/gobject-introspection for introspection
-net-libs/webkit-gtk:jit - Enable JIT javascript compiler (disabling it will cause performance penalty)
 net-libs/webkit-gtk:webgl - Build support for the WebGL HTML API using virtual/opengl
 net-libs/webkit-gtk:webkit2 - Enable WebKit2 API that splits web content rendering and application UI into separate processes
 net-libs/wt:extjs - Build Wt Ext library with JavaScript-only widgets (http://extjs.com/)
@@ -4854,7 +4854,6 @@ sci-visualization/paraview:gui - Build paraview's gui not just the server
 sci-visualization/paraview:overview - Enable the OverView plugin framework
 sci-visualization/paraview:plugins - Build and install additional plugins
 sci-visualization/paraview:streaming - Enable streaming paraview application
-sci-visualization/qtiplot:ods - Import support for OpenOffice .ods sheets
 sci-visualization/veusz:fits - Add FITS format via dev-python/pyfits
 sec-policy/selinux-base:open_perms - Enable the open permissions for file object classes (SELinux policy capability).
 sec-policy/selinux-base:peer_perms - Enable the labeled networking peer permissions (SELinux policy capability).
@@ -5356,7 +5355,6 @@ www-client/elinks:finger - Enable support for the finger protocol
 www-client/elinks:gopher - Enable support for the gopher protocol
 www-client/elinks:mouse - Make elinks to grab all mouse events
 www-client/epiphany:introspection - Use dev-libs/gobject-introspection for introspection
-www-client/epiphany:jit - Allow using net-libs/webkit-gtk that has the JIT javascript compiler enabled
 www-client/epiphany:nss - Import passwords from older gecko based www-client/epiphany keyring.
 www-client/firefox:bindist - Disable official Firefox branding (icons, name) which are not binary-redistributable according to upstream.
 www-client/firefox:crashreporter - Enable crashreporter for mozilla upstream, debugging symbols are not required for reporting crashes.
@@ -5466,7 +5464,7 @@ www-servers/uwsgi:rrdtool - Enable support for writing requests data in RRD file
 www-servers/uwsgi:rsyslog - Support direct logging to a app-admin/rsyslog socket (without going through the syslog interface).
 www-servers/uwsgi:spooler - Build a plugin which gives a network spooler (see http://projects.unbit.it/uwsgi/wiki/Spooler).
 www-servers/uwsgi:yaml - Support yaml as a configuration file format.
-www-servers/uwsgi:zeromq - Enable logging and deployment via ZeroMQ.
+www-servers/uwsgi:zeromq - Enable logging and deployment via ZeroMQ. Together with json-support this turns uwsgi into a Mongrel2 handler (see http://projects.unbit.it/uwsgi/wiki/Mongrel2).
 www-servers/varnish:tools - Build additional tools: varnishhist, varnishstat, varnishtop, varnishsizes
 x11-apps/ardesia:cwiid - cwiid support: collection of Linux tools written in C for interfacing to the Nintendo Wiimote.
 x11-apps/xdm:consolekit - Enable native sys-auth/consolekit support
