@@ -1,5 +1,5 @@
->=net-libs/libnetfilter_conntrack-0.0.100 net-libs/libnetfilter_queue
->=net-libs/libnetfilter_conntrack-0.0.100 net-libs/libnetfilter_queue net-misc/l7-protocols
+>=net-libs/libnetfilter_conntrack-0.0.100 >=net-libs/libnetfilter_queue-1.0.0 net-libs/libnfnetlink
+>=net-libs/libnetfilter_conntrack-0.0.100 >=net-libs/libnetfilter_queue-1.0.0 net-libs/libnfnetlink net-misc/l7-protocols
 0
 http://download.clearfoundation.com/l7-filter/l7-filter-userspace-0.12-beta1.tar.gz
 

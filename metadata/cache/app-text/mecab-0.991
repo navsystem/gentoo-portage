@@ -6,7 +6,7 @@ http://mecab.googlecode.com/files/mecab-0.991.tar.gz
 http://mecab.sourceforge.net/
 || ( BSD LGPL-2.1 GPL-2 )
 Yet Another Part-of-Speech and Morphological Analyzer
-~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
+~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd
 autotools eutils libtool multilib toolchain-funcs user
 static-libs unicode
 

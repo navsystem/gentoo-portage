@@ -1,0 +1,22 @@
+app-arch/bzip2 dev-db/sqlite:3 dev-libs/glib:2 dev-util/makeheaders net-libs/gnutls sys-libs/ncurses:5 db-upgrade? ( dev-libs/libxml2:2 sys-libs/gdbm ) virtual/pkgconfig
+app-arch/bzip2 dev-db/sqlite:3 dev-libs/glib:2 dev-util/makeheaders net-libs/gnutls sys-libs/ncurses:5 db-upgrade? ( dev-libs/libxml2:2 sys-libs/gdbm )
+0
+http://dev.yorhel.nl/download/ncdc-1.11.tar.gz
+
+http://dev.yorhel.nl/ncdc
+MIT
+ncurses directconnect client
+~amd64 ~ppc ~sparc ~x86
+
++db-upgrade
+
+
+
+4
+
+configure
+
+
+
+
+

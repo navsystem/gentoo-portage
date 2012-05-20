@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.85-r1.ebuild,v 1.2 2012/05/16 12:28:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.85-r1.ebuild,v 1.4 2012/05/17 23:12:48 ssuominen Exp $
 
 EAPI=4
 inherit eutils flag-o-matic elisp-common toolchain-funcs
@@ -12,17 +12,20 @@ SRC_URI="mirror://sourceforge/xdvi/${P}.tar.gz"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 SLOT="0"
 LICENSE="GPL-2"
-IUSE="motif neXt +Xaw Xaw3d emacs"
-REQUIRED_USE="^^ ( motif neXt Xaw Xaw3d )"
+IUSE="motif neXt Xaw3d emacs"
 
 RDEPEND=">=media-libs/t1lib-5.0.2
 	x11-libs/libXmu
 	x11-libs/libXp
 	x11-libs/libXpm
 	motif? ( >=x11-libs/openmotif-2.3:0 )
-	neXt? ( x11-libs/neXtaw )
-	Xaw3d? ( x11-libs/libXaw3d )
-	Xaw? ( x11-libs/libXaw )
+	!motif? (
+		neXt? ( x11-libs/neXtaw )
+		!neXt? (
+			Xaw3d? ( x11-libs/libXaw3d )
+			!Xaw3d? ( x11-libs/libXaw )
+		)
+	)
 	dev-libs/kpathsea"
 DEPEND="sys-devel/flex
 	virtual/yacc
@@ -46,14 +49,15 @@ src_configure() {
 
 	if use motif ; then
 		toolkit="motif"
+		use neXt && ewarn "neXt USE flag ignored (superseded by motif)"
+		use Xaw3d && ewarn "Xaw3d USE flag ignored (superseded by motif)"
 	elif use neXt ; then
 		toolkit="neXtaw"
+		use Xaw3d && ewarn "Xaw3d USE flag ignored (superseded by neXt)"
 	elif use Xaw3d ; then
 		toolkit="xaw3d"
-	elif use Xaw ; then
-		toolkit="xaw"
 	else
-		die "Please specify one of motif, neXtaw, Xaw3d or Xaw to your USE flag."
+		toolkit="xaw"
 	fi
 
 	econf \
@@ -71,9 +75,9 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install
 
-	dodir /etc/texmf/xdvi /etc/X11/app-defaults
-	mv "${ED}${TEXMF_PATH}/xdvi/XDvi" "${ED}etc/X11/app-defaults" || die "failed to move config file"
-	dosym {/etc/X11/app-defaults,"${TEXMF_PATH}/xdvi"}/XDvi
+	dodir /etc/texmf/xdvi /usr/share/X11/app-defaults
+	mv "${ED}${TEXMF_PATH}/xdvi/XDvi" "${ED}usr/share/X11/app-defaults" || die "failed to move config file"
+	dosym {/usr/share/X11/app-defaults,"${TEXMF_PATH}/xdvi"}/XDvi
 	for i in $(find "${ED}${TEXMF_PATH}/xdvi" -maxdepth 1 -type f) ; do
 		mv ${i} "${ED}etc/texmf/xdvi" || die "failed to move $i"
 		dosym {/etc/texmf,"${TEXMF_PATH}"}/xdvi/$(basename ${i})

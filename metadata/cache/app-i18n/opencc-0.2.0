@@ -6,7 +6,7 @@ http://open-chinese-convert.googlecode.com/files/opencc-0.2.0.tar.gz
 http://code.google.com/p/open-chinese-convert/
 Apache-2.0
 Libraries for Simplified-Traditional Chinese Conversion
-amd64 x86
+amd64 ~ppc ~ppc64 x86
 base cmake-utils eutils flag-o-matic multilib toolchain-funcs user
 nls static-libs
 

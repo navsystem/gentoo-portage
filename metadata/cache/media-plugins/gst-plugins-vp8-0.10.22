@@ -6,7 +6,7 @@ test
 http://gstreamer.freedesktop.org/
 GPL-2
 plugin for gstreamer
-amd64 x86
+amd64 x86 ~amd64-fbsd
 eutils gst-plugins-bad gst-plugins10 multilib toolchain-funcs user versionator
 
 

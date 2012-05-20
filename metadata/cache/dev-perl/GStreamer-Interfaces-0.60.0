@@ -6,7 +6,7 @@ mirror://cpan/authors/id/T/TS/TSCH/GStreamer-Interfaces-0.06.tar.gz
 http://search.cpan.org/dist/GStreamer-Interfaces/
 LGPL-2.1
 Perl interface to the GStreamer Interfaces library
-~amd64 ~sparc ~x86
+~amd64 ~sparc x86
 base eutils multilib perl-module toolchain-funcs user
 
 

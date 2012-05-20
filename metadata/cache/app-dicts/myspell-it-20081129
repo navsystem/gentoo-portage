@@ -6,7 +6,7 @@ mirror://sourceforge/linguistico/it_IT-OOo2-pack_01_07__2008_11_29.zip
 http://sourceforge.net/projects/linguistico/
 AGPL-3 GPL-3 LPPL-1.3c
 Italian dictionaries for myspell/hunspell
-~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd
+~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd
 multilib myspell toolchain-funcs
 
 

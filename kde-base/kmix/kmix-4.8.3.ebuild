@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmix/kmix-4.8.3.ebuild,v 1.1 2012/05/03 20:07:43 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmix/kmix-4.8.3.ebuild,v 1.4 2012/05/18 20:14:06 ago Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ KMNAME="kdemultimedia"
 inherit kde4-meta
 
 DESCRIPTION="KDE mixer gui"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="alsa debug pulseaudio"
 
 DEPEND="
@@ -17,6 +17,8 @@ DEPEND="
 	pulseaudio? ( >=media-sound/pulseaudio-0.9.12 )
 "
 RDEPEND="${DEPEND}"
+
+PATCHES=( "${FILESDIR}/${P}-oss4.patch" )
 
 src_configure() {
 	mycmakeargs=(

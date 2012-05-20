@@ -1,0 +1,22 @@
+dev-libs/libpcre virtual/pkgconfig
+dev-libs/libpcre
+0
+http://jak-linux.org/projects/hardlink/hardlink_0.2.0.tar.gz
+
+http://jak-linux.org/projects/hardlink/
+MIT
+A tool which replaces copies of a file with hardlinks
+~amd64 ~ppc ~ppc64 ~x86
+multilib toolchain-funcs
+
+
+
+
+4
+
+compile prepare
+
+
+
+
+
