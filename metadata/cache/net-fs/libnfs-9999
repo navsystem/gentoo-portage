@@ -7,7 +7,7 @@ https://github.com/sahlberg/libnfs
 LGPL-2.1 GPL-3
 client library for accessing NFS shares over a network
 
-autotools eutils git-2 libtool multilib toolchain-funcs user
+autotools git-2 libtool multilib toolchain-funcs
 static-libs
 
 

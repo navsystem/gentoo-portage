@@ -14,7 +14,7 @@ debug cracklib passwdqc consolekit gnome-keyring selinux mktemp pam_ssh +sha512 
 
 4
 
-compile install postinst
+compile install postinst test
 
 
 

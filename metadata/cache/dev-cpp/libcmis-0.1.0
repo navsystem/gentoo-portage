@@ -7,7 +7,7 @@ https://sourceforge.net/projects/libcmis/
 || ( GPL-2 LGPL-2 MPL-1.1 )
 C++ client library for the CMIS interface
 amd64 ppc x86 ~amd64-linux ~x86-linux
-autotools eutils libtool multilib toolchain-funcs user
+autotools libtool multilib toolchain-funcs
 static-libs test
 
 

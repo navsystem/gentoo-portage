@@ -7,7 +7,7 @@ http://synfig.org
 GPL-2
 ETL is a multi-platform class and template library
 ~amd64
-autotools eutils libtool multilib toolchain-funcs user
+autotools libtool multilib toolchain-funcs
 
 
 

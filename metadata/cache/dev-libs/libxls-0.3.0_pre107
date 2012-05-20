@@ -7,7 +7,7 @@ http://libxls.sourceforge.net/
 GPL-2 LGPL-3
 A library which can read Excel (xls) files
 ~amd64 ~x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools libtool multilib toolchain-funcs
 
 
 

@@ -1,4 +1,4 @@
-test? ( dev-perl/locale-maketext-lexicon ) dev-lang/perl[-build]
+dev-lang/perl[-build]
 dev-lang/perl[-build]
 0
 mirror://cpan/authors/id/J/JE/JESSE/Locale-Maketext-Simple-0.21.tar.gz
@@ -8,7 +8,7 @@ http://search.cpan.org/dist/Locale-Maketext-Simple/
 Locale::Maketext::Simple - Simple interface to Locale::Maketext::Lexicon
 amd64 ia64 ~ppc sparc x86 ~amd64-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos
 alternatives base eutils multilib perl-module toolchain-funcs user
-test
+
 
 
 

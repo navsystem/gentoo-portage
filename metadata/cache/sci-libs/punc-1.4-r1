@@ -7,7 +7,7 @@ http://fetk.org/codes/punc/index.html
 GPL-2
 Portable Understructure for Numerical Computing
 ~amd64 ~x86 ~amd64-linux ~x86-linux
-autotools eutils fortran-2 libtool multilib toolchain-funcs user
+autotools fortran-2 libtool multilib toolchain-funcs
 debug doc mpi static-libs
 
 

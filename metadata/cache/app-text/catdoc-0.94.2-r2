@@ -1,4 +1,4 @@
-tk? ( >=dev-lang/tk-8.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+tk? ( >=dev-lang/tk-8.1 ) sys-devel/automake >=sys-devel/autoconf-2.68 sys-devel/libtool
 tk? ( >=dev-lang/tk-8.1 )
 0
 http://ftp.wagner.pp.ru/pub/catdoc/catdoc-0.94.2.tar.gz

@@ -7,7 +7,7 @@ http://kernel.org/pub/linux/utils/kernel/kexec/
 GPL-2
 Load another kernel from the currently executing Linux kernel
 
-autotools eutils git-2 libtool multilib toolchain-funcs user
+autotools git-2 libtool multilib toolchain-funcs
 xen zlib
 
 

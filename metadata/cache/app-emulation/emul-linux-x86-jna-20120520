@@ -1,0 +1,22 @@
+>=sys-apps/findutils-4.2.26
+~app-emulation/emul-linux-x86-baselibs-20120520
+0
+http://dev.gentoo.org/~pacho/emul/emul-linux-x86-jna-20120520.tar.xz
+strip
+http://dev.gentoo.org/~pacho/emul.html
+LGPL-2.1
+Provides precompiled 32bit libraries
+-* ~amd64
+emul-linux-x86 eutils multilib toolchain-funcs user versionator
+development
+
+
+
+4
+
+install prepare unpack
+
+
+
+
+

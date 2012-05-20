@@ -7,7 +7,7 @@ http://home.gna.org/unrar/
 GPL-2
 Free rar unpacker for old (pre v3) rar files
 amd64 x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools libtool multilib toolchain-funcs
 
 
 

@@ -7,7 +7,7 @@ http://rss-glx.sourceforge.net
 GPL-2
 Really Slick OpenGL Screensavers for XScreenSaver
 ~alpha amd64 ppc ~ppc64 sparc x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools libtool multilib toolchain-funcs
 +bzip2 openal
 
 

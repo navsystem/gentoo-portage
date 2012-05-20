@@ -7,7 +7,7 @@ http://sourceforge.net/projects/rpcbind/
 BSD
 portmap replacement which supports RPC over various protocols
 
-autotools eutils git-2 libtool multilib toolchain-funcs user
+autotools git-2 libtool multilib toolchain-funcs
 selinux tcpd
 
 

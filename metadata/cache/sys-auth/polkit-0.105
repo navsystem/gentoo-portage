@@ -1,5 +1,5 @@
->=dev-libs/glib-2.30 dev-libs/expat introspection? ( >=dev-libs/gobject-introspection-0.6.2 ) pam? ( virtual/pam ) systemd? ( sys-apps/systemd ) app-text/docbook-xml-dtd:4.1.2 app-text/docbook-xsl-stylesheets dev-libs/libxslt dev-util/intltool virtual/pkgconfig doc? ( >=dev-util/gtk-doc-1.13 )
->=dev-libs/glib-2.30 dev-libs/expat introspection? ( >=dev-libs/gobject-introspection-0.6.2 ) pam? ( virtual/pam ) systemd? ( sys-apps/systemd )
+>=dev-libs/glib-2.30 >=dev-libs/expat-2 introspection? ( >=dev-libs/gobject-introspection-0.6.2 ) pam? ( virtual/pam ) systemd? ( sys-apps/systemd ) app-text/docbook-xml-dtd:4.1.2 app-text/docbook-xsl-stylesheets dev-libs/libxslt >=dev-util/intltool-0.40 virtual/pkgconfig doc? ( >=dev-util/gtk-doc-1.13 )
+>=dev-libs/glib-2.30 >=dev-libs/expat-2 introspection? ( >=dev-libs/gobject-introspection-0.6.2 ) pam? ( virtual/pam ) systemd? ( sys-apps/systemd )
 0
 http://www.freedesktop.org/software/polkit/releases/polkit-0.105.tar.gz
 
@@ -10,11 +10,11 @@ Policy framework for controlling privileges for system-wide services
 eutils flag-o-matic multilib pam toolchain-funcs user
 debug doc examples gtk +introspection kde nls pam systemd
 
-!systemd? ( >=sys-auth/consolekit-0.4.5[policykit] ) pam? ( sys-auth/pambase[consolekit] ) gtk? ( || ( >=gnome-extra/polkit-gnome-0.105 lxde-base/lxpolkit ) ) kde? ( sys-auth/polkit-kde-agent )
+gtk? ( || ( >=gnome-extra/polkit-gnome-0.105 lxde-base/lxpolkit ) ) kde? ( sys-auth/polkit-kde-agent ) !systemd? ( >=sys-auth/consolekit-0.4.5_p20120320[policykit] pam? ( >=sys-auth/pambase-20101024-r2[consolekit] ) )
 
 4
 
-configure install postinst prepare
+configure install prepare
 
 
 

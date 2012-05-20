@@ -7,7 +7,7 @@ http://xdiskusage.sourceforge.net/
 GPL-2
 front end to xdu for viewing disk usage graphically under X11
 amd64 ~ppc x86 ~x86-fbsd
-autotools eutils libtool multilib toolchain-funcs user
+autotools libtool multilib toolchain-funcs
 
 
 

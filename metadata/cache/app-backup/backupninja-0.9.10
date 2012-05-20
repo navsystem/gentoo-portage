@@ -7,7 +7,7 @@ http://riseuplabs.org/backupninja/
 GPL-2
 lightweight, extensible meta-backup system
 ~amd64 ~x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools libtool multilib toolchain-funcs
 
 
 

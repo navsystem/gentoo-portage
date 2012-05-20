@@ -1,0 +1,22 @@
+dev-python/setuptools =dev-lang/python-2* =dev-lang/python-2*[xml]
+=dev-lang/python-2* =dev-lang/python-2*[xml]
+0
+http://html5lib.googlecode.com/files/html5lib-0.95.tar.gz
+
+http://code.google.com/p/html5lib/ http://pypi.python.org/pypi/html5lib
+MIT
+HTML parser based on the HTML5 specification
+~amd64 ~x86 ~x86-fbsd
+distutils multilib python toolchain-funcs
+examples
+
+
+
+4
+
+compile install postinst postrm prepare setup
+
+
+
+
+

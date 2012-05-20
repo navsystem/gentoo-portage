@@ -7,7 +7,7 @@ http://www.agroman.net/corkscrew/
 GPL-2
 a tool for tunneling SSH through HTTP proxies
 amd64 ~arm ~ppc ~sparc x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools libtool multilib toolchain-funcs
 
 
 

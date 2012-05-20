@@ -1,20 +1,20 @@
 virtual/pkgconfig
-dev-libs/fribidi
+>=dev-libs/fribidi-0.19.2-r2
 0
 http://ftp.ivrix.org.il/pub/ivrix/src/cmdline/bidiv-1.5.tgz
 
 http://www.ivrix.org.il
 GPL-2
 A BiDirectional Text Viewer
-~alpha amd64 ~ppc ~sparc ~x86
+~alpha amd64 ~ppc ~sparc x86
 eutils multilib toolchain-funcs user
 
 
 
 
+4
 
-
-compile install unpack
+compile install prepare
 
 
 
