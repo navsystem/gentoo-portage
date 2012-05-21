@@ -1,20 +1,20 @@
-doc? ( gnome-extra/yelp app-text/xmlto ) x11-libs/cairo x11-libs/gtk+:2 media-libs/alsa-lib virtual/pkgconfig
-doc? ( gnome-extra/yelp app-text/xmlto ) x11-libs/cairo x11-libs/gtk+:2 media-libs/alsa-lib
+>=dev-libs/glib-2 media-libs/alsa-lib >=media-libs/freetype-2 x11-libs/cairo >=x11-libs/gdk-pixbuf-2 x11-libs/gtk+:2 x11-libs/libX11 x11-libs/pango virtual/pkgconfig doc? ( app-text/xmlto ) nls? ( sys-devel/gettext )
+>=dev-libs/glib-2 media-libs/alsa-lib >=media-libs/freetype-2 x11-libs/cairo >=x11-libs/gdk-pixbuf-2 x11-libs/gtk+:2 x11-libs/libX11 x11-libs/pango
 0
 http://vsr.informatik.tu-chemnitz.de/staff/jan/nted/sources/nted-1.10.18.tar.gz
 
 http://vsr.informatik.tu-chemnitz.de/staff/jan/nted/nted.xhtml
-|| ( GPL-2 FDL-1.2 NTED_FONT )
-WYSIWYG score editor for GTK+2
+GPL-2 FDL-1.2 NTED_FONT
+WYSIWYG score editor for GTK+
 amd64 x86
-eutils multilib toolchain-funcs user
-doc nls
+
+doc debug nls
 
 
 
 4
 
-configure install
+configure
 
 
 
