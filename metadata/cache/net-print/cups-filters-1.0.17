@@ -7,7 +7,7 @@ http://www.linuxfoundation.org/collaborate/workgroups/openprinting/pdfasstandard
 GPL-2
 Cups PDF filters
 ~amd64 ~x86
-autotools libtool multilib toolchain-funcs
+autotools eutils libtool multilib toolchain-funcs user
 jpeg lcms png tiff zlib
 
 

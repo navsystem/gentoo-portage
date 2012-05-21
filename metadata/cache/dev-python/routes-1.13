@@ -1,0 +1,22 @@
+dev-python/setuptools dev-python/webob dev-python/repoze-lru test? ( dev-python/coverage dev-python/webtest ) =dev-lang/python-2* test? ( dev-python/nose )
+=dev-lang/python-2*
+0
+mirror://pypi/R/Routes/Routes-1.13.tar.gz
+
+http://routes.groovie.org http://pypi.python.org/pypi/Routes
+BSD
+A Python re-implementation of the Rails routes system for mapping URL's to Controllers/Actions.
+~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos
+distutils multilib python toolchain-funcs
+doc test test
+
+
+
+3
+
+compile install postinst postrm prepare test
+
+
+
+
+

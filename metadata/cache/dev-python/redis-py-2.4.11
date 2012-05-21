@@ -6,7 +6,7 @@ mirror://github/andymccurdy/redis-py/redis-2.4.11.tar.gz -> redis-py-2.4.11.tar.
 http://github.com/andymccurdy/redis-py http://pypi.python.org/pypi/redis
 MIT
 Python client for Redis key-value store
-amd64 ~x86
+amd64 x86
 distutils multilib python toolchain-funcs
 
 

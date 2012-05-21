@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile install postinst postrm prepare setup test
-DEPEND=dev-libs/libevent dev-python/greenlet dev-python/setuptools doc? ( dev-python/sphinx ) dev-lang/python
+DEPEND=dev-libs/libevent dev-python/greenlet dev-python/setuptools doc? ( dev-python/sphinx ) =dev-lang/python-2*
 DESCRIPTION=A Python networking library that uses greenlet to provide synchronous API
 EAPI=4
 HOMEPAGE=http://pypi.python.org/pypi/gevent/
 IUSE=doc examples
 KEYWORDS=~amd64 ~x86
 LICENSE=MIT
-RDEPEND=dev-libs/libevent dev-python/greenlet dev-lang/python
+RDEPEND=dev-libs/libevent dev-python/greenlet =dev-lang/python-2*
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://pypi/g/gevent/gevent-0.13.7.tar.gz
 _eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	multilib	5f4ad6cf85e365e8f0c6050ddd21659e	python	36d7e2b7aa4dce62364c72eec96610cf	toolchain-funcs	f71b9936acc911ed1cc84557d3b5c2b3
-_md5_=2e04422c09a3ba26851567c5f461140e
+_md5_=e47007979500ce203d0fbd42df97bc39

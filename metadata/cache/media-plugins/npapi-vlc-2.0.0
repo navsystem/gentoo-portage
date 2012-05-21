@@ -6,7 +6,7 @@ http://download.videolan.org/pub/videolan/vlc/2.0.0/npapi-vlc-2.0.0.tar.xz
 http://www.videolan.org/
 LGPL-2.1
 Mozilla plugin based on VLC
-amd64
+amd64 x86
 autotools libtool multilib toolchain-funcs
 gtk
 

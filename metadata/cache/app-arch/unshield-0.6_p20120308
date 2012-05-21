@@ -6,7 +6,7 @@ mirror://gentoo/unshield-0.6_p20120308.tar.xz
 http://github.com/twogood/unshield http://sourceforge.net/projects/synce/
 MIT
 InstallShield CAB file extractor
-amd64 ~hppa ~ppc ~x86
+amd64 ~hppa ~ppc x86
 autotools eutils libtool multilib toolchain-funcs user
 static-libs
 

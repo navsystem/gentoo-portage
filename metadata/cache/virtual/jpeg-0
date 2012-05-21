@@ -1,5 +1,5 @@
 
-!prefix? ( >=media-libs/libjpeg-turbo-1.2.0:0[static-libs?] ) prefix? ( || ( >=media-libs/libjpeg-turbo-1.2.0:0[static-libs?] >=media-libs/jpeg-8d:0[static-libs?] ) )
+|| ( >=media-libs/libjpeg-turbo-1.2.0:0[static-libs?] >=media-libs/jpeg-8d:0[static-libs?] )
 0
 
 

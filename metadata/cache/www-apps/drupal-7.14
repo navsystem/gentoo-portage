@@ -1,5 +1,5 @@
 || ( virtual/httpd-cgi virtual/httpd-fastcgi ) >=app-admin/webapp-config-1.50.15
-virtual/httpd-php dev-lang/php[gd,pdo,postgres?,xml] mysql? ( || ( dev-lang/php[mysql] dev-lang/php[mysqli] ) ) sqlite? ( dev-lang/php[sqlite3] ) >=app-admin/webapp-config-1.50.15
+virtual/httpd-php dev-lang/php[gd,pdo,postgres?,xml] dev-php/pecl-apc dev-php/pecl-uploadprogress mysql? ( || ( dev-lang/php[mysql] dev-lang/php[mysqli] ) ) sqlite? ( dev-lang/php[sqlite3] ) >=app-admin/webapp-config-1.50.15
 7.14
 http://drupal.org/files/projects/drupal-7.14.tar.gz
 

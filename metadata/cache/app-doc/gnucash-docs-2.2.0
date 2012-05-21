@@ -1,5 +1,5 @@
-gnome-extra/yelp !<=app-office/gnucash-2.2.1 >=dev-libs/libxml2-2.5.10 dev-libs/libxslt >=app-text/scrollkeeper-0.3.4 app-text/docbook-xsl-stylesheets =app-text/docbook-xml-dtd-4.1.2* >=sys-apps/sed-4
-gnome-extra/yelp !<=app-office/gnucash-2.2.1
+!<=app-office/gnucash-2.2.1 >=dev-libs/libxml2-2.5.10 dev-libs/libxslt app-text/docbook-xsl-stylesheets app-text/docbook-xml-dtd:4.1.2 app-text/rarian app-arch/xz-utils >=sys-apps/sed-4
+!<=app-office/gnucash-2.2.1
 0
 mirror://sourceforge/gnucash/gnucash-docs-2.2.0.tar.gz
 
@@ -12,9 +12,9 @@ eutils fdo-mime gnome.org gnome2 gnome2-utils libtool multilib toolchain-funcs u
 
 
 
+4
 
-
-compile install postinst postrm preinst unpack
+compile configure install postinst postrm preinst prepare unpack
 
 
 
