@@ -7,7 +7,7 @@ http://www.openpam.org/
 BSD
 Open source PAM library.
 ~sparc-fbsd ~x86-fbsd
-autotools libtool multilib toolchain-funcs
+autotools eutils libtool multilib toolchain-funcs user
 debug vim-syntax
 
 sys-auth/pambase vim-syntax? ( app-vim/pam-syntax )

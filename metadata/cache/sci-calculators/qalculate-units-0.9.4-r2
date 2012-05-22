@@ -7,7 +7,7 @@ http://qalculate.sourceforge.net/
 GPL-2
 A GTK+ unit conversion tool
 ~amd64 x86
-autotools libtool multilib toolchain-funcs
+autotools eutils libtool multilib toolchain-funcs user
 nls
 
 
