@@ -1,5 +1,5 @@
 dev-lang/python
-dev-python/4suite pdf? ( dev-python/reportlab ) threads? ( dev-python/twisted ) dev-lang/python
+pdf? ( dev-python/reportlab ) threads? ( dev-python/twisted ) dev-lang/python
 0
 mirror://sourceforge/testoob/testoob-1.15.tar.bz2
 
