@@ -7,7 +7,7 @@ http://gpe.linuxtogo.org
 LGPL-2
 XSETTINGS client code
 amd64 arm ~hppa ppc ~sh x86
-autotools eutils gpe libtool multilib toolchain-funcs user
+autotools gpe libtool multilib toolchain-funcs
 nls
 
 

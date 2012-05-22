@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.7.6-r1.ebuild,v 1.2 2012/05/03 06:35:30 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.7.6-r1.ebuild,v 1.4 2012/05/20 18:33:43 ago Exp $
 
 EAPI="4"
 

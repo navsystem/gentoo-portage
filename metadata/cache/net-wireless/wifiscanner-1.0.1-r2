@@ -7,7 +7,7 @@ http://wifiscanner.sourceforge.net/
 GPL-2
 analyzer and detector of 802.11b stations and access points
 ~amd64 ~ppc ~x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools libtool multilib toolchain-funcs
 ncurses wireshark
 
 

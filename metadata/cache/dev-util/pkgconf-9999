@@ -7,7 +7,7 @@ https://github.com/nenolod/pkgconf
 BSD-1
 pkg-config compatible replacement with no dependencies other than ANSI C89
 
-autotools eutils git-2 libtool multilib toolchain-funcs user
+autotools git-2 libtool multilib toolchain-funcs
 pkg-config
 
 

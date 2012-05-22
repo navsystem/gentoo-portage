@@ -6,7 +6,7 @@ mirror://sourceforge/opencvlibrary/OpenCV-2.3.1a.tar.bz2
 http://opencv.willowgarage.com
 BSD
 A collection of algorithms and sample code for various computer vision problems
-amd64 ppc ~x86 ~amd64-linux
+amd64 ppc x86 ~amd64-linux
 base cmake-utils eutils flag-o-matic multilib python toolchain-funcs user
 cuda doc eigen examples ffmpeg gstreamer gtk ieee1394 jpeg jpeg2k openexr opengl png python qt4 sse sse2 sse3 ssse3 tiff v4l xine
 

@@ -7,7 +7,7 @@ http://openvz.org/
 GPL-2
 OpenVZ ConTainers control utility
 
-autotools bash-completion-r1 eutils git-2 libtool multilib toolchain-funcs user
+autotools bash-completion-r1 git-2 libtool multilib toolchain-funcs
 
 
 

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13772 2012/05/19 14:28:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13779 2012/05/21 13:47:34 mpagano Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,29 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (20 May 2012)
+# Still using vulnerable net-libs/xulrunner wrt bug 412341
+# Build problems wrt bug 390325
+# Version 0.9_beta5 will be removed in approx. 30 days
+~app-text/kiwix-0.9_beta5
+
+# Benda Xu <heroxbd@gentoo.org> (20 May 2012)
+# geant-4.9.5_p01 has a major class declaration change that renders
+# geant-python (g4py upstream) unable to compile
+# upstream bug http://bugzilla-geant4.kek.jp/show_bug.cgi?id=1317
+=sci-physics/geant-4.9.5_p01
+=sci-physics/geant-python-4.9.5_p01
+
+# Christian Ruppert <idl0r@gentoo.org> (20 May 2012)
+# Temp. mask gitolite-3* as it likely breaks gitolite-2* setups
+# Also, it has been re-written (almost?) completely.
+=dev-vcs/gitolite-3*
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (20 May 2012)
+# Requires dev-scheme/guile-2.0.5 which is in lisp overlay and masked;
+# bug #416683
+>=games-board/aisleriot-3.3.1
 
 # Samuli Suominen <ssuominen@gentoo.org> (19 May 2012)
 # Dead project wrt http://bugs.gentoo.org/416613
@@ -68,10 +91,6 @@ dev-python/testoob
 # Markos Chandras <hwoarang@gentoo.org> (15 May 2012)
 # Masked for testing
 =net-misc/dibbler-0.8.2
-
-# Mike Pagano <mpagano@gentoo.org> (15 May 2012)
-# Mask for testing
->=app-portage/portpeek-2.0.24
 
 # Naohiro Aota <naota@gentoo.org> (07 May 2012)
 # Dead upstream.
@@ -298,13 +317,6 @@ x11-apps/xsetmode
 x11-apps/xsetpointer
 <=x11-base/xorg-x11-7.4-r1
 
-# Samuli Suominen <ssuominen@gentoo.org> (22 Apr 2012)
-# Masked for removal in 30 days for using the obsolete xulrunner
-# package wrt #412875 and #403415
-# Information from mailinglist:
-# Possible replacements include kchmviewer and fbreader
-app-text/chmsee
-
 # Torsten Veller <tove@gentoo.org> (21 Apr 2012)
 # Mask for removal: Doesn't install anything (#356559)
 dev-perl/IO-Moose
@@ -314,26 +326,15 @@ dev-perl/IO-Moose
 net-ftp/leechcraft-lcftp
 net-p2p/leechcraft-eiskaltdcpp
 
-# Samuli Suominen <ssuominen@gentoo.org> (18 Apr 2012)
-# Fails to build according to bugs 348231 and 388509.
-# Needs a version bump but required goffice version is not
-# yet in Portage wrt bug 388887.
-# Because of above mentioned bugs nsplugin support was removed
-# wrt bug 383147.
-# Removal in 30 days
-<sci-chemistry/gchemutils-0.13.6
-
 # Hans de Graaff <graaff@gentoo.org> (17 Apr 2012)
 # ruby-gnome2 modules obsoleted by upstream. These are
 # no longer maintained and mostly depend on gnome
 # components that have been obsoleted themselves.
-# bug 408251 for ruby-gtkmozembed, no specific bug
-# for the other components, nothing in the tree depends
+# no specific bug for these, nothing in the tree depends
 # on them.
 dev-ruby/ruby-gnomevfs
 dev-ruby/ruby-gtkglext
 dev-ruby/ruby-gtkhtml2
-dev-ruby/ruby-gtkmozembed
 dev-ruby/ruby-panel-applet2
 
 # Patrick Lauer <patrick@gentoo.org> (13 Apr 2012)

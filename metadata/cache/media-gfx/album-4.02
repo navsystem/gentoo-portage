@@ -6,7 +6,7 @@ http://marginalhacks.com/bin/album.versions/album-4.02.tar.gz
 http://MarginalHacks.com/Hacks/album/
 marginalhacks
 HTML photo album generator
-alpha amd64 ppc ppc64 x86
+alpha amd64 ~ppc ~ppc64 x86
 
 ffmpeg
 

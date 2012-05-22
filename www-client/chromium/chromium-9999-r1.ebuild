@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.112 2012/05/16 15:13:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.114 2012/05/21 14:09:22 phajdan.jr Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -168,7 +168,6 @@ src_prepare() {
 	# Remove most bundled libraries. Some are still needed.
 	find third_party -type f \! -iname '*.gyp*' \
 		\! -path 'third_party/WebKit/*' \
-		\! -path 'third_party/adobe/*' \
 		\! -path 'third_party/angle/*' \
 		\! -path 'third_party/cacheinvalidation/*' \
 		\! -path 'third_party/cld/*' \
@@ -180,7 +179,6 @@ src_prepare() {
 		\! -path 'third_party/hunspell/*' \
 		\! -path 'third_party/iccjpeg/*' \
 		\! -path 'third_party/jsoncpp/*' \
-		\! -path 'third_party/json_minify/*' \
 		\! -path 'third_party/khronos/*' \
 		\! -path 'third_party/launchpad_translations/*' \
 		\! -path 'third_party/leveldatabase/*' \
@@ -189,6 +187,7 @@ src_prepare() {
 		\! -path 'third_party/libsrtp/*' \
 		\! -path 'third_party/libusb/*' \
 		\! -path 'third_party/libvpx/*' \
+		\! -path 'third_party/libxml/chromium/*' \
 		\! -path 'third_party/libyuv/*' \
 		\! -path 'third_party/lss/*' \
 		\! -path 'third_party/mesa/*' \
@@ -242,6 +241,10 @@ src_configure() {
 	# Disable tcmalloc, it causes problems with e.g. NVIDIA
 	# drivers, bug #413637.
 	myconf+=" -Dlinux_use_tcmalloc=0"
+
+	# Make it possible to remove third_party/adobe.
+	echo > "${T}/flapper_version.h" || die
+	myconf+=" -Dflapper_version_h_file=${T}/flapper_version.h"
 
 	# Use system-provided libraries.
 	# TODO: use_system_ffmpeg
@@ -442,6 +445,7 @@ src_install() {
 	local mime_types="text/html;text/xml;application/xhtml+xml;"
 	mime_types+="x-scheme-handler/http;x-scheme-handler/https;" # bug #360797
 	mime_types+="x-scheme-handler/ftp;" # bug #412185
+	mime_types+="x-scheme-handler/mailto;x-scheme-handler/webcal;" # bug #416393
 	make_desktop_entry \
 		chromium-browser${CHROMIUM_SUFFIX} \
 		"Chromium${CHROMIUM_SUFFIX}" \

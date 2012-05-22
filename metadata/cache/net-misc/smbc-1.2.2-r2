@@ -7,7 +7,7 @@ http://sourceforge.net/projects/smbc/
 GPL-2
 A text mode (ncurses) SMB network commander. Features: resume and UTF-8
 ~hppa ~ppc ~x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools libtool multilib toolchain-funcs
 nls debug
 
 

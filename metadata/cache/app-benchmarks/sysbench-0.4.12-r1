@@ -7,7 +7,7 @@ http://sysbench.sourceforge.net/
 GPL-2
 System performance benchmark
 ~amd64 ~x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools libtool multilib toolchain-funcs
 aio mysql
 
 

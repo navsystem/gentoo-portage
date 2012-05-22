@@ -1,0 +1,22 @@
+>=dev-libs/glib-2.4:2 >=gnome-base/nautilus-2.10 sys-devel/gettext virtual/pkgconfig app-arch/xz-utils >=sys-apps/sed-4
+>=dev-libs/glib-2.4:2 >=gnome-base/nautilus-2.10 net-fs/samba
+0
+mirror://debian/pool/main/n/nautilus-share/nautilus-share_0.7.3.orig.tar.bz2 mirror://debian/pool/main/n/nautilus-share/nautilus-share_0.7.3-1.debian.tar.gz
+
+http://gentoo.ovibes.net/nautilus-share http://packages.debian.org/unstable/nautilus-share
+GPL-2
+A nautilus plugin to easily share folders over the SMB protocol
+~amd64 ~x86
+eutils fdo-mime gnome.org gnome2 gnome2-utils libtool multilib toolchain-funcs user versionator
+
+
+
+
+4
+
+compile configure install postinst postrm preinst prepare setup unpack
+
+
+
+
+

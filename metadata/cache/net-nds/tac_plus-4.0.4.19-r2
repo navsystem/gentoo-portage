@@ -7,7 +7,7 @@ http://www.shrubbery.net/tac_plus/
 as-is
 An updated version of Cisco's TACACS+ server
 ~x86 ~amd64 ~ppc
-autotools eutils libtool multilib toolchain-funcs user
+autotools libtool multilib toolchain-funcs
 debug finger maxsess tcpd skey static-libs
 
 

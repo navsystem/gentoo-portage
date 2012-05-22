@@ -1,9 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gevent/gevent-0.13.7.ebuild,v 1.2 2012/05/18 11:37:25 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gevent/gevent-0.13.7.ebuild,v 1.4 2012/05/21 08:07:56 xarthisius Exp $
 
 EAPI=4
 
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS=1
 RESTRICT_PYTHON_ABIS="3.* 2.7-pypy-* *-jython"
 
@@ -23,6 +24,8 @@ RDEPEND="dev-libs/libevent
 DEPEND="${RDEPEND}
 	dev-python/setuptools
 	doc? ( dev-python/sphinx )"
+#	test? ( || ( dev-lang/python:2.7[sqlite] dev-lang/python:2.6[sqlite]
+#			dev-lang/python:2.5[sqlite] dev-python/pysqlite:2 ) )
 
 PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
 

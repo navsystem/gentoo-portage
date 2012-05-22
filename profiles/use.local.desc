@@ -374,6 +374,7 @@ app-emulation/emul-linux-x86-db:development - Install pkgconfig files
 app-emulation/emul-linux-x86-gstplugins:development - Install pkgconfig files
 app-emulation/emul-linux-x86-gtklibs:development - Install pkgconfig files
 app-emulation/emul-linux-x86-gtkmmlibs:development - Install pkgconfig files
+app-emulation/emul-linux-x86-jna:development - Install pkgconfig files
 app-emulation/emul-linux-x86-medialibs:development - Install pkgconfig files
 app-emulation/emul-linux-x86-motif:development - Install pkgconfig files
 app-emulation/emul-linux-x86-opengl:development - Install pkgconfig files
@@ -1781,6 +1782,7 @@ dev-vcs/git:subversion - Include git-svn for dev-vcs/subversion support.
 dev-vcs/git:webdav - Adds support for push'ing to HTTP repositories via DAV.
 dev-vcs/gitg:glade - Install a glade catalog file
 dev-vcs/gitolite:contrib - Install user-contributed files
+dev-vcs/gitolite:tools - Install tools to e.g. convert a Gitosis config to gitolite or one to check if your setup is gitolite >= 3.x compatible
 dev-vcs/gitolite-gentoo:contrib - Install user-contributed files
 dev-vcs/mercurial:bugzilla - Support bugzilla integration.
 dev-vcs/mercurial:gpg - Support signing with GnuPG.
@@ -1926,7 +1928,6 @@ games-strategy/uqm:music - download and install music files (large)
 games-strategy/uqm:remix - download and install music remix files (large)
 games-strategy/uqm:voice - download and install voice files (large)
 games-strategy/wesnoth:server - Enable compilation of server
-games-strategy/wesnoth:tinygui - enable GUI reductions for resolutions down to 320x240 (PDAs)
 games-strategy/x2:bonusscripts - Add bonus scripts
 games-strategy/x2:dynamic - Use dynamic binaries instead of static
 games-strategy/x2:langpacks - Install additional language packs
@@ -1953,6 +1954,7 @@ gnome-base/gnome:fallback - Install gnome-base/gnome-panel and x11-wm/metacity f
 gnome-base/gnome-control-center:cheese - Add support for taking pictures for the user accounts panel using media-video/cheese
 gnome-base/gnome-control-center:colord - Support color management using x11-misc/colord
 gnome-base/gnome-control-center:socialweb - Add support for configuring social web service settings using net-libs/libsocialweb
+gnome-base/gnome-control-center:systemd - Use sys-apps/systemd instead of sys-auth/consolekit for session tracking
 gnome-base/gnome-control-center:wacom - Enable support for Wacom tablets and drawing devices
 gnome-base/gnome-desktop:introspection - Use dev-libs/gobject-introspection for introspection
 gnome-base/gnome-extra-apps:shotwell - Install the media-gfx/shotwell photo manager
@@ -2013,6 +2015,7 @@ gnome-extra/gnome-games:introspection - Use dev-libs/gobject-introspection for i
 gnome-extra/gnome-games:seed - Install swell-foop and lightsoff which are written in JavaScript using dev-libs/seed
 gnome-extra/gnome-games:sudoku - Install the game Sudoku which uses dev-python/pygobject and introspection
 gnome-extra/gnome-media:twolame - Allow encoding MPEG Audio Layer 2 (MP2) files using twolame
+gnome-extra/gnome-packagekit:systemd - Use sys-apps/systemd instead of sys-auth/consolekit for rebooting
 gnome-extra/gnome-power-manager:applet - Build battery monitor applet
 gnome-extra/gnome-screensaver:systemd - Support sys-apps/systemd's logind
 gnome-extra/gnome-system-monitor:systemd - Display sys-apps/systemd metadata, e.g. unit names, for running processes
@@ -3217,6 +3220,7 @@ media-video/rtmpdump:gnutls - Use GnuTLS library instead of the default OpenSSL
 media-video/rtmpdump:polarssl - Use PolarSSL library instead of the default OpenSSL
 media-video/smplayer2:download-subs - Enable subtitle downloader (requires QuaZip)
 media-video/totem:bluetooth - Enable support for user-presence detection via the user's bluetooth handset using net-wireless/bluez
+media-video/totem:flash - Install browser plugin for playing embedded Adobe Flash videos. Warning: breaks non-video Flash objects on many websites.
 media-video/totem:grilo - Use media-libs/grilo to browse media content from various sources
 media-video/totem:introspection - Use dev-libs/gobject-introspection for introspection
 media-video/totem:iplayer - Enable BBC player support
@@ -4346,6 +4350,7 @@ net-misc/vde:pcap - Enable the pcap-based plugin that allows creating a switch a
 net-misc/vde:ssl - Enable the cryptcab plugin that allows creating an encrypted virtual cable.
 net-misc/vidalia:tor - Allow to use a local tor setup
 net-misc/vinagre:applet - Enable vinagre applet for gnome-base/gnome-panel
+net-misc/vinagre:spice - Enable access to SPICE-enabled virtual machines
 net-misc/vinagre:ssh - Enable ssh plugin using x11-libs/vte
 net-misc/vinagre:telepathy - Enable access to remote desktop via a net-libs/telepathy-glib client
 net-misc/vino:telepathy - Enable desktop sharing through a telepathy client
@@ -4965,6 +4970,7 @@ sys-apps/v86d:x86emu - Use x86emu for Video BIOS calls
 sys-apps/watchdog:nfs - enable support for checking nfs mounts
 sys-apps/xinetd:rpc - support RPC services
 sys-auth/consolekit:policykit - Use the PolicyKit framework (sys-auth/polkit) to get authorization for suspend/shutdown.
+sys-auth/fingerprint-gui:upekbsapi - Add UPEK BSAPI drivers for identify functions on some readers
 sys-auth/munge:gcrypt - Use libgcrypt instead of openssl
 sys-auth/nss-mdns:search-domains - Honour search domains from /etc/resolv.conf (see bug #201948 for possible side effects)
 sys-auth/pam_mktemp:prevent-removal - If supported, set EXT2_APPEND_FL on /tmp/.private to prevent temporary directories from being removed
@@ -5526,6 +5532,7 @@ x11-libs/libqxt:sql - Build the QxtSql module
 x11-libs/libqxt:web - Build the QxtWeb module
 x11-libs/libqxt:zeroconf - Build the QxtZeroconf module
 x11-libs/libwnck:introspection - Use dev-libs/gobject-introspection for introspection
+x11-libs/libwnck:tools - Install wnckprop-3 and wnck-urgency-monitor-3 command-line tools
 x11-libs/libxklavier:introspection - Use dev-libs/gobject-introspection for introspection
 x11-libs/mx:glade - Build the dev-util/glade catalog files
 x11-libs/mx:introspection - Use dev-libs/gobject-introspection for introspection
@@ -5545,7 +5552,6 @@ x11-libs/qt-bearer:qpa - Build a window system agnostic implementation of Qt
 x11-libs/qt-core:c++0x - Build Qt using the C++11 standard
 x11-libs/qt-core:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
 x11-libs/qt-core:glib - Enable dev-libs/glib eventloop support
-x11-libs/qt-core:jit - Enables JIT for Javascript usage inside Qt
 x11-libs/qt-core:optimized-qmake - Enable qmake optimization
 x11-libs/qt-core:private-headers - Install Qt declarative private headers required by Qt-creator QmlDesigner and QmlInspector plugins"
 x11-libs/qt-core:qpa - Build a window system agnostic implementation of Qt
@@ -5581,7 +5587,8 @@ x11-libs/qt-gui:qt3support - Enable the Qt3Support libraries for Qt4. Note that 
 x11-libs/qt-gui:raster - Use the alternative raster graphicssystem as default rendering engine
 x11-libs/qt-gui:trace - Build the new 'trace' graphicsssytem engine which allows to record all drawing operations into a trace buffer. Later it can be replayed with the qttracereplay utility
 x11-libs/qt-meta:kde - Select media-libs/phonon as Phonon variant (needed for KDE)
-x11-libs/qt-meta:openvg - Build the Qt OpenVG module
+x11-libs/qt-meta:opengl - Enable the QtOpenGL module
+x11-libs/qt-meta:openvg - Enable the QtOpenVG module
 x11-libs/qt-meta:qt3support - Enable the Qt3Support library for Qt4
 x11-libs/qt-mobility:bearer - Build the QtBearer module
 x11-libs/qt-mobility:bluetooth - Enable Bluetooth support in QtConnectivity and QtSystemInfo modules
@@ -5626,7 +5633,6 @@ x11-libs/qt-qt3support:phonon - Enable phonon configuration dialog in qtconfig
 x11-libs/qt-qt3support:qpa - Build a window system agnostic implementation of Qt
 x11-libs/qt-script:c++0x - Build Qt using the C++11 standard
 x11-libs/qt-script:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
-x11-libs/qt-script:jit - Enables JIT for Javascript usage inside Qt
 x11-libs/qt-script:private-headers - Install Qt declarative private headers required by Qt-creator QmlDesigner and QmlInspector plugins"
 x11-libs/qt-script:qpa - Build a window system agnostic implementation of Qt
 x11-libs/qt-sql:c++0x - Build Qt using the C++11 standard
@@ -5642,7 +5648,6 @@ x11-libs/qt-test:qpa - Build a window system agnostic implementation of Qt
 x11-libs/qt-webkit:c++0x - Build Qt using the C++11 standard
 x11-libs/qt-webkit:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
 x11-libs/qt-webkit:gstreamer - Enable HTML5 audio/video support via media-libs/gstreamer
-x11-libs/qt-webkit:jit - Enable JavaScriptCore just-in-time compiler for faster JavaScript execution
 x11-libs/qt-webkit:kde - Select media-libs/phonon as Phonon variant (needed for KDE)
 x11-libs/qt-webkit:qpa - Build a window system agnostic implementation of Qt
 x11-libs/qt-xmlpatterns:c++0x - Build Qt using the C++11 standard

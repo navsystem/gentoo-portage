@@ -7,7 +7,7 @@ http://geeqie.sourceforge.net/
 GPL-2
 A lightweight GTK image viewer forked from GQview
 amd64 ~ppc x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools libtool multilib toolchain-funcs
 doc exif lcms lirc xmp
 
 

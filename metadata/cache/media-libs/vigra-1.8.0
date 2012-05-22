@@ -1,0 +1,22 @@
+>=dev-libs/boost-1.40[python?] fftw? ( sci-libs/fftw:3.0 ) hdf5? ( sci-libs/hdf5 ) jpeg? ( virtual/jpeg ) openexr? ( media-libs/openexr ) png? ( media-libs/libpng:0 ) tiff? ( media-libs/tiff:0 ) doc? ( app-doc/doxygen python? ( dev-python/sphinx ) ) test? ( python? ( dev-python/nose ) ) >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) python? ( || ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) ) python? ( || ( =dev-lang/python-2.7*[threads,xml] =dev-lang/python-2.6*[threads,xml] ) )
+>=dev-libs/boost-1.40[python?] fftw? ( sci-libs/fftw:3.0 ) hdf5? ( sci-libs/hdf5 ) jpeg? ( virtual/jpeg ) openexr? ( media-libs/openexr ) png? ( media-libs/libpng:0 ) tiff? ( media-libs/tiff:0 ) python? ( || ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) ) python? ( || ( =dev-lang/python-2.7*[threads,xml] =dev-lang/python-2.6*[threads,xml] ) )
+0
+http://hci.iwr.uni-heidelberg.de/vigra/vigra-1.8.0-src.tar.gz
+
+http://hci.iwr.uni-heidelberg.de/vigra/
+MIT
+C++ computer vision library with emphasize on customizable algorithms and data structures
+~amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~sparc-solaris ~x64-solaris ~x86-solaris
+base cmake-utils eutils flag-o-matic multilib python toolchain-funcs user
+doc +fftw +hdf5 +jpeg openexr +png +python test +tiff
+doc? ( hdf5 fftw ) python? ( hdf5 ) test? ( hdf5 python fftw )
+
+
+4
+
+compile configure install postinst postrm prepare setup test unpack
+
+
+
+
+

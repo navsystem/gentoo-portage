@@ -7,7 +7,7 @@ http://wayland.freedesktop.org/
 CCPL-Attribution-ShareAlike-3.0 MIT
 Wayland protocol libraries
 ~amd64 ~arm ~hppa ~ppc64 ~x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools libtool multilib toolchain-funcs
 static-libs
 
 

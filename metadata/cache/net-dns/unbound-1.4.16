@@ -6,7 +6,7 @@ http://unbound.net/downloads/unbound-1.4.16.tar.gz
 http://unbound.net/
 BSD
 A validating, recursive and caching DNS resolver
-amd64 ~x86 ~x64-macos
+amd64 x86 ~x64-macos
 eutils flag-o-matic multilib python toolchain-funcs user
 debug gost python selinux static-libs test threads
 

@@ -1,5 +1,5 @@
-dev-python/setuptools dev-python/django test? ( dev-python/python-ldap ) =dev-lang/python-2*
-=dev-lang/python-2*
+dev-python/django dev-python/setuptools test? ( dev-python/python-ldap ) =dev-lang/python-2*
+dev-python/django =dev-lang/python-2*
 0
 http://dev.gentoo.org/~tampakrap/tarballs/django-ldapdb-0.1.0_p20120424.tar.bz2
 

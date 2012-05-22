@@ -7,7 +7,7 @@ http://open1x.sourceforge.net/
 || ( GPL-2 BSD )
 Open1X xsupplicant is an open source implementation of the IEEE 802.1X protocol.
 ~amd64 ~x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools libtool multilib toolchain-funcs
 
 
 

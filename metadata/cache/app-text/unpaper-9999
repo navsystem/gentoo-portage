@@ -7,7 +7,7 @@ http://www.flameeyes.eu/projects/unpaper
 GPL-2
 Post-processor for scanned and photocopied book pages
 
-autotools eutils git-2 libtool multilib toolchain-funcs user
+autotools git-2 libtool multilib toolchain-funcs
 test
 
 

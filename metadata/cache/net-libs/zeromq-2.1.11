@@ -7,7 +7,7 @@ http://www.zeromq.org
 LGPL-3
 ZeroMQ is a brokerless messaging kernel with extremely high performance.
 amd64 x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools libtool multilib toolchain-funcs
 pgm test static-libs
 
 
