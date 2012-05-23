@@ -12,9 +12,9 @@ eutils multilib toolchain-funcs user
 
 
 
-3
+4
 
-compile install prepare
+install prepare
 
 
 

@@ -6,7 +6,7 @@ http://ooo2gd.googlecode.com/files/ooo2gd_3.0.0.oxt
 http://code.google.com/p/ooo2gd/
 LGPL-2
 Extension for export to Google docs, zoho and WebDAV
-~amd64 ~x86
+amd64 x86
 eutils multilib office-ext toolchain-funcs user
 
 

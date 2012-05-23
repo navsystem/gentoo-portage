@@ -6,7 +6,7 @@ mirror://gnu/parallel/parallel-20120422.tar.bz2
 http://www.gnu.org/software/parallel/
 GPL-3
 A shell tool for executing jobs in parallel locally or on remote machines
-~amd64 ~x86 ~amd64-linux ~x86-linux
+~amd64 x86 ~amd64-linux ~x86-linux
 
 
 

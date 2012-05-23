@@ -5,7 +5,7 @@ mirror://gentoo/tash-8.4.1a.tar.bz2
 
 http://tcladashell.sourceforge.net/index.htm
 GPL-2
-Tash provides tcl Ada bindings
+tcl Ada bindings
 ~amd64 ~x86
 eutils flag-o-matic gnat multilib toolchain-funcs user
 
