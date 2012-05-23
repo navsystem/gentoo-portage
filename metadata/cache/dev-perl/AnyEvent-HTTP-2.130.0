@@ -6,7 +6,7 @@ mirror://cpan/authors/id/M/ML/MLEHMANN/AnyEvent-HTTP-2.13.tar.gz
 http://search.cpan.org/dist/AnyEvent-HTTP/
 || ( Artistic GPL-1 GPL-2 GPL-3 )
 Simple but non-blocking HTTP/HTTPS client
-amd64 ~x86
+amd64 x86
 base eutils multilib perl-module toolchain-funcs user
 
 

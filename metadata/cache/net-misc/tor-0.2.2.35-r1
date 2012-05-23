@@ -6,7 +6,7 @@ https://archive.torproject.org/tor-package-archive/tor-0.2.2.35.tar.gz
 http://www.torproject.org/
 BSD
 Anonymizing overlay network for TCP
-~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
+~amd64 ~arm ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
 autotools eutils flag-o-matic libtool multilib toolchain-funcs user
 tor-hardening +transparent-proxy threads selinux
 

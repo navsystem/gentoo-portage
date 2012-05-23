@@ -6,7 +6,7 @@ http://dev.gentoo.org/~ssuominen/libclastfm-0.4_p20120315.tar.xz
 http://sourceforge.net/projects/liblastfm/
 GPL-3
 An unofficial C-API to the last.fm web service
-amd64 ~x86
+amd64 x86
 autotools libtool multilib toolchain-funcs
 static-libs
 

@@ -7,7 +7,7 @@ http://www.texmacs.org/
 GPL-3
 Wysiwyg text processor with high-quality maths
 alpha amd64 ppc sparc x86
-autotools libtool multilib toolchain-funcs
+autotools eutils libtool multilib toolchain-funcs user
 imlib jpeg netpbm svg spell
 
 

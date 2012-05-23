@@ -6,7 +6,7 @@ x11-libs/wxGTK:2.8[X,opengl] sys-libs/zlib sci-electronics/electronics-menu
 http://kicad.sourceforge.net
 GPL-2
 Electronic Schematic and PCB design tools.
-amd64 ~ppc ~ppc64 ~x86
+amd64 ~ppc ~ppc64 x86
 base bzr cmake-utils eutils fdo-mime flag-o-matic gnome2-utils multilib toolchain-funcs user wxwidgets
 dev-doc debug doc examples minimal python
 

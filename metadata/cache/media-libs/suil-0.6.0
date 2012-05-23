@@ -6,7 +6,7 @@ http://download.drobilla.net/suil-0.6.0.tar.bz2
 http://drobilla.net/software/suil/
 ISC
 Lightweight C library for loading and wrapping LV2 plugin UIs
-~amd64
+~amd64 ~x86
 base eutils multilib toolchain-funcs user waf-utils
 doc gtk qt4
 

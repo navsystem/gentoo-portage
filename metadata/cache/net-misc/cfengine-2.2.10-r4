@@ -6,7 +6,7 @@ http://cfengine.com/source_code/download?file=cfengine-2.2.10.tar.gz -> cfengine
 http://www.cfengine.org/
 GPL-2
 An automated suite of programs for configuring and maintaining Unix-like computers
-amd64 ~arm ~ppc ~s390 ~sparc ~x86
+amd64 ~arm ~ppc ~s390 ~sparc x86
 eutils multilib toolchain-funcs user
 vim-syntax
 

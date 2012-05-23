@@ -6,7 +6,7 @@ http://lv2plug.in/spec/lv2-1.0.0.tar.bz2
 http://lv2plug.in/
 MIT
 LV2 is a simple but extensible successor of LADSPA
-~amd64
+~amd64 ~x86
 base eutils multilib toolchain-funcs user waf-utils
 doc plugins
 

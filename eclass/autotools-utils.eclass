@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.48 2012/02/04 09:26:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.50 2012/05/22 14:29:06 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -327,21 +327,18 @@ autotools-utils_autoreconf() {
 		autotools_run_tool gnome-doc-prepare --copy --force
 	fi
 
-	# We need to perform the check twice to know whether to run eaclocal.
-	# (_elibtoolize does that itself)
 	if [[ $(autotools_check_macro AC_PROG_LIBTOOL AM_PROG_LIBTOOL LT_INIT) ]]
 	then
 		_elibtoolize --copy --force --install
-	else
-		eaclocal
 	fi
 
+	eaclocal
 	eautoconf
 	eautoheader
 	FROM_EAUTORECONF=sure eautomake
 
 	local x
-	for x in $(autotools_get_subdirs); do
+	for x in $(autotools_check_macro_val AC_CONFIG_SUBDIRS); do
 		if [[ -d ${x} ]] ; then
 			pushd "${x}" >/dev/null
 			autotools-utils_autoreconf

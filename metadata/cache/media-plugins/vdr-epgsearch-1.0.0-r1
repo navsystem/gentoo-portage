@@ -8,7 +8,7 @@ GPL-2
 Video Disk Recorder epgsearch plugin
 ~amd64 ~x86
 base eutils flag-o-matic multilib toolchain-funcs user vdr-plugin-2
-pcre tre
+pcre tre linguas_de
 pcre? ( !tre ) tre? ( !pcre )
 
 
