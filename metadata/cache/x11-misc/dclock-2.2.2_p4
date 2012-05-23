@@ -6,7 +6,7 @@ mirror://debian/pool/main/d/dclock/dclock_2.2.2.orig.tar.gz mirror://debian/pool
 http://packages.qa.debian.org/d/dclock.html
 GPL-2
 Digital clock for the X window system.
-amd64 ~ppc x86
+amd64 ppc x86
 eutils multilib toolchain-funcs user
 
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-11.0.ebuild,v 1.8 2012/05/14 15:56:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-11.0.ebuild,v 1.11 2012/05/22 22:54:57 jdhore Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ else
 	inherit autotools
 	MY_P=${P/_/-*_}
 	SRC_URI="http://mirrors.xbmc.org/releases/source/${MY_P}.tar.gz"
-	KEYWORDS="amd64 ~x86"
+	KEYWORDS="amd64 x86"
 	S=${WORKDIR}/${MY_P}
 fi
 
@@ -73,6 +73,7 @@ COMMON_DEPEND="virtual/opengl
 	media-libs/tiff
 	pulseaudio? ( media-sound/pulseaudio )
 	media-sound/wavpack
+	|| ( media-libs/libpostproc <media-video/libav-0.8.2-r1 media-video/ffmpeg )
 	>=virtual/ffmpeg-0.6[encode]
 	rtmp? ( media-video/rtmpdump )
 	avahi? ( net-dns/avahi )

@@ -6,7 +6,7 @@ mirror://sourceforge/kchmviewer/kchmviewer-6.0.tar.gz
 http://www.kchmviewer.net/
 GPL-3
 KchmViewer is a feature rich chm file viewer, based on Qt.
-amd64 ~ppc ~x86
+amd64 ~ppc x86
 base cmake-utils eutils fdo-mime flag-o-matic gnome2-utils kde4-base kde4-functions multilib qt4-r2 toolchain-funcs user versionator virtualx
 kde
 

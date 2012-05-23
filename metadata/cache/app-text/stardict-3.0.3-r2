@@ -6,7 +6,7 @@ test
 http://code.google.com/p/stardict-3/
 CPL-1.0 GPL-3 LGPL-2
 A international dictionary supporting fuzzy and glob style matching
-amd64 ~ppc ~ppc64 ~sparc ~x86
+amd64 ppc ~ppc64 ~sparc ~x86
 eutils fdo-mime gnome.org gnome2 gnome2-utils libtool multilib toolchain-funcs user versionator
 espeak gnome gucharmap qqwry pronounce spell tools
 

@@ -6,7 +6,7 @@ http://download.drobilla.net/sratom-0.2.0.tar.bz2
 http://drobilla.net/software/sratom/
 ISC
 Library for serialising LV2 atoms to/from RDF, particularly the Turtle syntax
-~amd64
+~amd64 ~x86
 base eutils multilib toolchain-funcs user waf-utils
 doc static-libs test
 
