@@ -1,5 +1,5 @@
->=dev-libs/libusb-0.1.12:0 pam? ( virtual/pam ) sys-devel/libtool virtual/pkgconfig
->=dev-libs/libusb-0.1.12:0 pam? ( virtual/pam )
+virtual/libusb:0 pam? ( virtual/pam ) sys-devel/libtool virtual/pkgconfig
+virtual/libusb:0 pam? ( virtual/pam )
 0
 mirror://sourceforge/thinkfinger/thinkfinger-0.3.tar.gz
 

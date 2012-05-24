@@ -6,7 +6,7 @@ mirror://sourceforge/texmaths/TexMaths-0.35.oxt
 http://roland65.free.fr/texmaths/
 GPL-2
 LaTeX Equation Editor for LibreOffice
-~amd64 ~x86
+amd64 x86
 eutils multilib office-ext toolchain-funcs user
 
 

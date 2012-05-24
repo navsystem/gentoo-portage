@@ -1,5 +1,5 @@
-dev-libs/libusb
-dev-libs/libusb
+virtual/libusb
+virtual/libusb
 0
 http://ww1.microchip.com/downloads/en/DeviceDoc/pk2cmdv1.20LinuxMacSource.tar.gz
 

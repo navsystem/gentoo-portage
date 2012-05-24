@@ -1,5 +1,5 @@
-dev-lang/jimtcl usb? ( dev-libs/libusb ) presto? ( dev-embedded/libftd2xx ) ftd2xx? ( dev-embedded/libftd2xx ) ftdi? ( dev-embedded/libftdi ) || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool dev-vcs/git
-dev-lang/jimtcl usb? ( dev-libs/libusb ) presto? ( dev-embedded/libftd2xx ) ftd2xx? ( dev-embedded/libftd2xx ) ftdi? ( dev-embedded/libftdi )
+dev-lang/jimtcl usb? ( virtual/libusb ) presto? ( dev-embedded/libftd2xx ) ftd2xx? ( dev-embedded/libftd2xx ) ftdi? ( dev-embedded/libftdi ) || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool dev-vcs/git
+dev-lang/jimtcl usb? ( virtual/libusb ) presto? ( dev-embedded/libftd2xx ) ftd2xx? ( dev-embedded/libftd2xx ) ftdi? ( dev-embedded/libftdi )
 0
 
 strip
