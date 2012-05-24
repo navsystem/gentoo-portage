@@ -6,7 +6,7 @@ mirror://debian/pool/main/u/unac/unac_1.8.0.orig.tar.gz
 http://www.nongnu.org/unac/
 GPL-2
 Library and command-line tool for removing accents from characters
-~amd64 ~x86
+~amd64 x86
 autotools eutils libtool multilib toolchain-funcs user
 static-libs test
 

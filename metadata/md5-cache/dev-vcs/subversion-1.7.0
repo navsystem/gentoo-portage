@@ -11,4 +11,4 @@ RDEPEND=>=dev-db/sqlite-3.4 >=dev-libs/apr-1.3:1 >=dev-libs/apr-util-1.3:1 dev-l
 SLOT=0
 SRC_URI=http://www.apache.org/dist/subversion/subversion-1.7.0.tar.bz2
 _eclasses_=autotools	9379e4c8f662d374e1ad511530869282	base	5f35078c26d6c60556d5c8a2feb4f84f	bash-completion	003731da0df19d26955927bd534f3058	db-use	2f5d6a2718559b90a51648d8ff58be83	depend.apache	1a38534d3f755d1ab1d92ce120bd7dbd	elisp-common	230b4edb497ef94e18cc7f0712daa862	eutils	39af24987a4a7a34dccf2ef9cc6af3f7	flag-o-matic	66cb710a2aa184a5687fe1289d7973ab	java-pkg-opt-2	131dd2a697d663c0e33247611b9a1cd7	java-utils-2	b173b5d55bfd6e328939985bc54a1c9e	libtool	46e19fa7553f66c48ebc7cf025acd3ed	multilib	5f4ad6cf85e365e8f0c6050ddd21659e	perl-module	f172bf9f9c1de91c81b83a1ae4c27d57	python	36d7e2b7aa4dce62364c72eec96610cf	toolchain-funcs	f71b9936acc911ed1cc84557d3b5c2b3	user	32a09e82e2f592bf88ad2fd08525166e	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=92d4189fecf307a2ec58ae55fe69650e
+_md5_=3100991a3eb0937cf0a9ecdcfb403d8e
