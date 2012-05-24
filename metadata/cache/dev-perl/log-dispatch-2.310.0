@@ -1,0 +1,22 @@
+dev-perl/Params-Validate dev-perl/Class-Load >=virtual/perl-ExtUtils-MakeMaker-6.31 dev-lang/perl[-build]
+dev-perl/Params-Validate dev-perl/Class-Load dev-lang/perl[-build]
+0
+mirror://cpan/authors/id/D/DR/DROLSKY/Log-Dispatch-2.31.tar.gz
+
+http://search.cpan.org/dist/Log-Dispatch/
+Artistic-2
+Dispatches messages to multiple Log::Dispatch::* objects
+~amd64 ~ppc ~x86
+base eutils multilib perl-module toolchain-funcs user
+
+
+
+
+4
+
+compile configure install prepare test unpack
+
+
+
+
+

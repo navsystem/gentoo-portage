@@ -6,7 +6,7 @@ http://distfiles.audacious-media-player.org/audacious-3.2.2.tar.bz2 mirror://gen
 http://audacious-media-player.org/
 GPL-2
 Audacious Player - Your music, your way, no exceptions
-~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux
+~alpha amd64 ~hppa ~ppc ~ppc64 ~sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux
 autotools eutils libtool multilib toolchain-funcs user
 chardet +gtk gtk3 nls session
 ^^ ( gtk gtk3 )

@@ -1,5 +1,5 @@
-media-libs/libmtp net-misc/curl x11-libs/qt-gui:4 virtual/pkgconfig
-media-libs/libmtp net-misc/curl x11-libs/qt-gui:4
+>=media-libs/libmtp-1.1.0 net-misc/curl x11-libs/qt-gui:4 virtual/pkgconfig >=sys-apps/sed-4
+>=media-libs/libmtp-1.1.0 net-misc/curl x11-libs/qt-gui:4
 0
 mirror://sourceforge/qtscrob/qtscrob-0.10.tar.bz2
 
@@ -7,14 +7,14 @@ http://qtscrob.sourceforge.net/
 GPL-2
 Updates a last.fm profile using information from a supported portable music player
 amd64 x86
-base eutils multilib qt4-r2 toolchain-funcs user
+base eutils gnome2-utils multilib qt4-r2 toolchain-funcs user
 cli +qt4
 
 
 
-2
+4
 
-compile configure install prepare unpack
+compile configure install postinst postrm preinst prepare unpack
 
 
 
