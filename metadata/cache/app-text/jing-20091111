@@ -1,0 +1,22 @@
+dev-java/ant-core:0 dev-java/iso-relax:0 dev-java/relaxng-datatype:0 dev-java/saxon:9 dev-java/xalan:0 dev-java/xerces:2 dev-java/xml-commons-resolver:0 >=virtual/jdk-1.5 app-arch/unzip >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip )
+dev-java/ant-core:0 dev-java/iso-relax:0 dev-java/relaxng-datatype:0 dev-java/saxon:9 dev-java/xalan:0 dev-java/xerces:2 dev-java/xml-commons-resolver:0 >=virtual/jre-1.5 >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip )
+0
+http://jing-trang.googlecode.com/files/jing-20091111.zip
+
+http://thaiopensource.com/relaxng/jing.html
+BSD
+Jing: A RELAX NG validator in Java
+~amd64 ~ppc ~x86
+eutils java-pkg-2 java-pkg-simple java-utils-2 multilib toolchain-funcs user versionator
+elibc_FreeBSD doc examples source elibc_FreeBSD
+
+
+
+4
+
+compile install preinst prepare setup unpack
+
+
+
+
+
