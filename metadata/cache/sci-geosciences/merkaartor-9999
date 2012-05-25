@@ -1,5 +1,5 @@
->=sci-libs/gdal-1.6.0 >=sci-libs/proj-4.6 >=x11-libs/qt-gui-4.7.2:4 >=x11-libs/qt-svg-4.7.2:4 exif? ( media-gfx/exiv2 ) gps? ( >=sci-geosciences/gpsd-2.92[cxx] ) libproxy? ( net-libs/libproxy ) webkit? ( >=x11-libs/qt-webkit-4.7.2:4 ) dev-vcs/git
->=sci-libs/gdal-1.6.0 >=sci-libs/proj-4.6 >=x11-libs/qt-gui-4.7.2:4 >=x11-libs/qt-svg-4.7.2:4 exif? ( media-gfx/exiv2 ) gps? ( >=sci-geosciences/gpsd-2.92[cxx] ) libproxy? ( net-libs/libproxy ) webkit? ( >=x11-libs/qt-webkit-4.7.2:4 )
+>=dev-libs/boost-1.46 >=sci-libs/gdal-1.6.0 >=sci-libs/proj-4.6 >=x11-libs/qt-gui-4.7.2:4 >=x11-libs/qt-svg-4.7.2:4 exif? ( media-gfx/exiv2 ) gps? ( >=sci-geosciences/gpsd-2.92[cxx] ) libproxy? ( net-libs/libproxy ) webkit? ( >=x11-libs/qt-webkit-4.7.2:4 ) dev-vcs/git
+>=dev-libs/boost-1.46 >=sci-libs/gdal-1.6.0 >=sci-libs/proj-4.6 >=x11-libs/qt-gui-4.7.2:4 >=x11-libs/qt-svg-4.7.2:4 exif? ( media-gfx/exiv2 ) gps? ( >=sci-geosciences/gpsd-2.92[cxx] ) libproxy? ( net-libs/libproxy ) webkit? ( >=x11-libs/qt-webkit-4.7.2:4 )
 0
 
 

@@ -1,0 +1,22 @@
+dev-python/jsonpickle dev-python/pyinotify dev-python/PyQt4 dev-vcs/git doc? ( app-text/asciidoc dev-python/sphinx app-text/xmlto ) sys-devel/gettext test? ( dev-python/nose ) =dev-lang/python-2*
+dev-python/jsonpickle dev-python/pyinotify dev-python/PyQt4 dev-vcs/git =dev-lang/python-2*
+0
+mirror://github/git-cola/git-cola/git-cola-1.7.7.tar.gz
+test
+http://git-cola.github.com/
+GPL-2
+The highly caffeinated git GUI
+~amd64 ~x86 ~amd64-linux ~x86-linux
+distutils eutils multilib python toolchain-funcs user
+doc test
+
+
+
+4
+
+compile install postinst postrm prepare setup test
+
+
+
+
+

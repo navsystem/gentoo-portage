@@ -7,14 +7,14 @@ http://code.google.com/p/google-ctemplate/
 BSD
 A simple but powerful template language for C++
 amd64 arm ~ppc x86 ~amd64-linux ~x86-linux
-elisp-common multilib python toolchain-funcs
+elisp-common eutils multilib python toolchain-funcs user
 doc emacs vim-syntax static-libs test
 
 
 
 4
 
-compile configure install postinst postrm setup
+compile configure install postinst postrm prepare setup
 
 
 
