@@ -6,7 +6,7 @@ http://fukuchi.org/works/qrencode/qrencode-3.3.0.tar.bz2
 http://fukuchi.org/works/qrencode/
 LGPL-2
 C library for encoding data in a QR Code symbol
-~amd64 ~arm ~ppc x86
+amd64 ~arm ~ppc x86
 autotools autotools-utils eutils libtool multilib toolchain-funcs user
 
 

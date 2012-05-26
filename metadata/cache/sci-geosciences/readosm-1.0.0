@@ -1,0 +1,22 @@
+
+
+0
+http://www.gaia-gis.it/gaia-sins/readosm-sources/readosm-1.0.0.tar.gz
+
+http://www.gaia-gis.it/spatialite
+MPL-1.1
+A complete Spatial DBMS in a nutshell built upon sqlite
+~amd64 ~x86
+multilib toolchain-funcs
+static-libs
+
+
+
+4
+
+configure install
+
+
+
+
+
