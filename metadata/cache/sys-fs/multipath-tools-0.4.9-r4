@@ -7,14 +7,14 @@ http://christophe.varoqui.free.fr/
 GPL-2
 Device mapper target autoconfig
 ~amd64 ~arm ~ppc ~ppc64 ~x86
-eutils multilib toolchain-funcs user
+base eutils multilib toolchain-funcs user
 
 
 
 
 4
 
-compile install postinst preinst
+compile configure install postinst preinst prepare unpack
 
 
 
