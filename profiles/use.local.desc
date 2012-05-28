@@ -1593,6 +1593,7 @@ dev-python/spyder:pylint - Add support for dev-python/pylint
 dev-python/spyder:rope - Add support for dev-python/rope
 dev-python/spyder:scipy - Add support for sci-libs/scipy
 dev-python/spyder:sphinx - Add support for dev-python/sphinx
+dev-python/starcluster:epydoc - Enable build of apidocs in html using epydoc
 dev-python/sympy:imaging - Add support for dev-python/imaging
 dev-python/sympy:ipython - Add support for dev-python/ipython
 dev-python/sympy:mathml - Add support for mathml

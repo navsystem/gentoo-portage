@@ -1,0 +1,22 @@
+dev-python/munkres dev-python/python-musicbrainz-ngs dev-python/unidecode media-libs/mutagen dev-lang/python
+dev-python/munkres dev-python/python-musicbrainz-ngs dev-python/unidecode media-libs/mutagen dev-lang/python
+0
+http://beets.googlecode.com/files/beets-1.0b14.tar.gz
+
+http://beets.radbox.org/
+MIT
+A media library management system for obsessive-compulsive music geeks.
+~amd64
+distutils multilib python toolchain-funcs
+
+
+
+
+4
+
+compile install postinst postrm prepare setup
+
+
+
+
+
