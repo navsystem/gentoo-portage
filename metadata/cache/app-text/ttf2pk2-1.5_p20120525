@@ -1,4 +1,4 @@
->=dev-libs/kpathsea-6.0.1_p20110627 media-libs/freetype:2 sys-libs/zlib !media-libs/freetype:1 !=dev-texlive/texlive-langcjk-2011*[source] dev-util/pkgconfig
+>=dev-libs/kpathsea-6.0.1_p20110627 media-libs/freetype:2 sys-libs/zlib !media-libs/freetype:1 !=dev-texlive/texlive-langcjk-2011*[source] virtual/pkgconfig
 >=dev-libs/kpathsea-6.0.1_p20110627 media-libs/freetype:2 sys-libs/zlib !media-libs/freetype:1 !=dev-texlive/texlive-langcjk-2011*[source]
 0
 mirror://gentoo/texlive-20120525-source.tar.xz
@@ -6,7 +6,7 @@ mirror://gentoo/texlive-20120525-source.tar.xz
 http://tug.org/texlive/
 GPL-2
 Freetype 2 based TrueType font to TeX's PK format converter
-~amd64
+~amd64 ~x86 ~x86-fbsd
 
 
 

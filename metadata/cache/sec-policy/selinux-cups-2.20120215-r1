@@ -1,5 +1,5 @@
->=sys-apps/policycoreutils-2.0.82 >=sec-policy/selinux-base-policy-2.20120215-r9 sys-devel/m4 >=sys-apps/checkpolicy-2.0.21
->=sys-apps/policycoreutils-2.0.82 >=sec-policy/selinux-base-policy-2.20120215-r9
+>=sec-policy/selinux-lpd-2.20120215 >=sys-apps/policycoreutils-2.0.82 >=sec-policy/selinux-base-policy-2.20120215-r9 sys-devel/m4 >=sys-apps/checkpolicy-2.0.21
+>=sec-policy/selinux-lpd-2.20120215 >=sys-apps/policycoreutils-2.0.82 >=sec-policy/selinux-base-policy-2.20120215-r9
 0
 http://oss.tresys.com/files/refpolicy/refpolicy-2.20120215.tar.bz2 http://dev.gentoo.org/~swift/patches/selinux-base-policy/patchbundle-selinux-base-policy-2.20120215-r9.tar.bz2
 
