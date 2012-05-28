@@ -3,7 +3,7 @@ dev-lang/tk sci-electronics/geda
 0
 http://www.viasic.com/opensource/gnetman-22May06.tar.gz
 
-http://www.viasic.com/opensource/
+http://sourceforge.net/projects/gnetman/ http://www.viasic.com/opensource/
 GPL-2
 A GNU Netlist Manipulation Library
 ~amd64 ~ppc ~x86

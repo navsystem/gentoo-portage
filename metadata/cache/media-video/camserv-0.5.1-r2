@@ -1,5 +1,5 @@
-virtual/jpeg media-libs/imlib2 || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
-virtual/jpeg media-libs/imlib2
+media-libs/imlib2 >=sys-devel/libtool-2.2.6b virtual/jpeg media-libs/libv4l || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+media-libs/imlib2 >=sys-devel/libtool-2.2.6b virtual/jpeg
 0
 mirror://sourceforge/cserv/camserv-0.5.1.tar.gz
 
@@ -12,9 +12,9 @@ autotools eutils libtool multilib toolchain-funcs user
 
 
 
+4
 
-
-install unpack
+configure install prepare
 
 
 

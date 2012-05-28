@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/owfs-2.7_p21.ebuild,v 1.7 2012/05/22 16:31:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/owfs-2.7_p21.ebuild,v 1.9 2012/05/25 10:54:41 ssuominen Exp $
 
 EAPI="2"
 PYTHON_DEPEND="python? 2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython 2.7-pypy-*"
 
-inherit depend.php distutils eutils perl-module
+inherit depend.php distutils eutils perl-module user
 
 MY_P=${P/_/}
 
@@ -19,7 +19,7 @@ RDEPEND="fuse? ( sys-fs/fuse )
 	perl? ( dev-lang/perl )
 	php? ( dev-lang/php )
 	tcl? ( dev-lang/tcl )
-	usb? ( virtual/libusb )
+	usb? ( virtual/libusb:0 )
 	zeroconf? ( net-dns/avahi[mdnsresponder-compat] )"
 DEPEND="${RDEPEND}
 	perl? ( dev-lang/swig )

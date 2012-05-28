@@ -1,0 +1,22 @@
+dev-lang/perl[-build]
+dev-lang/perl[-build]
+0
+mirror://cpan/authors/id/C/CJ/CJM/Text-Wrapper-1.04.tar.gz
+
+http://search.cpan.org/dist/Text-Wrapper/
+|| ( Artistic GPL-1 GPL-2 GPL-3 )
+Word wrap text by breaking long lines
+~alpha ~amd64 ~hppa ~ppc ~ppc64 ~x86
+base eutils multilib perl-module toolchain-funcs user
+
+
+
+
+4
+
+compile configure install prepare test unpack
+
+
+
+
+

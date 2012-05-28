@@ -6,7 +6,7 @@ mirror://sourceforge/poco/poco-1.4.3p1-all.tar.bz2 doc? ( mirror://sourceforge/p
 http://pocoproject.org/
 Boost-1.0
 C++ class libraries that simplify and accelerate the development of network-centric, portable applications.
-~amd64 ~arm ~x86
+amd64 ~arm ~x86
 eutils flag-o-matic multilib toolchain-funcs user versionator
 doc examples iodbc mysql odbc sqlite ssl test
 

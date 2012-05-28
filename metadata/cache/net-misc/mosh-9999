@@ -8,13 +8,13 @@ GPL-3
 Mobile shell that supports roaming and intelligent local echo
 
 autotools git-2 libtool multilib toolchain-funcs
-+client examples +server +utempter
+bash-completion +client examples +server ufw +utempter
 || ( client server ) examples? ( client )
 
 
 4
 
-configure install prepare unpack
+compile configure install prepare test unpack
 
 
 

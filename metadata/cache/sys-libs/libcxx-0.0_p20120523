@@ -1,0 +1,22 @@
+sys-devel/clang app-arch/xz-utils >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+
+0
+mirror://gentoo/libcxx-0.0_p20120523.tar.xz
+
+http://libcxx.llvm.org/
+|| ( UoI-NCSA MIT )
+New implementation of the C++ standard library, targeting C++0X
+~amd64
+base cmake-utils eutils flag-o-matic multilib toolchain-funcs user
+
+
+
+
+4
+
+compile configure install postinst prepare test unpack
+
+
+
+
+

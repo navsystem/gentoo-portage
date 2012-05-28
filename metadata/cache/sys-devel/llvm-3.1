@@ -1,0 +1,22 @@
+dev-lang/perl >=sys-devel/make-3.79 >=sys-devel/flex-2.5.4 >=sys-devel/bison-1.875d || ( >=sys-devel/gcc-3.0 >=sys-devel/gcc-apple-4.2.1 ) || ( >=sys-devel/binutils-2.18 >=sys-devel/binutils-apple-3.2.3 ) gold? ( >=sys-devel/binutils-2.22 ) libffi? ( virtual/pkgconfig virtual/libffi ) ocaml? ( dev-lang/ocaml ) udis86? ( amd64? ( dev-libs/udis86[pic] ) !amd64? ( dev-libs/udis86 ) ) =dev-lang/python-2*
+dev-lang/perl libffi? ( virtual/libffi ) vim-syntax? ( || ( app-editors/vim app-editors/gvim ) ) =dev-lang/python-2*
+0
+http://llvm.org/releases/3.1/llvm-3.1.src.tar.gz
+
+http://llvm.org/
+UoI-NCSA
+Low Level Virtual Machine
+~amd64 ~ppc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos
+eutils flag-o-matic multilib python toolchain-funcs user
+debug gold +libffi multitarget ocaml test udis86 vim-syntax
+
+
+
+4
+
+compile configure install prepare setup
+
+
+
+
+

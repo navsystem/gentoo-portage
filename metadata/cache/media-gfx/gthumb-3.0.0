@@ -6,7 +6,7 @@ mirror://gnome/sources/gthumb/3.0/gthumb-3.0.0.tar.xz
 https://live.gnome.org/gthumb
 GPL-2
 Image viewer and browser for Gnome
-~amd64 ~x86
+~amd64 ~ppc ~ppc64 ~x86
 eutils fdo-mime gnome.org gnome2 gnome2-utils libtool multilib toolchain-funcs user versionator
 cdr exif gnome-keyring gstreamer http jpeg raw slideshow svg tiff test debug
 

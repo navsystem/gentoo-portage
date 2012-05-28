@@ -7,7 +7,7 @@ http://podgorny.cz/uptimed
 GPL-2
 System uptime record daemon that keeps track of your highest uptimes
 alpha amd64 ~arm hppa ~mips ppc ppc64 sparc x86 ~x86-fbsd
-autotools libtool multilib toolchain-funcs
+autotools libtool multilib toolchain-funcs user
 
 
 

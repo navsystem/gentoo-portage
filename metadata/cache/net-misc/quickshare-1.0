@@ -6,7 +6,7 @@ http://houbysoft.com/download/quickshare-1.0-src.tar.gz
 http://houbysoft.com/qs/
 GPL-3
 A simple HTTP server with a GUI which allows for easy sharing of files
-~amd64 x86
+amd64 x86
 eutils multilib toolchain-funcs user
 
 
