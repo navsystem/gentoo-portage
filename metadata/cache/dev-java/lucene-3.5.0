@@ -1,0 +1,22 @@
+>=virtual/jdk-1.5 dev-java/ant-nodeps:0 dev-java/junit:4 dev-java/ant-junit:0 contrib? ( dev-java/jakarta-regexp:1.4 dev-java/commons-compress:0 dev-java/commons-collections:0 dev-java/commons-digester:0 dev-java/commons-logging:0 dev-java/commons-beanutils:1.7 ) >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip ) >=dev-java/ant-core-1.7.0 >=dev-java/javatoolkit-0.3.0-r2 >=dev-lang/python-2.4
+>=virtual/jdk-1.5 >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip )
+3.5
+mirror://apache/lucene/java/3.5.0/lucene-3.5.0-src.tgz
+
+http://lucene.apache.org
+Apache-2.0
+High-performance, full-featured text search engine library written entirely in Java
+~amd64 ~x86
+eutils java-ant-2 java-pkg-2 java-utils-2 multilib toolchain-funcs user versionator
+elibc_FreeBSD doc source test contrib elibc_FreeBSD
+
+
+
+3
+
+compile configure install preinst prepare setup test
+
+
+
+
+

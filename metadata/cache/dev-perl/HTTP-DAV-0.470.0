@@ -6,7 +6,7 @@ mirror://cpan/authors/id/C/CO/COSIMO/HTTP-DAV-0.47.tar.gz
 http://search.cpan.org/dist/HTTP-DAV/
 || ( Artistic GPL-1 GPL-2 GPL-3 )
 A WebDAV client library for Perl5
-amd64 ~ia64 ~ppc ~sparc x86
+amd64 ~ppc x86
 base eutils multilib perl-module toolchain-funcs user
 
 

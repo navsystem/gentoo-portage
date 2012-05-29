@@ -1,11 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rope/rope-0.9.3.ebuild,v 1.5 2012/04/12 15:44:54 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rope/rope-0.9.3.ebuild,v 1.7 2012/05/28 21:23:50 floppym Exp $
 
 EAPI="3"
-PYTHON_DEPEND="2:2.5"
+
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.4 3.*"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
+PYTHON_TESTS_FAILURES_TOLERANT_ABIS="2.7-pypy-*"
 
 inherit distutils eutils
 
@@ -18,7 +20,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=""
+DEPEND="dev-python/setuptools"
 RDEPEND=""
 
 src_prepare() {

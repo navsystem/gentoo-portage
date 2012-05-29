@@ -8,7 +8,7 @@ MIT
 HTML parser based on the HTML5 specification
 ~amd64 ~x86 ~x86-fbsd
 distutils multilib python toolchain-funcs
-examples
+
 
 
 
