@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install postinst postrm prepare setup
+DEPEND=dev-lang/python[sqlite] dev-python/munkres dev-python/python-musicbrainz-ngs dev-python/unidecode media-libs/mutagen chroma? ( dev-python/pyacoustid ) lastgenre? ( dev-python/pylast ) bpd? ( dev-python/bluelet ) replaygain? ( media-sound/rgain ) web? ( dev-python/flask ) dev-lang/python
+DESCRIPTION=A media library management system for obsessive-compulsive music geeks.
+EAPI=4
+HOMEPAGE=http://beets.radbox.org/
+IUSE=chroma lastgenre bpd replaygain web
+KEYWORDS=~amd64
+LICENSE=MIT
+RDEPEND=dev-lang/python[sqlite] dev-python/munkres dev-python/python-musicbrainz-ngs dev-python/unidecode media-libs/mutagen chroma? ( dev-python/pyacoustid ) lastgenre? ( dev-python/pylast ) bpd? ( dev-python/bluelet ) replaygain? ( media-sound/rgain ) web? ( dev-python/flask ) dev-lang/python
+SLOT=0
+SRC_URI=http://beets.googlecode.com/files/beets-1.0b14.tar.gz
+_eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	multilib	5f4ad6cf85e365e8f0c6050ddd21659e	python	36d7e2b7aa4dce62364c72eec96610cf	toolchain-funcs	f71b9936acc911ed1cc84557d3b5c2b3
+_md5_=814228c5d9f036841b6c974a03b22db5
