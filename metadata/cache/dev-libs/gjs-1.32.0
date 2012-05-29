@@ -6,7 +6,7 @@ mirror://gnome/sources/gjs/1.32/gjs-1.32.0.tar.xz
 http://live.gnome.org/Gjs
 MIT MPL-1.1 LGPL-2 GPL-2
 Javascript bindings for GNOME
-~amd64 ~x86
+~alpha ~amd64 ~x86
 eutils fdo-mime gnome.org gnome2 gnome2-utils libtool multilib pax-utils python toolchain-funcs user versionator virtualx
 examples test test
 

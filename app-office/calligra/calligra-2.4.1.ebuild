@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.4.1.ebuild,v 1.2 2012/05/02 21:59:18 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.4.1.ebuild,v 1.5 2012/05/27 22:44:56 dilfridge Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -26,7 +26,7 @@ HOMEPAGE="http://www.calligra.org/"
 
 LICENSE="GPL-2"
 SLOT="4"
-[[ ${PV} == *9999 ]] || KEYWORDS="~amd64 ~x86"
+[[ ${PV} == *9999 ]] || KEYWORDS="amd64 x86"
 IUSE="attica +crypt +eigen +exif fftw +fontconfig freetds +gif glew +glib +gsf
 gsl +iconv +jpeg jpeg2k +kdcraw kdepim +lcms marble mysql +mso +okular openctl openexr
 +pdf postgres +semantic-desktop +ssl sybase test tiff +threads +truetype
@@ -83,7 +83,7 @@ RDEPEND="
 	jpeg? ( virtual/jpeg )
 	jpeg2k? ( media-libs/openjpeg )
 	kdcraw? ( $(add_kdebase_dep libkdcraw) )
-	kdepim? ( $(add_kdebase_dep kdepimlibs) )
+	kdepim? ( $(add_kdebase_dep kdepimlibs 'semantic-desktop') )
 	lcms? ( media-libs/lcms:2 )
 	marble? ( $(add_kdebase_dep marble) )
 	mysql? ( virtual/mysql )

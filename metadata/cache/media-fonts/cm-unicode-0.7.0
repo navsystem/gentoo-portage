@@ -6,7 +6,7 @@ mirror://sourceforge/cm-unicode/0.7.0/cm-unicode-0.7.0-ttf.tar.xz
 http://cm-unicode.sourceforge.net/
 OFL
 Computer Modern Unicode fonts
-~amd64 ~x86
+amd64 x86
 eutils font multilib toolchain-funcs user
 X
 
