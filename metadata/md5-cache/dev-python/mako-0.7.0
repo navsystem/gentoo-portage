@@ -4,10 +4,10 @@ DESCRIPTION=A Python templating language
 EAPI=3
 HOMEPAGE=http://www.makotemplates.org/ http://pypi.python.org/pypi/Mako
 IUSE=doc test
-KEYWORDS=amd64 ~arm ~hppa ~ppc ~sparc x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos
+KEYWORDS=amd64 ~arm ~hppa ppc ~sparc x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos
 LICENSE=MIT
 RDEPEND=>=dev-python/beaker-1.1 >=dev-python/markupsafe-0.9.2 dev-lang/python
 SLOT=0
 SRC_URI=http://www.makotemplates.org/downloads/Mako-0.7.0.tar.gz
 _eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	eutils	a95b1bf9d854485ca6fdbb47df2975aa	multilib	5f4ad6cf85e365e8f0c6050ddd21659e	python	36d7e2b7aa4dce62364c72eec96610cf	toolchain-funcs	f71b9936acc911ed1cc84557d3b5c2b3	user	32a09e82e2f592bf88ad2fd08525166e
-_md5_=580c63347bf922823ee0125468970413
+_md5_=3abc7b304135003b625e7a54df43ec27

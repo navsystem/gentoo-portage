@@ -6,7 +6,7 @@ http://www.migcalendar.com/miglayout/versions/4.0/miglayout-4.0-sources.jar
 http://www.miglayout.com/
 BSD
 Easy to use yet very powerful Java Swing layout manager
-~amd64 ~x86
+amd64 ~x86
 eutils java-pkg-2 java-utils-2 multilib toolchain-funcs user versionator
 swt elibc_FreeBSD doc examples source
 

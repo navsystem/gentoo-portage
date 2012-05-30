@@ -1,0 +1,22 @@
+dev-libs/atk x11-libs/cairo x11-libs/gdk-pixbuf x11-libs/gtk+ x11-libs/pango
+dev-libs/atk x11-libs/cairo x11-libs/gdk-pixbuf x11-libs/gtk+ x11-libs/pango
+0
+mirror://gentoo/free42-1.4.74.tgz
+
+http://thomasokken.com/free42/
+GPL-2
+An HP-42S Calculator Simulator
+~amd64 ~x86
+multilib toolchain-funcs
+
+
+
+
+4
+
+compile install prepare
+
+
+
+
+

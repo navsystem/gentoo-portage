@@ -6,7 +6,7 @@ mirror://pypi/p/pylast/pylast-0.5.11.tar.gz
 http://code.google.com/p/pylast/
 Apache-2.0
 Python interface to last.fm and other api-compatible websites
-~amd64
+~amd64 ~x86
 distutils multilib python toolchain-funcs
 
 

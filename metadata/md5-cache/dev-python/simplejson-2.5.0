@@ -3,10 +3,10 @@ DEPEND==dev-lang/python-2*
 DESCRIPTION=Simple, fast, extensible JSON encoder/decoder for Python
 EAPI=3
 HOMEPAGE=http://undefined.org/python/#simplejson http://pypi.python.org/pypi/simplejson
-KEYWORDS=amd64 arm ~ppc ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
+KEYWORDS=amd64 arm ppc ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
 LICENSE=MIT
 RDEPEND==dev-lang/python-2*
 SLOT=0
 SRC_URI=mirror://pypi/s/simplejson/simplejson-2.5.0.tar.gz
 _eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	multilib	5f4ad6cf85e365e8f0c6050ddd21659e	python	36d7e2b7aa4dce62364c72eec96610cf	toolchain-funcs	f71b9936acc911ed1cc84557d3b5c2b3
-_md5_=70c0bc1a99e3539ca337c3d4faa0bd03
+_md5_=4f90ffca5356c353d94b70230e26bcfc

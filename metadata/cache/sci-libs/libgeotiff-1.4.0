@@ -6,7 +6,7 @@ http://download.osgeo.org/geotiff/libgeotiff/libgeotiff-1.4.0.tar.gz
 http://geotiff.osgeo.org/
 GPL-2
 Library for reading TIFF files with embedded tags for geographic (cartographic) information
-~alpha amd64 ~mips ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
+~alpha amd64 ~mips ppc ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
 autotools base eutils libtool multilib toolchain-funcs user
 debug doc static-libs
 
