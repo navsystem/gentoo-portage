@@ -1,4 +1,4 @@
-dev-libs/protobuf sys-libs/ncurses:5 virtual/ssh client? ( dev-lang/perl dev-perl/IO-Tty ) utempter? ( sys-libs/libutempter ) virtual/pkgconfig || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool dev-vcs/git
+dev-libs/protobuf sys-libs/ncurses:5 virtual/ssh client? ( dev-lang/perl dev-perl/IO-Tty ) utempter? ( sys-libs/libutempter ) dev-vcs/git[curl] virtual/pkgconfig || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool dev-vcs/git
 dev-libs/protobuf sys-libs/ncurses:5 virtual/ssh client? ( dev-lang/perl dev-perl/IO-Tty ) utempter? ( sys-libs/libutempter )
 0
 
@@ -8,7 +8,7 @@ GPL-3
 Mobile shell that supports roaming and intelligent local echo
 
 autotools git-2 libtool multilib toolchain-funcs
-bash-completion +client examples +server ufw +utempter
+bash-completion +client examples +mosh-hardening +server ufw +utempter
 || ( client server ) examples? ( client )
 
 

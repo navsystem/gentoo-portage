@@ -6,7 +6,7 @@ mirror://cpan/authors/id/J/JM/JMUHLICH/Net-IRC-0.75.tar.gz
 http://search.cpan.org/search?module=Net::IRC
 Artistic
 Perl IRC module
-alpha amd64 ia64 ~mips ppc sparc x86
+amd64 ~mips ppc x86
 base eutils multilib perl-module toolchain-funcs user
 
 

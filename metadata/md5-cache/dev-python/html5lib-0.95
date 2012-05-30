@@ -3,11 +3,10 @@ DEPEND=dev-python/setuptools =dev-lang/python-2* =dev-lang/python-2*[xml]
 DESCRIPTION=HTML parser based on the HTML5 specification
 EAPI=4
 HOMEPAGE=http://code.google.com/p/html5lib/ http://pypi.python.org/pypi/html5lib
-IUSE=examples
 KEYWORDS=~amd64 ~x86 ~x86-fbsd
 LICENSE=MIT
 RDEPEND==dev-lang/python-2* =dev-lang/python-2*[xml]
 SLOT=0
 SRC_URI=http://html5lib.googlecode.com/files/html5lib-0.95.tar.gz
 _eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	multilib	5f4ad6cf85e365e8f0c6050ddd21659e	python	36d7e2b7aa4dce62364c72eec96610cf	toolchain-funcs	f71b9936acc911ed1cc84557d3b5c2b3
-_md5_=2a63ef8ec6220214f7a06f28f3b63328
+_md5_=e2855abd35630d07bc79e5b939ea9bae
