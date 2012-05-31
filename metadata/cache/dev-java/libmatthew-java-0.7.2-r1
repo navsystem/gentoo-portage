@@ -6,7 +6,7 @@ http://www.matthew.ath.cx/projects/java/libmatthew-java-0.7.2.tar.gz
 http://www.matthew.ath.cx/projects/java/
 LGPL-2.1
 A selection of libraries for Java
-amd64 ppc ppc64 x86
+amd64 ppc ppc64 x86 ~x86-fbsd
 eutils flag-o-matic java-pkg-2 java-utils-2 multilib toolchain-funcs user versionator
 elibc_FreeBSD doc source
 

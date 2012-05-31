@@ -1,5 +1,5 @@
-dev-python/pygtk dev-python/pycrypto dev-python/gconf-python dev-python/gnome-vfs-python dev-python/libbonobo-python dev-python/libgnome-python sys-libs/cracklib[python] applet? ( dev-python/gnome-applets-python ) =dev-lang/python-2* app-arch/xz-utils >=sys-apps/sed-4
-dev-python/pygtk dev-python/pycrypto dev-python/gconf-python dev-python/gnome-vfs-python dev-python/libbonobo-python dev-python/libgnome-python sys-libs/cracklib[python] applet? ( dev-python/gnome-applets-python ) =dev-lang/python-2*
+dev-python/pygtk dev-python/pycrypto dev-python/gconf-python dev-python/libgnome-python sys-libs/cracklib[python] applet? ( dev-python/gnome-applets-python dev-python/libbonobo-python ) =dev-lang/python-2* app-arch/xz-utils >=sys-apps/sed-4
+dev-python/pygtk dev-python/pycrypto dev-python/gconf-python dev-python/libgnome-python sys-libs/cracklib[python] applet? ( dev-python/gnome-applets-python dev-python/libbonobo-python ) =dev-lang/python-2*
 0
 https://bitbucket.org/erikg/revelation/downloads/revelation-0.4.13.tar.xz
 test

@@ -6,7 +6,7 @@ mirror://sourceforge/zapping/zvbi-0.2.33.tar.bz2
 http://zapping.sourceforge.net
 GPL-2 LGPL-2
 VBI Decoding Library for Zapping
-alpha amd64 ~arm ia64 ppc ppc64 sparc x86 ~x86-fbsd
+alpha amd64 ~arm ia64 ppc ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd
 eutils libtool multilib toolchain-funcs user
 doc dvb nls static-libs v4l X
 
