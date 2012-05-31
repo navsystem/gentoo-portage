@@ -1,0 +1,22 @@
+media-libs/alsa-lib >=media-libs/liblscp-0.5.5 x11-libs/libX11 x11-libs/qt-core:4 x11-libs/qt-gui:4 libgig? ( >=media-libs/libgig-3.2.1 )
+media-libs/alsa-lib >=media-libs/liblscp-0.5.5 x11-libs/libX11 x11-libs/qt-core:4 x11-libs/qt-gui:4 libgig? ( >=media-libs/libgig-3.2.1 ) >=media-sound/linuxsampler-0.5
+0
+mirror://gentoo/qsampler-0.2.2.2345.tar.xz
+
+http://qsampler.sourceforge.net
+GPL-2
+A graphical frontend to the LinuxSampler engine
+~amd64 ~x86
+base eutils multilib qt4-r2 toolchain-funcs user
+debug +libgig
+
+
+
+4
+
+compile configure install prepare unpack
+
+
+
+
+

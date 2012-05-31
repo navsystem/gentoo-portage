@@ -1,0 +1,22 @@
+sci-libs/ccp4-libs || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+sci-libs/ccp4-libs
+0
+ftp://ftp.ccp4.ac.uk/jwc/libjwc_c-1.1.tar.gz
+
+http://www.ccp4.ac.uk/main.html
+GPL-2
+additional c library for ccp4
+~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~x64-macos
+autotools autotools-utils eutils libtool multilib toolchain-funcs user
+static-libs
+
+
+
+4
+
+compile configure install prepare test
+
+
+
+
+

@@ -6,7 +6,7 @@ http://www.sqlite.org/sqlite-2.8.16.tar.gz
 http://www.sqlite.org/
 as-is
 SQLite: an SQL Database Engine in a C Library.
-alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd
+alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd
 alternatives eutils multilib toolchain-funcs user
 doc nls tcl
 
