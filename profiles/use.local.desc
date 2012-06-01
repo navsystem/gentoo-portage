@@ -3726,6 +3726,7 @@ net-im/leechcraft-azoth:isterique - Build Isterique plugin for neutralizing exce
 net-im/leechcraft-azoth:juick - Build plugin for the Juick.com microblogging service
 net-im/leechcraft-azoth:keeso - Build plugin for changing text into SoMEtHInG lIKe THiS
 net-im/leechcraft-azoth:lastseen - Build plugin for client-side recording of the last online/available time
+net-im/leechcraft-azoth:media - Enable media calls
 net-im/leechcraft-azoth:metacontacts - Build plugin for metacontacts support
 net-im/leechcraft-azoth:modnok - Build Modnok for in-chat LaTeX formulae rendering
 net-im/leechcraft-azoth:nativeemoticons - Build support for native Azoth's emoticons packs
