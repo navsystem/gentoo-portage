@@ -1,0 +1,22 @@
+|| ( virtual/httpd-cgi virtual/httpd-fastcgi ) >=app-admin/webapp-config-1.50.15
+virtual/httpd-php dev-lang/php[simplexml,xml,xsl,unicode] >=app-admin/webapp-config-1.50.15
+3.0.17
+mirror://sourceforge/phpsysinfo/phpsysinfo-3.0.17.tar.gz
+
+http://phpsysinfo.sourceforge.net/
+GPL-2
+phpSysInfo is a nice package that will display your system stats via PHP.
+~amd64 ~hppa ~ppc ~ppc64 ~x86 ~x86-fbsd
+webapp
+vhosts
+
+
+
+4
+
+install postinst prerm setup
+
+
+
+
+

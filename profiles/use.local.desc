@@ -1394,6 +1394,7 @@ dev-libs/soprano:raptor - Enables support for media-libs/raptor RDF parser/seria
 dev-libs/soprano:redland - Enables support for the dev-libs/redland storage backend (really slow one).
 dev-libs/soprano:virtuoso - Enables support for dev-db/virtuoso storage backend.
 dev-libs/starpu:cuda - Enable NVIDIA CUDA toolkit support
+dev-libs/starpu:gcc-plugin - Enable GCC extension plugin (experimental)
 dev-libs/starpu:opencl - Enable OpenCL support
 dev-libs/tinyxml:stl - Compile with TIXML_USE_STL support
 dev-libs/tntnet:sdk - Enable tntnet SDK
@@ -2933,6 +2934,7 @@ media-sound/qtractor:dssi - Enable support for DSSI Soft Synth Interface
 media-sound/qtractor:rubberband - Enable support for in-place audio clip pitch-shifting through the rubberband library
 media-sound/qtractor:suil - Enable LV2 Plug-in UI instantiation support via media-libs/suil.
 media-sound/qtscrobbler:cli - Build commandline client
+media-sound/quark:gnome - Provides tray-icon and enables gconf support
 media-sound/rezound:16bittmp - Use 16bit temporary files (default 32bit float), useful for slower computers
 media-sound/rezound:soundtouch - compile with support for soundtouch
 media-sound/rhythmbox:clutter - Build the visualizer plugin which uses media-libs/clutter and x11-libs/mx
@@ -4802,9 +4804,11 @@ sci-mathematics/agda:epic - Add support for the epic compiler.
 sci-mathematics/agda:stdlib - Install the standard library.
 sci-mathematics/cgal:mpfi - Enable support for multiple recision interval arithmetic via sci-mathematics/mpfi
 sci-mathematics/cvc3:isabelle - Add integration support for the Isabelle/HOL theorem prover.
-sci-mathematics/cvc3:zchaff - Use the SAT solver zchaff whose copyright is owned by Princeton University and is more restrictive (see license).
+sci-mathematics/cvc3:zchaff - Use the SAT solver zchaff whose copyright is owned by Princeton University and is more restrictive (see zchaff license).
 sci-mathematics/dataplot:gs - Add Ghostscript support (app-text/ghostscript-gpl)
 sci-mathematics/e:isabelle - Add integration support for the Isabelle/HOL theorem prover.
+sci-mathematics/form:devref - Build and install developers reference
+sci-mathematics/form:doxygen - Build and install API documentation
 sci-mathematics/freemat:volpack - Add volume rendering via media-libs/volpack
 sci-mathematics/freemat:vtk - Add 3D capabilities via sci-libs/vtk
 sci-mathematics/fricas:clisp - Add support for GNU CLISP (dev-lisp/clisp)
@@ -5310,6 +5314,7 @@ sys-libs/glibc:linuxthreads - Build linuxthreads support (only for kernels older
 sys-libs/gwenhywfar:fox - Use x11-libs/fox graphical toolkit
 sys-libs/libosinfo:introspection - Use dev-libs/gobject-introspection for introspection
 sys-libs/libosinfo:vala - Enable bindings for dev-lang/vala
+sys-libs/libunwind:debug-frame - Adds support for DWARF .debug_frame section: Use the information from this section if available
 sys-libs/ncurses:ada - Add bindings for the ADA programming language
 sys-libs/ncurses:trace - Enable test trace() support in ncurses calls
 sys-libs/pam:audit - Enable support for sys-process/audit

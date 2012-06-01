@@ -1,4 +1,4 @@
-sys-libs/zlib media-libs/libzen ~media-libs/libmediainfo-0.7.58[curl=,mms=] wxwidgets? ( x11-libs/wxGTK:2.8[X] ) virtual/pkgconfig
+sys-libs/zlib media-libs/libzen ~media-libs/libmediainfo-0.7.58[curl=,mms=] wxwidgets? ( x11-libs/wxGTK:2.8[X] ) virtual/pkgconfig || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 sys-libs/zlib media-libs/libzen ~media-libs/libmediainfo-0.7.58[curl=,mms=] wxwidgets? ( x11-libs/wxGTK:2.8[X] )
 0
 mirror://sourceforge/mediainfo/source/mediainfo/0.7.58/mediainfo_0.7.58.tar.bz2
@@ -7,14 +7,14 @@ http://mediainfo.sourceforge.net
 LGPL-3
 MediaInfo supplies technical and tag information about media files
 ~amd64 ~x86
-autotools autotools-utils eutils libtool multilib toolchain-funcs user wxwidgets
+autotools eutils libtool multilib toolchain-funcs user wxwidgets
 curl mms wxwidgets
 
 
 
 4
 
-compile configure install prepare setup test
+compile configure install prepare setup
 
 
 

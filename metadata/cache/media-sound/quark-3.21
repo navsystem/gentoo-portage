@@ -1,13 +1,13 @@
 media-libs/xine-lib x11-libs/gtk+:2 >=gnome-base/gconf-2 gnome-base/gnome-vfs virtual/pkgconfig app-arch/xz-utils >=sys-apps/sed-4
 media-libs/xine-lib x11-libs/gtk+:2 >=gnome-base/gconf-2 gnome-base/gnome-vfs
 0
-http://quark.nerdnest.org/quark-3.21.tar.gz
+http://hsgg.github.com/quark/quark-3.21.tar.gz
 
-http://quark.nerdnest.org/
+http://hsgg.github.com/quark/
 GPL-2
 Quark is the Anti-GUI Music Player with a cool Docklet!
 amd64 ppc x86
-eutils fdo-mime gnome.org gnome2 gnome2-utils libtool multilib toolchain-funcs user versionator
+eutils fdo-mime flag-o-matic gnome.org gnome2 gnome2-utils libtool multilib toolchain-funcs user versionator
 debug
 
 
