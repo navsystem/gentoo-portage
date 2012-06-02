@@ -1,0 +1,22 @@
+nls? ( virtual/libintl ) >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+nls? ( virtual/libintl )
+0
+http://projects.gw-computing.net/attachments/download/63/dfc-3.0.0.tar.gz
+
+http://projects.gw-computing.net/projects/dfc
+BSD
+A simple CLI tool that display file system usage, with colors
+~amd64 ~x86
+base cmake-utils eutils flag-o-matic multilib toolchain-funcs user
+nls
+
+
+
+4
+
+compile configure install prepare test unpack
+
+
+
+
+

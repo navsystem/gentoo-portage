@@ -1,4 +1,4 @@
-dev-libs/boost >=dev-libs/glib-2.14.0 virtual/pkgconfig doc? ( app-doc/doxygen )
+dev-libs/boost >=dev-libs/glib-2.14.0 =dev-lang/python-2* virtual/pkgconfig doc? ( app-doc/doxygen ) dev-lang/python !dev-lang/python[-threads]
 dev-libs/boost >=dev-libs/glib-2.14.0
 0
 http://download.drobilla.net/raul-0.8.0.tar.bz2
@@ -7,14 +7,14 @@ http://wiki.drobilla.net/Raul
 GPL-2
 C++ utility library primarily aimed at audio/musical applications.
 amd64 x86
-eutils multilib toolchain-funcs user
+base eutils multilib python toolchain-funcs user waf-utils
 debug doc test
 
 
 
-2
+4
 
-compile configure install prepare test
+compile configure install prepare setup test unpack
 
 
 

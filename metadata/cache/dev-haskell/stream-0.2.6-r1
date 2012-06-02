@@ -12,9 +12,9 @@ doc profile
 
 
 
-1
+4
 
-compile install postinst prerm setup test
+compile configure install postinst prerm setup test
 
 
 

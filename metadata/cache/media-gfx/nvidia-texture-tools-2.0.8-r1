@@ -6,7 +6,7 @@ http://nvidia-texture-tools.googlecode.com/files/nvidia-texture-tools-2.0.8-1.ta
 http://developer.nvidia.com/object/texture_tools.html
 MIT
 A set of cuda-enabled texture tools and compressors
-~amd64 ~x86
+amd64 ~x86
 base cmake-utils eutils flag-o-matic multilib toolchain-funcs user
 cg cuda glew glut openexr
 

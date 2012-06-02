@@ -1,0 +1,22 @@
+>=games-strategy/wargus-2.2.6 media-sound/cdparanoia media-sound/timidity++ media-video/ffmpeg2theora
+>=games-strategy/wargus-2.2.6
+0
+
+
+http://wargus.sourceforge.net/
+as-is
+Warcraft II data for wargus (needs DOS CD)
+~amd64 ~x86
+base cdrom eutils games multilib portability toolchain-funcs user
+
+
+
+
+3
+interactive
+compile configure install postinst preinst prepare setup unpack
+
+
+
+
+
