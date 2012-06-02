@@ -1,5 +1,5 @@
-doc? ( sys-apps/texinfo >=media-gfx/graphviz-2.26.0 )
-elibc_glibc? ( >=sys-libs/glibc-2.3 || ( <sys-libs/glibc-2.6[nptl] >=sys-libs/glibc-2.6 ) ) asdf? ( >=dev-lisp/gentoo-init-0.1 )
+doc? ( sys-apps/texinfo >=media-gfx/graphviz-2.26.0 ) pax_kernel? ( sys-apps/paxctl )
+asdf? ( >=dev-lisp/gentoo-init-0.1 )
 0
 mirror://sourceforge/sbcl/sbcl-1.0.55-source.tar.bz2 x86? ( mirror://sourceforge/sbcl/sbcl-1.0.37-x86-linux-binary.tar.bz2 ) amd64? ( mirror://sourceforge/sbcl/sbcl-1.0.37-x86-64-linux-binary.tar.bz2 ) ppc? ( mirror://sourceforge/sbcl/sbcl-1.0.28-powerpc-linux-binary.tar.bz2 ) sparc? ( mirror://sourceforge/sbcl/sbcl-1.0.28-sparc-linux-binary.tar.bz2 ) alpha? ( mirror://sourceforge/sbcl/sbcl-1.0.28-alpha-linux-binary.tar.bz2 ) mips? ( !cobalt? ( mirror://sourceforge/sbcl/sbcl-1.0.23-mips-linux-binary.tar.bz2 ) ) mips? ( cobalt? ( mirror://sourceforge/sbcl/sbcl-1.0.28-mipsel-linux-binary.tar.bz2 ) )
 
@@ -8,13 +8,13 @@ MIT
 Steel Bank Common Lisp (SBCL) is an implementation of ANSI Common Lisp.
 amd64 ppc ~sparc ~x86
 eutils flag-o-matic multilib pax-utils toolchain-funcs user
-+asdf ldb source +threads +unicode debug doc cobalt
++asdf ldb source +threads +unicode debug doc cobalt pax_kernel
 
 
 
 3
 
-compile configure install postinst prepare test unpack
+compile configure install prepare test unpack
 
 
 

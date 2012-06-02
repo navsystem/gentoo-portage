@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.170 2012/05/26 02:55:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.173 2012/05/31 00:29:06 vapier Exp $
 
 # @ECLASS: flag-o-matic.eclass
 # @MAINTAINER:
@@ -123,6 +123,15 @@ filter-lfs-flags() {
 	filter-flags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE
 }
 
+# @FUNCTION: filter-ldflags
+# @USAGE: <flags>
+# @DESCRIPTION:
+# Remove particular <flags> from LDFLAGS.  Accepts shell globs.
+filter-ldflags() {
+	_filter-var LDFLAGS "$@"
+	return 0
+}
+
 # @FUNCTION: append-cppflags
 # @USAGE: <flags>
 # @DESCRIPTION:
@@ -173,6 +182,22 @@ append-lfs-flags() {
 	append-cppflags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE
 }
 
+# @FUNCTION: append-ldflags
+# @USAGE: <flags>
+# @DESCRIPTION:
+# Add extra <flags> to the current LDFLAGS.
+append-ldflags() {
+	[[ $# -eq 0 ]] && return 0
+	local flag
+	for flag in "$@"; do
+		[[ ${flag} == -l* ]] && \
+			ewarn "Appending a library link instruction (${flag}); libraries to link to should not be passed through LDFLAGS"
+	done
+
+	export LDFLAGS="${LDFLAGS} $*"
+	return 0
+}
+
 # @FUNCTION: append-flags
 # @USAGE: <flags>
 # @DESCRIPTION:
@@ -181,7 +206,8 @@ append-flags() {
 	[[ $# -eq 0 ]] && return 0
 	case " $* " in
 	*' '-[DIU]*) eqawarn 'please use append-cppflags for preprocessor flags' ;;
-	*' '-L*)     eqawarn 'please use append-ldflags for linker flags' ;;
+	*' '-L*|\
+	*' '-Wl,*)  eqawarn 'please use append-ldflags for linker flags' ;;
 	esac
 	append-cflags "$@"
 	append-cxxflags "$@"
@@ -549,31 +575,6 @@ append-libs() {
 		export LIBS="${LIBS} -l${flag}"
 	done
 
-	return 0
-}
-
-# @FUNCTION: append-ldflags
-# @USAGE: <flags>
-# @DESCRIPTION:
-# Add extra <flags> to the current LDFLAGS.
-append-ldflags() {
-	[[ $# -eq 0 ]] && return 0
-	local flag
-	for flag in "$@"; do
-		[[ ${flag} == -l* ]] && \
-			ewarn "Appending a library link instruction (${flag}); libraries to link to should not be passed through LDFLAGS"
-	done
-
-	export LDFLAGS="${LDFLAGS} $*"
-	return 0
-}
-
-# @FUNCTION: filter-ldflags
-# @USAGE: <flags>
-# @DESCRIPTION:
-# Remove particular <flags> from LDFLAGS.  Accepts shell globs.
-filter-ldflags() {
-	_filter-var LDFLAGS "$@"
 	return 0
 }
 

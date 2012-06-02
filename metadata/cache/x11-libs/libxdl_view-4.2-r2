@@ -1,0 +1,22 @@
+dev-libs/libjwc_c x11-libs/libXt || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+dev-libs/libjwc_c x11-libs/libXt
+0
+ftp://ftp.ccp4.ac.uk/jwc/libxdl_view-4.2.tar.gz
+
+http://www.ccp4.ac.uk/dist/x-windows/xdl_view/doc/xdl_view_top.html
+GPL-2
+An X-Windows Based Toolkit
+~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos
+autotools autotools-utils eutils libtool multilib toolchain-funcs user
+static-libs
+
+
+
+4
+
+compile configure install prepare test
+
+
+
+
+

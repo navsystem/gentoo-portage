@@ -1,4 +1,4 @@
-!mail-mta/sendmail
+sys-devel/m4 !mail-mta/sendmail
 !mail-mta/sendmail
 0
 ftp://ftp.sendmail.org/pub/sendmail/sendmail.8.14.3.tar.gz

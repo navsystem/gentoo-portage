@@ -1,0 +1,22 @@
+>=dev-libs/glib-2.30 >=dev-libs/libburn-0.4.2 >=dev-libs/libisofs-0.6.2 >=x11-libs/gtk+-2.24:2 >=xfce-base/exo-0.6 >=xfce-base/libxfce4ui-4.8 gstreamer? ( >=media-libs/gst-plugins-base-0.10.20:0.10 ) udev? ( || ( >=sys-fs/udev-171-r6[gudev] <sys-fs/udev-171[extras] ) ) dev-libs/libxslt dev-util/intltool sys-devel/gettext virtual/pkgconfig >=sys-apps/sed-4 >=dev-util/xfce4-dev-tools-4.9.1 || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+>=dev-libs/glib-2.30 >=dev-libs/libburn-0.4.2 >=dev-libs/libisofs-0.6.2 >=x11-libs/gtk+-2.24:2 >=xfce-base/exo-0.6 >=xfce-base/libxfce4ui-4.8 gstreamer? ( >=media-libs/gst-plugins-base-0.10.20:0.10 ) udev? ( || ( >=sys-fs/udev-171-r6[gudev] <sys-fs/udev-171[extras] ) )
+0
+http://dev.gentoo.org/~ssuominen/xfburn-0.4.3_p20120601.tar.xz
+
+http://goodies.xfce.org/projects/applications/xfburn
+GPL-2
+GTK+ based CD and DVD burning application
+~amd64 ~ppc ~x86
+autotools base eutils fdo-mime gnome2-utils libtool multilib toolchain-funcs user xfconf
+debug gstreamer udev
+
+
+
+4
+
+compile configure install postinst postrm preinst prepare setup unpack
+
+
+
+
+

@@ -1,4 +1,4 @@
-net-libs/libpcap sys-libs/ncurses
+net-libs/libpcap[ipv6] sys-libs/ncurses
 
 0
 http://www.ex-parrot.com/~pdw/iftop/download/iftop-1.0pre2.tar.gz

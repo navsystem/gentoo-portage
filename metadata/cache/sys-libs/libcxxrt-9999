@@ -1,5 +1,5 @@
->=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) dev-vcs/git
-
+>=sys-libs/libunwind-1.0.1-r1 dev-vcs/git
+>=sys-libs/libunwind-1.0.1-r1
 0
 
 
@@ -7,8 +7,8 @@ https://github.com/pathscale/libcxxrt http://www.pathscale.com/node/265
 BSD-2
 C++ Runtime from PathScale, FreeBSD and NetBSD.
 
-base cmake-utils eutils flag-o-matic git-2 multilib toolchain-funcs user
-
+base eutils flag-o-matic git-2 multilib portability toolchain-funcs user
+static-libs
 
 
 

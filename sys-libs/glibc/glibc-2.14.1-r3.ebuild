@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.14.1-r3.ebuild,v 1.14 2012/05/25 20:43:51 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.14.1-r3.ebuild,v 1.16 2012/06/01 05:34:40 vapier Exp $
 
 inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib
 
@@ -33,7 +33,7 @@ esac
 MANPAGE_VER=""                                 # pregenerated manpages
 INFOPAGE_VER=""                                # pregenerated infopages
 LIBIDN_VER=""                                  # it's integrated into the main tarball now
-PATCH_VER="9"                                  # Gentoo patchset
+PATCH_VER="10"                                 # Gentoo patchset
 PORTS_VER=${RELEASE_VER}                       # version of glibc ports addon
 LT_VER=""                                      # version of linuxthreads addon
 NPTL_KERN_VER=${NPTL_KERN_VER:-"2.6.9"}        # min kernel version nptl requires
@@ -205,8 +205,7 @@ pkg_setup() {
 }
 
 eblit-src_unpack-pre() {
-	[[ ${CHOST} == x86_64* ]] && has x32 $(get_all_abis) \
-		|| GLIBC_PATCH_EXCLUDE+=" 1200_all_glibc-${PV}-x32.patch"
+	GLIBC_PATCH_EXCLUDE+=" 1200_all_glibc-${PV}-x32.patch"
 }
 
 eblit-src_unpack-post() {

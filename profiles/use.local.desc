@@ -776,7 +776,6 @@ app-office/libreoffice:vba - Enable support for VBA compatibility and ActiveX em
 app-office/libreoffice:webdav - Adds support for HTTP content adding via net-libs/neon
 app-office/libreoffice:xmlsec - Adds support for document signing using internal modified dev-libs/xmlsec and system dev-libs/nss
 app-office/libreoffice-l10n:offlinehelp - Install help files locally instead of using the LibreOffice Wiki
-app-office/libreoffice-l10n:templates - Enable installation of Sun templates
 app-office/lyx:aspell - Add support for aspell spellchecking
 app-office/lyx:dia - Add support for diagrams (app-office/dia)
 app-office/lyx:docbook - Add support for docbook export
@@ -1395,6 +1394,7 @@ dev-libs/soprano:raptor - Enables support for media-libs/raptor RDF parser/seria
 dev-libs/soprano:redland - Enables support for the dev-libs/redland storage backend (really slow one).
 dev-libs/soprano:virtuoso - Enables support for dev-db/virtuoso storage backend.
 dev-libs/starpu:cuda - Enable NVIDIA CUDA toolkit support
+dev-libs/starpu:gcc-plugin - Enable GCC extension plugin (experimental)
 dev-libs/starpu:opencl - Enable OpenCL support
 dev-libs/tinyxml:stl - Compile with TIXML_USE_STL support
 dev-libs/tntnet:sdk - Enable tntnet SDK
@@ -1444,6 +1444,7 @@ dev-lisp/gcl:gprof - Build a GCL with profiling support
 dev-lisp/sbcl:asdf - Include support for dev-lisp/asdf in SBCL
 dev-lisp/sbcl:cobalt - mips only: use mipsel binary instead of mips big endian binary to bootstrap
 dev-lisp/sbcl:ldb - Include support for the SBCL low level debugger
+dev-lisp/sbcl:pax_kernel - Enable if the user plans to run the package under a pax enabled hardened kernel
 dev-lua/luarocks:curl - Uses net-misc/curl for fetching lua packages instead of net-misc/wget.
 dev-lua/luarocks:openssl - Uses dev-libs/openssl for verifying lua packages instead of md5sum.
 dev-ml/camlimages:gs - Ghostscript support (app-text/ghostscript-gpl)
@@ -1523,6 +1524,7 @@ dev-python/anyvc:mercurial - Add support for Mercurial
 dev-python/atpy:fits - Enable support for reading and FITS with dev-python/pyfits.
 dev-python/atpy:votable - Enable support for reading and VOTABLE with dev-python/vo.
 dev-python/bpython:urwid - Backend based on dev-python/urwid
+dev-python/celery:sql - Adds SQL support
 dev-python/cgkit:3ds - Enable support for importing 3D Studio models
 dev-python/cvxopt:dsdp - Use interior point library sci-libs/dsdp
 dev-python/cvxopt:glpk - Use GNU Linear Programming Kit sci-mathematics/glpk
@@ -1865,6 +1867,13 @@ games-fps/darkplaces:lights - Install and setup the updated light maps
 games-fps/darkplaces:textures - Install and setup the updated textures
 games-fps/doom-data:doomsday - Add wrapper to run it within doomsday
 games-fps/doom3:roe - Adds support for the Resurrection of Evil expansion
+games-fps/doomsday:demo - Install launcher dor doom1.wad from games-fps/doom-data
+games-fps/doomsday:doom - Install launcher for jdoom game
+games-fps/doomsday:freedoom - Install launcher for doom1.wad from games-fps/freefoom
+games-fps/doomsday:heretic - Install launcher for jheretic game
+games-fps/doomsday:hexen - Install launcher for jhexen game
+games-fps/doomsday:resources - Enable support for games-fps/doomsday-resources in jdoom launcher
+games-fps/doomsday:snowberry - Install Snowberry doomsday front-end
 games-fps/duke3d:demo - Install the demo files
 games-fps/duke3d:pic - disable optimized assembly code that is not PIC friendly
 games-fps/ezquake-bin:security - install the security module needed for some servers
@@ -2925,6 +2934,7 @@ media-sound/qtractor:dssi - Enable support for DSSI Soft Synth Interface
 media-sound/qtractor:rubberband - Enable support for in-place audio clip pitch-shifting through the rubberband library
 media-sound/qtractor:suil - Enable LV2 Plug-in UI instantiation support via media-libs/suil.
 media-sound/qtscrobbler:cli - Build commandline client
+media-sound/quark:gnome - Provides tray-icon and enables gconf support
 media-sound/rezound:16bittmp - Use 16bit temporary files (default 32bit float), useful for slower computers
 media-sound/rezound:soundtouch - compile with support for soundtouch
 media-sound/rhythmbox:clutter - Build the visualizer plugin which uses media-libs/clutter and x11-libs/mx
@@ -3716,6 +3726,7 @@ net-im/leechcraft-azoth:isterique - Build Isterique plugin for neutralizing exce
 net-im/leechcraft-azoth:juick - Build plugin for the Juick.com microblogging service
 net-im/leechcraft-azoth:keeso - Build plugin for changing text into SoMEtHInG lIKe THiS
 net-im/leechcraft-azoth:lastseen - Build plugin for client-side recording of the last online/available time
+net-im/leechcraft-azoth:media - Enable media calls
 net-im/leechcraft-azoth:metacontacts - Build plugin for metacontacts support
 net-im/leechcraft-azoth:modnok - Build Modnok for in-chat LaTeX formulae rendering
 net-im/leechcraft-azoth:nativeemoticons - Build support for native Azoth's emoticons packs
@@ -4794,9 +4805,11 @@ sci-mathematics/agda:epic - Add support for the epic compiler.
 sci-mathematics/agda:stdlib - Install the standard library.
 sci-mathematics/cgal:mpfi - Enable support for multiple recision interval arithmetic via sci-mathematics/mpfi
 sci-mathematics/cvc3:isabelle - Add integration support for the Isabelle/HOL theorem prover.
-sci-mathematics/cvc3:zchaff - Use the SAT solver zchaff whose copyright is owned by Princeton University and is more restrictive (see license).
+sci-mathematics/cvc3:zchaff - Use the SAT solver zchaff whose copyright is owned by Princeton University and is more restrictive (see zchaff license).
 sci-mathematics/dataplot:gs - Add Ghostscript support (app-text/ghostscript-gpl)
 sci-mathematics/e:isabelle - Add integration support for the Isabelle/HOL theorem prover.
+sci-mathematics/form:devref - Build and install developers reference
+sci-mathematics/form:doxygen - Build and install API documentation
 sci-mathematics/freemat:volpack - Add volume rendering via media-libs/volpack
 sci-mathematics/freemat:vtk - Add 3D capabilities via sci-libs/vtk
 sci-mathematics/fricas:clisp - Add support for GNU CLISP (dev-lisp/clisp)
@@ -4987,7 +5000,6 @@ sys-apps/rsbac-admin:rklogd - Enabled deprecated RSBAC kernel logger
 sys-apps/s390-tools:fuse - build cmsfs-fuse to read files stored on a z/VM CMS disk
 sys-apps/s390-tools:zfcpdump - build the kernel disk dumping utility
 sys-apps/shadow:audit - Enable support for sys-process/audit
-sys-apps/shadow:tcb - Enable support for sys-auth/tcb
 sys-apps/smartmontools:minimal - Do not install the monitoring daemon and associated scripts.
 sys-apps/superiotool:pci - Support for PCI-attached "Super I/Os" (e.g. in VIA VT82686A/B).
 sys-apps/systemd:audit - Enable support for sys-process/audit
@@ -5303,6 +5315,7 @@ sys-libs/glibc:linuxthreads - Build linuxthreads support (only for kernels older
 sys-libs/gwenhywfar:fox - Use x11-libs/fox graphical toolkit
 sys-libs/libosinfo:introspection - Use dev-libs/gobject-introspection for introspection
 sys-libs/libosinfo:vala - Enable bindings for dev-lang/vala
+sys-libs/libunwind:debug-frame - Adds support for DWARF .debug_frame section: Use the information from this section if available
 sys-libs/ncurses:ada - Add bindings for the ADA programming language
 sys-libs/ncurses:trace - Enable test trace() support in ncurses calls
 sys-libs/pam:audit - Enable support for sys-process/audit
