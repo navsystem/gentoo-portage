@@ -72,3 +72,5 @@ dev-java/swing-layout source
 dev-vcs/subversion java
 sys-libs/zlib minizip
 sys-fs/udev gudev
+app-office/libreoffice nlpsolver pdfimport
+
