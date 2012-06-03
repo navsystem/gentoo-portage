@@ -12,7 +12,7 @@ base cmake-utils eutils flag-o-matic games gnome2-utils multilib toolchain-funcs
 
 games-strategy/wargus-data
 
-2
+4
 
 compile configure install postinst postrm preinst prepare setup test unpack
 

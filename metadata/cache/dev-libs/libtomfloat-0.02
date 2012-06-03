@@ -1,5 +1,5 @@
 dev-libs/libtommath
-
+dev-libs/libtommath
 0
 http://libtom.org/files/ltf-0.02.tar.bz2
 
@@ -12,9 +12,9 @@ multilib toolchain-funcs
 
 
 
+4
 
-
-compile install
+install prepare
 
 
 

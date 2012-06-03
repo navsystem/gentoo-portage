@@ -9,10 +9,10 @@ A realtime strategy game engine
 ~amd64 ~x86
 base cmake-utils eutils flag-o-matic games multilib toolchain-funcs user
 bzip2 debug doc mikmod mng theora vorbis
+theora? ( vorbis )
 
 
-
-2
+4
 
 compile configure install postinst preinst prepare setup test unpack
 

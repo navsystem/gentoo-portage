@@ -6,7 +6,7 @@ http://mupdf.googlecode.com/files/mupdf-1.0-source.tar.gz
 http://mupdf.com/
 GPL-3
 a lightweight PDF viewer and toolkit written in portable C
-amd64 ~ppc x86 ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos
+amd64 ppc x86 ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos
 eutils flag-o-matic multilib toolchain-funcs user
 X vanilla
 

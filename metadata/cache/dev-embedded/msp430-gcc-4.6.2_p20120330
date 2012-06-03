@@ -14,7 +14,7 @@ build multislot nls nptl test vanilla altivec cxx fortran nocxx bootstrap doc gc
 
 4
 
-compile install postinst postrm preinst prepare prerm pretend setup test unpack
+compile install postinst prepare pretend setup test unpack
 
 
 

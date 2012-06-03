@@ -1,5 +1,5 @@
 media-libs/allegro:0[X,jpeg,png,vorbis] media-libs/libogg media-libs/libpng:0 media-libs/libvorbis sys-libs/zlib virtual/jpeg >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
-media-libs/allegro:0[X,jpeg,png,vorbis] media-libs/libogg media-libs/libpng:0 media-libs/libvorbis sys-libs/zlib virtual/jpeg
+
 0
 opensnc-src-0.1.4.tar.gz
 fetch
@@ -12,7 +12,7 @@ base cmake-utils eutils flag-o-matic games multilib toolchain-funcs user
 
 
 
-3
+4
 
 compile configure install nofetch postinst preinst prepare setup test unpack
 
