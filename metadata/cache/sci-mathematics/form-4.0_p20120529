@@ -1,12 +1,12 @@
 gmp? ( dev-libs/gmp ) mpi? ( virtual/mpi ) zlib? ( sys-libs/zlib ) devref? ( dev-texlive/texlive-latex ) doc? ( dev-texlive/texlive-latex ) doxygen? ( app-doc/doxygen ) || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 gmp? ( dev-libs/gmp ) mpi? ( virtual/mpi ) zlib? ( sys-libs/zlib )
 0
-http://github.com/downloads/jauhien/sources/form-4.0_p20120529.tar.gz
+http://dev.gentoo.org/~grozin/form-4.0_p20120529.tar.gz
 
 http://www.nikhef.nl/~form/
 GPL-3
 Symbolic Manipulation System
-~x86
+~amd64 ~x86
 autotools libtool multilib toolchain-funcs
 devref doc doxygen gmp mpi threads zlib
 

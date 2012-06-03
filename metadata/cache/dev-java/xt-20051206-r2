@@ -6,7 +6,7 @@ http://www.blnz.com/xt/xt-20051206-src.zip
 http://www.blnz.com/xt/
 JamesClark
 Java Implementation of XSL-Transformations
-~amd64 ~ppc ~x86
+amd64 ~ppc x86
 eutils java-ant-2 java-pkg-2 java-utils-2 multilib toolchain-funcs user versionator
 elibc_FreeBSD doc source elibc_FreeBSD
 

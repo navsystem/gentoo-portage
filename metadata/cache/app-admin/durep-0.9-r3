@@ -6,7 +6,7 @@ http://www.hibernaculum.net/download/durep-0.9.tar.gz
 http://gentoo.org
 Artistic
 A perl script designed for monitoring disk usage in a more visual way than du.
-~amd64 ~ppc ~x86
+amd64 ~ppc ~x86
 eutils multilib toolchain-funcs user
 
 

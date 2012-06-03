@@ -7,7 +7,7 @@ http://gmtp.sourceforge.net/
 BSD
 A simple MTP client for MP3 players
 ~amd64 ~x86
-gnome2-utils multilib toolchain-funcs
+eutils gnome2-utils multilib toolchain-funcs user
 
 
 
