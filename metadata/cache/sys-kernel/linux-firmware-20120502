@@ -6,7 +6,7 @@ mirror://gentoo/linux-firmware-20120502.tar.xz
 http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git
 GPL-1 GPL-2 GPL-3 BSD freedist
 Linux firmware files
-~amd64 ~arm ~ia64 ~x86
+amd64 ~arm ~ia64 ~x86
 portability savedconfig
 savedconfig savedconfig
 

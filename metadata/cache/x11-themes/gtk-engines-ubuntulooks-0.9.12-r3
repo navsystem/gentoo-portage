@@ -1,18 +1,18 @@
->=x11-libs/gtk+-2.8:2 virtual/pkgconfig || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
->=x11-libs/gtk+-2.8:2
+>=dev-libs/glib-2 x11-libs/gtk+:2 virtual/pkgconfig || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+>=dev-libs/glib-2 x11-libs/gtk+:2
 0
 mirror://ubuntu/pool/main/u/ubuntulooks/ubuntulooks_0.9.12.orig.tar.gz mirror://ubuntu/pool/main/u/ubuntulooks/ubuntulooks_0.9.12-12.diff.gz
 
 http://packages.ubuntu.com/search?keywords=gtk2-engines-ubuntulooks
 GPL-2
-a derivative of the standard Clearlooks engine, using a more orange approach
+A derivative of the standard Clearlooks GTK+ 2.x engine with more orange approach
 amd64 ~ppc x86 ~x86-interix ~amd64-linux ~x86-linux ~x86-macos
 autotools eutils libtool multilib toolchain-funcs user
 
 
 
 
-2
+4
 
 configure install prepare
 
