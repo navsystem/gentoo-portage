@@ -6,7 +6,7 @@ ftp://ftp.sra.co.jp/pub/x11/kinput2/kinput2-v3.1.tar.gz
 http://www.nec.co.jp/canna/
 as-is
 A Japanese input server which supports the XIM protocol
-~amd64 ~ppc ~ppc64 ~sparc ~x86
+amd64 ~ppc ~ppc64 ~sparc ~x86
 eutils multilib toolchain-funcs user
 freewnn
 

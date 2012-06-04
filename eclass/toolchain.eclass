@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.541 2012/05/31 17:45:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.547 2012/06/03 09:02:36 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -23,7 +23,7 @@ if [[ ${PV} == *_pre9999* ]] ; then
 	inherit git-2
 fi
 
-EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_test pkg_preinst src_install pkg_postinst pkg_prerm pkg_postrm
+EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_test src_install pkg_postinst
 DESCRIPTION="The GNU Compiler Collection"
 
 FEATURES=${FEATURES/multilib-strict/}
@@ -37,6 +37,10 @@ if [[ ${CTARGET} = ${CHOST} ]] ; then
 		export CTARGET=${CATEGORY/cross-}
 	fi
 fi
+: ${TARGET_ABI:=${ABI}}
+: ${TARGET_MULTILIB_ABIS:=${MULTILIB_ABIS}}
+: ${TARGET_DEFAULT_ABI:=${DEFAULT_ABI}}
+
 is_crosscompile() {
 	[[ ${CHOST} != ${CTARGET} ]]
 }
@@ -478,12 +482,12 @@ create_gcc_env_entry() {
 	# searches that directory first.  This is a temporary
 	# workaround for libtool being stupid and using .la's from
 	# conflicting ABIs by using the first one in the search path
-	local abi=${DEFAULT_ABI}
+	local abi=${TARGET_DEFAULT_ABI}
 	local MULTIDIR=$($(XGCC) $(get_abi_CFLAGS ${abi}) --print-multi-directory)
 	local LDPATH=${LIBPATH}
 	[[ ${MULTIDIR} != "." ]] && LDPATH+=/${MULTIDIR}
-	for abi in $(get_all_abis) ; do
-		[[ ${abi} == ${DEFAULT_ABI} ]] && continue
+	for abi in $(get_all_abis TARGET) ; do
+		[[ ${abi} == ${TARGET_DEFAULT_ABI} ]] && continue
 
 		MULTIDIR=$($(XGCC) $(get_abi_CFLAGS ${abi}) --print-multi-directory)
 		LDPATH+=:${LIBPATH}
@@ -550,14 +554,6 @@ toolchain_pkg_setup() {
 			"This is to try and cut down on people filing bugs for a compiler we do not currently support."
 	fi
 
-	# Setup variables which would normally be in the profile
-	if is_crosscompile ; then
-		multilib_env ${CTARGET}
-		if ! is_multilib ; then
-			MULTILIB_ABIS=${DEFAULT_ABI}
-		fi
-	fi
-
 	# we dont want to use the installed compiler's specs to build gcc!
 	unset GCC_SPECS
 
@@ -570,10 +566,6 @@ toolchain_pkg_setup() {
 	want_minispecs
 
 	unset LANGUAGES #265283
-}
-
-toolchain_pkg_preinst() {
-	:
 }
 
 toolchain_pkg_postinst() {
@@ -605,12 +597,6 @@ toolchain_pkg_postinst() {
 		# handling of binpkgs, don't require these to be found
 		cp "${ROOT}/${DATAPATH}"/c{89,99} "${ROOT}"/usr/bin/ 2>/dev/null
 	fi
-}
-
-toolchain_pkg_prerm() {
-	# Don't let these files be uninstalled #87647
-	touch -c "${ROOT}"/sbin/fix_libtool_files.sh \
-		"${ROOT}"/$(get_libdir)/rcscripts/awk/fixlafiles.awk
 }
 
 toolchain_pkg_postrm() {
@@ -825,17 +811,19 @@ gcc-abi-map() {
 }
 
 gcc-multilib-configure() {
-	# if multilib is disabled, get out quick!
 	if ! is_multilib ; then
 		confgcc+=" --disable-multilib"
-		return
+		# Fun times: if we are building for a target that has multiple
+		# possible ABI formats, and the user has told us to pick one
+		# that isn't the default, then not specifying it via the list
+		# below will break that on us.
 	else
 		confgcc+=" --enable-multilib"
 	fi
 
 	# translate our notion of multilibs into gcc's
 	local abi list
-	for abi in $(get_all_abis) ; do
+	for abi in $(get_all_abis TARGET) ; do
 		local l=$(gcc-abi-map ${abi})
 		[[ -n ${l} ]] && list+=",${l}"
 	done
@@ -969,13 +957,13 @@ gcc-compiler-configure() {
 			;;
 		# Add --with-abi flags to set default ABI
 		mips)
-			confgcc+=" --with-abi=$(gcc-abi-map ${DEFAULT_ABI})"
+			confgcc+=" --with-abi=$(gcc-abi-map ${TARGET_DEFAULT_ABI})"
 			;;
 		amd64)
 			# drop the older/ABI checks once this get's merged into some
 			# version of gcc upstream
-			if tc_version_is_at_least 4.7 && has x32 $(get_all_abis) ; then
-				confgcc+=" --with-abi=$(gcc-abi-map ${DEFAULT_ABI})"
+			if tc_version_is_at_least 4.7 && has x32 $(get_all_abis TARGET) ; then
+				confgcc+=" --with-abi=$(gcc-abi-map ${TARGET_DEFAULT_ABI})"
 			fi
 			;;
 		# Default arch for x86 is normally i386, lets give it a bump
@@ -1291,7 +1279,7 @@ gcc_do_make() {
 	else
 		# we only want to use the system's CFLAGS if not building a
 		# cross-compiler.
-		BOOT_CFLAGS=${BOOT_CFLAGS-"$(get_abi_CFLAGS) ${CFLAGS}"}
+		BOOT_CFLAGS=${BOOT_CFLAGS-"$(get_abi_CFLAGS ${TARGET_DEFAULT_ABI}) ${CFLAGS}"}
 	fi
 
 	pushd "${WORKDIR}"/build
@@ -1405,7 +1393,6 @@ gcc_do_filter_flags() {
 }
 
 toolchain_src_compile() {
-	multilib_env ${CTARGET}
 	gcc_do_filter_flags
 	einfo "CFLAGS=\"${CFLAGS}\""
 	einfo "CXXFLAGS=\"${CXXFLAGS}\""

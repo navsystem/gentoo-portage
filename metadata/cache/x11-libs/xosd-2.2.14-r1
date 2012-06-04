@@ -6,7 +6,7 @@ mirror://debian/pool/main/x/xosd/xosd_2.2.14.orig.tar.gz mirror://debian/pool/ma
 https://sourceforge.net/projects/libxosd/
 GPL-2
 Library for overlaying text in X-Windows X-On-Screen-Display plus binary for sending text from CLI
-~arm alpha amd64 hppa ia64 ppc ppc64 sparc x86
+alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86 ~amd64-fbsd
 autotools eutils libtool multilib toolchain-funcs user
 xinerama
 

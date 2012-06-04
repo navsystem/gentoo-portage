@@ -14,7 +14,7 @@ fortran nls +openmp objc objc++ +cxx build multislot nls nptl test vanilla
 
 3
 
-compile configure install postinst postrm preinst prepare prerm setup test unpack
+compile configure install postinst postrm prepare setup test unpack
 
 
 

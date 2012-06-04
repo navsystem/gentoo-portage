@@ -1,12 +1,12 @@
-DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
+DEFINED_PHASES=compile configure install postinst preinst prepare pretend setup unpack
 DEPEND=app-arch/unshield
 DESCRIPTION=A port of Jagged Alliance 2 to SDL (data files)
-EAPI=3
+EAPI=4
 HOMEPAGE=http://tron.homeunix.org/ja2/
 KEYWORDS=~amd64 ~x86
 LICENSE=SIR-TECH
 PROPERTIES=interactive
 RDEPEND=games-strategy/ja2-stracciatella
 SLOT=0
-_eclasses_=base	5f35078c26d6c60556d5c8a2feb4f84f	cdrom	415b847346ef9001a89e5c7da6711215	check-reqs	e25439e7f4ca914e41d6bb617caa564d	eutils	a95b1bf9d854485ca6fdbb47df2975aa	games	81964dcd902c8f9d7ea64cb18295a13b	multilib	5f4ad6cf85e365e8f0c6050ddd21659e	portability	536c5e70c5fb252ed3b769e04aa3f05b	toolchain-funcs	f71b9936acc911ed1cc84557d3b5c2b3	user	32a09e82e2f592bf88ad2fd08525166e
-_md5_=1fe085819cfa792394a523bc844728e5
+_eclasses_=base	5f35078c26d6c60556d5c8a2feb4f84f	cdrom	415b847346ef9001a89e5c7da6711215	check-reqs	e25439e7f4ca914e41d6bb617caa564d	eutils	a95b1bf9d854485ca6fdbb47df2975aa	games	81964dcd902c8f9d7ea64cb18295a13b	multilib	5782800349f728f725f9378105c6a2ab	portability	536c5e70c5fb252ed3b769e04aa3f05b	toolchain-funcs	f71b9936acc911ed1cc84557d3b5c2b3	user	32a09e82e2f592bf88ad2fd08525166e
+_md5_=1a8845744258d4282fc976b8cd91145c
