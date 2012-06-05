@@ -6,7 +6,7 @@ http://www.astrolog.org/ftp/ast54unx.shr
 http://www.astrolog.org/astrolog.htm
 astrolog
 A many featured astrology chart calculation program
-~amd64 ~ppc ~ppc64 ~x86
+amd64 ~ppc ~ppc64 ~x86
 multilib toolchain-funcs
 X
 

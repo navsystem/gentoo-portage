@@ -1,0 +1,22 @@
+dev-util/bsdiff >=sys-apps/sed-4
+media-libs/fontconfig x86? ( =dev-libs/openssl-0.9.8* ) cups? ( net-print/cups ) x86? ( x11-libs/gtk+:2 net-dns/libidn ldap? ( net-nds/openldap ) !minimal? ( || ( www-client/firefox www-client/firefox-bin www-client/seamonkey ) ) ) amd64? ( app-emulation/emul-linux-x86-gtklibs app-emulation/emul-linux-x86-baselibs ) linguas_zh_CN? ( media-fonts/acroread-asianfonts[linguas_zh_CN] ) linguas_ja? ( media-fonts/acroread-asianfonts[linguas_ja] ) linguas_zh_TW? ( media-fonts/acroread-asianfonts[linguas_zh_TW] ) linguas_ko? ( media-fonts/acroread-asianfonts[linguas_ko] )
+0
+linguas_en? ( http://ardownload.adobe.com/pub/adobe/reader/unix/9.x/9.5.1/enu/AdbeRdr9.5.1-1_i486linux_enu.tar.bz2 ) !linguas_en? ( http://ardownload.adobe.com/pub/adobe/reader/unix/9.x/9.5.1/enu/AdbeRdr9.5.1-1_i486linux_enu.tar.bz2 )
+strip mirror
+http://www.adobe.com/products/reader/
+Adobe
+Adobe's PDF reader
+-* ~amd64 ~x86
+eutils gnome2-utils multilib nsplugins toolchain-funcs user
+cups ldap minimal nsplugin linguas_en linguas_zh_CN linguas_zh_TW linguas_ja linguas_ko
+
+
+
+4
+
+install postinst postrm preinst setup unpack
+
+
+
+
+

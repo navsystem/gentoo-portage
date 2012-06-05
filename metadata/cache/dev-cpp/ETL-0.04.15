@@ -6,7 +6,7 @@ mirror://sourceforge/synfig/ETL/0.04.15/ETL-0.04.15.tar.gz
 http://synfig.org
 GPL-2
 ETL is a multi-platform class and template library
-~amd64
+~amd64 ~x86
 autotools libtool multilib toolchain-funcs
 
 

@@ -1,4 +1,4 @@
-!media-libs/jpeg:0 amd64? ( || ( dev-lang/nasm dev-lang/yasm ) ) x86? ( || ( dev-lang/nasm dev-lang/yasm ) ) amd64-fbsd? ( || ( dev-lang/nasm dev-lang/yasm ) ) x86-fbsd? ( || ( dev-lang/nasm dev-lang/yasm ) ) amd64-linux? ( || ( dev-lang/nasm dev-lang/yasm ) ) x86-linux? ( || ( dev-lang/nasm dev-lang/yasm ) ) java? ( >=virtual/jdk-1.5 ) java? ( >=dev-java/java-config-2.1.9-r1 )
+!media-libs/jpeg:0 amd64? ( || ( dev-lang/nasm dev-lang/yasm ) ) x86? ( || ( dev-lang/nasm dev-lang/yasm ) ) amd64-fbsd? ( || ( dev-lang/nasm dev-lang/yasm ) ) x86-fbsd? ( || ( dev-lang/nasm dev-lang/yasm ) ) amd64-linux? ( || ( dev-lang/nasm dev-lang/yasm ) ) x86-linux? ( || ( dev-lang/nasm dev-lang/yasm ) ) x64-macos? ( || ( dev-lang/nasm dev-lang/yasm ) ) java? ( >=virtual/jdk-1.5 ) java? ( >=dev-java/java-config-2.1.9-r1 )
 !media-libs/jpeg:0 java? ( >=virtual/jre-1.5 ) java? ( >=dev-java/java-config-2.1.9-r1 )
 0
 mirror://sourceforge/libjpeg-turbo/libjpeg-turbo-1.2.0.tar.gz mirror://debian/pool/main/libj/libjpeg8/libjpeg8_8d-1.debian.tar.gz
