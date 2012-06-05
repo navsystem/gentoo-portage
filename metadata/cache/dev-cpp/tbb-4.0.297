@@ -7,7 +7,7 @@ http://www.threadingbuildingblocks.org/
 GPL-2-with-exceptions
 High level abstract threading library
 amd64 ~x86
-eutils flag-o-matic multilib toolchain-funcs user versionator
+eutils multilib toolchain-funcs user versionator
 debug doc examples
 
 

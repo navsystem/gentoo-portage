@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=sys-libs/ncurses-5.2-r5
 SLOT=0
 SRC_URI=mirror://gentoo/grub-0.96.tar.gz mirror://gnu-alpha/grub/grub-0.96.tar.gz http://dev.gentoo.org/~seemant/distfiles/grub-0.96-r2-gentoo-0.1.tar.bz2 http://dev.gentoo.org/~seemant/distfiles/splash.xpm.gz mirror://gentoo/splash.xpm.gz mirror://gentoo/grub-0.96-r2-gentoo-0.1.tar.bz2
-_eclasses_=eutils	a95b1bf9d854485ca6fdbb47df2975aa	flag-o-matic	0be11571741a0d72603cb8cfc58bd3be	mount-boot	02dd3bb4c5f025fef0fc3ade0f27c217	multilib	5782800349f728f725f9378105c6a2ab	toolchain-funcs	f71b9936acc911ed1cc84557d3b5c2b3	user	32a09e82e2f592bf88ad2fd08525166e
+_eclasses_=eutils	a95b1bf9d854485ca6fdbb47df2975aa	flag-o-matic	d4d85170c0ee7a80c9a7cd009ae13133	mount-boot	02dd3bb4c5f025fef0fc3ade0f27c217	multilib	5782800349f728f725f9378105c6a2ab	toolchain-funcs	f71b9936acc911ed1cc84557d3b5c2b3	user	32a09e82e2f592bf88ad2fd08525166e
 _md5_=03d37516cc4b78c9e06a7d2862cab64e

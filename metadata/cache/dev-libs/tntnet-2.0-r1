@@ -1,5 +1,5 @@
->=dev-libs/cxxtools-2.0 sys-libs/zlib[minizip] ssl? ( gnutls? ( >=net-libs/gnutls-1.2.0 dev-libs/libgcrypt ) !gnutls? ( dev-libs/openssl ) ) virtual/pkgconfig examples? ( app-arch/zip ) || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
->=dev-libs/cxxtools-2.0 sys-libs/zlib[minizip] ssl? ( gnutls? ( >=net-libs/gnutls-1.2.0 dev-libs/libgcrypt ) !gnutls? ( dev-libs/openssl ) )
+=dev-libs/cxxtools-2.0* sys-libs/zlib[minizip] ssl? ( gnutls? ( >=net-libs/gnutls-1.2.0 dev-libs/libgcrypt ) !gnutls? ( dev-libs/openssl ) ) virtual/pkgconfig examples? ( app-arch/zip ) || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+=dev-libs/cxxtools-2.0* sys-libs/zlib[minizip] ssl? ( gnutls? ( >=net-libs/gnutls-1.2.0 dev-libs/libgcrypt ) !gnutls? ( dev-libs/openssl ) )
 0
 http://www.tntnet.org/download/tntnet-2.0.tar.gz
 

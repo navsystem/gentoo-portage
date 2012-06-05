@@ -6,7 +6,7 @@ https://dev.gentoo.org/~sera/distfiles/saaj-1.3.19.tar.bz2
 https://saaj.dev.java.net/
 CDDL
 SOAP with Attachments API for Java
-amd64 ~x86
+amd64 x86
 eutils java-ant-2 java-pkg-2 java-utils-2 multilib toolchain-funcs user versionator
 elibc_FreeBSD examples source test elibc_FreeBSD
 
