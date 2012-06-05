@@ -1,5 +1,5 @@
-dev-libs/apr dev-libs/apr-util dev-vcs/subversion x11-libs/wxGTK:2.8[X] doc? ( dev-libs/libxslt app-text/docbook-sgml-utils app-doc/doxygen app-text/docbook-xsl-stylesheets ) || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
-dev-libs/apr dev-libs/apr-util dev-vcs/subversion x11-libs/wxGTK:2.8[X]
+dev-libs/apr dev-libs/apr-util dev-vcs/subversion x11-libs/wxGTK:2.8[X] doc? ( dev-libs/libxslt app-text/docbook-sgml-utils app-doc/doxygen app-text/docbook-xsl-stylesheets ) || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool =dev-lang/python-2*
+dev-libs/apr dev-libs/apr-util dev-vcs/subversion x11-libs/wxGTK:2.8[X] =dev-lang/python-2*
 0
 http://dev.gentoo.org/~jlec/distfiles/rapidsvn-0.12.1_pre8247.tar.xz
 
@@ -7,7 +7,7 @@ http://rapidsvn.tigris.org/
 GPL-2 LGPL-2.1 FDL-1.2
 Cross-platform GUI front-end for the Subversion revision system
 ~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux
-autotools autotools-utils eutils fdo-mime flag-o-matic libtool multilib toolchain-funcs user versionator wxwidgets
+autotools autotools-utils eutils fdo-mime flag-o-matic libtool multilib python toolchain-funcs user versionator wxwidgets
 doc static-libs
 
 

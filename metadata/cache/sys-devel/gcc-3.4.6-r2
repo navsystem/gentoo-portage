@@ -14,7 +14,7 @@ ip28 ip32r10k n32 n64 build multislot nls nptl test vanilla altivec cxx fortran 
 
 
 
-compile install postinst setup test unpack
+compile install postinst postrm setup test unpack
 
 
 

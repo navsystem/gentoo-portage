@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13820 2012/06/04 02:59:46 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13824 2012/06/05 17:42:24 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,32 @@
 
 #--- END OF EXAMPLES ---
 
+# Torsten Veller <tove@gentoo.org> (05 Jun 2012)
+# Mask perl-5.16 for testing.
+# Make bugs block bug #415485 aka "perl-5.16"
+# I hope to remove this mask soon
+# Also unmask:
+# >=perl-core/ExtUtils-ParseXS-3.0
+# >=virtual/perl-ExtUtils-ParseXS-3.0
+>=perl-core/ExtUtils-ParseXS-3.0
+>=virtual/perl-ExtUtils-ParseXS-3.0
+=dev-lang/perl-5.16*
+
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (05 Jun 2012)
+# prerelease, hardware support changes need documentation #419493
+=x11-drivers/ati-drivers-12.6_beta*
+
+# Luca Barbato <lu_zero@gentoo.org> (05 Jun 2012)
+# Full support for gles2 pending drivers providing it
+=app-admin/eselect-opengl-1.2.6
+=x11-proto/glproto-1.4.15-r1
+=media-libs/mesa-8.0.3-r1
+
+# Michał Górny <mgorny@gentoo.org> (05 Jun 2012)
+# Proven not to fix -r2 issues, needless rebuild for users.
+# Bug #417913, comment #30.
+=sys-devel/clang-3.1-r3
+
 # Christoph Junghans <ottxor@gentoo.org> (04 Jun 2012)
 # Mask for testing and porting. Tracker Bug #418473
 app-admin/eselect-awk
@@ -41,7 +67,7 @@ app-admin/eselect-awk
 net-misc/ptrtd
 
 # Andreas K. Hüttel <dilfridge@gentoo.org> (03 Jun 2012)
-# Not maintained well in Gentoo for a long time. Better support 
+# Not maintained well in Gentoo for a long time. Better support
 # for zeroconf is available via net-dns/avahi[mdnsresponder-compat]
 # - please use that instead. mDNSResponder will be removed soon.
 net-misc/mDNSResponder
@@ -645,12 +671,6 @@ sys-apps/elfix
 # media-video/vdr-xvdr-9999, masked git live ebuild
 =media-plugins/vdr-xvdr-9999
 =media-plugins/xbmc-addon-vdr-9999
-
-# Tomáš Chvátal <scarabeus@gentoo.org> (28 Aug 2011)
-# Breaks lots of rdeps.
-# Masked until bug #378783 is sorted out.
->=perl-core/ExtUtils-ParseXS-3.0
->=virtual/perl-ExtUtils-ParseXS-3.0
 
 # Alexis Ballier <aballier@gentoo.org> (20 Aug 2011)
 # dev-tex/pdftex-1.40.11 is 100% identical to the one in TeX Live 2010;
