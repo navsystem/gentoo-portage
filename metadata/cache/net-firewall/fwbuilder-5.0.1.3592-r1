@@ -6,7 +6,7 @@ mirror://sourceforge/fwbuilder/fwbuilder-5.0.1.3592.tar.gz
 http://www.fwbuilder.org/
 GPL-2
 A firewall GUI
-amd64 ~ppc ~ppc64 ~x86
+amd64 ~ppc ppc64 ~x86
 autotools base eutils libtool multilib qt4-r2 toolchain-funcs user
 
 

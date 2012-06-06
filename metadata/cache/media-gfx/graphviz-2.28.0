@@ -6,7 +6,7 @@ test
 http://www.graphviz.org/
 CPL-1.0
 Open Source Graph Visualization Software
-
+~amd64 ~mips ~ppc ~s390 ~sh ~x86 ~sparc-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris
 autotools eutils flag-o-matic libtool multilib python toolchain-funcs user
 +cairo devil doc examples gs gtk gts java lasi nls perl python qt4 ruby svg static-libs tcl X elibc_FreeBSD
 !cairo? ( !X !gtk !gs !lasi )

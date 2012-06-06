@@ -7,7 +7,7 @@ http://cygwin.com/
 GPL-2
 Linux-like environment for Windows
 ~amd64 ~x86
-multilib toolchain-funcs
+eutils flag-o-matic multilib toolchain-funcs user
 crosscompile_opts_headers-only
 
 

@@ -6,7 +6,7 @@ mirror://apache/commons/fileupload/source/commons-fileupload-1.2.1-src.tar.gz
 http://commons.apache.org/fileupload/
 Apache-2.0
 Add robust, high-performance, file upload capability to your servlets and web applications.
-amd64 ~ppc ~ppc64 x86 ~x86-fbsd
+amd64 ~ppc ppc64 x86 ~x86-fbsd
 eutils java-ant-2 java-pkg-2 java-utils-2 multilib toolchain-funcs user versionator
 elibc_FreeBSD doc source test elibc_FreeBSD
 
