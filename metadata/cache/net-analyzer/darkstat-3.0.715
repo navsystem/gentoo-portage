@@ -1,13 +1,13 @@
 net-libs/libpcap
 net-libs/libpcap
 0
-http://dmr.ath.cx/net/darkstat/darkstat-3.0.715.tar.bz2
+http://unix4lyfe.org/darkstat/darkstat-3.0.715.tar.bz2
 
-http://dmr.ath.cx/net/darkstat/
+http://unix4lyfe.org/darkstat/
 GPL-2
 darkstat is a network traffic analyzer
-~amd64 ~ppc ~x86
-eutils multilib toolchain-funcs user
+amd64 ~ppc ~x86
+user
 
 
 

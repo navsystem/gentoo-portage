@@ -8,7 +8,7 @@ GPL-2
 manage files with git, without checking their contents into git
 ~amd64 ~x86
 eutils ghc-package haskell-cabal multilib toolchain-funcs user versionator
-doc
+doc test
 
 
 

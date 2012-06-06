@@ -14,7 +14,7 @@ build multislot nls nptl test vanilla altivec cxx fortran nocxx
 
 
 
-compile install postinst setup test unpack
+compile install postinst postrm setup test unpack
 
 
 

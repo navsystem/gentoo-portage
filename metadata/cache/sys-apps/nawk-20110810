@@ -6,7 +6,7 @@ http://www.cs.princeton.edu/~bwk/btl.mirror/awk.tar.gz
 http://cm.bell-labs.com/cm/cs/awkbook/index.html
 MIT
 Brian Kernighan's pattern scanning and processing language
-~x86
+~amd64 ~x86
 multilib toolchain-funcs
 
 

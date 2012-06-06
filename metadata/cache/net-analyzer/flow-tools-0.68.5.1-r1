@@ -6,8 +6,8 @@ http://flow-tools.googlecode.com/files/flow-tools-0.68.5.1.tar.bz2
 http://code.google.com/p/flow-tools/
 BSD
 library and programs to collect, send, process, and generate reports from NetFlow data
-~amd64 ~ppc ~x86
-eutils multilib toolchain-funcs user
+amd64 ~ppc ~x86
+user
 debug mysql postgres ssl static-libs
 
 

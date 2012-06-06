@@ -1,5 +1,5 @@
 >=net-libs/libnet-1.1.2 net-libs/libpcap
-
+>=net-libs/libnet-1.1.2 net-libs/libpcap
 0
 http://packetfactory.openwall.net/projects/packit/downloads/packit-1.0.tgz
 

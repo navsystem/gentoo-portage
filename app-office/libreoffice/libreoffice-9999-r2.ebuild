@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.78 2012/06/01 20:18:03 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.82 2012/06/05 15:43:40 scarabeus Exp $
 
 EAPI=4
 
@@ -27,7 +27,7 @@ BRANDING="${PN}-branding-gentoo-0.5.tar.xz"
 # PATCHSET="${P}-patchset-01.tar.xz"
 
 [[ ${PV} == *9999* ]] && SCM_ECLASS="git-2"
-inherit base autotools bash-completion-r1 check-reqs eutils java-pkg-opt-2 kde4-base pax-utils prefix python multilib toolchain-funcs flag-o-matic nsplugins ${SCM_ECLASS}
+inherit base autotools bash-completion-r1 check-reqs eutils java-pkg-opt-2 kde4-base pax-utils python multilib toolchain-funcs flag-o-matic nsplugins ${SCM_ECLASS}
 unset SCM_ECLASS
 
 DESCRIPTION="LibreOffice, a full office productivity suite."
@@ -95,10 +95,6 @@ NSS_DEPEND="
 	>=dev-libs/nspr-4.8.8
 	>=dev-libs/nss-3.12.9
 "
-# media-libs/lcms:2 is checked by configure but is only used
-# for internal libcdr build we don't build. As this package
-# is deemed to be around due to libcdr dep anyway I won't
-# add it as harddep
 COMMON_DEPEND="
 	app-arch/zip
 	app-arch/unzip
@@ -109,7 +105,7 @@ COMMON_DEPEND="
 	app-text/libwpg:0.2
 	>=app-text/libwps-0.2.2
 	>=dev-cpp/clucene-2.3.3.4-r2
-	dev-cpp/libcmis
+	>=dev-cpp/libcmis-0.2
 	dev-db/unixODBC
 	dev-libs/expat
 	>=dev-libs/glib-2.28
@@ -120,6 +116,7 @@ COMMON_DEPEND="
 	>=dev-libs/redland-1.0.14[ssl]
 	>=media-libs/fontconfig-2.8.0
 	media-libs/freetype:2
+	media-libs/lcms:2
 	>=media-libs/libpng-1.4
 	>=media-libs/libcdr-0.0.5
 	media-libs/libvisio
@@ -192,7 +189,6 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
 	dev-util/mdds
 	virtual/pkgconfig
-	media-libs/sampleicc
 	net-misc/npapi-sdk
 	>=sys-apps/findutils-4.4.2
 	sys-devel/bison

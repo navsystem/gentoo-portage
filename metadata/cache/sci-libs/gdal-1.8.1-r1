@@ -6,7 +6,7 @@ http://download.osgeo.org/gdal/gdal-1.8.1.tar.gz
 http://www.gdal.org/
 MIT
 Translator library for raster geospatial data formats (includes OGR support)
-amd64 ppc ~ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos
+amd64 ppc ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos
 autotools base eutils java-utils-2 libtool multilib perl-module python ruby-ng toolchain-funcs user versionator
 +aux_xml curl debug doc ecwj2k fits geos gif gml hdf5 jpeg jpeg2k mysql netcdf odbc ogdi pdf perl png postgres python ruby sqlite threads elibc_FreeBSD ruby_targets_ruby18
 

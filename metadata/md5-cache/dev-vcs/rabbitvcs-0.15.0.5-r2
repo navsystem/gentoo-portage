@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install postinst postrm preinst prepare setup
+DEPEND=>=sys-apps/sed-4 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
+DESCRIPTION=Integrated version control support for your desktop
+EAPI=4
+HOMEPAGE=http://rabbitvcs.org
+IUSE=cli diff gedit git nautilus spell thunar
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=dev-python/configobj dev-python/pygobject:2 dev-python/pygtk dev-python/pysvn dev-python/simplejson diff? ( dev-util/meld ) gedit? ( app-editors/gedit ) git? ( dev-python/dulwich ) nautilus? ( >=dev-python/nautilus-python-0.7.0 dev-python/dbus-python dev-python/gnome-vfs-python ) spell? ( dev-python/gtkspell-python ) thunar? ( dev-python/thunarx-python dev-python/dbus-python ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
+SLOT=0
+SRC_URI=http://rabbitvcs.googlecode.com/files/rabbitvcs-0.15.0.5.tar.bz2
+_eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	eutils	ff5a46c2b596c2e0447de62f1ac90ded	gnome2-utils	dfd98be073cc8193fc79925566741ab0	multilib	5782800349f728f725f9378105c6a2ab	python	36d7e2b7aa4dce62364c72eec96610cf	toolchain-funcs	f71b9936acc911ed1cc84557d3b5c2b3	user	32a09e82e2f592bf88ad2fd08525166e
+_md5_=e25e88f2f3e219b101c0446d4616a0f7

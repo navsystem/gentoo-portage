@@ -1,0 +1,22 @@
+sci-libs/cfitsio sci-astronomy/wcslib sys-libs/readline virtual/blas virtual/fortran virtual/lapack data? ( sci-astronomy/casa-data ) fftw? ( >=sci-libs/fftw-3 ) hdf5? ( sci-libs/hdf5 ) virtual/pkgconfig doc? ( app-doc/doxygen ) test? ( sci-astronomy/casa-data ) >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+sci-libs/cfitsio sci-astronomy/wcslib sys-libs/readline virtual/blas virtual/fortran virtual/lapack data? ( sci-astronomy/casa-data ) fftw? ( >=sci-libs/fftw-3 ) hdf5? ( sci-libs/hdf5 )
+0
+http://casacore.googlecode.com/files/casacore-1.5.0.tar.bz2
+
+http://code.google.com/p/casacore/
+GPL-2
+Core libraries for the Common Astronomy Software Applications
+~amd64 ~x86
+base cmake-utils eutils flag-o-matic fortran-2 multilib toolchain-funcs user
++data doc fftw hdf5 openmp threads test
+
+
+
+4
+
+compile configure install prepare setup test unpack
+
+
+
+
+

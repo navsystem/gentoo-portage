@@ -2,12 +2,12 @@
 
 0
 http://www.threadingbuildingblocks.org/uploads/78/181/4.0%20update%203/tbb40_297oss_src.tgz
-
+test
 http://www.threadingbuildingblocks.org/
 GPL-2-with-exceptions
 High level abstract threading library
 amd64 ~x86
-eutils flag-o-matic multilib toolchain-funcs user versionator
+eutils multilib toolchain-funcs user versionator
 debug doc examples
 
 
