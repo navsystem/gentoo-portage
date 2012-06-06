@@ -17,3 +17,4 @@
 *sys-process/iotop
 *sys-fs/cryptsetup
 *sys-boot/grub-static
+*net-misc/bridge-utils
