@@ -1,0 +1,22 @@
+x11-libs/libX11 >=x11-proto/xproto-7.0.17 || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool x86-interix? ( >=sys-devel/libtool-2.2.6a sys-devel/m4 >=x11-misc/util-macros-1.17 >=media-fonts/font-util-1.2.0 ) ppc-aix? ( >=sys-devel/libtool-2.2.6a sys-devel/m4 >=x11-misc/util-macros-1.17 >=media-fonts/font-util-1.2.0 ) x86-winnt? ( >=sys-devel/libtool-2.2.6a sys-devel/m4 >=x11-misc/util-macros-1.17 >=media-fonts/font-util-1.2.0 ) virtual/pkgconfig
+x11-libs/libX11
+0
+http://xorg.freedesktop.org/releases/individual/app/transset-1.0.0.tar.bz2
+
+http://www.freedesktop.org/wiki/Software/xapps http://cgit.freedesktop.org/xorg/app/transset/
+SGI-B-2.0
+An utility for setting opacity property
+~amd64 ~x86
+autotools autotools-utils eutils flag-o-matic libtool multilib toolchain-funcs user xorg-2
+
+
+
+
+4
+
+compile configure install postinst postrm prepare test unpack
+
+
+
+
+

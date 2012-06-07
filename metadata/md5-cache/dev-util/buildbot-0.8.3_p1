@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-python/jinja-2.1 || ( dev-lang/python:2.7 dev-lang/python:2.6 dev-python/simplejson ) || ( dev-lang/python:2.7[sqlite] dev-lang/python:2.6[sqlite] dev-python/pysqlite:2 ) >=dev-python/twisted-8.0.0 dev-python/twisted-web irc? ( dev-python/twisted-words ) mail? ( dev-python/twisted-mail ) manhole? ( dev-python/twisted-conch ) =dev-lang/python-2*
 SLOT=0
 SRC_URI=mirror://pypi/b/buildbot/buildbot-0.8.3p1.tar.gz
-_eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	eutils	ff5a46c2b596c2e0447de62f1ac90ded	multilib	5782800349f728f725f9378105c6a2ab	python	36d7e2b7aa4dce62364c72eec96610cf	toolchain-funcs	f71b9936acc911ed1cc84557d3b5c2b3	user	32a09e82e2f592bf88ad2fd08525166e
+_eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	eutils	ce5cc1452afda90c945acd9a5f3696ff	multilib	5782800349f728f725f9378105c6a2ab	python	36d7e2b7aa4dce62364c72eec96610cf	toolchain-funcs	f71b9936acc911ed1cc84557d3b5c2b3	user	32a09e82e2f592bf88ad2fd08525166e
 _md5_=81132255e852654cb3753e06d4082013

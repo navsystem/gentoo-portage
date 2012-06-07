@@ -1,0 +1,22 @@
+sys-devel/flex virtual/yacc doc? ( app-text/asciidoc <app-doc/doxygen-1.8.0[latex] media-gfx/mscgen )
+
+3
+http://www.infradead.org/~tgr/libnl/files/libnl-3.2.10.tar.gz
+
+http://www.infradead.org/~tgr/libnl/
+LGPL-2.1
+A library for applications dealing with netlink socket
+~amd64 ~s390 ~sh ~x86 ~amd64-linux ~ia64-linux ~x86-linux
+eutils multilib toolchain-funcs user
+doc static-libs utils
+
+
+
+4
+
+compile configure install prepare
+
+
+
+
+
