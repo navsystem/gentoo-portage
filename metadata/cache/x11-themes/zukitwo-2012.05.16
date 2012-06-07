@@ -1,5 +1,5 @@
 app-arch/xz-utils
-media-fonts/ubuntu-font-family >=x11-libs/gtk+-2.10:2 >=x11-libs/gtk+-3.4:3 >=x11-themes/gtk-engines-murrine-0.98.1.1 >=x11-themes/gtk-engines-unico-1.0.2 gnome-shell? ( x11-themes/zukitwo-shell )
+>=x11-libs/gtk+-2.10:2 >=x11-libs/gtk+-3.4:3 >=x11-themes/gtk-engines-murrine-0.98.1.1 >=x11-themes/gtk-engines-unico-1.0.2 gnome-shell? ( x11-themes/zukitwo-shell )
 0
 http://dev.gentoo.org/~tetromino/distfiles/zukitwo/zukitwo-2012.05.16.tar.xz
 

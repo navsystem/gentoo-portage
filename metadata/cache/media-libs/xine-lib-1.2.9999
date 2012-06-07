@@ -7,7 +7,7 @@ http://xine.sourceforge.net/
 GPL-2
 Core libraries for Xine movie player
 
-autotools eutils libtool mercurial multilib toolchain-funcs user
+autotools eutils libtool mercurial multilib multiprocessing toolchain-funcs user
 a52 aac aalib +alsa altivec bluray +css directfb dts dvb dxr3 fbcon flac fusion gtk imagemagick ipv6 jack libcaca mad +mmap mng modplug musepack opengl oss pulseaudio real samba sdl speex theora truetype v4l vcd vdpau vdr vidix +vis vorbis wavpack win32codecs +X +xcb xinerama +xv xvmc
 vidix? ( || ( X fbcon ) ) xv? ( X ) xinerama? ( X )
 

@@ -7,7 +7,7 @@ http://gpe.linuxtogo.org
 LGPL-2
 Database access library for GPE calendar
 ~arm ~amd64 ~x86
-autotools eutils gpe libtool multilib toolchain-funcs user
+autotools eutils gpe libtool multilib multiprocessing toolchain-funcs user
 doc nls
 
 

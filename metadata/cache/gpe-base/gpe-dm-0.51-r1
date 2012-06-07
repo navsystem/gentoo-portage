@@ -7,7 +7,7 @@ http://gpe.linuxtogo.org
 GPL-2
 GPE Desktop Manager
 ~arm ~amd64 ~x86
-autotools eutils gpe libtool multilib toolchain-funcs user
+autotools eutils gpe libtool multilib multiprocessing toolchain-funcs user
 nls
 
 

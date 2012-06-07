@@ -7,7 +7,7 @@ http://www.gnu.org/software/grub/
 GPL-2
 GNU GRUB Legacy boot loader
 amd64 x86 ~x86-fbsd
-autotools eutils flag-o-matic libtool mount-boot multilib toolchain-funcs user
+autotools eutils flag-o-matic libtool mount-boot multilib multiprocessing toolchain-funcs user
 static netboot custom-cflags
 
 

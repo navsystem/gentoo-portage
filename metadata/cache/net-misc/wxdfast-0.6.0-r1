@@ -7,7 +7,7 @@ http://dfast.sourceforge.net
 GPL-2
 A multi-threaded cross-platform download manager
 ~amd64 ~x86
-autotools eutils libtool multilib toolchain-funcs user wxwidgets
+autotools eutils libtool multilib multiprocessing toolchain-funcs user wxwidgets
 
 
 

@@ -7,7 +7,7 @@ https://launchpad.net/zeitgeist-sharp/
 GPL-3
 Mono DBus API wrapper for Zeitgeist
 ~amd64 ~x86 ~amd64-linux ~x86-linux
-autotools autotools-utils eutils libtool mono multilib toolchain-funcs user versionator
+autotools autotools-utils eutils libtool mono multilib multiprocessing toolchain-funcs user versionator
 doc
 
 

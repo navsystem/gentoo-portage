@@ -7,7 +7,7 @@ http://mecab.sourceforge.net/
 || ( BSD LGPL-2.1 GPL-2 )
 Yet Another Part-of-Speech and Morphological Analyzer
 ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 static-libs unicode
 
 || ( >=app-dicts/mecab-ipadic-2.7.0.20070610[unicode=] app-dicts/mecab-naist-jdic[unicode=] )

@@ -7,7 +7,7 @@ http://mkweb.bcgsc.ca/circos/
 GPL-2
 Circular layout visualization of genomic and other data
 ~amd64 ~x86
-base eutils multilib perl-module toolchain-funcs user
+base eutils multilib multiprocessing perl-module toolchain-funcs user
 
 
 

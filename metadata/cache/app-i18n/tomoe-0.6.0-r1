@@ -7,7 +7,7 @@ http://tomoe.sourceforge.jp/
 LGPL-2.1
 Japanese handwriting recognition engine
 amd64 ~x86
-autotools eutils libtool multilib python toolchain-funcs user
+autotools eutils libtool multilib multiprocessing python toolchain-funcs user
 doc hyperestraier mysql ruby python static-libs subversion
 
 

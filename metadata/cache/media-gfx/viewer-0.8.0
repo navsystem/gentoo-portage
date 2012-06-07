@@ -7,7 +7,7 @@ http://www-users.cs.umn.edu/~wburdick/geowall/viewer.html
 GPL-2
 A stereo pair image viewer (supports ppm's only)
 ~amd64 ~ppc ~x86
-autotools libtool multilib toolchain-funcs
+autotools libtool multilib multiprocessing toolchain-funcs
 
 
 

@@ -7,7 +7,7 @@ http://zfsonlinux.org/
 || ( GPL-2 GPL-3 )
 The Solaris Porting Layer is a Linux kernel module which provides many of the Solaris kernel APIs
 
-autotools autotools-utils eutils flag-o-matic git-2 libtool linux-info linux-mod multilib toolchain-funcs user versionator
+autotools autotools-utils eutils flag-o-matic git-2 libtool linux-info linux-mod multilib multiprocessing toolchain-funcs user versionator
 custom-cflags debug kernel_linux
 
 

@@ -7,7 +7,7 @@ http://www.gnome.org/projects/evolution/
 LGPL-2 BSD DB
 Evolution groupware backend
 ~amd64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-solaris
-autotools db-use eutils fdo-mime flag-o-matic gnome.org gnome2 gnome2-utils libtool multilib toolchain-funcs user versionator virtualx
+autotools db-use eutils fdo-mime flag-o-matic gnome.org gnome2 gnome2-utils libtool multilib multiprocessing toolchain-funcs user versionator virtualx
 doc +gnome-online-accounts +introspection ipv6 ldap kerberos vala +weather test
 vala? ( introspection )
 

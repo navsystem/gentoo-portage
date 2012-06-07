@@ -7,7 +7,7 @@ http://www.cups.org/
 GPL-2
 The Common Unix Printing System
 
-autotools base eutils fdo-mime flag-o-matic gnome2-utils java-pkg-opt-2 java-utils-2 libtool linux-info multilib pam python subversion systemd toolchain-funcs user versionator
+autotools base eutils fdo-mime flag-o-matic gnome2-utils java-pkg-opt-2 java-utils-2 libtool linux-info multilib multiprocessing pam python subversion systemd toolchain-funcs user versionator
 acl avahi dbus debug +filters gnutls java kerberos pam python +ssl static-libs systemd +threads usb X xinetd zeroconf linguas_da linguas_de linguas_es linguas_eu linguas_fi linguas_fr linguas_id linguas_it linguas_ja linguas_ko linguas_nl linguas_no linguas_pl linguas_pt linguas_pt_BR linguas_ru linguas_sv linguas_zh linguas_zh_TW elibc_FreeBSD java
 gnutls? ( ssl )
 app-text/ghostscript-gpl[cups] >=app-text/poppler-0.12.3-r3[utils] net-print/cups-filters filters? ( net-print/foomatic-filters )

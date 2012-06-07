@@ -7,7 +7,7 @@ http://chicago.sourceforge.net/xlhtml/ http://packages.debian.org/etch/xlhtml/
 GPL-2
 Convert MS Excel and Powerpoint files to HTML
 ~alpha ~amd64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 
 
 

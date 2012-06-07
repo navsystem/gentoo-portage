@@ -7,7 +7,7 @@ http://www.nongnu.org/renameutils/
 GPL-3
 Use your favorite text editor to rename files
 ~amd64 ~ppc ~x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 nls
 
 

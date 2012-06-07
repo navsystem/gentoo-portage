@@ -7,7 +7,7 @@ http://triring.net/ps2linux/games/kxl/kxlgames.html
 GPL-2
 2D length scroll shooting game
 amd64 x86
-autotools base eutils games libtool multilib toolchain-funcs user
+autotools base eutils games libtool multilib multiprocessing toolchain-funcs user
 
 
 

@@ -7,7 +7,7 @@ http://search.cpan.org/dist/Date-ISO/
 || ( Artistic GPL-2 )
 Date::ICal subclass that handles ISO format dates
 alpha amd64 ppc x86
-base eutils multilib perl-module toolchain-funcs user
+base eutils multilib multiprocessing perl-module toolchain-funcs user
 
 
 

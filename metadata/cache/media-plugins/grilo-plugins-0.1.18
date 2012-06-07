@@ -7,7 +7,7 @@ https://live.gnome.org/Grilo
 LGPL-2.1
 A framework for easy media discovery and browsing
 ~amd64 ~x86
-autotools eutils fdo-mime gnome.org gnome2 gnome2-utils libtool multilib toolchain-funcs user versionator
+autotools eutils fdo-mime gnome.org gnome2 gnome2-utils libtool multilib multiprocessing toolchain-funcs user versionator
 tracker upnp +vimeo +youtube debug
 
 

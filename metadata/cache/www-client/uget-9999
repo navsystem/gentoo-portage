@@ -7,7 +7,7 @@ http://urlget.sourceforge.net/
 LGPL-2.1
 Download manager using gtk+ and libcurl
 
-autotools git-2 libtool multilib toolchain-funcs
+autotools git-2 libtool multilib multiprocessing toolchain-funcs
 aria2 +curl gstreamer gtk3 hide-temp-files libnotify nls
 || ( aria2 curl )
 

@@ -7,7 +7,7 @@ http://www.pulseaudio.org/
 !gdbm? ( LGPL-2.1 ) gdbm? ( GPL-2 )
 A networked sound server with an advanced plugin system
 ~alpha amd64 arm hppa ~ia64 ppc ppc64 ~sh ~sparc x86 ~amd64-linux ~x86-linux
-autotools eutils flag-o-matic libtool multilib toolchain-funcs user versionator
+autotools eutils flag-o-matic libtool multilib multiprocessing toolchain-funcs user versionator
 +alsa avahi +caps equalizer jack lirc oss tcpd +X dbus libsamplerate gnome bluetooth +asyncns +glib test doc +udev ipv6 system-wide realtime +orc ssl +gdbm
 bluetooth? ( dbus )
 

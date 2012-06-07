@@ -7,7 +7,7 @@ http://gtranslator.sourceforge.net/
 GPL-2
 An enhanced gettext po file editor for GNOME
 amd64 ppc x86
-autotools eutils fdo-mime gnome.org gnome2 gnome2-utils libtool multilib toolchain-funcs user versionator
+autotools eutils fdo-mime gnome.org gnome2 gnome2-utils libtool multilib multiprocessing toolchain-funcs user versionator
 doc http gnome spell
 
 

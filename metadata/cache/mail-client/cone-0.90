@@ -7,7 +7,7 @@ http://www.courier-mta.org/cone/
 GPL-3
 CONE: COnsole News reader and Emailer
 ~amd64 ~ppc ~sparc ~x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 crypt fam gnutls idn ipv6 ldap spell
 
 

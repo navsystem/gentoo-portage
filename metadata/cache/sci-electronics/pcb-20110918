@@ -7,7 +7,7 @@ http://www.gpleda.org/
 GPL-2
 GPL Electronic Design Automation: Printed Circuit Board editor
 ~amd64 ~ppc ~x86 ~x86-macos
-autotools eutils fdo-mime gnome2-utils libtool multilib toolchain-funcs user
+autotools eutils fdo-mime gnome2-utils libtool multilib multiprocessing toolchain-funcs user
 dbus debug doc gcode gif gtk jpeg m4lib-png motif nelma opengl png test tk toporouter xrender
 
 

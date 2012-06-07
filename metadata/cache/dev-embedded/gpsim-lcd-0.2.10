@@ -7,7 +7,7 @@ http://www.dattalo.com/gnupic/lcd.html
 GPL-2
 2x20 LCD display module for GPSIM
 amd64 ~ppc ppc64 x86
-autotools libtool multilib toolchain-funcs
+autotools libtool multilib multiprocessing toolchain-funcs
 
 
 

@@ -7,7 +7,7 @@ http://linux-usb.sourceforge.net/
 GPL-2
 USB enumeration utilities
 ~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux
-autotools eutils libtool multilib python toolchain-funcs user
+autotools eutils libtool multilib multiprocessing python toolchain-funcs user
 python zlib
 
 

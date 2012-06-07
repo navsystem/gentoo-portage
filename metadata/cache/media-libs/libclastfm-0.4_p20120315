@@ -7,7 +7,7 @@ http://sourceforge.net/projects/liblastfm/
 GPL-3
 An unofficial C-API to the last.fm web service
 amd64 x86
-autotools libtool multilib toolchain-funcs
+autotools libtool multilib multiprocessing toolchain-funcs
 static-libs
 
 

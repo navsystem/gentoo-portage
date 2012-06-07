@@ -7,7 +7,7 @@ http://icps.u-strasbg.fr/polylib/
 GPL-2
 ppl port of cloog
 
-autotools eutils git-2 libtool multilib toolchain-funcs user
+autotools eutils git-2 libtool multilib multiprocessing toolchain-funcs user
 
 
 

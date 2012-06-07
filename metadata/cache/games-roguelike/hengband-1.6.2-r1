@@ -7,7 +7,7 @@ http://hengband.sourceforge.jp/en/
 Moria
 An Angband variant, with a Japanese/fantasy theme
 ppc x86 ~x86-fbsd
-autotools base eutils games libtool multilib toolchain-funcs user
+autotools base eutils games libtool multilib multiprocessing toolchain-funcs user
 X linguas_ja
 
 

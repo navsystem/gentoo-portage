@@ -7,7 +7,7 @@ http://search.cpan.org/dist/Class-DBI/
 || ( Artistic GPL-2 )
 Simple Database Abstraction
 amd64 ~ppc ppc64 x86 ~x86-solaris
-base eutils multilib perl-module toolchain-funcs user
+base eutils multilib multiprocessing perl-module toolchain-funcs user
 
 
 

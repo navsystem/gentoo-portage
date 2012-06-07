@@ -7,7 +7,7 @@ http://love2d.org/
 ZLIB
 A framework for 2D games in Lua
 
-autotools base eutils games libtool mercurial multilib toolchain-funcs user
+autotools base eutils games libtool mercurial multilib multiprocessing toolchain-funcs user
 
 
 

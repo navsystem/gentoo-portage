@@ -7,7 +7,7 @@ http://aqualung.factorial.hu/
 GPL-2
 A music player for a wide range of formats designed for gapless playback
 amd64 x86
-autotools eutils libtool multilib toolchain-funcs user versionator
+autotools eutils libtool multilib multiprocessing toolchain-funcs user versionator
 alsa cdda cddb debug flac ffmpeg ifp jack ladspa lame libsamplerate lua mac modplug mp3 musepack oss podcast pulseaudio sndfile speex systray vorbis wavpack
 
 

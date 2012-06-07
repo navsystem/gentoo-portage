@@ -7,7 +7,7 @@ http://liferea.sourceforge.net/
 GPL-2
 News Aggregator for RDF/RSS/CDF/Atom/Echo/etc feeds
 ~amd64 ~ppc ~ppc64 ~x86
-autotools eutils fdo-mime gnome.org gnome2 gnome2-utils libtool multilib toolchain-funcs user versionator
+autotools eutils fdo-mime gnome.org gnome2 gnome2-utils libtool multilib multiprocessing toolchain-funcs user versionator
 dbus libnotify lua networkmanager
 
 

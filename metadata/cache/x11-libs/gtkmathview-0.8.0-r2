@@ -7,7 +7,7 @@ http://helm.cs.unibo.it/mml-widget/
 LGPL-3
 Rendering engine for MathML documents
 ~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 gtk mathml svg t1lib
 
 

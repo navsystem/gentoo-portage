@@ -7,7 +7,7 @@ https://launchpad.net/dee/
 GPL-3
 Provide objects allowing to create Model-View-Controller type programs across DBus
 ~amd64 ~x86
-autotools autotools-utils eutils libtool multilib toolchain-funcs user
+autotools autotools-utils eutils libtool multilib multiprocessing toolchain-funcs user
 doc debug examples +icu static-libs test
 
 

@@ -7,7 +7,7 @@ http://www.scim-im.org/
 GPL-2
 Smart Common Input Method (SCIM) Smart Pinyin Input Method
 ppc64
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 nls
 
 

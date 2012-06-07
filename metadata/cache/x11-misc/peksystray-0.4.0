@@ -7,7 +7,7 @@ http://peksystray.sourceforge.net/
 GPL-2
 A system tray dockapp for window managers supporting docking
 ~alpha ~amd64 ~ppc ~x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 
 
 

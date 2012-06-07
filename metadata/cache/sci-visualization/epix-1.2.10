@@ -7,7 +7,7 @@ http://mathcs.holycross.edu/~ahwang/current/ePiX.html
 GPL-2
 2- and 3-D plotter for creating images (to be used in LaTeX)
 ~amd64 ~ppc ~x86
-autotools bash-completion-r1 elisp-common eutils libtool multilib toolchain-funcs user
+autotools bash-completion-r1 elisp-common eutils libtool multilib multiprocessing toolchain-funcs user
 doc emacs examples
 
 

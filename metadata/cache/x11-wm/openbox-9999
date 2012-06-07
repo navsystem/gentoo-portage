@@ -7,7 +7,7 @@ http://openbox.org/
 GPL-2
 A standards compliant, fast, light-weight, extensible window manager
 
-autotools eutils git-2 libtool multilib toolchain-funcs user
+autotools eutils git-2 libtool multilib multiprocessing toolchain-funcs user
 debug imlib nls python session startup-notification static-libs
 
 

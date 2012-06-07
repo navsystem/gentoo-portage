@@ -7,7 +7,7 @@ http://www.flyn.org/projects/libdmapsharing
 LGPL-2.1
 A library that implements the DMAP family of protocols
 ~amd64 ~x86
-autotools base eutils libtool multilib toolchain-funcs user
+autotools base eutils libtool multilib multiprocessing toolchain-funcs user
 doc
 
 

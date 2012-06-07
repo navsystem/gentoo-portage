@@ -7,7 +7,7 @@ http://old-en.opensuse.org/Icecream
 GPL-2
 icecc is a program for distributed compiling of C(++) code across several machines; based on distcc
 ~amd64 ~arm ~hppa ~ppc ~sparc ~x86
-autotools base eutils libtool multilib toolchain-funcs user
+autotools base eutils libtool multilib multiprocessing toolchain-funcs user
 
 
 

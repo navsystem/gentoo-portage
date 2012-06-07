@@ -7,7 +7,7 @@ http://www.snort.org/dl/barnyard/
 QPL
 Fast output system for Snort
 ~amd64 -sparc ~x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 mysql postgres sguil
 
 

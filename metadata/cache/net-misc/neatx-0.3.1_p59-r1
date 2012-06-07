@@ -7,7 +7,7 @@ http://code.google.com/p/neatx/
 GPL-2
 Google implementation of NX server
 amd64 x86
-autotools eutils libtool multilib python toolchain-funcs user
+autotools eutils libtool multilib multiprocessing python toolchain-funcs user
 
 
 

@@ -7,7 +7,7 @@ http://xoscope.sourceforge.net
 GPL-2
 Soundcard Oscilloscope for X
 ~amd64 ~x86
-autotools eutils libtool linux-info multilib toolchain-funcs user versionator
+autotools eutils libtool linux-info multilib multiprocessing toolchain-funcs user versionator
 
 
 

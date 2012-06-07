@@ -7,7 +7,7 @@ http://www.canonware.com/jemalloc/
 BSD
 Jemalloc is a general-purpose scalable concurrent allocator
 amd64 ~ppc ppc64 x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 debug static-libs stats
 
 

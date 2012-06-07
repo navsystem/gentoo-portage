@@ -7,7 +7,7 @@ http://www.libreoffice.org
 || ( LGPL-3 MPL-1.1 )
 LibreOffice, a full office productivity suite.
 
-autotools base bash-completion-r1 check-reqs eutils fdo-mime flag-o-matic git-2 gnome2-utils java-pkg-opt-2 java-utils-2 kde4-base kde4-functions libtool multilib nsplugins pax-utils python toolchain-funcs user versionator virtualx
+autotools base bash-completion-r1 check-reqs eutils fdo-mime flag-o-matic git-2 gnome2-utils java-pkg-opt-2 java-utils-2 kde4-base kde4-functions libtool multilib multiprocessing nsplugins pax-utils python toolchain-funcs user versionator virtualx
 binfilter binfilterdebug +branding +cups dbus eds gnome +graphite gstreamer +gtk gtk3 jemalloc kde mysql +nsplugin odk opengl postgres svg test +vba +webdav +xmlsec libreoffice_extensions_nlpsolver libreoffice_extensions_pdfimport libreoffice_extensions_presenter-console libreoffice_extensions_presenter-minimizer libreoffice_extensions_scripting-beanshell libreoffice_extensions_scripting-javascript libreoffice_extensions_wiki-publisher elibc_FreeBSD java aqua kde
 nsplugin? ( gtk ) gnome? ( gtk ) eds? ( gnome ) libreoffice_extensions_nlpsolver? ( java ) libreoffice_extensions_scripting-beanshell? ( java ) libreoffice_extensions_scripting-javascript? ( java ) libreoffice_extensions_wiki-publisher? ( java )
 >=app-office/libreoffice-l10n-3.5

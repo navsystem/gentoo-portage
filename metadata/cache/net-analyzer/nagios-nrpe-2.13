@@ -7,7 +7,7 @@ http://www.nagios.org/
 GPL-2
 Nagios Remote Plugin Executor
 ~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 command-args ssl tcpd xinetd
 
 

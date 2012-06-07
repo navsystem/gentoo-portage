@@ -7,7 +7,7 @@ http://pkgconfig.freedesktop.org/wiki/
 GPL-2
 Package config system that manages compile/link flags
 
-autotools eutils flag-o-matic git-2 libtool multilib toolchain-funcs user
+autotools eutils flag-o-matic git-2 libtool multilib multiprocessing toolchain-funcs user
 elibc_FreeBSD hardened internal-glib
 
 

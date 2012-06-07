@@ -7,7 +7,7 @@ http://code.google.com/p/lsyncd/
 GPL-2
 Live Syncing (Mirror) Daemon
 amd64 x86 ~amd64-linux ~x86-linux
-autotools base eutils libtool multilib toolchain-funcs user
+autotools base eutils libtool multilib multiprocessing toolchain-funcs user
 
 
 

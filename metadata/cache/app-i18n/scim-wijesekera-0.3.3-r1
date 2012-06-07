@@ -7,7 +7,7 @@ http://sinhala.sourceforge.net/
 GPL-2
 Wijesekara keyboard for Sinhala input using scim
 ~amd64 ~x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 
 
 

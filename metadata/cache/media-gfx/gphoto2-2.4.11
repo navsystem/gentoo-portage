@@ -7,7 +7,7 @@ http://www.gphoto.org/
 GPL-2
 free, redistributable digital camera software application
 alpha amd64 hppa ppc ppc64 sparc x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 aalib exif ncurses nls readline
 
 

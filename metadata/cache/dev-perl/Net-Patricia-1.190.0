@@ -7,7 +7,7 @@ http://search.cpan.org/dist/Net-Patricia/
 || ( GPL-2 GPL-3 )
 Patricia Trie perl module for fast IP address lookups
 amd64 ~ppc x86
-base eutils multilib perl-module toolchain-funcs user
+base eutils multilib multiprocessing perl-module toolchain-funcs user
 ipv6
 
 

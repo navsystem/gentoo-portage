@@ -7,7 +7,7 @@ http://www.oyranos.org/libxcm/
 MIT
 reference implementation of the net-color spec
 ~amd64 ~x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 X doc static-libs
 
 

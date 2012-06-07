@@ -7,7 +7,7 @@ http://recordmydesktop.sourceforge.net/
 GPL-2
 Qt4 interface for RecordMyDesktop
 amd64 x86
-autotools base eutils libtool multilib python toolchain-funcs user
+autotools base eutils libtool multilib multiprocessing python toolchain-funcs user
 
 
 

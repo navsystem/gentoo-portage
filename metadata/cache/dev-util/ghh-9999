@@ -7,7 +7,7 @@ http://jean-francois.richard.name/ghh/
 GPL-2
 a tool to track the history and make backups of your home directory
 
-autotools git-2 libtool multilib python toolchain-funcs
+autotools git-2 libtool multilib multiprocessing python toolchain-funcs
 
 
 

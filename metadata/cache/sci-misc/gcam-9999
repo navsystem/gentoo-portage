@@ -7,7 +7,7 @@ http://gcam.js.cx
 GPL-3
 GNU Computer Aided Manufacturing
 
-autotools base eutils libtool multilib subversion toolchain-funcs user
+autotools base eutils libtool multilib multiprocessing subversion toolchain-funcs user
 
 
 

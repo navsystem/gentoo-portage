@@ -7,7 +7,7 @@ http://worldforge.org/dev/eng/servers/cyphesis
 GPL-2
 WorldForge server running small games
 ~amd64 ~x86
-autotools base eutils games libtool multilib python toolchain-funcs user
+autotools base eutils games libtool multilib multiprocessing python toolchain-funcs user
 
 
 

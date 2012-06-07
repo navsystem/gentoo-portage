@@ -7,7 +7,7 @@ http://normalize.nongnu.org/
 GPL-2
 Audio file volume normalizer
 amd64 ppc ppc64 sparc x86 ~x86-fbsd
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 audiofile mad nls userland_BSD
 
 

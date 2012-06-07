@@ -7,7 +7,7 @@ http://www.nikhef.nl/~form/
 GPL-3
 Symbolic Manipulation System
 ~amd64 ~x86
-autotools libtool multilib toolchain-funcs
+autotools libtool multilib multiprocessing toolchain-funcs
 devref doc doxygen gmp mpi threads zlib
 
 

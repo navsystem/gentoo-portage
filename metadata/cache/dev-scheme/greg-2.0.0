@@ -7,7 +7,7 @@ http://gna.org/projects/greg/
 GPL-2
 Testing-Framework for guile
 amd64 x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 
 
 

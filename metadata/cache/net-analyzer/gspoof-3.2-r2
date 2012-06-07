@@ -7,7 +7,7 @@ http://gspoof.sourceforge.net/
 GPL-2
 A simple GTK/command line TCP/IP packet generator
 amd64 ~ppc ~x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 
 
 

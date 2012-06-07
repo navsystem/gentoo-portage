@@ -7,7 +7,7 @@ http://search.cpan.org/dist/MooseX-ClassAttribute/
 Artistic-2
 Declare class attributes Moose-style
 ~amd64 ~x86
-base eutils multilib perl-module toolchain-funcs user
+base eutils multilib multiprocessing perl-module toolchain-funcs user
 test
 
 

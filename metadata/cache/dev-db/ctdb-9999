@@ -7,7 +7,7 @@ http://ctdb.samba.org/
 GPL-3
 A cluster implementation of the TDB database used to store temporary data.
 
-autotools eutils git-2 libtool multilib toolchain-funcs user
+autotools eutils git-2 libtool multilib multiprocessing toolchain-funcs user
 
 
 

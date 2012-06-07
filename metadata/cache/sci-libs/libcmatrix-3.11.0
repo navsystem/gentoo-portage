@@ -7,7 +7,7 @@ http://www.dur.ac.uk/paul.hodgkinson/pNMRsim/
 as-is
 lite version of pNMRsim
 ~amd64 ~x86 ~amd64-linux ~x86-linux
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 atlas sse threads
 
 

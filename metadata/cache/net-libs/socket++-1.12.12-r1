@@ -7,7 +7,7 @@ http://www.linuxhacker.at/socketxx/
 as-is
 C++ Socket Library
 ~alpha amd64 ~mips x86
-autotools libtool multilib toolchain-funcs
+autotools libtool multilib multiprocessing toolchain-funcs
 debug doc
 
 

@@ -7,7 +7,7 @@ http://sysd.org/stas/node/10
 GPL-2
 Webserver log file analyzer
 ~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86
-autotools confutils db-use eutils libtool multilib toolchain-funcs user versionator webapp
+autotools confutils db-use eutils libtool multilib multiprocessing toolchain-funcs user versionator webapp
 nls vhosts
 
 

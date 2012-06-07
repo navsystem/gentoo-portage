@@ -7,7 +7,7 @@ http://archive.eso.org/skycat
 GPL-2
 ESO astronomical image visualizer with catalog access.
 ~amd64 ~x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 threads
 
 

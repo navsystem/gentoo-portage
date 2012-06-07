@@ -7,7 +7,7 @@ http://httpd.apache.org/apreq/
 Apache-2.0
 A library for manipulating client request data via the Apache API
 amd64 ppc ppc64 x86
-apache-module base depend.apache eutils multilib perl-module toolchain-funcs user
+apache-module base depend.apache eutils multilib multiprocessing perl-module toolchain-funcs user
 perl
 
 

@@ -7,7 +7,7 @@ http://burrow-owl.sourceforge.net/
 GPL-2
 Visualize multidimensional nuclear magnetic resonance (NMR) spectra
 ~amd64 ~x86
-autotools base eutils libtool multilib toolchain-funcs user virtualx
+autotools base eutils libtool multilib multiprocessing toolchain-funcs user virtualx
 examples test
 
 

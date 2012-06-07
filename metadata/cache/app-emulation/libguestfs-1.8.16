@@ -7,7 +7,7 @@ http://libguestfs.org/
 GPL-2
 Library for accessing and modifying virtual machine (VM) disk images
 ~amd64
-autotools base bash-completion-r1 confutils eutils flag-o-matic ghc-package java-pkg-opt-2 java-utils-2 libtool multilib perl-module php-ext-source-r2 python ruby-ng toolchain-funcs user versionator
+autotools base bash-completion-r1 confutils eutils flag-o-matic ghc-package java-pkg-opt-2 java-utils-2 libtool multilib multiprocessing perl-module php-ext-source-r2 python ruby-ng toolchain-funcs user versionator
 debug doc fuse haskell javadoc nls +ocaml perl php python +readline ruby source elibc_FreeBSD java elibc_FreeBSD ruby_targets_ruby18 php_targets_php5-3 php_targets_php5-4
 
 

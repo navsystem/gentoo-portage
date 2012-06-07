@@ -7,7 +7,7 @@ http://pts.szit.bme.hu/ http://code.google.com/p/sam2p/
 GPL-2
 tif22pnm and png22pnm command-line converters
 ~amd64 ~x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 
 
 

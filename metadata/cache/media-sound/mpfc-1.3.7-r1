@@ -7,7 +7,7 @@ http://mpfc.sourceforge.net/
 GPL-2
 Music Player For Console
 amd64 ppc x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 alsa gpm mad vorbis oss wav cdda nls
 
 

@@ -7,7 +7,7 @@ http://ledger-cli.org/
 BSD
 A double-entry accounting system with a command-line reporting interface
 amd64 x86 ~amd64-linux ~x86-linux ~x64-macos
-autotools elisp-common eutils libtool multilib toolchain-funcs user
+autotools elisp-common eutils libtool multilib multiprocessing toolchain-funcs user
 emacs debug gnuplot ofx static-libs xml vim-syntax
 
 

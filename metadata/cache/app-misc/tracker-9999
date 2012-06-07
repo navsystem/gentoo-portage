@@ -7,7 +7,7 @@ http://projects.gnome.org/tracker/
 GPL-2
 A tagging metadata database, search tool and indexer
 
-autotools eutils fdo-mime git-2 gnome.org gnome2 gnome2-utils libtool linux-info multilib python toolchain-funcs user versionator virtualx
+autotools eutils fdo-mime git-2 gnome.org gnome2 gnome2-utils libtool linux-info multilib multiprocessing python toolchain-funcs user versionator virtualx
 applet cue doc eds elibc_glibc exif firefox-bookmarks flac flickr gif gnome-keyring gsf gstreamer gtk iptc +iso +jpeg laptop mp3 networkmanager pdf playlist rss test thunderbird +tiff upnp +vorbis xine +xml xmp test
 cue? ( gstreamer )
 

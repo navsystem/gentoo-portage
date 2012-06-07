@@ -7,7 +7,7 @@ http://www.intra2net.com/en/developer/libftdi/
 LGPL-2
 Userspace access to FTDI USB interface chips
 
-autotools base cmake-utils eutils flag-o-matic git-2 libtool multilib toolchain-funcs user
+autotools base cmake-utils eutils flag-o-matic git-2 libtool multilib multiprocessing toolchain-funcs user
 cxx doc examples python
 
 

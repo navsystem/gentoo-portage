@@ -7,7 +7,7 @@ http://p-f-m.sourceforge.net/
 GPL-2
 A terminal-based file manager written in Perl
 ~amd64 ~x86
-base eutils multilib perl-app perl-module toolchain-funcs user
+base eutils multilib multiprocessing perl-app perl-module toolchain-funcs user
 
 
 

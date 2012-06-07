@@ -7,7 +7,7 @@ http://www.time-travellers.org/oftpd
 as-is
 Secure, small, anonymous only ftpd
 ~amd64 ~arm ~ppc ~ppc64 ~sh ~sparc ~x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 ipv6
 
 

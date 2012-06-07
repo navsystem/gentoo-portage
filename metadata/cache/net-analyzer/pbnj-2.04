@@ -7,7 +7,7 @@ http://pbnj.sourceforge.net/
 GPL-2
 A tool for running Nmap scans and diff'ing the results
 amd64 x86
-base eutils multilib perl-module toolchain-funcs user
+base eutils multilib multiprocessing perl-module toolchain-funcs user
 
 
 

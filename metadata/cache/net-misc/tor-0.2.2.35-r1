@@ -7,7 +7,7 @@ http://www.torproject.org/
 BSD
 Anonymizing overlay network for TCP
 ~amd64 ~arm ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
-autotools eutils flag-o-matic libtool multilib toolchain-funcs user
+autotools eutils flag-o-matic libtool multilib multiprocessing toolchain-funcs user
 tor-hardening +transparent-proxy threads selinux
 
 

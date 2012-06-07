@@ -7,7 +7,7 @@ http://search.cpan.org/dist/Class-Trigger/
 || ( Artistic GPL-1 GPL-2 GPL-3 )
 Mixin to add / call inheritable triggers
 alpha amd64 ppc ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris
-base eutils multilib perl-module toolchain-funcs user
+base eutils multilib multiprocessing perl-module toolchain-funcs user
 
 
 

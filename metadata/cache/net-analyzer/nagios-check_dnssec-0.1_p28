@@ -7,7 +7,7 @@ https://svn.durchmesser.ch/trac/check_dnssec
 GPL-3
 check_dnssec is a set of Nagios plugins to monitor DNSSEC services.
 ~x86 ~amd64
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 
 
 

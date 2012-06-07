@@ -7,7 +7,7 @@ http://pcmanfm.sourceforge.net/
 GPL-2
 A library for file management
 
-autotools fdo-mime git-2 libtool multilib toolchain-funcs
+autotools fdo-mime git-2 libtool multilib multiprocessing toolchain-funcs
 debug doc examples udev
 
 

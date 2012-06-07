@@ -7,7 +7,7 @@ http://openil.sourceforge.net/
 LGPL-2.1
 DevIL image library
 ~amd64 ~ppc ~x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 allegro gif glut jpeg lcms mng nvtt openexr opengl png sdl sse sse2 sse3 static-libs tiff xpm X
 
 

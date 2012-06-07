@@ -7,7 +7,7 @@ http://search.cpan.org/dist/Starlet/
 || ( Artistic GPL-1 GPL-2 GPL-3 )
 A simple, high-performance PSGI/Plack HTTP server
 ~amd64 ~x86
-base eutils multilib perl-module toolchain-funcs user
+base eutils multilib multiprocessing perl-module toolchain-funcs user
 test
 
 

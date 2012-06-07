@@ -7,7 +7,7 @@ http://www.videolan.org/
 LGPL-2.1
 Mozilla plugin based on VLC
 
-autotools git-2 libtool multilib toolchain-funcs
+autotools git-2 libtool multilib multiprocessing toolchain-funcs
 gtk
 
 

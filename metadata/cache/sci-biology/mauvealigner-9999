@@ -7,7 +7,7 @@ http://gel.ahabs.wisc.edu/mauve/
 GPL-2
 Multiple genome alignment with large-scale evolutionary events (aligner component)
 
-autotools eutils libtool multilib subversion toolchain-funcs user
+autotools eutils libtool multilib multiprocessing subversion toolchain-funcs user
 doc
 
 

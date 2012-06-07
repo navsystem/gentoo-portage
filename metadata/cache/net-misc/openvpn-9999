@@ -7,7 +7,7 @@ http://openvpn.net/
 GPL-2
 OpenVPN is a robust and highly flexible tunneling application compatible with many OSes.
 
-autotools eutils flag-o-matic git-2 libtool multilib toolchain-funcs user
+autotools eutils flag-o-matic git-2 libtool multilib multiprocessing toolchain-funcs user
 examples iproute2 minimal pam passwordsave selinux +ssl +lzo static pkcs11 userland_BSD
 static? ( minimal )
 

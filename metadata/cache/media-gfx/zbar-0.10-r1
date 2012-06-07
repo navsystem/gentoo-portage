@@ -7,7 +7,7 @@ http://zbar.sourceforge.net/
 LGPL-2.1
 Library and tools for reading barcodes from images or video
 ~amd64 ~x86
-autotools eutils libtool multilib python toolchain-funcs user
+autotools eutils libtool multilib multiprocessing python toolchain-funcs user
 gtk imagemagick jpeg python qt4 static-libs +threads v4l X xv
 
 

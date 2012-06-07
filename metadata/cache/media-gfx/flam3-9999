@@ -7,7 +7,7 @@ http://flam3.com/
 GPL-2
 Tools and a library for creating fractal flames
 
-autotools eutils libtool multilib subversion toolchain-funcs user
+autotools eutils libtool multilib multiprocessing subversion toolchain-funcs user
 
 
 

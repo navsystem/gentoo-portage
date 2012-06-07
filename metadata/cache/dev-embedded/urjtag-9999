@@ -7,7 +7,7 @@ http://urjtag.sourceforge.net/
 GPL-2
 tool for communicating over JTAG with flash chips, CPUs, and many more (fork of openwince jtag)
 
-autotools eutils git-2 libtool multilib toolchain-funcs user
+autotools eutils git-2 libtool multilib multiprocessing toolchain-funcs user
 ftd2xx ftdi readline static-libs usb
 
 

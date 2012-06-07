@@ -7,7 +7,7 @@ http://sources.redhat.com/lvm2/
 GPL-2
 User-land utilities for LVM2 (device-mapper) software.
 alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-linux
-autotools eutils libtool linux-info multilib toolchain-funcs user versionator
+autotools eutils libtool linux-info multilib multiprocessing toolchain-funcs user versionator
 readline +static +static-libs clvm cman +lvm1 selinux
 
 

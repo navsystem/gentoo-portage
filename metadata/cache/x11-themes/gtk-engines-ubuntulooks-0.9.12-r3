@@ -7,7 +7,7 @@ http://packages.ubuntu.com/search?keywords=gtk2-engines-ubuntulooks
 GPL-2
 A derivative of the standard Clearlooks GTK+ 2.x engine with more orange approach
 amd64 ~ppc x86 ~x86-interix ~amd64-linux ~x86-linux ~x86-macos
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 
 
 

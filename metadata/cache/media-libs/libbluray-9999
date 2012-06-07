@@ -7,7 +7,7 @@ http://www.videolan.org/developers/libbluray.html
 LGPL-2.1
 Blu-ray playback libraries
 
-autotools eutils flag-o-matic git-2 java-pkg-opt-2 java-utils-2 libtool multilib toolchain-funcs user versionator
+autotools eutils flag-o-matic git-2 java-pkg-opt-2 java-utils-2 libtool multilib multiprocessing toolchain-funcs user versionator
 aacs java static-libs utils +xml elibc_FreeBSD java
 utils? ( static-libs )
 
