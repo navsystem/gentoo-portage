@@ -1,4 +1,4 @@
->=dev-libs/boost-1.42.0 dev-libs/lockdev >=sys-apps/util-linux-2.16 btrfs? ( >=sys-fs/btrfs-progs-0.19-r2 ) lvm? ( sys-fs/lvm2 ) pam? ( sys-libs/pam ) sys-apps/groff doc? ( app-doc/doxygen media-gfx/graphviz ) nls? ( sys-devel/gettext ) test? ( >=dev-util/cppunit-1.10.0 ) || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+>=dev-libs/boost-1.42.0 dev-libs/lockdev >=sys-apps/util-linux-2.16 btrfs? ( >=sys-fs/btrfs-progs-0.19-r2 ) lvm? ( sys-fs/lvm2 ) pam? ( sys-libs/pam ) sys-apps/groff doc? ( app-doc/doxygen media-gfx/graphviz ) nls? ( sys-devel/gettext ) test? ( >=dev-util/cppunit-1.10.0 ) || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 >=dev-libs/boost-1.42.0 dev-libs/lockdev >=sys-apps/util-linux-2.16 btrfs? ( >=sys-fs/btrfs-progs-0.19-r2 ) lvm? ( sys-fs/lvm2 ) pam? ( sys-libs/pam ) sys-apps/debianutils dchroot? ( !sys-apps/dchroot ) nls? ( virtual/libintl )
 0
 mirror://debian/pool/main/s/schroot/schroot_1.4.25.orig.tar.bz2

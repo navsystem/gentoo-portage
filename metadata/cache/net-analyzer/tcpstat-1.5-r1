@@ -1,4 +1,4 @@
-net-libs/libpcap || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+net-libs/libpcap || ( >=sys-devel/automake-1.11.1 >=sys-devel/automake-1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 net-libs/libpcap
 0
 http://www.frenchfries.net/paul/tcpstat/tcpstat-1.5.tar.gz

@@ -1,4 +1,4 @@
->=sys-apps/dbus-1.0 >=gnome-base/gnome-keyring-2.29[test?] !<gnome-base/gnome-keyring-2.29 sys-devel/gettext >=dev-util/intltool-0.35 virtual/pkgconfig doc? ( >=dev-util/gtk-doc-1.9 ) >=sys-apps/sed-4 || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+>=sys-apps/dbus-1.0 >=gnome-base/gnome-keyring-2.29[test?] !<gnome-base/gnome-keyring-2.29 sys-devel/gettext >=dev-util/intltool-0.35 virtual/pkgconfig doc? ( >=dev-util/gtk-doc-1.9 ) >=sys-apps/sed-4 || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 >=sys-apps/dbus-1.0 >=gnome-base/gnome-keyring-2.29[test?] !<gnome-base/gnome-keyring-2.29
 0
 mirror://gnome/sources/libgnome-keyring/2.32/libgnome-keyring-2.32.0.tar.bz2

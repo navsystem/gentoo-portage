@@ -1,4 +1,4 @@
-dev-libs/libaio sys-apps/hwloc romio? ( net-fs/nfs-utils ) dev-lang/perl sys-devel/libtool || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+dev-libs/libaio sys-apps/hwloc romio? ( net-fs/nfs-utils ) dev-lang/perl sys-devel/libtool || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 dev-libs/libaio sys-apps/hwloc romio? ( net-fs/nfs-utils ) fortran? ( virtual/fortran ) !sys-cluster/openmpi !sys-cluster/lam-mpi
 0
 http://www.mcs.anl.gov/research/projects/mpich2/downloads/tarballs/1.4.1p1/mpich2-1.4.1p1.tar.gz

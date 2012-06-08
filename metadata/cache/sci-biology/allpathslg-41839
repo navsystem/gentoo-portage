@@ -1,4 +1,4 @@
-dev-libs/boost >=sys-devel/gcc-4.3.3 sci-biology/vaal || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+dev-libs/boost >=sys-devel/gcc-4.3.3 sci-biology/vaal || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 
 0
 ftp://ftp.broadinstitute.org/pub/crd/ALLPATHS/Release-LG/latest_source_code/allpathslg-41839.tar.gz

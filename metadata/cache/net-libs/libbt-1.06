@@ -1,4 +1,4 @@
-dev-libs/openssl net-misc/curl >=sys-apps/util-linux-2.16.2 || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+dev-libs/openssl net-misc/curl >=sys-apps/util-linux-2.16.2 || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 dev-libs/openssl net-misc/curl >=sys-apps/util-linux-2.16.2
 0
 mirror://sourceforge/libbt/libbt-1.06.tar.gz

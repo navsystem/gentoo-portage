@@ -1,4 +1,4 @@
-media-libs/libsdl[audio,joystick,video] media-libs/sdl-image[png] media-libs/sdl-mixer[vorbis] || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+media-libs/libsdl[audio,joystick,video] media-libs/sdl-image[png] media-libs/sdl-mixer[vorbis] || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 media-libs/libsdl[audio,joystick,video] media-libs/sdl-image[png] media-libs/sdl-mixer[vorbis]
 0
 http://www.emma-soft.com/games/amoebax/download/amoebax-0.2.0.tar.bz2

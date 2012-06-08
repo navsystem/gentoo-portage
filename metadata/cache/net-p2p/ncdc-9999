@@ -1,4 +1,4 @@
-app-arch/bzip2 dev-db/sqlite:3 dev-libs/glib:2 dev-libs/libxml2:2 net-libs/gnutls sys-libs/gdbm sys-libs/ncurses:5 virtual/pkgconfig dev-util/makeheaders || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool dev-vcs/git
+app-arch/bzip2 dev-db/sqlite:3 dev-libs/glib:2 dev-libs/libxml2:2 net-libs/gnutls sys-libs/gdbm sys-libs/ncurses:5 virtual/pkgconfig dev-util/makeheaders || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool dev-vcs/git
 app-arch/bzip2 dev-db/sqlite:3 dev-libs/glib:2 dev-libs/libxml2:2 net-libs/gnutls sys-libs/gdbm sys-libs/ncurses:5
 0
 

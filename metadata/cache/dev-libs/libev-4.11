@@ -1,4 +1,4 @@
-elibc_glibc? ( >=sys-libs/glibc-2.9_p20081201 ) || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+elibc_glibc? ( >=sys-libs/glibc-2.9_p20081201 ) || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 elibc_glibc? ( >=sys-libs/glibc-2.9_p20081201 )
 0
 http://dist.schmorp.de/libev/libev-4.11.tar.gz http://dist.schmorp.de/libev/Attic/libev-4.11.tar.gz

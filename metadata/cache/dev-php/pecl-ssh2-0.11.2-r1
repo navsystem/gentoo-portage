@@ -1,4 +1,4 @@
->=net-libs/libssh2-0.18 || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=sys-devel/m4-1.4.3 >=sys-devel/libtool-1.5.18 php_targets_php5-3? ( dev-lang/php:5.3 )
+>=net-libs/libssh2-0.18 || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=sys-devel/m4-1.4.3 >=sys-devel/libtool-1.5.18 php_targets_php5-3? ( dev-lang/php:5.3 )
 >=net-libs/libssh2-0.18 || ( =dev-php/pecl-ssh2-0.11.2-r1[php_targets_php5-3] ) php_targets_php5-3? ( dev-lang/php:5.3 )
 0
 http://pecl.php.net/get/ssh2-0.11.2.tgz

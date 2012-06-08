@@ -1,4 +1,4 @@
-sys-libs/zlib icu? ( dev-libs/icu ) lzma? ( app-arch/xz-utils ) readline? ( sys-libs/readline ) hppa? ( >=sys-devel/binutils-2.15.92.0.2 ) python? ( =dev-lang/python-2* ) python? ( =dev-lang/python-2*[xml] ) || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+sys-libs/zlib icu? ( dev-libs/icu ) lzma? ( app-arch/xz-utils ) readline? ( sys-libs/readline ) hppa? ( >=sys-devel/binutils-2.15.92.0.2 ) python? ( =dev-lang/python-2* ) python? ( =dev-lang/python-2*[xml] ) || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 sys-libs/zlib icu? ( dev-libs/icu ) lzma? ( app-arch/xz-utils ) readline? ( sys-libs/readline ) python? ( =dev-lang/python-2* ) python? ( =dev-lang/python-2*[xml] )
 2
 mirror://gentoo/libxml2-2.8.0-rc1.tar.gz test? ( http://www.w3.org/XML/2004/xml-schema-test-suite/xmlschema2002-01-16/xsts-2002-01-16.tar.gz http://www.w3.org/XML/2004/xml-schema-test-suite/xmlschema2004-01-14/xsts-2004-01-14.tar.gz )

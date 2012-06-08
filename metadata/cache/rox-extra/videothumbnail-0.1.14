@@ -1,4 +1,4 @@
-=dev-lang/python-2* || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=rox-base/zeroinstall-injector-0.31
+=dev-lang/python-2* || ( >=sys-devel/automake-1.11.1 >=sys-devel/automake-1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=rox-base/zeroinstall-injector-0.31
 || ( >=media-video/mplayer-0.9.0 >=media-video/totem-1.4.2 ) =dev-lang/python-2* >=rox-base/rox-2.3 >=rox-base/rox-lib-2.0.4-r1
 0
 http://www.kerofin.demon.co.uk/rox/VideoThumbnail-0.1.14.tar.gz

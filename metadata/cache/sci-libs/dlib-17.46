@@ -1,0 +1,22 @@
+virtual/pkgconfig
+blas? ( virtual/blas ) jpeg? ( virtual/jpeg ) lapack? ( virtual/lapack ) png? ( media-libs/libpng ) X? ( x11-libs/libX11 )
+0
+mirror://sourceforge/dclib/dlib-17.46.tar.bz2
+
+http://dlib.net/
+Boost-1.0
+Numerical and networking C++ library
+~amd64 ~x86
+
+blas doc examples jpeg lapack png X
+
+
+
+4
+
+install test
+
+
+
+
+

@@ -1,4 +1,4 @@
-virtual/fortran || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+virtual/fortran || ( >=sys-devel/automake-1.11.1 >=sys-devel/automake-1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 virtual/fortran
 0
 shelx-20060317.tgz openmp? ( shelx-20060317-mp.tgz )

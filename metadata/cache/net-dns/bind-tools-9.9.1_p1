@@ -1,4 +1,4 @@
-ssl? ( dev-libs/openssl ) xml? ( dev-libs/libxml2 ) idn? ( net-dns/idnkit ) gssapi? ( virtual/krb5 ) readline? ( sys-libs/readline ) || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+ssl? ( dev-libs/openssl ) xml? ( dev-libs/libxml2 ) idn? ( net-dns/idnkit ) gssapi? ( virtual/krb5 ) readline? ( sys-libs/readline ) || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 ssl? ( dev-libs/openssl ) xml? ( dev-libs/libxml2 ) idn? ( net-dns/idnkit ) gssapi? ( virtual/krb5 ) readline? ( sys-libs/readline )
 0
 ftp://ftp.isc.org/isc/bind9/9.9.1-P1/bind-9.9.1-P1.tar.gz

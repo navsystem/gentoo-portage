@@ -1,4 +1,4 @@
->=dev-libs/glib-2 >=sys-libs/zlib-1.1.4 virtual/pkgconfig || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+>=dev-libs/glib-2 >=sys-libs/zlib-1.1.4 virtual/pkgconfig || ( >=sys-devel/automake-1.11.1 >=sys-devel/automake-1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 >=dev-libs/glib-2 >=sys-libs/zlib-1.1.4
 0
 http://xdelta.googlecode.com/files/xdelta-1.1.4.tar.gz

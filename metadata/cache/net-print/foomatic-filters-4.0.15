@@ -1,4 +1,4 @@
-dev-lang/perl app-text/ghostscript-gpl cups? ( >=net-print/cups-1.1.19 ) !cups? ( || ( app-text/enscript app-text/a2ps app-text/mpage ) ) dbus? ( sys-apps/dbus ) || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+dev-lang/perl app-text/ghostscript-gpl cups? ( >=net-print/cups-1.1.19 ) !cups? ( || ( app-text/enscript app-text/a2ps app-text/mpage ) ) dbus? ( sys-apps/dbus ) || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 dev-lang/perl app-text/ghostscript-gpl cups? ( >=net-print/cups-1.1.19 ) !cups? ( || ( app-text/enscript app-text/a2ps app-text/mpage ) ) dbus? ( sys-apps/dbus )
 0
 http://www.openprinting.org/download/foomatic/foomatic-filters-4.0.15.tar.gz

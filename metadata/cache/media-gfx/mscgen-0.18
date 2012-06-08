@@ -1,4 +1,4 @@
-png? ( media-libs/gd[png,truetype?] ) virtual/pkgconfig sys-devel/bison sys-devel/flex || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+png? ( media-libs/gd[png,truetype?] ) virtual/pkgconfig sys-devel/bison sys-devel/flex || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 png? ( media-libs/gd[png,truetype?] )
 0
 http://www.mcternan.me.uk/mscgen/software/mscgen-src-0.18.tar.gz

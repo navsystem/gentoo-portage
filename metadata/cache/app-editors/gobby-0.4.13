@@ -6,7 +6,7 @@ test
 http://gobby.0x539.de/
 GPL-2
 GTK-based collaborative editor
-amd64 ~ppc ~x86
+amd64 ppc x86
 eutils multilib toolchain-funcs user
 avahi gnome
 

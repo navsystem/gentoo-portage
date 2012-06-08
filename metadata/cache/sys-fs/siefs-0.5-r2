@@ -1,4 +1,4 @@
-sys-fs/fuse || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+sys-fs/fuse || ( >=sys-devel/automake-1.11.1 >=sys-devel/automake-1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 sys-fs/fuse app-mobilephone/vmoconv
 0
 http://chaos.allsiemens.com/download/siefs-0.5.tar.gz

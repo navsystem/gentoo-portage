@@ -1,4 +1,4 @@
-fuse? ( sys-fs/fuse ) perl? ( dev-lang/perl ) php? ( dev-lang/php ) tcl? ( dev-lang/tcl ) usb? ( virtual/libusb:0 ) zeroconf? ( net-dns/avahi[mdnsresponder-compat] ) perl? ( dev-lang/swig ) php? ( dev-lang/swig ) python? ( dev-lang/swig ) python? ( =dev-lang/python-2* ) dev-lang/perl[-build] || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+fuse? ( sys-fs/fuse ) perl? ( dev-lang/perl ) php? ( dev-lang/php ) tcl? ( dev-lang/tcl ) usb? ( virtual/libusb:0 ) zeroconf? ( net-dns/avahi[mdnsresponder-compat] ) perl? ( dev-lang/swig ) php? ( dev-lang/swig ) python? ( dev-lang/swig ) python? ( =dev-lang/python-2* ) dev-lang/perl[-build] || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 fuse? ( sys-fs/fuse ) perl? ( dev-lang/perl ) php? ( dev-lang/php ) tcl? ( dev-lang/tcl ) usb? ( virtual/libusb:0 ) zeroconf? ( net-dns/avahi[mdnsresponder-compat] ) python? ( =dev-lang/python-2* ) dev-lang/perl[-build]
 0
 mirror://sourceforge/owfs/owfs-2.7p21.tar.gz

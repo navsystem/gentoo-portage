@@ -6,7 +6,7 @@ http://www.mesa.nl/pub/mpage/mpage-2.5.6.tgz
 http://www.mesa.nl/
 freedist
 Many to one page printing utility
-amd64 ~ppc ~sparc ~x86
+amd64 ppc ~sparc x86
 eutils multilib toolchain-funcs user
 
 

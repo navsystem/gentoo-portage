@@ -1,4 +1,4 @@
->=dev-libs/openssl-0.9.7 lzo? ( dev-libs/lzo:2 ) zlib? ( >=sys-libs/zlib-1.1.4 ) || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+>=dev-libs/openssl-0.9.7 lzo? ( dev-libs/lzo:2 ) zlib? ( >=sys-libs/zlib-1.1.4 ) || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 >=dev-libs/openssl-0.9.7 lzo? ( dev-libs/lzo:2 ) zlib? ( >=sys-libs/zlib-1.1.4 ) vde? ( net-misc/vde )
 0
 http://www.tinc-vpn.org/packages/tinc-1.0.18.tar.gz

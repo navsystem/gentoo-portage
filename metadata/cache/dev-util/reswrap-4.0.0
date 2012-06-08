@@ -1,4 +1,4 @@
-|| ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=sys-apps/sed-4
+|| ( >=sys-devel/automake-1.11.1 >=sys-devel/automake-1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=sys-apps/sed-4
 
 0
 ftp://ftp.fox-toolkit.org/pub/fox-1.6.40.tar.gz

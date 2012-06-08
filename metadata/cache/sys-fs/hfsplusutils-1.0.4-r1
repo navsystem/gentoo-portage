@@ -1,4 +1,4 @@
-app-arch/bzip2 || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+app-arch/bzip2 || ( >=sys-devel/automake-1.11.1 >=sys-devel/automake-1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 
 0
 http://penguinppc.org/historical/hfsplus/hfsplus_1.0.4.src.tar.bz2

@@ -1,4 +1,4 @@
-dev-libs/maloc[mpi=] virtual/blas sys-libs/readline virtual/fortran arpack? ( sci-libs/arpack ) tools? ( !sci-libs/gts ) mpi? ( virtual/mpi ) || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool python? ( =dev-lang/python-2* )
+dev-libs/maloc[mpi=] virtual/blas sys-libs/readline virtual/fortran arpack? ( sci-libs/arpack ) tools? ( !sci-libs/gts ) mpi? ( virtual/mpi ) || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool python? ( =dev-lang/python-2* )
 dev-libs/maloc[mpi=] virtual/blas sys-libs/readline virtual/fortran arpack? ( sci-libs/arpack ) tools? ( !sci-libs/gts ) mpi? ( virtual/mpi ) python? ( =dev-lang/python-2* )
 0
 mirror://sourceforge/apbs/apbs-1.2.1b-source.tar.gz

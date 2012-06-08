@@ -1,4 +1,4 @@
-dev-libs/apr dev-libs/apr-util dev-vcs/subversion x11-libs/wxGTK:2.8[X] doc? ( dev-libs/libxslt app-text/docbook-sgml-utils app-doc/doxygen app-text/docbook-xsl-stylesheets ) || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool =dev-lang/python-2*
+dev-libs/apr dev-libs/apr-util dev-vcs/subversion x11-libs/wxGTK:2.8[X] doc? ( dev-libs/libxslt app-text/docbook-sgml-utils app-doc/doxygen app-text/docbook-xsl-stylesheets ) || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool =dev-lang/python-2*
 dev-libs/apr dev-libs/apr-util dev-vcs/subversion x11-libs/wxGTK:2.8[X] =dev-lang/python-2*
 0
 http://dev.gentoo.org/~jlec/distfiles/rapidsvn-0.12.1_pre8247.tar.xz

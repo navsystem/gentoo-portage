@@ -1,4 +1,4 @@
->=media-video/recordmydesktop-0.3.8 x11-apps/xwininfo >=dev-python/PyQt4-4.1[X] || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
+>=media-video/recordmydesktop-0.3.8 x11-apps/xwininfo >=dev-python/PyQt4-4.1[X] || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
 >=media-video/recordmydesktop-0.3.8 x11-apps/xwininfo || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
 0
 mirror://sourceforge/recordmydesktop/qt-recordmydesktop-0.3.8.tar.gz

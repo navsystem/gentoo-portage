@@ -1,4 +1,4 @@
-perl? ( dev-lang/perl ) || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=sys-devel/m4-1.4.3 >=sys-devel/libtool-1.5.18 php? ( php_targets_php5-3? ( dev-lang/php:5.3 ) php_targets_php5-4? ( dev-lang/php:5.4 ) )
+perl? ( dev-lang/perl ) || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=sys-devel/m4-1.4.3 >=sys-devel/libtool-1.5.18 php? ( php_targets_php5-3? ( dev-lang/php:5.3 ) php_targets_php5-4? ( dev-lang/php:5.4 ) )
 perl? ( dev-lang/perl ) php? ( || ( =dev-libs/ossp-uuid-1.6.2-r2[php_targets_php5-3] =dev-libs/ossp-uuid-1.6.2-r2[php_targets_php5-4] ) php_targets_php5-3? ( dev-lang/php:5.3 ) php_targets_php5-4? ( dev-lang/php:5.4 ) )
 0
 ftp://ftp.ossp.org/pkg/lib/uuid/uuid-1.6.2.tar.gz

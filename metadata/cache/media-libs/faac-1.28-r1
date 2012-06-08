@@ -1,4 +1,4 @@
-~media-libs/libmp4v2-1.9.1:0 || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+~media-libs/libmp4v2-1.9.1:0 || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 ~media-libs/libmp4v2-1.9.1:0
 0
 mirror://sourceforge/faac/faac-1.28.tar.gz

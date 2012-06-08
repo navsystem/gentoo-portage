@@ -1,4 +1,4 @@
-dev-libs/glib:2 sci-libs/netcdf sci-libs/gsl sci-libs/gts sci-libs/proj mpi? ( virtual/mpi ) virtual/pkgconfig || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+dev-libs/glib:2 sci-libs/netcdf sci-libs/gsl sci-libs/gts sci-libs/proj mpi? ( virtual/mpi ) virtual/pkgconfig || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 dev-libs/glib:2 sci-libs/netcdf sci-libs/gsl sci-libs/gts sci-libs/proj mpi? ( virtual/mpi )
 0
 mirror://sourceforge/gfs/gerris-20100519.tar.gz

@@ -6,7 +6,7 @@ http://schismtracker.org/dl/schismtracker-20120105.tar.bz2
 http://eval.sovietrussia.org//wiki/Schism_Tracker
 GPL-2 LGPL-2 public-domain
 a free reimplementation of Impulse Tracker, a program used to create high quality music
-amd64 ~x86
+amd64 x86
 eutils multilib toolchain-funcs user
 
 

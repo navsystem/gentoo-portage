@@ -7,14 +7,14 @@ http://www.cegui.org.uk/
 MIT
 Crazy Eddie's GUI System
 amd64 -ppc ~x86
-
+eutils multilib toolchain-funcs user
 bidi debug devil doc examples expat gtk irrlicht lua ogre opengl pcre static-libs tinyxml truetype xerces-c xml zip
 || ( expat tinyxml xerces-c xml )
 
 
 4
 
-configure install prepare
+compile configure install prepare unpack
 
 
 

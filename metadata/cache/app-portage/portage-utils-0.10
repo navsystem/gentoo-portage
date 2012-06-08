@@ -14,7 +14,7 @@ static
 
 3
 
-configure install postinst preinst
+configure install postinst preinst prepare
 
 
 

@@ -1,4 +1,4 @@
->=net-misc/nx-3.2.0-r5 dbus? ( sys-apps/dbus ) nxclient? ( net-misc/nxclient ) doc? ( app-doc/doxygen ) || ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+>=net-misc/nx-3.2.0-r5 dbus? ( sys-apps/dbus ) nxclient? ( net-misc/nxclient ) doc? ( app-doc/doxygen ) || ( >=sys-devel/automake-1.11.1 >=sys-devel/automake-1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 >=net-misc/nx-3.2.0-r5 dbus? ( sys-apps/dbus ) nxclient? ( net-misc/nxclient )
 0
 mirror://berlios/freenx/freenx-client-0.9.tar.bz2

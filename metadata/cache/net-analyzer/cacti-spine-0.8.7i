@@ -1,4 +1,4 @@
-net-analyzer/net-snmp dev-libs/openssl virtual/mysql || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+net-analyzer/net-snmp dev-libs/openssl virtual/mysql || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 net-analyzer/net-snmp dev-libs/openssl virtual/mysql >net-analyzer/cacti-0.8.7
 0
 http://www.cacti.net/downloads/spine/cacti-spine-0.8.7i.tar.gz

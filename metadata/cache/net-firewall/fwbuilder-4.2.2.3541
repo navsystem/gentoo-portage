@@ -1,4 +1,4 @@
->=x11-libs/qt-gui-4.3 dev-libs/openssl dev-libs/elfutils sys-devel/gnuconfig || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+>=x11-libs/qt-gui-4.3 dev-libs/openssl dev-libs/elfutils sys-devel/gnuconfig || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 >=x11-libs/qt-gui-4.3 dev-libs/openssl dev-libs/elfutils sys-devel/gnuconfig
 0
 mirror://sourceforge/fwbuilder/fwbuilder-4.2.2.3541.tar.gz

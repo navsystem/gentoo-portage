@@ -1,4 +1,4 @@
->=dev-libs/glib-2.22 dev-libs/libxml2 X? ( >=x11-libs/gtk+-2.12:2 media-libs/gstreamer media-libs/gst-plugins-base media-libs/gst-plugins-base media-plugins/gst-plugins-xvideo ) gstreamer? ( media-libs/gstreamer media-libs/gst-plugins-base ) virtual/pkgconfig dev-libs/gobject-introspection dev-util/gtk-doc dev-util/intltool dev-vcs/git || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+>=dev-libs/glib-2.22 dev-libs/libxml2 X? ( >=x11-libs/gtk+-2.12:2 media-libs/gstreamer media-libs/gst-plugins-base media-libs/gst-plugins-base media-plugins/gst-plugins-xvideo ) gstreamer? ( media-libs/gstreamer media-libs/gst-plugins-base ) virtual/pkgconfig dev-libs/gobject-introspection dev-util/gtk-doc dev-util/intltool dev-vcs/git || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 >=dev-libs/glib-2.22 dev-libs/libxml2 X? ( >=x11-libs/gtk+-2.12:2 media-libs/gstreamer media-libs/gst-plugins-base media-libs/gst-plugins-base media-plugins/gst-plugins-xvideo ) gstreamer? ( media-libs/gstreamer media-libs/gst-plugins-base )
 0
 

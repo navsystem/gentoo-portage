@@ -1,4 +1,4 @@
->=dev-libs/glib-2.26:2 >=x11-libs/gtk+-2.16:2 dev-libs/gmime:2.6 gnome-keyring? ( >=gnome-base/libgnome-keyring-3.2 ) libnotify? ( >=x11-libs/libnotify-0.4.1 ) spell? ( >=app-text/enchant-1.6 >=app-text/gtkspell-2.0.7:2 ) ssl? ( >=net-libs/gnutls-2.12.10 ) app-text/gnome-doc-utils >=dev-util/intltool-0.35.5 sys-devel/gettext virtual/pkgconfig || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool dev-vcs/git
+>=dev-libs/glib-2.26:2 >=x11-libs/gtk+-2.16:2 dev-libs/gmime:2.6 gnome-keyring? ( >=gnome-base/libgnome-keyring-3.2 ) libnotify? ( >=x11-libs/libnotify-0.4.1 ) spell? ( >=app-text/enchant-1.6 >=app-text/gtkspell-2.0.7:2 ) ssl? ( >=net-libs/gnutls-2.12.10 ) app-text/gnome-doc-utils >=dev-util/intltool-0.35.5 sys-devel/gettext virtual/pkgconfig || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool dev-vcs/git
 >=dev-libs/glib-2.26:2 >=x11-libs/gtk+-2.16:2 dev-libs/gmime:2.6 gnome-keyring? ( >=gnome-base/libgnome-keyring-3.2 ) libnotify? ( >=x11-libs/libnotify-0.4.1 ) spell? ( >=app-text/enchant-1.6 >=app-text/gtkspell-2.0.7:2 ) ssl? ( >=net-libs/gnutls-2.12.10 )
 0
 

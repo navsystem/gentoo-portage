@@ -1,4 +1,4 @@
->=media-gfx/imagemagick-6.2.4 || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=sys-devel/m4-1.4.3 >=sys-devel/libtool-1.5.18 php_targets_php5-3? ( dev-lang/php:5.3 ) php_targets_php5-4? ( dev-lang/php:5.4 )
+>=media-gfx/imagemagick-6.2.4 || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=sys-devel/m4-1.4.3 >=sys-devel/libtool-1.5.18 php_targets_php5-3? ( dev-lang/php:5.3 ) php_targets_php5-4? ( dev-lang/php:5.4 )
 >=media-gfx/imagemagick-6.2.4 || ( =dev-php/pecl-imagick-3.1.0_rc1[php_targets_php5-3] =dev-php/pecl-imagick-3.1.0_rc1[php_targets_php5-4] ) php_targets_php5-3? ( dev-lang/php:5.3 ) php_targets_php5-4? ( dev-lang/php:5.4 )
 0
 http://pecl.php.net/get/imagick-3.1.0RC1.tgz
