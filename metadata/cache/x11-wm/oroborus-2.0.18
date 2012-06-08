@@ -7,7 +7,7 @@ http://www.oroborus.org
 GPL-2
 Small and fast window manager.
 amd64 ppc x86
-autotools libtool multilib toolchain-funcs
+autotools libtool multilib multiprocessing toolchain-funcs
 gnome
 
 

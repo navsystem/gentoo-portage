@@ -7,7 +7,7 @@ http://atheme.net/
 BSD
 A portable and secure set of open-source and modular IRC services
 amd64 x86 ~x86-fbsd ~amd64-linux
-autotools base eutils flag-o-matic libtool multilib perl-module prefix toolchain-funcs user
+autotools base eutils flag-o-matic libtool multilib multiprocessing perl-module prefix toolchain-funcs user
 cracklib largenet ldap nls +pcre perl profile ssl
 
 

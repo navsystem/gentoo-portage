@@ -7,7 +7,7 @@ http://icedtea.classpath.org
 GPL-2-with-linking-exception
 Integrates commandline JDK tools and profiling capabilites.
 ~amd64
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 
 
 

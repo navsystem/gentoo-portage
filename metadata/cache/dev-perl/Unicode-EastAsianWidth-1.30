@@ -7,7 +7,7 @@ http://search.cpan.org/dist/Unicode-EastAsianWidth/
 MIT
 East Asian Width properties
 ~alpha amd64 arm ~hppa ~ia64 ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris
-base eutils multilib perl-module toolchain-funcs user
+base eutils multilib multiprocessing perl-module toolchain-funcs user
 
 
 

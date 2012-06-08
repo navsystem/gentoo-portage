@@ -7,7 +7,7 @@ http://search.cpan.org/dist/Text-Patch/
 GPL-2
 Patches text with given patch
 amd64 hppa x86
-base eutils multilib perl-module toolchain-funcs user
+base eutils multilib multiprocessing perl-module toolchain-funcs user
 
 
 

@@ -7,7 +7,7 @@ http://www.niksula.cs.hut.fi/~mtiihone/intel2gas/
 GPL-2
 Converts assembler source from Intel (NASM), to AT&T (gas)
 amd64 x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 
 
 

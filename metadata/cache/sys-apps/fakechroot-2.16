@@ -7,7 +7,7 @@ http://fakechroot.alioth.debian.org/
 LGPL-2.1
 Provide a faked chroot environment without requiring root privileges
 ~amd64 ~x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 
 
 

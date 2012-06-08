@@ -7,7 +7,7 @@ http://dvdnav.mplayerhq.hu/
 GPL-2
 Library for DVD navigation tools
 
-autotools eutils libtool multilib subversion toolchain-funcs user
+autotools eutils libtool multilib multiprocessing subversion toolchain-funcs user
 
 
 

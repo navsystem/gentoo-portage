@@ -7,7 +7,7 @@ http://search.cpan.org/dist/HTML-FromText/
 || ( Artistic GPL-1 GPL-2 GPL-3 )
 Convert plain text to HTML
 alpha amd64 hppa ia64 ~mips ppc sparc x86
-base eutils multilib perl-module toolchain-funcs user
+base eutils multilib multiprocessing perl-module toolchain-funcs user
 
 
 

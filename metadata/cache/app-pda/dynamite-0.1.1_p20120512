@@ -7,7 +7,7 @@ https://github.com/twogood/dynamite http://sourceforge.net/projects/synce/
 MIT
 A tool (and library) for decompressing data compressed with PKWARE Data Compression Library
 ~amd64 ~ppc ~x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 static-libs
 
 

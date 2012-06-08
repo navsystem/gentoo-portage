@@ -7,7 +7,7 @@ http://search.cpan.org/dist/Term-ScreenColor/
 || ( Artistic GPL-2 )
 A Term::Screen based screen positioning and coloring module
 ~amd64 ~x86
-base eutils multilib perl-module toolchain-funcs user
+base eutils multilib multiprocessing perl-module toolchain-funcs user
 
 
 

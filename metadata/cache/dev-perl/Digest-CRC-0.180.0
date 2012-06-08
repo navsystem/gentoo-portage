@@ -7,7 +7,7 @@ http://search.cpan.org/dist/Digest-CRC/
 || ( Artistic GPL-1 GPL-2 GPL-3 )
 Generic CRC function
 amd64 x86 ~amd64-linux
-base eutils multilib perl-module toolchain-funcs user
+base eutils multilib multiprocessing perl-module toolchain-funcs user
 
 
 

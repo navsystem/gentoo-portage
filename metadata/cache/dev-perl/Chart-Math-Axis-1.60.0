@@ -7,7 +7,7 @@ http://search.cpan.org/dist/Chart-Math-Axis/
 || ( Artistic GPL-1 GPL-2 GPL-3 )
 Implements an algorithm to find good values for chart axis
 amd64 hppa ~mips ~ppc x86
-base eutils multilib perl-module toolchain-funcs user
+base eutils multilib multiprocessing perl-module toolchain-funcs user
 
 
 

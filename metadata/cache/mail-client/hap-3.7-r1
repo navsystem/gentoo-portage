@@ -7,7 +7,7 @@ http://www.transbay.net/~enf/sw.html
 GPL-2
 A terminal mail notification program (replacement for biff)
 alpha ppc x86
-autotools libtool multilib toolchain-funcs
+autotools libtool multilib multiprocessing toolchain-funcs
 
 
 

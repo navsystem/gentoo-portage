@@ -7,7 +7,7 @@ http://www.octave.org/
 GPL-3
 High-level interactive language for numerical computations
 amd64 hppa ppc ppc64 x86 ~amd64-linux ~x86-linux
-autotools base eutils libtool multilib toolchain-funcs user
+autotools base eutils libtool multilib multiprocessing toolchain-funcs user
 curl doc fftw +glpk +imagemagick opengl openmp +qhull +qrupdate readline +sparse static-libs X zlib
 
 

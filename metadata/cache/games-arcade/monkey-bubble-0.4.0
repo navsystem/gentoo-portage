@@ -7,7 +7,7 @@ http://www.monkey-bubble.org/
 GPL-2
 A Puzzle Bobble clone
 ~amd64 ~ppc sparc x86
-autotools eutils fdo-mime gnome.org gnome2 gnome2-utils libtool multilib toolchain-funcs user versionator
+autotools eutils fdo-mime gnome.org gnome2 gnome2-utils libtool multilib multiprocessing toolchain-funcs user versionator
 debug
 
 

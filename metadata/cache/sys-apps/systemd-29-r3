@@ -7,7 +7,7 @@ http://www.freedesktop.org/wiki/Software/systemd
 GPL-2
 System and service manager for Linux
 ~amd64 ~x86
-autotools autotools-utils bash-completion eutils flag-o-matic libtool linux-info multilib pam systemd toolchain-funcs user versionator
+autotools autotools-utils bash-completion eutils flag-o-matic libtool linux-info multilib multiprocessing pam systemd toolchain-funcs user versionator
 audit cryptsetup gtk pam plymouth selinux tcpd bash-completion
 
 bash-completion? ( app-shells/bash-completion )

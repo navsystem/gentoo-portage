@@ -7,7 +7,7 @@ http://www.transmissionbt.com/
 GPL-2 MIT
 A Fast, Easy and Free BitTorrent client
 ~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd
-autotools base eutils fdo-mime gnome2-utils libtool multilib qt4-r2 toolchain-funcs user
+autotools base eutils fdo-mime gnome2-utils libtool multilib multiprocessing qt4-r2 toolchain-funcs user
 ayatana gtk lightweight qt4 xfs linguas_en linguas_es linguas_kk linguas_lt linguas_pt_BR linguas_ru
 ayatana? ( gtk )
 

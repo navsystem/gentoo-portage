@@ -7,7 +7,7 @@ http://wiki.openstreetmap.org/wiki/Osm2pgsql
 GPL-2
 Converts OSM data to SQL and insert into PostgreSQL db
 
-autotools eutils libtool multilib subversion toolchain-funcs user
+autotools eutils libtool multilib multiprocessing subversion toolchain-funcs user
 
 
 

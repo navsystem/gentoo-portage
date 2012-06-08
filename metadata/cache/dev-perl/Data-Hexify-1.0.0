@@ -7,7 +7,7 @@ http://search.cpan.org/dist/Data-Hexify/
 || ( Artistic GPL-1 GPL-2 GPL-3 )
 Perl extension for hexdumping arbitrary data
 amd64 x86 ~amd64-linux
-base eutils multilib perl-module toolchain-funcs user
+base eutils multilib multiprocessing perl-module toolchain-funcs user
 
 
 

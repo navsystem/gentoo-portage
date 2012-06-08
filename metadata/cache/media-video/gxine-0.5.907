@@ -7,7 +7,7 @@ http://xine.sourceforge.net/
 GPL-2
 GTK+ Front-End for libxine
 amd64 ppc ppc64 x86
-autotools eutils fdo-mime gnome2-utils libtool multilib nsplugins toolchain-funcs user
+autotools eutils fdo-mime gnome2-utils libtool multilib multiprocessing nsplugins toolchain-funcs user
 gnome-screensaver linguas_cs linguas_de lirc nls nsplugin udev +xcb xinerama
 
 

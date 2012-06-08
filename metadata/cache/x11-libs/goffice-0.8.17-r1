@@ -7,7 +7,7 @@ http://git.gnome.org/browse/goffice/
 GPL-2
 A library of document-centric objects and utilities
 ~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x64-solaris
-autotools eutils fdo-mime flag-o-matic gnome.org gnome2 gnome2-utils libtool multilib toolchain-funcs user versionator
+autotools eutils fdo-mime flag-o-matic gnome.org gnome2 gnome2-utils libtool multilib multiprocessing toolchain-funcs user versionator
 doc gnome
 
 

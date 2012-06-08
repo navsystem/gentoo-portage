@@ -7,7 +7,7 @@ http://atlas.sourceforge.net/
 GPL-2
 Chart Program to use with Flightgear Flight Simulator
 ~amd64 ~ppc ~x86
-autotools base eutils games libtool multilib toolchain-funcs user
+autotools base eutils games libtool multilib multiprocessing toolchain-funcs user
 
 
 

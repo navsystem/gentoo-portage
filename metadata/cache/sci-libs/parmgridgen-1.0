@@ -7,7 +7,7 @@ http://www-users.cs.umn.edu/~moulitsa/software.html
 as-is
 Software for parallel (mpi) generating coarse grids
 ~amd64 ~x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 
 
 

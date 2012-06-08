@@ -7,7 +7,7 @@ http://www.i-scream.org/libstatgrab/
 || ( GPL-2 LGPL-2.1 )
 A tool to provide access to statistics about the system on which it's run.
 ~amd64 ~ia64 ~ppc ~x86
-autotools autotools-utils eutils libtool multilib toolchain-funcs user
+autotools autotools-utils eutils libtool multilib multiprocessing toolchain-funcs user
 static-libs
 
 

@@ -7,7 +7,7 @@ http://www.nomachine.com/developers.php
 GPL-2
 NX compression technology core libraries
 ~amd64 ~ppc ~x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 elibc_glibc
 
 

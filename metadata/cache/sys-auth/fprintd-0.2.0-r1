@@ -7,7 +7,7 @@ http://cgit.freedesktop.org/libfprint/fprintd/
 GPL-2
 D-Bus service to access fingerprint readers
 ~amd64 ~x86
-autotools eutils libtool multilib toolchain-funcs user versionator
+autotools eutils libtool multilib multiprocessing toolchain-funcs user versionator
 doc pam static-libs
 
 

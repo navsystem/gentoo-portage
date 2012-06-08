@@ -7,7 +7,7 @@ http://live.gnome.org/GnomeGames/
 GPL-2 GPL-3 FDL-1.1
 Collection of games for the GNOME desktop
 ~amd64 ~x86
-autotools base eutils fdo-mime games gnome.org gnome2 gnome2-utils libtool multilib python toolchain-funcs user versionator virtualx
+autotools base eutils fdo-mime games gnome.org gnome2 gnome2-utils libtool multilib multiprocessing python toolchain-funcs user versionator virtualx
 artworkextra +aisleriot +clutter +introspection glchess seed +sudoku test test
 
 aisleriot? ( games-board/aisleriot )

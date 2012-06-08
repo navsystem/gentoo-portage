@@ -7,7 +7,7 @@ http://www.webkitgtk.org/
 LGPL-2 LGPL-2.1 BSD
 Open source web browser engine
 ~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-macos
-autotools eutils flag-o-matic gnome2-utils libtool multilib pax-utils python toolchain-funcs user virtualx
+autotools eutils flag-o-matic gnome2-utils libtool multilib multiprocessing pax-utils python toolchain-funcs user virtualx
 aqua coverage debug +geoloc +gstreamer +introspection +jit spell +webgl test
 introspection? ( geoloc gstreamer )
 

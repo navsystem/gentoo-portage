@@ -7,7 +7,7 @@ http://sourceforge.net/projects/preload/
 GPL-2
 Adaptive readahead daemon.
 amd64 x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 vanilla
 
 

@@ -7,7 +7,7 @@ http://samba.org/ftp/tridge/dbench/
 GPL-2
 Popular filesystem benchmark
 amd64 hppa ppc ppc64 sparc x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 
 
 

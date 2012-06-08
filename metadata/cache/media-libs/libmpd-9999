@@ -7,7 +7,7 @@ http://gmpc.wikia.com/wiki/Libmpd
 GPL-2
 A library handling connections to a MPD server
 
-autotools git-2 libtool multilib toolchain-funcs
+autotools git-2 libtool multilib multiprocessing toolchain-funcs
 doc static-libs
 
 

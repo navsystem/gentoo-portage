@@ -7,7 +7,7 @@ http://srs.mirtol.com/
 GPL-2
 Sender Rewriting Scheme library
 alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 
 
 

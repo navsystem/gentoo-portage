@@ -7,7 +7,7 @@ http://pinta-project.com
 MIT CCPL-Attribution-3.0
 Simple Painting for Gtk
 
-autotools fdo-mime git-2 libtool mono multilib toolchain-funcs
+autotools fdo-mime git-2 libtool mono multilib multiprocessing toolchain-funcs
 jpeg tiff
 
 

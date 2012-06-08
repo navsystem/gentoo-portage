@@ -7,7 +7,7 @@ http://www.linguistik.uni-erlangen.de/~msbethke/software.html
 GPL-2
 An HTML preprocessor using ML syntax
 amd64 ~ppc x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 
 
 

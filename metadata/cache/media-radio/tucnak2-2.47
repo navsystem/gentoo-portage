@@ -7,7 +7,7 @@ http://tucnak.nagano.cz
 GPL-2
 Amateur Radio VHF Contest Logbook
 ~amd64 ~x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 alsa fftw ftdi gpm hamlib suid
 
 

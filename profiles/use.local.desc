@@ -562,10 +562,12 @@ app-forensics/rdd:rawio - Enables raw IO handling
 app-forensics/sleuthkit:aff - Enable extra aff formats
 app-forensics/sleuthkit:ewf - Enable libewf support
 app-i18n/anthy:canna-2ch - Enable support for app-dicts/canna-2ch
+app-i18n/fcitx:gir - Enable GObject Introspection
 app-i18n/fcitx:gtk3 - Use GTK+3 instead of 2
 app-i18n/fcitx:opencc - Enable OpenCC for Chinese Transform
 app-i18n/fcitx:pango - Enable support for x11-libs/pango
 app-i18n/fcitx:qt - Enable Qt IM Module
+app-i18n/fcitx:snooper - Enable Key Snooper for gtk app
 app-i18n/fcitx:table - Enable Table IM
 app-i18n/fcitx-configtool:gtk3 - Use GTK+3 instead of 2
 app-i18n/ibus:dconf - Enable support for gnome-base/dconf
@@ -611,19 +613,6 @@ app-misc/anki:furigana - Enable support for furigana generation
 app-misc/anki:graph - Enable support for making graphs
 app-misc/anki:recording - Enable support for audio recording
 app-misc/anki:sound - Enable support for adding sound to cards
-app-misc/beagle:chm - Enables support for indexing of the MS CHM (Compressed HTML) file format using app-doc/chmlib.
-app-misc/beagle:debug - Enables debug XML dumps of all messages passed between the daemons and the UIs. WARNING, this option will fill up your Beagle Log directory very quickly.
-app-misc/beagle:doc - Builds programmer documentation for Beagle using app-doc/monodoc.
-app-misc/beagle:eds - Enables Beagle to index the Addressbook and Calendar from mail-client/evolution stored in gnome-extra/evolution-data-server. The information is accessed using dev-dotnet/evolution-sharp.
-app-misc/beagle:firefox - Compiles and installs the extension for either www-client/firefox or www-client/firefox-bin. This extension helps Beagle index the websites you visit.
-app-misc/beagle:galago - Allows Beagle to get status information from applications such as Pidgin to show in the search results.
-app-misc/beagle:google - Enables google (gmail etc.) indexing support.
-app-misc/beagle:gtk - Enables the GTK+ Beagle Search UI for showing search results. This is the default GUI for Beagle.
-app-misc/beagle:inotify - Enable inotify filesystem monitoring support
-app-misc/beagle:ole - Enables OLE (Object Linking and Editing) support via dev-dotnet/gsf-sharp, app-text/wv, and app-office/gnumeric(ssindex). These allow Beagle to index MS Powerpoint, Word, and Spreadsheet Documents.
-app-misc/beagle:pdf - Enables support for indexing of the PDF (Portable Document Format) file format using `pdfinfo` and `pdftotext` from app-text/poppler
-app-misc/beagle:thunderbird - Compiles and installs the extension for either mail-client/thunderbird or mail-client/thunderbird-bin. This extension helps Beagle index your mails.
-app-misc/beagle:xscreensaver - Allow Beagle to detect when the screensaver is switched on. This allows Beagle to use more resources and index faster when the computer is not in use.
 app-misc/byobu:screen - Use app-misc/screen as the default backend
 app-misc/ddccontrol:ddcpci - enable direct PCI memory access (the setuid ddcpci util)
 app-misc/digitemp:ds2490 - Build support for the ds2490 sensor
@@ -2862,6 +2851,7 @@ media-sound/jack-audio-connection-kit:cpudetection - Enables runtime cpudetectio
 media-sound/jack-audio-connection-kit:netjack - Build with support for Realtime Audio Transport over generic IP
 media-sound/jack-audio-connection-kit:pam - Add basic realime configuration via sys-auth/realtime-base
 media-sound/jalv:gtkmm - Adds support for dev-cpp/gtkmm: C++ interface for GTK+2
+media-sound/kid3:chroma - Enable support for acoustic fingerprinting plugin using (media-libs/chromaprint)
 media-sound/lame:mp3rtp - Build the mp3-to-RTP streaming utility. **UNSUPPORTED**
 media-sound/lmms:fluidsynth - Enables Fluidsynth MIDI software synthesis plugin.
 media-sound/lmms:stk - Enables STK Mallet plugin.
@@ -3703,7 +3693,6 @@ net-im/ekg2:oracle - Support logging messages into Oracle database.
 net-im/ekg2:sqlite - Support logging messages into SQLite2 database. If 'sqlite3' is set too, it will be used instead.
 net-im/ekg2:sqlite3 - Support logging messages into SQLite3 database. If 'sqlite' is set too, SQLite3 will be used.
 net-im/ekg2:ssl - Enable the complete SSL/TLS support through OpenSSL. This also enables the 'sim' plugin which relies on OpenSSL.
-net-im/emesene:webcam - Enable support for webcam
 net-im/empathy:call - Enable Call channel support using net-libs/telepathy-farstream for audio/video calls
 net-im/empathy:geocode - Enable translation between addresses and geographic coordinates using sci-geosciences/geocode-glib and Yahoo! Place Finder
 net-im/empathy:geoloc - Enable geolocation support through app-misc/geoclue
@@ -4814,6 +4803,7 @@ sci-libs/votca-tools:system-boost - Use system boost (dev-libs/boost) instead of
 sci-libs/vtk:R - Enable support for dev-lang/R
 sci-libs/vtk:boost - Add support for boost
 sci-libs/vtk:cg - Use nvidia's cg shaders
+sci-libs/vtk:chemistry - Add chemistry support
 sci-libs/vtk:patented - Build patented classes
 sci-mathematics/Macaulay2:optimization - Accept upstream's choices for -O option, i.e. -O3 almost everywhere.
 sci-mathematics/agda:epic - Add support for the epic compiler.

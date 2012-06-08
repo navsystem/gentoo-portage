@@ -7,7 +7,7 @@ http://www.scute.org/
 GPL-2
 A PKCS #11 module for OpenPGP smartcards
 ~amd64
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 
 
 

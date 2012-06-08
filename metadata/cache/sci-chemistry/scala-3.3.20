@@ -7,7 +7,7 @@ http://www.ccp4.ac.uk/dist/html/scala.html
 ccp4
 Scale together multiple observations of reflections
 ~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux
-autotools fortran-2 libtool multilib toolchain-funcs
+autotools fortran-2 libtool multilib multiprocessing toolchain-funcs
 
 
 

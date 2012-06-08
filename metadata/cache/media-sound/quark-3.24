@@ -7,7 +7,7 @@ http://hsgg.github.com/quark/
 GPL-2
 Quark is the Anti-GUI Music Player with a cool Docklet!
 ~amd64 ~ppc ~x86
-autotools eutils fdo-mime gnome2-utils libtool multilib toolchain-funcs user
+autotools eutils fdo-mime gnome2-utils libtool multilib multiprocessing toolchain-funcs user
 gnome
 
 

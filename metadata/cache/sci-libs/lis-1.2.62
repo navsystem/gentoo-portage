@@ -7,7 +7,7 @@ http://www.ssisc.org/lis/index.en.html
 BSD
 Library of Iterative Solvers for Linear Systems
 ~amd64 ~x86
-autotools autotools-utils eutils fortran-2 libtool multilib toolchain-funcs user
+autotools autotools-utils eutils fortran-2 libtool multilib multiprocessing toolchain-funcs user
 doc fma fortran mpi openmp quad saamg sse2 static-libs
 
 

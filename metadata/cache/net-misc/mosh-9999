@@ -7,7 +7,7 @@ http://mosh.mit.edu
 GPL-3
 Mobile shell that supports roaming and intelligent local echo
 
-autotools git-2 libtool multilib toolchain-funcs
+autotools git-2 libtool multilib multiprocessing toolchain-funcs
 bash-completion +client examples +mosh-hardening +server ufw +utempter
 || ( client server ) examples? ( client )
 

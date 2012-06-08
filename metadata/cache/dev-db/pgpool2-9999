@@ -7,7 +7,7 @@ http://pgpool.projects.postgresql.org/
 BSD
 Connection pool server for PostgreSQL
 
-autotools base cvs eutils libtool multilib toolchain-funcs user
+autotools base cvs eutils libtool multilib multiprocessing toolchain-funcs user
 pam ssl static-libs
 
 

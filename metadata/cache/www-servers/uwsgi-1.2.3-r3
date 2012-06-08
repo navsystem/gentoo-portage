@@ -7,7 +7,7 @@ http://projects.unbit.it/uwsgi/
 GPL-2
 uWSGI server for Python web applications
 ~amd64 ~x86
-apache-module autotools depend.apache eutils flag-o-matic java-utils-2 libtool multilib pax-utils php-ext-source-r2 python ruby-ng toolchain-funcs user versionator
+apache-module autotools depend.apache eutils flag-o-matic java-utils-2 libtool multilib multiprocessing pax-utils php-ext-source-r2 python ruby-ng toolchain-funcs user versionator
 apache2 +caps +carbon cgi debug erlang gevent graylog2 json ldap lua +nagios perl +pcre php python rrdtool rsyslog ruby spooler sqlite syslog +xml yaml zeromq apache2 php_targets_php5-3 php_targets_php5-4 elibc_FreeBSD ruby_targets_ruby18 ruby_targets_ree18 ruby_targets_ruby19
 || ( cgi erlang lua perl php python ruby )
 

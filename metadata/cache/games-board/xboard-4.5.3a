@@ -7,7 +7,7 @@ http://www.gnu.org/software/xboard/
 GPL-2
 GUI for gnuchess and for internet chess servers
 ~ppc ~ppc64 x86
-autotools base eutils games libtool multilib toolchain-funcs user
+autotools base eutils games libtool multilib multiprocessing toolchain-funcs user
 Xaw3d +default-font zippy
 
 

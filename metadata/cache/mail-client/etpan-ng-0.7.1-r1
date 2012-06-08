@@ -7,7 +7,7 @@ http://www.etpan.org/other.html
 BSD
 etPan is a console mail client that is based on libEtPan!
 ~amd64 x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 debug ldap
 
 

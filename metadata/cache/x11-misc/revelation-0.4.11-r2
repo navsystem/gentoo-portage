@@ -7,7 +7,7 @@ http://oss.codepoet.no/revelation/
 GPL-2
 A password manager for GNOME
 amd64 ppc x86
-autotools eutils fdo-mime gnome.org gnome2 gnome2-utils libtool multilib python toolchain-funcs user versionator
+autotools eutils fdo-mime gnome.org gnome2 gnome2-utils libtool multilib multiprocessing python toolchain-funcs user versionator
 applet debug
 
 

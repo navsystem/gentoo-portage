@@ -7,7 +7,7 @@ http://sourceforge.net/projects/matio/
 LGPL-2.1
 Library for reading and writing matlab files
 ~amd64 ~x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 doc examples hdf5 sparse static-libs
 
 

@@ -7,7 +7,7 @@ http://www.samba.org/
 GPL-3
 Samba Server component
 ~amd64 ~x86
-base confutils eutils multilib python toolchain-funcs user versionator waf-utils
+base confutils eutils multilib multiprocessing python toolchain-funcs user versionator waf-utils
 acl addns ads aio avahi client cluster cups debug fulltest gnutls iprint krb5 ldap pam quota swat syslog winbind
 
 

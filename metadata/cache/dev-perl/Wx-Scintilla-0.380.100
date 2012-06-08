@@ -7,7 +7,7 @@ http://search.cpan.org/dist/Wx-Scintilla/
 || ( Artistic GPL-1 GPL-2 GPL-3 ) Scintilla
 Scintilla source code editing component for wxWidgets
 ~amd64 ~x86
-base eutils multilib perl-module toolchain-funcs user wxwidgets
+base eutils multilib multiprocessing perl-module toolchain-funcs user wxwidgets
 
 
 

@@ -7,7 +7,7 @@ https://sourceforge.net/projects/trrntzip
 GPL-2
 archiving program that uses standard values when creating zips to create identical files over multiple systems with the ability to create a torrentzip format from a zip file
 ~amd64 ~x86
-autotools eutils libtool multilib toolchain-funcs user versionator
+autotools eutils libtool multilib multiprocessing toolchain-funcs user versionator
 
 
 

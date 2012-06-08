@@ -7,7 +7,7 @@ http://xorg.freedesktop.org/
 MIT
 Leo video driver
 -* sparc
-autotools eutils flag-o-matic libtool multilib toolchain-funcs user x-modular
+autotools eutils flag-o-matic libtool multilib multiprocessing toolchain-funcs user x-modular
 debug
 
 

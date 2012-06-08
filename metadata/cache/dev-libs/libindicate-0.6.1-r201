@@ -7,7 +7,7 @@ http://launchpad.net/libindicate
 LGPL-2.1 LGPL-3
 A library to raise flags on DBus for other components of the desktop to pick up and visualize
 ~amd64 ~x86
-autotools eutils libtool multilib python toolchain-funcs user
+autotools eutils libtool multilib multiprocessing python toolchain-funcs user
 +introspection
 
 

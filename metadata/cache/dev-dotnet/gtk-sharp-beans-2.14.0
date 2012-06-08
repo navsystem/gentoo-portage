@@ -7,7 +7,7 @@ http://github.com/mono/gtk-sharp-beans
 LGPL-2.1
 GTK+ API C# binding
 amd64 x86
-autotools libtool mono multilib toolchain-funcs
+autotools libtool mono multilib multiprocessing toolchain-funcs
 
 
 

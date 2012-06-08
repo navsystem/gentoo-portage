@@ -7,7 +7,7 @@ http://rdesktop.sourceforge.net/
 GPL-3
 A Remote Desktop Protocol Client
 ~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 alsa ao debug ipv6 libsamplerate oss pcsc-lite
 
 

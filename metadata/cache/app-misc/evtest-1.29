@@ -7,7 +7,7 @@ http://cgit.freedesktop.org/evtest/
 GPL-2
 test program for capturing input device events
 amd64 arm x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 +xml
 
 

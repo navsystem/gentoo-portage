@@ -7,7 +7,7 @@ http://wxmud.sourceforge.net/
 GPL-2
 Cross-platform MUD client
 
-autotools base eutils flag-o-matic games libtool multilib subversion toolchain-funcs user wxwidgets
+autotools base eutils flag-o-matic games libtool multilib multiprocessing subversion toolchain-funcs user wxwidgets
 python
 
 

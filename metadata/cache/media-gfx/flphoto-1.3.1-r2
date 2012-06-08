@@ -7,7 +7,7 @@ http://www.easysw.com/~mike/flphoto/
 GPL-2
 Basic image management and display program based on the FLTK toolkit
 amd64 ppc x86
-autotools eutils fdo-mime libtool multilib toolchain-funcs user
+autotools eutils fdo-mime libtool multilib multiprocessing toolchain-funcs user
 cups debug gphoto2 nls
 
 

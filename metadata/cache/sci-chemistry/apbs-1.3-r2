@@ -7,7 +7,7 @@ http://apbs.sourceforge.net/
 BSD
 For evaluation of electrostatic properties of nanoscale biomolecular systems
 ~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux
-autotools autotools-utils eutils fortran-2 libtool multilib python toolchain-funcs user versionator
+autotools autotools-utils eutils fortran-2 libtool multilib multiprocessing python toolchain-funcs user versionator
 arpack doc examples fetk mpi openmp python static-libs tools
 mpi? ( !python )
 

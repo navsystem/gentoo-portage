@@ -7,7 +7,7 @@ http://packages.qa.debian.org/x/xfce4-messenger-plugin.html
 GPL-2
 A plugin that listens DBus messages and displays received messages
 ~amd64 ~x86
-autotools base eutils fdo-mime gnome2-utils libtool multilib toolchain-funcs user xfconf
+autotools base eutils fdo-mime gnome2-utils libtool multilib multiprocessing toolchain-funcs user xfconf
 
 
 

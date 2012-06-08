@@ -7,7 +7,7 @@ http://xdock.sourceforge.net
 GPL-2
 emulates Window Maker docks (runs in any window manager)
 ~amd64 ~x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 
 
 

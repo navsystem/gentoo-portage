@@ -7,7 +7,7 @@ http://openbox.org/wiki/ObConf:About
 GPL-2
 ObConf is a tool for configuring the Openbox window manager.
 
-autotools fdo-mime git-2 libtool multilib toolchain-funcs
+autotools fdo-mime git-2 libtool multilib multiprocessing toolchain-funcs
 nls
 
 

@@ -7,7 +7,7 @@ http://sourceforge.net/projects/libptp/
 GPL-2
 Library and client for communicating with PTP enabled devices (e.g. digital photo cameras).
 amd64 ppc ppc64 x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 
 
 

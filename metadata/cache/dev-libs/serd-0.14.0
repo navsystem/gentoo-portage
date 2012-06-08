@@ -7,7 +7,7 @@ http://drobilla.net/software/serd/
 ISC
 Library for RDF syntax which supports reading and writing Turtle and NTriples
 ~amd64 ~x86
-base eutils multilib toolchain-funcs user waf-utils
+base eutils multilib multiprocessing toolchain-funcs user waf-utils
 doc static-libs test
 
 

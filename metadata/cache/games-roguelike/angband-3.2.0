@@ -7,7 +7,7 @@ http://rephial.org/
 GPL-2
 A roguelike dungeon exploration game based on the books of J.R.R. Tolkien
 amd64 ppc x86
-autotools base eutils games libtool multilib toolchain-funcs user versionator
+autotools base eutils games libtool multilib multiprocessing toolchain-funcs user versionator
 gtk ncurses sdl +sound X
 
 

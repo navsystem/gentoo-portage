@@ -7,7 +7,7 @@ http://www.linuxhardware.org/xsensors/
 GPL-2
 A hardware health information viewer, interface to lm-sensors.
 amd64 ppc x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 
 
 

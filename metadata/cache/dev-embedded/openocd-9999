@@ -7,7 +7,7 @@ http://openocd.sourceforge.net
 GPL-2
 OpenOCD - Open On-Chip Debugger
 
-autotools eutils git-2 libtool multilib toolchain-funcs user
+autotools eutils git-2 libtool multilib multiprocessing toolchain-funcs user
 blaster dummy ftd2xx ftdi minidriver parport presto segger usb versaloon
 blaster? ( || ( ftdi ftd2xx ) ) ftdi? ( !ftd2xx )
 

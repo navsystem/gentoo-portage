@@ -7,7 +7,7 @@ http://www.hdfgroup.org/doc_resource/SZIP/
 szip
 Extended-Rice lossless compression algorithm implementation
 ~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86
-autotools autotools-utils eutils libtool multilib toolchain-funcs user
+autotools autotools-utils eutils libtool multilib multiprocessing toolchain-funcs user
 static-libs
 
 

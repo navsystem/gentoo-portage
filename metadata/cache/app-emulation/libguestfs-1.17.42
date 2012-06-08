@@ -7,7 +7,7 @@ http://libguestfs.org/
 GPL-2 LGPL-2
 Tools for accessing, inspect and modifying virtual machine (VM) disk images
 ~amd64
-autotools autotools-utils base bash-completion-r1 check-reqs eutils libtool linux-info multilib perl-module toolchain-funcs user versionator
+autotools autotools-utils base bash-completion-r1 check-reqs eutils libtool linux-info multilib multiprocessing perl-module toolchain-funcs user versionator
 bash-completion erlang +fuse debug ocaml doc +perl nls ruby static-libs selinux systemtap introspection
 
 

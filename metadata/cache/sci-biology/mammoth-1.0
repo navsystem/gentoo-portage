@@ -7,7 +7,7 @@ http://ub.cbm.uam.es/software.php
 mammoth
 MAtching Molecular Models Obtained from THeory
 ~amd64 ~x86
-autotools eutils flag-o-matic fortran-2 libtool multilib toolchain-funcs user
+autotools eutils flag-o-matic fortran-2 libtool multilib multiprocessing toolchain-funcs user
 
 
 

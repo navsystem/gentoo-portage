@@ -7,7 +7,7 @@ http://somewhere.fscked.org/proj/fireflies/
 as-is GPL-2
 Fireflies screensaver: Wicked cool eye candy
 amd64 ppc x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 
 
 

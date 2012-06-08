@@ -7,7 +7,7 @@ http://speed-dreams.sourceforge.net/
 GPL-2
 A fork of the famous open racing car simulator TORCS
 amd64 x86
-autotools base eutils games libtool multilib toolchain-funcs user versionator
+autotools base eutils games libtool multilib multiprocessing toolchain-funcs user versionator
 xrandr
 
 

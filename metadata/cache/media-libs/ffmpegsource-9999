@@ -7,7 +7,7 @@ https://code.google.com/p/ffmpegsource/
 MIT
 An FFmpeg based source library for easy frame accurate access
 
-autotools autotools-utils eutils libtool multilib subversion toolchain-funcs user
+autotools autotools-utils eutils libtool multilib multiprocessing subversion toolchain-funcs user
 static-libs
 
 

@@ -7,7 +7,7 @@ http://sdr.osmocom.org/trac/wiki/rtl-sdr
 GPL-2
 turns your Realtek RTL2832 based DVB dongle into a SDR receiver
 
-autotools git-2 libtool multilib toolchain-funcs
+autotools git-2 libtool multilib multiprocessing toolchain-funcs
 
 
 

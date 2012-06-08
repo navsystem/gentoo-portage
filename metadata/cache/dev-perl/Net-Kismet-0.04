@@ -7,7 +7,7 @@ http://www.kismetwireless.net
 Artistic
 Module for writing perl Kismet clients
 amd64 ia64 ppc x86
-base eutils multilib perl-module toolchain-funcs user
+base eutils multilib multiprocessing perl-module toolchain-funcs user
 
 
 

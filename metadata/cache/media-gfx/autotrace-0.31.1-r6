@@ -7,7 +7,7 @@ http://packages.qa.debian.org/a/autotrace.html http://autotrace.sourceforge.net/
 GPL-2 LGPL-2.1
 A program for converting bitmaps to vector graphics
 alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~amd64-fbsd
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 +imagemagick static-libs
 
 

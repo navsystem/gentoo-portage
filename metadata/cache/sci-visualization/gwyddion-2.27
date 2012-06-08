@@ -7,7 +7,7 @@ http://gwyddion.net/
 GPL-2
 Framework for Scanning Mode Microscopy data analysis
 ~amd64 ~x86
-autotools autotools-utils eutils fdo-mime gnome2-utils libtool multilib python toolchain-funcs user
+autotools autotools-utils eutils fdo-mime gnome2-utils libtool multilib multiprocessing python toolchain-funcs user
 doc fftw gnome kde nls opengl perl python ruby sourceview xml X
 
 

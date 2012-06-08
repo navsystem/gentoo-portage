@@ -7,7 +7,7 @@ http://www.tbi.univie.ac.at/~ivo/RNA/
 vienna-rna
 RNA secondary structure prediction and comparison
 amd64 ppc x86
-autotools base eutils libtool multilib perl-module toolchain-funcs user
+autotools base eutils libtool multilib multiprocessing perl-module toolchain-funcs user
 
 
 

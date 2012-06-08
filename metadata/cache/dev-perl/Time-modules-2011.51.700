@@ -7,7 +7,7 @@ http://search.cpan.org/dist/Time-modules/
 as-is
 A Date/Time Parsing Perl Module
 amd64 ppc ppc64 x86
-base eutils multilib perl-module toolchain-funcs user
+base eutils multilib multiprocessing perl-module toolchain-funcs user
 
 
 

@@ -7,7 +7,7 @@ http://search.cpan.org/~rmcfarla/
 GPL-2
 Perl wrappers for the GConf configuration engine.
 alpha amd64 ia64 ~ppc sparc x86
-base eutils multilib perl-module toolchain-funcs user
+base eutils multilib multiprocessing perl-module toolchain-funcs user
 
 
 

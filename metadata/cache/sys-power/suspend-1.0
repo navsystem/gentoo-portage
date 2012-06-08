@@ -7,7 +7,7 @@ http://suspend.sourceforge.net/
 GPL-2
 Userspace Software Suspend and S2Ram
 ~amd64 ~x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 fbsplash crypt threads
 
 

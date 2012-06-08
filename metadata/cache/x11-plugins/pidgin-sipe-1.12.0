@@ -7,7 +7,7 @@ http://sipe.sourceforge.net/
 GPL-2
 Pidgin Plug-in SIPE (Sip Exchange Protocol)
 ~amd64 ~x86
-autotools libtool multilib toolchain-funcs
+autotools libtool multilib multiprocessing toolchain-funcs
 debug kerberos voice
 
 

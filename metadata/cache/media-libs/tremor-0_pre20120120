@@ -7,7 +7,7 @@ http://wiki.xiph.org/Tremor
 BSD
 A fixed-point version of the Ogg Vorbis decoder (also known as libvorbisidec)
 ~amd64 ~x86
-autotools libtool multilib toolchain-funcs
+autotools libtool multilib multiprocessing toolchain-funcs
 static-libs
 
 

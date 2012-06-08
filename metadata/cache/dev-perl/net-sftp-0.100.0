@@ -7,7 +7,7 @@ http://search.cpan.org/dist/Net-SFTP/
 || ( Artistic GPL-1 GPL-2 GPL-3 )
 Secure File Transfer Protocol client
 alpha amd64 ~mips ~ppc x86
-base eutils multilib perl-module toolchain-funcs user
+base eutils multilib multiprocessing perl-module toolchain-funcs user
 
 
 

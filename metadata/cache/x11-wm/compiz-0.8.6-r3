@@ -7,7 +7,7 @@ http://www.compiz.org/
 GPL-2 LGPL-2.1 MIT
 OpenGL window and compositing manager
 ~amd64 ~ppc ~ppc64 ~x86
-autotools eutils gnome2-utils libtool multilib toolchain-funcs user
+autotools eutils gnome2-utils libtool multilib multiprocessing toolchain-funcs user
 +cairo fuse gnome gconf gtk kde +svg
 
 

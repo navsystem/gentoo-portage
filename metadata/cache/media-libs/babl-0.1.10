@@ -7,7 +7,7 @@ http://www.gegl.org/babl/
 LGPL-3
 A dynamic, any to any, pixel format conversion library
 ~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 altivec +introspection sse mmx vala
 
 

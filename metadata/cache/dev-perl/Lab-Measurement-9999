@@ -7,7 +7,7 @@ http://www.labmeasurement.de/
 || ( Artistic GPL-2 )
 Measurement control and automation with Perl
 
-base eutils git-2 multilib perl-module toolchain-funcs user
+base eutils git-2 multilib multiprocessing perl-module toolchain-funcs user
 
 
 

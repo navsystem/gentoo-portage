@@ -7,7 +7,7 @@ http://www.haskell.org/ghc/
 BSD
 The Glasgow Haskell Compiler
 ~alpha ~amd64 -ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris
-autotools base bash-completion-r1 eutils flag-o-matic ghc-package libtool multilib pax-utils toolchain-funcs user versionator
+autotools base bash-completion-r1 eutils flag-o-matic ghc-package libtool multilib multiprocessing pax-utils toolchain-funcs user versionator
 doc ghcbootstrap llvm binary
 
 !ghcbootstrap? ( =app-admin/haskell-updater-1.2* ) llvm? ( sys-devel/llvm )

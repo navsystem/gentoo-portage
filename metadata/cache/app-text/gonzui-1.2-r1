@@ -7,7 +7,7 @@ http://gonzui.sourceforge.net/
 GPL-2
 source code search engine
 ~amd64 ~ppc ~x86
-autotools eutils libtool multilib ruby toolchain-funcs user
+autotools eutils libtool multilib multiprocessing ruby toolchain-funcs user
 ocaml perl
 
 

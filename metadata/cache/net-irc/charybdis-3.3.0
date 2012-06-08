@@ -7,7 +7,7 @@ http://atheme.org/project/charybdis http://www.stack.nl/~jilles/irc/#charybdis
 GPL-2
 The atheme project's IRCd based on ratbox
 amd64 x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 debug +ipv6 largenet ssl zlib
 
 

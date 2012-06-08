@@ -7,7 +7,7 @@ http://www.grisbi.org
 GPL-2
 Grisbi is a personal accounting application for Linux
 amd64 ppc x86
-autotools eutils libtool multilib toolchain-funcs user
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
 nls ofx ssl
 
 

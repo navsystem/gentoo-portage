@@ -7,7 +7,7 @@ http://sourceforge.net/projects/fgrun
 GPL-2
 A graphical frontend for the FlightGear Flight Simulator
 ~amd64 ~x86
-autotools base eutils games libtool multilib toolchain-funcs user
+autotools base eutils games libtool multilib multiprocessing toolchain-funcs user
 
 
 
