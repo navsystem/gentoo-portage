@@ -1,0 +1,22 @@
+
+net-misc/dropbox
+0
+https://dev.gentoo.org/~hasufell/distfiles/dropbox-cli-1.py.xz
+
+http://www.dropbox.com/
+GPL-3
+Cli interface for dropbox daemon (python)
+~amd64 ~x86
+
+
+
+
+
+3
+
+install
+
+
+
+
+

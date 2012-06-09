@@ -1,21 +1,21 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-9999.ebuild,v 1.4 2012/06/08 08:11:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-9999.ebuild,v 1.7 2012/06/08 22:33:42 dilfridge Exp $
 
 EAPI=4
 
-DESCRIPTION="Cups PDF filters"
-HOMEPAGE="http://www.linuxfoundation.org/collaborate/workgroups/openprinting/pdfasstandardprintjobformat"
+inherit base
 
 if [[ "${PV}"=="9999" ]] ; then
-	inherit base autotools bzr
+	inherit autotools bzr
 	EBZR_REPO_URI="http://bzr.linuxfoundation.org/openprinting/cups-filters"
-	SRC_URI="dev.gentooexperimental.org/~scarabeus/build_fixes.patch"
 	KEYWORDS=""
 else
 	SRC_URI="http://www.openprinting.org/download/${PN}/${P}.tar.gz"
 	KEYWORDS=""
 fi
+DESCRIPTION="Cups PDF filters"
+HOMEPAGE="http://www.linuxfoundation.org/collaborate/workgroups/openprinting/pdfasstandardprintjobformat"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -35,10 +35,16 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}"
 
+PATCHES=(
+	"${FILESDIR}/${P}-png.patch"
+	"${FILESDIR}/${P}-imagetopdf.patch"
+	"${FILESDIR}/${P}-imagetoraster.patch"
+)
+
+
 src_prepare() {
 	base_src_prepare
 	if [[ "${PV}"=="9999" ]] ; then
-		epatch "${DISTDIR}/build_fixes.patch"
 		eautoreconf
 	fi
 }

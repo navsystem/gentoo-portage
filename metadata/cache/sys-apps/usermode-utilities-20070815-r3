@@ -1,5 +1,5 @@
-fuse? ( sys-fs/fuse )
-fuse? ( sys-fs/fuse )
+fuse? ( sys-fs/fuse ) sys-libs/readline
+fuse? ( sys-fs/fuse ) sys-libs/readline
 0
 http://user-mode-linux.sourceforge.net/uml_utilities_20070815.tar.bz2
 
