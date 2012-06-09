@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=dev-python/setuptools lapack? ( virtual/cblas virtual/lapack virtual/fortran ) dev-lang/python
 SLOT=0
 SRC_URI=mirror://sourceforge/numpy/numpy-1.6.1.tar.gz doc? ( http://docs.scipy.org/doc/numpy-1.6.0/numpy-html.zip -> numpy-1.6.0-html.zip http://docs.scipy.org/doc/numpy-1.6.0/numpy-ref.pdf -> numpy-1.6.0-ref.pdf http://docs.scipy.org/doc/numpy-1.6.0/numpy-user.pdf -> numpy-1.6.0-user.pdf )
-_eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	eutils	e9ac199862f908195424dc48ca2de8f6	flag-o-matic	d4d85170c0ee7a80c9a7cd009ae13133	fortran-2	368b82ae80c1184988a9d651e6efcbd0	multilib	5782800349f728f725f9378105c6a2ab	python	36d7e2b7aa4dce62364c72eec96610cf	toolchain-funcs	f71b9936acc911ed1cc84557d3b5c2b3	user	32a09e82e2f592bf88ad2fd08525166e	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	eutils	e9ac199862f908195424dc48ca2de8f6	flag-o-matic	d4d85170c0ee7a80c9a7cd009ae13133	fortran-2	368b82ae80c1184988a9d651e6efcbd0	multilib	5782800349f728f725f9378105c6a2ab	python	4152846e243ec207de8a1b02a36f1461	toolchain-funcs	940fa431b6227157c9a420dadef4970b	user	32a09e82e2f592bf88ad2fd08525166e	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=57ba842df03f78a5848c4eb3565b2d7b
