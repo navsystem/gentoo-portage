@@ -1,5 +1,5 @@
-app-text/ghostscript-gpl app-text/poppler[jpeg?,lcms,tiff?] media-libs/fontconfig media-libs/freetype:2 media-libs/lcms:2 >net-print/cups-1.5.9999 sys-libs/zlib jpeg? ( virtual/jpeg ) png? ( media-libs/libpng ) tiff? ( media-libs/tiff ) || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=dev-vcs/bzr-2.0.1
-app-text/ghostscript-gpl app-text/poppler[jpeg?,lcms,tiff?] media-libs/fontconfig media-libs/freetype:2 media-libs/lcms:2 >net-print/cups-1.5.9999 sys-libs/zlib jpeg? ( virtual/jpeg ) png? ( media-libs/libpng ) tiff? ( media-libs/tiff )
+app-text/ghostscript-gpl app-text/poppler[jpeg?,lcms,tiff?] media-libs/fontconfig media-libs/freetype:2 media-libs/lcms:2 >net-print/cups-1.5.9999 sys-libs/zlib jpeg? ( virtual/jpeg ) perl? ( dev-lang/perl ) png? ( media-libs/libpng ) tiff? ( media-libs/tiff ) dev-lang/perl[-build] || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=dev-vcs/bzr-2.0.1
+app-text/ghostscript-gpl app-text/poppler[jpeg?,lcms,tiff?] media-libs/fontconfig media-libs/freetype:2 media-libs/lcms:2 >net-print/cups-1.5.9999 sys-libs/zlib jpeg? ( virtual/jpeg ) perl? ( dev-lang/perl ) png? ( media-libs/libpng ) tiff? ( media-libs/tiff ) dev-lang/perl[-build]
 0
 
 
@@ -7,14 +7,14 @@ http://www.linuxfoundation.org/collaborate/workgroups/openprinting/pdfasstandard
 GPL-2
 Cups PDF filters
 
-autotools base bzr eutils libtool multilib multiprocessing toolchain-funcs user
-jpeg png static-libs tiff
+autotools base bzr eutils libtool multilib multiprocessing perl-module toolchain-funcs user
+jpeg perl png static-libs tiff
 
 
 
 4
 
-compile configure install prepare unpack
+compile configure install prepare test unpack
 
 
 

@@ -6,7 +6,7 @@ http://tech.motion-twin.com/zip/xml-light-2.2.zip
 http://tech.motion-twin.com/xmllight.html
 LGPL-2.1
 Minimal Xml parser and printer for OCaml
-amd64 ~x86
+amd64 x86
 eutils multilib toolchain-funcs user
 doc
 

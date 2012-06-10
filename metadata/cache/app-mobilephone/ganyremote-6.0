@@ -1,0 +1,22 @@
+>=app-mobilephone/anyremote-6.0[bluetooth=] dev-python/pygtk bluetooth? ( dev-python/pybluez )
+>=app-mobilephone/anyremote-6.0[bluetooth=] dev-python/pygtk bluetooth? ( dev-python/pybluez )
+0
+mirror://sourceforge/anyremote/ganyremote-6.0.tar.gz
+
+http://anyremote.sourceforge.net/
+GPL-2
+Gnome frontend to Anyremote
+~amd64 ~x86
+eutils multilib toolchain-funcs user
+bluetooth
+
+
+
+2
+
+install
+
+
+
+
+

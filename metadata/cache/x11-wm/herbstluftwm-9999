@@ -1,0 +1,22 @@
+>=dev-libs/glib-2.24:2 x11-libs/libX11 xinerama? ( x11-libs/libXinerama ) app-text/asciidoc virtual/pkgconfig dev-vcs/git
+>=dev-libs/glib-2.24:2 x11-libs/libX11 xinerama? ( x11-libs/libXinerama ) app-shells/bash zsh-completion? ( app-shells/zsh )
+0
+
+
+http://wwwcip.cs.fau.de/~re06huxa/herbstluftwm/
+BSD-2
+A manual tiling window manager for X
+
+bash-completion-r1 eutils git-2 multilib toolchain-funcs user
+examples xinerama zsh-completion
+
+
+
+4
+
+compile install prepare unpack
+
+
+
+
+

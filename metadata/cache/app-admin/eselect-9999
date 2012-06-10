@@ -1,4 +1,4 @@
-sys-apps/sed || ( sys-apps/coreutils sys-freebsd/freebsd-bin app-misc/realpath ) doc? ( dev-python/docutils ) dev-vcs/subversion net-misc/rsync
+sys-apps/sed || ( sys-apps/coreutils sys-freebsd/freebsd-bin app-misc/realpath ) doc? ( dev-python/docutils ) dev-vcs/git
 !app-admin/eselect-news sys-apps/sed || ( sys-apps/coreutils sys-freebsd/freebsd-bin app-misc/realpath ) sys-apps/file sys-libs/ncurses
 0
 
@@ -7,14 +7,14 @@ http://www.gentoo.org/proj/en/eselect/
 GPL-2
 Gentoo's multi-purpose configuration and management tool
 
-bash-completion-r1 eutils multilib subversion toolchain-funcs user
+bash-completion-r1 git-2
 doc
 
 
 
 4
 
-compile install postinst preinst prepare unpack
+compile install postinst unpack
 
 
 
