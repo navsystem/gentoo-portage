@@ -6,7 +6,7 @@ http://tukaani.org/xz/xz-java-1.0.zip
 http://tukaani.org/xz/java.html
 public-domain
 Implementation of xz data compression in pure java
-~amd64 ~x86
+amd64 x86
 eutils java-ant-2 java-pkg-2 java-utils-2 multilib toolchain-funcs user versionator
 elibc_FreeBSD doc examples source elibc_FreeBSD
 
