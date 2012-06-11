@@ -6,7 +6,7 @@ ftp://pcc.ludd.ltu.se/pub/pcc-releases/pcc-1.0.0.tgz
 http://pcc.ludd.ltu.se
 BSD
 pcc portable c compiler
-~x86 ~amd64
+~x86 ~amd64 ~amd64-fbsd
 autotools eutils libtool multilib multiprocessing toolchain-funcs user versionator
 
 

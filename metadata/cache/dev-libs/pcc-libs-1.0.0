@@ -6,7 +6,7 @@ ftp://pcc.ludd.ltu.se/pub/pcc-releases/pcc-libs-1.0.0.tgz
 http://pcc.ludd.ltu.se
 BSD
 pcc compiler support libs
-~x86 ~amd64
+~x86 ~amd64 ~amd64-fbsd
 eutils multilib toolchain-funcs user versionator
 
 
@@ -14,7 +14,7 @@ eutils multilib toolchain-funcs user versionator
 
 2
 
-compile install
+compile install prepare
 
 
 

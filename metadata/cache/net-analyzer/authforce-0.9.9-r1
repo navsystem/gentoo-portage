@@ -6,7 +6,7 @@ http://www.divineinvasion.net/authforce/authforce-0.9.9.tar.gz
 http://www.divineinvasion.net/authforce
 GPL-2
 An HTTP authentication brute forcer
-~amd64 ~ppc ~x86
+amd64 ~ppc ~x86
 base eutils multilib toolchain-funcs user
 curl nls
 

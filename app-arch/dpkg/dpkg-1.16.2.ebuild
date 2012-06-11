@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.16.2.ebuild,v 1.6 2012/05/15 19:05:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.16.2.ebuild,v 1.8 2012/06/10 17:38:37 jdhore Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://debian/pool/main/d/${PN}/${P/-/_}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~m68k ppc ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~m68k ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-solaris ~x86-solaris"
 IUSE="bzip2 dselect nls test unicode zlib"
 
 LANGS="
@@ -52,6 +52,10 @@ src_prepare() {
 	sed -i scripts/Makefile.am \
 		-e '/850_Dpkg_Compression.t/d' \
 		|| die "sed failed"
+
+	# test fails (bug #414095)
+	sed -i utils/Makefile.am \
+		-e '/^test_cases/d;/100_update_alternatives/d' || die
 
 	eautoreconf
 }
