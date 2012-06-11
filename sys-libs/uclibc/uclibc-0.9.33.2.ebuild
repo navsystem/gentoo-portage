@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.33.2.ebuild,v 1.2 2012/06/01 04:22:53 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.33.2.ebuild,v 1.4 2012/06/09 06:47:12 vapier Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs savedconfig
 if [[ ${PV} == "9999" ]] ; then
@@ -23,7 +23,7 @@ if [[ ${PV} != "9999" ]] ; then
 	PATCH_VER="1"
 	SRC_URI="http://uclibc.org/downloads/${MY_P}.tar.bz2
 		${PATCH_VER:+mirror://gentoo/${MY_P}-patches-${PATCH_VER}.tar.bz2}"
-	KEYWORDS="-* ~amd64 ~arm ~m68k ~mips ~ppc ~sh ~sparc ~x86"
+	KEYWORDS="-* amd64 arm ~m68k ~mips ppc ~sh sparc x86"
 fi
 
 LICENSE="LGPL-2"
@@ -158,10 +158,6 @@ src_config() {
 
 	sed -i -e '/ARCH_.*_ENDIAN/d' .config
 	kconfig_q_opt y "ARCH_WANTS_$(uclibc_endian)_ENDIAN"
-
-	if [[ $(tc-is-softfloat) != "no" ]] ; then
-		kconfig_q_opt n UCLIBC_HAS_FPU
-	fi
 
 	if [[ ${CTARGET} == arm* ]] ; then
 		kconfig_q_opt n CONFIG_ARM_OABI

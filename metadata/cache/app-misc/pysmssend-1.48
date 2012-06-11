@@ -6,7 +6,7 @@ http://pysmssend.silverarrow.org/files/pysmssend-1.48.tar.gz
 http://pysmssend.silverarrow.org/
 GPL-3
 Python Application for sending sms over multiple ISPs
-amd64 ~x86
+amd64 x86
 distutils eutils multilib python toolchain-funcs user
 qt4
 

@@ -1,4 +1,4 @@
-sys-libs/ncurses >=dev-libs/glib-2.2.1 ssl? ( dev-libs/openssl ) perl? ( dev-lang/perl ) socks5? ( >=net-proxy/dante-1.1.18 ) virtual/pkgconfig >=sys-devel/autoconf-2.58 dev-lang/perl www-client/lynx || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool dev-lang/perl[-build] dev-vcs/subversion net-misc/rsync
+sys-libs/ncurses >=dev-libs/glib-2.2.1 ssl? ( dev-libs/openssl ) perl? ( dev-lang/perl ) socks5? ( >=net-proxy/dante-1.1.18 ) virtual/pkgconfig >=sys-devel/autoconf-2.58 dev-lang/perl www-client/lynx || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool dev-lang/perl[-build] dev-vcs/subversion net-misc/rsync
 sys-libs/ncurses >=dev-libs/glib-2.2.1 ssl? ( dev-libs/openssl ) perl? ( dev-lang/perl ) socks5? ( >=net-proxy/dante-1.1.18 ) perl? ( !net-im/silc-client ) dev-lang/perl[-build]
 0
 

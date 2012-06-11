@@ -1,4 +1,4 @@
-nls? ( sys-devel/gettext ) app-text/texi2html || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+nls? ( sys-devel/gettext ) app-text/texi2html || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 nls? ( virtual/libintl )
 0
 http://indent.isidore-it.eu/indent-2.2.11.tar.gz

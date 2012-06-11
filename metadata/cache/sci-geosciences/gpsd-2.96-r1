@@ -1,4 +1,4 @@
-dev-python/pygtk:2 sys-libs/ncurses virtual/libusb:1 dbus? ( sys-apps/dbus dev-libs/dbus-glib ) ntp? ( net-misc/ntp ) qt4? ( x11-libs/qt-gui ) app-text/xmlto =app-text/docbook-xml-dtd-4.1* test? ( sys-devel/bc ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+dev-python/pygtk:2 sys-libs/ncurses virtual/libusb:1 dbus? ( sys-apps/dbus dev-libs/dbus-glib ) ntp? ( net-misc/ntp ) qt4? ( x11-libs/qt-gui ) app-text/xmlto =app-text/docbook-xml-dtd-4.1* test? ( sys-devel/bc ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 dev-python/pygtk:2 sys-libs/ncurses virtual/libusb:1 dbus? ( sys-apps/dbus dev-libs/dbus-glib ) ntp? ( net-misc/ntp ) qt4? ( x11-libs/qt-gui ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
 0
 mirror://berlios/gpsd/gpsd-2.96bis.tar.gz

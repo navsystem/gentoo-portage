@@ -1,4 +1,4 @@
-ssl? ( dev-libs/openssl ) zlib? ( sys-libs/zlib ) virtual/yacc sys-devel/flex || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+ssl? ( dev-libs/openssl ) zlib? ( sys-libs/zlib ) virtual/yacc sys-devel/flex || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 ssl? ( dev-libs/openssl ) zlib? ( sys-libs/zlib )
 0
 http://www.stack.nl/~jilles/irc/charybdis-3.3.0.tbz2 http://dev.gentoo.org/~binki/distfiles/net-irc/charybdis/charybdis-3.3.0-patches.tar.bz2

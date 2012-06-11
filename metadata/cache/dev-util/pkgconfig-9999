@@ -1,4 +1,4 @@
-!internal-glib? ( >=dev-libs/glib-2.28 ) >=dev-libs/popt-1.16 !dev-util/pkgconf[pkg-config] !dev-util/pkg-config-lite !dev-util/pkgconfig-openbsd[pkg-config] || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool dev-vcs/git
+!internal-glib? ( >=dev-libs/glib-2.28 ) >=dev-libs/popt-1.16 !dev-util/pkgconf[pkg-config] !dev-util/pkg-config-lite !dev-util/pkgconfig-openbsd[pkg-config] || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool dev-vcs/git
 !internal-glib? ( >=dev-libs/glib-2.28 ) >=dev-libs/popt-1.16 !dev-util/pkgconf[pkg-config] !dev-util/pkg-config-lite !dev-util/pkgconfig-openbsd[pkg-config]
 0
 

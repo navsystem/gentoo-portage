@@ -1,4 +1,4 @@
-dev-scheme/gauche dev-db/tinycdb || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+dev-scheme/gauche dev-db/tinycdb || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 dev-scheme/gauche dev-db/tinycdb
 0
 mirror://sourceforge.jp/gauche/8407/Gauche-cdb-0.3.1.tar.gz

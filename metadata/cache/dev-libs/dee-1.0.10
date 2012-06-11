@@ -1,4 +1,4 @@
-dev-libs/glib:2 dev-libs/icu dev-util/gtk-doc test? ( dev-util/dbus-test-runner ) || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+dev-libs/glib:2 dev-libs/icu dev-util/gtk-doc test? ( dev-util/dbus-test-runner ) || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 dev-libs/glib:2 dev-libs/icu
 0
 https://launchpad.net/dee/1.0/1.0.10/+download/dee-1.0.10.tar.gz

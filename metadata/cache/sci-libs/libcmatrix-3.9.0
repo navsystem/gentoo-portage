@@ -1,4 +1,4 @@
-sci-libs/minuit atlas? ( || ( sci-libs/atlas sci-libs/blas-atlas ) ) || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+sci-libs/minuit atlas? ( || ( sci-libs/atlas sci-libs/blas-atlas ) ) || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 sci-libs/minuit atlas? ( || ( sci-libs/atlas sci-libs/blas-atlas ) )
 0
 http://dev.gentoo.org/~jlec/distfiles/libcmatrix-3.9.0.tar.gz

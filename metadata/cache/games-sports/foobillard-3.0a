@@ -1,4 +1,4 @@
-x11-libs/libXaw x11-libs/libXi virtual/opengl virtual/glu >=media-libs/freetype-2.0.9 media-libs/libpng sdl? ( media-libs/libsdl ) !sdl? ( media-libs/freeglut ) || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+x11-libs/libXaw x11-libs/libXi virtual/opengl virtual/glu >=media-libs/freetype-2.0.9 media-libs/libpng sdl? ( media-libs/libsdl ) !sdl? ( media-libs/freeglut ) || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 x11-libs/libXaw x11-libs/libXi virtual/opengl virtual/glu >=media-libs/freetype-2.0.9 media-libs/libpng sdl? ( media-libs/libsdl ) !sdl? ( media-libs/freeglut )
 0
 mirror://gentoo/foobillard-3.0a.tar.gz

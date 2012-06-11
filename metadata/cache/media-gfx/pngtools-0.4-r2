@@ -1,4 +1,4 @@
->=media-libs/libpng-1.4:0 || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+>=media-libs/libpng-1.4:0 || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 >=media-libs/libpng-1.4:0
 0
 http://www.stillhq.com/pngtools/source/pngtools_0_4.tgz

@@ -1,4 +1,4 @@
-app-text/libwpd:0.9 app-text/libwpg:0.2 media-libs/lcms:2 sys-libs/zlib virtual/pkgconfig sys-devel/libtool doc? ( app-doc/doxygen ) || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool dev-vcs/git
+app-text/libwpd:0.9 app-text/libwpg:0.2 media-libs/lcms:2 sys-libs/zlib virtual/pkgconfig sys-devel/libtool doc? ( app-doc/doxygen ) || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool dev-vcs/git
 app-text/libwpd:0.9 app-text/libwpg:0.2 media-libs/lcms:2 sys-libs/zlib
 0
 

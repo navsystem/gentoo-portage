@@ -1,4 +1,4 @@
-net-firewall/iptables sys-apps/ed sys-apps/iproute2 sys-fs/vzquota || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool dev-vcs/git
+net-firewall/iptables sys-apps/ed sys-apps/iproute2 sys-fs/vzquota || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool dev-vcs/git
 net-firewall/iptables sys-apps/ed sys-apps/iproute2 sys-fs/vzquota
 0
 

@@ -6,7 +6,7 @@ http://www.w3.org/Tools/HTML-XML-utils/html-xml-utils-6.0.tar.gz
 http://www.w3.org/Tools/HTML-XML-utils/
 W3C
 A number of simple utilities for manipulating HTML and XML files.
-~alpha amd64 ~ppc ~sparc ~x86 ~x86-linux ~ppc-macos ~x86-macos
+~alpha amd64 ppc ~sparc x86 ~x86-linux ~ppc-macos ~x86-macos
 
 
 

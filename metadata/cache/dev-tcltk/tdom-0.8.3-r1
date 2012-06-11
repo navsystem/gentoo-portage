@@ -1,4 +1,4 @@
-dev-lang/tcl dev-libs/expat || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+dev-lang/tcl dev-libs/expat || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 dev-lang/tcl dev-libs/expat
 0
 mirror://github/tDOM/tdom/tDOM-0.8.3.tgz

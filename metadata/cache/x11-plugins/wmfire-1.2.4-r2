@@ -1,4 +1,4 @@
-x11-libs/gtk+:2 gnome-base/libgtop:2 x11-libs/libX11 x11-libs/libXext session? ( x11-libs/libSM x11-libs/libICE ) virtual/pkgconfig || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+x11-libs/gtk+:2 gnome-base/libgtop:2 x11-libs/libX11 x11-libs/libXext session? ( x11-libs/libSM x11-libs/libICE ) virtual/pkgconfig || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 x11-libs/gtk+:2 gnome-base/libgtop:2 x11-libs/libX11 x11-libs/libXext session? ( x11-libs/libSM x11-libs/libICE )
 0
 http://www.swanson.ukfsn.org/wmfire/wmfire-1.2.4.tar.gz

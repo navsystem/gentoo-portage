@@ -1,4 +1,4 @@
-x11-libs/libX11 media-libs/imlib || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+x11-libs/libX11 media-libs/imlib || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 x11-libs/libX11 media-libs/imlib
 0
 mirror://sourceforge/xdock/xdock-0.2.0.tar.gz

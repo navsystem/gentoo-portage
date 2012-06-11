@@ -1,4 +1,4 @@
-|| ( >=sys-devel/automake-1.11.1 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+|| ( >=sys-devel/automake-1.11.1 >=sys-devel/automake-1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 
 0
 ftp://ftp.netperf.org/netperf/netperf-2.4.4.tar.gz mirror://gentoo/netperf-2.4.4-svn_trunk_20071205.patch.bz2

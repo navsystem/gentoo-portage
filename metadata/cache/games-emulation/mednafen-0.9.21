@@ -1,4 +1,4 @@
-virtual/opengl media-libs/libsndfile dev-libs/libcdio media-libs/libsdl[audio,joystick,video] media-libs/sdl-net sys-libs/zlib[minizip] alsa? ( media-libs/alsa-lib ) jack? ( media-sound/jack-audio-connection-kit ) nls? ( virtual/libintl ) virtual/pkgconfig nls? ( sys-devel/gettext ) || ( >=sys-devel/automake-1.11.1:1.11 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+virtual/opengl media-libs/libsndfile dev-libs/libcdio media-libs/libsdl[audio,joystick,video] media-libs/sdl-net sys-libs/zlib[minizip] alsa? ( media-libs/alsa-lib ) jack? ( media-sound/jack-audio-connection-kit ) nls? ( virtual/libintl ) virtual/pkgconfig nls? ( sys-devel/gettext ) || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 virtual/opengl media-libs/libsndfile dev-libs/libcdio media-libs/libsdl[audio,joystick,video] media-libs/sdl-net sys-libs/zlib[minizip] alsa? ( media-libs/alsa-lib ) jack? ( media-sound/jack-audio-connection-kit ) nls? ( virtual/libintl )
 0
 mirror://sourceforge/mednafen/mednafen-0.9.21-wip.tar.bz2

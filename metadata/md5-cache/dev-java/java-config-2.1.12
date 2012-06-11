@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install postinst postrm prepare test
+DEPEND=|| ( =dev-lang/python-3.2* =dev-lang/python-3.1* =dev-lang/python-2.7* =dev-lang/python-2.6* ) >=sys-apps/sed-4
+DESCRIPTION=Java environment configuration tool
+EAPI=2
+HOMEPAGE=http://www.gentoo.org/proj/en/java/
+KEYWORDS=~amd64 ~ia64 ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd
+LICENSE=GPL-2
+PDEPEND=>=virtual/jre-1.5
+RDEPEND=>=dev-java/java-config-wrapper-0.15 || ( =dev-lang/python-3.2* =dev-lang/python-3.1* =dev-lang/python-2.7* =dev-lang/python-2.6* )
+RESTRICT=test
+SLOT=2
+SRC_URI=mirror://gentoo/java-config-2.1.12.tar.bz2
+_eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	eutils	e9ac199862f908195424dc48ca2de8f6	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	dfd98be073cc8193fc79925566741ab0	multilib	5782800349f728f725f9378105c6a2ab	python	4152846e243ec207de8a1b02a36f1461	toolchain-funcs	940fa431b6227157c9a420dadef4970b	user	32a09e82e2f592bf88ad2fd08525166e
+_md5_=5916532bbb7ea874aea22590b70739a6
