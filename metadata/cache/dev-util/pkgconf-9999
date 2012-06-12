@@ -8,7 +8,7 @@ BSD-1
 pkg-config compatible replacement with no dependencies other than ANSI C89
 
 autotools git-2 libtool multilib multiprocessing toolchain-funcs
-pkg-config
++pkg-config
 
 
 

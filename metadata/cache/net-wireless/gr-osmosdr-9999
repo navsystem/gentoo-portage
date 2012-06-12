@@ -1,4 +1,4 @@
-dev-libs/boost net-wireless/gnuradio net-wireless/rtl-sdr >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) dev-vcs/git =dev-lang/python-2*
+dev-libs/boost net-wireless/gnuradio net-wireless/rtl-sdr dev-python/cheetah >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) dev-vcs/git =dev-lang/python-2*
 dev-libs/boost net-wireless/gnuradio net-wireless/rtl-sdr =dev-lang/python-2*
 0
 

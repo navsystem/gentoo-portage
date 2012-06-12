@@ -1,5 +1,5 @@
-=dev-java/java-config-2*
-alsa? ( app-emulation/emul-linux-x86-soundlibs ) X? ( app-emulation/emul-linux-x86-xlibs ) =dev-java/java-config-2*
+=dev-java/java-config-2* || ( app-admin/eselect-java <dev-java/java-config-2.2 )
+alsa? ( app-emulation/emul-linux-x86-soundlibs ) X? ( app-emulation/emul-linux-x86-xlibs ) =dev-java/java-config-2* || ( app-admin/eselect-java <dev-java/java-config-2.2 )
 1.6
 jre-6u31-linux-i586.bin
 fetch strip

@@ -1,0 +1,22 @@
+
+
+0
+mirror://sourceforge/libseccomp/libseccomp-0.1.0.tar.gz
+
+http://sourceforge.net/projects/libseccomp/
+LGPL-2
+high level interface to Linux seccomp filter
+~amd64 ~x86
+eutils multilib toolchain-funcs user
+static-libs tools
+
+
+
+4
+
+install prepare test
+
+
+
+
+

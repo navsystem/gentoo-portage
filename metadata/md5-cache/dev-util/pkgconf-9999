@@ -3,9 +3,9 @@ DEPEND=|| ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=
 DESCRIPTION=pkg-config compatible replacement with no dependencies other than ANSI C89
 EAPI=4
 HOMEPAGE=https://github.com/nenolod/pkgconf
-IUSE=pkg-config
+IUSE=+pkg-config
 LICENSE=BSD-1
 RDEPEND=pkg-config? ( !dev-util/pkgconfig !dev-util/pkg-config-lite !dev-util/pkgconfig-openbsd[pkg-config] )
 SLOT=0
 _eclasses_=autotools	9d170f07df0e48055093b8c6a60d0fba	git-2	15733ab6a6feb34af9837b41623c2bad	libtool	46e19fa7553f66c48ebc7cf025acd3ed	multilib	5782800349f728f725f9378105c6a2ab	multiprocessing	1512bdfe7004902b8cd2c466fc3df772	toolchain-funcs	940fa431b6227157c9a420dadef4970b
-_md5_=f97a9ffe16c90c5ff5b8f9b4181861a8
+_md5_=8c5bb396674cc576dc41708124de3047
