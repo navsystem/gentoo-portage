@@ -1,0 +1,22 @@
+
+
+0
+http://github.com/jjwhitney/BDelta/tarball/v0.3.0 -> bdelta-0.3.0.tar.gz
+
+http://bdelta.org
+GPL-2
+Binary Delta - Efficient difference algorithm and format
+
+multilib toolchain-funcs vcs-snapshot
+
+
+
+
+4
+
+compile install unpack
+
+
+
+
+

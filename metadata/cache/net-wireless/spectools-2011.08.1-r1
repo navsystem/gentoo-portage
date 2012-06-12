@@ -6,7 +6,7 @@ http://www.kismetwireless.net/code/spectools-2011-08-R1.tar.gz
 http://www.kismetwireless.net/spectools/
 GPL-2
 IEEE 802.11 wireless LAN sniffer for MetaGeek Wi-Spy spectrum analyzer hardware
-~amd64 ~arm ~ppc ~x86
+amd64 ~arm ~ppc ~x86
 eutils multilib toolchain-funcs user
 ncurses gtk
 

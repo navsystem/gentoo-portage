@@ -10,4 +10,4 @@ RDEPEND=>=media-libs/freetype-2.0 >=media-sound/lame-3.93.1 x11-libs/libX11 x11-
 SLOT=0
 SRC_URI=https://github.com/MythTV/mythtv/tarball/347cd2477ad82a7aa75ebe7c686db77465f415dc -> mythtv-0.24.1_p20110524.tar.gz
 _eclasses_=eutils	e9ac199862f908195424dc48ca2de8f6	flag-o-matic	d4d85170c0ee7a80c9a7cd009ae13133	linux-info	cc184ad3383ffb6ffbaa82f53608e77f	multilib	5782800349f728f725f9378105c6a2ab	python	4152846e243ec207de8a1b02a36f1461	toolchain-funcs	940fa431b6227157c9a420dadef4970b	user	32a09e82e2f592bf88ad2fd08525166e	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=363043574fb63a20cc7cba3cc44db09b
+_md5_=41263c6b86fa78fd1d553eced2e66ba3

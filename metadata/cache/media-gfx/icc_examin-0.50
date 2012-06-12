@@ -5,7 +5,7 @@ mirror://sourceforge/oyranos/ICC%20Examin/ICC%20Examin%200.50/icc_examin-0.50.ta
 
 http://www.behrmann.name/index.php?option=com_content&task=view&id=99&Itemid=1&lang=de
 GPL-2
-viewer for the internals of a ICC profile, measurement data (CGATS), argylls gamut vrml visualisations and video card gamma tables
+viewer for ICC and CGATS profiles, argylls gamut vrml visualisations and video card gamma tables
 ~amd64 ~x86
 multilib toolchain-funcs
 
