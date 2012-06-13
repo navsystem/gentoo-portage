@@ -1,7 +1,7 @@
 >=x11-libs/qt-core-4.7:4 >=x11-libs/qt-dbus-4.7:4 >=x11-libs/qt-gui-4.7:4 >=x11-libs/qt-script-4.7:4 >=x11-libs/qt-sql-4.7:4 >=x11-libs/qt-webkit-4.7:4
 >=x11-libs/qt-core-4.7:4 >=x11-libs/qt-dbus-4.7:4 >=x11-libs/qt-gui-4.7:4 >=x11-libs/qt-script-4.7:4 >=x11-libs/qt-sql-4.7:4 >=x11-libs/qt-webkit-4.7:4
 0
-https://github.com/nowrep/QupZilla/tarball/v1.2.0 -> qupzilla-1.2.0.tar.gz
+https://github.com/QupZilla/qupzilla/tarball/v1.2.0 -> qupzilla-1.2.0.tar.gz
 
 http://www.qupzilla.com/
 GPL-3

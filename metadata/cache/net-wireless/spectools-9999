@@ -1,0 +1,22 @@
+dev-vcs/subversion net-misc/rsync
+virtual/libusb:0 ncurses? ( sys-libs/ncurses ) gtk? ( x11-libs/gtk+:2 )
+0
+
+
+http://www.kismetwireless.net/spectools/
+GPL-2
+Spectrum Analyzer for Meta-Geek Wi-Spy and GSG Ubertooth hardware
+
+eutils multilib subversion toolchain-funcs user
+debug ncurses gtk
+
+
+
+4
+
+compile install preinst prepare unpack
+
+
+
+
+

@@ -3,7 +3,7 @@
 0
 http://www.enthought.com/repo/ETS/EnvisagePlugins-3.2.0.tar.gz
 
-http://code.enthought.com/projects/envisage_plugins.php http://pypi.python.org/pypi/EnvisagePlugins
+http://code.enthought.com/projects/envisage_plugins.php
 BSD
 Enthought Tool Suite: Plug-ins for the Envisage framework
 ~amd64 ~x86

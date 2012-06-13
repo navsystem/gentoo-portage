@@ -3,7 +3,7 @@ ruby_targets_ruby18? ( >=dev-util/cucumber-0.6.2[ruby_targets_ruby18] ) ruby_tar
 0
 mirror://rubygems/cucumber-rails-0.3.2.gem
 
-http://github.com/aslakhellesoy/cucumber/wikis
+https://github.com/cucumber/cucumber/wikis
 Ruby
 Executable feature scenarios for Rails
 ~amd64 ~x86 ~x86-macos

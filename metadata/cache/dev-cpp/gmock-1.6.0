@@ -1,4 +1,4 @@
-=dev-cpp/gtest-1.6.0*
+app-arch/unzip =dev-cpp/gtest-1.6.0*
 =dev-cpp/gtest-1.6.0*
 0
 http://googlemock.googlecode.com/files/gmock-1.6.0.zip
@@ -6,7 +6,7 @@ http://googlemock.googlecode.com/files/gmock-1.6.0.zip
 http://code.google.com/p/googlemock/
 BSD
 Google's C++ mocking framework
-~amd64 ~arm ~x86
+amd64 ~arm x86
 libtool multilib toolchain-funcs
 static-libs
 

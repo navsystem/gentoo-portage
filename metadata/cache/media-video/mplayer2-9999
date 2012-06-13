@@ -8,7 +8,7 @@ GPL-3
 Media Player for Linux
 
 base eutils flag-o-matic git-2 multilib toolchain-funcs user
-+a52 aalib +alsa aqua +ass bidi bindist bl bluray bs2b cddb +cdio cpudetection debug directfb doc +dts +dv dvb +dvd +dvdnav dxr3 +enca +faad fbcon ftp gif ggi +iconv ipv6 jack joystick jpeg kernel_linux ladspa libcaca lirc mad md5sum mng +mp3 nas +network nut +opengl oss png pnm portaudio postproc pulseaudio pvr +quicktime radio +rar +real +rtc samba sdl +speex tga +theora +truetype +unicode v4l vdpau +vorbis win32codecs +X xanim xinerama +xscreensaver +xv xvid symlink 3dnow 3dnowext altivec mmx mmxext shm sse sse2 ssse3 video_cards_s3virge video_cards_mga video_cards_tdfx
++a52 aalib +alsa aqua +ass bidi bindist bl bluray bs2b cddb +cdio cpudetection debug directfb doc +dts +dv dvb +dvd +dvdnav dxr3 +enca +faad fbcon ftp gif ggi +iconv ipv6 jack joystick jpeg kernel_linux ladspa libcaca lirc mad md5sum mng +mp3 nas +network nut +opengl oss png pnm portaudio postproc pulseaudio pvr +quicktime radio +rar +real +rtc samba sdl +speex tga +theora +truetype +unicode v4l vdpau +vorbis win32codecs +X xanim xinerama +xscreensaver +xv xvid symlink 3dnow 3dnowext altivec +mmx mmxext +shm sse sse2 ssse3 video_cards_s3virge video_cards_mga video_cards_tdfx
 ass? ( truetype ) bindist? ( !win32codecs ) cddb? ( cdio network ) dvdnav? ( dvd ) dxr3? ( X ) ggi? ( X ) opengl? ( X ) radio? ( || ( dvb v4l ) ) truetype? ( iconv ) vdpau? ( X ) xinerama? ( X ) xscreensaver? ( X ) xv? ( X )
 
 
