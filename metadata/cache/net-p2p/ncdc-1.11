@@ -6,7 +6,7 @@ http://dev.yorhel.nl/download/ncdc-1.11.tar.gz
 http://dev.yorhel.nl/ncdc
 MIT
 ncurses directconnect client
-amd64 ~ppc ~sparc ~x86
+amd64 ~ppc ~sparc x86
 
 +db-upgrade
 

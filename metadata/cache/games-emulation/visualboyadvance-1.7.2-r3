@@ -6,7 +6,7 @@ mirror://sourceforge/vba/VisualBoyAdvance-src-1.7.2.tar.gz mirror://gentoo/visua
 http://vba.ngemu.com/
 GPL-2
 gameboy, gameboy color, and gameboy advance emulator
-~amd64 ~ppc ~x86
+~amd64 ~ppc x86
 autotools base eutils flag-o-matic games libtool multilib multiprocessing toolchain-funcs user
 gtk mmx nls
 

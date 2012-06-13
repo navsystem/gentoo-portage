@@ -6,7 +6,7 @@ mirror://sourceforge/portmedia/portmidi-src-217.zip
 http://portmedia.sourceforge.net/
 MIT
 A library for real time MIDI input and output
-amd64 ~x86
+amd64 x86
 base cmake-utils distutils eutils flag-o-matic java-pkg-opt-2 java-utils-2 multilib python toolchain-funcs user versionator
 debug doc java python static-libs test-programs elibc_FreeBSD java
 

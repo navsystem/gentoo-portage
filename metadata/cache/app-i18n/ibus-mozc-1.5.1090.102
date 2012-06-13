@@ -1,0 +1,22 @@
+dev-libs/glib:2 dev-libs/openssl emacs? ( virtual/emacs ) ibus? ( >=app-i18n/ibus-1.4 ) renderer? ( x11-libs/gtk+:2 ) scim? ( app-i18n/scim ) qt4? ( x11-libs/qt-gui:4 app-i18n/zinnia ) virtual/pkgconfig =dev-lang/python-2*
+dev-libs/glib:2 dev-libs/openssl emacs? ( virtual/emacs ) ibus? ( >=app-i18n/ibus-1.4 ) renderer? ( x11-libs/gtk+:2 ) scim? ( app-i18n/scim ) qt4? ( x11-libs/qt-gui:4 app-i18n/zinnia ) =dev-lang/python-2*
+0
+http://mozc.googlecode.com/files/mozc-1.5.1090.102.tar.bz2 http://protobuf.googlecode.com/files/protobuf-2.4.1.tar.bz2
+test
+http://code.google.com/p/mozc/
+Apache-2.0 BSD Boost-1.0 ipadic public-domain unicode
+The Mozc engine for IBus Framework
+~amd64 ~x86
+elisp-common eutils multilib python toolchain-funcs user
+emacs +ibus scim +qt4 renderer
+
+
+
+3
+
+compile configure install postinst postrm setup test unpack
+
+
+
+
+

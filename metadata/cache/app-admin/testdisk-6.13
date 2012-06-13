@@ -3,12 +3,12 @@
 0
 http://www.cgsecurity.org/testdisk-6.13.tar.bz2
 
-http://www.cgsecurity.org/wiki/TestDisk
+http://www.cgsecurity.org/wiki/TestDisk/
 GPL-2
 Checks and undeletes partitions + PhotoRec, signature based recovery tool
 ~amd64 ~ppc ~x86
 eutils flag-o-matic multilib toolchain-funcs user
-static reiserfs ntfs jpeg
+jpeg ntfs reiserfs static
 
 
 
