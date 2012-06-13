@@ -1,5 +1,5 @@
-jce? ( app-arch/unzip ) =dev-java/java-config-2*
-X? ( x11-libs/libXext x11-libs/libXi x11-libs/libXrender x11-libs/libXtst x11-libs/libX11 ) alsa? ( media-libs/alsa-lib ) !prefix? ( sys-libs/glibc ) =dev-java/java-config-2*
+jce? ( app-arch/unzip ) =dev-java/java-config-2* || ( app-admin/eselect-java <dev-java/java-config-2.2 )
+X? ( x11-libs/libXext x11-libs/libXi x11-libs/libXrender x11-libs/libXtst x11-libs/libX11 ) alsa? ( media-libs/alsa-lib ) !prefix? ( sys-libs/glibc ) =dev-java/java-config-2* || ( app-admin/eselect-java <dev-java/java-config-2.2 )
 1.7
 x86? ( jre-7u4-linux-i586.tar.gz ) amd64? ( jre-7u4-linux-x64.tar.gz ) jce? ( UnlimitedJCEPolicyJDK7.zip )
 fetch strip

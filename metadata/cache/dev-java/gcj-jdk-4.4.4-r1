@@ -1,5 +1,5 @@
-~sys-devel/gcc-4.4.4[gcj] dev-java/ecj-gcj:3.5 =dev-java/java-config-2*
-~sys-devel/gcc-4.4.4[gcj] dev-java/ecj-gcj:3.5 =dev-java/java-config-2*
+~sys-devel/gcc-4.4.4[gcj] dev-java/ecj-gcj:3.5 =dev-java/java-config-2* || ( app-admin/eselect-java <dev-java/java-config-2.2 )
+~sys-devel/gcc-4.4.4[gcj] dev-java/ecj-gcj:3.5 =dev-java/java-config-2* || ( app-admin/eselect-java <dev-java/java-config-2.2 )
 0
 
 
