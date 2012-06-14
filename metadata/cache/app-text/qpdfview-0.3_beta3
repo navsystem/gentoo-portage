@@ -1,0 +1,22 @@
+app-text/poppler[qt4] x11-libs/qt-core:4[iconv] x11-libs/qt-gui:4 cups? ( net-print/cups ) dbus? ( x11-libs/qt-dbus:4 ) virtual/pkgconfig
+app-text/poppler[qt4] x11-libs/qt-core:4[iconv] x11-libs/qt-gui:4 cups? ( net-print/cups ) dbus? ( x11-libs/qt-dbus:4 )
+0
+https://launchpad.net/qpdfview/trunk/0.3beta3/+download/qpdfview-0.3beta3.tar.gz
+
+http://launchpad.net/qpdfview
+GPL-3
+A tabbed PDF viewer using the poppler library
+~amd64 ~x86
+base eutils multilib qt4-r2 toolchain-funcs user
+cups dbus
+
+
+
+4
+
+compile configure install prepare unpack
+
+
+
+
+

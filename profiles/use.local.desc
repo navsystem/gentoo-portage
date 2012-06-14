@@ -947,6 +947,7 @@ app-vim/gentoo-syntax:ignore-glep31 - Remove GLEP 31 (UTF-8 file encodings) sett
 app-vim/vim-latex:html - Install HTML documentation
 dev-cpp/glog:gflags - Use gflags module for flag parsing
 dev-cpp/gtkmm:wayland - Enable dev-libs/wayland backend
+dev-cpp/libcmis:man - Build and install man pages.
 dev-cpp/pficommon:fcgi - Build FCGI feature
 dev-cpp/pficommon:mprpc - Build MessagePack RPC feature
 dev-cpp/xsd:ace - Enable support for serializing to/from an ACE CDR stream
