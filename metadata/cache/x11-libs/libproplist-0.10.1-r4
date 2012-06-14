@@ -1,12 +1,12 @@
 || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 
 0
-ftp://ftp.windowmaker.org/pub/libs/libPropList-0.10.1.tar.gz
+mirror://gentoo/libPropList-0.10.1.tar.gz
 
-http://www.windowmaker.org/
+http://windowmaker.org/
 LGPL-2
-libPropList
-~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86
+An library to mimic property list functionality from the GNUstep environment
+~alpha amd64 ~ia64 ppc ~sparc x86
 autotools eutils libtool multilib multiprocessing toolchain-funcs user
 static-libs
 

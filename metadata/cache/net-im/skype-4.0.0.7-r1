@@ -1,0 +1,22 @@
+>=sys-apps/sed-4
+virtual/ttf-fonts amd64? ( >=app-emulation/emul-linux-x86-qtlibs-20120127 >=app-emulation/emul-linux-x86-soundlibs-20120127 >=app-emulation/emul-linux-x86-xlibs-20120127 ) x86? ( media-libs/alsa-lib x11-libs/libX11 x11-libs/libXext x11-libs/libXScrnSaver x11-libs/libXv x11-libs/qt-core:4 x11-libs/qt-dbus:4 x11-libs/qt-gui:4[accessibility,dbus] )
+0
+amd64? ( http://download.skype.com/linux/skype-debian_4.0.0.7-1_amd64.deb ) x86? ( http://download.skype.com/linux/skype-debian_4.0.0.7-1_i386.deb )
+mirror strip
+http://www.skype.com/
+skype-4.0.0.7-copyright skype-4.0.0.7-third-party_attributions.txt
+An P2P Internet Telephony (VoiceIP) client
+~amd64 ~x86
+eutils gnome2-utils multilib pax-utils toolchain-funcs unpacker user
+pax_kernel
+
+
+
+4
+
+compile install postinst postrm preinst unpack
+
+
+
+
+
