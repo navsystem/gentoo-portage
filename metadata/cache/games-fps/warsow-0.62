@@ -6,7 +6,7 @@ http://www.zcdn.org/dl/warsow_0.61_unified.zip http://www.zcdn.org/dl/warsow_0.6
 http://www.warsow.net/
 GPL-2 warsow
 Multiplayer FPS based on the QFusion engine (evolved from Quake 2)
-~amd64 ~x86
+~amd64 x86
 base eutils games multilib toolchain-funcs user versionator
 +angelscript debug dedicated irc openal opengl
 

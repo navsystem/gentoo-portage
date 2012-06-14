@@ -3,7 +3,7 @@ ruby_targets_ruby18? ( >=dev-ruby/bcat-0.6.1[ruby_targets_ruby18] >=dev-ruby/chi
 0
 mirror://rubygems/aruba-0.4.11.gem
 
-https://github.com/aslakhellesoy/aruba
+https://github.com/cucumber/aruba
 MIT
 Cucumber steps for driving out command line applications.
 ~amd64

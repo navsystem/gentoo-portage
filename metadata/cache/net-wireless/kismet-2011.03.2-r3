@@ -6,7 +6,7 @@ http://www.kismetwireless.net/code/kismet-2011-03-R2.tar.gz
 http://www.kismetwireless.net/
 GPL-2
 IEEE 802.11 wireless LAN sniffer
-amd64 ~arm ~ppc ~x86
+amd64 ~arm ~ppc x86
 eutils multilib toolchain-funcs user
 +client +pcre speech +plugin-autowep +plugin-btscan +plugin-dot15d4 +plugin-ptw +plugin-spectools +ruby +suid
 

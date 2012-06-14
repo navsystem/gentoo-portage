@@ -6,7 +6,7 @@ fetch
 http://www.biochem.ucl.ac.uk/~roman/procheck/procheck.html
 procheck
 Checks the stereochemical quality of a protein structure
-~amd64 ~x86 ~amd64-linux ~x86-linux
+amd64 ~x86 ~amd64-linux ~x86-linux
 eutils fortran-2 multilib toolchain-funcs user versionator
 doc
 

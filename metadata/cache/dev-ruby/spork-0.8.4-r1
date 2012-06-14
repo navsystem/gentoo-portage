@@ -3,7 +3,7 @@ ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ree18? ( dev-lang/ruby-e
 0
 mirror://rubygems/spork-0.8.4.gem
 
-http://github.com/timcharper/spork
+https://github.com/sporkrb/spork
 MIT
 Spork is Tim Harper's implementation of test server.
 ~amd64 ~x86

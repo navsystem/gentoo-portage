@@ -6,7 +6,7 @@ http://uazu.net/fidlib/fidlib-0.9.10.tgz
 http://uazu.net/fidlib/
 GPL-2 LGPL-2.1
 Run-time filter design and execution library
-amd64 ~x86
+amd64 x86
 eutils flag-o-matic multilib toolchain-funcs user
 
 
