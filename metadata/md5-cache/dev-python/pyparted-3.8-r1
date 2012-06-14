@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-python/decorator >=sys-block/parted-3 sys-libs/ncurses =dev-lang/python-2.7*
 SLOT=0
 SRC_URI=https://fedorahosted.org/releases/p/y/pyparted/pyparted-3.8.tar.gz
-_eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	multilib	5782800349f728f725f9378105c6a2ab	python	4152846e243ec207de8a1b02a36f1461	toolchain-funcs	940fa431b6227157c9a420dadef4970b
+_eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	multilib	5782800349f728f725f9378105c6a2ab	python	4152846e243ec207de8a1b02a36f1461	toolchain-funcs	e575dd4d4682fc3539829c52d8382856
 _md5_=5e50b7795831aacfb39adbaa96096493

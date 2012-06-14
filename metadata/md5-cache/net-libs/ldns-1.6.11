@@ -10,5 +10,5 @@ RDEPEND=ssl? ( >=dev-libs/openssl-0.9.7 ) gost? ( >=dev-libs/openssl-1 ) python?
 RESTRICT=test
 SLOT=0
 SRC_URI=http://www.nlnetlabs.nl/downloads/ldns/ldns-1.6.11.tar.gz
-_eclasses_=multilib	5782800349f728f725f9378105c6a2ab	python	4152846e243ec207de8a1b02a36f1461	toolchain-funcs	940fa431b6227157c9a420dadef4970b
+_eclasses_=multilib	5782800349f728f725f9378105c6a2ab	python	4152846e243ec207de8a1b02a36f1461	toolchain-funcs	e575dd4d4682fc3539829c52d8382856
 _md5_=94b34ac0a4a27377068709bd893724ef

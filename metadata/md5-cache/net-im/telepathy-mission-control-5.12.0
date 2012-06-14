@@ -10,5 +10,5 @@ RDEPEND=>=net-libs/telepathy-glib-0.17.5 >=dev-libs/dbus-glib-0.82 >=dev-libs/gl
 RESTRICT=test
 SLOT=0
 SRC_URI=http://telepathy.freedesktop.org/releases/telepathy-mission-control/telepathy-mission-control-5.12.0.tar.gz
-_eclasses_=multilib	5782800349f728f725f9378105c6a2ab	python	4152846e243ec207de8a1b02a36f1461	toolchain-funcs	940fa431b6227157c9a420dadef4970b
+_eclasses_=multilib	5782800349f728f725f9378105c6a2ab	python	4152846e243ec207de8a1b02a36f1461	toolchain-funcs	e575dd4d4682fc3539829c52d8382856
 _md5_=a44aed7c6ab0788b3a16064a5abcdd64

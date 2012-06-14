@@ -6,7 +6,7 @@ mirror
 http://wireless.kernel.org/en/users/Drivers/p54
 as-is
 firmware for Intersil Prism GT / Prism Duette (including USB) wireless chipsets
-~amd64 ~ppc ~x86
+~amd64 ppc x86
 eutils multilib toolchain-funcs user
 
 

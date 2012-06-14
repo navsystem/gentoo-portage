@@ -6,7 +6,7 @@ http://www.lichteblau.com/download/ldapvi-1.7.tar.gz
 http://www.lichteblau.com/ldapvi/
 GPL-2
 Manage LDAP entries with a text editor
-~amd64 ~hppa ~ppc ~sparc ~x86
+amd64 ~hppa ppc ~sparc x86
 eutils multilib toolchain-funcs user
 ssl
 

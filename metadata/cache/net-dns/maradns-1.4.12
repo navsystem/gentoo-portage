@@ -7,7 +7,7 @@ http://www.maradns.org/
 BSD-2
 A security-aware DNS server
 amd64 ppc x86
-eutils multilib toolchain-funcs user
+multilib toolchain-funcs user
 authonly
 
 

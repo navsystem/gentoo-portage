@@ -1,0 +1,22 @@
+dev-vcs/git dev-vcs/git
+
+0
+
+
+http://fedoraproject.org/wiki/Features/numad
+LGPL-2.1
+The NUMA daemon that manages application locality
+-arm -s390
+eutils git-2 linux-info multilib toolchain-funcs user versionator
+
+
+
+
+4
+
+configure install prepare setup unpack
+
+
+
+
+
