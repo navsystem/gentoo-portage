@@ -1,0 +1,2 @@
+FEATURES="getbinpkg"
+PORTAGE_BINHOST="ftp://binhost:binhost@192.168.99.110/amd64-x32"
