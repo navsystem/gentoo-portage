@@ -1,0 +1,22 @@
+dev-python/larch dev-python/tracing dev-python/ttystatus dev-python/paramiko || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
+dev-python/larch dev-python/tracing dev-python/ttystatus dev-python/paramiko || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
+0
+http://code.liw.fi/debian/pool/main/o/obnam/obnam_1.0.orig.tar.gz
+
+http://liw.fi/obnam/
+GPL-3
+A backup program that supports encryption and deduplication
+~amd64 ~x86
+distutils multilib python toolchain-funcs
+
+
+
+
+4
+
+compile install postinst postrm prepare setup
+
+
+
+
+

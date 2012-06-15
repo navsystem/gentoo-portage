@@ -7,14 +7,14 @@ http://www.codemonkey.org.uk/projects/x86info/
 GPL-2
 Dave Jones' handy, informative x86 CPU diagnostic utility
 -* amd64 x86
-eutils flag-o-matic multilib toolchain-funcs user
+eutils flag-o-matic linux-info multilib toolchain-funcs user versionator
 
 
 
 
 2
 
-compile install postinst preinst prepare
+compile install preinst prepare setup
 
 
 

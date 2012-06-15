@@ -1,0 +1,22 @@
+>=app-pda/synce-core-0.16[python?] >=dev-libs/libmimedir-0.5.1 python? ( >=dev-python/pyrex-0.9.6 ) virtual/pkgconfig python? ( =dev-lang/python-2.7* )
+>=app-pda/synce-core-0.16[python?] >=dev-libs/libmimedir-0.5.1 python? ( >=dev-python/pyrex-0.9.6 ) python? ( =dev-lang/python-2.7* )
+0
+mirror://sourceforge/synce/librra-0.16.tar.gz
+
+http://sourceforge.net/projects/synce/
+MIT
+Implements the RRA protocol, for syncing pre WM-2005 PIM data, and files for all versions
+~amd64 ~x86
+multilib python toolchain-funcs
+python recurrence static-libs
+
+
+
+4
+
+configure install setup
+
+
+
+
+
