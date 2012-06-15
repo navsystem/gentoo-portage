@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-2.1.11.ebuild,v 1.4 2011/11/26 10:36:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-2.1.11.ebuild,v 1.6 2012/06/14 06:50:26 polynomial-c Exp $
 
 EAPI="4"
 
-inherit eutils multilib pam autotools libtool
+inherit eutils flag-o-matic multilib pam autotools libtool user
 
 DESCRIPTION="Highly configurable free RADIUS server"
 SRC_URI="ftp://ftp.freeradius.org/pub/radius/${PN}-server-${PV}.tar.gz"
@@ -120,18 +120,16 @@ src_install() {
 	dodir /etc
 	dodir /var/log
 	dodir /var/run
-	diropts -m0750 -o root -g radiusd
+	diropts -m0750 -o root -g radius
 	dodir /etc/raddb
-	diropts -m0750 -o radiusd -g radiusd
+	diropts -m0750 -o radius -g radius
 	dodir /var/log/radius
 	keepdir /var/log/radius/radacct
 	dodir /var/run/radiusd
 	diropts
 
 	make R="${D}" install || die "make install failed"
-	sed -i -e 's:^#user *= *nobody:user = radiusd:;s:^#group *= *nobody:group = radiusd:' \
-	    "${D}"/etc/raddb/radiusd.conf
-	chown -R root:radiusd "${D}"/etc/raddb/*
+	chown -R root:radius "${D}"/etc/raddb
 
 	pamd_mimic_system radiusd auth account password session
 

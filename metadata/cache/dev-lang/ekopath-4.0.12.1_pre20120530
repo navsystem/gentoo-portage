@@ -1,0 +1,22 @@
+
+
+0
+http://c591116.r16.cf2.rackcdn.com/ekopath/nightly/Linux/ekopath-2012-05-30-installer.run -> ekopath-4.0.12.1_pre20120530.run
+mirror
+http://www.pathscale.com/ekopath-compiler-suite
+GPL-3
+PathScale EKOPath Compiler Suite
+~amd64
+eutils multilib toolchain-funcs user versionator
+
+
+
+
+4
+
+install prepare pretend unpack
+
+
+
+
+

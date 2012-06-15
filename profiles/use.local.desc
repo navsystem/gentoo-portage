@@ -947,6 +947,7 @@ app-vim/gentoo-syntax:ignore-glep31 - Remove GLEP 31 (UTF-8 file encodings) sett
 app-vim/vim-latex:html - Install HTML documentation
 dev-cpp/glog:gflags - Use gflags module for flag parsing
 dev-cpp/gtkmm:wayland - Enable dev-libs/wayland backend
+dev-cpp/libcmis:man - Build and install man pages.
 dev-cpp/pficommon:fcgi - Build FCGI feature
 dev-cpp/pficommon:mprpc - Build MessagePack RPC feature
 dev-cpp/xsd:ace - Enable support for serializing to/from an ACE CDR stream
@@ -1791,6 +1792,7 @@ dev-vcs/fromcvs:git - Add support for conversion to dev-vcs/git repositories
 dev-vcs/fromcvs:mercurial - Add support for conversion to dev-vcs/mercurial repositories
 dev-vcs/git:blksha1 - Use the new optimized SHA1 implementation.
 dev-vcs/git:cgi - Install gitweb too
+dev-vcs/git:gpg - Pull in gnupg for signing -- without gnupg, attempts at signing will fail at runtime!
 dev-vcs/git:gtk - Include the gitview contrib tool.
 dev-vcs/git:mozsha1 - Makes git use an optimized SHA1 routine from Mozilla that should be fast on non-x86 machines.
 dev-vcs/git:ppcsha1 - Make use of a bundled routine that is optimized for the PPC arch.
@@ -2507,6 +2509,7 @@ media-libs/clutter:gtk - Use gdk-pixbuf from x11-libs/gtk+ as image rendering ba
 media-libs/clutter:introspection - Use dev-libs/gobject-introspection for introspection
 media-libs/clutter-gst:introspection - Use dev-libs/gobject-introspection for introspection
 media-libs/clutter-gtk:introspection - Use dev-libs/gobject-introspection for introspection
+media-libs/cogl:gles2 - Enable OpenGL ES 2.0 support
 media-libs/cogl:introspection - Use dev-libs/gobject-introspection for introspection
 media-libs/cogl:pango - Build cogl-pango library for x11-libs/pango integration
 media-libs/coin:simage - Texture loading via media-libs/simage library
@@ -2834,6 +2837,7 @@ media-sound/decibel-audio-player:gnome-keyring - Adds support for storing your L
 media-sound/denemo:fluidsynth - Enable Fluidsynth MIDI software synthesis
 media-sound/dir2ogg:mac - Add support for decoding Monkey's Audio files
 media-sound/dir2ogg:wma - Add support for wma files through mplayer
+media-sound/ecasound:lv2 - Add support for Ladspa V2
 media-sound/ecasound:oil - Use dev-libs/liboil for inner loop optimizations
 media-sound/fapg:xspf - Enable support for saving XSPF playlists.
 media-sound/flacon:mac - Add support for Monkey's Audio files
@@ -4171,6 +4175,7 @@ net-misc/asterisk-moh-opsound:siren7 - Install the sounds files for the siren7 c
 net-misc/asterisk-moh-opsound:sln16 - Install the sounds files for the sln16 codec.
 net-misc/asterisk-moh-opsound:ulaw - Install the sounds files for the ulaw codec.
 net-misc/asterisk-moh-opsound:wav - Install the sounds files for the wav codec.
+net-misc/batman-adv:bla - B.A.T.M.A.N. bridge loop avoidance
 net-misc/bfgminer:adl - Enable support for controlling fans and overclocking on AMD cards with AMD Display Library
 net-misc/bfgminer:bitforce - Enable support for mining with ButterFly Labs BitFORCE FPGAs
 net-misc/bfgminer:cpumining - Enable support for mining with CPUs
@@ -4802,6 +4807,14 @@ sci-libs/plplot:qhull - Add bindings for media-libs/qhull bindings
 sci-libs/scipy:umfpack - Adds support for sparse solving with sci-libs/umfpack
 sci-libs/scotch:int64 - Build the 64 bits integer library (needed for > 2^31 vertices)
 sci-libs/scotch:tools - Build and install extra exec tools
+sci-libs/shogun:R - Enable support for dev-lang/R
+sci-libs/shogun:arpack - Enable support for sci-libs/arpack
+sci-libs/shogun:glpk - Enable support for sci-mathematics/glpk
+sci-libs/shogun:json - Enable support for parsing JSON format
+sci-libs/shogun:lpsolve - Enable support for Linear Programming Solver
+sci-libs/shogun:octave - Enable support for sci-mathematics/octave
+sci-libs/shogun:snappy - Enable support for snappy compression
+sci-libs/shogun:superlu - Enable support for sci-libs/superlu
 sci-libs/spqr:metis - Use METIS (sci-libs/metis or sci-libs/parmetis) for partitioning
 sci-libs/spqr:tbb - Enable multithreading with the Intel Threads Building Block (needs dev-cpp/tbb)
 sci-libs/spr:root - Add sci-physics/root graphics and i/o support
@@ -4904,6 +4917,7 @@ sci-physics/pythia:hepmc - Adds support for High Energy Physics Monte Carlo Gene
 sci-physics/root:clarens - Build the Clarens and PEAC plug-ins, to use in a GRID enabled analysis
 sci-physics/root:fits - Support for images and data from FITS files with sci-libs/cfitsio
 sci-physics/root:geant4 - Support for sci-physics/geant version 4
+sci-physics/root:htmldoc - Generate html documentation
 sci-physics/root:llvm - Build the new cling interactive interpreter based on sys-devel/llvm
 sci-physics/root:math - Build all math related libraries plugins, needs sci-libs/gsl
 sci-physics/root:pythia6 - Build the interface for sci-physics/pythia version 6.x

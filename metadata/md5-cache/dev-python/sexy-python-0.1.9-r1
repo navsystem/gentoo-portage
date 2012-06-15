@@ -8,5 +8,5 @@ LICENSE=LGPL-2.1
 RDEPEND=>=x11-libs/libsexy-0.1.9 >=dev-python/pygtk-2.6.2 =dev-lang/python-2*
 SLOT=0
 SRC_URI=http://releases.chipx86.com/libsexy/sexy-python/sexy-python-0.1.9.tar.gz
-_eclasses_=multilib	5782800349f728f725f9378105c6a2ab	python	4152846e243ec207de8a1b02a36f1461	toolchain-funcs	940fa431b6227157c9a420dadef4970b
+_eclasses_=multilib	5782800349f728f725f9378105c6a2ab	python	4152846e243ec207de8a1b02a36f1461	toolchain-funcs	e575dd4d4682fc3539829c52d8382856
 _md5_=cfdba0fdca67e7b91d34112590368d60

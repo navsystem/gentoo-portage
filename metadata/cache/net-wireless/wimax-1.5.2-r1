@@ -6,7 +6,7 @@ http://www.linuxwimax.org/Download?action=AttachFile&do=get&target=wimax-1.5.2.t
 http://www.linuxwimax.org/
 BSD
 Intel WiMAX daemon used to interface to the hardware
-amd64 x86
+amd64 ~ppc x86
 base eutils linux-info multilib toolchain-funcs user versionator
 static-libs
 

@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=dev-python/PyQt4[X] media-sound/shntool[mac?] flac? ( media-libs/flac ) mac? ( media-sound/mac ) mp3? ( media-sound/lame ) mp4? ( media-libs/faac ) ogg? ( media-sound/vorbis-tools ) tta? ( media-sound/ttaenc ) wavpack? ( media-sound/wavpack ) replaygain? ( mp3? ( media-sound/mp3gain ) ogg? ( media-sound/vorbisgain ) ) =dev-lang/python-2*
 SLOT=0
 SRC_URI=https://flacon.googlecode.com/files/flacon-0.6.0.tgz
-_eclasses_=multilib	5782800349f728f725f9378105c6a2ab	python	4152846e243ec207de8a1b02a36f1461	toolchain-funcs	940fa431b6227157c9a420dadef4970b
+_eclasses_=multilib	5782800349f728f725f9378105c6a2ab	python	4152846e243ec207de8a1b02a36f1461	toolchain-funcs	e575dd4d4682fc3539829c52d8382856
 _md5_=4b03c5953d0bab23aecad4644b695a85

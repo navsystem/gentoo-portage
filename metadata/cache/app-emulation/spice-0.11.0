@@ -7,14 +7,14 @@ http://spice-space.org/
 LGPL-2.1
 SPICE server and client.
 ~amd64 ~x86
-multilib python toolchain-funcs
+eutils multilib python toolchain-funcs user
 +client +gui sasl smartcard static-libs
 
 
 
 4
 
-configure install setup
+configure install prepare setup
 
 
 

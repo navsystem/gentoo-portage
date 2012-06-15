@@ -1,7 +1,7 @@
 dev-lang/perl[-build]
 dev-lang/perl[-build]
 0
-mirror://cpan/authors/id/S/SA/SAPER/XSLoader-0.15.tar.gz
+mirror://cpan/authors/id/S/SA/SAPER/XSLoader-0.15.tar.gz http://dev.gentoo.org/~tove/distfiles/perl-core/XSLoader/XSLoader-0.150.0-patch.tar.bz2
 
 http://search.cpan.org/dist/XSLoader/
 || ( Artistic GPL-1 GPL-2 GPL-3 )

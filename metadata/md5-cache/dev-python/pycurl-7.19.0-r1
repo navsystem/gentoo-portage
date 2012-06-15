@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile install postinst postrm prepare setup test
-DEPEND=>=net-misc/curl-7.25.0-r1[curl_ssl_gnutls=,curl_ssl_openssl=,curl_ssl_nss=,-curl_ssl_axtls,-curl_ssl_cyassl,-curl_ssl_polarssl] curl_ssl_gnutls? ( >=net-libs/gnutls-2.11.0 ) =dev-lang/python-2*
+DEPEND=>=net-misc/curl-7.25.0-r1[ssl=] ssl? ( net-misc/curl[curl_ssl_gnutls=,curl_ssl_nss=,curl_ssl_openssl=,-curl_ssl_axtls,-curl_ssl_cyassl,-curl_ssl_polarssl] curl_ssl_gnutls? ( >=net-libs/gnutls-2.11.0 ) ) =dev-lang/python-2*
 DESCRIPTION=python binding for curl/libcurl
 EAPI=4
 HOMEPAGE=http://pycurl.sourceforge.net/ http://pypi.python.org/pypi/pycurl
-IUSE=examples curl_ssl_axtls curl_ssl_cyassl curl_ssl_gnutls curl_ssl_nss +curl_ssl_openssl curl_ssl_polarssl
+IUSE=curl_ssl_gnutls curl_ssl_nss +curl_ssl_openssl examples ssl
 KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
 LICENSE=LGPL-2.1
-RDEPEND=>=net-misc/curl-7.25.0-r1[curl_ssl_gnutls=,curl_ssl_openssl=,curl_ssl_nss=,-curl_ssl_axtls,-curl_ssl_cyassl,-curl_ssl_polarssl] curl_ssl_gnutls? ( >=net-libs/gnutls-2.11.0 ) =dev-lang/python-2*
+RDEPEND=>=net-misc/curl-7.25.0-r1[ssl=] ssl? ( net-misc/curl[curl_ssl_gnutls=,curl_ssl_nss=,curl_ssl_openssl=,-curl_ssl_axtls,-curl_ssl_cyassl,-curl_ssl_polarssl] curl_ssl_gnutls? ( >=net-libs/gnutls-2.11.0 ) ) =dev-lang/python-2*
 SLOT=0
 SRC_URI=http://pycurl.sourceforge.net/download/pycurl-7.19.0.tar.gz
-_eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	eutils	e9ac199862f908195424dc48ca2de8f6	multilib	5782800349f728f725f9378105c6a2ab	python	4152846e243ec207de8a1b02a36f1461	toolchain-funcs	940fa431b6227157c9a420dadef4970b	user	32a09e82e2f592bf88ad2fd08525166e
-_md5_=f3a3b754b9d4629d873fd5553cd066cf
+_eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	eutils	21a26e8e10b392a8de6b2cdab67cb3d8	multilib	5782800349f728f725f9378105c6a2ab	python	4152846e243ec207de8a1b02a36f1461	toolchain-funcs	e575dd4d4682fc3539829c52d8382856	user	32a09e82e2f592bf88ad2fd08525166e
+_md5_=54d22e9919be3271ffdcc1c983318eb3

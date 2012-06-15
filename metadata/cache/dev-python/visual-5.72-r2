@@ -6,7 +6,7 @@ http://www.vpython.org/contents/download/visual-5.72_release.tar.bz2
 http://www.vpython.org/
 visual
 Real-time 3D graphics library for Python
-amd64 ~x86
+amd64 x86
 eutils flag-o-matic multilib python toolchain-funcs user versionator
 doc examples
 

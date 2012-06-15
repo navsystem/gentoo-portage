@@ -6,7 +6,7 @@ http://www.liberix.cz/doplnky/slovniky/ooo//dict-cs-2.oxt -> myspell-cs-20110224
 http://www.liberix.cz/doplnky/slovniky/ooo/
 GPL-2 MIT
 Czech dictionaries for myspell/hunspell
-~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd
+alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd
 base eutils multilib myspell-r2 toolchain-funcs user
 
 
