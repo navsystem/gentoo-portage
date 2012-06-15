@@ -8,5 +8,5 @@ LICENSE=BSD CCPL-Attribution-ShareAlike-3.0 CCPL-Attribution-3.0 GPL-2 LGPL-2.1 
 RDEPEND=media-libs/libsdl media-libs/sdl-mixer media-libs/sdl-ttf media-libs/sdl-image media-libs/sdl-net sys-libs/zlib virtual/libintl
 SLOT=0
 SRC_URI=mirror://sourceforge/blobwars/blobwars-1.19.tar.gz
-_eclasses_=base	5f35078c26d6c60556d5c8a2feb4f84f	eutils	21a26e8e10b392a8de6b2cdab67cb3d8	games	208d30509b917ca42d728b7d106acb73	gnome2-utils	dfd98be073cc8193fc79925566741ab0	multilib	5782800349f728f725f9378105c6a2ab	toolchain-funcs	e575dd4d4682fc3539829c52d8382856	user	32a09e82e2f592bf88ad2fd08525166e
+_eclasses_=base	5f35078c26d6c60556d5c8a2feb4f84f	eutils	7b605062b7d609ee1d0b225de9eccbe2	games	208d30509b917ca42d728b7d106acb73	gnome2-utils	dfd98be073cc8193fc79925566741ab0	multilib	5782800349f728f725f9378105c6a2ab	toolchain-funcs	e575dd4d4682fc3539829c52d8382856	user	32a09e82e2f592bf88ad2fd08525166e
 _md5_=44e1b6c203490e540dcb460f11b01423
