@@ -6,7 +6,7 @@ http://dl.bytesex.org/cvs-snapshots/input-20081014-101501.tar.gz
 http://dl.bytesex.org/cvs-snapshots/
 GPL-2
 Small collection of linux input layer utils
-~amd64 ~ppc ~x86
+amd64 ~ppc ~x86
 eutils multilib toolchain-funcs user
 
 

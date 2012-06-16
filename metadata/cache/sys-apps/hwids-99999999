@@ -3,7 +3,7 @@ net-misc/wget
 0
 
 
-http://git.overlays.gentoo.org/gitweb/?p=proj/hwids.git;a=summary
+https://github.com/gentoo/hwids
 || ( GPL-2 BSD )
 Hardware (PCI, USB) IDs databases
 

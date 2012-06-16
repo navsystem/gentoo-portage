@@ -1,5 +1,5 @@
-X? ( x11-libs/libXext x11-proto/xextproto ) gif? ( media-libs/giflib ) tiff? ( media-libs/tiff ) gs? ( app-text/ghostscript-gpl )
-X? ( x11-libs/libXext x11-proto/xextproto ) gif? ( media-libs/giflib ) tiff? ( media-libs/tiff ) gs? ( app-text/ghostscript-gpl )
+X? ( x11-libs/libXext x11-proto/xextproto ) gif? ( media-libs/giflib ) tiff? ( media-libs/tiff ) postscript? ( app-text/ghostscript-gpl )
+X? ( x11-libs/libXext x11-proto/xextproto ) gif? ( media-libs/giflib ) tiff? ( media-libs/tiff ) postscript? ( app-text/ghostscript-gpl )
 0
 ftp://ftp.iastate.edu/pub/utah-raster/urt-3.1b.tar.Z
 
@@ -8,7 +8,7 @@ as-is
 the Utah Raster Toolkit is a library for dealing with raster images
 alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd
 eutils multilib toolchain-funcs user
-gif gs tiff X
+gif postscript tiff X
 
 
 

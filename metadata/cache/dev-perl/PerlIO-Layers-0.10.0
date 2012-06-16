@@ -1,0 +1,22 @@
+dev-perl/List-MoreUtils dev-lang/perl[-build]
+dev-perl/List-MoreUtils dev-lang/perl[-build]
+0
+mirror://cpan/authors/id/L/LE/LEONT/PerlIO-Layers-0.010.tar.gz
+
+http://search.cpan.org/dist/PerlIO-Layers/
+|| ( Artistic GPL-1 GPL-2 GPL-3 )
+Querying your filehandle's capabilities
+~amd64 ~x86
+base eutils multilib multiprocessing perl-module toolchain-funcs user
+
+
+
+
+4
+
+compile configure install prepare test unpack
+
+
+
+
+

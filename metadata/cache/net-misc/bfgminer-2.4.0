@@ -9,7 +9,7 @@ Modular Bitcoin CPU/GPU/FPGA miner in C
 ~x86 ~amd64
 eutils multilib toolchain-funcs user
 +adl altivec bitforce +cpumining examples hardened icarus ncurses +opencl padlock sse2 sse2_4way sse4 +udev ztex
-|| ( bitforce cpumining icarus opencl ztex ) adl? ( opencl ) altivec? ( cpumining ppc ppc64 ) padlock? ( cpumining || ( amd64 x86 ) ) sse2? ( cpumining || ( amd64 x86 ) ) sse4? ( cpumining amd64 )
+|| ( bitforce cpumining icarus opencl ztex ) adl? ( opencl ) altivec? ( cpumining ppc ppc64 ) opencl? ( ncurses ) padlock? ( cpumining || ( amd64 x86 ) ) sse2? ( cpumining || ( amd64 x86 ) ) sse4? ( cpumining amd64 )
 
 
 4

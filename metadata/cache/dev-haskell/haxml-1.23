@@ -1,0 +1,22 @@
+>=dev-haskell/polyparse-1.5[profile?] >=dev-lang/ghc-6.8.2 >=dev-haskell/cabal-1.2 doc? ( dev-haskell/haddock ) hscolour? ( dev-haskell/hscolour ) >=dev-haskell/cabal-1.1.4
+>=dev-haskell/polyparse-1.5[profile?] >=dev-lang/ghc-6.8.2 dev-lang/ghc
+0
+http://hackage.haskell.org/packages/archive/HaXml/1.23/HaXml-1.23.tar.gz
+
+http://www.cs.york.ac.uk/fp/HaXml/
+LGPL-2.1
+Utilities for manipulating XML documents
+~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86
+base eutils ghc-package haskell-cabal multilib toolchain-funcs user versionator
+doc hscolour profile
+
+
+
+4
+
+compile configure install postinst prepare prerm setup test unpack
+
+
+
+
+
