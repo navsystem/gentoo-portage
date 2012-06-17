@@ -1,0 +1,22 @@
+
+app-text/zathura cb? ( app-text/zathura-cb ) djvu? ( app-text/zathura-djvu ) pdf? ( || ( app-text/zathura-pdf-poppler app-text/zathura-pdf-mupdf ) ) postscript? ( app-text/zathura-ps )
+0
+
+
+http://pwmt.org/projects/zathura/
+as-is
+Meta package for app-text/zathura plugins
+~amd64 ~x86
+
+cb djvu +pdf postscript
+
+
+
+4
+
+-
+
+
+
+
+

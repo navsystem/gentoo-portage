@@ -1,5 +1,5 @@
 x11-libs/qt-gui:4 dev-libs/quazip
-x11-libs/qt-gui:4 dev-libs/quazip || ( media-video/mplayer[ass,png,X] media-video/mplayer2[ass,png,X] )
+x11-libs/qt-gui:4 dev-libs/quazip || ( media-video/mplayer[libass,png,X] media-video/mplayer2[libass,png,X] )
 0
 mirror://sourceforge/smplayer/smplayer-0.8.0.tar.bz2
 

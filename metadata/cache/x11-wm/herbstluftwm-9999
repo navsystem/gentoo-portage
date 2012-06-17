@@ -7,14 +7,14 @@ http://wwwcip.cs.fau.de/~re06huxa/herbstluftwm/
 BSD-2
 A manual tiling window manager for X
 
-bash-completion-r1 eutils git-2 multilib toolchain-funcs user
+bash-completion-r1 git-2 multilib toolchain-funcs
 examples xinerama zsh-completion
 
 
 
 4
 
-compile install prepare unpack
+compile install unpack
 
 
 
