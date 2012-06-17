@@ -14,7 +14,7 @@ app-dicts/myspell-en linguas_af? ( app-dicts/myspell-af ) linguas_bg? ( app-dict
 
 4
 
-configure install postinst prepare
+configure install prepare
 
 
 

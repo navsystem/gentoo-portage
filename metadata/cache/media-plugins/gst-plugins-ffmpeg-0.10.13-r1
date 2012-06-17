@@ -12,9 +12,9 @@ base eutils flag-o-matic multilib toolchain-funcs user
 
 
 
-1
+4
 
-compile install unpack
+compile configure install prepare unpack
 
 
 

@@ -1,0 +1,22 @@
+dev-perl/Class-Accessor-Lite dev-perl/libwww-perl >=dev-perl/JSON-2.21 dev-perl/Plack dev-perl/Router-Simple dev-perl/Try-Tiny test? ( dev-perl/Test-Pod ) dev-lang/perl[-build]
+dev-perl/Class-Accessor-Lite dev-perl/libwww-perl >=dev-perl/JSON-2.21 dev-perl/Plack dev-perl/Router-Simple dev-perl/Try-Tiny dev-lang/perl[-build]
+0
+mirror://cpan/authors/id/D/DM/DMAKI/JSON-RPC-1.03.tar.gz
+
+http://search.cpan.org/dist/JSON-RPC/
+|| ( Artistic GPL-1 GPL-2 GPL-3 )
+JSON RPC 2.0 Server Implementation
+~amd64 ~x86
+base eutils multilib multiprocessing perl-module toolchain-funcs user
+test
+
+
+
+4
+
+compile configure install prepare test unpack
+
+
+
+
+

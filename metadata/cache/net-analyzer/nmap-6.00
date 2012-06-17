@@ -14,7 +14,7 @@ gtk lua ssl
 
 3
 
-configure install prepare setup
+compile configure install prepare setup
 
 
 

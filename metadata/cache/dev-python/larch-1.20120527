@@ -1,0 +1,22 @@
+dev-python/cliapp dev-python/tracing dev-python/ttystatus || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
+dev-python/cliapp dev-python/tracing dev-python/ttystatus || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
+0
+http://code.liw.fi/debian/pool/main/p/python-larch/python-larch_1.20120527.orig.tar.gz
+test
+http://liw.fi/larch/
+GPL-3
+Copy-on-write B-tree data structure
+~amd64 ~x86
+distutils multilib python toolchain-funcs
+
+
+
+
+4
+
+compile install postinst postrm prepare setup
+
+
+
+
+

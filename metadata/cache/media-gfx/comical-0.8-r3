@@ -1,0 +1,22 @@
+>=app-arch/unrar-4.1.4-r2 sys-libs/zlib[minizip] x11-libs/wxGTK:2.8[X] virtual/pkgconfig >=sys-apps/sed-4
+>=app-arch/unrar-4.1.4-r2 sys-libs/zlib[minizip] x11-libs/wxGTK:2.8[X]
+0
+mirror://sourceforge/comical/comical-0.8.tar.gz
+
+http://comical.sourceforge.net/
+GPL-2
+A sequential image display program, to deal with .cbr and .cbz files
+~amd64 ~x86 ~x86-fbsd
+eutils gnome2-utils multilib toolchain-funcs user wxwidgets
+
+
+
+
+4
+
+compile install postinst postrm preinst prepare
+
+
+
+
+

@@ -1,0 +1,22 @@
+bazaar? ( dev-vcs/bzr ) bazaar? ( || ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) )
+bazaar? ( dev-vcs/bzr ) app-portage/portage-utils || ( dev-vcs/git dev-vcs/mercurial dev-vcs/darcs dev-vcs/bzr ) bazaar? ( || ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) )
+0
+http://git.kitenet.net/?p=etckeeper.git;a=snapshot;h=refs/tags/0.63;sf=tgz -> etckeeper-0.63.tar.gz
+
+http://kitenet.net/~joey/code/etckeeper/
+GPL-2
+A collection of tools to let /etc be stored in a repository
+~amd64 ~x86
+bash-completion-r1 eutils multilib python toolchain-funcs user
+bazaar
+
+
+
+4
+
+compile install postinst prepare setup
+
+
+
+
+

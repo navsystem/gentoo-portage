@@ -1,0 +1,22 @@
+dev-perl/Test-Exception dev-perl/Sub-Exporter dev-lang/perl[-build]
+dev-lang/perl[-build]
+0
+mirror://cpan/authors/id/L/LE/LEONT/Const-Fast-0.011.tar.gz
+
+http://search.cpan.org/dist/Const-Fast/
+|| ( Artistic GPL-1 GPL-2 GPL-3 )
+Facility for creating read-only scalars, arrays, and hashes
+~amd64 ~x86
+base eutils multilib multiprocessing perl-module toolchain-funcs user
+
+
+
+
+4
+
+compile configure install prepare test unpack
+
+
+
+
+

@@ -1,0 +1,22 @@
+app-arch/unzip
+
+0
+http://darkstar.ist.utl.pt/openoffice.org/pt/oo3x-pt-PT.oxt preao? ( http://darkstar.ist.utl.pt/openoffice.org/pt/oo3x-pt-PT-preao.oxt )
+
+http://natura.di.uminho.pt/wiki/doku.php?id=dicionarios:main
+GPL-2 MIT
+Czech dictionaries for myspell/hunspell
+alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd
+base eutils multilib myspell-r2 toolchain-funcs user
++preao
+
+
+
+4
+
+compile configure install prepare unpack
+
+
+
+
+

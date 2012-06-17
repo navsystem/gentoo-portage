@@ -1,0 +1,22 @@
+>=dev-perl/Net-SSLeay-1.330.0 virtual/perl-Scalar-List-Utils >=virtual/perl-Socket-1.950.0 idn? ( || ( >=dev-perl/URI-1.50 dev-perl/Net-LibIDN ) ) dev-lang/perl[-build]
+>=dev-perl/Net-SSLeay-1.330.0 virtual/perl-Scalar-List-Utils >=virtual/perl-Socket-1.950.0 idn? ( || ( >=dev-perl/URI-1.50 dev-perl/Net-LibIDN ) ) dev-lang/perl[-build]
+0
+mirror://cpan/authors/id/S/SU/SULLR/IO-Socket-SSL-1.75.tar.gz
+
+http://search.cpan.org/dist/IO-Socket-SSL/
+|| ( Artistic GPL-1 GPL-2 GPL-3 )
+Nearly transparent SSL encapsulation for IO::Socket::INET
+~amd64 ~x86
+base eutils multilib multiprocessing perl-module toolchain-funcs user
+idn
+
+
+
+4
+
+compile configure install prepare test unpack
+
+
+
+
+
