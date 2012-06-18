@@ -1,5 +1,5 @@
 x11-libs/qt-gui:4 download-subs? ( dev-libs/quazip ) >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
-x11-libs/qt-gui:4 download-subs? ( dev-libs/quazip ) media-video/mplayer2[ass,png]
+x11-libs/qt-gui:4 download-subs? ( dev-libs/quazip ) media-video/mplayer2[libass,png]
 0
 http://rion-overlay.googlecode.com/files/smplayer2-0.7.1_p20120301.tar.xz
 

@@ -939,6 +939,7 @@ app-text/wv:tools - Install optional utilities considered deprecated in favor of
 app-text/xiphos:webkit - Use net-libs/webkit-gtk instead of gnome-extra/gtkhtml
 app-text/yagf:cuneiform - Enable support for the app-text/cuneiform OCR engine.
 app-text/yagf:tesseract - Enable support for the app-text/tesseract OCR engine.
+app-text/zathura-meta:cb - Install plug-in for ComicBook support
 app-vim/gentoo-syntax:ignore-glep31 - Remove GLEP 31 (UTF-8 file encodings) settings
 app-vim/vim-latex:html - Install HTML documentation
 dev-cpp/glog:gflags - Use gflags module for flag parsing
@@ -3103,7 +3104,6 @@ media-video/dvdrip:subtitles - Enables support for subtitle ripping
 media-video/ffmpeg:3dnowext - Enable manually-optimised routines using the AMD 3DNow!Ex SIMD instruction set, present in modern AMD CPUs. (Check for 3dnowext in /proc/cpuinfo to know whether your CPU supports it).
 media-video/ffmpeg:aacplus - AAC+ encoding via media-libs/libaacplus.
 media-video/ffmpeg:amr - Enables Adaptive Multi-Rate Audio support
-media-video/ffmpeg:ass - Enables media-libs/libass based subtitle renderer.
 media-video/ffmpeg:avresample - Enables libavresample, media-video/libav version of libswresample (which installed and makes libavresample redundant): A conversion library between uncompressed audio formats.
 media-video/ffmpeg:avx - Adds support for Advanced Vector Extensions instructions (Intel Sandy Bridge, AMD Bulldozer and later chips)
 media-video/ffmpeg:bluray - Enable playback of Blu-ray filesystems
@@ -3178,7 +3178,6 @@ media-video/mjpg-streamer:www - Installs WWW content
 media-video/motiontrack:multiprocess - Enables multi-process support (SMP/cluster) for motiontrack programs
 media-video/mplayer:3dnowext - Enable 3dnowext cpu instructions
 media-video/mplayer:amr - Enables Adaptive Multi-Rate format support
-media-video/mplayer:ass - SRT/SSA/ASS (SubRip / SubStation Alpha) subtitle support
 media-video/mplayer:bl - Blinkenlights video output
 media-video/mplayer:bluray - Enable playback of Blu-ray filesystems
 media-video/mplayer:bs2b - Enable Bauer stereophonic-to-binaural headphone filter
@@ -3221,7 +3220,6 @@ media-video/mplayer:xanim - Enables support for xanim based codecs
 media-video/mplayer:xvmc - Enables X-Video Motion Compensation support
 media-video/mplayer:zoran - Enables ZR360[56]7/ZR36060 video output
 media-video/mplayer2:3dnowext - Enable 3dnowext cpu instructions
-media-video/mplayer2:ass - SRT/SSA/ASS (SubRip / SubStation Alpha) subtitle support
 media-video/mplayer2:bl - Blinkenlights video output
 media-video/mplayer2:bluray - Enable playback of Blu-ray filesystems
 media-video/mplayer2:bs2b - Enable Bauer stereophonic-to-binaural headphone filter
@@ -3346,7 +3344,6 @@ media-video/vlc:httpd - Enables a web based interface for vlc.
 media-video/vlc:id3tag - Enables id3tag metadata reader plugin.
 media-video/vlc:ios-vout - Enables iPhone OS video output.
 media-video/vlc:kate - Adds support for Ogg Kate subtitles via libkate.
-media-video/vlc:libass - Enables subtitles support using libass.
 media-video/vlc:libproxy - Enables support for proxy settings in the HTTP access module.
 media-video/vlc:libtar - Uses libtar instead of the built-in tar reader for reading custom skins.
 media-video/vlc:libtiger - Enables Ogg Kate subtitles rendering using libtiger.
@@ -4174,6 +4171,7 @@ net-misc/bfgminer:adl - Enable support for controlling fans and overclocking on 
 net-misc/bfgminer:bitforce - Enable support for mining with ButterFly Labs BitFORCE FPGAs
 net-misc/bfgminer:cpumining - Enable support for mining with CPUs
 net-misc/bfgminer:icarus - Enable support for mining with Icarus FPGAs
+net-misc/bfgminer:modminer - Enable support for mining with ModMiner FPGAs
 net-misc/bfgminer:opencl - Enable support for mining with OpenCL-capable devices (GPUs)
 net-misc/bfgminer:padlock - Enable support for mining with VIA Padlock CPUs
 net-misc/bfgminer:sse2_4way - Enable support for CPU SSE2 4way mining algorithm

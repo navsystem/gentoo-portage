@@ -6,7 +6,7 @@ mirror://github/drkjam/netaddr/netaddr-0.7.6.tar.gz
 https://github.com/drkjam/netaddr http://pypi.python.org/pypi/netaddr
 BSD
 Network address representation and manipulation library
-amd64 ~x86
+amd64 x86
 distutils multilib python toolchain-funcs
 cli
 
