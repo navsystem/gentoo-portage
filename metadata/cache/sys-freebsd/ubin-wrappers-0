@@ -1,0 +1,22 @@
+
+
+0
+
+
+http://www.gentoo.org
+as-is
+/usr/bin wrapper scripts for FreeBSD script compatibility
+~amd64-fbsd ~sparc-fbsd ~x86-fbsd
+
+userland_BSD userland_GNU
+
+
+
+4
+
+install
+
+
+
+
+

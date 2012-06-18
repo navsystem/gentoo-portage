@@ -1,4 +1,4 @@
-dev-util/premake doc? ( app-doc/doxygen sys-apps/sed ) dev-vcs/subversion net-misc/rsync
+>=dev-util/premake-4.3 doc? ( app-doc/doxygen ) dev-vcs/subversion net-misc/rsync
 
 0
 
@@ -6,15 +6,15 @@ dev-util/premake doc? ( app-doc/doxygen sys-apps/sed ) dev-vcs/subversion net-mi
 http://code.google.com/p/ticpp/
 GPL-2
 A completely new interface to TinyXML that uses MANY of the C++ strengths
-
+amd64 ~x86
 eutils multilib subversion toolchain-funcs user
 debug doc
 
 
 
+4
 
-
-compile install preinst unpack
+compile install preinst prepare unpack
 
 
 

@@ -6,7 +6,7 @@ http://www.mcternan.me.uk/mscgen/software/mscgen-src-0.20.tar.gz
 http://www.mcternan.me.uk/mscgen/
 GPL-2
 A message sequence chart generator
-~amd64 ~x86
+~amd64 ~arm ~x86
 autotools libtool multilib multiprocessing toolchain-funcs
 png truetype
 

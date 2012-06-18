@@ -6,7 +6,7 @@ http://www.infradead.org/~tgr/libnl/files/libnl-3.2.11.tar.gz
 http://www.infradead.org/~tgr/libnl/
 LGPL-2.1
 A library for applications dealing with netlink socket
-~amd64 ~s390 ~sh ~x86 ~amd64-linux ~ia64-linux ~x86-linux
+~amd64 ~arm ~s390 ~sh ~x86 ~amd64-linux ~ia64-linux ~x86-linux
 eutils multilib toolchain-funcs user
 doc static-libs utils
 

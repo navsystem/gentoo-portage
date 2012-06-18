@@ -1,0 +1,22 @@
+=www-servers/apache-2.2*
+=www-servers/apache-2.2* www-servers/apache:2[debug]
+0
+mirror://gentoo/mod_whatkilledus-0.0.1.c
+
+http://people.apache.org/~trawick/exception_hook.html
+Apache-2.0
+Apache2 modules to debug segmentation faults in threads
+~amd64 ~x86
+apache-module depend.apache eutils multilib toolchain-funcs user
+
+
+
+
+4
+
+compile install postinst setup unpack
+
+
+
+
+

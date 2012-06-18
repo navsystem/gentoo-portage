@@ -8,8 +8,8 @@ GPL-2
 a package for multitrack audio processing
 ~amd64 ~x86
 autotools eutils libtool multilib multiprocessing python toolchain-funcs user
-alsa audiofile debug doc jack libsamplerate lv2 mikmod ncurses oil osc oss python ruby sndfile static-libs
-
+alsa audiofile debug doc jack libsamplerate lv2 mikmod ncurses oil osc oss python ruby sndfile static-libs test
+test? ( lv2 )
 
 
 4
