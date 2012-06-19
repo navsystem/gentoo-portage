@@ -6,7 +6,7 @@ mirror://cpan/authors/id/N/NJ/NJH/MusicBrainz-DiscID-0.03.tar.gz
 http://search.cpan.org/dist/MusicBrainz-DiscID/
 GPL-2
 Perl interface for the MusicBrainz libdiscid library
-~amd64 ~ppc ~ppc64 ~x86
+amd64 ~ppc ~ppc64 x86
 base eutils multilib multiprocessing perl-module toolchain-funcs user
 test
 

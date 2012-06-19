@@ -6,7 +6,7 @@ test
 http://www.ogre3d.org/
 MIT
 Object-oriented Graphics Rendering Engine
-amd64 ~x86
+amd64 x86
 base cmake-utils eutils flag-o-matic multilib toolchain-funcs user
 +boost cg doc double-precision examples +freeimage ois +opengl poco profile tbb threads tools +zip
 threads? ( || ( boost poco tbb ) )

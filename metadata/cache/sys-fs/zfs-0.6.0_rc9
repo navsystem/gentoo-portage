@@ -6,7 +6,7 @@ https://github.com/downloads/zfsonlinux/zfs/zfs-0.6.0-rc9.tar.gz
 http://zfsonlinux.org/
 CDDL GPL-2
 Native ZFS for Linux
-
+~amd64
 autotools autotools-utils eutils flag-o-matic libtool linux-info linux-mod multilib multiprocessing toolchain-funcs user versionator
 custom-cflags debug dracut +rootfs test test-suite static-libs kernel_linux
 
