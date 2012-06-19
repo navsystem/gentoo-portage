@@ -1,0 +1,22 @@
+>=dev-util/premake-4.3 doc? ( app-doc/doxygen )
+
+0
+http://dev.gentoo.org/~ago/distfiles/ticpp-0_p20120423.tar.bz2
+
+http://code.google.com/p/ticpp/
+GPL-2
+A completely new interface to TinyXML that uses MANY of the C++ strengths
+~amd64 ~x86
+
+debug doc
+
+
+
+4
+
+compile install prepare
+
+
+
+
+

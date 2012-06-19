@@ -1,5 +1,5 @@
 dev-dotnet/atk-sharp:2 dev-dotnet/gdk-sharp:2 dev-dotnet/glib-sharp:2 dev-dotnet/gtk-sharp:2 dev-dotnet/mono-addins[gtk] dev-dotnet/pango-sharp:2 dev-lang/mono dev-util/intltool virtual/pkgconfig sys-devel/gettext || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool dev-vcs/git
-dev-dotnet/atk-sharp:2 dev-dotnet/gdk-sharp:2 dev-dotnet/glib-sharp:2 dev-dotnet/gtk-sharp:2 dev-dotnet/mono-addins[gtk] dev-dotnet/pango-sharp:2 dev-lang/mono x11-libs/cairo[X] x11-libs/gdk-pixbuf[X,jpeg=,tiff=] x11-themes/gnome-icon-theme
+dev-dotnet/atk-sharp:2 dev-dotnet/gdk-sharp:2 dev-dotnet/glib-sharp:2 dev-dotnet/gtk-sharp:2 dev-dotnet/mono-addins[gtk] dev-dotnet/pango-sharp:2 dev-lang/mono x11-libs/cairo[X] x11-libs/gdk-pixbuf[X,jpeg,tiff] x11-themes/gnome-icon-theme
 0
 
 
@@ -8,7 +8,7 @@ MIT CCPL-Attribution-3.0
 Simple Painting for Gtk
 
 autotools fdo-mime git-2 libtool mono multilib multiprocessing toolchain-funcs
-jpeg tiff
+
 
 
 

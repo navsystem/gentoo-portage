@@ -1,0 +1,22 @@
+virtual/perl-IO virtual/perl-libnet >=dev-perl/IO-Socket-SSL-1.750.0 dev-perl/Net-SSLeay virtual/perl-MIME-Base64 dev-perl/Digest-HMAC >=virtual/perl-ExtUtils-MakeMaker-6.300.0 dev-lang/perl[-build]
+virtual/perl-IO virtual/perl-libnet >=dev-perl/IO-Socket-SSL-1.750.0 dev-perl/Net-SSLeay virtual/perl-MIME-Base64 dev-perl/Digest-HMAC dev-lang/perl[-build]
+0
+mirror://cpan/authors/id/F/FA/FAYLAND/Net-SMTP-TLS-ButMaintained-0.19.tar.gz
+
+http://search.cpan.org/dist/Net-SMTP-TLS-ButMaintained/
+|| ( Artistic GPL-1 GPL-2 GPL-3 )
+An SMTP client supporting TLS and AUTH
+~amd64 ~x86
+base eutils multilib multiprocessing perl-module toolchain-funcs user
+
+
+
+
+4
+
+compile configure install prepare test unpack
+
+
+
+
+

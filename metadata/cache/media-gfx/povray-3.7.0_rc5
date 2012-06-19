@@ -14,7 +14,7 @@ debug mkl openexr tiff X
 
 4
 
-configure install preinst prepare test
+configure preinst prepare test
 
 
 
