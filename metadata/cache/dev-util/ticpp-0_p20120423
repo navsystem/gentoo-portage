@@ -4,7 +4,7 @@
 http://dev.gentoo.org/~ago/distfiles/ticpp-0_p20120423.tar.bz2
 
 http://code.google.com/p/ticpp/
-GPL-2
+MIT
 A completely new interface to TinyXML that uses MANY of the C++ strengths
 ~amd64 ~x86
 

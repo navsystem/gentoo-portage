@@ -6,7 +6,7 @@ mirror://cpan/authors/id/B/BF/BFAIST/WebService-MusicBrainz-0.93.tar.gz
 http://search.cpan.org/dist/WebService-MusicBrainz/
 || ( Artistic GPL-1 GPL-2 GPL-3 )
 Web service API to MusicBrainz database
-~amd64 ~ppc ~ppc64 ~x86
+amd64 ~ppc ~ppc64 x86
 base eutils multilib multiprocessing perl-module toolchain-funcs user
 
 

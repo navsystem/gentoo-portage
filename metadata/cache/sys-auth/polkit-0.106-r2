@@ -10,7 +10,7 @@ Policy framework for controlling privileges for system-wide services
 eutils flag-o-matic multilib pam systemd toolchain-funcs user
 debug examples gtk +introspection kde nls pam systemd
 
-gtk? ( || ( >=gnome-extra/polkit-gnome-0.105 lxde-base/lxpolkit ) ) kde? ( sys-auth/polkit-kde-agent ) !systemd? ( >=sys-auth/consolekit-0.4.5_p2012[policykit] pam? ( sys-auth/pambase[consolekit] ) )
+gtk? ( || ( >=gnome-extra/polkit-gnome-0.105 lxde-base/lxpolkit ) ) kde? ( sys-auth/polkit-kde-agent ) pam? ( systemd? ( sys-auth/pambase[systemd] ) !systemd? ( sys-auth/pambase[consolekit] ) ) !systemd? ( >=sys-auth/consolekit-0.4.5_p2012[policykit] )
 
 4
 

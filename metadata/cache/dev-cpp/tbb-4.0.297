@@ -6,7 +6,7 @@ test
 http://www.threadingbuildingblocks.org/
 GPL-2-with-exceptions
 High level abstract threading library
-amd64 ~x86
+amd64 x86
 eutils multilib toolchain-funcs user versionator
 debug doc examples
 

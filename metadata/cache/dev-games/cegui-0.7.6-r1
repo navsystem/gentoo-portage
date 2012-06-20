@@ -6,7 +6,7 @@ mirror://sourceforge/crayzedsgui/CEGUI-0.7.6.tar.gz doc? ( mirror://sourceforge/
 http://www.cegui.org.uk/
 MIT
 Crazy Eddie's GUI System
-amd64 -ppc ~x86
+amd64 -ppc x86
 eutils multilib toolchain-funcs user
 bidi debug devil doc examples expat gtk irrlicht lua ogre opengl pcre static-libs tinyxml truetype xerces-c xml zip
 || ( expat tinyxml xerces-c xml )
