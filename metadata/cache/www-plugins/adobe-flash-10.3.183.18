@@ -3,7 +3,7 @@ x86? ( x11-libs/gtk+:2 media-libs/fontconfig dev-libs/nss net-misc/curl vdpau? (
 0
 http://fpdownload.macromedia.com/get/flashplayer/pdc/10.3.183.18/install_flash_player_10_linux.tar.gz -> adobe-flash-10.3.183.18.i386.tar.gz
 strip mirror
-http://www.adobe.com/flashplayer
+http://helpx.adobe.com/flash-player/kb/archived-flash-player-versions.html
 AdobeFlash-10.3
 Adobe Flash Player
 -* ~amd64 ~x86

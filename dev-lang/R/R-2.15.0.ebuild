@@ -1,15 +1,16 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.15.0.ebuild,v 1.3 2012/06/06 02:50:20 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.15.0.ebuild,v 1.5 2012/06/19 19:16:55 bicatali Exp $
 
 EAPI=4
 
 inherit bash-completion-r1 autotools eutils flag-o-matic fortran-2 multilib versionator
 
+BCP=${PN}-20120306.bash_completion
 DESCRIPTION="Language and environment for statistical computing and graphics"
 HOMEPAGE="http://www.r-project.org/"
 SRC_URI="mirror://cran/src/base/R-2/${P}.tar.gz
-	bash-completion? ( mirror://gentoo/R.bash_completion.bz2 )"
+	bash-completion? ( http://dev.gentoo.org/~bicatali/distfiles/${BCP}.bz2 )"
 
 LICENSE="|| ( GPL-2 GPL-3 ) LGPL-2.1"
 SLOT="0"
@@ -60,27 +61,45 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# gentoo bug #322965 (not applied upstream)
+	# https://bugs.r-project.org/bugzilla3/show_bug.cgi?id=14505
+	epatch "${FILESDIR}"/${PN}-2.11.1-parallel.patch
+
+	# respect ldflags (not applied upstream)
+	# https://bugs.r-project.org/bugzilla3/show_bug.cgi?id=14506
+	epatch "${FILESDIR}"/${PN}-2.12.1-ldflags.patch
+
+	# gentoo bug #383431
+	# https://bugs.r-project.org/bugzilla3/show_bug.cgi?id=14951
+	epatch "${FILESDIR}"/${PN}-2.13.1-zlib_header_fix.patch
+
+	# tiff automagic
+	# https://bugs.r-project.org/bugzilla3/show_bug.cgi?id=14952
+	epatch "${FILESDIR}"/${PN}-2.14.1-tiff.patch
+
+	# https://bugs.r-project.org/bugzilla3/show_bug.cgi?id=14953
+	epatch "${FILESDIR}"/${PN}-2.14.1-rmath-shared.patch
+
+	# too many warning crash, bug #405463
+	# https://bugs.r-project.org/bugzilla3/show_bug.cgi?id=14954
+	epatch "${FILESDIR}"/${PN}-2.14.1-warnings-buffer-overflow.patch
+
+	# applied upstream for next R
 	epatch \
-		"${FILESDIR}"/${PN}-2.11.1-parallel.patch \
-		"${FILESDIR}"/${PN}-2.12.1-ldflags.patch \
-		"${FILESDIR}"/${PN}-2.13.1-zlib_header_fix.patch \
-		"${FILESDIR}"/${PN}-2.14.1-tiff.patch \
-		"${FILESDIR}"/${PN}-2.14.1-rmath-shared.patch \
-		"${FILESDIR}"/${PN}-2.14.1-warnings-buffer-overflow.patch \
 		"${FILESDIR}"/${PN}-2.14.2-library-writability.patch \
 		"${FILESDIR}"/${PN}-2.14.2-prune-package-update.patch
 
-	# fix packages.html for doc (bug #205103)
+	# fix packages.html for doc (gentoo bug #205103)
 	sed -i \
 		-e "s:../../../library:../../../../$(get_libdir)/R/library:g" \
 		src/library/tools/R/Rd.R || die
 
-	# fix Rscript path when installed (bug #221061)
+	# fix Rscript path when installed (gentoo bug #221061)
 	sed -i \
 		-e "s:-DR_HOME='\"\$(rhome)\"':-DR_HOME='\"${R_DIR}\"':" \
 		src/unix/Makefile.in || die "sed unix Makefile failed"
 
-	# fix HTML links to manual (bug #273957)
+	# fix HTML links to manual (gentoo bug #273957)
 	sed -i \
 		-e 's:\.\./manual/:manual/:g' \
 		$(grep -Flr ../manual/ doc) || die "sed for HTML links failed"
@@ -148,7 +167,7 @@ src_install() {
 		R_HOME=${R_DIR}
 	EOF
 	doenvd 99R
-	use bash-completion && dobashcomp "${WORKDIR}"/R.bash_completion
+	use bash-completion && newbashcomp "${WORKDIR}"/${BCP} ${PN}
 }
 
 pkg_postinst() {

@@ -3,8 +3,8 @@
 0
 jmx-1_2_1-ri.zip
 fetch
-http://java.sun.com/products/JavaManagement/index.jsp
-sun-bcla-jmx
+http://www.oracle.com/technetwork/java/javase/tech/javamanagement-140525.html
+Oracle-BCLA-JavaSE
 Java Management Extensions for managing and monitoring devices, applications, and services.
 amd64 ppc ppc64 x86 ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos
 eutils java-pkg-2 java-utils-2 multilib toolchain-funcs user versionator
@@ -12,9 +12,9 @@ elibc_FreeBSD doc examples
 
 
 
+4
 
-
-compile install nofetch preinst setup
+compile install nofetch preinst prepare setup
 
 
 
