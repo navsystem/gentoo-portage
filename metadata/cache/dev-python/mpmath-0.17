@@ -12,9 +12,9 @@ doc examples gmp matplotlib test
 
 
 
-3
+4
 
-compile install postinst postrm prepare test
+compile install postinst postrm prepare setup test
 
 
 

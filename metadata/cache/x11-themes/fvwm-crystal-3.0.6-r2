@@ -6,7 +6,7 @@ http://download.gna.org/fvwm-crystal/3.0.6/fvwm-crystal-3.0.6.tar.gz
 http://gna.org/projects/fvwm-crystal/
 GPL-2
 Configurable and full featured theme for FVWM, with lots of transparency
-~amd64 ~ppc ~ppc64 ~sparc ~x86
+amd64 ~ppc ~ppc64 ~sparc ~x86
 eutils multilib python toolchain-funcs user
 
 

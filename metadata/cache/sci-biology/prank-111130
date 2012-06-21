@@ -7,7 +7,7 @@ http://code.google.com/p/prank-msa/ http://www.ebi.ac.uk/goldman-srv/prank/prank
 GPL-3
 Probabilistic Alignment Kit
 ~amd64 ~x86
-multilib toolchain-funcs
+eutils multilib toolchain-funcs user
 
 
 

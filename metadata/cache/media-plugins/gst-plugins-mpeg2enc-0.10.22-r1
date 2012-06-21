@@ -14,7 +14,7 @@ eutils gst-plugins-bad gst-plugins10 multilib toolchain-funcs user versionator
 
 2
 
-compile install prepare unpack
+compile configure install prepare unpack
 
 
 

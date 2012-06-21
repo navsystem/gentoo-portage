@@ -1,0 +1,22 @@
+
+~app-emulation/virtualbox-4.1.18
+0
+http://download.virtualbox.org/virtualbox/4.1.18/Oracle_VM_VirtualBox_Extension_Pack-4.1.18-78361.vbox-extpack -> Oracle_VM_VirtualBox_Extension_Pack-4.1.18-78361.tar.gz
+mirror strip
+http://www.virtualbox.org/
+PUEL
+PUEL extensions for VirtualBox
+~amd64 ~x86
+eutils multilib toolchain-funcs user
+
+
+
+
+2
+
+install
+
+
+
+
+

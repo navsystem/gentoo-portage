@@ -1,0 +1,22 @@
+test? ( ruby_targets_ruby18? ( >=dev-ruby/ncurses-ruby-0.8[ruby_targets_ruby18] ) ) ruby_targets_ruby18? ( dev-lang/ruby:1.8 )
+ruby_targets_ruby18? ( >=dev-ruby/ncurses-ruby-0.8[ruby_targets_ruby18] ) ruby_targets_ruby18? ( dev-lang/ruby:1.8 )
+0
+http://www.raggle.org/files/raggle-0.4.4.tar.gz
+
+http://www.raggle.org/
+BSD
+A console RSS aggregator, written in Ruby
+~alpha ~amd64 ~hppa ~mips ~ppc ~x86
+eutils java-utils-2 multilib ruby-ng toolchain-funcs user versionator
+test elibc_FreeBSD ruby_targets_ruby18
+
+
+
+2
+
+compile configure install prepare setup test unpack
+
+
+
+
+
