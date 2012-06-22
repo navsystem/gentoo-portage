@@ -6,7 +6,7 @@ http://archive.apache.org/dist/ws/soap/version-2.3.1/soap-src-2.3.1.tar.gz
 http://ws.apache.org/soap/
 Apache-1.1
 Apache SOAP (Simple Object Access Protocol) is an implementation of the SOAP submission to W3C
-amd64 ~x86
+amd64 x86
 eutils java-ant-2 java-pkg-2 java-utils-2 multilib toolchain-funcs user versionator
 elibc_FreeBSD doc source elibc_FreeBSD
 

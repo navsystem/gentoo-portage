@@ -7,14 +7,14 @@ http://www.nongnu.org/regex-markup/
 GPL-2
 A tool to color syslog files as well
 amd64 ppc x86
-
-examples
-
-
+eutils multilib toolchain-funcs user
+examples nls
 
 
 
-install
+4
+
+configure install prepare
 
 
 

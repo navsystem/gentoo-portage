@@ -1,0 +1,22 @@
+!sys-fs/udev >=sys-apps/dbus-1.4.10 >=sys-apps/kmod-5 sys-apps/pciutils sys-apps/sysvinit sys-apps/usbutils >=sys-apps/util-linux-2.20 sys-libs/libcap acl? ( sys-apps/acl ) audit? ( >=sys-process/audit-2 ) cryptsetup? ( sys-fs/cryptsetup ) gudev? ( dev-libs/glib:2 ) introspection? ( dev-libs/gobject-introspection ) lzma? ( app-arch/xz-utils ) pam? ( virtual/pam ) selinux? ( sys-libs/libselinux ) tcpd? ( sys-apps/tcp-wrappers ) app-arch/xz-utils app-text/docbook-xsl-stylesheets dev-libs/libxslt dev-util/gperf dev-util/intltool >=sys-kernel/linux-headers-2.6.38 doc? ( dev-util/gtk-doc ) !<sys-apps/systemd-29-r4 !=sys-apps/systemd-37-r1
+!sys-fs/udev >=sys-apps/dbus-1.4.10 >=sys-apps/kmod-5 sys-apps/pciutils sys-apps/sysvinit sys-apps/usbutils >=sys-apps/util-linux-2.20 sys-libs/libcap acl? ( sys-apps/acl ) audit? ( >=sys-process/audit-2 ) cryptsetup? ( sys-fs/cryptsetup ) gudev? ( dev-libs/glib:2 ) introspection? ( dev-libs/gobject-introspection ) lzma? ( app-arch/xz-utils ) pam? ( virtual/pam ) selinux? ( sys-libs/libselinux ) tcpd? ( sys-apps/tcp-wrappers )
+0
+http://www.freedesktop.org/software/systemd/systemd-185.tar.xz
+
+http://www.freedesktop.org/wiki/Software/systemd
+GPL-2
+System and service manager for Linux
+~amd64 ~arm ~x86
+autotools autotools-utils bash-completion-r1 eutils flag-o-matic libtool linux-info multilib multiprocessing pam systemd toolchain-funcs user versionator
+acl audit cryptsetup doc gudev introspection lzma pam selinux tcpd
+
+
+
+4
+
+compile configure install postinst preinst prepare setup test
+
+
+
+
+

@@ -6,7 +6,7 @@ mirror://github/phillipberndt/pqiv/pqiv-0.12.tbz http://www.pberndt.com/raw/Prog
 http://github.com/phillipberndt/pqiv http://www.pberndt.com/Programme/Linux/pqiv/
 GPL-2
 Modern rewrite of Quick Image Viewer
-amd64 ~x86
+amd64 x86
 eutils linux-info multilib toolchain-funcs user versionator
 kernel_linux
 

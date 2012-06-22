@@ -6,7 +6,7 @@ http://www.lri.fr/~filliatr/ftp/ocamlweb/ocamlweb-1.38.tar.gz
 http://www.lri.fr/~filliatr/ocamlweb/
 LGPL-2
 O'Caml literate programming tool
-~amd64 ~ppc ~x86
+~amd64 ~ppc x86
 base eutils latex-package multilib toolchain-funcs user
 
 

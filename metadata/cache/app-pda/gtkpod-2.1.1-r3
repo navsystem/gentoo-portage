@@ -6,7 +6,7 @@ mirror://sourceforge/gtkpod/gtkpod-2.1.1.tar.gz
 http://gtkpod.sourceforge.net/
 GPL-2 FDL-1.2
 A graphical user interface to the Apple productline
-amd64 ~x86
+amd64 x86
 eutils gnome2-utils multilib toolchain-funcs user
 aac clutter curl flac gstreamer mp3 vorbis webkit
 

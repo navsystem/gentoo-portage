@@ -1,0 +1,22 @@
+dev-lang/lua x11-libs/libSM x11-libs/libX11 x11-libs/libXext nls? ( sys-devel/gettext ) xinerama? ( x11-libs/libXinerama ) xrandr? ( x11-libs/libXrandr ) dev-util/pkgconfig dev-vcs/git
+dev-lang/lua x11-libs/libSM x11-libs/libX11 x11-libs/libXext nls? ( sys-devel/gettext ) xinerama? ( x11-libs/libXinerama ) xrandr? ( x11-libs/libXrandr )
+0
+
+
+http://notion.sourceforge.net
+LGPL-2.1
+Notion is a tiling, tabbed window manager for the X window system
+
+eutils git-2 multilib toolchain-funcs user
+nls xinerama +xrandr
+
+
+
+4
+
+install postinst prepare unpack
+
+
+
+
+
