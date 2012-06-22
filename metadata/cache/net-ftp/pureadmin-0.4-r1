@@ -5,14 +5,14 @@ mirror://sourceforge/purify/pureadmin-0.4.tar.gz
 
 http://purify.sourceforge.net/
 GPL-2
-PureAdmin is a GUI tool used to make the management of Pure-FTPd a little easier.
+GUI tool used to make the management of Pure-FTPd a little easier
 amd64 ~ppc x86
 eutils multilib toolchain-funcs user
 debug doc
 
 
 
-3
+4
 
 configure install postinst prepare
 

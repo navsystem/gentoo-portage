@@ -5,14 +5,14 @@ http://www.baycom.org/~tom/ham/linux/multimon.tar.gz
 
 http://www.baycom.org/~tom/ham/linux/multimon.html
 GPL-2
-Multimon decodes digital transmission codes using OSS
+Decoding digital transmission codes
 ~ppc ~x86
 eutils multilib toolchain-funcs user
 
 
 
 
-2
+4
 
 compile install postinst prepare
 

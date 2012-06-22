@@ -8,7 +8,7 @@ LGPL-2.1
 Additional Qt APIs for mobile devices and desktop platforms
 ~amd64 ~x86
 base eutils multilib qt4-r2 toolchain-funcs user
-bluetooth debug doc networkmanager pulseaudio qml +tools bearer connectivity contacts feedback gallery location messaging multimedia organizer publishsubscribe sensors serviceframework systeminfo versit
+bluetooth debug doc networkmanager pulseaudio qml +tools bearer connectivity +contacts feedback gallery location messaging multimedia organizer publishsubscribe sensors serviceframework systeminfo versit
 || ( bearer connectivity contacts feedback gallery location messaging multimedia organizer publishsubscribe sensors serviceframework systeminfo versit ) versit? ( contacts )
 connectivity? ( bluetooth? ( app-mobilephone/obexd ) )
 

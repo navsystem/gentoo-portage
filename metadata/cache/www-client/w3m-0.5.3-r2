@@ -14,7 +14,7 @@ X fbcon gpm gtk imlib lynxkeymap migemo nls nntp ssl unicode vanilla xface lingu
 
 3
 
-configure install prepare
+compile configure install prepare
 
 
 
