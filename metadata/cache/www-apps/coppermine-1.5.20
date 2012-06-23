@@ -1,0 +1,22 @@
+app-arch/unzip || ( virtual/httpd-cgi virtual/httpd-fastcgi ) >=app-admin/webapp-config-1.50.15
+virtual/httpd-php dev-lang/php[gd,mysql] >=app-admin/webapp-config-1.50.15
+1.5.20
+mirror://sourceforge/eenemeenemuu.u/cpg1.5.20.zip
+
+http://coppermine.sourceforge.net/
+GPL-2
+Web picture gallery written in PHP with a MySQL backend
+~amd64 ~sparc ~x86
+eutils multilib toolchain-funcs user versionator webapp
+vhosts
+
+
+
+4
+
+install postinst prerm setup
+
+
+
+
+

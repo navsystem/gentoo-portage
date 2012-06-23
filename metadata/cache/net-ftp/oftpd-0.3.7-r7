@@ -6,7 +6,7 @@ http://www.time-travellers.org/oftpd/oftpd-0.3.7.tar.gz ftp://ftp.deepspace6.net
 http://www.time-travellers.org/oftpd
 as-is
 Secure, small, anonymous only ftpd
-amd64 arm ppc ~ppc64 ~sh ~sparc x86
+amd64 arm ppc ppc64 ~sh ~sparc x86
 autotools eutils libtool multilib multiprocessing toolchain-funcs user
 ipv6
 

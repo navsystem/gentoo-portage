@@ -1,0 +1,22 @@
+>=x11-libs/gtk+-2.0:2 >=dev-libs/glib-2.0:2 gnome-base/gconf:2 >=gnome-base/libgnomeui-2.0 net-libs/webkit-gtk:2 sys-devel/gettext virtual/pkgconfig app-arch/xz-utils >=sys-apps/sed-4 || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+>=x11-libs/gtk+-2.0:2 >=dev-libs/glib-2.0:2 gnome-base/gconf:2 >=gnome-base/libgnomeui-2.0 net-libs/webkit-gtk:2
+0
+http://www.gphpedit.org/sites/default/files/gphpedit-0.9.98RC1.tar.gz
+
+http://www.gphpedit.org/
+GPL-2
+A Gnome2 PHP/HTML source editor
+~amd64 ~ppc ~x86
+autotools eutils fdo-mime gnome.org gnome2 gnome2-utils libtool multilib multiprocessing toolchain-funcs user versionator
+debug
+
+
+
+4
+
+compile configure install postinst postrm preinst prepare unpack
+
+
+
+
+

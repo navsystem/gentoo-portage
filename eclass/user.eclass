@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/user.eclass,v 1.19 2012/06/18 16:51:34 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/user.eclass,v 1.22 2012/06/22 19:18:24 axs Exp $
 
 # @ECLASS: user.eclass
 # @MAINTAINER:
@@ -422,7 +422,22 @@ esethome() {
 	if [[ ${ehome} == "-1" ]] ; then
 		ehome="/dev/null"
 	fi
+
+	# exit with no message if home dir is up to date
+	if [[ $(egethome "${euser}") == ${ehome} ]]; then
+		return 0
+	fi
+
+	einfo "Updating home for user '${euser}' ..."
 	einfo " - Home: ${ehome}"
+
+	# ensure home directory exists, otherwise update will fail
+	if [[ ! -e ${ROOT}/${ehome} ]] ; then
+		einfo " - Creating ${ehome} in ${ROOT}"
+		mkdir -p "${ROOT}/${ehome}"
+		chown "${euser}" "${ROOT}/${ehome}"
+		chmod 755 "${ROOT}/${ehome}"
+	fi
 
 	# update the home directory
 	case ${CHOST} in
@@ -431,20 +446,21 @@ esethome() {
 		;;
 
 	*-freebsd*|*-dragonfly*)
-		pw usermod "${euser}" -d "${ehome}" || die
+		pw usermod "${euser}" -d "${ehome}" && return 0
+		[[ $? == 8 ]] && eerror "${euser} is in use, cannot update home"
+		eerror "There was an error when attempting to update the home directory for ${euser}"
+		eerror "Please update it manually on your system:"
+		eerror "\t pw usermod \"${euser}\" -d \"${ehome}\""
 		;;
 
 	*)
-		usermod -d "${ehome}" "${euser}" || die
+		usermod -d "${ehome}" "${euser}" && return 0
+		[[ $? == 8 ]] && eerror "${euser} is in use, cannot update home"
+		eerror "There was an error when attempting to update the home directory for ${euser}"
+		eerror "Please update it manually on your system (as root):"
+		eerror "\t usermod -d \"${ehome}\" \"${euser}\""
 		;;
 	esac
-
-	if [[ ! -e ${ROOT}/${ehome} ]] ; then
-		einfo " - Creating ${ehome} in ${ROOT}"
-		mkdir -p "${ROOT}/${ehome}"
-		chown "${euser}" "${ROOT}/${ehome}"
-		chmod 755 "${ROOT}/${ehome}"
-	fi
 }
 
 fi

@@ -1,0 +1,22 @@
+virtual/pkgconfig >=dev-libs/nspr-4.9.1
+>=dev-libs/nspr-4.9.1 >=dev-db/sqlite-3.5 sys-libs/zlib
+0
+ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_13_5_RTM/src/nss-3.13.5.tar.gz http://dev.gentoo.org/~anarchy/patches/nss-3.13.3-add_spi+cacerts_ca_certs.patch http://dev.gentoo.org/~anarchy/patches/nss-3.13.3_pem.support
+
+http://www.mozilla.org/projects/security/pki/nss/
+|| ( MPL-1.1 GPL-2 LGPL-2.1 )
+Mozilla's Network Security Services library that implements PKI support
+~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris
+eutils flag-o-matic multilib toolchain-funcs user
+utils
+
+
+
+3
+
+compile install postinst postrm prepare
+
+
+
+
+

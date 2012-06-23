@@ -6,7 +6,7 @@ http://dev-www.libreoffice.org/src/libvisio-0.0.17.tar.xz
 http://www.freedesktop.org/wiki/Software/libvisio
 LGPL-2.1
 Library parsing the visio documents
-~amd64 ~ppc ~x86
+amd64 ppc x86
 base eutils multilib toolchain-funcs user
 doc static-libs
 
