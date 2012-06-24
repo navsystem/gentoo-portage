@@ -6,7 +6,7 @@ bindist
 http://www.amd.com
 AMD GPL-2 QPL-1.0 as-is
 Ati precompiled drivers for Radeon Evergreen (HD5000 Series) and newer chipsets
-amd64 ~x86
+amd64 x86
 eutils linux-info linux-mod multilib toolchain-funcs user versionator
 debug +modules multilib pax_kernel qt4 static-libs kernel_linux
 

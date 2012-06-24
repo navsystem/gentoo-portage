@@ -1,0 +1,22 @@
+app-arch/unzip dev-lang/perl[-build]
+dev-lang/perl[-build]
+0
+mirror://cpan/authors/id/C/CH/CHORNY/Text-ParseWords-3.27.zip
+
+http://search.cpan.org/dist/Text-ParseWords/
+|| ( Artistic GPL-1 GPL-2 GPL-3 )
+Parse strings containing shell-style quoting
+~amd64 ~x86
+alternatives base eutils multilib multiprocessing perl-module toolchain-funcs user
+
+
+
+
+4
+
+compile configure install postinst postrm prepare test unpack
+
+
+
+
+

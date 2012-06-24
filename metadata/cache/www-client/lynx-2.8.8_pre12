@@ -1,5 +1,5 @@
-sys-libs/ncurses[unicode?] sys-libs/zlib nls? ( virtual/libintl ) ssl? ( !gnutls? ( >=dev-libs/openssl-0.9.8 ) gnutls? ( >=net-libs/gnutls-2.6.4 ) ) bzip2? ( app-arch/bzip2 ) idn? ( net-dns/libidn ) nls? ( sys-devel/gettext ) virtual/pkgconfig
-sys-libs/ncurses[unicode?] sys-libs/zlib nls? ( virtual/libintl ) ssl? ( !gnutls? ( >=dev-libs/openssl-0.9.8 ) gnutls? ( >=net-libs/gnutls-2.6.4 ) ) bzip2? ( app-arch/bzip2 ) idn? ( net-dns/libidn )
+sys-libs/ncurses[unicode?] sys-libs/zlib nls? ( virtual/libintl ) ssl? ( !gnutls? ( >=dev-libs/openssl-0.9.8 ) gnutls? ( dev-libs/libgcrypt >=net-libs/gnutls-2.6.4 ) ) bzip2? ( app-arch/bzip2 ) idn? ( net-dns/libidn ) nls? ( sys-devel/gettext ) virtual/pkgconfig
+sys-libs/ncurses[unicode?] sys-libs/zlib nls? ( virtual/libintl ) ssl? ( !gnutls? ( >=dev-libs/openssl-0.9.8 ) gnutls? ( dev-libs/libgcrypt >=net-libs/gnutls-2.6.4 ) ) bzip2? ( app-arch/bzip2 ) idn? ( net-dns/libidn )
 0
 http://lynx.isc.org/current/lynx2.8.8dev.12.tar.bz2
 

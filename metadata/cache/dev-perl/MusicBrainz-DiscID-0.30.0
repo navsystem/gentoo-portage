@@ -1,0 +1,22 @@
+>=media-libs/libdiscid-0.2.2 virtual/perl-Module-Build virtual/pkgconfig test? ( dev-perl/Test-Pod virtual/perl-Test-Simple ) dev-lang/perl[-build]
+>=media-libs/libdiscid-0.2.2 dev-lang/perl[-build]
+0
+mirror://cpan/authors/id/N/NJ/NJH/MusicBrainz-DiscID-0.03.tar.gz http://dev.gentoo.org/~tove/distfiles/dev-perl/MusicBrainz-DiscID/MusicBrainz-DiscID-0.30.0-patch.tar.bz2
+
+http://search.cpan.org/dist/MusicBrainz-DiscID/
+GPL-2
+Perl interface for the MusicBrainz libdiscid library
+amd64 ~ppc ~ppc64 x86
+base eutils multilib multiprocessing perl-module toolchain-funcs user
+test
+
+
+
+4
+
+compile configure install prepare test unpack
+
+
+
+
+

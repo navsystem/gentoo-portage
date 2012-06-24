@@ -1,5 +1,5 @@
 !build? ( sys-apps/sed >=sys-devel/binutils-2.11.90.0.31 )
-!build? ( >=sys-libs/ncurses-5.2 sys-devel/make )
+!build? ( >=sys-libs/ncurses-5.2 sys-devel/make dev-lang/perl )
 3.5_rc3
 mirror://kernel/linux/kernel/v3.x/testing/patch-3.5-rc3.bz2 mirror://kernel/linux/kernel/v3.x/linux-3.4.tar.bz2
 binchecks strip

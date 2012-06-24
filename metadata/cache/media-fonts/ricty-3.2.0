@@ -1,0 +1,22 @@
+media-fonts/inconsolata >=media-fonts/mix-mplus-ipa-20111002 media-gfx/fontforge X? ( x11-apps/mkfontdir media-fonts/encodings ) >=media-libs/fontconfig-2.4.0
+
+0
+https://github.com/yascentur/Ricty/tarball/3.2.0 -> Ricty-3.2.0.tar.gz
+strip binchecks
+http://save.sys.t.u-tokyo.ac.jp/~yusa/fonts/ricty.html
+public-domain
+A beautiful sans-serif monotype Japanese font designed for code listings
+~amd64 ~x86 ~x86-fbsd
+eutils font multilib toolchain-funcs user
+X
+
+
+
+4
+
+compile install postinst postrm setup
+
+
+
+
+

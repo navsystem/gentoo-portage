@@ -6,7 +6,7 @@ mirror://cpan/authors/id/R/RJ/RJBS/Email-MIME-1.910.tar.gz
 http://search.cpan.org/dist/Email-MIME/
 || ( Artistic GPL-1 GPL-2 GPL-3 )
 Easy MIME message parsing
-alpha amd64 ppc ppc64 x86 ~sparc-solaris ~x86-solaris
+amd64 ppc ppc64 x86 ~sparc-solaris ~x86-solaris
 base eutils multilib multiprocessing perl-module toolchain-funcs user
 test
 
