@@ -12,7 +12,7 @@ base eutils multilib multiprocessing perl-module toolchain-funcs user
 
 
 
-2
+4
 
 compile configure install prepare test unpack
 

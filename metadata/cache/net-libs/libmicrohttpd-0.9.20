@@ -3,7 +3,7 @@ ssl? ( dev-libs/libgcrypt net-libs/gnutls )
 0
 mirror://gnu/libmicrohttpd/libmicrohttpd-0.9.20.tar.gz
 
-http://gnunet.org/libmicrohttpd/
+http://www.gnu.org/software/libmicrohttpd/
 LGPL-2.1
 A small C library that makes it easy to run an HTTP server as part of another application.
 ~amd64 ~x86
