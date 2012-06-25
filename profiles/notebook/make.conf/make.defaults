@@ -3,7 +3,7 @@ tiff samba mp3 theora faac mp4 alsa x264 xvid v4l threads fbcon fbcondecor xiner
 exif laptop -consolekit policykit udev vorbis mad ogg truetype usb xv xcb
 gif flac mpeg mikmod spell libnotify acpi mng png mmx -pulseaudio sse sse2 lcms sasl icq jabber rdp xml gd icu xmpp
 networkmanager private-headers declarative bash-completion pm-utils vnc rdesktop system-sqlite lxde udisks -openrc systemd
--handbook -crashreporter plymouth vaapi libkms vdpau pdfimport zeroconf mdnsresponder-compat modemmanager
+-handbook -crashreporter plymouth vaapi libkms vdpau g3dvl pdfimport zeroconf mdnsresponder-compat modemmanager
 
 aspell histman hunspell multimedia oscar phonon qml idn lame mod djvu ebook
 
