@@ -1,4 +1,4 @@
-!static? ( acl? ( virtual/acl ) xattr? ( kernel_linux? ( sys-apps/attr ) ) >=dev-libs/popt-1.5 ) iconv? ( virtual/libiconv ) static? ( acl? ( virtual/acl[static-libs(+)] ) xattr? ( kernel_linux? ( sys-apps/attr[static-libs(+)] ) ) >=dev-libs/popt-1.5[static-libs(+)] )
+!static? ( acl? ( virtual/acl ) xattr? ( kernel_linux? ( sys-apps/attr ) ) >=dev-libs/popt-1.5 ) iconv? ( virtual/libiconv ) dev-lang/perl static? ( acl? ( virtual/acl[static-libs(+)] ) xattr? ( kernel_linux? ( sys-apps/attr[static-libs(+)] ) ) >=dev-libs/popt-1.5[static-libs(+)] )
 !static? ( acl? ( virtual/acl ) xattr? ( kernel_linux? ( sys-apps/attr ) ) >=dev-libs/popt-1.5 ) iconv? ( virtual/libiconv )
 0
 http://rsync.samba.org/ftp/rsync/src/rsync-3.0.9.tar.gz
