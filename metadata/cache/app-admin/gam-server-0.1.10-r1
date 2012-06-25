@@ -6,7 +6,7 @@ mirror://gnome/sources/gamin/0.1/gamin-0.1.10.tar.bz2 mirror://gentoo/gamin-0.1.
 http://www.gnome.org/~veillard/gamin/
 LGPL-2
 Library providing the FAM File Alteration Monitor API
-~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd
+~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd
 autotools eutils flag-o-matic gnome.org libtool multilib multiprocessing python toolchain-funcs user versionator
 debug kernel_linux
 

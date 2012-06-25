@@ -1,5 +1,5 @@
->=net-libs/gnutls-1.0.17 lua? ( dev-lang/lua ) perl? ( dev-lang/perl ) ruby? ( dev-lang/ruby ) !net-analyzer/prelude-nids sys-devel/flex perl? ( dev-lang/swig ) || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool python? ( =dev-lang/python-2* )
->=net-libs/gnutls-1.0.17 lua? ( dev-lang/lua ) perl? ( dev-lang/perl ) ruby? ( dev-lang/ruby ) !net-analyzer/prelude-nids python? ( =dev-lang/python-2* )
+>=dev-libs/libgcrypt-1.1.94 >=net-libs/gnutls-1.0.17 lua? ( dev-lang/lua ) perl? ( dev-lang/perl ) ruby? ( dev-lang/ruby ) !net-analyzer/prelude-nids sys-devel/flex perl? ( dev-lang/swig ) || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool python? ( =dev-lang/python-2* )
+>=dev-libs/libgcrypt-1.1.94 >=net-libs/gnutls-1.0.17 lua? ( dev-lang/lua ) perl? ( dev-lang/perl ) ruby? ( dev-lang/ruby ) !net-analyzer/prelude-nids python? ( =dev-lang/python-2* )
 0
 http://www.prelude-technologies.com/download/releases/libprelude/libprelude-1.0.0.tar.gz
 

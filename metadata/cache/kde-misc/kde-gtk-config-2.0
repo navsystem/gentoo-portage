@@ -6,7 +6,7 @@ mirror://kde/stable/kde-gtk-config/2.0/src/kde-gtk-config-2.0.tar.bz2
 http://projects.kde.org/projects/playground/base/kde-gtk-config
 GPL-3
 KDE systemsettings kcm to set GTK application look&feel
-amd64 ~arm ~ppc ~ppc64 ~x86
+amd64 ~arm ~ppc ~ppc64 x86
 base cmake-utils eutils fdo-mime flag-o-matic gnome2-utils kde4-base kde4-functions multilib toolchain-funcs user versionator virtualx
 debug linguas_ca linguas_cs linguas_da linguas_de linguas_el linguas_es linguas_et linguas_eu linguas_fr linguas_ga linguas_gl linguas_hu linguas_id linguas_it linguas_ja linguas_lt linguas_nds linguas_nl linguas_pl linguas_pt linguas_pt_BR linguas_ru linguas_sv linguas_uk linguas_zh_CN aqua
 

@@ -12,7 +12,7 @@ doc examples hdf5 mpi
 
 
 
-2
+4
 
 compile configure install prepare
 
