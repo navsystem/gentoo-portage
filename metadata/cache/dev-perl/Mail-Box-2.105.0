@@ -6,7 +6,7 @@ mirror://cpan/authors/id/M/MA/MARKOV/Mail-Box-2.105.tar.gz
 http://search.cpan.org/dist/Mail-Box/
 || ( Artistic GPL-1 GPL-2 GPL-3 )
 Mail folder manager and MUA backend
-~amd64 ~x86
+~amd64 x86
 base eutils multilib multiprocessing perl-module toolchain-funcs user
 test
 

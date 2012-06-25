@@ -6,7 +6,7 @@ mirror://cpan/authors/id/A/AD/ADAMK/Module-Manifest-1.08.tar.gz
 http://search.cpan.org/dist/Module-Manifest/
 || ( Artistic GPL-1 GPL-2 GPL-3 )
 Parse and examine a Perl distribution MANIFEST file
-~amd64 ~x86
+~amd64 ~x86 ~amd64-linux ~x86-linux
 base eutils multilib multiprocessing perl-module toolchain-funcs user
 test
 

@@ -6,7 +6,7 @@ mirror://cpan/authors/id/L/LB/LBAXTER/Sys-SigAction-0.15.tar.gz
 http://search.cpan.org/dist/Sys-SigAction/
 || ( Artistic GPL-1 GPL-2 GPL-3 )
 Perl extension for Consistent Signal Handling
-amd64 ~x86
+amd64 x86
 base eutils multilib multiprocessing perl-module toolchain-funcs user
 
 
