@@ -1,5 +1,5 @@
-|| ( virtual/httpd-cgi virtual/httpd-fastcgi ) virtual/httpd-php >=app-admin/webapp-config-1.50.15
-virtual/httpd-php >=app-admin/webapp-config-1.50.15
+|| ( virtual/httpd-cgi virtual/httpd-fastcgi ) >=app-admin/webapp-config-1.50.15
+virtual/httpd-php dev-lang/php[mysql] >=app-admin/webapp-config-1.50.15
 0.5.5
 mirror://sourceforge/gnopaste/gnopaste-0.5.5.tgz
 
@@ -7,14 +7,14 @@ http://gnopaste.sf.net/
 GPL-2
 gnopaste is a nopaste script based on PHP with MySQL
 ~x86 ~amd64
-depend.php eutils multilib phpconfutils toolchain-funcs user webapp
+eutils multilib toolchain-funcs user webapp
 vhosts
 
 
 
+4
 
-
-install postinst prerm setup unpack
+install postinst prepare prerm setup
 
 
 

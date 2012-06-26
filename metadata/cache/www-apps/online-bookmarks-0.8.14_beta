@@ -1,0 +1,22 @@
+>=app-admin/webapp-config-1.50.15
+virtual/httpd-php dev-lang/php[mysql] dev-php/PEAR-Auth dev-php/PEAR-DB >=app-admin/webapp-config-1.50.15
+0.8.14_beta
+http://www.frech.ch/online-bookmarks/download/online-bookmarks-0.8.14_beta.tar.gz
+
+http://www.frech.ch/online-bookmarks/index.php
+GPL-2
+A Bookmark management system to store your Bookmarks, Favorites and Links.
+~amd64 ~ppc ~x86
+webapp
+vhosts
+
+
+
+4
+
+install postinst prerm setup
+
+
+
+
+

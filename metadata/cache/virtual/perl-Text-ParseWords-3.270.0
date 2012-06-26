@@ -1,0 +1,22 @@
+
+|| ( =dev-lang/perl-5.16* =dev-lang/perl-5.14* =dev-lang/perl-5.12* ~perl-core/Text-ParseWords-3.270.0 )
+0
+
+
+
+
+Virtual for Text-ParseWords
+~amd64 ~x86
+
+
+
+
+
+
+
+-
+
+
+
+
+

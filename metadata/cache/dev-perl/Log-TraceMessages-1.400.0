@@ -1,0 +1,22 @@
+>=dev-perl/HTML-FromText-1.004 dev-lang/perl[-build]
+>=dev-perl/HTML-FromText-1.004 dev-lang/perl[-build]
+0
+mirror://cpan/authors/id/E/ED/EDAVIS/Log-TraceMessages-1.4.tar.gz
+
+http://search.cpan.org/dist/Log-TraceMessages/
+|| ( Artistic GPL-1 GPL-2 GPL-3 )
+Logging/debugging aid
+amd64 ppc x86
+base eutils multilib multiprocessing perl-module toolchain-funcs user
+
+
+
+
+4
+
+compile configure install prepare test unpack
+
+
+
+
+

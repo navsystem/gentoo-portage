@@ -1,4 +1,4 @@
-
+!!app-arch/rpm
 
 0
 http://c591116.r16.cf2.rackcdn.com/ekopath/nightly/Linux/ekopath-2012-05-30-installer.run -> ekopath-4.0.12.1_pre20120530.run
@@ -14,7 +14,7 @@ eutils multilib toolchain-funcs user versionator
 
 4
 
-install prepare pretend unpack
+install prepare unpack
 
 
 

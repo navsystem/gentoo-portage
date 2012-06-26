@@ -8,8 +8,8 @@ SFI-SCLA
 A port of Jagged Alliance 2 to SDL
 ~amd64 ~x86
 base eutils games multilib toolchain-funcs user
-cdinstall editor zlib linguas_en linguas_de linguas_fr linguas_it linguas_nl linguas_pl linguas_ru linguas_ru_gold
-
+cdinstall editor zlib linguas_de +linguas_en linguas_fr linguas_it linguas_nl linguas_pl linguas_ru linguas_ru_gold
+^^ ( linguas_de linguas_en linguas_fr linguas_it linguas_nl linguas_pl linguas_ru linguas_ru_gold )
 
 
 4

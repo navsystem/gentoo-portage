@@ -14,7 +14,7 @@ eutils mozextension multilib toolchain-funcs user versionator
 
 4
 
-configure install
+configure install prepare
 
 
 

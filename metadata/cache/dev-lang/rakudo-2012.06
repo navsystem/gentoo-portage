@@ -1,0 +1,22 @@
+>=dev-lang/parrot-4.4.0[unicode] >=dev-lang/nqp-2012.06 dev-lang/perl
+>=dev-lang/parrot-4.4.0[unicode] >=dev-lang/nqp-2012.06
+0
+mirror://github/rakudo/rakudo/rakudo-2012.06.tar.gz
+
+http://rakudo.org/
+Artistic-2
+A Perl 6 implementation built on the Parrot virtual machine
+~amd64 ~x86
+eutils multilib toolchain-funcs user
+doc
+
+
+
+3
+
+configure install prepare test
+
+
+
+
+

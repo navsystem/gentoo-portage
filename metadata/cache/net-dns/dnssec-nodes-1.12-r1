@@ -1,0 +1,22 @@
+net-dns/dnssec-tools[threads]
+net-dns/dnssec-tools[threads]
+0
+http://www.dnssec-tools.org/download/dnssec-nodes-1.12.tar.gz
+
+http://www.dnssec-tools.org
+GPL-2
+graphically depicts the DNSSEC results from a lookup from logfiles
+~amd64 ~x86
+base eutils multilib qt4-r2 toolchain-funcs user
+
+
+
+
+4
+
+compile configure install prepare unpack
+
+
+
+
+

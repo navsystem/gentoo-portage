@@ -1,0 +1,22 @@
+virtual/perl-Math-BigInt virtual/perl-Time-HiRes dev-lang/perl[-build]
+virtual/perl-Math-BigInt virtual/perl-Time-HiRes dev-lang/perl[-build]
+0
+mirror://cpan/authors/id/M/MW/MWX/Data-Uniqid-0.12.tar.gz
+
+http://search.cpan.org/dist/Data-Uniqid/
+|| ( Artistic GPL-1 GPL-2 GPL-3 )
+Perl extension for simple generating of unique ids
+~amd64 ~x86
+base eutils multilib multiprocessing perl-module toolchain-funcs user
+
+
+
+
+4
+
+compile configure install prepare test unpack
+
+
+
+
+

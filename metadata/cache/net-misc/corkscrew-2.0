@@ -12,9 +12,9 @@ autotools libtool multilib multiprocessing toolchain-funcs
 
 
 
-3
+4
 
-install prepare
+prepare
 
 
 
