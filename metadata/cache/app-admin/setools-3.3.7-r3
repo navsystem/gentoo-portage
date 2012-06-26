@@ -1,0 +1,22 @@
+>=sys-libs/libsepol-2.1.4 sys-libs/libselinux sys-devel/bison sys-devel/flex >=dev-db/sqlite-3.2:3 dev-libs/libxml2:2 virtual/pkgconfig java? ( >=dev-lang/swig-2.0.4 >=virtual/jdk-1.4 ) python? ( >=dev-lang/swig-2.0.4 ) X? ( >=dev-lang/tk-8.4.9 >=gnome-base/libglade-2.0 >=x11-libs/gtk+-2.8:2 ) || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool java? ( >=dev-java/java-config-2.1.9-r1 ) python? ( dev-lang/python )
+>=sys-libs/libsepol-2.1.4 sys-libs/libselinux >=dev-db/sqlite-3.2:3 dev-libs/libxml2:2 java? ( >=virtual/jre-1.4 ) X? ( >=dev-lang/tk-8.4.9 >=dev-tcltk/bwidget-1.8 >=gnome-base/libglade-2.0 >=x11-libs/gtk+-2.8:2 ) java? ( >=dev-java/java-config-2.1.9-r1 ) python? ( dev-lang/python )
+0
+http://oss.tresys.com/projects/setools/chrome/site/dists/setools-3.3.7/setools-3.3.7.tar.bz2 http://dev.gentoo.org/~swift/patches/setools/setools-3.3.7-01-fedora-patches.tar.gz http://dev.gentoo.org/~swift/patches/setools/setools-3.3.7-03-gentoo-patches.tar.gz
+test
+http://www.tresys.com/selinux/selinux_policy_tools.shtml
+GPL-2
+SELinux policy tools
+~amd64 ~x86
+autotools eutils java-pkg-opt-2 java-utils-2 libtool multilib multiprocessing python toolchain-funcs user versionator
+X debug java python elibc_FreeBSD java
+
+
+
+2
+
+compile configure install postinst postrm preinst prepare setup
+
+
+
+
+

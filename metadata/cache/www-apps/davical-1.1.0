@@ -1,0 +1,22 @@
+doc? ( dev-php/PEAR-PhpDocumentor ) =dev-lang/php-5* || ( virtual/httpd-basic virtual/httpd-cgi virtual/httpd-fastcgi ) >=app-admin/webapp-config-1.50.15
+app-admin/pwgen dev-lang/php[calendar,curl,pdo,postgres,xml] dev-perl/DBI dev-perl/DBD-Pg dev-perl/yaml >=dev-php/awl-0.51 www-servers/apache =dev-lang/php-5* >=app-admin/webapp-config-1.50.15
+1.1.0
+http://debian.mcmillan.net.nz/packages/davical/davical-1.1.0.tar.gz
+
+http://davical.org/
+GPL-2
+A CalDAV and CardDAV Server
+~amd64 ~x86
+depend.php eutils multilib phpconfutils toolchain-funcs user webapp
+doc vhosts
+
+
+
+2
+
+compile install postinst prepare prerm setup
+
+
+
+
+

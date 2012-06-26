@@ -6,7 +6,7 @@ http://www.swanson.ukfsn.org/wmdock/wmtop-0.9.0.tar.gz
 http://www.swanson.ukfsn.org/#wmtop
 GPL-2
 dockapp for monitoring the top three processes using cpu or memory.
-amd64 ~ppc ~sparc ~x86
+amd64 ~ppc ~sparc x86
 eutils multilib toolchain-funcs user
 
 

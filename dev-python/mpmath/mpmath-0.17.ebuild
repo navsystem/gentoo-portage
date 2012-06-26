@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mpmath/mpmath-0.17.ebuild,v 1.3 2012/06/20 21:05:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mpmath/mpmath-0.17.ebuild,v 1.7 2012/06/26 07:01:58 jlec Exp $
 
 EAPI=4
 
-PYTHON_DEPEND="*:2.5"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="*-pypy-*"
 DISTUTILS_SRC_TEST="py.test"
 
 inherit distutils eutils
@@ -14,7 +14,7 @@ MY_PN=${PN}-all
 MY_P=${MY_PN}-${PV}
 
 DESCRIPTION="Python library for arbitrary-precision floating-point arithmetic"
-HOMEPAGE="http://code.google.com/p/mpmath/ http://pypi.python.org/pypi/mpmath"
+HOMEPAGE="http://code.google.com/p/mpmath/ http://pypi.python.org/pypi/mpmath/"
 SRC_URI="http://mpmath.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="BSD"
@@ -35,8 +35,9 @@ DOCS="CHANGES"
 src_prepare() {
 	distutils_src_prepare
 
-	# don't install tests
-	epatch "${FILESDIR}/${PN}.patch"
+	epatch \
+		"${FILESDIR}/${PN}.patch" \
+		"${FILESDIR}/${P}-python-3.2.patch"
 
 	# this fails with the current version of dev-python/py
 	rm -f ${PN}/conftest.py
@@ -56,20 +57,10 @@ src_compile() {
 	fi
 }
 
-src_test() {
-	testing() {
-		cd "${S}"/mpmath/tests
-		PYTHONPATH="${S}/build-${PYTHON_ABI}/lib" "$(PYTHON)" runtests.py
-	}
-	python_execute_function testing
-}
-
 src_install() {
 	distutils_src_install
 
-	if use doc; then
-		dohtml -r doc/build/* || die "Installation of documentation failed"
-	fi
+	use doc && dohtml -r doc/build/*
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
@@ -80,9 +71,8 @@ src_install() {
 		local path="${ED}$(python_get_sitedir)/${PN}/libmp/"
 		if [[ "${PYTHON_ABI}" == 2.* ]]; then
 			rm -f "${path}exec_py3.py"
-		else if [[ "${PYTHON_ABI}" == 3.* ]]; then
+		elif [[ "${PYTHON_ABI}" == 3.* ]]; then
 			rm -f "${path}exec_py2.py"
-		fi
 		fi
 	}
 
