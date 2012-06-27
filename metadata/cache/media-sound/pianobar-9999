@@ -8,8 +8,8 @@ as-is
 A console-based replacement for Pandora's flash player
 
 eutils flag-o-matic git-2 multilib toolchain-funcs user
-aac +mp3 static-libs
-|| ( mp3 aac )
++aac mp3 static-libs
+|| ( aac mp3 )
 
 
 4

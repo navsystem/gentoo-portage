@@ -1,5 +1,5 @@
-gtk? ( =dev-libs/glib-2* =x11-libs/gtk+-2* ) imagemagick? ( >=media-gfx/imagemagick-6.2.6 ) jpeg? ( virtual/jpeg ) python? ( gtk? ( dev-python/pygtk ) ) qt4? ( x11-libs/qt-core x11-libs/qt-gui ) X? ( x11-libs/libXext xv? ( x11-libs/libXv ) ) || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool =dev-lang/python-2*
-gtk? ( =dev-libs/glib-2* =x11-libs/gtk+-2* ) imagemagick? ( >=media-gfx/imagemagick-6.2.6 ) jpeg? ( virtual/jpeg ) python? ( gtk? ( dev-python/pygtk ) ) qt4? ( x11-libs/qt-core x11-libs/qt-gui ) X? ( x11-libs/libXext xv? ( x11-libs/libXv ) ) =dev-lang/python-2*
+gtk? ( =dev-libs/glib-2* x11-libs/gtk+:2 ) imagemagick? ( >=media-gfx/imagemagick-6.2.6 ) jpeg? ( virtual/jpeg ) python? ( gtk? ( >=dev-python/pygtk-2 ) ) qt4? ( x11-libs/qt-core:4 x11-libs/qt-gui:4 ) X? ( x11-libs/libXext xv? ( x11-libs/libXv ) ) virtual/pkgconfig || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
+gtk? ( =dev-libs/glib-2* x11-libs/gtk+:2 ) imagemagick? ( >=media-gfx/imagemagick-6.2.6 ) jpeg? ( virtual/jpeg ) python? ( gtk? ( >=dev-python/pygtk-2 ) ) qt4? ( x11-libs/qt-core:4 x11-libs/qt-gui:4 ) X? ( x11-libs/libXext xv? ( x11-libs/libXv ) ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
 0
 mirror://sourceforge/zbar/zbar-0.10.tar.bz2
 

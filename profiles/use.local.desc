@@ -409,12 +409,10 @@ app-emulation/ganeti:kvm - Enable KVM support
 app-emulation/ganeti:lxc - Enable Linux Countainers support
 app-emulation/ganeti:sharedstorage - Enable Shared Storage support
 app-emulation/ganeti:xen - Enable Xen support
-app-emulation/libguestfs:erlang - Install Erlang bindings
+app-emulation/libguestfs:erlang - Use dev-libs/gobject-introspection for introspection
 app-emulation/libguestfs:fuse - Enable image mount support via fuse
-app-emulation/libguestfs:haskell - Install GHC binding
 app-emulation/libguestfs:introspection - Use dev-libs/gobject-introspection for introspection
-app-emulation/libguestfs:javadoc - Install java docs
-app-emulation/libguestfs:systemtap - Use dev-util/systemtap to trace programs
+app-emulation/libguestfs:systemtap - Use dev-libs/gobject-introspection for introspection
 app-emulation/libspectrum:gcrypt - Use dev-libs/libgcrypt for low-level crypto of some features, including logfiles.
 app-emulation/libvirt:audit - support sys-process/audit
 app-emulation/libvirt:iscsi - Allow using an iSCSI remote storage server as pool for disk image storage
@@ -428,7 +426,7 @@ app-emulation/libvirt:numa - Use NUMA for memory segmenting via sys-process/numa
 app-emulation/libvirt:openvz - Support management of OpenVZ virtualisation (see sys-kernel/openvz-sources)
 app-emulation/libvirt:parted - Allow using real disk partitions as pool for disk image storage, using sys-block/parted to create, resize and delete them.
 app-emulation/libvirt:pcap - Support auto learning IP addreses for routing
-app-emulation/libvirt:phyp - Support management of virtualisation through the PHYP hypervisor protocol.
+app-emulation/libvirt:phyp - Support IBM HMC / IVM hypervisor via PHYP protocol
 app-emulation/libvirt:qemu - Support management of QEmu virtualisation (one of app-emulation/qemu, app-emulation/qemu-kvm or app-emulation/qemu-spice)
 app-emulation/libvirt:uml - Support management of User Mode Linux virtualisation
 app-emulation/libvirt:vepa - Virtual Ethernet Port Aggregator (VEPA) / 802.1Qbg support. Relies on macvtap support.
@@ -876,6 +874,7 @@ app-text/gonzui:zip - Enable ZIP archive support
 app-text/gtranslator:http - Enable support for open translation plugin using net-libs/libsoup
 app-text/hyperestraier:mecab - Enable app-text/mecab support for Estraier
 app-text/lcdf-typetools:kpathsea - Enable integration with kpathsea search library (TeX related)
+app-text/leechcraft-monocle:fb2 - Enable support for FictionBook format
 app-text/libgxps:introspection - Use dev-libs/gobject-introspection for introspection
 app-text/libwpd:tools - Build miscellaneous tools
 app-text/libwpg:tools - Build miscellaneous tools
@@ -3710,6 +3709,7 @@ net-im/empathy:map - Enable world map support through media-libs/libchamplain
 net-im/empathy:nautilus - Enable nautilus-sendto support
 net-im/empathy:sendto - Enable support for sending files to various devices using gnome-extra/nautilus-sendto
 net-im/empathy:webkit - Build support for Adium-style HTML-based conversation window themes using net-libs/webkit-gtk
+net-im/err:plugins - Enable support for installing plugins with dev-vcs/git
 net-im/gajim:gmail - Depend on net-dns/bind-tools to get gmail chats working
 net-im/gajim:idle - Enable idle module
 net-im/gajim:srv - SRV capabilities
@@ -4326,6 +4326,8 @@ net-misc/openvpn:eurephia - Apply eurephia patch
 net-misc/openvpn:iproute2 - Enabled iproute2 support instead of net-tools
 net-misc/openvpn:passwordsave - Enables openvpn to save passwords
 net-misc/openvpn:pkcs11 - Enable PKCS#11 smartcard support
+net-misc/openvswitch:monitor - Build the Python and GUI dependent monitor applications
+net-misc/openvswitch:pyside - Use dev-python/pyside instead of dev-python/PyQt4 for Python/Qt-bindings when building with USE=monitor.
 net-misc/pavuk:hammer - Turn on chunky/hammer mode (DoS) in pavuk: when specified, pavuk will include features to stress test web sites using an ultrahigh performancereplay mechanism
 net-misc/plowshare:scripts - Install some additional helper scripts
 net-misc/plowshare:view-captcha - View captcha with aview
@@ -4390,7 +4392,6 @@ net-misc/termpkg:uucp - Adds support for uucp style device locking
 net-misc/tigervnc:server - Build TigerVNC server
 net-misc/tigervnc:xorgmodule - Build the Xorg module
 net-misc/tightvnc:server - Build vncserver. Allows us to only build server on one machine if set, build only viewer otherwise.
-net-misc/tinc:raw - Enable support for Raw Sockets
 net-misc/tinc:uml - Enable support for User Mode Linux Sockets
 net-misc/tinc:vde - Enable Virtual Distributed Ethernet (VDE) based networking
 net-misc/tor:bufferevents - Use Libevent's buffered IO
@@ -5417,8 +5418,6 @@ www-apps/horde-passwd:clearpasswd - Enables cleartext password storage in the vp
 www-apps/ikiwiki:extras - Installs additional modules used by ikiwiki plugins
 www-apps/lxr:freetext - Adds support for freetext search using swish-e
 www-apps/otrs:mod_perl - Provide all dependencies for use of mod_perl instead of cgi
-www-apps/postfixadmin:extras - Install contributed scripts and plugins
-www-apps/postfixadmin:tests - Install model unit tests
 www-apps/postfixadmin:vacation - Install vacation.pl script and dependencies
 www-apps/redmine:openid - Enable support for OpenID
 www-apps/redmine:passenger - Enable support for www-apache/passenger
@@ -5779,6 +5778,7 @@ x11-plugins/compiz-plugins-main:gconf - Install GConf schemas for the plugins, n
 x11-plugins/enigmail:custom-optimization - Enable user CFLAGS
 x11-plugins/enigmail:system-sqlite - Use the system-wide dev-db/sqlite installation with secure-delete enabled
 x11-plugins/pidgin-mbpurple:twitgin - Enable graphical plugin for Gtk+ interface of Pidgin.
+x11-plugins/pidgin-sipe:ocs2005-message-hack - disable message timeout for OCS2005 clients which causes "false" not delivered error messages
 x11-plugins/pidgin-sipe:voice - Enable experimental voice/video support
 x11-plugins/purple-plugin_pack:talkfilters - Enable support for app-text/talklfilters
 x11-plugins/screenlets:svg - Highly Recommended: Enable SVG graphics via dev-python/librsvg-python

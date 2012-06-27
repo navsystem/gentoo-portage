@@ -1,0 +1,22 @@
+~net-misc/leechcraft-core-9999 pdf? ( app-text/poppler[qt4] ) >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) dev-vcs/git
+~net-misc/leechcraft-core-9999 pdf? ( app-text/poppler[qt4] )
+0
+
+
+http://leechcraft.org/
+GPL-3
+Monocle, the modular document viewer for LeechCraft.
+
+base cmake-utils eutils flag-o-matic git-2 leechcraft multilib toolchain-funcs user versionator
+debug +fb2 +pdf
+
+
+
+4
+
+compile configure install prepare test unpack
+
+
+
+
+
