@@ -6,7 +6,7 @@ test
 http://ruby-ldap.sourceforge.net/
 BSD
 A Ruby interface to some LDAP libraries
-~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-macos
+~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-macos
 eutils java-utils-2 multilib ruby-fakegem ruby-ng toolchain-funcs user versionator
 ssl elibc_FreeBSD ruby_targets_ruby18 ruby_targets_ruby19 ruby_targets_ree18 doc test test
 || ( ruby_targets_ruby18 ruby_targets_ruby19 ruby_targets_ree18 )

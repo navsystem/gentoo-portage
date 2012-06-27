@@ -1,5 +1,5 @@
-x11-libs/qt-gui x11-libs/qt-core app-arch/unzip
-x11-libs/qt-gui x11-libs/qt-core
+x11-libs/qt-core x11-libs/qt-gui app-arch/unzip
+x11-libs/qt-core x11-libs/qt-gui
 2
 mirror://sourceforge/project/searchmonkey/Searchmonkey2/2.0.0%20%5Bstable%5D/searchmonkey_v2.0.0.zip
 
@@ -12,7 +12,7 @@ base eutils multilib qt4-r2 toolchain-funcs user
 
 
 
-3
+4
 
 compile configure install prepare unpack
 

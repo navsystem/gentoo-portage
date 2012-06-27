@@ -1,0 +1,22 @@
+>=dev-libs/boost-1.41.0 dev-libs/crypto++ dev-libs/openssl[-bindist] logrotate? ( app-admin/logrotate ) upnp? ( net-libs/miniupnpc ) sys-libs/db:4.8[cxx] >=app-shells/bash-4.1
+>=dev-libs/boost-1.41.0 dev-libs/crypto++ dev-libs/openssl[-bindist] logrotate? ( app-admin/logrotate ) upnp? ( net-libs/miniupnpc ) sys-libs/db:4.8[cxx]
+0
+http://gitorious.org/bitcoin/bitcoind-stable/archive-tarball/v0.4.7rc3 -> bitcoin-v0.4.7_rc3.tgz bip16? ( http://luke.dashjr.org/programs/bitcoin/files/bip16/0.4.7-Minimal-support-for-mining-BIP16-pay-to-script-hash-.patch.xz ) eligius? ( !bip16? ( http://luke.dashjr.org/programs/bitcoin/files/eligius_sendfee/0.4.5rc1-eligius_sendfee.patch.xz ) )
+
+http://bitcoin.org/
+MIT ISC
+Original Bitcoin crypto-currency wallet for automated services
+~amd64 ~x86
+db-use eutils multilib toolchain-funcs user versionator
++bip16 +eligius logrotate ssl upnp
+
+
+
+4
+
+compile install prepare setup
+
+
+
+
+
