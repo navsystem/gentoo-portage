@@ -1,4 +1,4 @@
-sys-fs/mtools dev-lang/nasm <sys-kernel/linux-headers-3.4
+sys-fs/mtools dev-lang/nasm
 sys-fs/mtools
 0
 mirror://kernel/linux/utils/boot/syslinux/2.xx/syslinux-2.13.tar.bz2

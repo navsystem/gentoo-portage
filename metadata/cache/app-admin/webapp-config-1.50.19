@@ -1,0 +1,22 @@
+app-text/xmlto =dev-lang/python-2*
+=dev-lang/python-2*
+0
+http://dev.gentoo.org/~blueness/webapp-config/webapp-config-1.50.19.tar.bz2
+
+http://sourceforge.net/projects/webapp-config/
+GPL-2
+Gentoo's installer for web-based applications
+~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd
+distutils multilib python toolchain-funcs
+
+
+
+
+3
+
+compile install postinst postrm prepare test
+
+
+
+
+
