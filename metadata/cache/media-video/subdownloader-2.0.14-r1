@@ -1,0 +1,22 @@
+dev-python/PyQt4 dev-python/kaa-metadata
+dev-python/PyQt4 dev-python/kaa-metadata
+0
+http://launchpad.net/subdownloader/trunk/2.0.14/+download/subdownloader-2.0.14.tar.gz
+
+http://www.subdownloader.net/
+GPL-3
+GUI application for automatic downloading/uploading of subtitles for videofiles
+~amd64 ~x86
+eutils multilib python toolchain-funcs user
+
+
+
+
+4
+
+install setup
+
+
+
+
+
