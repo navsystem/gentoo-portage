@@ -6,7 +6,7 @@ http://joewing.net/programs/jwm/releases/jwm-2.1.0.tar.bz2
 http://joewing.net/programs/jwm/
 GPL-2
 Very fast and lightweight still powerful window manager for X
-amd64 ~hppa ~ppc x86
+amd64 hppa ~ppc x86
 eutils multilib toolchain-funcs user
 bidi debug jpeg png truetype xinerama xpm
 

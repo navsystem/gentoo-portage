@@ -1,0 +1,22 @@
+~sci-physics/root-5.32.03[X,doc,graphviz,htmldoc,opengl] >=sci-physics/root-5.32.03-r3[X,doc,graphviz,htmldoc,opengl] virtual/pkgconfig test? ( !prefix? ( x11-base/xorg-server[xvfb] ) x11-apps/xhost )
+
+0
+ftp://root.cern.ch/root/root_v5.32.03.source.tar.gz
+
+http://root.cern.ch/
+LGPL-2.1
+API documentation for ROOT (An Object-Oriented Data Analysis Framework)
+~amd64 ~x86 ~amd64-linux ~x86-linux
+eutils multilib toolchain-funcs user virtualx
+test
+
+
+
+4
+
+compile configure install postinst prepare setup unpack
+
+
+
+
+

@@ -1,4 +1,4 @@
-virtual/opengl media-libs/freeglut >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+virtual/opengl media-libs/freeglut doc? ( app-doc/doxygen[dot] ) >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 virtual/opengl media-libs/freeglut
 0
 http://bullet.googlecode.com/files/bullet-2.80-rev2531.tgz
@@ -6,7 +6,7 @@ http://bullet.googlecode.com/files/bullet-2.80-rev2531.tgz
 http://www.bulletphysics.com/
 ZLIB
 Continuous Collision Detection and Physics Library
-~amd64 ~x86 ~amd64-linux
+~amd64 ~x86 ~amd64-linux ~x86-linux
 base cmake-utils eutils flag-o-matic multilib toolchain-funcs user
 doc double-precision examples extras
 

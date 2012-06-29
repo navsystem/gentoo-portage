@@ -1,0 +1,22 @@
+=dev-lang/python-2*
+vim? ( || ( app-editors/vim[python] app-editors/gvim[python] ) ) =dev-lang/python-2*
+0
+https://bitbucket.org/skrattaren/lodgeit-script-gentoo/raw/0f51a7cb1576/scripts/lodgeit.py -> lodgeit-0.3_p20120614.py vim? ( http://www.vim.org/scripts/download_script.php?src_id=8848 -> lodgeit-0.3_p20120614.vim )
+test
+http://paste.pocoo.org/
+as-is
+Command-line interface to paste.pocoo.org
+~amd64 ~x86
+multilib python toolchain-funcs
+vim
+
+
+
+4
+
+install setup unpack
+
+
+
+
+

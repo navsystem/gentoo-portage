@@ -1,0 +1,22 @@
+dev-lang/python
+dev-lang/python
+0
+mirror://pypi/a/authres/authres-0.402.tar.gz
+
+https://launchpad.net/authentication-results-python http://pypi.python.org/pypi/authres
+Apache-2.0
+Authentication Results Header Module
+~amd64 ~x86
+distutils multilib python toolchain-funcs
+
+
+
+
+4
+
+compile install postinst postrm prepare setup test
+
+
+
+
+

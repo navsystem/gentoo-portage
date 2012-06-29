@@ -1,0 +1,22 @@
+app-arch/unzip dev-python/setuptools doc? ( dev-python/sphinx ) dev-lang/python
+dev-lang/python
+0
+mirror://pypi/g/greenlet/greenlet-0.4.0.zip
+
+http://pypi.python.org/pypi/greenlet/
+MIT
+Lightweight in-process concurrent programming
+~amd64 ~x86
+distutils multilib python toolchain-funcs
+doc
+
+
+
+4
+
+compile install postinst postrm prepare setup test
+
+
+
+
+

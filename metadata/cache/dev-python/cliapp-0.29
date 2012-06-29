@@ -8,7 +8,7 @@ GPL-2
 Framework for Unix-like command line programs
 ~amd64 ~x86
 distutils multilib python toolchain-funcs
-
+test
 
 
 
