@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13894 2012/06/27 05:49:15 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13906 2012/06/30 14:48:00 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,52 @@
 
 #--- END OF EXAMPLES ---
 
+# Alexis Ballier <aballier@gentoo.org> (30 Jun 2012)
+# type-conv breaks its rev. deps. Mask it and packages depending on it until
+# everything is fine
+>=dev-ml/type-conv-3.0.5
+>=dev-ml/bin-prot-108.00.01
+>=dev-ml/fieldslib-108.00.01
+>=dev-ml/sexplib-7.0.5
+dev-ml/pa_ounit
+dev-ml/variantslib
+dev-ml/pipebang
+
+# Christian Faulhammer <fauli@gentoo.org> (30 Jun 2012)
+# temp mask until bump is finished
+=mail-client/claws-mail-3.8.1
+=mail-client/claws-mail-acpi-notifier-1.0.27
+=mail-client/claws-mail-address_keeper-1.0.6
+=mail-client/claws-mail-archive-0.6.12
+=mail-client/claws-mail-att-remover-1.0.13
+=mail-client/claws-mail-attachwarner-0.2.24
+=mail-client/claws-mail-clamd-3.5.4
+=mail-client/claws-mail-fancy-0.9.16
+=mail-client/claws-mail-fetchinfo-0.4.25
+=mail-client/claws-mail-gdata-0.4
+=mail-client/claws-mail-geolocation-0.0.8
+=mail-client/claws-mail-gtkhtml-0.33
+=mail-client/claws-mail-mailmbox-1.14.7
+=mail-client/claws-mail-notification-0.30
+=mail-client/claws-mail-python-0.10
+=mail-client/claws-mail-rssyl-0.33
+=mail-client/claws-mail-spam_report-0.3.16
+=mail-client/claws-mail-tnef_parse-0.3.13
+=mail-client/claws-mail-vcalendar-2.0.13
+
+# Richard Yao <ryao@gentoo.org> (29 Jun 2012)
+# Patch introduced regressions
+=sys-fs/zfs-0.6.0_rc9-r3
+
+# Mike Gilbert <floppym@gentoo.org> (29 Jun 2012)
+# Mask v8 versions used for www-client/chromium dev channel releases.
+>=dev-lang/v8-3.12
+
+# Michael Weber <xmw@gentoo.org> (29 Jun 2012)
+# Masking for security reasons (bug 424025, CVE-2012-3366)
+# Users of trigger plugin, update asap.
+<app-admin/bcfg2-1.2.2-r1
+
 # Matti Bickel <mabi@gentoo.org> (26 Jun 2012)
 # Dead upstream. Use any other wiki software like ikiwiki.
 # Removal on 26th Jul 2012
@@ -41,10 +87,6 @@ www-apps/phpwiki
 # ruby.eclass. Use dev-ruby/memcache-client instead.
 # Masked for removal in 30 days.
 dev-ruby/Ruby-MemCache
-
-# Richard Yao <ryao@gentoo.org> (25 Jun 2012)
-# Patch causes issues on Linux 3.2.y kernels
-=sys-fs/zfs-x11-0.6.0_rc9-r1
 
 # Samuli Suominen <ssuominen@gentoo.org> (25 Jun 2012)
 # Replaced by the new 1.0.0 release of x11-apps/transset.
@@ -411,11 +453,6 @@ games-util/nforenum
 # experimental features and accept a more unstable release.
 >=www-client/chromium-21
 >=www-client/google-chrome-21
-
-# Pawel Hajdan, Jr. <phajdan.jr@gentoo.org> (22 May 2012)
-# Mask v8 versions used for www-client/chromium dev channel releases.
->=dev-lang/v8-3.11
->=net-libs/nodejs-0.8.0
 
 # Michael Weber <xmw@gentoo.org> (22 May 2012)
 # Masked for removal in 30 days.
@@ -1023,6 +1060,7 @@ sci-astronomy/casa-data
 # rdep on the one above
 sci-astronomy/casacore
 sci-electronics/kicad
+dev-ruby/rcsparse
 
 # Federico Ferri <mescalinum@gentoo.org> (08 Aug 2009)
 # Doesn't build with Tcl 8.5, has several bugs open

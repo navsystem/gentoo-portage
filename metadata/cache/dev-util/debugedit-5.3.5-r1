@@ -6,7 +6,7 @@ http://dev.gentoo.org/~swegener/distfiles/debugedit-5.3.5.tar.bz2 http://dev.gen
 http://www.rpm5.org/
 GPL-2
 standalone debugedit taken from rpm
-amd64 ~hppa ppc ppc64 ~sparc x86 ~amd64-linux ~x86-linux
+amd64 hppa ppc ppc64 ~sparc x86 ~amd64-linux ~x86-linux
 eutils multilib toolchain-funcs user
 
 

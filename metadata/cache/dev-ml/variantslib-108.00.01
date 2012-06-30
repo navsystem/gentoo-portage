@@ -1,0 +1,22 @@
+>=dev-ml/type-conv-3.0.5 >=dev-ml/findlib-1.0.4-r1 >=dev-lang/ocaml-3.12[ocamlopt?]
+>=dev-ml/type-conv-3.0.5 >=dev-lang/ocaml-3.12[ocamlopt?]
+0
+http://bitbucket.org/yminsky/ocaml-core/downloads/variantslib-108.00.01.tar.gz
+
+http://bitbucket.org/yminsky/ocaml-core/wiki/Home
+Apache-2.0
+OCaml variants as first class values
+~amd64
+base eutils findlib multilib oasis toolchain-funcs user
++ocamlopt debug doc
+
+
+
+4
+
+compile configure install prepare test unpack
+
+
+
+
+

@@ -7,14 +7,14 @@ http://www.luakit.org
 GPL-3
 fast, small, webkit-gtk based micro-browser extensible by lua
 
-git-2
+git-2 multilib toolchain-funcs
 luajit vim-syntax
 
 
 
-3
+4
 
-compile install unpack
+compile install prepare unpack
 
 
 

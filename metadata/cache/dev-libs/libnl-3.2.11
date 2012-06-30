@@ -1,4 +1,4 @@
-sys-devel/flex virtual/yacc doc? ( app-text/asciidoc app-doc/doxygen[latex] media-gfx/mscgen )
+sys-devel/flex sys-devel/bison doc? ( app-text/asciidoc app-doc/doxygen[latex] media-gfx/mscgen )
 
 3
 http://www.infradead.org/~tgr/libnl/files/libnl-3.2.11.tar.gz
