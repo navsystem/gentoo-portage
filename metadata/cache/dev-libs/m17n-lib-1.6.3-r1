@@ -1,0 +1,22 @@
+anthy? ( app-i18n/anthy ) spell? ( app-text/ispell ) libxml2? ( dev-libs/libxml2 ) X? ( athena? ( x11-libs/libXaw ) bidi? ( dev-libs/fribidi ) fontconfig? ( media-libs/fontconfig ) gd? ( media-libs/gd[png] ) libotf? ( >=dev-libs/libotf-0.9.4 ) xft? ( >=media-libs/freetype-2.1 x11-libs/libXft ) x11-libs/libX11 ) ~dev-db/m17n-db-1.6.3 virtual/pkgconfig || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+anthy? ( app-i18n/anthy ) spell? ( app-text/ispell ) libxml2? ( dev-libs/libxml2 ) X? ( athena? ( x11-libs/libXaw ) bidi? ( dev-libs/fribidi ) fontconfig? ( media-libs/fontconfig ) gd? ( media-libs/gd[png] ) libotf? ( >=dev-libs/libotf-0.9.4 ) xft? ( >=media-libs/freetype-2.1 x11-libs/libXft ) x11-libs/libX11 ) ~dev-db/m17n-db-1.6.3
+0
+http://www.m17n.org/m17n-lib-download/m17n-lib-1.6.3.tar.gz
+
+http://www.m17n.org/m17n-lib/
+LGPL-2.1
+Multilingual Library for Unix/Linux
+~alpha ~amd64 ~hppa ~ppc ~sparc ~x86
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
+anthy athena anthy bidi fontconfig gd spell libotf libxml2 X xft
+
+
+
+4
+
+configure install prepare
+
+
+
+
+

@@ -1,5 +1,5 @@
-dev-libs/keybinder media-libs/gstreamer:0.10 media-libs/gst-plugins-base:0.10 >=xfce-base/xfconf-4.8 libnotify? ( x11-libs/libnotify ) virtual/pkgconfig >=sys-apps/sed-4
-dev-libs/keybinder media-libs/gstreamer:0.10 media-libs/gst-plugins-base:0.10 >=xfce-base/xfconf-4.8 libnotify? ( x11-libs/libnotify ) alsa? ( media-plugins/gst-plugins-alsa:0.10 ) oss? ( media-plugins/gst-plugins-oss:0.10 ) !alsa? ( !oss? ( media-plugins/gst-plugins-meta:0.10 ) )
+dev-libs/keybinder:0 media-libs/gstreamer:0.10 media-libs/gst-plugins-base:0.10 >=xfce-base/xfconf-4.8 libnotify? ( x11-libs/libnotify ) virtual/pkgconfig >=sys-apps/sed-4
+dev-libs/keybinder:0 media-libs/gstreamer:0.10 media-libs/gst-plugins-base:0.10 >=xfce-base/xfconf-4.8 libnotify? ( x11-libs/libnotify ) alsa? ( media-plugins/gst-plugins-alsa:0.10 ) oss? ( media-plugins/gst-plugins-oss:0.10 ) !alsa? ( !oss? ( media-plugins/gst-plugins-meta:0.10 ) )
 0
 mirror://xfce/src/apps/xfce4-volumed/0.1/xfce4-volumed-0.1.13.tar.bz2
 

@@ -5,7 +5,7 @@ http://www.rekallrevealed.org/packages/xbsql-0.11.tgz
 
 http://www.rekallrevealed.org/
 GPL-2
-XBSQL: An SQL Wrapper for the XBase library
+An SQL Wrapper for the XBase library
 amd64 ppc x86
 base eutils multilib toolchain-funcs user
 doc
