@@ -1,5 +1,5 @@
-!static? ( zlib? ( sys-libs/zlib ) ) pam? ( virtual/pam ) static? ( zlib? ( sys-libs/zlib[static-libs(+)] ) )
-!static? ( zlib? ( sys-libs/zlib ) ) pam? ( virtual/pam ) pam? ( >=sys-auth/pambase-20080219.1 )
+!static? ( zlib? ( sys-libs/zlib ) dev-libs/libtommath ) pam? ( virtual/pam ) static? ( zlib? ( sys-libs/zlib[static-libs(+)] ) dev-libs/libtommath[static-libs(+)] )
+!static? ( zlib? ( sys-libs/zlib ) dev-libs/libtommath ) pam? ( virtual/pam ) pam? ( >=sys-auth/pambase-20080219.1 )
 0
 http://matt.ucc.asn.au/dropbear/releases/dropbear-2012.55.tar.bz2 http://matt.ucc.asn.au/dropbear/testing/dropbear-2012.55.tar.bz2
 

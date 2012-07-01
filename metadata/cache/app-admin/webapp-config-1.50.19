@@ -1,5 +1,5 @@
-app-text/xmlto =dev-lang/python-2*
-=dev-lang/python-2*
+app-text/xmlto || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
+|| ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
 0
 http://dev.gentoo.org/~blueness/webapp-config/webapp-config-1.50.19.tar.bz2
 

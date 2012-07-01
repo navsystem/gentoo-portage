@@ -1,0 +1,22 @@
+sys-devel/automake sys-devel/libtool
+
+0
+http://www.rekallrevealed.org/packages/xbase-2.0.0.tgz
+
+http://www.rekallrevealed.org/
+GPL-2
+xbase (i.e. dBase, FoxPro, etc.) compatible C++ class library
+~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
+autotools autotools-utils eutils libtool multilib multiprocessing toolchain-funcs user
+doc static-libs
+
+
+
+4
+
+compile configure install prepare test
+
+
+
+
+
