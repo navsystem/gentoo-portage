@@ -3,7 +3,7 @@ static? ( sys-libs/zlib[static-libs] ) !static? ( >=sys-libs/zlib-1.2.3 )
 0
 http://www.canb.auug.org.au/~dbell/programs/sash-3.7.tar.gz
 
-http://www.canb.auug.org.au/~dbell/ http://dimavb.st.simbirsk.su/vlk/
+http://www.canb.auug.org.au/~dbell/
 freedist
 A small (static) UNIX Shell
 ~alpha amd64 arm hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86

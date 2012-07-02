@@ -1,0 +1,22 @@
+>=dev-ml/findlib-1.0.4-r1 >=dev-lang/ocaml-3.12[ocamlopt?]
+>=dev-lang/ocaml-3.12[ocamlopt?]
+0
+http://bitbucket.org/yminsky/ocaml-core/downloads/type_conv-108.00.01.tar.gz
+
+http://bitbucket.org/yminsky/ocaml-core/wiki/Home
+LGPL-2.1-linking-exception
+Mini library required for some other preprocessing libraries
+~amd64 ~x86
+base eutils findlib multilib oasis toolchain-funcs user
++ocamlopt debug doc
+
+
+
+3
+
+compile configure install prepare test unpack
+
+
+
+
+
