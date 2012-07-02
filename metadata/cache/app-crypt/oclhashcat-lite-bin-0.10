@@ -1,0 +1,22 @@
+sys-libs/zlib video_cards_nvidia? ( >=x11-drivers/nvidia-drivers-290.40 ) video_cards_fglrx? ( >=x11-drivers/ati-drivers-12.4 ) app-arch/p7zip
+sys-libs/zlib video_cards_nvidia? ( >=x11-drivers/nvidia-drivers-290.40 ) video_cards_fglrx? ( >=x11-drivers/ati-drivers-12.4 )
+0
+http://hashcat.net/files/oclHashcat-lite-0.10.7z
+strip
+http://hashcat.net/oclhashcat-lite/
+hashcat
+An opencl hash cracker
+-* ~amd64 ~x86
+eutils multilib pax-utils toolchain-funcs user
+video_cards_fglrx video_cards_nvidia
+
+
+
+4
+
+install
+
+
+
+
+

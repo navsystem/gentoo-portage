@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst prepare unpack
-DEPEND=app-arch/xz-utils >=sys-libs/ncurses-5.2-r5 debug? ( sdl? ( media-libs/libsdl ) ) device-mapper? ( >=sys-fs/lvm2-2.02.45 ) libzfs? ( sys-fs/zfs ) mount? ( sys-fs/fuse ) truetype? ( media-libs/freetype media-fonts/dejavu >=media-fonts/unifont-5 ) ppc? ( sys-apps/ibm-powerpc-utils sys-apps/powerpc-utils ) ppc64? ( sys-apps/ibm-powerpc-utils sys-apps/powerpc-utils ) >=dev-lang/python-2.5.2 sys-devel/flex sys-devel/bison sys-apps/texinfo static? ( truetype? ( app-arch/bzip2[static-libs(+)] media-libs/freetype[static-libs(+)] sys-libs/zlib[static-libs(+)] ) ) >=sys-devel/autogen-5.10 sys-apps/help2man || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=dev-vcs/bzr-2.0.1
+DEPEND=app-arch/xz-utils >=sys-libs/ncurses-5.2-r5 debug? ( sdl? ( media-libs/libsdl ) ) device-mapper? ( >=sys-fs/lvm2-2.02.45 ) libzfs? ( sys-fs/zfs ) mount? ( sys-fs/fuse ) truetype? ( media-libs/freetype media-fonts/dejavu >=media-fonts/unifont-5 ) ppc? ( sys-apps/ibm-powerpc-utils sys-apps/powerpc-utils ) ppc64? ( sys-apps/ibm-powerpc-utils sys-apps/powerpc-utils ) >=dev-lang/python-2.5.2 sys-devel/flex sys-devel/bison sys-apps/help2man sys-apps/texinfo static? ( truetype? ( app-arch/bzip2[static-libs(+)] media-libs/freetype[static-libs(+)] sys-libs/zlib[static-libs(+)] ) ) >=sys-devel/autogen-5.10 || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=dev-vcs/bzr-2.0.1
 DESCRIPTION=GNU GRUB boot loader
 EAPI=4
 HOMEPAGE=http://www.gnu.org/software/grub/
@@ -9,4 +9,4 @@ RDEPEND=app-arch/xz-utils >=sys-libs/ncurses-5.2-r5 debug? ( sdl? ( media-libs/l
 REQUIRED_USE=grub_platforms_qemu? ( truetype )
 SLOT=2
 _eclasses_=autotools	9d170f07df0e48055093b8c6a60d0fba	bzr	ec4306b727be7630f6d5abaf08c8b818	eutils	327b713e2d6949c42cd96bc4898fd280	flag-o-matic	2c938a1fe61ea9899a2b97ea1e065f5f	libtool	46e19fa7553f66c48ebc7cf025acd3ed	multilib	5782800349f728f725f9378105c6a2ab	multiprocessing	1512bdfe7004902b8cd2c466fc3df772	pax-utils	0ace932c4045349c7fc1af0fe7091acf	toolchain-funcs	e575dd4d4682fc3539829c52d8382856	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=55b82ab145f229651a5417a469ddd710
+_md5_=d8eec47273a8e8529b007c20f4c94711
