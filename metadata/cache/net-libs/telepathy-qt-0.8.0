@@ -6,7 +6,7 @@ test
 http://telepathy.freedesktop.org/
 LGPL-2.1
 Qt4 bindings for the Telepathy D-Bus protocol
-amd64 ~x86
+amd64 x86
 base cmake-utils eutils flag-o-matic multilib python toolchain-funcs user
 debug farsight glib test
 

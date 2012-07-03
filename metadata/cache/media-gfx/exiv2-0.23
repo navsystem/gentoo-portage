@@ -1,4 +1,4 @@
-virtual/libiconv nls? ( virtual/libintl ) xmp? ( dev-libs/expat ) zlib? ( sys-libs/zlib ) contrib? ( >=dev-libs/boost-1.37 ) doc? ( app-doc/doxygen dev-libs/libxslt dev-util/pkgconfig media-gfx/graphviz =dev-lang/python-2* ) nls? ( sys-devel/gettext )
+virtual/libiconv nls? ( virtual/libintl ) xmp? ( dev-libs/expat ) zlib? ( sys-libs/zlib ) contrib? ( >=dev-libs/boost-1.37 ) doc? ( app-doc/doxygen dev-libs/libxslt virtual/pkgconfig media-gfx/graphviz =dev-lang/python-2* ) nls? ( sys-devel/gettext )
 virtual/libiconv nls? ( virtual/libintl ) xmp? ( dev-libs/expat ) zlib? ( sys-libs/zlib )
 0
 http://www.exiv2.org/exiv2-0.23.tar.gz
@@ -14,7 +14,7 @@ contrib doc examples nls xmp zlib static-libs linguas_de linguas_es linguas_fi l
 
 4
 
-compile configure install postinst prepare setup test
+compile configure install prepare setup test
 
 
 
