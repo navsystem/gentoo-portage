@@ -1,5 +1,5 @@
 sys-libs/slang gpm? ( sys-libs/gpm ) nls? ( sys-devel/gettext )
-sys-libs/slang gpm? ( sys-libs/gpm ) nls? ( sys-devel/gettext )
+
 0
 mirror://debian/pool/main/p/pdmenu/pdmenu_1.2.95.tar.gz
 test
@@ -7,14 +7,14 @@ http://www.kitenet.net/programs/pdmenu/
 GPL-2
 A simple console menu program
 ~alpha amd64 ~ia64 ~mips x86
-
+eutils multilib toolchain-funcs user
 nls gpm examples
 
 
 
+4
 
-
-compile install postinst
+configure install postinst prepare
 
 
 

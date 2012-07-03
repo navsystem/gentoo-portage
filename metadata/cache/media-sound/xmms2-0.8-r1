@@ -14,7 +14,7 @@ aac airplay +alsa ao asf avahi cdda curl cxx ffmpeg flac gvfs ices jack mac mlib
 
 3
 
-compile configure install postinst postrm prepare setup
+compile configure install postinst postrm prepare setup test
 
 
 

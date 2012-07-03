@@ -6,7 +6,7 @@ http://dev.gentoo.org/~ottxor/distfiles/grive-0.2_pre20120628.tar.gz
 http://www.lbreda.com/grive/
 GPL-2
 an open source Linux client for Google Drive
-~x86
+~amd64 ~x86
 base cmake-utils eutils flag-o-matic multilib toolchain-funcs user
 
 

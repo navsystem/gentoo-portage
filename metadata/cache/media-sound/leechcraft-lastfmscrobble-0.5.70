@@ -1,5 +1,5 @@
-~net-misc/leechcraft-core-0.5.70 media-libs/liblastfm >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) app-arch/xz-utils
-~net-misc/leechcraft-core-0.5.70 media-libs/liblastfm
+~net-misc/leechcraft-core-0.5.70 <media-libs/liblastfm-1.0 >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) app-arch/xz-utils
+~net-misc/leechcraft-core-0.5.70 <media-libs/liblastfm-1.0
 0
 mirror://sourceforge/leechcraft/leechcraft-0.5.70.tar.xz
 

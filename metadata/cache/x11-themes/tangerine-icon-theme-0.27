@@ -1,5 +1,5 @@
-gnome-base/librsvg >=x11-misc/icon-naming-utils-0.8.90 dev-util/intltool sys-devel/gettext >=sys-apps/sed-4
-|| ( kde-base/oxygen-icons x11-themes/gnome-icon-theme )
+dev-util/intltool >=gnome-base/librsvg-2.34 sys-devel/gettext >=x11-misc/icon-naming-utils-0.8.90 >=sys-apps/sed-4
+!minimal? ( || ( x11-themes/gnome-icon-theme kde-base/oxygen-icons ) )
 0
 mirror://ubuntu/pool/universe/t/tangerine-icon-theme/tangerine-icon-theme_0.27.tar.gz http://www.gentoo.org/images/gentoo-logo.svg
 binchecks strip
@@ -8,13 +8,13 @@ CCPL-Attribution-ShareAlike-2.5 LGPL-2.1
 a derivative of the standard Tango theme, using a more orange approach
 amd64 x86
 gnome2-utils
+minimal
 
 
 
+4
 
-3
-
-compile install postinst postrm preinst prepare
+compile postinst postrm preinst prepare unpack
 
 
 

@@ -7,14 +7,14 @@ http://charm.cs.uiuc.edu/
 charm
 Message-passing parallel language and runtime system
 ~amd64 ~x86
-eutils flag-o-matic multilib toolchain-funcs user
+eutils flag-o-matic fortran-2 multilib toolchain-funcs user
 cmkopt tcp smp doc
 
 
 
 4
 
-compile install postinst prepare
+compile install postinst prepare setup
 
 
 
