@@ -6,7 +6,7 @@ mirror://sourceforge/gspeakers/gspeakers-0.11.tar.gz
 http://gspeakers.sourceforge.net/
 LGPL-2.1
 GTK based loudspeaker enclosure and crossovernetwork designer
-~amd64 ~ppc x86
+amd64 ~ppc x86
 autotools eutils fdo-mime gnome.org gnome2 gnome2-utils libtool multilib multiprocessing toolchain-funcs user versionator
 debug
 

@@ -6,7 +6,7 @@ mirror://sourceforge/sumwars/sumwars-0.5.6-src.tar.bz2
 http://sumwars.org
 GPL-3 CCPL-Attribution-ShareAlike-3.0
 a multi-player, 3D action role-playing game
-amd64 ~x86
+amd64 x86
 base cmake-utils eutils flag-o-matic games gnome2-utils multilib toolchain-funcs user
 +tools debug linguas_de linguas_en linguas_it linguas_pl linguas_pt linguas_ru linguas_uk
 
