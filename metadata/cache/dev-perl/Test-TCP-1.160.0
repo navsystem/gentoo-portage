@@ -1,0 +1,22 @@
+>=dev-perl/Test-SharedFork-0.190.0 >=virtual/perl-IO-1.23 test? ( >=virtual/perl-Test-Simple-0.980.0 ) dev-lang/perl[-build]
+>=dev-perl/Test-SharedFork-0.190.0 >=virtual/perl-IO-1.23 dev-lang/perl[-build]
+0
+mirror://cpan/authors/id/T/TO/TOKUHIROM/Test-TCP-1.16.tar.gz
+
+http://search.cpan.org/dist/Test-TCP/
+|| ( Artistic GPL-1 GPL-2 GPL-3 )
+Testing TCP program
+~amd64 ~x86
+base eutils multilib multiprocessing perl-module toolchain-funcs user
+test
+
+
+
+4
+
+compile configure install prepare test unpack
+
+
+
+
+

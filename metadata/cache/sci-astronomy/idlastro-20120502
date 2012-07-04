@@ -6,7 +6,7 @@ http://idlastro.gsfc.nasa.gov//ftp/astron.tar.gz -> idlastro-20120502.tar.gz
 http://idlastro.gsfc.nasa.gov/
 public-domain
 Astronomical user routines for IDL
-~amd64 ~x86
+~amd64 ~x86 ~amd64-linux ~x86-linux
 
 
 

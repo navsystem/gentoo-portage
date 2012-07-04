@@ -8,7 +8,7 @@ LGPL-2.1-linking-exception
 Jane Street's alternative to the standard library
 ~amd64
 base eutils findlib multilib oasis toolchain-funcs user
-+ocamlopt debug doc
+test +ocamlopt debug doc
 
 
 

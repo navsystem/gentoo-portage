@@ -1,0 +1,22 @@
+sys-libs/zlib sys-apps/acl sys-fs/e2fsprogs dev-vcs/git
+sys-libs/zlib sys-apps/acl sys-fs/e2fsprogs
+0
+
+
+https://btrfs.wiki.kernel.org
+GPL-2
+Btrfs filesystem utilities
+~amd64 ~arm ~mips ~ppc ~ppc64 ~x86
+git-2 multilib toolchain-funcs
+
+
+
+
+4
+
+compile install postinst prepare unpack
+
+
+
+
+

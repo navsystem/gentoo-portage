@@ -6,7 +6,7 @@ test
 http://revelation.olasagasti.info/
 GPL-2
 A password manager for GNOME
-amd64 ~ppc ~x86
+amd64 ppc x86
 eutils fdo-mime gnome.org gnome2 gnome2-utils libtool multilib python toolchain-funcs user versionator
 applet
 
