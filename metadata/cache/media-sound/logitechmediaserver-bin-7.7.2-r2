@@ -1,0 +1,22 @@
+!media-sound/squeezecenter !media-sound/squeezeboxserver
+!prefix? ( >=sys-apps/baselayout-2.0.0 ) !prefix? ( virtual/logger ) >=dev-lang/perl-5.8.8[ithreads] <dev-lang/perl-5.15[ithreads] >=dev-perl/Data-UUID-1.202
+0
+http://downloads.slimdevices.com/LogitechMediaServer_v7.7.2/logitechmediaserver-7.7.2.tgz
+
+http://www.mysqueezebox.com/download
+GPL-2
+Logitech Media Server (streaming audio server)
+~amd64 ~x86
+eutils multilib toolchain-funcs user
+
+
+
+
+3
+
+config install postinst prepare setup
+
+
+
+
+

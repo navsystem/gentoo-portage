@@ -1,4 +1,4 @@
->=dev-libs/glib-2.32:2 sys-auth/polkit introspection? ( >=dev-libs/gobject-introspection-0.9.12 ) systemd? ( >=sys-apps/systemd-43 ) !systemd? ( sys-auth/consolekit ) dev-libs/libxslt >=dev-util/intltool-0.40 sys-devel/gettext virtual/pkgconfig doc? ( app-text/docbook-xml-dtd:4.1.2 app-text/xmlto ) vala? ( >=dev-lang/vala-0.16.1-r1:0.16[vapigen] ) app-arch/xz-utils >=sys-apps/sed-4 !<sys-apps/systemd-29-r4 !=sys-apps/systemd-37-r1
+>=dev-libs/glib-2.32:2 sys-auth/polkit introspection? ( >=dev-libs/gobject-introspection-0.9.12 ) systemd? ( >=sys-apps/systemd-43 ) !systemd? ( sys-auth/consolekit ) dev-libs/libxslt dev-util/gdbus-codegen >=dev-util/intltool-0.40 sys-devel/gettext virtual/pkgconfig doc? ( app-text/docbook-xml-dtd:4.1.2 app-text/xmlto ) vala? ( >=dev-lang/vala-0.16.1-r1:0.16[vapigen] ) app-arch/xz-utils >=sys-apps/sed-4 !<sys-apps/systemd-29-r4 !=sys-apps/systemd-37-r1
 >=dev-libs/glib-2.32:2 sys-auth/polkit introspection? ( >=dev-libs/gobject-introspection-0.9.12 ) systemd? ( >=sys-apps/systemd-43 ) !systemd? ( sys-auth/consolekit )
 0
 http://www.freedesktop.org/software/accountsservice/accountsservice-0.6.21.tar.xz

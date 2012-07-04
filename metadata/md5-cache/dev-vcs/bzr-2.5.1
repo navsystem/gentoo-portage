@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install postinst postrm prepare setup test
-DEPEND=test? ( || ( dev-lang/python:2.7[xml] dev-lang/python:2.6[xml] dev-python/celementtree ) curl? ( dev-python/pycurl ) sftp? ( dev-python/paramiko ) || ( dev-python/pyftpdlib dev-python/medusa ) dev-python/subunit >=dev-python/testtools-0.9.5 ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) || ( =dev-lang/python-2.7*[threads,ssl] =dev-lang/python-2.6*[threads,ssl] )
+DEPEND=test? ( || ( dev-lang/python:2.7[xml] dev-lang/python:2.6[xml] dev-python/celementtree ) curl? ( dev-python/pycurl ) sftp? ( dev-python/paramiko ) >=dev-python/pyftpdlib-0.7.0 dev-python/subunit >=dev-python/testtools-0.9.5 ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) || ( =dev-lang/python-2.7*[threads,ssl] =dev-lang/python-2.6*[threads,ssl] )
 DESCRIPTION=Bazaar is a next generation distributed version control system.
 EAPI=3
 HOMEPAGE=http://bazaar-vcs.org/
@@ -10,4 +10,4 @@ RDEPEND=|| ( dev-lang/python:2.7[xml] dev-lang/python:2.6[xml] dev-python/celeme
 SLOT=0
 SRC_URI=http://launchpad.net/bzr/2.5/2.5.1/+download/bzr-2.5.1.tar.gz
 _eclasses_=bash-completion-r1	3480f8385cb9e31797e7b659e366e2d2	distutils	15ae23f6f8219a009bfcfff7724fe727	eutils	327b713e2d6949c42cd96bc4898fd280	multilib	5782800349f728f725f9378105c6a2ab	python	4152846e243ec207de8a1b02a36f1461	toolchain-funcs	e575dd4d4682fc3539829c52d8382856	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=7478e1e9207c46d85d97d21cf9c5a875
+_md5_=37c6f415a92fe6de21dd9e793a02142a

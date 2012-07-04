@@ -1,0 +1,22 @@
+app-text/ghostscript-gpl net-print/cups net-print/foomatic-filters sys-libs/glibc syslog? ( virtual/logger )
+app-text/ghostscript-gpl net-print/cups net-print/foomatic-filters sys-libs/glibc syslog? ( virtual/logger )
+0
+mirror://sourceforge/pnm2ppa/pnm2ppa-1.13.tar.gz
+
+http://pnm2ppa.sourceforge.net
+GPL-2
+Print driver for Hp Deskjet 710, 712, 720, 722, 820, 1000 series
+~amd64 ~x86
+base eutils multilib toolchain-funcs user
+syslog linguas_en linguas_cs linguas_es linguas_fr linguas_it linguas_nl
+
+
+
+4
+
+compile configure install prepare unpack
+
+
+
+
+

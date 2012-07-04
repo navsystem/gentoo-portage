@@ -1,0 +1,22 @@
+
+
+0
+http://sysd.org/stas/files/active/0/ttysnoop-0.12d.k26.tar.gz
+
+http://sysd.org/stas/node/35
+GPL-2
+Tool to snoop on login tty's through another tty-device or pseudo-tty
+~x86
+eutils multilib toolchain-funcs user
+
+
+
+
+4
+
+compile install prepare
+
+
+
+
+

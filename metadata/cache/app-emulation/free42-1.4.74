@@ -6,7 +6,7 @@ mirror://gentoo/free42-1.4.74.tgz
 http://thomasokken.com/free42/
 GPL-2
 An HP-42S Calculator Simulator
-~amd64 ~x86
+~amd64 x86
 multilib toolchain-funcs
 
 
