@@ -6,7 +6,7 @@ http://ushare.geexbox.org/releases/ushare-1.1a.tar.bz2
 http://ushare.geexbox.org/
 GPL-2
 uShare is a UPnP (TM) A/V & DLNA Media Server
-amd64 ~x86
+amd64 x86
 eutils multilib toolchain-funcs user
 dlna nls
 

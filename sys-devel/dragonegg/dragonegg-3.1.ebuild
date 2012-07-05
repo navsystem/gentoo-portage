@@ -1,18 +1,19 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/dragonegg/dragonegg-3.1.ebuild,v 1.1 2012/05/24 12:13:40 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/dragonegg/dragonegg-3.1.ebuild,v 1.3 2012/07/04 00:32:46 mr_bones_ Exp $
 
 EAPI=4
 inherit multilib toolchain-funcs
 
 DESCRIPTION="GCC plugin that uses LLVM for optimization and code generation"
 HOMEPAGE="http://dragonegg.llvm.org/"
-SRC_URI="http://llvm.org/releases/${PV}/${P}.src.tar.gz"
+SRC_URI="http://llvm.org/releases/${PV}/${P}.src.tar.gz
+	test? ( http://llvm.org/releases/${PV}/llvm-${PV}.src.tar.gz )"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux"
-IUSE=""
+IUSE="test"
 
 DEPEND="|| ( sys-devel/gcc:4.5[lto]
 		>=sys-devel/gcc-4.6 )
@@ -30,6 +31,10 @@ src_prepare() {
 src_compile() {
 	# GCC: compiler to use plugin with
 	emake CC="$(tc-getCC)" GCC="$(tc-getCC)" CXX="$(tc-getCXX)" VERBOSE=1
+}
+
+src_test() {
+	emake LIT_DIR="${WORKDIR}"/llvm-${PV}.src/utils/lit check
 }
 
 src_install() {

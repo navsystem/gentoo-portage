@@ -1,0 +1,22 @@
+dev-libs/glib:2 sys-fs/fuse virtual/pkgconfig
+dev-libs/glib:2 sys-fs/fuse
+0
+mirror://sourceforge/libfat/libfat-0.3a.tar.gz
+
+http://libfat.sourceforge.net
+GPL-2
+Support library to access and manipulate FAT12 / FAT16 / FAT32 file systems
+~amd64 ~arm ~x86
+
+
+
+
+
+4
+
+-
+
+
+
+
+

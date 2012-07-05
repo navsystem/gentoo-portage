@@ -14,7 +14,7 @@ eutils multilib subversion toolchain-funcs user
 
 4
 
-compile install postinst preinst prepare unpack
+compile install postinst preinst prepare test unpack
 
 
 

@@ -1,20 +1,20 @@
 || ( sys-devel/gcc:4.5[lto] >=sys-devel/gcc-4.6 ) ~sys-devel/llvm-3.1
 || ( sys-devel/gcc:4.5[lto] >=sys-devel/gcc-4.6 ) ~sys-devel/llvm-3.1
 0
-http://llvm.org/releases/3.1/dragonegg-3.1.src.tar.gz
+http://llvm.org/releases/3.1/dragonegg-3.1.src.tar.gz test? ( http://llvm.org/releases/3.1/llvm-3.1.src.tar.gz )
 
 http://dragonegg.llvm.org/
 GPL-2
 GCC plugin that uses LLVM for optimization and code generation
 ~amd64 ~x86 ~amd64-linux
 multilib toolchain-funcs
-
+test
 
 
 
 4
 
-compile install postinst prepare
+compile install postinst prepare test
 
 
 
