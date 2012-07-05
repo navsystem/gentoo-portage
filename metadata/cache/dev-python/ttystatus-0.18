@@ -2,7 +2,7 @@
 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
 0
 http://code.liw.fi/debian/pool/main/p/python-ttystatus/python-ttystatus_0.18.orig.tar.gz
-
+test
 http://liw.fi/ttystatus/
 GPL-3
 Terminal progress bar and status output for command line

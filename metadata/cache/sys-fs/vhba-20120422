@@ -1,0 +1,22 @@
+kernel_linux? ( virtual/modutils ) sys-apps/sed kernel_linux? ( virtual/linux-sources )
+>=sys-fs/udev-125 kernel_linux? ( virtual/modutils )
+0
+mirror://sourceforge/cdemu/vhba-module-20120422.tar.bz2
+
+http://cdemu.org
+GPL-2
+Virtual (SCSI) Host Bus Adapter kernel module for the CDEmu suite
+~amd64 ~hppa ~x86
+eutils linux-info linux-mod multilib toolchain-funcs user versionator
+kernel_linux
+
+
+
+4
+
+compile install postinst postrm preinst prepare setup
+
+
+
+
+

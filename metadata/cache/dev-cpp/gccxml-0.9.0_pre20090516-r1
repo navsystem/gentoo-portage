@@ -12,7 +12,7 @@ base cmake-utils eutils flag-o-matic multilib toolchain-funcs user
 
 
 
-2
+4
 
 compile configure install prepare test unpack
 

@@ -6,7 +6,7 @@ mirror://sourceforge/leechcraft/leechcraft-0.5.70.tar.xz
 http://leechcraft.org/
 GPL-3
 Azoth, the modular IM client for LeechCraft.
-~amd64 ~x86
+amd64 ~x86
 base cmake-utils eutils flag-o-matic leechcraft multilib toolchain-funcs user versionator
 debug astrality +acetamide +adiumstyles +autoidler +autopaste +chathistory +crypt +depester +embedmedia +herbicide +hili +isterique +juick +keeso +lastseen +metacontacts media +modnok +nativeemoticons +otroid +p100q +rosenthal +standardstyles +xoox +xtazy +zheet
 
