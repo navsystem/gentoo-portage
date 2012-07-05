@@ -1,4 +1,4 @@
-net-wireless/wireless-tools kernel_linux? ( sys-libs/libcap >=dev-libs/libnl-1.1 ) net-libs/libpcap pcre? ( dev-libs/libpcre ) suid? ( sys-libs/libcap ) client? ( sys-libs/ncurses ) !arm? ( speech? ( app-accessibility/flite ) ) ruby? ( dev-lang/ruby ) plugin-btscan? ( net-wireless/bluez ) plugin-dot15d4? ( virtual/libusb:0 ) plugin-spectools? ( net-wireless/spectools ) virtual/pkgconfig dev-vcs/subversion net-misc/rsync
+net-wireless/wireless-tools kernel_linux? ( sys-libs/libcap >=dev-libs/libnl-1.1 ) net-libs/libpcap pcre? ( dev-libs/libpcre ) suid? ( sys-libs/libcap ) client? ( sys-libs/ncurses ) !arm? ( speech? ( app-accessibility/flite ) ) ruby? ( dev-lang/ruby ) plugin-btscan? ( net-wireless/bluez ) plugin-dot15d4? ( virtual/libusb:0 ) plugin-spectools? ( net-wireless/spectools ) virtual/pkgconfig dev-vcs/git
 net-wireless/wireless-tools kernel_linux? ( sys-libs/libcap >=dev-libs/libnl-1.1 ) net-libs/libpcap pcre? ( dev-libs/libpcre ) suid? ( sys-libs/libcap ) client? ( sys-libs/ncurses ) !arm? ( speech? ( app-accessibility/flite ) ) ruby? ( dev-lang/ruby ) plugin-btscan? ( net-wireless/bluez ) plugin-dot15d4? ( virtual/libusb:0 ) plugin-spectools? ( net-wireless/spectools )
 0
 
@@ -7,7 +7,7 @@ http://www.kismetwireless.net/
 GPL-2
 IEEE 802.11 wireless LAN sniffer
 
-eutils multilib subversion toolchain-funcs user
+eutils git-2 multilib toolchain-funcs user
 +client +pcre speech +plugin-autowep +plugin-btscan plugin-dot15d4 +plugin-ptw +plugin-spectools +plugin-syslog +ruby +suid
 
 

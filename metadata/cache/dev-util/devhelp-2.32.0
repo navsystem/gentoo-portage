@@ -5,7 +5,7 @@ mirror://gnome/sources/devhelp/2.32/devhelp-2.32.0.tar.bz2
 
 http://live.gnome.org/devhelp
 GPL-2
-An API documentation browser for GNOME 2
+An API documentation browser for GNOME
 ~alpha amd64 ~ia64 ppc sparc x86 ~x86-fbsd
 eutils fdo-mime gnome.org gnome2 gnome2-utils libtool multilib python toolchain-funcs user versionator
 

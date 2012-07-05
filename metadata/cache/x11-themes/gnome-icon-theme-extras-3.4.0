@@ -5,7 +5,7 @@ mirror://gnome/sources/gnome-icon-theme-extras/3.4/gnome-icon-theme-extras-3.4.0
 binchecks strip
 http://www.gnome.org/ http://git.gnome.org/browse/gnome-icon-theme-extras/
 CCPL-Attribution-ShareAlike-3.0
-GNOME 2 icon theme extras
+Extra GNOME icons for specific devices and file types
 ~amd64 ~x86
 autotools eutils fdo-mime gnome.org gnome2 gnome2-utils libtool multilib multiprocessing toolchain-funcs user versionator
 
