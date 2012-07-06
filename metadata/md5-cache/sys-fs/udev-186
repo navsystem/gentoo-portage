@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst preinst prepare setup
-DEPEND=gudev? ( dev-libs/glib:2 ) introspection? ( dev-libs/gobject-introspection ) selinux? ( sys-libs/libselinux ) >=sys-apps/kmod-5 >=sys-apps/util-linux-2.20 !<sys-libs/glibc-2.10 dev-util/gperf doc? ( dev-util/gtk-doc ) || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=gudev? ( dev-libs/glib:2 ) introspection? ( dev-libs/gobject-introspection ) selinux? ( sys-libs/libselinux ) >=sys-apps/kmod-5 >=sys-apps/util-linux-2.20 !<sys-libs/glibc-2.10 dev-util/gperf >=dev-util/intltool-0.40.0 virtual/pkgconfig virtual/os-headers !<sys-kernel/linux-headers-2.6.39 doc? ( dev-util/gtk-doc ) || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=Linux dynamic and persistent device naming support (aka userspace devfs)
 EAPI=4
 HOMEPAGE=http://www.freedesktop.org/wiki/Software/systemd
@@ -11,4 +11,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=http://www.freedesktop.org/software/systemd/systemd-186.tar.xz
 _eclasses_=autotools	9d170f07df0e48055093b8c6a60d0fba	eutils	327b713e2d6949c42cd96bc4898fd280	libtool	46e19fa7553f66c48ebc7cf025acd3ed	linux-info	0b7adf68a2edb4e5a32b07bb6e68121c	multilib	5782800349f728f725f9378105c6a2ab	multiprocessing	1512bdfe7004902b8cd2c466fc3df772	toolchain-funcs	e575dd4d4682fc3539829c52d8382856	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=469eef56d8d9ef658ada69a0489536b0
+_md5_=6fe7fc59604f84254776c6af4b29647b
