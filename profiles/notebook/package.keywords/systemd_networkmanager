@@ -11,6 +11,7 @@
 <sys-boot/plymouth-9999  amd64
 <sys-kernel/dracut-9999  amd64
 ~sys-auth/pambase-20120417 amd64
+~sys-apps/shadow-4.1.5 amd64
 ~dev-libs/glib-2.32.3 amd64
 ~net-misc/connman-0.78 amd64
 ~sys-fs/udev-init-scripts-10 amd64
