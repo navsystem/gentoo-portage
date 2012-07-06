@@ -6,7 +6,7 @@ mirror://sourceforge/leechcraft/leechcraft-0.5.70.tar.xz
 http://leechcraft.org/
 GPL-3
 Glance, quick thumbnailed overview of opened tabs in LeechCraft
-~amd64 ~x86
+amd64 ~x86
 base cmake-utils eutils flag-o-matic leechcraft multilib toolchain-funcs user versionator
 debug
 
