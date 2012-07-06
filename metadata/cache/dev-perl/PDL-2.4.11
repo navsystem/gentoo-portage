@@ -6,7 +6,7 @@ mirror://cpan/authors/id/C/CH/CHM/PDL-2.4.11.tar.gz
 http://pdl.perl.org/
 Artistic as-is
 Perl Data Language for scientific computing
-~amd64 ~x86
+~amd64 ~x86 ~amd64-linux ~x86-linux
 base eutils fortran-2 multilib multiprocessing perl-module toolchain-funcs user
 +badval doc fftw fortran gd gsl hdf netpbm opengl pdl2 proj pgplot plplot threads
 plplot? ( badval )

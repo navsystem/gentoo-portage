@@ -9,7 +9,7 @@ D-Bus interfaces for querying and manipulating user account information
 ~alpha ~amd64 ~arm ~x86
 eutils fdo-mime gnome.org gnome2 gnome2-utils libtool multilib systemd toolchain-funcs user versionator
 doc +introspection systemd vala
-
+vala? ( introspection )
 
 
 4
