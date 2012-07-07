@@ -10,7 +10,7 @@ An object-oriented scripting language
 autotools eutils flag-o-matic libtool multilib multiprocessing toolchain-funcs user versionator
 berkdb debug doc examples gdbm ipv6 +rdoc rubytests socks5 ssl tk xemacs ncurses +readline +yaml
 
-rdoc? ( >=dev-ruby/rdoc-3.9.4[ruby_targets_ruby19] ) xemacs? ( app-xemacs/ruby-modes )
+>=dev-ruby/rubygems-1.8.10-r1[ruby_targets_ruby19] rdoc? ( >=dev-ruby/rdoc-3.9.4[ruby_targets_ruby19] ) xemacs? ( app-xemacs/ruby-modes )
 
 4
 
