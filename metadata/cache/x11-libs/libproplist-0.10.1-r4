@@ -6,7 +6,7 @@ mirror://gentoo/libPropList-0.10.1.tar.gz
 http://windowmaker.org/
 LGPL-2
 An library to mimic property list functionality from the GNUstep environment
-~alpha amd64 ~ia64 ppc ~sparc x86
+amd64 ppc x86
 autotools eutils libtool multilib multiprocessing toolchain-funcs user
 static-libs
 

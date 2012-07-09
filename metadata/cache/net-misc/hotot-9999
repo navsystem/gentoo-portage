@@ -9,7 +9,7 @@ lightweight & open source microblogging client
 
 base cmake-utils eutils flag-o-matic git-2 multilib python toolchain-funcs user
 chrome gtk kde qt4
-
+|| ( chrome gtk qt4 )
 
 
 4

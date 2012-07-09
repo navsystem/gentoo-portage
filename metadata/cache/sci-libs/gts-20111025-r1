@@ -6,7 +6,7 @@ test
 http://gts.sourceforge.net/
 LGPL-2
 GNU Triangulated Surface Library
-~amd64 ~ppc ~x86
+~amd64 ~hppa ~ppc ~x86
 autotools autotools-utils eutils fortran-2 libtool multilib multiprocessing toolchain-funcs user
 doc examples static-libs test
 

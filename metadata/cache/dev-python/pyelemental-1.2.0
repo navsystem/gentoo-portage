@@ -3,18 +3,18 @@
 0
 http://www.kdau.com/files/pyelemental-1.2.0.tar.bz2
 
-http://www.kdau.com/projects/gelemental
+http://freecode.com/projects/gelemental/
 GPL-3
 Python bindings for libelemental (sci-chemistry/gelemental)
 ~amd64
-distutils multilib python toolchain-funcs
+distutils eutils multilib python toolchain-funcs user
 
 
 
 
-3
+4
 
-compile install postinst postrm prepare
+compile install postinst postrm prepare setup
 
 
 

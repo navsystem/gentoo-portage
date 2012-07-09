@@ -7,5 +7,5 @@ LICENSE=|| ( Artistic GPL-2 )
 RDEPEND=>=dev-perl/Class-Autouse-1 >=dev-perl/Test-ClassAPI-1.02 >=dev-perl/File-Copy-Recursive-0.28 >=dev-perl/File-Remove-0.21 >=virtual/perl-File-Spec-0.85 >=virtual/perl-File-Temp-0.14 >=dev-perl/File-Remove-0.21 >=dev-perl/File-Slurp-9999.04 >=dev-perl/prefork-0.02 dev-lang/perl
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/A/AD/ADAMK/File-Flat-1.00.tar.gz
-_eclasses_=base	5f35078c26d6c60556d5c8a2feb4f84f	eutils	327b713e2d6949c42cd96bc4898fd280	multilib	5782800349f728f725f9378105c6a2ab	multiprocessing	1512bdfe7004902b8cd2c466fc3df772	perl-module	1c5ba5b92574108992a6758f863da534	toolchain-funcs	e575dd4d4682fc3539829c52d8382856	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	d40e074a6349af3ea5e937210630bdc1	eutils	327b713e2d6949c42cd96bc4898fd280	multilib	5782800349f728f725f9378105c6a2ab	multiprocessing	1512bdfe7004902b8cd2c466fc3df772	perl-module	1c5ba5b92574108992a6758f863da534	toolchain-funcs	e575dd4d4682fc3539829c52d8382856	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=e22cccfce8f8cfafb7af84fe4bf48dd4

@@ -5,7 +5,7 @@
 
 http://ubertooth.sourceforge.net/
 GPL-2
-Based on the subversion eclass
+Provides basic bluetooth support in kismet
 
 eutils multilib subversion toolchain-funcs user
 

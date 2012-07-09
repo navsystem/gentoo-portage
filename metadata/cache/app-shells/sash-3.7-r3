@@ -6,7 +6,7 @@ http://www.canb.auug.org.au/~dbell/programs/sash-3.7.tar.gz
 http://www.canb.auug.org.au/~dbell/
 freedist
 A small (static) UNIX Shell
-~alpha amd64 arm hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86
+alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86
 eutils flag-o-matic multilib toolchain-funcs user
 static
 
