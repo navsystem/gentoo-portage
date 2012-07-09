@@ -6,7 +6,7 @@ ftp://root.cern.ch/root/root_v5.32.03.source.tar.gz doc? ( ftp://root.cern.ch/ro
 http://root.cern.ch/
 LGPL-2.1
 C++ data analysis framework and interpreter from CERN
-~amd64 ~x86 ~amd64-linux ~x86-linux
+amd64 ~x86 ~amd64-linux ~x86-linux
 elisp-common eutils fdo-mime fortran-2 multilib python toolchain-funcs user
 +X afs avahi clarens doc emacs examples fits fftw graphviz htmldoc kerberos ldap +math mpi mysql odbc +opengl openmp oracle postgres prefix pythia6 pythia8 python qt4 +reflex ruby ssl xft xinetd xml xrootd
 !X? ( !opengl !qt4 !xft ) mpi? ( math !openmp ) openmp? ( math !mpi )

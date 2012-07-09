@@ -1043,7 +1043,6 @@ dev-embedded/openocd:presto - Enable support for AXIS PRESTO devices
 dev-embedded/openocd:segger - Enable support for the Segger J-Link JTAG
 dev-embedded/openocd:versaloon - Enable building support for the Versallon-lInk JTAG
 dev-embedded/ponyprog:epiphany - Enable support for www-client/epiphany
-dev-embedded/qvfb:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
 dev-embedded/sdcc:boehm-gc - Enable Hans Boehm's garbage collector (dev-libs/boehm-gc)
 dev-embedded/urjtag:ftd2xx - Enable support for USB FTDI chips via dev-embedded/libftd2xx
 dev-embedded/urjtag:ftdi - Enable support for USB FTDI chips via dev-embedded/libftdi

@@ -14,7 +14,7 @@ largepages +debug minimal test
 
 4
 
-compile configure install setup test
+compile configure install prepare setup test
 
 
 
