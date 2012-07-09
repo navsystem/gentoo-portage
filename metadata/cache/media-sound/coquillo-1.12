@@ -1,0 +1,22 @@
+>=media-libs/taglib-1.7 >=x11-libs/qt-gui-4.6:4 >=x11-libs/qt-core-4.6:4
+>=media-libs/taglib-1.7 >=x11-libs/qt-gui-4.6:4 >=x11-libs/qt-core-4.6:4
+0
+http://cs.joensuu.fi/~sjuvonen/coquillo/1.12/coquillo-1.12-src.tar.gz
+
+http://qt-apps.org/content/show.php/Coquillo?content=141896
+|| ( GPL-2 GPL-3 )
+GUI audio tagger based on Qt4 and taglib
+~amd64 ~x86
+base eutils multilib qt4-r2 toolchain-funcs user
+
+
+
+
+4
+
+compile configure install prepare unpack
+
+
+
+
+

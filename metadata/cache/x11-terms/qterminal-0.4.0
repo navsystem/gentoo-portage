@@ -1,0 +1,22 @@
+x11-libs/qt-gui:4 x11-libs/qtermwidget >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+x11-libs/qt-gui:4 x11-libs/qtermwidget
+0
+mirror://gentoo/qterminal-0.4.0.tar.xz
+
+https://gitorious.org/qterminal/pages/Home
+GPL-2
+Qt4-based multitab terminal emulator
+~amd64 ~x86
+base cmake-utils eutils flag-o-matic multilib toolchain-funcs user
+debug
+
+
+
+4
+
+compile configure install prepare test unpack
+
+
+
+
+

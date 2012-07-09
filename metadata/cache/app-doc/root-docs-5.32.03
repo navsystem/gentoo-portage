@@ -1,4 +1,4 @@
-~sci-physics/root-5.32.03[X,doc,graphviz,htmldoc,opengl] >=sci-physics/root-5.32.03-r3[X,doc,graphviz,htmldoc,opengl] virtual/pkgconfig test? ( !prefix? ( x11-base/xorg-server[xvfb] ) x11-apps/xhost )
+~sci-physics/root-5.32.03[X,doc,graphviz,htmldoc,opengl] virtual/pkgconfig test? ( !prefix? ( x11-base/xorg-server[xvfb] ) x11-apps/xhost )
 
 0
 ftp://root.cern.ch/root/root_v5.32.03.source.tar.gz
