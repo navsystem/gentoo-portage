@@ -4,7 +4,7 @@ dev-ml/res >=dev-ml/sexplib-7.0.4 >=dev-ml/core-107.01 >=dev-ml/bin-prot-2.0.3 >
 http://www.janestreet.com/ocaml/core_extended-107.01.tar.gz
 
 http://www.janestreet.com/ocaml
-LGPL-2.1-linking-exception
+LGPL-2.1-with-linking-exception
 Jane Street's extended library
 ~amd64
 base eutils findlib multilib oasis toolchain-funcs user

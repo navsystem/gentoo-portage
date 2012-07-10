@@ -1,0 +1,22 @@
+app-shells/push sqlite? ( >=dev-db/sqlite-3 ) nls? ( virtual/libintl ) app-arch/xz-utils clang? ( sys-devel/clang ) nls? ( sys-devel/gettext )
+app-shells/push sqlite? ( >=dev-db/sqlite-3 ) nls? ( virtual/libintl )
+0
+mirror://berlios/eix/eix-0.26.0.tar.xz
+
+http://eix.berlios.de
+GPL-2
+Search and query ebuilds, portage incl. local settings, ext. overlays, version changes, and more
+~amd64 ~arm ~m68k ~mips ~s390 ~sh ~x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x86-solaris
+bash-completion-r1 multilib toolchain-funcs
+clang debug +dep doc nls optimization security strong-optimization sqlite tools zsh-completion
+
+
+
+4
+
+configure install postinst setup
+
+
+
+
+

@@ -6,7 +6,7 @@ http://dev.gentoo.org/~hasufell/distfiles/pidgin-opensteamworks-1.0_p32.tar.xz h
 http://code.google.com/p/pidgin-opensteamworks/
 GPL-3
 Steam protocol plugin for pidgin
-amd64 ~x86
+amd64 x86
 multilib toolchain-funcs
 
 

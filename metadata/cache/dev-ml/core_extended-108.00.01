@@ -4,7 +4,7 @@ dev-ml/pcre-ocaml >=dev-ml/sexplib-108.00.01 >=dev-ml/bin-prot-108.00.01 >=dev-m
 http://bitbucket.org/yminsky/ocaml-core/downloads/core_extended-108.00.01.tar.gz
 
 http://www.janestreet.com/ocaml
-LGPL-2.1-linking-exception
+LGPL-2.1-with-linking-exception
 Jane Street's alternative to the standard library
 ~amd64
 base eutils findlib multilib oasis toolchain-funcs user
