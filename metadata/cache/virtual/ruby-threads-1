@@ -6,7 +6,7 @@ ruby19
 
 
 Virtual ebuild for a ruby interpreter with threading enabled.
-amd64 arm ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd
+amd64 arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd
 eutils java-utils-2 multilib ruby-ng toolchain-funcs user versionator
 elibc_FreeBSD ruby_targets_ruby19
 

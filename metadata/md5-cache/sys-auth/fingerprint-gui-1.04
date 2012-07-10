@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install postinst prepare unpack
-DEPEND=app-crypt/qca app-crypt/qca-ossl sys-auth/libfprint sys-auth/polkit-qt x11-libs/libfakekey x11-libs/qt-core:4 !sys-auth/thinkfinger
+DEPEND=app-crypt/qca app-crypt/qca-ossl sys-auth/libfprint sys-auth/polkit-qt sys-libs/pam x11-libs/libfakekey x11-libs/qt-core:4 !sys-auth/thinkfinger
 DESCRIPTION=Use Fingerprint Devices with Linux
 EAPI=4
 HOMEPAGE=http://www.n-view.net/Appliance/fingerprint/
 IUSE=+upekbsapi
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3
-RDEPEND=app-crypt/qca app-crypt/qca-ossl sys-auth/libfprint sys-auth/polkit-qt x11-libs/libfakekey x11-libs/qt-core:4 !sys-auth/thinkfinger
+RDEPEND=app-crypt/qca app-crypt/qca-ossl sys-auth/libfprint sys-auth/polkit-qt sys-libs/pam x11-libs/libfakekey x11-libs/qt-core:4 !sys-auth/thinkfinger
 SLOT=0
 SRC_URI=http://www.n-view.net/Appliance/fingerprint/download/fingerprint-gui-1.04.tar.gz
-_eclasses_=base	5f35078c26d6c60556d5c8a2feb4f84f	eutils	327b713e2d6949c42cd96bc4898fd280	multilib	5782800349f728f725f9378105c6a2ab	qt4-r2	2111bb601bba6402257079dab64c7310	toolchain-funcs	e575dd4d4682fc3539829c52d8382856	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=e42f2978c31890fba313dd69bc452d18
+_eclasses_=base	d40e074a6349af3ea5e937210630bdc1	eutils	327b713e2d6949c42cd96bc4898fd280	multilib	5782800349f728f725f9378105c6a2ab	qt4-r2	2111bb601bba6402257079dab64c7310	toolchain-funcs	e575dd4d4682fc3539829c52d8382856	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=bb5d7f41f7fa29f4c722caa17ef9b779

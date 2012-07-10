@@ -6,7 +6,7 @@ ftp://ftp.windowmaker.org/pub/libs/libPropList-0.10.1.tar.gz
 http://www.windowmaker.org/
 LGPL-2
 libPropList
-x86 ppc sparc amd64 alpha ia64
+amd64 ppc x86
 
 
 

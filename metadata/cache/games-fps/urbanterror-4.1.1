@@ -1,4 +1,4 @@
-sys-libs/zlib[minizip] !dedicated? ( media-libs/ftgl media-libs/freetype media-libs/libsdl[X,opengl] virtual/opengl curl? ( net-misc/curl ) openal? ( media-libs/openal ) speex? ( media-libs/speex ) vorbis? ( media-libs/libogg media-libs/libvorbis ) ) app-arch/unzip virtual/pkgconfig dedicated? ( media-libs/libsdl curl? ( net-misc/curl ) speex? ( media-libs/speex ) )
+sys-libs/zlib[minizip] !dedicated? ( media-libs/ftgl media-libs/freetype media-libs/libsdl[X,opengl] virtual/opengl curl? ( net-misc/curl ) openal? ( media-libs/openal ) speex? ( media-libs/speex ) vorbis? ( media-libs/libogg media-libs/libvorbis ) ) app-arch/unzip virtual/pkgconfig dedicated? ( media-libs/libsdl curl? ( net-misc/curl ) speex? ( media-libs/speex ) ) >=sys-apps/sed-4
 sys-libs/zlib[minizip] !dedicated? ( media-libs/ftgl media-libs/freetype media-libs/libsdl[X,opengl] virtual/opengl curl? ( net-misc/curl ) openal? ( media-libs/openal ) speex? ( media-libs/speex ) vorbis? ( media-libs/libogg media-libs/libvorbis ) )
 0
 http://dev.gentoo.org/~hasufell/distfiles/ioquake3-1807.tar.bz2 http://dev.gentoo.org/~hasufell/distfiles/ioq3-1807-urt-251210-git-nobumpy.tar.xz ftp://ftp.snt.utwente.nl/pub/games/urbanterror/old/UrbanTerror_41_FULL.zip http://upload.wikimedia.org/wikipedia/en/5/56/Urbanterror.svg -> urbanterror.svg
@@ -6,15 +6,15 @@ http://dev.gentoo.org/~hasufell/distfiles/ioquake3-1807.tar.bz2 http://dev.gento
 http://www.urbanterror.info/home/
 GPL-2 Q3AEULA
 Hollywood tactical shooter based on the ioquake3 engine
-~amd64 ~x86 -*
-base eutils games multilib toolchain-funcs user
+-* amd64 ~x86
+base eutils games gnome2-utils multilib toolchain-funcs user
 +curl dedicated openal server speex vorbis
 
 
 
 4
 
-compile configure install postinst preinst prepare setup unpack
+compile configure install postinst postrm preinst prepare setup unpack
 
 
 
