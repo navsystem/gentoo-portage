@@ -5,12 +5,10 @@ app-editors/gvim
 media-sound/audacity
 app-admin/sudo
 media-video/smplayer
-kde-base/kopete
 app-cdr/k3b
 kde-base/kmix
 kde-base/okular
 kde-base/ark
-kde-base/kuser
 kde-base/gwenview
 media-video/qt-recordmydesktop
 sys-fs/dosfstools
