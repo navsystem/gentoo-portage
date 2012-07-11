@@ -6,7 +6,7 @@ http://pwmt.org/projects/zathura/plugins/download/zathura-cb-0.1.0.tar.gz
 http://pwmt.org/projects/zathura/
 ZLIB
 Comic book plug-in for zathura with 7zip, rar, tar and zip support
-amd64 ~x86
+amd64 x86
 multilib toolchain-funcs
 
 
