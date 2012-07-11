@@ -4,7 +4,7 @@
 http://bitbucket.org/yminsky/ocaml-core/downloads/bin_prot-108.00.01.tar.gz
 
 http://ocaml.janestreet.com/?q=node/13
-LGPL-2.1-linking-exception
+LGPL-2.1-with-linking-exception
 A binary protocol generator
 ~amd64
 base eutils findlib multilib oasis toolchain-funcs user

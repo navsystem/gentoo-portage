@@ -4,7 +4,7 @@ dev-ml/res >=dev-ml/sexplib-5.2.1 >=dev-ml/bin-prot-1.3.1 >=dev-ml/fieldslib-0.1
 http://www.janestreet.com/ocaml/core-107.01.tar.gz
 
 http://www.janestreet.com/ocaml
-LGPL-2.1-linking-exception
+LGPL-2.1-with-linking-exception
 Jane Street's alternative to the standard library
 ~amd64
 base eutils findlib multilib oasis toolchain-funcs user

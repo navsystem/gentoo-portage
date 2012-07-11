@@ -4,7 +4,7 @@
 http://bitbucket.org/yminsky/ocaml-core/downloads/fieldslib-108.00.01.tar.gz
 
 http://www.janestreet.com/ocaml
-LGPL-2.1-linking-exception
+LGPL-2.1-with-linking-exception
 Folding over record fields
 ~amd64
 base eutils findlib multilib oasis toolchain-funcs user

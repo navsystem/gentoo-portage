@@ -4,7 +4,7 @@
 http://forge.ocamlcore.org/frs/download.php/880/oasis-0.3.0~rc6.tar.gz
 
 http://oasis.forge.ocamlcore.org/index.php
-LGPL-2.1-linking-exception
+LGPL-2.1-with-linking-exception
 OASIS is a tool to integrate a configure, build and install system in OCaml project
 ~amd64
 base eutils findlib multilib oasis toolchain-funcs user

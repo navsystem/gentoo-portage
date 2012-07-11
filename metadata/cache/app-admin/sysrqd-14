@@ -3,7 +3,7 @@
 0
 http://dev.gentoo.org/~wschlich/src/app-admin/sysrqd/sysrqd-14.tar.gz
 
-http://julien.danjou.info/sysrqd.html
+http://julien.danjou.info/projects/sysrqd
 GPL-2
 daemon providing access to the kernel sysrq functions via network
 ~x86 ~amd64
