@@ -6,7 +6,7 @@ app-text/zathura cb? ( app-text/zathura-cb ) djvu? ( app-text/zathura-djvu ) pdf
 http://pwmt.org/projects/zathura/
 as-is
 Meta package for app-text/zathura plugins
-~amd64 ~x86
+amd64 ~x86
 
 cb djvu +pdf postscript
 

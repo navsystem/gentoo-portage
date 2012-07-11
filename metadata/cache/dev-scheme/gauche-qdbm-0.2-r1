@@ -6,7 +6,7 @@ mirror://sourceforge.jp/gauche/6988/Gauche-qdbm-0.2.tar.gz
 http://sourceforge.jp/projects/gauche/
 BSD
 QDBM binding for Gauche
-~sparc ~x86
+~sparc x86
 autotools eutils libtool multilib multiprocessing toolchain-funcs user
 
 

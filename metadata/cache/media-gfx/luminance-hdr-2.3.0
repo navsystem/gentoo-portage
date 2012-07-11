@@ -1,5 +1,5 @@
->=media-gfx/exiv2-0.14 media-libs/lcms:2 media-libs/libpng >=media-libs/libraw-0.13.4 >=media-libs/openexr-1.2.2-r2 >=media-libs/tiff-3.8.2-r2 sci-libs/fftw:3.0 sci-libs/gsl virtual/jpeg x11-libs/qt-core:4 x11-libs/qt-gui:4 x11-libs/qt-sql:4 x11-libs/qt-webkit:4 >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
->=media-gfx/exiv2-0.14 media-libs/lcms:2 media-libs/libpng >=media-libs/libraw-0.13.4 >=media-libs/openexr-1.2.2-r2 >=media-libs/tiff-3.8.2-r2 sci-libs/fftw:3.0 sci-libs/gsl virtual/jpeg x11-libs/qt-core:4 x11-libs/qt-gui:4 x11-libs/qt-sql:4 x11-libs/qt-webkit:4
+>=media-gfx/exiv2-0.14 media-libs/lcms:2 media-libs/libpng >=media-libs/libraw-0.13.4 >=media-libs/openexr-1.2.2-r2 >=media-libs/tiff-3.8.2-r2 sci-libs/fftw:3.0[threads] sci-libs/gsl virtual/jpeg x11-libs/qt-core:4 x11-libs/qt-gui:4 x11-libs/qt-sql:4 x11-libs/qt-webkit:4 >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+>=media-gfx/exiv2-0.14 media-libs/lcms:2 media-libs/libpng >=media-libs/libraw-0.13.4 >=media-libs/openexr-1.2.2-r2 >=media-libs/tiff-3.8.2-r2 sci-libs/fftw:3.0[threads] sci-libs/gsl virtual/jpeg x11-libs/qt-core:4 x11-libs/qt-gui:4 x11-libs/qt-sql:4 x11-libs/qt-webkit:4
 0
 mirror://sourceforge/qtpfsgui/luminance-hdr-2.3.0.tar.bz2
 

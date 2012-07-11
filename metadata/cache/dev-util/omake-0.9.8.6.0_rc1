@@ -6,7 +6,7 @@ installsources
 http://omake.metaprl.org/
 GPL-2
 Make replacement
-~amd64 ~ppc ~x86
+~amd64 ~ppc x86
 eutils multilib toolchain-funcs user versionator
 doc fam ncurses +ocamlopt readline
 
