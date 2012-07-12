@@ -7,7 +7,7 @@ http://code.google.com/p/mozc/
 Apache-2.0 BSD Boost-1.0 ipadic public-domain unicode
 The Mozc engine for IBus Framework
 ~amd64 ~x86
-elisp-common eutils multilib python toolchain-funcs user
+elisp-common eutils multilib multiprocessing python toolchain-funcs user
 emacs +ibus scim +qt4 renderer
 
 

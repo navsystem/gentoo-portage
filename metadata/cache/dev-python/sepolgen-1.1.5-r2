@@ -6,7 +6,7 @@ http://userspace.selinuxproject.org/releases/20120216/sepolgen-1.1.5.tar.gz http
 http://userspace.selinuxproject.org
 GPL-2
 SELinux policy generation library
-~amd64 ~x86
+amd64 x86
 eutils multilib python toolchain-funcs user
 
 

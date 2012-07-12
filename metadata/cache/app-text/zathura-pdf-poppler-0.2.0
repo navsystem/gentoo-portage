@@ -6,7 +6,7 @@ http://pwmt.org/projects/zathura/plugins/download/zathura-pdf-poppler-0.2.0.tar.
 http://pwmt.org/projects/zathura/
 ZLIB
 PDF plug-in for zathura
-~amd64 ~x86
+amd64 x86
 multilib toolchain-funcs
 
 

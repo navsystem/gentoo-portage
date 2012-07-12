@@ -1,0 +1,22 @@
+>=sys-libs/libselinux-2.1.9[python] >=sys-libs/glibc-2.4 >=sys-libs/libcap-1.10-r10 >=sys-libs/libsemanage-2.1.6[python] sys-libs/libcap-ng >=sys-libs/libsepol-2.1.4 sys-devel/gettext dev-python/ipy sesandbox? ( dev-libs/libcgroup ) dbus? ( sys-apps/dbus dev-libs/dbus-glib ) audit? ( >=sys-process/audit-1.5.1 ) pam? ( sys-libs/pam ) dev-lang/python dev-lang/python[xml]
+>=sys-libs/libselinux-2.1.9[python] >=sys-libs/glibc-2.4 >=sys-libs/libcap-1.10-r10 >=sys-libs/libsemanage-2.1.6[python] sys-libs/libcap-ng >=sys-libs/libsepol-2.1.4 sys-devel/gettext dev-python/ipy sesandbox? ( dev-libs/libcgroup ) dbus? ( sys-apps/dbus dev-libs/dbus-glib ) audit? ( >=sys-process/audit-1.5.1 ) pam? ( sys-libs/pam ) dev-python/sepolgen app-misc/pax-utils dev-lang/python dev-lang/python[xml]
+0
+http://userspace.selinuxproject.org/releases/20120216/policycoreutils-2.1.10.tar.gz http://dev.gentoo.org/~swift/patches/policycoreutils/patchbundle-policycoreutils-2.1.10-gentoo-r2.tar.gz mirror://gentoo/policycoreutils-extra-1.21.tar.bz2
+
+http://userspace.selinuxproject.org
+GPL-2
+SELinux core utilities
+~amd64 ~x86
+eutils multilib python toolchain-funcs user
+audit pam dbus sesandbox
+
+
+
+4
+
+compile install postinst postrm prepare setup
+
+
+
+
+

@@ -1,0 +1,22 @@
+snmp? ( >=net-analyzer/net-snmp-5.0 ) || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+snmp? ( >=net-analyzer/net-snmp-5.0 )
+0
+http://gael.roualland.free.fr/ifstat/ifstat-1.1.tar.gz
+
+http://gael.roualland.free.fr/ifstat/
+GPL-2
+Network interface bandwidth usage, with support for snmp targets.
+~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86
+autotools eutils libtool multilib multiprocessing toolchain-funcs user
+snmp
+
+
+
+4
+
+configure prepare
+
+
+
+
+

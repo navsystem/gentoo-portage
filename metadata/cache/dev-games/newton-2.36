@@ -1,0 +1,22 @@
+app-arch/unrar >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+
+0
+http://newton-dynamics.googlecode.com/files/newton-dynamics-2.36.rar
+
+http://code.google.com/p/newton-dynamics/
+ZLIB
+an integrated solution for real time simulation of physics environments
+~amd64 ~x86
+base cmake-utils eutils flag-o-matic multilib toolchain-funcs unpacker user
+
+
+
+
+4
+
+compile configure install prepare test unpack
+
+
+
+
+

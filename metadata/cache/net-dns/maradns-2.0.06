@@ -14,7 +14,7 @@ authonly ipv6
 
 4
 
-compile configure install postinst prepare
+configure install postinst prepare
 
 
 

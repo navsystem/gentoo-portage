@@ -12,9 +12,9 @@ multilib toolchain-funcs
 
 
 
-2
+4
 
-compile install prepare
+install prepare
 
 
 
