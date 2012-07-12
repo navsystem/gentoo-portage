@@ -8,7 +8,7 @@ inherit eutils git-2 linux-info linux-mod systemd
 
 DESCRIPTION="Hardware Against Software Piracy for access to parallel and usb keys"
 HOMEPAGE="http://www.etersoft.ru"
-EGIT_REPO_URI="git://git.etersoft.ru/projects/haspd.git"
+EGIT_REPO_URI="git://git.etersoft.ru/people/piastry/packages/haspd.git"
 
 LICENSE="Alladin"
 SLOT="0"
@@ -26,10 +26,6 @@ QA_PREBUILT="usr/sbin/aksusbd usr/sbin/haspdemo usr/sbin/winehasp
 usr/sbin/hasplm usr/sbin/hasplmd usr/sbin/nethaspdemo"
 
 S="${WORKDIR}/haspd-3.2"
-
-src_prepare() {
-	epatch "${FILESDIR}"/remove_bkl.patch
-}
 
 pkg_setup() {
 	if use lpt ; then

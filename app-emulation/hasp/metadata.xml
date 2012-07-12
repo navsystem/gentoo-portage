@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
 <longdescription>
 HASP - Hardware Against Software Piracy
 The package contains
@@ -22,11 +21,14 @@ Please send any comments to hasp@etersoft.ru
 Copyright 1985-2008 Aladdin Knowledge Systems http://www.aladdin.com
 Copyright 2006-2007 Eutron SPA http://www.smartkey.eutron.com
 Copyright 2006-2006 SafeNet Sentinel http://www.safenet-inc.com
-</longdescription> 
-<use>
-<flag name='lpt'> a </flag>
-<flag name='net_hasp'> aa </flag>
-<flag name='wine'> aa </flag>
-
-</use>
+</longdescription>
+	<maintainer>
+		<email>egor.y.egorov@gmail.com</email>
+	</maintainer>
+	<use>
+		<flag name='lpt'>Install kernel module for LPT-keys</flag>
+		<flag name='net_hasp'>Install binaries for use HASP-keys on network</flag>
+		<flag name='wine'>Install winehasp binary and init-script</flag>
+		<flag name='demo'>Install demo binaries</flag>
+	</use>
 </pkgmetadata>

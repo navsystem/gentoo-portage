@@ -4,15 +4,15 @@
 
 EAPI=4
 
-inherit eutils git-2 linux-info linux-mod systemd
+inherit eutils rpm linux-info linux-mod systemd
 
 DESCRIPTION="Hardware Against Software Piracy for access to parallel and usb keys"
 HOMEPAGE="http://www.etersoft.ru"
-EGIT_REPO_URI="git://git.etersoft.ru/projects/haspd.git"
+SRC_URI="http://ftp.etersoft.ru/pub/Etersoft/HASP/3.3/sources/x86_64/Debian/6.0/haspd-3.3-eter2debian.src.rpm"
 
 LICENSE="Alladin"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 
 IUSE="net_hasp wine usb lpt demo"
 
@@ -25,11 +25,7 @@ DEPEND="${RDEPEND}"
 QA_PREBUILT="usr/sbin/aksusbd usr/sbin/haspdemo usr/sbin/winehasp
 usr/sbin/hasplm usr/sbin/hasplmd usr/sbin/nethaspdemo"
 
-S="${WORKDIR}/haspd-3.2"
-
-src_prepare() {
-	epatch "${FILESDIR}"/remove_bkl.patch
-}
+S="${WORKDIR}/haspd-3.3"
 
 pkg_setup() {
 	if use lpt ; then
@@ -49,6 +45,11 @@ pkg_setup() {
 		CONFIG_CHECK="${CONFIG_CHECK} CONFIG_USB_DEVICEFS CONFIG_USB_DEVICEFS"
 	fi
 	linux-info_pkg_setup
+}
+
+src_unpack() {
+	rpm_unpack
+	unpack ./haspd-3.3.tar
 }
 
 src_compile() {
