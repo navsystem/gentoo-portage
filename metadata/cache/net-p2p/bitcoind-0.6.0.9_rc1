@@ -4,7 +4,7 @@
 http://gitorious.org/bitcoin/bitcoind-stable/archive-tarball/v0.6.0.9rc1 -> bitcoin-v0.6.0.9_rc1.tgz eligius? ( http://luke.dashjr.org/programs/bitcoin/files/eligius_sendfee/0.6.0-eligius_sendfee.patch.xz )
 
 http://bitcoin.org/
-MIT ISC
+MIT ISC GPL-2
 Original Bitcoin crypto-currency wallet for automated services
 ~amd64 ~arm ~x86
 db-use eutils multilib toolchain-funcs user versionator

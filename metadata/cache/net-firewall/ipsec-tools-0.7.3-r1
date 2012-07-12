@@ -4,7 +4,7 @@ selinux? ( sys-libs/libselinux ) readline? ( sys-libs/readline ) pam? ( sys-libs
 mirror://sourceforge/ipsec-tools/ipsec-tools-0.7.3.tar.bz2
 
 http://ipsec-tools.sourceforge.net/
-BSD
+BSD GPL-2
 A port of KAME's IPsec utilities to the Linux-2.6 IPsec implementation
 ~amd64 ~ppc ~sparc ~x86
 autotools eutils flag-o-matic libtool linux-info multilib multiprocessing toolchain-funcs user versionator

@@ -4,11 +4,11 @@
 
 
 http://zfsonlinux.org/
-CDDL GPL-2 MIT
+BSD-2 CDDL MIT
 Native ZFS for Linux
 
 autotools autotools-utils bash-completion-r1 eutils flag-o-matic git-2 libtool linux-info linux-mod multilib multiprocessing toolchain-funcs user versionator
-bash-completion custom-cflags debug dracut +rootfs test test-suite static-libs kernel_linux
+custom-cflags debug dracut +rootfs test test-suite static-libs kernel_linux
 
 
 

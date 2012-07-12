@@ -4,7 +4,7 @@ sys-libs/zlib
 http://code.kryo.se/iodine/iodine-0.6.0-rc1.tar.gz
 
 http://code.kryo.se/iodine/
-ISC
+ISC GPL-2
 IP over DNS tunnel
 ~amd64 ~x86
 eutils linux-info multilib toolchain-funcs user versionator
