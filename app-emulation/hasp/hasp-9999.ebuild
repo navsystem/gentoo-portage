@@ -46,7 +46,7 @@ pkg_setup() {
 		fi
 	fi
 	if use usb; then
-		CONFIG_CHECK="${CONFIG_CHECK} CONFIG_USB_DEVICEFS CONFIG_USB_DEVICEFS"
+		CONFIG_CHECK="${CONFIG_CHECK} ~USB_DEVICEFS"
 	fi
 	linux-info_pkg_setup
 }
