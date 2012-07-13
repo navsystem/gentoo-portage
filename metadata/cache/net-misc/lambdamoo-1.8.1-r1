@@ -4,7 +4,7 @@ sys-devel/bison
 mirror://sourceforge/lambdamoo/LambdaMOO-1.8.1.tar.gz
 
 http://sourceforge.net/projects/lambdamoo/
-as-is
+as-is GPL-2
 networked mud that can be used for different types of collaborative software
 ~x86 ~sparc
 eutils multilib toolchain-funcs user

@@ -4,7 +4,7 @@ net-dns/host
 http://http.distributed.net/pub/dcti/proxyper/proxyper341a-linux-x86-uclibc.tar.gz
 mirror
 http://www.distributed.net
-distributed.net
+distributed.net GPL-2
 distributed.net personal proxy
 -alpha -ppc -sparc x86
 

@@ -4,7 +4,7 @@
 mirror://gentoo/spread-src-4.1.0.tar.gz
 
 http://www.spread.org
-Spread-1.0
+Spread-1.0 GPL-2
 Distributed network messaging system
 x86 amd64
 eutils multilib toolchain-funcs user

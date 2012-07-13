@@ -4,7 +4,7 @@ dev-libs/openssl sys-apps/iproute2 >=sys-apps/net-tools-1.60_p20120127084908
 http://gogo6.com/downloads/gogoc-1_2-RELEASE.tar.gz
 
 http://gogonet.gogo6.com/page/download-1
-MIT
+MIT GPL-2
 Client to connect to a tunnel broker using the TSP protocol (freenet6 for example)
 ~amd64 ~hppa ~sparc ~x86
 eutils multilib toolchain-funcs user versionator

@@ -4,7 +4,7 @@
 
 strip
 http://www.justsystem.co.jp/linux/atok.html
-ATOK MIT
+ATOK MIT GPL-2
 ATOK for Linux - The most famous Japanese Input Method Engine
 -* x86
 cdrom eutils multilib portability toolchain-funcs user
