@@ -1,0 +1,22 @@
+
+
+0
+mirror://sourceforge/aoetools/cec-11.tgz
+
+http://sourceforge.net/projects/aoetools/
+GPL-2
+Coraid Ethernet Console client
+~amd64 ~x86
+multilib toolchain-funcs
+
+
+
+
+4
+
+compile install
+
+
+
+
+

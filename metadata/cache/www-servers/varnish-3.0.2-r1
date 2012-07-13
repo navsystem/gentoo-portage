@@ -4,9 +4,9 @@ dev-libs/libpcre libedit? ( dev-libs/libedit ) tools? ( sys-libs/ncurses ) sys-d
 http://repo.varnish-cache.org/source/varnish-3.0.2.tar.gz
 test
 http://www.varnish-cache.org/
-BSD-2
+BSD-2 GPL-2
 Varnish is a state-of-the-art, high-performance HTTP accelerator
-amd64 x86
+amd64 ~mips x86
 autotools autotools-utils eutils libtool multilib multiprocessing toolchain-funcs user
 doc libedit static-libs +tools
 

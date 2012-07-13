@@ -4,7 +4,7 @@ sys-libs/glibc dedicated? ( app-misc/screen ) !dedicated? ( virtual/opengl x86? 
 mirror://idsoftware/wolf/linux/wolf-linux-GOTY-maps.x86.run mirror://idsoftware/wolf/linux/wolf-linux-1.41b.x86.run
 strip mirror
 http://games.activision.com/games/wolfenstein/
-RTCW
+RTCW GPL-2
 Return to Castle Wolfenstein - Long awaited sequel to Wolfenstein 3D
 amd64 x86
 base eutils games multilib toolchain-funcs unpacker user

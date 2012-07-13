@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13950 2012/07/11 12:24:42 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13955 2012/07/12 02:38:27 cardoe Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,14 @@
 
 #--- END OF EXAMPLES ---
 
+# Doug Goldstein <cardoe@gentoo.org> (11 Jul 2012)
+# Results in many people's machines not having a usable screen
+# once the screen locks requiring the X server to be killed
+# which is a clear data loss. I asked the GNOME team today
+# about this and they told me it was already masked but there's no
+# mask, so here it is. bug #425070
+=gnome-extra/gnome-screensaver-3.4.2
+
 # Tony Vroon <chainsaw@gentoo.org> (11 Jul 2012)
 # This segfaults repeatedly in actual use for me, and I can not in good 
 # conscience allow this to surprise others. Unmask only to help trace 
@@ -42,10 +50,6 @@
 # experimental features and accept a more unstable release.
 >=www-client/chromium-22
 >=www-client/google-chrome-22
-
-# Doug Goldstein <cardoe@gentoo.org> (08 Jul 2012)
-# Under dev
-=media-plugins/mythplugins-0.25.1
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (08 Jul 2012)
 # Dead upstream (domain is gone as well), very bad code.
@@ -95,10 +99,6 @@ dev-python/sexy-python
 # dead on upstream, fails on gcc-4.7
 =media-plugins/vdr-cdda-0.1.0-r1
 
-# Richard Yao <ryao@gentoo.org> (29 Jun 2012)
-# Patch introduced regressions
-=sys-fs/zfs-0.6.0_rc9-r3
-
 # Mike Gilbert <floppym@gentoo.org> (29 Jun 2012)
 # Mask v8 versions used for www-client/chromium dev channel releases.
 >=dev-lang/v8-3.12
@@ -131,10 +131,6 @@ x11-misc/transset-df
 # Matti Bickel <mabi@gentoo.org> (24 Jun 2012)
 # Replaced by eGroupware, removal on 23th Jul 2012
 www-apps/phpgroupware
-
-# Doug Goldstein <cardoe@gentoo.org> (21 Jun 2012)
-# A stab at a MythTV 0.25 series ebuild
-=media-tv/mythtv-0.25.1_p20120708
 
 # Maxim Koltsov <maksbotan@gentoo.org> (21 Jun 2012)
 # It's not what it's called now, mask it not protect people
@@ -307,12 +303,6 @@ app-shells/pdksh
 >=sci-biology/ncbi-tools-20080302
 >=sci-libs/arpack-96
 >=sci-chemistry/dssp-070831
-
-# Davide Pesavento <pesa@gentoo.org> (12 Jun 2012)
-# Both have been merged into >=dev-python/shiboken-1.1.1.
-# Removal in 30 days.
-dev-python/apiextractor
-dev-python/generatorrunner
 
 # Alexis Ballier <aballier@gentoo.org> (10 Jun 2012)
 # Beta release, mask until rev. deps are fixed
