@@ -947,7 +947,8 @@ app-text/yagf:tesseract - Enable support for the app-text/tesseract OCR engine.
 app-text/zathura-meta:cb - Install plug-in for ComicBook support
 app-vim/gentoo-syntax:ignore-glep31 - Remove GLEP 31 (UTF-8 file encodings) settings
 app-vim/vim-latex:html - Install HTML documentation
-dev-cpp/glog:gflags - Use gflags module for flag parsing
+dev-cpp/glog:gflags - Use dev-cpp/gflags for flag parsing
+dev-cpp/glog:unwind - Use sys-libs/libunwind for stack unwinding instead of glibc/gcc (may be more reliable on x86_64)
 dev-cpp/gtkmm:wayland - Enable dev-libs/wayland backend
 dev-cpp/libcmis:man - Build and install man pages.
 dev-cpp/pficommon:fcgi - Build FCGI feature
@@ -1939,7 +1940,6 @@ games-rpg/eternal-lands-data:bloodsuckermaps - Will install Bloodsucker's Maps i
 games-rpg/eternal-lands-data:music - Adds in-game music.
 games-rpg/eternal-lands-data:sound - Adds in-game sound effects.
 games-rpg/kqlives:cheats - Enable cheating mode
-games-rpg/mana:server - Enable Manaserv support
 games-rpg/nwn:hou - Install the Hordes of the Underdark expansion pack
 games-rpg/nwn:sou - Installs the Shadows of Undrentide expension pack
 games-rpg/nwn-data:hou - Install the Hordes of the Underdark expansion pack
@@ -2414,6 +2414,7 @@ media-gfx/blender:apidoc - Build GameEngine/Python/C API documentation directly 
 media-gfx/blender:blender-game - Adds Game Engine support to Blender (2.4* ebuilds).
 media-gfx/blender:collada - Add support for Collada interchange format through media-libs/opencollada.
 media-gfx/blender:contrib - Install contrib scripts.
+media-gfx/blender:cycles - Build cycles renderer.
 media-gfx/blender:dds - Adds DDS textures support to Blender.
 media-gfx/blender:elbeem - Adds surface fluid simulation to Blender using El'Beem library.
 media-gfx/blender:game-engine - Adds Game Engine support to Blender (2.5* ebuilds).
@@ -3766,6 +3767,7 @@ net-im/kadu:sdk - Install Kadu SDK (cmake module, API headers)
 net-im/kadu:speech - Enables speech module
 net-im/kmess:konqueror - Enable integration with konqueror
 net-im/kmess:libnotify - Enable desktop notifications using the knotify library
+net-im/ktp-text-ui:history - Enables saving chat history.
 net-im/leechcraft-azoth:acetamide - Build Acetamide, the IRC protocol support
 net-im/leechcraft-azoth:adiumstyles - Build support for Adium styles
 net-im/leechcraft-azoth:astrality - Build Astrality, support for protocols provided by Telepathy
