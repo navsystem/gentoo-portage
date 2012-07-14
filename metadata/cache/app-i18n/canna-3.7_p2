@@ -4,7 +4,7 @@
 mirror://sourceforge.jp/canna/9558/Canna37p2.tar.bz2
 
 http://canna.sourceforge.jp/
-MIT
+MIT GPL-2
 A client-server based Kana-Kanji conversion system
 alpha amd64 hppa ppc ppc64 sparc x86
 cannadic eutils multilib toolchain-funcs user

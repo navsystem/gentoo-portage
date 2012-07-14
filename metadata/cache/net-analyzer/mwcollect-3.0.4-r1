@@ -4,7 +4,7 @@ dev-libs/libpcre net-misc/curl >=sys-libs/libcap-1
 http://download.mwcollect.org/mwcollect-3.0.4.tar.bz2
 
 http://www.mwcollect.org/
-BSD
+BSD GPL-2
 mwcollect collects worms and other autonomous spreading malware
 ~ppc ~x86
 eutils multilib toolchain-funcs user

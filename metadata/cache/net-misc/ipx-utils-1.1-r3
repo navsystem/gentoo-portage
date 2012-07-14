@@ -4,7 +4,7 @@
 ftp://sunsite.unc.edu/pub/Linux/system/filesystems/ncpfs/ipx-1.1.tar.gz
 
 ftp://sunsite.unc.edu/pub/Linux/system/filesystems/ncpfs/
-Caldera
+Caldera GPL-2
 The IPX Utilities
 amd64 ppc64 ~s390 ~sparc x86
 eutils multilib toolchain-funcs user

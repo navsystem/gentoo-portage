@@ -4,7 +4,7 @@ dev-libs/libbegemot tcpd? ( sys-apps/tcp-wrappers )
 http://people.freebsd.org/~harti/bsnmp/bsnmp-1.12.tar.gz
 
 http://people.freebsd.org/~harti/
-BSD
+BSD GPL-2
 Mini-SNMP Daemon and Library
 ~amd64-fbsd ~x86-fbsd
 eutils flag-o-matic multilib toolchain-funcs user

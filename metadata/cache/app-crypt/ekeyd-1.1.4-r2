@@ -4,7 +4,7 @@
 http://www.entropykey.co.uk/res/download/ekeyd-1.1.4.tar.gz
 
 http://www.entropykey.co.uk/
-as-is
+as-is GPL-2
 Entropy Key userspace daemon
 ~amd64 ~x86
 eutils linux-info multilib toolchain-funcs user versionator

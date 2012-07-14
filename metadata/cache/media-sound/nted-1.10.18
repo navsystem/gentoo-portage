@@ -7,14 +7,14 @@ http://vsr.informatik.tu-chemnitz.de/staff/jan/nted/nted.xhtml
 GPL-2 FDL-1.2 NTED_FONT
 WYSIWYG score editor for GTK+
 amd64 x86
-
+eutils multilib toolchain-funcs user
 doc debug nls
 
 
 
 4
 
-configure
+configure prepare
 
 
 

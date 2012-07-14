@@ -4,7 +4,7 @@ dev-python/demjson >=dev-python/morbid-0.8.4 dev-python/stomper dev-python/twist
 mirror://pypi/o/orbited/orbited-0.7.10.tar.gz
 
 http://orbited.org
-MIT
+MIT GPL-2
 Real-time communication for the browser.
 amd64 x86
 distutils multilib python toolchain-funcs
