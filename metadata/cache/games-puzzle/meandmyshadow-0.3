@@ -1,4 +1,4 @@
-media-libs/libsdl[audio,video] media-libs/sdl-gfx media-libs/sdl-ttf media-libs/sdl-mixer[vorbis] media-libs/sdl-image[png] dev-libs/openssl net-misc/curl app-arch/libarchive >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+media-libs/libsdl[audio,video] media-libs/sdl-gfx media-libs/sdl-ttf media-libs/sdl-mixer[vorbis] media-libs/sdl-image[png] dev-libs/openssl net-misc/curl app-arch/libarchive >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) >=sys-apps/sed-4
 media-libs/libsdl[audio,video] media-libs/sdl-gfx media-libs/sdl-ttf media-libs/sdl-mixer[vorbis] media-libs/sdl-image[png] dev-libs/openssl net-misc/curl app-arch/libarchive
 0
 mirror://sourceforge/meandmyshadow/0.3/meandmyshadow-0.3-src.tar.gz
@@ -7,14 +7,14 @@ http://meandmyshadow.sourceforge.net/
 GPL-3 OFL-1.1 CCPL-Attribution-ShareAlike-2.5
 A puzzle/plateform game with a player and its shadow
 amd64 x86
-base cmake-utils eutils flag-o-matic games multilib toolchain-funcs user
+base cmake-utils eutils flag-o-matic games gnome2-utils multilib toolchain-funcs user
 
 
 
 
 3
 
-compile configure install postinst preinst prepare setup test unpack
+compile configure install postinst postrm preinst prepare setup test unpack
 
 
 
