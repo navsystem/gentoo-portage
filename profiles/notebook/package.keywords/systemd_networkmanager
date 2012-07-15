@@ -2,7 +2,7 @@
 <net-misc/networkmanager-9999  amd64
 <kde-misc/networkmanagement-9999 amd64
 <sys-apps/systemd-9999  amd64
-~sys-auth/polkit-0.106 amd64
+~sys-auth/polkit-0.107 amd64
 ~net-dialup/ppp-2.4.5  amd64
 ~sys-fs/udev-186  amd64
 ~sys-fs/lvm2-2.02.95 amd64

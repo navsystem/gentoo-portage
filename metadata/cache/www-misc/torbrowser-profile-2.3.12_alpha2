@@ -1,0 +1,22 @@
+
+www-client/torbrowser
+0
+amd64? ( https://www.torproject.org/dist/torbrowser/linux/tor-browser-gnu-linux-x86_64-2.3.12-alpha-2-dev-en-US.tar.gz ) x86? ( https://www.torproject.org/dist/torbrowser/linux/tor-browser-gnu-linux-i686-2.3.12-alpha-2-dev-en-US.tar.gz )
+
+https://www.torproject.org/dist/torbrowser/linux/
+BSD GPL-2 MIT
+Profile folder from the torbrowser bundle
+~amd64 ~x86
+
+
+
+
+
+4
+
+install
+
+
+
+
+

@@ -895,7 +895,6 @@ app-text/pdf2djvu:graphicsmagick - Enable media-gfx/graphicsmagick support
 app-text/pdfgrep:unac - Removing accents and ligatures before search
 app-text/pdftk:nodrm - Decrypt a document with the user_pw even if it has an owner_pw set
 app-text/podofo:boost - Add support for boost
-app-text/poppler:exceptions - Enable exceptions throwing.
 app-text/poppler:introspection - Enable GObject introspection.
 app-text/poppler:utils - Install command-line PDF converters and various utilities.
 app-text/poppler:xpdf-headers - 
@@ -947,7 +946,8 @@ app-text/yagf:tesseract - Enable support for the app-text/tesseract OCR engine.
 app-text/zathura-meta:cb - Install plug-in for ComicBook support
 app-vim/gentoo-syntax:ignore-glep31 - Remove GLEP 31 (UTF-8 file encodings) settings
 app-vim/vim-latex:html - Install HTML documentation
-dev-cpp/glog:gflags - Use gflags module for flag parsing
+dev-cpp/glog:gflags - Use dev-cpp/gflags for flag parsing
+dev-cpp/glog:unwind - Use sys-libs/libunwind for stack unwinding instead of glibc/gcc (may be more reliable on x86_64)
 dev-cpp/gtkmm:wayland - Enable dev-libs/wayland backend
 dev-cpp/libcmis:man - Build and install man pages.
 dev-cpp/pficommon:fcgi - Build FCGI feature
@@ -1939,7 +1939,6 @@ games-rpg/eternal-lands-data:bloodsuckermaps - Will install Bloodsucker's Maps i
 games-rpg/eternal-lands-data:music - Adds in-game music.
 games-rpg/eternal-lands-data:sound - Adds in-game sound effects.
 games-rpg/kqlives:cheats - Enable cheating mode
-games-rpg/mana:server - Enable Manaserv support
 games-rpg/nwn:hou - Install the Hordes of the Underdark expansion pack
 games-rpg/nwn:sou - Installs the Shadows of Undrentide expension pack
 games-rpg/nwn-data:hou - Install the Hordes of the Underdark expansion pack
@@ -2414,6 +2413,7 @@ media-gfx/blender:apidoc - Build GameEngine/Python/C API documentation directly 
 media-gfx/blender:blender-game - Adds Game Engine support to Blender (2.4* ebuilds).
 media-gfx/blender:collada - Add support for Collada interchange format through media-libs/opencollada.
 media-gfx/blender:contrib - Install contrib scripts.
+media-gfx/blender:cycles - Build cycles renderer.
 media-gfx/blender:dds - Adds DDS textures support to Blender.
 media-gfx/blender:elbeem - Adds surface fluid simulation to Blender using El'Beem library.
 media-gfx/blender:game-engine - Adds Game Engine support to Blender (2.5* ebuilds).
@@ -3766,6 +3766,7 @@ net-im/kadu:sdk - Install Kadu SDK (cmake module, API headers)
 net-im/kadu:speech - Enables speech module
 net-im/kmess:konqueror - Enable integration with konqueror
 net-im/kmess:libnotify - Enable desktop notifications using the knotify library
+net-im/ktp-text-ui:history - Enables saving chat history.
 net-im/leechcraft-azoth:acetamide - Build Acetamide, the IRC protocol support
 net-im/leechcraft-azoth:adiumstyles - Build support for Adium styles
 net-im/leechcraft-azoth:astrality - Build Astrality, support for protocols provided by Telepathy
@@ -4951,7 +4952,6 @@ sci-physics/pythia:hepmc - Adds support for High Energy Physics Monte Carlo Gene
 sci-physics/root:c++0x - Build ROOT using the C++11 standard. Not supported, requires sys-devel/gcc>=4.7.0
 sci-physics/root:clarens - Build the Clarens and PEAC plug-ins, to use in a GRID enabled analysis
 sci-physics/root:fits - Support for images and data from FITS files with sci-libs/cfitsio
-sci-physics/root:geant4 - Support for sci-physics/geant version 4
 sci-physics/root:htmldoc - Generate html documentation
 sci-physics/root:math - Build all math related libraries plugins, needs sci-libs/gsl
 sci-physics/root:pythia6 - Build the interface for sci-physics/pythia version 6.x
@@ -5524,6 +5524,7 @@ www-client/torbrowser:custom-optimization - Fine-tune custom compiler optimizati
 www-client/torbrowser:ipc - Use inter-process communication between tabs and plugins. Allows for greater stability in case of plugin crashes
 www-client/torbrowser:pgo - Add support for profile-guided optimization using gcc-4.5, for faster binaries. This option will double the compile time.
 www-client/torbrowser:system-sqlite - Use the system-wide dev-db/sqlite installation with secure-delete enabled
+www-client/torbrowser:torprofile - Install pre-configured profile folder by upstream into "/usr/share/torbrowser/profile" (you still have to copy it in place)
 www-client/torbrowser:webm - Use system media-libs/libvpx for HTML5 WebM video support.
 www-client/uget:aria2 - Enable support for net-misc/aria2 through xmlrpc. You'll find the plugin in the app's settings.
 www-client/uget:gtk3 - Use x11-libs/gtk+:3 instead of x11-libs/gtk+:2
