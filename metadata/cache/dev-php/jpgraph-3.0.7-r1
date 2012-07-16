@@ -6,7 +6,7 @@ http://hem.bredband.net/jpgraph2/jpgraph-3.0.7.tar.bz2
 http://www.aditus.nu/jpgraph/
 QPL-1.0
 Fully OO graph drawing library for PHP.
-~alpha amd64 hppa ~ppc ~sparc x86
+alpha amd64 hppa ~ppc sparc x86
 eutils multilib toolchain-funcs user
 truetype +examples
 

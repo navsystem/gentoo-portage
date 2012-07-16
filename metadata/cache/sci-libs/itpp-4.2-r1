@@ -1,4 +1,4 @@
-blas? ( virtual/blas lapack? ( virtual/lapack ) ) !minimal? ( fftw? ( >=sci-libs/fftw-3 ) ) blas? ( virtual/pkgconfig ) doc? ( app-doc/doxygen virtual/latex-base ) lapack? ( virtual/pkgconfig )
+blas? ( virtual/blas lapack? ( virtual/lapack ) ) !minimal? ( fftw? ( >=sci-libs/fftw-3 ) ) blas? ( virtual/pkgconfig ) doc? ( app-doc/doxygen virtual/latex-base ) lapack? ( virtual/pkgconfig ) || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 blas? ( virtual/blas lapack? ( virtual/lapack ) ) !minimal? ( fftw? ( >=sci-libs/fftw-3 ) )
 0
 mirror://sourceforge/itpp/itpp-4.2.tar.bz2
