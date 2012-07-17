@@ -6,7 +6,7 @@ mirror://pypi/g/greenlet/greenlet-0.4.0.zip
 http://pypi.python.org/pypi/greenlet/
 MIT
 Lightweight in-process concurrent programming
-~amd64 ~x86
+~amd64 ~arm ~x86
 distutils multilib python toolchain-funcs
 doc
 
