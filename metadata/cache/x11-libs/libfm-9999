@@ -1,5 +1,5 @@
->=dev-libs/glib-2.18:2 >=x11-libs/gtk+-2.16:2 udev? ( dev-libs/dbus-glib ) >=lxde-base/menu-cache-0.3.2 >=dev-lang/vala-0.14.0 dev-util/gtk-doc-am doc? ( dev-util/gtk-doc ) >=dev-util/intltool-0.40 virtual/pkgconfig sys-devel/gettext || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool dev-vcs/git
->=dev-libs/glib-2.18:2 >=x11-libs/gtk+-2.16:2 udev? ( dev-libs/dbus-glib ) >=lxde-base/menu-cache-0.3.2 x11-misc/shared-mime-info udev? ( sys-fs/udisks:0 )
+>=dev-libs/glib-2.18:2 >=x11-libs/gtk+-2.16:2 >=lxde-base/menu-cache-0.3.2 >=dev-lang/vala-0.14.0 dev-util/gtk-doc-am doc? ( dev-util/gtk-doc ) >=dev-util/intltool-0.40 virtual/pkgconfig sys-devel/gettext || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool dev-vcs/git
+>=dev-libs/glib-2.18:2 >=x11-libs/gtk+-2.16:2 >=lxde-base/menu-cache-0.3.2 x11-misc/shared-mime-info
 0
 
 
@@ -8,7 +8,7 @@ GPL-2
 A library for file management
 
 autotools fdo-mime git-2 libtool multilib multiprocessing toolchain-funcs
-debug doc examples udev
+debug doc examples
 
 
 

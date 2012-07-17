@@ -1,0 +1,22 @@
+app-arch/xz-utils >=virtual/emacs-21
+x11-misc/xclip >=virtual/emacs-21
+0
+mirror://gentoo/xclip-1.0.el.xz
+
+http://elpa.gnu.org/packages/
+GPL-3
+Emacs Interface to XClip
+~amd64 ~x86
+elisp elisp-common eutils multilib toolchain-funcs user
+
+
+
+
+4
+
+compile configure install postinst postrm prepare setup unpack
+
+
+
+
+

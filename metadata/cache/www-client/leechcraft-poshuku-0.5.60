@@ -1,5 +1,5 @@
-~net-misc/leechcraft-core-0.5.60[postgres?,sqlite?] x11-libs/qt-webkit onlinebookmarks? ( >=dev-libs/qjson-0.7.1-r1 ) idn? ( net-dns/libidn ) >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) app-arch/xz-utils
-~net-misc/leechcraft-core-0.5.60[postgres?,sqlite?] x11-libs/qt-webkit onlinebookmarks? ( >=dev-libs/qjson-0.7.1-r1 ) idn? ( net-dns/libidn ) virtual/leechcraft-downloader-http
+~net-misc/leechcraft-core-0.5.60[postgres?,sqlite?] x11-libs/qt-webkit:4 onlinebookmarks? ( >=dev-libs/qjson-0.7.1-r1 ) idn? ( net-dns/libidn ) >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) app-arch/xz-utils
+~net-misc/leechcraft-core-0.5.60[postgres?,sqlite?] x11-libs/qt-webkit:4 onlinebookmarks? ( >=dev-libs/qjson-0.7.1-r1 ) idn? ( net-dns/libidn ) virtual/leechcraft-downloader-http
 0
 mirror://sourceforge/leechcraft/leechcraft-0.5.60.tar.xz
 

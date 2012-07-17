@@ -1,5 +1,5 @@
-sniffer? ( net-libs/libpcap ) zlib? ( sys-libs/zlib )
-sniffer? ( net-libs/libpcap ) zlib? ( sys-libs/zlib )
+app-arch/unzip sniffer? ( net-libs/libpcap ) zlib? ( sys-libs/zlib )
+app-arch/unzip sniffer? ( net-libs/libpcap ) zlib? ( sys-libs/zlib )
 0
 http://dev.gentoo.org/~blueness/cyassl/cyassl-2.0.8.zip
 

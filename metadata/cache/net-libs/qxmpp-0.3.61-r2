@@ -1,5 +1,5 @@
-x11-libs/qt-core x11-libs/qt-gui media-libs/speex
-x11-libs/qt-core x11-libs/qt-gui media-libs/speex
+x11-libs/qt-core:4 x11-libs/qt-gui:4 media-libs/speex
+x11-libs/qt-core:4 x11-libs/qt-gui:4 media-libs/speex
 0
 mirror://github/0xd34df00d/qxmpp-dev/qxmpp-0.3.61-extras.tar.bz2
 

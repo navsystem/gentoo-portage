@@ -1,5 +1,5 @@
-~net-misc/leechcraft-core-0.4.99 x11-libs/qt-dbus >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) app-arch/xz-utils
-~net-misc/leechcraft-core-0.4.99 x11-libs/qt-dbus
+~net-misc/leechcraft-core-0.4.99 x11-libs/qt-dbus:4 >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) app-arch/xz-utils
+~net-misc/leechcraft-core-0.4.99 x11-libs/qt-dbus:4
 0
 mirror://sourceforge/leechcraft/leechcraft-0.4.99.tar.xz
 
