@@ -1,0 +1,22 @@
+dev-python/libgnomeprint-python dev-python/pywebkitgtk dev-python/wxpython =dev-lang/python-2.7*
+dev-python/libgnomeprint-python dev-python/pywebkitgtk dev-python/wxpython =dev-lang/python-2.7*
+0
+http://jenyay.net/uploads/Soft/Outwiker/outwiker-1.6.0-src.tar.gz
+
+http://jenyay.net/Outwiker/English
+GPL-3
+The tree notes organizer
+~amd64 ~x86
+multilib python toolchain-funcs
+
+
+
+
+4
+
+compile postinst setup
+
+
+
+
+

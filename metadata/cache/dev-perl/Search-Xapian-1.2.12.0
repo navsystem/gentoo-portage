@@ -6,7 +6,7 @@ mirror://cpan/authors/id/O/OL/OLLY/Search-Xapian-1.2.12.0.tar.gz http://oligarch
 http://search.cpan.org/dist/Search-Xapian/
 || ( Artistic GPL-1 GPL-2 GPL-3 )
 Perl XS frontend to the Xapian C++ search library.
-~amd64 ~x86
+~amd64 ~ppc ~ppc64 ~x86
 base eutils multilib multiprocessing perl-module toolchain-funcs user versionator
 examples
 

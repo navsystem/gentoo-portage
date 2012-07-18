@@ -1,0 +1,22 @@
+dev-lang/python:2.7[ncurses,xml] !<sys-apps/portage-2.1.10.58 python_targets_python2_7? ( dev-lang/python:2.7 ) dev-vcs/git
+dev-lang/python:2.7[ncurses,xml] python_targets_python2_7? ( dev-lang/python:2.7 )
+0
+
+
+https://github.com/matimatik/fbless
+GPL-2
+Python-based console fb2 reader with less-like interface
+
+git-2 python-distutils-ng
+python_targets_python2_7
+|| ( python_targets_python2_7 )
+
+
+4
+
+compile configure install prepare test unpack
+
+
+
+
+

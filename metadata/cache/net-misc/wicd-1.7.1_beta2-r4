@@ -3,7 +3,7 @@ dev-python/dbus-python X? ( gtk? ( dev-python/pygtk || ( x11-libs/gksu kde-base/
 0
 http://downloads.wicd.net/src/testing/1.7.x/wicd-1.7.1b2.tar.bz2
 
-http://wicd.sourceforge.net/
+https://launchpad.net/wicd
 GPL-2
 A lightweight wired and wireless network manager for Linux
 amd64 ppc ppc64 x86
