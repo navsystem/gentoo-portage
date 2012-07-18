@@ -6,7 +6,7 @@ mirror://cpan/authors/id/R/RG/RGARCIA/Switch-2.16.tar.gz http://dev.gentoo.org/~
 http://search.cpan.org/dist/Switch/
 || ( Artistic GPL-1 GPL-2 GPL-3 )
 A switch statement for Perl
-~amd64 ~x86
+~amd64 ~arm ~x86
 alternatives base eutils multilib multiprocessing perl-module toolchain-funcs user
 
 

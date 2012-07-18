@@ -1,0 +1,22 @@
+bzip2? ( app-arch/bzip2 ) lzma? ( app-arch/xz-utils ) perl? ( dev-lang/perl ) || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool python? ( =dev-lang/python-2* )
+bzip2? ( app-arch/bzip2 ) lzma? ( app-arch/xz-utils ) perl? ( dev-lang/perl ) python? ( =dev-lang/python-2* )
+0
+mirror://sourceforge/project/getdata/getdata/0.8.0/getdata-0.8.0.tar.bz2
+
+http://getdata.sourceforge.net/
+LGPL-2.1
+Reference implementation of the Dirfile, format for time-ordered binary data
+~amd64 ~x86
+autotools fortran-2 libtool multilib multiprocessing python toolchain-funcs
+bzip2 fortran lzma python perl static-libs
+
+
+
+3
+
+compile configure install prepare setup
+
+
+
+
+

@@ -3,7 +3,7 @@ dev-python/dbus-python X? ( gtk? ( dev-python/pygtk || ( x11-libs/gksu kde-base/
 0
 http://dev.gentoo.org/~tomka/files/wicd-1.7.1_pre20111210.tar.gz
 
-http://wicd.sourceforge.net/
+https://launchpad.net/wicd
 GPL-2
 A lightweight wired and wireless network manager for Linux
 ~amd64 ~ppc ~ppc64 ~x86

@@ -1,0 +1,22 @@
+dev-libs/libparserutils dev-libs/libwapcaplet dev-libs/libxml2 net-libs/hubbub virtual/pkgconfig test? ( dev-perl/XML-XPath dev-perl/libxml-perl perl-core/Switch ) dev-vcs/git
+dev-libs/libparserutils dev-libs/libwapcaplet dev-libs/libxml2 net-libs/hubbub
+0
+mirror://gentoo/netsurf-buildsystem-0_p20120717.tar.gz
+
+http://www.netsurf-browser.org/projects/libdom/
+MIT
+implementation of the W3C DOM, written in C
+
+git-2 multilib toolchain-funcs
+static-libs
+
+
+
+4
+
+compile install prepare test unpack
+
+
+
+
+
