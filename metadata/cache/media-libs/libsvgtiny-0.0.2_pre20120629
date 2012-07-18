@@ -1,0 +1,22 @@
+dev-util/gperf virtual/pkgconfig
+
+0
+mirror://gentoo/netsurf-buildsystem-0_p20120717.tar.gz mirror://gentoo/libsvgtiny-0.0.2_pre20120629.tar.gz
+
+http://www.netsurf-browser.org/projects/libsvgtiny/
+MIT
+framebuffer abstraction library, written in C
+~amd64 ~arm
+multilib toolchain-funcs
+static-libs
+
+
+
+4
+
+compile install prepare test unpack
+
+
+
+
+

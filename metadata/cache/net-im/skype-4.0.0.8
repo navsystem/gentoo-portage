@@ -1,0 +1,22 @@
+>=sys-apps/sed-4
+virtual/ttf-fonts amd64? ( >=app-emulation/emul-linux-x86-baselibs-20120520 >=app-emulation/emul-linux-x86-soundlibs-20120520 >=app-emulation/emul-linux-x86-xlibs-20120520 !qt-static? ( >=app-emulation/emul-linux-x86-qtlibs-20120520 ) ) x86? ( media-libs/alsa-lib x11-libs/libX11 x11-libs/libXext x11-libs/libXScrnSaver x11-libs/libXv qt-static? ( >=dev-libs/glib-2.28 media-libs/fontconfig >=media-libs/freetype-2 >=media-libs/tiff-3.9.5-r3:3 sys-libs/zlib x11-libs/libICE x11-libs/libSM x11-libs/libXrender ) !qt-static? ( x11-libs/qt-core:4 x11-libs/qt-dbus:4 x11-libs/qt-gui:4[accessibility,dbus] ) )
+0
+!qt-static? ( http://download.skype.com/linux/skype-4.0.0.8.tar.bz2 ) qt-static? ( http://download.skype.com/linux/skype_static-4.0.0.8.tar.bz2 )
+mirror strip
+http://www.skype.com/
+skype-4.0.0.7-copyright skype-4.0.0.7-third-party_attributions.txt
+An P2P Internet Telephony (VoiceIP) client
+~amd64 ~x86
+eutils gnome2-utils multilib pax-utils toolchain-funcs user
+pax_kernel qt-static
+
+
+
+4
+
+compile install postinst postrm preinst unpack
+
+
+
+
+

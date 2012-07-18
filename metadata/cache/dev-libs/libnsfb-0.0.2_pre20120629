@@ -1,0 +1,22 @@
+media-libs/libsdl net-libs/libvncserver x11-libs/libxcb x11-libs/xcb-util x11-libs/xcb-util-image x11-libs/xcb-util-keysyms virtual/pkgconfig
+media-libs/libsdl net-libs/libvncserver x11-libs/libxcb x11-libs/xcb-util x11-libs/xcb-util-image x11-libs/xcb-util-keysyms
+0
+mirror://gentoo/netsurf-buildsystem-0_p20120717.tar.gz mirror://gentoo/libnsfb-0.0.2_pre20120629.tar.gz
+test
+http://www.netsurf-browser.org/projects/libnsfb/
+MIT
+framebuffer abstraction library, written in C
+~amd64 ~arm
+multilib toolchain-funcs
+static-libs
+
+
+
+4
+
+compile install prepare test unpack
+
+
+
+
+

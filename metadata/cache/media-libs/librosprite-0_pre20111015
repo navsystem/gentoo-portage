@@ -1,0 +1,22 @@
+virtual/pkgconfig
+
+0
+mirror://gentoo/librosprite-0_pre20111015.tar.gz
+
+http://www.netsurf-browser.org/projects/librosprite/
+MIT
+framebuffer abstraction library, written in C
+~amd64 ~arm
+multilib toolchain-funcs
+
+
+
+
+4
+
+compile install prepare
+
+
+
+
+

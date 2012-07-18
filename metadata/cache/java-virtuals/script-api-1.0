@@ -1,0 +1,22 @@
+>=dev-java/java-config-2.1.6
+|| ( >=virtual/jre-1.6 dev-java/jsr223:0 ) >=dev-java/java-config-2.1.6
+0
+
+
+http://www.gentoo.org
+public-domain
+Virtual for Java Scripting API (jsr223)
+~amd64 ~x86
+eutils java-utils-2 java-virtuals-2 multilib toolchain-funcs user versionator
+elibc_FreeBSD
+
+
+
+4
+
+install
+
+
+
+
+
