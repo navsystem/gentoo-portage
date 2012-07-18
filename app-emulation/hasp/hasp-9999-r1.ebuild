@@ -10,7 +10,7 @@ DESCRIPTION="Hardware Against Software Piracy for access to parallel and usb key
 HOMEPAGE="http://www.etersoft.ru"
 EGIT_REPO_URI="git://git.etersoft.ru/people/piastry/packages/haspd.git"
 
-LICENSE="Alladin"
+LICENSE="Etersoft"
 SLOT="0"
 KEYWORDS=""
 

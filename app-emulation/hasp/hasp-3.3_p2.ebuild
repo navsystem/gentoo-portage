@@ -10,7 +10,7 @@ DESCRIPTION="Hardware Against Software Piracy for access to parallel and usb key
 HOMEPAGE="http://www.etersoft.ru"
 SRC_URI="http://ftp.etersoft.ru/pub/Etersoft/HASP/3.3/sources/x86_64/Debian/6.0/haspd-3.3-eter2debian.src.rpm"
 
-LICENSE="Alladin"
+LICENSE="Etersoft"
 SLOT="0"
 KEYWORDS="amd64 x86"
 
