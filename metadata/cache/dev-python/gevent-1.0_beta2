@@ -6,7 +6,7 @@ test
 http://code.google.com/p/gevent/ http://pypi.python.org/pypi/gevent/
 MIT
 Python networking library that uses greenlet to provide synchronous API
-~amd64 ~x86
+~amd64 ~arm ~x86
 distutils multilib python toolchain-funcs
 doc examples
 
