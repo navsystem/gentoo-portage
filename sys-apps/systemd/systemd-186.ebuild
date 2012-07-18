@@ -64,6 +64,7 @@ src_prepare() {
 	# change rules back to group uucp instead of dialout for now
 	sed -e '/GROUP=/s:dialout:uucp:' \
 		-i rules/*.rules || die
+	sed -e '/udevlibexecdir/s:$(rootprefix)/lib/udev:/lib/udev:' -i Makefile.* || die
 
 	autotools-utils_src_prepare
 }
