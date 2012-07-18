@@ -122,7 +122,7 @@ src_install() {
 	doins "${FILESDIR}"/gentoo-run.conf
 
 	# Gentoo rules for udev.
-	insinto /usr/lib/udev/rules.d
+	insinto /lib/udev/rules.d
 	doins "${FILESDIR}"/40-gentoo.rules
 }
 
