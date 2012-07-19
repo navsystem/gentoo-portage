@@ -8,7 +8,7 @@ MIT
 implementation of the W3C DOM, written in C
 ~amd64 ~arm
 multilib toolchain-funcs
-static-libs
+static-libs test
 
 
 
