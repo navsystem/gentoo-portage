@@ -6,7 +6,7 @@ http://pub.ks-and-ks.ne.jp/prog/pub/w3mmee-p24-22.tar.gz
 http://pub.ks-and-ks.ne.jp/prog/w3mmee/
 public-domain
 A variant of w3m with support for multiple character encodings
-~amd64 ~ppc ~sparc ~x86
+~amd64 ~ppc ~sparc x86
 alternatives eutils multilib toolchain-funcs user
 gpm imlib nls ssl xface
 
