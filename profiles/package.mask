@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13987 2012/07/19 22:28:19 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13993 2012/07/21 10:30:29 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,17 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Markos Chandras <hwoarang@gentoo.org> (21 Jul 2012)
+# Package sources have been removed fro website (#424349)
+# Does not respect CFLAGS/CXXFLAGS/LDFLAGS (#337361)
+# Removal in 30 days
+net-misc/snitch
+
+# Hans de Graaff <graaff@gentoo.org> (21 Jul 2012)
+# Slot masked for security bug 427370. Nothing in the tree
+# depends on it. Removal in 30 days.
+dev-ruby/mail:0
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (19 Jul 2012)
 # Fails to scan with recent sane-backends; fails to build with gegl-0.2;
@@ -66,10 +77,6 @@ media-gfx/gnome-scan
 # Removal in 30 days (bug #426268)
 gnustep-libs/popplerkit
 gnustep-apps/vindaloo
-
-# Diego Elio Pettenò <flameeyes@gentoo.org> (16 Jul 2012)
-# Mask until the ebuild is ready
-=net-analyzer/munin-2*
 
 # Johannes Huber <johu@gentoo.org> (16 Jul 2012)
 # Tests fails to build, needs >=net-libs/telepathy-glib-0.19.0.
@@ -379,6 +386,8 @@ net-misc/ptrtd
 ~app-office/calligra-l10n-2.4.90
 ~app-office/calligra-2.4.91
 ~app-office/calligra-l10n-2.4.91
+~app-office/calligra-2.4.92
+~app-office/calligra-l10n-2.4.92
 
 # Samuli Suominen <ssuominen@gentoo.org> (01 Jun 2012)
 # Fails to run with font issues wrt bug 418259
@@ -469,17 +478,6 @@ dev-ruby/gherkin:2.10
 # Broken, masking by maintainer's request
 net-ftp/leechcraft-lcftp
 net-p2p/leechcraft-eiskaltdcpp
-
-# Hans de Graaff <graaff@gentoo.org> (17 Apr 2012)
-# ruby-gnome2 modules obsoleted by upstream. These are
-# no longer maintained and mostly depend on gnome
-# components that have been obsoleted themselves.
-# no specific bug for these, nothing in the tree depends
-# on them.
-dev-ruby/ruby-gnomevfs
-dev-ruby/ruby-gtkglext
-dev-ruby/ruby-gtkhtml2
-dev-ruby/ruby-panel-applet2
 
 # Patrick Lauer <patrick@gentoo.org> (13 Apr 2012)
 # Needs lots of fixes, plus modules fail, so mask until it's
@@ -646,6 +644,7 @@ sys-apps/systemd-sysv-utils
 # Opera Next and Opera snapshots are unsupported and eternally unstable.
 # <http://my.opera.com/desktopteam/blog>
 www-client/opera-next
+>www-client/opera-12.01
 
 # Hanno Boeck <hanno@gentoo.org> (15 Dec 2011)
 # Breaks pam_mount, which is its only user in the tree.

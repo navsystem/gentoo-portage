@@ -1,0 +1,22 @@
+ssl? ( dev-libs/libgcrypt net-libs/gnutls ) test? ( ssl? ( >=net-misc/curl-7.25.0-r1[ssl] ) )
+ssl? ( dev-libs/libgcrypt net-libs/gnutls )
+0
+mirror://gnu/libmicrohttpd/libmicrohttpd-0.9.21.tar.gz
+
+http://www.gnu.org/software/libmicrohttpd/
+LGPL-2.1
+A small C library that makes it easy to run an HTTP server as part of another application.
+~amd64 ~x86
+
+messages ssl static-libs test
+
+
+
+4
+
+configure install
+
+
+
+
+

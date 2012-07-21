@@ -1,5 +1,5 @@
->=dev-libs/elfutils-0.100 !dev-libs/libelf >=sys-libs/glibc-2.8
->=dev-libs/elfutils-0.100 !dev-libs/libelf >=sys-libs/glibc-2.8 >=sys-devel/binutils-2.18
+>=dev-libs/elfutils-0.100[static-libs(+)] !dev-libs/libelf >=sys-libs/glibc-2.8
+>=dev-libs/elfutils-0.100[static-libs(+)] !dev-libs/libelf >=sys-libs/glibc-2.8 >=sys-devel/binutils-2.18
 0
 http://people.redhat.com/jakub/prelink/prelink-20111012.tar.bz2
 
@@ -12,7 +12,7 @@ eutils flag-o-matic multilib toolchain-funcs user
 
 
 
-2
+4
 
 install postinst prepare
 
