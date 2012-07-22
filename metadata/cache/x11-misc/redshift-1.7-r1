@@ -12,7 +12,7 @@ geoclue gnome gtk nls
 
 
 
-3
+4
 
 configure install postinst postrm preinst prepare setup
 

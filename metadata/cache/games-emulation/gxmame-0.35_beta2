@@ -12,7 +12,7 @@ nls joystick
 
 
 
-2
+4
 
 compile configure install postinst preinst prepare setup unpack
 
