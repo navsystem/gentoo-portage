@@ -6,7 +6,7 @@ http://dev.gentoo.org/~jlec/distfiles/vpnc-0.5.3_p514.tar.xz
 http://www.unix-ag.uni-kl.de/~massar/vpnc/
 GPL-2 BSD
 Free client for Cisco VPN routing software
-~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86
+~amd64 arm ~ppc ~ppc64 ~sparc ~x86
 eutils multilib toolchain-funcs user
 resolvconf +gnutls bindist
 

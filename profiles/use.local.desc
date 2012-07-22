@@ -450,8 +450,6 @@ app-emulation/open-vm-tools:doc - Generate API documentation
 app-emulation/open-vm-tools:fuse - Build vmblock-fuse in favor of FUSE based blocking mechanism for DnD
 app-emulation/open-vm-tools:pic - Force shared libraries to be built as PIC
 app-emulation/open-vm-tools:unity - Enable host unity support
-app-emulation/opennebula:qemu - Pull in packages needed to create Qemu/Kvm nodes.
-app-emulation/opennebula:xen - Pull in packages needed to create Xen nodes.
 app-emulation/playonlinux:winbind - Enables support for the winbind auth daemon
 app-emulation/q4wine:gnome - Use the gksu sudo GUI for managing the devices
 app-emulation/q4wine:icoutils - Enable icoutils support
@@ -894,6 +892,7 @@ app-text/pandoc:highlight - Add support for syntax highlighting with dev-haskell
 app-text/pdf2djvu:graphicsmagick - Enable media-gfx/graphicsmagick support
 app-text/pdfgrep:unac - Removing accents and ligatures before search
 app-text/pdftk:nodrm - Decrypt a document with the user_pw even if it has an owner_pw set
+app-text/pelican:markdown - Markdown support
 app-text/podofo:boost - Add support for boost
 app-text/poppler:introspection - Enable GObject introspection.
 app-text/poppler:utils - Install command-line PDF converters and various utilities.
@@ -1774,6 +1773,7 @@ dev-util/perf:demangle - Enable C++ symbol name demangling, using libbfd from sy
 dev-util/perf:doc - Build documentation and man pages. With this USE flag disabled, the --help parameter for perf and its sub-tools will not be available. This is optional because it depends on a few documentation handling tools that are not always welcome on user systems.
 dev-util/perf:perl - Add support for Perl as a scripting language for perf tools.
 dev-util/pkgconf:pkg-config - Install as a replacement for dev-util/pkgconfig
+dev-util/pkgconf:strict - Adhere to POSIX pkg-config specification. Useful for finding uses of non-standard pkg-config invocations.
 dev-util/pkgconfig:internal-glib - Use internal copy of dev-libs/glib
 dev-util/pkgconfig-openbsd:pkg-config - Install as a replacement for dev-util/pkgconfig
 dev-util/qdevelop:plugins - Build and install additional plugins
@@ -1835,7 +1835,6 @@ dev-vcs/subversion:webdav-serf - Enable WebDAV support using net-libs/serf
 dev-vcs/svk:log4p - Enable perl logger support
 dev-vcs/svk:pager - Enable perl pager selection support
 dev-vcs/svk:patch - Enable patch creation, import support
-dev-vcs/tortoisehg:nautilus - Integrate with gnome-base/nautilus file manager
 games-action/abuse:demo - Use the demo data instead of the full game
 games-action/abuse:levels - Install user-created levels (fRaBs)
 games-action/abuse:sound - Install optional sound data
@@ -1882,6 +1881,10 @@ games-emulation/xmess:net - Add network support
 games-emulation/zsnes:pax_kernel - Triggers a paxmarking of the binary
 games-engines/frobtads:tads2compiler - Build TADS2 compiler
 games-engines/frobtads:tads3compiler - Build TADS3 compiler
+games-engines/odamex:master - Build master server target (advertises odamex server list)
+games-engines/odamex:odalaunch - Build the wxwidgets based launcher.
+games-engines/odamex:portmidi - Enable portmidi support.
+games-engines/odamex:server - Build server target.
 games-engines/scummvm:fluidsynth - compile with support for fluidsynth
 games-fps/alienarena:vidmode - Link against x11-libs/libXxf86vm. Required for full-screen support.
 games-fps/darkplaces:cdsound - Enables using CD audio in the engine
@@ -2966,6 +2969,7 @@ media-sound/pulseaudio:oss - Enable OSS sink/source (output/input). Deprecated, 
 media-sound/pulseaudio:realtime - Makes PulseAudio use RealtimeKit (sys-auth/rtkit) to get real-time priority while running.
 media-sound/pulseaudio:ssl - Use dev-libs/openssl to provide support for RAOP (AirPort) streaming.
 media-sound/pulseaudio:system-wide - Allow preparation and installation of the system-wide init script for PulseAudio. Since this support is only supported for embedded situations, do not enable without reading the upstream instructions at http://pulseaudio.org/wiki/WhatIsWrongWithSystemMode .
+media-sound/pulseaudio:systemd - Build with sys-apps/systemd support to replace standalone ConsoleKit.
 media-sound/pulseaudio:webrtc-aec - Uses the webrtc.org AudioProcessing library for enhancing VoIP calls greatly in applications that support it by performing acoustic echo cancellation, analog gain control, noise suppression and other processing.
 media-sound/pulseaudio:xen - Builds a special paravirtualized module for running in a Xen guest.
 media-sound/qmmp:bs2b - Enable Bauer stereophonic-to-binaural headphone filter
@@ -5595,6 +5599,7 @@ www-servers/pshs:magic - Enable automatic detection of Content-Type using libmag
 www-servers/pshs:netlink - Use libnetlink (sys-apps/iproute2) to get network interface addresses
 www-servers/pshs:upnp - Enable port forwarding using UPnP via net-libs/miniupnpc
 www-servers/resin:admin - Enable Resin admin webapp
+www-servers/tomcat:extra-webapps - Build also the docs and examples webapp
 www-servers/uwsgi:carbon - Enable support for sending statistics to a carbon server (see http://projects.unbit.it/uwsgi/wiki/Carbon).
 www-servers/uwsgi:erlang - Let the uWSGI server as as an Erlang C-Node and exchange messages and rpc with Erlang nodes. Together with the USE=python this enables erlang support in python (see the mappings table in http://projects.unbit.it/uwsgi/wiki/ErlangIntegration).
 www-servers/uwsgi:gevent - Use dev-python/gevent for async request dispatching and as LoopEngine (see http://projects.unbit.it/uwsgi/wiki/Gevent).

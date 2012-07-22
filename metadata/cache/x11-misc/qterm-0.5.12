@@ -1,4 +1,4 @@
->=x11-libs/qt-gui-4.5:4[qt3support] dev-libs/openssl kde-base/kdelibs x11-libs/qt-assistant x11-libs/qt-webkit >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+>=x11-libs/qt-gui-4.5:4[qt3support] dev-libs/openssl kde-base/kdelibs x11-libs/qt-assistant:4 x11-libs/qt-webkit:4 >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 >=x11-libs/qt-gui-4.5:4[qt3support] dev-libs/openssl
 0
 mirror://sourceforge/qterm/qterm-0.5.12.tar.bz2

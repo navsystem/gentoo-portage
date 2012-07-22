@@ -1,0 +1,22 @@
+dev-python/setuptools dev-lang/python[sqlite] dev-lang/python
+dev-python/setuptools app-arch/unrar >=dev-python/imaging-1.1.5 >=dev-python/pygtk-2.14 virtual/jpeg !media-gfx/comix dev-lang/python[sqlite] dev-lang/python
+0
+mirror://sourceforge/mcomix/mcomix-0.99.tar.bz2
+
+http://mcomix.sourceforge.net
+GPL-2
+A fork of comix, a GTK image viewer for comic book archives.
+~amd64 ~x86
+distutils fdo-mime multilib python toolchain-funcs
+
+
+
+
+3
+
+compile install postinst postrm prepare setup
+
+
+
+
+

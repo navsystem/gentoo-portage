@@ -7,14 +7,14 @@ http://ispc.github.com/
 BSD BSD-2 UoI-NCSA
 Intel SPMD Program Compiler
 ~amd64 ~x86
-multilib toolchain-funcs
+base eutils multilib toolchain-funcs user
 examples
 
 
 
 4
 
-compile install
+compile configure install prepare unpack
 
 
 
