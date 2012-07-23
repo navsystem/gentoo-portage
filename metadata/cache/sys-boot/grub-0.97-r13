@@ -1,0 +1,22 @@
+!static? ( ncurses? ( >=sys-libs/ncurses-5.2-r5 amd64? ( app-emulation/emul-linux-x86-baselibs ) ) ) static? ( ncurses? ( >=sys-libs/ncurses-5.2-r5[static-libs(+)] amd64? ( app-emulation/emul-linux-x86-baselibs ) ) ) || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+!static? ( ncurses? ( >=sys-libs/ncurses-5.2-r5 amd64? ( app-emulation/emul-linux-x86-baselibs ) ) )
+0
+mirror://gentoo/grub-0.97.tar.gz mirror://gnu-alpha/grub/grub-0.97.tar.gz mirror://gentoo/splash.xpm.gz mirror://gentoo/grub-0.97-patches-1.14.tar.bz2
+
+http://www.gnu.org/software/grub/
+GPL-2
+GNU GRUB Legacy boot loader
+~amd64 ~x86 ~x86-fbsd
+autotools eutils flag-o-matic libtool linux-info mount-boot multilib multiprocessing pax-utils toolchain-funcs user versionator
+custom-cflags ncurses netboot static
+
+
+
+4
+
+compile config configure install postinst postrm preinst prepare prerm setup test
+
+
+
+
+

@@ -6,7 +6,7 @@ http://wbar.googlecode.com/files/wbar_2.3.0.orig.tar.gz
 http://code.google.com/p/wbar/
 GPL-3
 A fast, lightweight quick launch bar
-~amd64 ~x86
+~amd64 x86
 eutils flag-o-matic multilib toolchain-funcs user
 gtk
 
