@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install postinst postrm preinst prepare setup
+DEPEND=>=sys-apps/sed-4 =dev-lang/python-2*
+DESCRIPTION=GTK frontend for VirtualBox
+EAPI=4
+HOMEPAGE=http://code.google.com/p/vboxgtk/
+IUSE=linguas_cs linguas_gl
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=|| ( app-emulation/virtualbox[-headless,python,sdk] >=app-emulation/virtualbox-bin-2.2.2[python] ) >=dev-python/pygobject-2.28.0:2 =dev-lang/python-2*
+SLOT=0
+SRC_URI=http://vboxgtk.googlecode.com/files/vboxgtk-0.8.0.tar.gz
+_eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	gnome2-utils	e0a2e141b421d38788b23422dfbe4f82	multilib	5782800349f728f725f9378105c6a2ab	python	4152846e243ec207de8a1b02a36f1461	toolchain-funcs	87012e8fbee401b74b7e2bcbcd654141
+_md5_=0454a23d18d10c56b2fb54408c32c880

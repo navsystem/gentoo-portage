@@ -6,7 +6,7 @@ http://dev.gentoo.org/~tetromino/distfiles/git-bzr-ng/git-bzr-ng-0_pre20120130.t
 https://github.com/termie/git-bzr-ng
 BSD
 Git subcommand providing a bidirectional bridge to Bazaar repositories
-~amd64 ~x86
+~amd64 x86
 multilib python toolchain-funcs
 
 

@@ -6,7 +6,7 @@ http://dev.gentoo.org/~hasufell/distfiles/hardinfo-0.5.2_pre20120527.tar.xz
 http://hardinfo.berlios.de/
 GPL-2
 A system information and benchmark tool for Linux systems
-~amd64 ~x86
+~amd64 x86
 base cmake-utils eutils flag-o-matic multilib toolchain-funcs user
 
 

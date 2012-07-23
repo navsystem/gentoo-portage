@@ -1,12 +1,12 @@
-sys-devel/dev86
-!app-emulation/qemu !<=app-emulation/qemu-kvm-1.0
+amd64? ( sys-devel/dev86 ) x86? ( sys-devel/dev86 )
+
 0
 http://savannah.gnu.org/download/vgabios/vgabios-0.7a.tgz http://dev.gentoo.org/~cardoe/distfiles/vgabios-0.7a-fixes-1.tar.bz2
 
 http://www.nongnu.org/vgabios/
 LGPL-2.1
 VGA BIOS implementation
--*
+~amd64 ~x86
 eutils multilib toolchain-funcs user
 debug
 
