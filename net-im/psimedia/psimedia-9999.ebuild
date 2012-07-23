@@ -2,17 +2,17 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=3
+EAPI="4"
 
-inherit qt4-r2 multilib eutils
+inherit qt4-r2 multilib eutils git-2
 
 DESCRIPTION="Psi plugin for voice/video calls"
 HOMEPAGE="http://delta.affinix.com/psimedia/"
-SRC_URI="http://rion-overlay.googlecode.com/files/${P}.tar.xz"
+EGIT_REPO_URI="git://github.com/psi-plus/psimedia.git"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE="demo extras"
 
 COMMON_DEPEND="
@@ -38,21 +38,15 @@ RDEPEND="${COMMON_DEPEND}
 DEPEND="${COMMON_DEPEND}
 	sys-devel/qconf
 	virtual/pkgconfig
-	app-arch/xz-utils
 "
 
 src_prepare() {
-	use extras && epatch "${WORKDIR}"/patches/*
-
 	sed -e '/^TEMPLATE/a CONFIG += ordered' -i psimedia.pro || die
 	# Don't build demo if we don't need that.
 	if use !demo; then
 		sed -e '/^SUBDIRS[[:space:]]*+=[[:space:]]*demo[[:space:]]*$/d;' \
 			-i psimedia.pro || die
 	fi
-	# Remove support for V4L v1 because linux-headers-2.6.38 stopped shipping linux/videodev.h.
-	epatch "${FILESDIR}"/${PN}-1.0.3-linux-headers-2.6.38.patch
-	epatch "${FILESDIR}"/${PN}-1.0.3-remove-v4l-driver.patch
 }
 
 src_configure() {
@@ -70,11 +64,11 @@ src_install() {
 		pname="psi"
 	fi
 	insinto /usr/$(get_libdir)/${pname}/plugins
-	doins gstprovider/libgstprovider.so || die
+	doins gstprovider/libgstprovider.so
 
 	if use demo; then
 		exeinto /usr/$(get_libdir)/${PN}
-		newexe demo/demo ${PN} || die
+		newexe demo/demo ${PN}
 
 		# Create /usr/bin/psimedia
 		cat <<-EOF > "demo/${PN}"
@@ -84,6 +78,6 @@ src_install() {
 		/usr/$(get_libdir)/${PN}/${PN}
 		EOF
 
-		dobin demo/${PN} || die
+		dobin demo/${PN}
 	fi
 }
