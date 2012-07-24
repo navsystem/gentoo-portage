@@ -6,7 +6,7 @@ http://gael.roualland.free.fr/ifstat/ifstat-1.1.tar.gz
 http://gael.roualland.free.fr/ifstat/
 GPL-2
 Network interface bandwidth usage, with support for snmp targets.
-~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86
+~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86
 autotools eutils libtool multilib multiprocessing toolchain-funcs user
 snmp
 

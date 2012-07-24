@@ -4,7 +4,7 @@ virtual/perl-Sys-Syslog virtual/perl-Time-HiRes virtual/perl-Time-Local dev-perl
 minimal? ( mirror://sourceforge/webadmin/webmin-1.560-minimal.tar.gz ) !minimal? ( mirror://sourceforge/webadmin/webmin-1.560.tar.gz )
 
 http://www.webmin.com/
-|| ( BSD GPL-2 )
+BSD GPL-2
 A web-based Unix systems administration interface
 ~amd64 ~x86
 eutils flag-o-matic multilib pam ssl-cert toolchain-funcs user
