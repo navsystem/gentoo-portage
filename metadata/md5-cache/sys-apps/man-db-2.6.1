@@ -1,4 +1,4 @@
-DEFINED_PHASES=configure install setup
+DEFINED_PHASES=configure install prepare setup
 DEPEND=dev-libs/libpipeline berkdb? ( sys-libs/db ) gdbm? ( sys-libs/gdbm ) !berkdb? ( !gdbm? ( sys-libs/gdbm ) ) sys-apps/groff zlib? ( sys-libs/zlib ) !sys-apps/man virtual/pkgconfig nls? ( sys-devel/gettext )
 DESCRIPTION=a man replacement that utilizes berkdb instead of flat files
 EAPI=4
@@ -10,4 +10,4 @@ RDEPEND=dev-libs/libpipeline berkdb? ( sys-libs/db ) gdbm? ( sys-libs/gdbm ) !be
 SLOT=0
 SRC_URI=mirror://nongnu/man-db/man-db-2.6.1.tar.gz
 _eclasses_=eutils	327b713e2d6949c42cd96bc4898fd280	multilib	5782800349f728f725f9378105c6a2ab	toolchain-funcs	87012e8fbee401b74b7e2bcbcd654141	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=5cd0d8c4c78c45ecdd89d7cf39f351c0
+_md5_=0cf2d0cc2d49dc9ce5cee89429592544

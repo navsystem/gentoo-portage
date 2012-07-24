@@ -6,7 +6,7 @@ test
 http://htmlc.inria.fr/
 htmlc
 HTML template files expander
-~amd64 ~ppc ~x86
+~amd64 ~ppc x86
 eutils multilib toolchain-funcs user
 +ocamlopt
 
