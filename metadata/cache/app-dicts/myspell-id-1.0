@@ -1,0 +1,22 @@
+app-arch/unzip
+
+0
+http://extensions.libreoffice.org/extension-center/indonesian-dictionary-kamus-indonesia-by-benitius/releases/1.0/id.oxt -> myspell-id-1.0.oxt
+
+http://extensions.libreoffice.org/extension-center/indonesian-dictionary-kamus-indonesia-by-benitius
+GPL-2
+Indonesian dictionaries for myspell/hunspell
+alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd
+base eutils multilib myspell-r2 toolchain-funcs user
+
+
+
+
+4
+
+compile configure install prepare unpack
+
+
+
+
+
