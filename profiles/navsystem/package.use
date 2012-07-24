@@ -70,7 +70,7 @@ dev-libs/libgpg-error static-libs
 
 dev-java/swing-layout source
 dev-vcs/subversion java
-sys-libs/zlib minizip
+sys-libs/zlib minizip static-libs
 sys-fs/udev gudev hwdb
 app-office/libreoffice nlpsolver pdfimport
 

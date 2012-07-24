@@ -28,3 +28,4 @@ sys-block/megacli amd64
 ~sys-apps/pciutils-3.1.9-r2 amd64 x86
 ~sys-apps/hwids-20120512 amd64 x86
 ~sys-fs/cryptsetup-1.4.1 amd64 x86
+=media-gfx/splashutils-1.5.4.4-r1 amd64 x86
