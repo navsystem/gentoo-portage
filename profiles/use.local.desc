@@ -151,6 +151,7 @@ app-admin/gkrellm:lm_sensors - Enable monitoring sensors via sys-apps/lm_sensors
 app-admin/gkrellm:ntlm - Enable NTLM authentication for mail checking with net-libs/libntlm
 app-admin/gkrellm:ssl - Enable SSL support for mail checking with dev-libs/openssl
 app-admin/gnome-system-tools:nfs - Adds support for NFS shares
+app-admin/gtkdiskfree:gtk3 - Use GTK+3 instead of 2
 app-admin/hddtemp:network-cron - Monthly cronjob to update hddtemp.db.
 app-admin/lcap:lids - If you have the Linux Intrusion Detection System
 app-admin/logrotate:acl - Installs acl support
@@ -212,15 +213,15 @@ app-arch/libzpaq:jit - Enable just-in-time compilation for faster compression (r
 app-arch/p7zip:rar - Enable support for non-free rar decoder
 app-arch/pbzip2:symlink - Install symlinks which override app-arch/bzip2 implementation
 app-arch/rar:all_sfx - Install all SFX (Self-Extracting) files rather than just the native format (allows creation of Windows EXEs on Linux ELF systems)
-app-arch/rpm:augeas - Add support for configuration files changing (app-admin/augeas)
-app-arch/rpm:keyutils - Enable for the keyring ccache using keyutils.
-app-arch/rpm:magic - Add magic file support (sys-apps/file)
-app-arch/rpm:nss - Build support for ssl/crypto handling using dev-libs/nss
-app-arch/rpm:openssl - Build support for ssl/crypto handling using dev-libs/openssl
-app-arch/rpm:pkcs11 - Build token data management utilities based on OpenCryptoki's (dev-libs/opencryptoki) PKCS#11 implementation.
-app-arch/rpm:uuid - Enable server side UUID generation (via dev-libs/ossp-uuid)
-app-arch/rpm:webdav-neon - Include support for net-libs/neon
-app-arch/rpm:xar - Build support for xar archives using app-arch/xar
+app-arch/rpm5:augeas - Add support for configuration files changing (app-admin/augeas)
+app-arch/rpm5:keyutils - Enable for the keyring ccache using keyutils.
+app-arch/rpm5:magic - Add magic file support (sys-apps/file)
+app-arch/rpm5:nss - Build support for ssl/crypto handling using dev-libs/nss
+app-arch/rpm5:openssl - Build support for ssl/crypto handling using dev-libs/openssl
+app-arch/rpm5:pkcs11 - Build token data management utilities based on OpenCryptoki's (dev-libs/opencryptoki) PKCS#11 implementation.
+app-arch/rpm5:uuid - Enable server side UUID generation (via dev-libs/ossp-uuid)
+app-arch/rpm5:webdav-neon - Include support for net-libs/neon
+app-arch/rpm5:xar - Build support for xar archives using app-arch/xar
 app-arch/unzip:natspec - Use dev-libs/libnatspec to correctly decode non-ascii file names archived in Windows.
 app-arch/zip:natspec - Use dev-libs/libnatspec to correctly decode non-ascii file names archived in Windows.
 app-backup/amanda:devpay - Support for using Amazon DevPay with S3
@@ -3485,6 +3486,7 @@ net-analyzer/linkchecker:syntax-check - HTML/CSS syntax checks
 net-analyzer/metasploit:gui - Enable Java GUI
 net-analyzer/munin:asterisk - Install the packages required for monitoring Asterisk. Disabling the flag does not remove any plugin files.
 net-analyzer/munin:cgi - Install the CGI-compatible scripts for on-the-fly generation of web pages and graphs. This is only meaningful if the minimal USE flag is disabled.
+net-analyzer/munin:ipmi - Install sys-apps/ipmitool required for monitoring IPMI sensors. Disabling the flag does not remove any plugin file.
 net-analyzer/munin:ipv6 - Add support for IPv6 in munin-node. IPv6 support for the master is always enabled, but the node requires a newer version of dev-perl/net-server, capable of listening to IPv6 sockets.
 net-analyzer/munin:irc - Install the packages required for monitoring IRC. Disabling the flag does not remove any plugin files.
 net-analyzer/munin:java - Build the Java-based plugins to monitor JMX-compatible applications. Disabling the flag removes the jmx monitoring plugins.
@@ -3609,7 +3611,6 @@ net-dns/bind:dlz - Enables dynamic loaded zones, 3rd party extension
 net-dns/bind:filter-aaaa - Enable filtering of AAAA records over IPv4
 net-dns/bind:gost - Enables gost OpenSSL engine support
 net-dns/bind:gssapi - Enable gssapi support
-net-dns/bind:pkcs11 - Enable PKCS#11 key support/tools for DNSSEC
 net-dns/bind:rpz - Enable response policy rewriting (rpz)
 net-dns/bind:sdb-ldap - Enables ldap-sdb backend
 net-dns/bind:urandom - Use /dev/urandom instead of /dev/random
@@ -5372,6 +5373,7 @@ sys-kernel/ck-sources:deblob - Remove binary blobs from kernel sources to provid
 sys-kernel/dracut:debug - Module installing additional tools like strace, file editor, ssh and more
 sys-kernel/dracut:device-mapper - Set of helper modules providing support for device mapper. You need to enable this only if emerge says so.
 sys-kernel/dracut:net - Set of helper modules providing networking support. You need to enable this only if emerge says so.
+sys-kernel/dracut:optimization - Build optimized version of dracut_install function. It will be used instead of the one written in bash.
 sys-kernel/genkernel:cryptsetup - Enable support for Luks disk enrcyption using sys-fs/cryptsetup
 sys-kernel/gentoo-sources:deblob - Remove binary blobs from kernel sources to provide libre license compliance.
 sys-kernel/hardened-sources:deblob - Remove binary blobs from kernel sources to provide libre license compliance.

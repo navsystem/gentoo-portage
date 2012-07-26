@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=dev-python/numpy >=media-libs/libsdl-1.2.5[X?] >=media-libs/sdl-image-1.2.2[png,jpeg] >=media-libs/sdl-mixer-1.2.4 >=media-libs/sdl-ttf-2.0.6 >=media-libs/smpeg-0.4.4-r1 dev-lang/python
 SLOT=0
 SRC_URI=http://people.apache.org/~Arfrever/gentoo/pygame-1.9.2_pre20120101.tar.xz
-_eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	multilib	5782800349f728f725f9378105c6a2ab	python	4152846e243ec207de8a1b02a36f1461	toolchain-funcs	87012e8fbee401b74b7e2bcbcd654141	virtualx	0c41ff55e46b959d9457dde69e7a09d9
+_eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	multilib	5782800349f728f725f9378105c6a2ab	python	4152846e243ec207de8a1b02a36f1461	toolchain-funcs	d3b5812eeab360bc41aa48b6cdbbc142	virtualx	0c41ff55e46b959d9457dde69e7a09d9
 _md5_=61964123cd41d428e68f8fd573b1378f

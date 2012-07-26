@@ -7,14 +7,14 @@ http://burrow-owl.sourceforge.net/
 GPL-2
 Library for parsing NMR star files (peak-list format) and CIF files
 ~amd64 ~x86
-autotools eutils libtool multilib multiprocessing toolchain-funcs user
-guile
+autotools autotools-utils eutils libtool multilib multiprocessing toolchain-funcs user
+guile static-libs
 
 
 
-2
+4
 
-configure install prepare test
+compile configure install prepare test
 
 
 

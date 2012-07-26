@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-vcs/git-1.6.3.3 =dev-lang/python-2*
 SLOT=0
 SRC_URI=http://download.gna.org/stgit/stgit-0.16.tar.gz mirror://gentoo/stgit-0.16-missing-patches.tar.gz
-_eclasses_=bash-completion-r1	3480f8385cb9e31797e7b659e366e2d2	distutils	15ae23f6f8219a009bfcfff7724fe727	multilib	5782800349f728f725f9378105c6a2ab	python	4152846e243ec207de8a1b02a36f1461	toolchain-funcs	87012e8fbee401b74b7e2bcbcd654141
+_eclasses_=bash-completion-r1	3480f8385cb9e31797e7b659e366e2d2	distutils	15ae23f6f8219a009bfcfff7724fe727	multilib	5782800349f728f725f9378105c6a2ab	python	4152846e243ec207de8a1b02a36f1461	toolchain-funcs	d3b5812eeab360bc41aa48b6cdbbc142
 _md5_=b087e4916f03a749efc7d0ea4152d900

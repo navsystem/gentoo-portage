@@ -9,5 +9,5 @@ LICENSE=GPL-2 GPL-3
 RDEPEND=>=dev-python/PyQt4-4.5 >=dev-python/pyparsing-1.5.1 >=media-libs/mutagen-1.20 >=dev-python/configobj-4.7.2 musicbrainz? ( >=dev-python/python-musicbrainz-0.7.2 ) cover? ( >=dev-python/imaging-1.1.7 ) quodlibet? ( >=media-sound/quodlibet-2.2.1 ) >=dev-python/sip-4.11.2 >=dev-python/lxml-2.2.8 =dev-lang/python-2*
 SLOT=0
 SRC_URI=mirror://sourceforge/puddletag/puddletag-1.0.0beta6.tar.gz
-_eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multilib	5782800349f728f725f9378105c6a2ab	python	4152846e243ec207de8a1b02a36f1461	toolchain-funcs	87012e8fbee401b74b7e2bcbcd654141
+_eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multilib	5782800349f728f725f9378105c6a2ab	python	4152846e243ec207de8a1b02a36f1461	toolchain-funcs	d3b5812eeab360bc41aa48b6cdbbc142
 _md5_=c1ed22a4c33fada63bfd54eb9d9f3f77

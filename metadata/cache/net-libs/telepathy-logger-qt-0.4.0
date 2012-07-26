@@ -3,7 +3,7 @@ media-libs/qt-gstreamer >=net-im/telepathy-logger-0.2.12-r1 >=net-libs/telepathy
 0
 mirror://kde/unstable/kde-telepathy/0.4.0/src/telepathy-logger-qt-0.4.0.tar.bz2
 
-https://projects.kde.org/projects/kdereview/telepathy-logger-qt
+https://projects.kde.org/projects/extragear/network/telepathy/telepathy-logger-qt
 LGPL-2.1
 Qt4 bindings for the Telepathy logger
 ~amd64 ~x86
