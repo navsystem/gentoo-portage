@@ -6,7 +6,7 @@ mirror://sourceforge/amavisd-milter/amavisd-milter-1.5.0.tar.gz
 http://amavisd-milter.sourceforge.net/
 BSD
 sendmail milter for amavisd-new
-~amd64 ~x86
+~amd64 x86
 
 
 

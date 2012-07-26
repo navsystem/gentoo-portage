@@ -6,7 +6,7 @@ http://dev.gentoo.org/~blueness/cyassl/cyassl-2.2.0.zip
 http://www.yassl.com/yaSSL/Home.html
 GPL-2
 Lightweight SSL/TLS library targeted at embedded and RTOS environments
-~amd64 ~arm ~mips ~ppc ~ppc64 ~x86
+~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~x86
 eutils multilib toolchain-funcs user
 -dtls ipv6 +httpd +sniffer static-libs threads +zlib cyassl-hardening small big +huge aes-ni +hc128 +psk +ripemd sha512 ocsp crl +sessioncerts +testcert
 ^^ ( small big huge ) test? ( !dtls )

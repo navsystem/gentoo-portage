@@ -1,0 +1,22 @@
+cgal? ( sci-mathematics/cgal ) doc? ( app-doc/doxygen[dot] ) plugins? ( virtual/fortran sci-physics/siscone ) || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+cgal? ( sci-mathematics/cgal )
+0
+http://www.fastjet.fr//repo/fastjet-3.0.3.tar.gz
+
+http://www.fastjet.fr/
+GPL-2 QPL
+Fast implementation of several recombination jet algorithms
+~amd64 ~x86 ~amd64-linux ~x86-linux
+autotools autotools-utils eutils flag-o-matic fortran-2 libtool multilib multiprocessing toolchain-funcs user
+cgal doc examples +plugins static-libs
+
+
+
+4
+
+compile configure install prepare setup test
+
+
+
+
+

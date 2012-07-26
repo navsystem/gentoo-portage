@@ -6,7 +6,7 @@ test
 http://www.freedesktop.org/wiki/Software/LightDM
 GPL-3 LGPL-3
 A lightweight display manager
-~amd64 ~x86
+amd64 x86
 autotools eutils flag-o-matic libtool multilib multiprocessing pam toolchain-funcs user virtualx
 branding +gtk +introspection qt4 test
 branding? ( gtk ) || ( gtk qt4 )

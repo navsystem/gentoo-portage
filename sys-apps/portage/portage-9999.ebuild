@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.52 2012/07/07 05:38:27 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.54 2012/07/24 19:17:41 zmedico Exp $
 
 EAPI=3
 inherit git-2 eutils multilib python
@@ -128,6 +128,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch_user
+
 	einfo "Producing ChangeLog from Git history..."
 	pushd "${S}/.git" >/dev/null || die
 	git log ebcf8975b37a8aae9735eb491a9b4cb63549bd5d^.. \
@@ -267,10 +269,6 @@ pkg_preinst() {
 		ewarn "enable the ssl USE flag for >=dev-lang/python-2.6 in order"
 		ewarn "to enable RMD160 hash support."
 		ewarn "See bug #198398 for more information."
-	fi
-	if [[ ! -L "${EROOT}/etc/make.globals" &&
-		-f "${EROOT}/etc/make.globals" ]]; then
-		rm "${EROOT}/etc/make.globals"
 	fi
 
 	has_version "<=${CATEGORY}/${PN}-2.2_pre5" \
