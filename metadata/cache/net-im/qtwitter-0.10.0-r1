@@ -7,8 +7,8 @@ http://www.qt-apps.org/content/show.php/qTwitter?content=99087
 LGPL-2.1
 A Qt-based microblogging client
 amd64 x86
-base eutils multilib qt4-r2 toolchain-funcs user
-debug linguas_nb_NO linguas_pt_BR linguas_ca linguas_cs linguas_de linguas_es linguas_fr linguas_it linguas_ja linguas_pl
+base eutils l10n multilib qt4-r2 toolchain-funcs user
+debug linguas_ca_ES linguas_cs_CZ linguas_de_DE linguas_es_ES linguas_fr_FR linguas_it_IT linguas_ja_JP linguas_nb_NO linguas_pl_PL linguas_pt_BR
 
 
 

@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-lang/tk-8.3.4 >=dev-python/pmw-1.2 dev-lang/python[tk]
 SLOT=0
 SRC_URI=http://www3.uji.es/~dllorens/downloads/pythong/linux/pythonG-2_1_5.tgz doc? ( http://marmota.act.uji.es/MTP/pdf/python.pdf )
-_eclasses_=multilib	5782800349f728f725f9378105c6a2ab	python	4152846e243ec207de8a1b02a36f1461	toolchain-funcs	87012e8fbee401b74b7e2bcbcd654141
+_eclasses_=multilib	5782800349f728f725f9378105c6a2ab	python	4152846e243ec207de8a1b02a36f1461	toolchain-funcs	d3b5812eeab360bc41aa48b6cdbbc142
 _md5_=8d2dfe438bbb135f5da31ed3d64ae3e8

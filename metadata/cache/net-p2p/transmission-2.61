@@ -1,0 +1,22 @@
+>=dev-libs/libevent-2.0.10 dev-libs/openssl:0 net-libs/libnatpmp >=net-libs/miniupnpc-1.6.20120509 >=net-misc/curl-7.16.3[ssl] sys-libs/zlib gtk? ( >=dev-libs/dbus-glib-0.98 >=dev-libs/glib-2.28 >=x11-libs/gtk+-3.2:3 ayatana? ( >=dev-libs/libappindicator-0.4.90:3 ) ) qt4? ( x11-libs/qt-core:4 x11-libs/qt-gui:4[dbus] ) dev-util/intltool virtual/pkgconfig sys-devel/gettext virtual/os-headers xfs? ( sys-fs/xfsprogs ) || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=sys-apps/sed-4
+>=dev-libs/libevent-2.0.10 dev-libs/openssl:0 net-libs/libnatpmp >=net-libs/miniupnpc-1.6.20120509 >=net-misc/curl-7.16.3[ssl] sys-libs/zlib gtk? ( >=dev-libs/dbus-glib-0.98 >=dev-libs/glib-2.28 >=x11-libs/gtk+-3.2:3 ayatana? ( >=dev-libs/libappindicator-0.4.90:3 ) ) qt4? ( x11-libs/qt-core:4 x11-libs/qt-gui:4[dbus] )
+0
+http://download.transmissionbt.com/transmission/files/transmission-2.61.tar.xz
+
+http://www.transmissionbt.com/
+GPL-2 MIT
+A Fast, Easy and Free BitTorrent client
+~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd
+autotools base eutils fdo-mime gnome2-utils libtool multilib multiprocessing qt4-r2 toolchain-funcs user
+ayatana gtk lightweight qt4 xfs linguas_en linguas_es linguas_eu linguas_kk linguas_lt linguas_pt_BR linguas_ru
+ayatana? ( gtk )
+
+
+4
+
+compile configure install postinst postrm preinst prepare setup unpack
+
+
+
+
+

@@ -7,14 +7,14 @@ http://tug.org/metapost.html
 GPL-2 LGPL-3
 System for producing graphics
 ~amd64
-
+eutils multilib toolchain-funcs user
 
 
 
 
 3
 
-compile configure install postinst
+compile configure install postinst prepare
 
 
 

@@ -1,5 +1,5 @@
-dev-scheme/guile =dev-libs/glib-2* virtual/libffi dev-scheme/guile-lib virtual/pkgconfig
-dev-scheme/guile =dev-libs/glib-2* virtual/libffi dev-scheme/guile-lib
+dev-libs/glib:2 dev-scheme/guile-lib dev-scheme/guile[deprecated] virtual/libffi virtual/pkgconfig
+dev-libs/glib:2 dev-scheme/guile-lib dev-scheme/guile[deprecated] virtual/libffi
 0
 http://download.savannah.gnu.org/releases/g-wrap/g-wrap-1.9.11.tar.gz
 
@@ -12,9 +12,9 @@ eutils multilib toolchain-funcs user
 
 
 
+4
 
-
-compile install setup unpack
+configure prepare
 
 
 

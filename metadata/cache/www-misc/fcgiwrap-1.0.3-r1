@@ -1,7 +1,7 @@
 dev-libs/fcgi || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 dev-libs/fcgi
 0
-mirror://gentoo/gnosek-fcgiwrap-1.0.3-4-g58ec209.tar.gz -> fcgiwrap-1.0.3.tar.gz
+mirror://gentoo/fcgiwrap-1.0.3.tar.gz
 
 http://nginx.localdomain.pl/wiki/FcgiWrap
 BSD

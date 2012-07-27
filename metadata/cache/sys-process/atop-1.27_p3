@@ -6,7 +6,7 @@ http://www.atoptool.nl/download/atop-1.27-3.tar.gz
 http://www.atoptool.nl/
 GPL-2
 Resource-specific view of processes
-~alpha ~amd64 ~hppa ~ppc ~x86
+~alpha ~amd64 hppa ~ppc ~x86
 eutils multilib toolchain-funcs user
 
 

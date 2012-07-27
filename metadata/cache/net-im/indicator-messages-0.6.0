@@ -1,0 +1,22 @@
+>=dev-libs/libdbusmenu-0.6.2:3[gtk] >=dev-libs/glib-2.22 >=dev-libs/libindicate-12.10.0:3 >=dev-libs/libindicator-12.10.0:3 net-libs/telepathy-glib >=x11-libs/gtk+-3.2:3 dev-util/intltool virtual/pkgconfig >=sys-apps/sed-4
+>=dev-libs/libdbusmenu-0.6.2:3[gtk] >=dev-libs/glib-2.22 >=dev-libs/libindicate-12.10.0:3 >=dev-libs/libindicator-12.10.0:3 net-libs/telepathy-glib >=x11-libs/gtk+-3.2:3
+0
+http://launchpad.net/indicator-messages/0.6/0.6.0/+download/indicator-messages-0.6.0.tar.gz
+
+http://launchpad.net/indicator-messages
+GPL-3
+A place on the user's desktop that collects messages that need a response
+~amd64 ~x86
+eutils gnome2-utils multilib toolchain-funcs user
+
+
+
+
+4
+
+configure install postinst postrm preinst
+
+
+
+
+

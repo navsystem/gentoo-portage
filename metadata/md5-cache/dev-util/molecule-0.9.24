@@ -1,0 +1,12 @@
+DEFINED_PHASES=install postinst postrm
+DEPEND=dev-util/intltool sys-devel/gettext dev-lang/python
+DESCRIPTION=Release metatool used for creating Sabayon (and Gentoo) releases
+EAPI=3
+HOMEPAGE=http://www.sabayon.org
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=net-misc/rsync sys-fs/squashfs-tools sys-process/lsof virtual/cdrtools dev-lang/python
+SLOT=0
+SRC_URI=mirror://sabayon/dev-util/molecule-0.9.24.tar.bz2
+_eclasses_=multilib	5782800349f728f725f9378105c6a2ab	python	4152846e243ec207de8a1b02a36f1461	toolchain-funcs	d3b5812eeab360bc41aa48b6cdbbc142
+_md5_=2a1a4e3ae072cd364dd465cf95ce6877

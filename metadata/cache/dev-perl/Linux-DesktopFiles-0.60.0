@@ -1,0 +1,22 @@
+virtual/perl-Module-Build dev-lang/perl[-build]
+dev-lang/perl[gdbm] dev-lang/perl[-build]
+0
+mirror://cpan/authors/id/T/TR/TRIZEN/Linux-DesktopFiles-0.06.tar.gz
+
+http://search.cpan.org/dist/Linux-DesktopFiles/
+|| ( Artistic GPL-1 GPL-2 GPL-3 )
+Perl module to get and parse the Linux .desktop files
+~amd64 ~x86
+base eutils multilib multiprocessing perl-module toolchain-funcs user
+
+
+
+
+4
+
+compile configure install prepare test unpack
+
+
+
+
+

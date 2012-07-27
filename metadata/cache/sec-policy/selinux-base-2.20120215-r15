@@ -1,0 +1,22 @@
+>=sys-apps/policycoreutils-2.1.10 >=sys-fs/udev-151 !<=sec-policy/selinux-base-policy-2.20120215 sys-devel/m4 >=sys-apps/checkpolicy-2.1.8
+>=sys-apps/policycoreutils-2.1.10 >=sys-fs/udev-151 !<=sec-policy/selinux-base-policy-2.20120215
+0
+http://oss.tresys.com/files/refpolicy/refpolicy-2.20120215.tar.bz2 http://dev.gentoo.org/~swift/patches/selinux-base-policy/patchbundle-selinux-base-policy-2.20120215-r15.tar.bz2
+
+http://www.gentoo.org/proj/en/hardened/selinux/
+GPL-2
+Gentoo base policy for SELinux
+~amd64 ~x86
+eutils multilib toolchain-funcs user
++peer_perms +open_perms +ubac doc
+
+
+
+4
+
+compile configure install preinst prepare
+
+
+
+
+
