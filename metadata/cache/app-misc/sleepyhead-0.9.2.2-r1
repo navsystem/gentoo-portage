@@ -1,5 +1,5 @@
-virtual/opengl x11-libs/libX11 x11-libs/qt-core x11-libs/qt-gui x11-libs/qt-opengl x11-libs/qt-webkit
-virtual/opengl x11-libs/libX11 x11-libs/qt-core x11-libs/qt-gui x11-libs/qt-opengl x11-libs/qt-webkit
+virtual/opengl x11-libs/libX11 x11-libs/qt-core:4 x11-libs/qt-gui:4 x11-libs/qt-opengl:4 x11-libs/qt-webkit:4
+virtual/opengl x11-libs/libX11 x11-libs/qt-core:4 x11-libs/qt-gui:4 x11-libs/qt-opengl:4 x11-libs/qt-webkit:4
 0
 https://github.com/rich0/rich0-sleepyhead/tarball/0.9.2.2 -> sleepyhead-0.9.2.2.tgz
 

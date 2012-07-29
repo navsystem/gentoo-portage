@@ -4,7 +4,7 @@
 http://dev.gentoo.org/~titanofold/postgresql-initscript-2.3.tbz2 http://dev.gentoo.org/~titanofold/postgresql-patches-9.2beta2.tbz2
 
 http://www.postgresql.org/
-POSTGRESQL
+POSTGRESQL GPL-2
 PostgreSQL server
 
 autotools base eutils flag-o-matic git-2 libtool multilib multiprocessing pam prefix python toolchain-funcs user versionator

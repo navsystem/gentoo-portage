@@ -1,4 +1,4 @@
-dev-vcs/subversion net-misc/rsync
+|| ( dev-vcs/subversion[webdav-neon] dev-vcs/subversion[webdav-serf] ) net-misc/rsync
 dev-lang/ruby dev-ruby/rubygems gui? ( virtual/jre ) mysql? ( dev-ruby/mysql-ruby dev-ruby/activerecord[mysql] ) postgres? ( dev-ruby/ruby-postgres dev-ruby/activerecord[postgres] )
 4.0
 

@@ -1,5 +1,5 @@
->=net-wireless/kismet-2011.03.2-r1 >=net-libs/libbtbb-0.8 >=dev-libs/libusb-1.0.0 dev-vcs/subversion net-misc/rsync
->=net-wireless/kismet-2011.03.2-r1 >=net-libs/libbtbb-0.8 >=dev-libs/libusb-1.0.0
+>=net-wireless/kismet-2011.03.2-r1 =net-wireless/ubertooth-9999 =net-libs/libbtbb-9999 virtual/libusb:1 || ( dev-vcs/subversion[webdav-neon] dev-vcs/subversion[webdav-serf] ) net-misc/rsync
+>=net-wireless/kismet-2011.03.2-r1 =net-wireless/ubertooth-9999 =net-libs/libbtbb-9999 virtual/libusb:1
 0
 
 

@@ -1,4 +1,4 @@
->=media-libs/libpng-1.5 x11-libs/gtk+:2 x11-libs/gtkglext || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool dev-vcs/subversion net-misc/rsync
+>=media-libs/libpng-1.5 x11-libs/gtk+:2 x11-libs/gtkglext || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool || ( dev-vcs/subversion[webdav-neon] dev-vcs/subversion[webdav-serf] ) net-misc/rsync
 >=media-libs/libpng-1.5 x11-libs/gtk+:2 x11-libs/gtkglext
 0
 

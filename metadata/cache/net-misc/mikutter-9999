@@ -1,4 +1,4 @@
-test? ( ruby_targets_ruby19? ( dev-ruby/ruby-gtk2[ruby_targets_ruby19] dev-ruby/rcairo[ruby_targets_ruby19] dev-ruby/httpclient[ruby_targets_ruby19] virtual/ruby-ssl[ruby_targets_ruby19] ) ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) dev-vcs/subversion net-misc/rsync
+test? ( ruby_targets_ruby19? ( dev-ruby/ruby-gtk2[ruby_targets_ruby19] dev-ruby/rcairo[ruby_targets_ruby19] dev-ruby/httpclient[ruby_targets_ruby19] virtual/ruby-ssl[ruby_targets_ruby19] ) ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) || ( dev-vcs/subversion[webdav-neon] dev-vcs/subversion[webdav-serf] ) net-misc/rsync
 libnotify? ( x11-libs/libnotify ) sound? ( media-sound/alsa-utils ) ruby_targets_ruby19? ( dev-ruby/ruby-gtk2[ruby_targets_ruby19] dev-ruby/rcairo[ruby_targets_ruby19] dev-ruby/httpclient[ruby_targets_ruby19] virtual/ruby-ssl[ruby_targets_ruby19] ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 )
 0
 

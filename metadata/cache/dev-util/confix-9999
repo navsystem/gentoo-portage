@@ -1,4 +1,4 @@
-=dev-lang/python-2* dev-vcs/subversion net-misc/rsync
+=dev-lang/python-2* || ( dev-vcs/subversion[webdav-neon] dev-vcs/subversion[webdav-serf] ) net-misc/rsync
 dev-util/confix-wrapper sys-devel/autoconf-archive sys-devel/automake sys-devel/libtool =dev-lang/python-2*
 2
 

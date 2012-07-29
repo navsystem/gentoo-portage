@@ -1,4 +1,4 @@
-|| ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) dev-vcs/subversion net-misc/rsync
+|| ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) || ( dev-vcs/subversion[webdav-neon] dev-vcs/subversion[webdav-serf] ) net-misc/rsync
 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
 0
 
