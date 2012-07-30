@@ -1,0 +1,22 @@
+>=net-libs/libbtbb-0.8
+specan? ( virtual/libusb:1 ) dfu? ( >=dev-libs/libusb-1.0.8 ) specan? ( >=x11-libs/qt-gui-4.7.2:4 >=dev-python/pyside-1.0.2 >=dev-python/numpy-1.3 ) specan? ( >=dev-python/pyusb-1.0.0_alpha1 ) dfu? ( >=dev-python/pyusb-1.0.0_alpha1 ) >=net-libs/libbtbb-0.8
+0
+mirror://sourceforge/ubertooth/ubertooth-r534.tar.gz
+
+http://ubertooth.sourceforge.net/
+GPL-2
+An open source wireless development platform suitable for Bluetooth experimentation
+~amd64 ~x86
+
++dfu +specan ubertooth0-firmware +ubertooth1-firmware
+ubertooth0-firmware? ( dfu ) ubertooth1-firmware? ( dfu )
+
+
+4
+
+compile install
+
+
+
+
+

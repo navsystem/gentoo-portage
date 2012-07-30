@@ -1,4 +1,4 @@
-virtual/pkgconfig dev-vcs/subversion net-misc/rsync
+virtual/pkgconfig || ( dev-vcs/subversion[webdav-neon] dev-vcs/subversion[webdav-serf] ) net-misc/rsync
 dev-cpp/gtkmm:2.4 dev-libs/libxml2
 0
 

@@ -1,4 +1,4 @@
-pci? ( sys-apps/pciutils ) app-arch/xz-utils dev-vcs/subversion net-misc/rsync
+pci? ( sys-apps/pciutils ) app-arch/xz-utils || ( dev-vcs/subversion[webdav-neon] dev-vcs/subversion[webdav-serf] ) net-misc/rsync
 pci? ( sys-apps/pciutils )
 0
 

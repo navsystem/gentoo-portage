@@ -1,4 +1,4 @@
-x11-libs/qt-core:4 x11-libs/qt-gui:4 media-libs/speex dev-vcs/subversion net-misc/rsync dev-vcs/git
+x11-libs/qt-core:4 x11-libs/qt-gui:4 media-libs/speex || ( dev-vcs/subversion[webdav-neon] dev-vcs/subversion[webdav-serf] ) net-misc/rsync dev-vcs/git
 x11-libs/qt-core:4 x11-libs/qt-gui:4 media-libs/speex
 0
 

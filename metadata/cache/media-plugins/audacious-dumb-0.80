@@ -1,5 +1,5 @@
-virtual/pkgconfig >=media-sound/audacious-3.2 >=media-libs/dumb-0.9.3
->=media-sound/audacious-3.2 >=media-libs/dumb-0.9.3
+virtual/pkgconfig =media-sound/audacious-3.2* >=media-libs/dumb-0.9.3
+=media-sound/audacious-3.2* >=media-libs/dumb-0.9.3
 0
 http://www.netswarm.net/misc/audacious-dumb-0.80.tar.gz
 

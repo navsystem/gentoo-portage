@@ -1,5 +1,5 @@
-x11-libs/qt-gui
-x11-libs/qt-gui
+x11-libs/qt-gui:4
+x11-libs/qt-gui:4
 0
 http://www.dnssec-tools.org/download/dnssec-system-tray-1.13.tar.gz
 
