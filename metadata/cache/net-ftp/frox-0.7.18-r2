@@ -6,7 +6,7 @@ http://frox.sourceforge.net/download/frox-0.7.18.tar.bz2
 http://frox.sourceforge.net/
 GPL-2
 A transparent ftp proxy
-amd64 ~ppc sparc x86
+amd64 ~ppc x86
 eutils multilib toolchain-funcs user
 clamav
 

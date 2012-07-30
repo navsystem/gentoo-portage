@@ -8,7 +8,7 @@ GPL-3
 LeechCraft Media Player, Phonon-based audio/video player.
 
 base cmake-utils eutils flag-o-matic git-2 leechcraft multilib toolchain-funcs user versionator
-debug kde +mpris
+debug kde +mpris +mp3tunes
 
 
 

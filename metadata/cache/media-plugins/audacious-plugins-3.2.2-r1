@@ -6,7 +6,7 @@ http://distfiles.audacious-media-player.org/audacious-plugins-3.2.2.tar.bz2
 http://audacious-media-player.org/
 GPL-2
 Audacious Player - Your music, your way, no exceptions
-~alpha amd64 hppa ~ppc ppc64 ~sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux
+alpha amd64 hppa ~ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux
 autotools eutils flag-o-matic libtool multilib multiprocessing toolchain-funcs user
 aac adplug alsa bs2b cdda cue ffmpeg flac fluidsynth gnome +gtk gtk3 ipv6 jack lame libnotify libsamplerate midi mms mp3 mtp nls oss pulseaudio scrobbler sdl sid sndfile vorbis wavpack
 ^^ ( gtk gtk3 )

@@ -6,7 +6,7 @@ mirror://cpan/authors/id/B/BL/BLOONIX/Sys-Statistics-Linux-0.66.tar.gz
 http://search.cpan.org/dist/Sys-Statistics-Linux/
 || ( Artistic GPL-1 GPL-2 GPL-3 )
 Collect linux system statistics
-amd64 ~sparc x86
+amd64 x86
 base eutils multilib multiprocessing perl-module toolchain-funcs user
 test
 

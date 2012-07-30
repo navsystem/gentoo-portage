@@ -6,7 +6,7 @@ http://whois.bw.org/dist/whois-5.0.tgz
 http://whois.bw.org/
 || ( Artistic GPL-2 )
 Perl-based whois client designed to work with the new Shared Registration System
-alpha ~amd64 ppc sparc x86
+~amd64 ppc x86
 base eutils multilib multiprocessing perl-app perl-module toolchain-funcs user
 
 

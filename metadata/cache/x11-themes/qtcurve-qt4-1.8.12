@@ -6,7 +6,7 @@ http://craigd.wikispaces.com/file/view/QtCurve-KDE4-1.8.12.tar.bz2
 http://www.kde-look.org/content/show.php?content=40492
 GPL-2
 A set of widget styles for Qt4 based apps, also available for GTK2
-~alpha amd64 hppa ~ppc ~ppc64 ~sparc x86
+alpha amd64 hppa ~ppc ~ppc64 sparc x86
 base cmake-utils eutils fdo-mime flag-o-matic gnome2-utils kde4-base kde4-functions multilib toolchain-funcs user versionator virtualx
 kde windeco aqua kde
 windeco? ( kde )
