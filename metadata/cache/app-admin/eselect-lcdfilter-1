@@ -5,12 +5,12 @@ https://github.com/yngwin/eselect-lcdfilter/tarball/v1 -> eselect-lcdfilter-1.ta
 
 https://github.com/yngwin/eselect-lcdfilter
 GPL-2
-Eselect module to choose Freetype LCD filtering settings
+Eselect module to choose Freetype infinality-enhanced LCD filtering settings
 ~amd64 ~x86
 vcs-snapshot
 
 
-
+media-libs/freetype[infinality]
 
 4
 

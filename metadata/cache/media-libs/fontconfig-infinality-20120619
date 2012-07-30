@@ -10,7 +10,7 @@ Configuration to be used in conjunction with the freetype-infinality subpixel hi
 
 +nyx
 
-media-libs/freetype:2[lcdfilter]
+media-libs/freetype:2[infinality]
 
 4
 

@@ -1,0 +1,22 @@
+|| ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
+dev-python/pyyaml[libyaml?] >=dev-python/pygtk-2.13 >=dev-python/pywebkitgtk-1.1.5 dev-python/chardet spell? ( dev-python/gtkspell-python ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
+0
+mirror://sourceforge/rednotebook/rednotebook-1.5.0.tar.gz
+
+http://rednotebook.sourceforge.net
+GPL-2
+A graphical journal with calendar, templates, tags, keyword searching, and export functionality
+~amd64 ~x86
+distutils eutils multilib python toolchain-funcs user
+libyaml spell
+
+
+
+3
+
+compile install postinst postrm prepare setup
+
+
+
+
+
