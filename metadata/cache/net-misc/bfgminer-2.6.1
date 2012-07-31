@@ -1,0 +1,22 @@
+net-misc/curl ncurses? ( sys-libs/ncurses ) dev-libs/jansson udev? ( sys-fs/udev ) ztex? ( virtual/libusb:1 ) virtual/pkgconfig sys-apps/sed adl? ( x11-libs/amd-adl-sdk ) opencl? ( || ( virtual/opencl virtual/opencl-sdk app-admin/eselect-opencl dev-util/ati-stream-sdk dev-util/ati-stream-sdk-bin dev-util/amdstream dev-util/amd-app-sdk dev-util/amd-app-sdk-bin dev-util/nvidia-cuda-sdk[opencl] dev-util/intel-opencl-sdk ) ) sse2? ( >=dev-lang/yasm-1.0.1 ) sse4? ( >=dev-lang/yasm-1.0.1 )
+net-misc/curl ncurses? ( sys-libs/ncurses ) dev-libs/jansson udev? ( sys-fs/udev ) ztex? ( virtual/libusb:1 )
+0
+http://luke.dashjr.org/programs/bitcoin/files/bfgminer/2.6.1/bfgminer-2.6.1.tbz2
+
+https://bitcointalk.org/index.php?topic=78192.0
+GPL-3
+Modular Bitcoin CPU/GPU/FPGA miner in C
+~x86 ~amd64
+eutils multilib toolchain-funcs user
++adl altivec bitforce +cpumining examples hardened icarus modminer ncurses +opencl padlock scrypt sse2 sse2_4way sse4 +udev ztex
+|| ( bitforce cpumining icarus modminer opencl ztex ) adl? ( opencl ) altivec? ( cpumining ppc ppc64 ) padlock? ( cpumining || ( amd64 x86 ) ) scrypt? ( || ( cpumining opencl ) ) sse2? ( cpumining || ( amd64 x86 ) ) sse4? ( cpumining amd64 )
+
+
+4
+
+configure install prepare
+
+
+
+
+
