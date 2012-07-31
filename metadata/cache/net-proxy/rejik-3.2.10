@@ -1,0 +1,22 @@
+dev-libs/libpcre
+dev-libs/libpcre dev-perl/Text-Iconv dev-perl/XML-Parser net-proxy/squid
+0
+http://rejik.ru/download/redirector-3.2.10.tgz banlists? ( http://rejik.ru/download/banlists-2.x.x.tgz )
+
+http://rejik.ru/
+GPL-2
+A squid redirector used for blocking unwanted content
+~x86 ~amd64
+eutils multilib toolchain-funcs user
+banlists
+
+
+
+4
+
+install postinst prepare
+
+
+
+
+
