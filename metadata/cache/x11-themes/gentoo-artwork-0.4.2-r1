@@ -6,7 +6,7 @@ binchecks strip
 http://www.gentoo.org/index-graphics.html
 GPL-2
 A collection of miscellaneous Gentoo Linux logos and artwork
-~alpha amd64 ppc ppc64 ~sparc x86 ~x86-fbsd
+alpha amd64 ppc ppc64 sparc x86 ~x86-fbsd
 
 kde offensive +icons +pixmaps +grub lilo
 

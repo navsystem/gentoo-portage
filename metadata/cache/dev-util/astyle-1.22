@@ -6,7 +6,7 @@ mirror://sourceforge/astyle/astyle_1.22_linux.tar.gz
 http://astyle.sourceforge.net/
 LGPL-2.1
 Artistic Style is a reindenter and reformatter of C++, C and Java source code
-alpha amd64 ppc ~ppc64 sparc x86
+amd64 ppc ~ppc64 x86
 eutils java-pkg-opt-2 java-utils-2 multilib toolchain-funcs user versionator
 debug java libs elibc_FreeBSD java
 

@@ -6,7 +6,7 @@ http://www.focusresearch.com/gregor/psh/psh-1.8.tar.gz
 http://www.focusresearch.com/gregor/psh/
 || ( Artistic GPL-2 )
 Combines the interactive nature of a Unix shell with the power of Perl
-alpha ~amd64 ia64 ~ppc sparc x86
+~amd64 ~ppc x86
 base eutils multilib multiprocessing perl-module toolchain-funcs user
 readline
 

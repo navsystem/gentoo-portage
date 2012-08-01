@@ -4,11 +4,11 @@ DESCRIPTION=Amazon Web Services API
 EAPI=4
 HOMEPAGE=https://github.com/boto/boto http://pypi.python.org/pypi/boto
 IUSE=test
-KEYWORDS=amd64 ppc ~sparc x86 ~x86-linux ~ppc-macos ~x86-macos
+KEYWORDS=amd64 ppc sparc x86 ~x86-linux ~ppc-macos ~x86-macos
 LICENSE=MIT
 RDEPEND=dev-python/m2crypto || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://github/boto/boto/boto-2.3.0.tar.gz
 _eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	multilib	5782800349f728f725f9378105c6a2ab	python	4152846e243ec207de8a1b02a36f1461	toolchain-funcs	d3b5812eeab360bc41aa48b6cdbbc142
-_md5_=25264c70176a3ddf35cce932b7f9c445
+_md5_=3ccd3d21c3c5dbf60a4968e7148de285

@@ -1,0 +1,22 @@
+media-libs/freetype net-misc/curl sys-libs/zlib !dedicated? ( media-libs/libpng:0 media-libs/libsdl media-libs/libtheora media-libs/libvorbis x11-libs/libX11 x11-libs/libXinerama x11-libs/libXrandr x11-libs/libXxf86dga x11-libs/libXxf86vm virtual/jpeg virtual/opengl openal? ( media-libs/openal ) ) x11-misc/makedepend !dedicated? ( x11-proto/xineramaproto x11-proto/xf86dgaproto x11-proto/xf86vidmodeproto ) openal? ( virtual/pkgconfig ) >=sys-apps/sed-4
+media-libs/freetype net-misc/curl sys-libs/zlib !dedicated? ( media-libs/libpng:0 media-libs/libsdl media-libs/libtheora media-libs/libvorbis x11-libs/libX11 x11-libs/libXinerama x11-libs/libXrandr x11-libs/libXxf86dga x11-libs/libXxf86vm virtual/jpeg virtual/opengl openal? ( media-libs/openal ) )
+0
+http://funpark.warsow-esport.net/~warsow/1.0/warsow_1.0_unified.tar.gz http://funpark.warsow-esport.net/~warsow/1.0/warsow_1.0_sdk.tar.gz mirror://gentoo/warsow.png
+
+http://www.warsow.net/
+GPL-2 warsow
+Multiplayer FPS based on the QFusion engine (evolved from Quake 2)
+~amd64 ~x86
+base check-reqs eutils games gnome2-utils multilib toolchain-funcs user
++angelscript debug dedicated irc openal server
+
+
+
+4
+
+compile configure install postinst postrm preinst prepare pretend setup unpack
+
+
+
+
+

@@ -6,7 +6,7 @@ test
 http://tclx.sourceforge.net
 BSD
 A set of extensions to TCL
-alpha amd64 ppc sparc x86
+amd64 ppc x86
 eutils multilib toolchain-funcs user
 tk threads
 

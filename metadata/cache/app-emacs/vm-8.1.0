@@ -6,7 +6,7 @@ http://launchpad.net/vm/8.1.x/8.1.0/+download/vm-8.1.0.tgz
 http://www.nongnu.org/viewmail/
 GPL-2
 The VM mail reader for Emacs
-~alpha ~amd64 ~ppc ~sparc ~x86
+~amd64 ~ppc ~x86
 elisp elisp-common eutils multilib toolchain-funcs user
 bbdb ssl
 
