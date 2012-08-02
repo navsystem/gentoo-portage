@@ -6,7 +6,7 @@ mirror://github/mgorny/gentoopm/gentoopm-0.2.5.tar.bz2
 https://github.com/mgorny/gentoopm/
 BSD-2
 A common interface to Gentoo package managers
-~amd64 ~mips ~x86 ~x86-fbsd
+~amd64 ~mips x86 ~x86-fbsd
 base eutils multilib python-distutils-ng toolchain-funcs user
 doc python_targets_python2_6 python_targets_python2_7 python_targets_python3_1 python_targets_python3_2
 || ( python_targets_python2_6 python_targets_python2_7 python_targets_python3_1 python_targets_python3_2 )

@@ -1,0 +1,22 @@
+dev-cpp/xsd || ( >=dev-libs/boost-1.42.0 ( <dev-libs/boost-1.42.0 dev-libs/ossp-uuid ) ) dev-libs/xerces-c csharp? ( dev-lang/swig ) java? ( dev-lang/swig ) php? ( dev-lang/swig ) python? ( dev-lang/swig ) test? ( x11-libs/qt-test:4 ) >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+dev-cpp/xsd || ( >=dev-libs/boost-1.42.0 ( <dev-libs/boost-1.42.0 dev-libs/ossp-uuid ) ) dev-libs/xerces-c
+4
+http://dev.gentoo.org/~creffett/distfiles/libkolabxml-0.6.0.tar.gz
+
+http://www.kolab.org
+LGPL-3
+Kolab XML format schema definitions library
+~amd64 ~x86
+base cmake-utils eutils flag-o-matic multilib toolchain-funcs user
+csharp java python php test
+
+
+
+4
+
+compile configure install prepare test unpack
+
+
+
+
+

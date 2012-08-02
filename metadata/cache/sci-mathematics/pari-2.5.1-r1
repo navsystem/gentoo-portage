@@ -1,0 +1,22 @@
+sys-libs/readline data? ( sci-mathematics/pari-data ) doc? ( X? ( x11-misc/xdg-utils ) ) fltk? ( x11-libs/fltk:1 ) gmp? ( dev-libs/gmp ) qt4? ( x11-libs/qt-gui:4 ) X? ( x11-libs/libX11 ) doc? ( virtual/latex-base )
+sys-libs/readline data? ( sci-mathematics/pari-data ) doc? ( X? ( x11-misc/xdg-utils ) ) fltk? ( x11-libs/fltk:1 ) gmp? ( dev-libs/gmp ) qt4? ( x11-libs/qt-gui:4 ) X? ( x11-libs/libX11 )
+0
+http://pari.math.u-bordeaux.fr/pub/pari/unix/pari-2.5.1.tar.gz
+
+http://pari.math.u-bordeaux.fr/
+GPL-2
+A software package for computer-aided number theory
+~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-fbsd ~x86-linux ~x86-macos ~x86-solaris
+eutils flag-o-matic multilib toolchain-funcs user
+data doc fltk gmp qt4 X
+
+
+
+4
+
+compile configure install prepare test
+
+
+
+
+
