@@ -6,7 +6,7 @@ http://www.joedog.org/pub/siege/siege-2.72.tar.gz
 http://www.joedog.org/JoeDog/Siege
 GPL-2
 A HTTP regression testing and benchmarking utility
-~amd64 ~hppa ~mips ~ppc ~x86
+~amd64 hppa ~mips ~ppc ~x86
 autotools bash-completion-r1 eutils libtool multilib multiprocessing toolchain-funcs user
 ssl
 

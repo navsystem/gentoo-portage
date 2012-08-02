@@ -6,7 +6,7 @@ http://commondatastorage.googleapis.com/chromium-browser-official/v8-3.11.10.17.
 http://code.google.com/p/v8
 BSD
 Google's open source JavaScript engine
-~amd64 ~x86 ~x86-fbsd ~x64-macos ~x86-macos
+amd64 ~x86 ~x86-fbsd ~x64-macos ~x86-macos
 eutils multilib pax-utils python toolchain-funcs user versionator
 
 

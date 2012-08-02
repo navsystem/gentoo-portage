@@ -1,0 +1,22 @@
+x11-libs/libX11 x11-libs/libXrandr x11-libs/libXtst !x11-wm/scrotwm
+x11-misc/dmenu
+0
+http://opensource.conformal.com/snapshots/spectrwm/spectrwm-1.2.0.tgz
+
+https://opensource.conformal.com/wiki/spectrwm
+ISC
+Small dynamic tiling window manager for X11
+~amd64 ~x86
+eutils multilib toolchain-funcs user
+
+
+
+
+4
+
+install prepare
+
+
+
+
+
