@@ -1,0 +1,22 @@
+
+
+0
+mirror://sourceforge/aoetools/aoetools-34.tar.gz
+
+http://aoetools.sourceforge.net/
+GPL-2
+tools for ATA over Ethernet (AoE) network storage protocol
+~amd64 ~ppc ~ppc64 ~sparc ~x86
+eutils multilib toolchain-funcs user
+
+
+
+
+4
+
+compile prepare
+
+
+
+
+

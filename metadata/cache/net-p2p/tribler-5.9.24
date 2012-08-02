@@ -1,0 +1,22 @@
+dev-python/apsw dev-python/m2crypto dev-python/netifaces dev-libs/openssl dev-python/wxpython vlc? ( media-video/vlc media-video/ffmpeg ) app-arch/unzip =dev-lang/python-2* =dev-lang/python-2*[sqlite]
+dev-python/apsw dev-python/m2crypto dev-python/netifaces dev-libs/openssl dev-python/wxpython vlc? ( media-video/vlc media-video/ffmpeg ) =dev-lang/python-2* =dev-lang/python-2*[sqlite]
+0
+http://dl.tribler.org/tribler_5.9.24-1ubuntu1_all.deb x86? ( http://dl.tribler.org/tribler-swift_5.9.23-27674_i386.deb ) amd64? ( http://dl.tribler.org/tribler-swift_5.9.23-27674_amd64.deb )
+
+http://www.tribler.org/
+LGPL-2.1
+Bittorrent client that does not require a website to discover content
+~amd64 ~x86
+eutils multilib python toolchain-funcs user
+vlc
+
+
+
+4
+
+compile install postinst postrm prepare setup unpack
+
+
+
+
+

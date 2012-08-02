@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile install postinst postrm prepare setup
-DEPEND=net-print/cups doc? ( dev-python/epydoc ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
+DEPEND=<net-print/cups-1.6.0 doc? ( dev-python/epydoc ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
 DESCRIPTION=Python bindings for the CUPS API
 EAPI=3
 HOMEPAGE=http://cyberelk.net/tim/data/pycups/
 IUSE=doc examples
 KEYWORDS=alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86
 LICENSE=GPL-2
-RDEPEND=net-print/cups || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
+RDEPEND=<net-print/cups-1.6.0 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
 SLOT=0
 SRC_URI=http://cyberelk.net/tim/data/pycups/pycups-1.9.60.tar.bz2
 _eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	eutils	327b713e2d6949c42cd96bc4898fd280	flag-o-matic	2c938a1fe61ea9899a2b97ea1e065f5f	multilib	5782800349f728f725f9378105c6a2ab	python	4152846e243ec207de8a1b02a36f1461	toolchain-funcs	d3b5812eeab360bc41aa48b6cdbbc142	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=8dda87cb491d8f8a70aedbf3449eabaf
+_md5_=ad148ba02aa42d3427b498ef4801902c
