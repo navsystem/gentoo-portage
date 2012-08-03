@@ -3,10 +3,10 @@ DEPEND=dev-python/numpy =dev-lang/python-2*
 DESCRIPTION=Python package for interactively displaying FITS arrays
 EAPI=3
 HOMEPAGE=http://stsdas.stsci.edu/numdisplay/
-KEYWORDS=~amd64 ~x86
+KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
 LICENSE=BSD
 RDEPEND=dev-python/numpy =dev-lang/python-2*
 SLOT=0
 SRC_URI=http://stsdas.stsci.edu/download/numdisplay/numdisplay-1.6.0.tar.gz
 _eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	multilib	5782800349f728f725f9378105c6a2ab	python	4152846e243ec207de8a1b02a36f1461	toolchain-funcs	d3b5812eeab360bc41aa48b6cdbbc142
-_md5_=310b5bd5d28e1e10b6036ba2a791d7a8
+_md5_=c706c3499ef6530c50dd114b40e5c3a2

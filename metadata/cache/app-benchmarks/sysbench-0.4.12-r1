@@ -6,7 +6,7 @@ mirror://sourceforge/sysbench/sysbench-0.4.12.tar.gz
 http://sysbench.sourceforge.net/
 GPL-2
 System performance benchmark
-~amd64 ~x86
+amd64 ~x86
 autotools libtool multilib multiprocessing toolchain-funcs
 aio mysql
 

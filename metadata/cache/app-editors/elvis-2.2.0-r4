@@ -6,7 +6,7 @@ ftp://ftp.cs.pdx.edu/pub/elvis/elvis-2.2_0.tar.gz
 ftp://ftp.cs.pdx.edu/pub/elvis/
 Artistic
 A vi/ex clone
-~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-interix ~ppc-macos ~x86-macos ~m68k-mint ~sparc-solaris
+~alpha amd64 ~ppc ~ppc64 ~sparc x86 ~x86-interix ~ppc-macos ~x86-macos ~m68k-mint ~sparc-solaris
 eutils multilib toolchain-funcs user versionator
 X
 

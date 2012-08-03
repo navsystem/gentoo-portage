@@ -6,7 +6,7 @@ mirror://sourceforge/opende/ode-0.12.tar.bz2
 http://ode.org/
 || ( LGPL-2.1 BSD )
 Open Dynamics Engine SDK
-amd64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd
+amd64 ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-fbsd ~x86-linux
 
 debug doc double-precision examples gyroscopic static-libs
 

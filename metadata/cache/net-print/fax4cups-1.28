@@ -1,5 +1,5 @@
 net-print/cups
-net-print/cups || ( net-misc/hylafax net-misc/efax net-dialup/mgetty ) app-admin/sudo
+net-print/cups || ( net-misc/hylafaxplus net-misc/efax net-dialup/mgetty ) app-admin/sudo
 0
 http://vigna.dsi.unimi.it/fax4CUPS/fax4CUPS-1.28.tar.gz
 

@@ -1,0 +1,22 @@
+dev-java/sun-jre-bin
+dev-java/sun-jre-bin
+0
+http://replicatorg.googlecode.com/files/replicatorg-0037-linux.tgz
+
+http://replicat.org/start
+GPL-2
+ReplicatorG is a simple, open source 3D printing program
+
+eutils multilib toolchain-funcs user versionator
+
+
+
+
+3
+
+install postinst setup
+
+
+
+
+
