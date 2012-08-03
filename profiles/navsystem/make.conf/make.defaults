@@ -20,7 +20,7 @@ video_cards_i915 video_cards_i965 video_cards_r100 video_cards_r200 video_cards_
 -video_cards_tseng -video_cards_v4l -video_cards_via -video_cards_virtualbox -video_cards_vmware -video_cards_voodoo -video_cards_xgi
 
 
--linguas_* linguas_ru linguas_en
+-linguas_* linguas_en linguas_en_US linguas_ru linguas_ru_RU
 
 "
 
