@@ -7,7 +7,7 @@ media-libs/glc-lib
 dev-python/psycopg
 virtual/ooo
 media-libs/phonon
-app-emulation/hasp
+sys-apps/hasp
 dev-python/xlwt
 app-misc/pip
 
