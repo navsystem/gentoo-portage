@@ -12,7 +12,7 @@ SRC_URI="http://ftp.etersoft.ru/pub/Etersoft/HASP/3.3/sources/x86_64/Gentoo/2011
 
 LICENSE="Etersoft"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 IUSE="net_hasp wine usb lpt demo"
 
