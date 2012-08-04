@@ -6,7 +6,7 @@ mirror://sourceforge/ddccontrol/ddccontrol-0.4.2.tar.bz2
 http://ddccontrol.sourceforge.net/
 GPL-2
 DDCControl allows control of monitor parameters via DDC
-~amd64 ~ppc ~x86
+amd64 ~ppc ~x86
 autotools eutils libtool multilib multiprocessing toolchain-funcs user
 +ddcpci doc gnome gtk nls static-libs
 

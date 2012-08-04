@@ -1,5 +1,5 @@
-dev-python/meld3 dev-python/setuptools test? ( dev-python/mock ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* ) || ( =dev-lang/python-2.7*[xml] =dev-lang/python-2.6*[xml] =dev-lang/python-2.5*[xml] )
-dev-python/meld3 dev-python/setuptools || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* ) || ( =dev-lang/python-2.7*[xml] =dev-lang/python-2.6*[xml] =dev-lang/python-2.5*[xml] )
+dev-python/meld3 dev-python/setuptools test? ( dev-python/mock ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* ) || ( =dev-lang/python-2.7*[xml(+)] =dev-lang/python-2.6*[xml(+)] =dev-lang/python-2.5*[xml(+)] )
+dev-python/meld3 dev-python/setuptools || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* ) || ( =dev-lang/python-2.7*[xml(+)] =dev-lang/python-2.6*[xml(+)] =dev-lang/python-2.5*[xml(+)] )
 0
 mirror://pypi/s/supervisor/supervisor-3.0a12.tar.gz
 
@@ -12,7 +12,7 @@ test
 
 
 
-3
+4
 
 compile install postinst postrm prepare setup test
 

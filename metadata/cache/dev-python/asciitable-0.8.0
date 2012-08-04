@@ -6,7 +6,7 @@ mirror://pypi/a/asciitable/asciitable-0.8.0.tar.gz
 http://pypi.python.org/pypi/asciitable http://cxc.harvard.edu/contrib/asciitable
 GPL-2
 An extensible ASCII table reader
-~amd64 ~x86
+~amd64 ~x86 ~amd64-linux ~x86-linux
 distutils multilib python toolchain-funcs
 test
 

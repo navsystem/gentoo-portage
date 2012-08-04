@@ -6,15 +6,15 @@ mirror://pypi/p/pupynere/pupynere-1.0.15.tar.gz
 http://pypi.python.org/pypi/pupynere/
 MIT
 Pupynere is a PUre PYthon NEtcdf REader.
-~amd64 ~x86
+~amd64 ~x86 ~amd64-linux ~x86-linux
 distutils multilib python toolchain-funcs
 
 
 
 
-3
+4
 
-compile install postinst postrm prepare
+compile install postinst postrm prepare setup
 
 
 

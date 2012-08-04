@@ -6,7 +6,7 @@ mirror://cpan/authors/id/P/PE/PEDERST/rename-1.8.tar.gz
 http://search.cpan.org/dist/rename/
 || ( Artistic GPL-1 GPL-2 GPL-3 )
 A filename renaming utility based on perl regular expression
-~amd64 ~x86
+amd64 x86
 base eutils multilib multiprocessing perl-module toolchain-funcs user
 
 

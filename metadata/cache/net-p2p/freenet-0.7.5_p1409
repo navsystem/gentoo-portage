@@ -1,0 +1,22 @@
+app-arch/unzip >=virtual/jdk-1.6 freemail? ( >=dev-java/bcprov-1.45:0 ) dev-java/commons-compress:0 dev-db/db-je:3.3 dev-java/fec:0 dev-java/java-service-wrapper:0 dev-java/db4o-jdk11:0 dev-java/db4o-jdk12:0 dev-java/db4o-jdk5:0 dev-java/jbitcollider-core:0 dev-java/lzma:0 dev-java/lzmajio:0 dev-java/mersennetwister:0 test? ( dev-java/junit:0 dev-java/ant-junit:0 ) dev-java/ant-core:0 >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip ) >=dev-java/ant-core-1.7.0 >=dev-java/javatoolkit-0.3.0-r2 >=dev-lang/python-2.4
+>=virtual/jre-1.6 net-libs/nativebiginteger:0 freemail? ( >=dev-java/bcprov-1.45:0 ) dev-java/commons-compress:0 dev-db/db-je:3.3 dev-java/fec:0 dev-java/java-service-wrapper:0 dev-java/db4o-jdk11:0 dev-java/db4o-jdk12:0 dev-java/db4o-jdk5:0 dev-java/jbitcollider-core:0 dev-java/lzma:0 dev-java/lzmajio:0 dev-java/mersennetwister:0 >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip )
+0
+http://github.com/freenet/fred-official/zipball/build01409 -> freenet-0.7.5_p1409.zip mirror://gentoo/seednodes-20120415.fref.bz2 mirror://gentoo/freenet-ant-1.7.1.jar
+
+https://freenetproject.org/
+as-is GPL-2
+An encrypted network without censorship
+~amd64 ~x86
+eutils java-ant-2 java-pkg-2 java-utils-2 multilib toolchain-funcs user versionator
+freemail test elibc_FreeBSD doc source elibc_FreeBSD
+
+net-libs/NativeThread:0
+
+2
+
+compile configure install postinst postrm preinst prepare setup test unpack
+
+
+
+
+

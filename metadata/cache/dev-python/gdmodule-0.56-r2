@@ -6,7 +6,7 @@ http://newcenturycomputers.net/projects/download.cgi/gdmodule-0.56.tar.gz
 http://newcenturycomputers.net/projects/gdmodule.html
 BSD
 Python extensions for gd
-~amd64 ~ppc ~ppc64 ~x86 ~x86-linux ~ppc-macos
+~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~ppc-macos ~x86-linux
 distutils eutils flag-o-matic multilib python toolchain-funcs user
 jpeg png truetype xpm
 

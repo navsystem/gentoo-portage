@@ -1,5 +1,5 @@
-|| ( dev-lang/python:2.7[xml] dev-lang/python:2.6[xml] dev-lang/python:2.5[xml] dev-python/elementtree ) =dev-lang/python-2* =dev-lang/python-2*[ssl]
-|| ( dev-lang/python:2.7[xml] dev-lang/python:2.6[xml] dev-lang/python:2.5[xml] dev-python/elementtree ) =dev-lang/python-2* =dev-lang/python-2*[ssl]
+|| ( dev-lang/python:2.7[xml] dev-lang/python:2.6[xml] dev-lang/python:2.5[xml] dev-python/elementtree ) =dev-lang/python-2* =dev-lang/python-2*[ssl(+)]
+|| ( dev-lang/python:2.7[xml] dev-lang/python:2.6[xml] dev-lang/python:2.5[xml] dev-python/elementtree ) =dev-lang/python-2* =dev-lang/python-2*[ssl(+)]
 0
 http://gdata-python-client.googlecode.com/files/gdata-2.0.14.tar.gz
 
@@ -12,7 +12,7 @@ examples
 
 
 
-3
+4
 
 compile install postinst postrm prepare setup test
 
