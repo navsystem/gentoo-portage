@@ -6,7 +6,7 @@ mirror://sourceforge/hylafax/hylafax-5.5.1.tar.gz
 http://hylafax.sourceforge.net
 hylafaxplus
 Enterprise client-server fax package for class 1 and 2 fax modems.
-~x86 ~amd64
+amd64 ~x86
 eutils flag-o-matic multilib pam toolchain-funcs user
 jbig pam mgetty html ldap
 

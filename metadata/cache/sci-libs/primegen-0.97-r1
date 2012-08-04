@@ -5,14 +5,14 @@ http://cr.yp.to/primegen/primegen-0.97.tar.gz
 
 http://cr.yp.to/primegen.html
 public-domain
-A small, fast library to generate primes in order
-amd64 ~ppc x86
+Small, fast library to generate primes in order
+amd64 ~ppc x86 ~amd64-linux ~x86-linux
 eutils flag-o-matic multilib toolchain-funcs user
 
 
 
 
-2
+4
 
 configure install prepare test
 

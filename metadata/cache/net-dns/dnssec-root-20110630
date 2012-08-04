@@ -6,7 +6,7 @@ mirror
 https://www.iana.org/dnssec/
 public-domain
 The DNSSEC root key(s)
-~amd64 ~x86
+amd64 ~x86
 
 test
 

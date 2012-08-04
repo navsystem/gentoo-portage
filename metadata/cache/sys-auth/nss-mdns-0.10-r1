@@ -6,7 +6,7 @@ http://0pointer.de/lennart/projects/nss-mdns/nss-mdns-0.10.tar.gz
 http://0pointer.de/lennart/projects/nss-mdns/
 GPL-2
 Name Service Switch module for Multicast DNS
-~amd64 ~hppa ~mips ~ppc ~x86
+amd64 ~hppa ~mips ~ppc ~x86
 autotools eutils libtool multilib multiprocessing toolchain-funcs user
 search-domains
 

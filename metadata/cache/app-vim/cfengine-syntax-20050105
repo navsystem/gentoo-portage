@@ -1,7 +1,7 @@
 || ( >=app-editors/vim-7.0 >=app-editors/gvim-7.0 )
 || ( >=app-editors/vim-7.0 >=app-editors/gvim-7.0 )
 0
-mirror://gentoo/cfengine-syntax-20050105.tar.bz2
+mirror://gentoo/cfengine-syntax-20050105.tar.bz2 http://dev.gentoo.org/~radhermit/vim/cfengine-syntax-20050105.tar.bz2
 
 http://dev.gentoo.org/~ramereth/vim/syntax/cfengine.vim
 as-is

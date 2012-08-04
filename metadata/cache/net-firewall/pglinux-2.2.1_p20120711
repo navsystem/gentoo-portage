@@ -6,7 +6,7 @@ http://dev.gentoo.org/~hasufell/distfiles/pgl-2.2.1_p20120711.tar.xz
 https://sourceforge.net/projects/peerguardian/
 GPL-3
 Privacy oriented firewall application
-~amd64 ~x86
+amd64 ~x86
 eutils gnome2-utils linux-info multilib toolchain-funcs user versionator
 cron dbus logrotate networkmanager qt4 zlib
 qt4? ( dbus )

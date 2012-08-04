@@ -6,7 +6,7 @@ http://vigna.dsi.unimi.it/fax4CUPS/fax4CUPS-1.29.tar.gz
 http://vigna.dsi.unimi.it/fax4CUPS/
 GPL-2
 Fax backend for CUPS
-~amd64 ~ppc ~x86
+amd64 ~ppc ~x86
 
 +hylafax mgetty-fax efax capisuite-fax
 || ( hylafax mgetty-fax efax capisuite-fax )

@@ -8,7 +8,7 @@ GPL-2
 Utility for reading, writing, erasing and verifying flash ROM chips
 
 eutils multilib subversion toolchain-funcs user
-+atahpt +bitbang_spi +buspirate_spi dediprog doc +drkaiser +dummy ft2232_spi +gfxnvidia +internal +nic3com +nicintel +nicintel_spi +nicnatsemi +nicrealtek +ogp_spi +rayer_spi +satasii +satamv +serprog +wiki
+atahpt +bitbang_spi +buspirate_spi +dediprog doc +drkaiser +dummy ft2232_spi +gfxnvidia +internal +nic3com +nicintel +nicintel_spi nicnatsemi nicrealtek +ogp_spi rayer_spi +pony_spi +satasii satamv +serprog +wiki
 
 
 

@@ -1,7 +1,7 @@
 || ( >=app-editors/vim-7.0 >=app-editors/gvim-7.0 )
 || ( >=app-editors/vim-7.0 >=app-editors/gvim-7.0 )
 0
-mirror://gentoo/xsl-syntax-0.3.11.tar.bz2
+mirror://gentoo/xsl-syntax-0.3.11.tar.bz2 http://dev.gentoo.org/~radhermit/vim/xsl-syntax-0.3.11.tar.bz2
 
 http://www.vim.org/scripts/script.php?script_id=257
 vim
