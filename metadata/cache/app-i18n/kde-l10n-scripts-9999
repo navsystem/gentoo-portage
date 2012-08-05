@@ -1,0 +1,22 @@
+app-i18n/pology app-shells/bash dev-vcs/subversion dev-vcs/git
+app-i18n/pology app-shells/bash dev-vcs/subversion
+0
+
+
+https://github.com/vpelcak/kde-scripts
+LGPL-3
+Set of scripts to manage KDE translation files.
+
+git-2
+
+
+
+
+4
+
+unpack
+
+
+
+
+

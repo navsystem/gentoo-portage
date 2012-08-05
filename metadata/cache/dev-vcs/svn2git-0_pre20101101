@@ -1,5 +1,5 @@
-dev-vcs/subversion x11-libs/qt-core
-dev-vcs/subversion x11-libs/qt-core dev-vcs/git
+dev-vcs/subversion x11-libs/qt-core:4
+dev-vcs/subversion x11-libs/qt-core:4 dev-vcs/git
 0
 http://www.hartwork.org/public/svn2git-0_pre20101101.tar.gz
 

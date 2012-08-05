@@ -6,7 +6,7 @@ http://github.com/transifex/transifex-client/tarball/0.8 -> transifex-client-0.8
 http://pypi.python.org/pypi/transifex-client http://www.transifex.net/
 GPL-2
 A command line interface for Transifex
-~amd64 ~x86
+amd64 ~x86
 distutils multilib python toolchain-funcs
 
 

@@ -6,7 +6,7 @@ https://github.com/downloads/khenriks/mp3fs/mp3fs-0.32.tar.gz
 http://khenriks.github.com/mp3fs/
 GPL-3
 a read-only FUSE filesystem which transcodes FLAC audio files to MP3 when read
-~amd64 ~x86
+amd64 ~x86
 
 
 

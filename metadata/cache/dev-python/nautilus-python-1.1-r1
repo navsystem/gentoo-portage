@@ -6,7 +6,7 @@ mirror://gnome/sources/nautilus-python/1.1/nautilus-python-1.1.tar.xz
 http://projects.gnome.org/nautilus-python/
 GPL-2
 Python bindings for the Nautilus file manager
-~alpha ~amd64 ~x86
+~alpha amd64 ~x86
 eutils fdo-mime gnome.org gnome2 gnome2-utils libtool multilib python toolchain-funcs user versionator
 doc
 

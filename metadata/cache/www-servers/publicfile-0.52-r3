@@ -2,7 +2,7 @@
 virtual/daemontools >=sys-apps/ucspi-tcp-0.83 selinux? ( sec-policy/selinux-publicfile ) !net-ftp/netkit-ftpd
 0
 http://cr.yp.to/publicfile/publicfile-0.52.tar.gz http://www.ohse.de/uwe/patches/publicfile-0.52-filetype-diff http://www.publicfile.org/ftp-ls-patch
-
+test
 http://cr.yp.to/publicfile.html
 as-is
 publish files through FTP and HTTP
@@ -14,7 +14,7 @@ selinux vanilla
 
 4
 
-compile configure install postinst preinst prepare test
+configure install postinst preinst prepare
 
 
 

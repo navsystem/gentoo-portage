@@ -6,7 +6,7 @@ http://crd.lbl.gov/~dhbailey/mpdist/arprec-2.2.13.tar.gz
 http://crd.lbl.gov/~dhbailey/mpdist/
 BSD
 Arbitrary precision float arithmetics and functions
-~amd64 ~x86
+~amd64 ~x86 ~amd64-linux ~x86-linux
 eutils fortran-2 multilib toolchain-funcs user
 doc fortran qd static-libs
 

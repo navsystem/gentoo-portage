@@ -14,7 +14,7 @@ static-libs
 
 4
 
-compile install prepare test
+compile install prepare setup test
 
 
 

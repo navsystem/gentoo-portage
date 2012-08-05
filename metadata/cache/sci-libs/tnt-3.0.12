@@ -6,13 +6,13 @@ http://math.nist.gov/tnt/tnt_3_0_12.zip
 http://math.nist.gov/tnt/
 public-domain
 Template Numerical Toolkit: C++ headers for array and matrices
-~amd64 ~x86
+~amd64 ~x86 ~amd64-linux ~x86-linux
 eutils multilib toolchain-funcs user versionator
 
 
 
 
-
+4
 
 install
 

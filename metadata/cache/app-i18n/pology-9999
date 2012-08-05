@@ -1,0 +1,22 @@
+dev-libs/libxslt dev-libs/libxml2 dev-python/dbus-python sys-devel/gettext app-text/docbook-xsl-stylesheets app-text/docbook-xml-dtd:4.5 dev-python/epydoc =dev-lang/python-2.7* >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) || ( dev-vcs/subversion[webdav-neon] dev-vcs/subversion[webdav-serf] ) net-misc/rsync
+dev-libs/libxslt dev-libs/libxml2 dev-python/dbus-python sys-devel/gettext =dev-lang/python-2.7*
+0
+
+
+http://pology.nedohodnik.nete
+GPL-3
+A framework for custom processing of PO files.
+
+base bash-completion-r1 cmake-utils eutils flag-o-matic multilib python subversion toolchain-funcs user
+
+
+
+
+4
+
+compile configure install preinst prepare setup test unpack
+
+
+
+
+

@@ -1,0 +1,22 @@
+>=dev-lang/ocaml-3.12[ocamlopt?] type-conv? ( >=dev-ml/type-conv-108 ) >=dev-ml/findlib-1.0.4-r1
+>=dev-lang/ocaml-3.12[ocamlopt?] type-conv? ( >=dev-ml/type-conv-108 )
+0
+http://www.ocsigen.org/download/deriving-ocsigen-0.3c.tar.gz
+
+http://ocsigen.org
+LGPL-2.1-with-linking-exception
+A deriving library for Ocsigen
+~amd64
+findlib
++ocamlopt type-conv
+
+
+
+4
+
+compile configure install prepare test
+
+
+
+
+

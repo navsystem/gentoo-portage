@@ -6,9 +6,9 @@ mirror://sourceforge/gaul/gaul-devel-0.1849-0.tar.bz2
 http://GAUL.sourceforge.net/
 GPL-2
 Genetic Algorithm Utility Library
-~x86 ~amd64
+~amd64 ~x86 ~amd64-linux ~x86-linux
 autotools eutils libtool multilib multiprocessing toolchain-funcs user
-debug slang
+debug slang static-libs
 
 
 

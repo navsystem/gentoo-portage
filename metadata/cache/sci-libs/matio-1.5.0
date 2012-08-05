@@ -6,7 +6,7 @@ mirror://sourceforge/matio/matio-1.5.0.tar.gz
 http://sourceforge.net/projects/matio/
 LGPL-2.1
 Library for reading and writing matlab files
-~amd64 ~x86
+~amd64 ~x86 ~amd64-linux ~x86-linux
 autotools eutils libtool multilib multiprocessing toolchain-funcs user
 doc examples hdf5 sparse static-libs
 

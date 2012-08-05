@@ -1,5 +1,5 @@
-!aqua? ( x11-libs/libX11 x11-libs/libXt truetype? ( x11-libs/libXft ) xscreensaver? ( x11-libs/libXScrnSaver ) ) ~dev-lang/tcl-8.5.11 !aqua? ( x11-proto/xproto ) || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
-!aqua? ( x11-libs/libX11 x11-libs/libXt truetype? ( x11-libs/libXft ) xscreensaver? ( x11-libs/libXScrnSaver ) ) ~dev-lang/tcl-8.5.11
+!aqua? ( media-libs/fontconfig x11-libs/libX11 x11-libs/libXt truetype? ( x11-libs/libXft ) xscreensaver? ( x11-libs/libXScrnSaver ) ) ~dev-lang/tcl-8.5.11 !aqua? ( x11-proto/xproto ) || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+!aqua? ( media-libs/fontconfig x11-libs/libX11 x11-libs/libXt truetype? ( x11-libs/libXft ) xscreensaver? ( x11-libs/libXScrnSaver ) ) ~dev-lang/tcl-8.5.11
 0
 mirror://sourceforge/tcl/tk8.5.11-src.tar.gz
 
