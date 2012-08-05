@@ -6,7 +6,7 @@ test
 http://cr.yp.to/publicfile.html
 as-is
 publish files through FTP and HTTP
-~amd64 ~hppa ~ppc ~sparc ~x86
+~amd64 hppa ~ppc ~sparc ~x86
 eutils multilib toolchain-funcs user
 selinux vanilla
 

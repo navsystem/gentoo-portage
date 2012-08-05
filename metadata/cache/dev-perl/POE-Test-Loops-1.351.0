@@ -6,7 +6,7 @@ mirror://cpan/authors/id/R/RC/RCAPUTO/POE-Test-Loops-1.351.tar.gz
 http://search.cpan.org/dist/POE-Test-Loops/
 || ( Artistic GPL-1 GPL-2 GPL-3 )
 Reusable tests for POE::Loop authors
-amd64 ppc ~x86
+amd64 ppc x86
 base eutils multilib multiprocessing perl-module toolchain-funcs user
 
 

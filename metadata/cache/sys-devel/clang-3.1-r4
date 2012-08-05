@@ -6,7 +6,7 @@ http://llvm.org/releases/3.1/llvm-3.1.src.tar.gz http://llvm.org/releases/3.1/co
 http://clang.llvm.org/
 UoI-NCSA
 C language family frontend for LLVM
-~amd64 ~arm ~x86 ~amd64-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos
+~amd64 ~arm ~x86 ~amd64-fbsd ~x64-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos
 eutils multilib python toolchain-funcs user
 debug kernel_FreeBSD multitarget +static-analyzer test
 

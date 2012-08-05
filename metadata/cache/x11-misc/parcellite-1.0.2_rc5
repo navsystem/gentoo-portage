@@ -6,7 +6,7 @@ mirror://sourceforge/parcellite/parcellite-1.0.2rc5.tar.gz
 http://parcellite.sourceforge.net/
 GPL-3
 A lightweight GTK+ based clipboard manager.
-~amd64 ~x86
+amd64 ~x86
 autotools eutils fdo-mime libtool multilib multiprocessing toolchain-funcs user
 nls
 

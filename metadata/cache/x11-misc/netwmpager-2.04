@@ -6,7 +6,7 @@ mirror://sourceforge/sf-xpaint/netwmpager-2.04.tar.bz2
 http://sourceforge.net/projects/sf-xpaint/files/netwmpager/
 GPL-2
 EWMH (NetWM) compatible pager. Works with Openbox and other EWMH compliant window managers.
-~amd64 ~ppc ~x86
+amd64 ~ppc x86
 multilib toolchain-funcs
 
 

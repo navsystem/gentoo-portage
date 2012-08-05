@@ -6,7 +6,7 @@ mirror://kernel/linux/network/connman/connman-1.0.tar.gz
 http://connman.net
 GPL-2
 Provides a daemon for managing internet connections
-amd64 arm ~ppc ~ppc64 x86
+amd64 arm ppc ppc64 x86
 
 bluetooth debug doc examples +ethernet ofono openvpn policykit threads tools vpnc +wifi wimax
 

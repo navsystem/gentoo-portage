@@ -6,13 +6,13 @@ http://pessimization.com/software/orpie/orpie-1.5.1.tar.gz
 http://pessimization.com/software/orpie/
 GPL-2
 A fullscreen RPN calculator for the console
-amd64 ~ppc x86
+amd64 ~ppc x86 ~amd64-linux ~x86-linux
 autotools eutils libtool multilib multiprocessing toolchain-funcs user
 doc
 
 
 
-2
+4
 
 install prepare
 

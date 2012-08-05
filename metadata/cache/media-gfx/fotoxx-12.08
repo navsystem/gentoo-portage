@@ -1,0 +1,22 @@
+x11-libs/gtk+:3 media-libs/tiff
+x11-libs/gtk+:3 media-libs/tiff media-libs/exiftool media-gfx/ufraw x11-misc/xdg-utils
+0
+http://www.kornelix.com/uploads/1/3/0/3/13035936/fotoxx-12.08.tar.gz
+
+http://www.kornelix.com/fotoxx.html
+GPL-3
+Program for improving image files made with a digital camera.
+~amd64 ~x86
+eutils multilib toolchain-funcs user
+
+
+
+
+4
+
+compile install prepare
+
+
+
+
+

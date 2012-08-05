@@ -3,10 +3,10 @@ dev-python/pygtk:2
 0
 http://unihedron.com/projects/gonvert/downloads/gonvert-0.2.25.tar.gz
 
-http://unihedron.com/projects/gonvert/gonvert.php
+http://unihedron.com/projects/gonvert/index.php
 GPL-2
 Unit conversion utility written in PyGTK
-~amd64 ~x86 ~ppc
+~amd64 ~x86 ~ppc ~amd64-linux ~x86-linux
 eutils multilib toolchain-funcs user
 
 

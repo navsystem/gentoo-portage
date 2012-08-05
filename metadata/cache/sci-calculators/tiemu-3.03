@@ -6,13 +6,13 @@ http://repo.calcforge.org/debian/source/tiemu_3.03.orig.tar.gz
 http://lpg.ticalc.org/prj_tiemu/
 GPL-2
 Texas Instruments hand-helds emulator
-~amd64 ~x86
+~amd64 ~x86 ~amd64-linux ~x86-linux
 eutils multilib toolchain-funcs user
 dbus nls sdl threads xinerama
 
 
 
-2
+4
 
 configure install prepare
 

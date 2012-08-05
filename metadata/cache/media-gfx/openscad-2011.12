@@ -1,5 +1,5 @@
-media-gfx/opencsg sci-mathematics/cgal x11-libs/qt-core x11-libs/qt-gui x11-libs/qt-opengl dev-cpp/eigen dev-libs/gmp dev-libs/mpfr dev-libs/boost sys-libs/glibc sys-devel/gcc
-media-gfx/opencsg sci-mathematics/cgal x11-libs/qt-core x11-libs/qt-gui x11-libs/qt-opengl dev-cpp/eigen dev-libs/gmp dev-libs/mpfr dev-libs/boost sys-libs/glibc
+media-gfx/opencsg sci-mathematics/cgal x11-libs/qt-core:4 x11-libs/qt-gui:4 x11-libs/qt-opengl:4 dev-cpp/eigen dev-libs/gmp dev-libs/mpfr dev-libs/boost sys-libs/glibc sys-devel/gcc
+media-gfx/opencsg sci-mathematics/cgal x11-libs/qt-core:4 x11-libs/qt-gui:4 x11-libs/qt-opengl:4 dev-cpp/eigen dev-libs/gmp dev-libs/mpfr dev-libs/boost sys-libs/glibc
 0
 https://github.com/downloads/openscad/openscad/openscad-2011.12.src.tar.gz
 

@@ -6,7 +6,7 @@ http://www.linuxtogo.org/~kevin/SeaBIOS/seabios-1.7.0.tar.gz http://dev.gentoo.o
 http://www.seabios.org
 LGPL-3 GPL-3
 Open Source implementation of a 16-bit x86 BIOS
-~amd64 ~ppc ~ppc64 x86 ~amd64-fbsd ~x86-fbsd
+amd64 ~ppc ~ppc64 x86 ~amd64-fbsd ~x86-fbsd
 multilib python toolchain-funcs
 
 

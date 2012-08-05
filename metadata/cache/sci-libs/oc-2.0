@@ -1,0 +1,22 @@
+net-misc/curl
+net-misc/curl
+0
+http://opendap.org/pub/OC/source/oc-2.0.tar.gz
+
+http://opendap.org/
+LGPL-2
+Network Data Access Protocol client C library
+~amd64 ~x86 ~amd64-linux ~x86-linux
+autotools autotools-utils eutils libtool multilib multiprocessing toolchain-funcs user
+doc static-libs
+
+
+
+4
+
+compile configure install prepare test
+
+
+
+
+
