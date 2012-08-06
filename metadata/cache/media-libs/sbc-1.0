@@ -1,0 +1,22 @@
+virtual/pkgconfig
+
+0
+mirror://kernel/linux/bluetooth/sbc-1.0.tar.xz
+test
+http://git.kernel.org/?p=bluetooth/sbc.git http://www.bluez.org/sbc-10/
+GPL-2 LGPL-2.1
+An audio codec to connect bluetooth high quality audio devices like headphones or loudspeakers
+~amd64 ~x86
+eutils multilib toolchain-funcs user
+static-libs
+
+
+
+4
+
+configure install
+
+
+
+
+

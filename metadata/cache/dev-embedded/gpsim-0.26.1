@@ -1,12 +1,12 @@
-dev-libs/glib:2 dev-libs/popt >=dev-embedded/gputils-0.12 gtk? ( >=x11-libs/gtk+extra-2 ) sys-libs/readline virtual/pkgconfig sys-devel/flex || ( dev-util/yacc sys-devel/bison ) || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
-dev-libs/glib:2 dev-libs/popt >=dev-embedded/gputils-0.12 gtk? ( >=x11-libs/gtk+extra-2 ) sys-libs/readline
+>=dev-embedded/gputils-0.12 !dev-embedded/gpsim-lcd dev-libs/glib:2 dev-libs/popt sys-libs/readline gtk? ( >=x11-libs/gtk+extra-2 ) sys-devel/flex virtual/pkgconfig virtual/yacc || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+>=dev-embedded/gputils-0.12 !dev-embedded/gpsim-lcd dev-libs/glib:2 dev-libs/popt sys-libs/readline gtk? ( >=x11-libs/gtk+extra-2 )
 0
 mirror://sourceforge/gpsim/gpsim-0.26.1.tar.gz
 
 http://gpsim.sourceforge.net
 GPL-2
 A simulator for the Microchip PIC microcontrollers
-~amd64 ~ppc ~ppc64 x86
+amd64 ~ppc ~ppc64 x86
 autotools eutils libtool multilib multiprocessing toolchain-funcs user
 doc gtk static-libs
 

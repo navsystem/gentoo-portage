@@ -5,8 +5,8 @@ mirror://gnu/units/units-2.00.tar.gz
 
 http://www.gnu.org/software/units/units.html
 GPL-3
-unit conversion program
-~alpha ~amd64 ~arm ~hppa ~ppc ~sparc ~x86
+Unit conversion program
+~alpha ~amd64 ~arm ~hppa ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux
 eutils multilib toolchain-funcs user
 
 

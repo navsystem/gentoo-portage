@@ -6,7 +6,7 @@ https://www.guifications.org/attachments/download/201/purple-plugin-pack-2.7.0.t
 https://www.guifications.org/projects/purple-plugin-pack
 GPL-2
 A package with many different plugins for pidgin and libpurple
-amd64 ~hppa ~ppc ~x86
+amd64 hppa ~ppc ~x86
 eutils multilib python toolchain-funcs user
 debug gtk ncurses spell talkfilters
 

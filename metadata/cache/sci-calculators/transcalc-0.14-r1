@@ -5,16 +5,16 @@ http://transcalc.sourceforge.net/transcalc-0.14.tar.gz
 
 http://transcalc.sourceforge.net
 GPL-2
-A microwave and RF transmission line calculator
-~amd64 ~x86
+Microwave and RF transmission line calculator
+~amd64 ~x86 ~amd64-linux ~x86-linux
 eutils multilib toolchain-funcs user
 
 
 
 
-2
+4
 
-install prepare
+prepare
 
 
 

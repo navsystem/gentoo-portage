@@ -6,7 +6,7 @@ http://hackage.haskell.org/packages/archive/gtk2hs-buildtools/0.12.3/gtk2hs-buil
 http://projects.haskell.org/gtk2hs/
 GPL-2
 Tools to build the Gtk2Hs suite of User Interface libraries.
-~amd64 ~x86
+amd64 ~x86
 base eutils ghc-package haskell-cabal multilib toolchain-funcs user versionator
 
 

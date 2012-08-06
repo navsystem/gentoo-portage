@@ -6,7 +6,7 @@ http://casacore.googlecode.com/files/casacore-1.5.0.tar.bz2
 http://code.google.com/p/casacore/
 GPL-2
 Core libraries for the Common Astronomy Software Applications
-~amd64 ~x86
+~amd64 ~x86 ~amd64-linux ~x86-linux
 base cmake-utils eutils flag-o-matic fortran-2 multilib toolchain-funcs user
 +data doc fftw hdf5 openmp threads test
 
