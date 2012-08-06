@@ -1,0 +1,22 @@
+>=sci-astronomy/cpl-6 || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+>=sci-astronomy/cpl-6
+0
+ftp://ftp.eso.org/pub/dfs/pipelines/libraries/esorex/esorex-3.9.6.tar.gz
+
+http://www.eso.org/sci/software/cpl/esorex.html
+GPL-2
+ESO Recipe Execution Tool to exec cpl scripts
+~amd64 ~x86 ~amd64-linux ~x86-linux
+autotools autotools-utils eutils libtool multilib multiprocessing toolchain-funcs user
+examples
+
+
+
+4
+
+compile configure install prepare test
+
+
+
+
+

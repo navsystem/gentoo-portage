@@ -6,7 +6,7 @@ http://launchpad.net/wicd/1.7/1.7.2.4/+download/wicd-1.7.2.4.tar.gz mac4lin? ( h
 https://launchpad.net/wicd
 GPL-2
 A lightweight wired and wireless network manager for Linux
-~amd64 ~mips ~x86
+~amd64 ~arm ~mips ~x86
 distutils eutils multilib python systemd toolchain-funcs user
 X ambiance +gtk ioctl libnotify mac4lin ncurses nls +pm-utils
 

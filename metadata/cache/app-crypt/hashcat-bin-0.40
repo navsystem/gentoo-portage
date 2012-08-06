@@ -1,0 +1,22 @@
+app-arch/p7zip
+
+0
+http://hashcat.net/files/hashcat-0.40.7z
+strip
+http://hashcat.net/hashcat/
+hashcat
+An multi-threaded multihash cracker
+-* ~amd64 ~amd64-linux ~x64-macos ~x86 ~x86-linux
+eutils multilib pax-utils toolchain-funcs user
+
+
+
+
+4
+
+install
+
+
+
+
+

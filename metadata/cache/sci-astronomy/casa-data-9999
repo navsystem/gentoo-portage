@@ -6,7 +6,7 @@
 https://safe.nrao.edu/wiki/bin/view/Software/ObtainingCasaDataRepository
 GPL-2
 Data and tables for the CASA software
-~amd64 ~x86
+~amd64 ~x86 ~amd64-linux ~x86-linux
 eutils multilib subversion toolchain-funcs user
 
 

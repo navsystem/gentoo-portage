@@ -6,7 +6,7 @@ http://www.openprinting.org/download/cups-filters/cups-filters-1.0.20.tar.xz
 http://www.linuxfoundation.org/collaborate/workgroups/openprinting/pdfasstandardprintjobformat
 GPL-2
 Cups PDF filters
-~amd64 ~mips ~x86
+~amd64 ~arm ~mips ~x86
 base eutils multilib multiprocessing perl-module toolchain-funcs user
 jpeg perl png static-libs tiff
 
