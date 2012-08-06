@@ -68,7 +68,6 @@ RDEPEND="
 	>=sys-apps/sysvinit-2.87-r3
 	>=sys-apps/util-linux-2.20
 	>=sys-fs/udev-166
-	!>=sys-fs/udev-187
 
 	debug? ( dev-util/strace )
 	device-mapper? ( || ( sys-fs/device-mapper >=sys-fs/lvm2-2.02.33 ) )
