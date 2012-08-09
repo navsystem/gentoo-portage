@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile install postinst postrm prepare test
-DEPEND=dev-python/numpy dev-lang/python
+DEPEND=dev-python/numpy !dev-python/astropy dev-lang/python
 DESCRIPTION=Provides an interface to FITS formatted files under python
 EAPI=2
 HOMEPAGE=http://www.stsci.edu/resources/software_hardware/pyfits
 KEYWORDS=amd64 x86 ~x86-fbsd
 LICENSE=BSD
-RDEPEND=dev-python/numpy dev-lang/python
+RDEPEND=dev-python/numpy !dev-python/astropy dev-lang/python
 RESTRICT=test
 SLOT=0
 SRC_URI=http://www.stsci.edu/resources/software_hardware/pyfits/pyfits-2.4.0.tar.gz
 _eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	multilib	5782800349f728f725f9378105c6a2ab	python	4152846e243ec207de8a1b02a36f1461	toolchain-funcs	d3b5812eeab360bc41aa48b6cdbbc142
-_md5_=92ff40ad1352ba7cc7d355bd8e40145a
+_md5_=3f4f12c68316260f51cd0aa414b44178
