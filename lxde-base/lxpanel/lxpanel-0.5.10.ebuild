@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/lxpanel-0.5.10.ebuild,v 1.3 2012/08/09 23:06:26 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/lxpanel-0.5.10.ebuild,v 1.5 2012/08/11 21:27:07 ago Exp $
 
 EAPI="4"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://lxde.org/"
 SRC_URI="mirror://sourceforge/lxde/LXPanel%20%28desktop%20panel%29/LXPanel%20${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 arm ppc ~x86 ~x86-interix ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 arm ppc ~x86 ~x86-interix ~amd64-linux ~x86-linux"
 SLOT="0"
 IUSE="+alsa wifi"
 RESTRICT="test"  # bug 249598
@@ -33,6 +33,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.5.9-libwnck-check.patch
 	#bug #420583
 	sed -i "s:-Werror::" configure.ac || die
+	#bug #367659
+	epatch "${FILESDIR}"/${PN}-0.5.10-libgmodule-underlinking.patch
 	eautoreconf
 }
 
