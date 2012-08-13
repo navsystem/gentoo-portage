@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14039 2012/08/08 16:16:12 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14044 2012/08/12 15:23:57 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,11 +31,9 @@
 
 #--- END OF EXAMPLES ---
 
-# Michael Palimaka <kensington@gentoo.org> (7 Aug 2012)
-# Fails to build with GCC 4.7 (bug #430250)
-# Bundles utilities from dev-util/pccts
-# Dead upstream. Removal in 30 days.
-dev-util/cccc
+# Benedikt Böhm <hollow@gentoo.org> (11 Aug 2012)
+# Regression in iproute code, does not detect IP addresses correctly anymore.
+=dev-ruby/ohai-6.14.0
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (7 Aug 2012)
 # Many display bugs and compatibility problems, does not build with cups-1.6.
@@ -263,12 +261,6 @@ x11-misc/transset-df
 # It's not what it's called now, mask it not protect people
 =dev-util/febootstrap-3*
 
-# Michał Górny <mgorny@gentoo.org> (20 Jun 2012)
-# New systemd versions bundle udev. It doesn't use Gentoo patchsets,
-# I guess it won't work well with OpenRC and expect other random
-# breakages.
->=sys-apps/systemd-183
-
 # Ian Stakenvicius <axs@gentoo.org> (19 Jun 2012)
 # Mask new spidermonkey until rdeps can accept it
 ~dev-lang/spidermonkey-1.8.7
@@ -303,8 +295,7 @@ x11-misc/transset-df
 # effectivly running on single disks.
 # @base-system feel free to re-evaluate the severeness of this
 # regression and drop the mask. Masked for now.
-=sys-fs/mdadm-3.2.4
-=sys-fs/mdadm-3.2.5
+=sys-fs/mdadm-3.2.5-r1
 
 # Patrick Lauer <patrick@gentoo.org> (06 Jun 2012)
 # Temporarily mask nginx >=1.3 see #411937
@@ -485,10 +476,6 @@ net-p2p/leechcraft-eiskaltdcpp
 # Even its author admits that it's an ugly hack. Crashes e.g.
 # firefox with kde-4.8. Unmask at your own risk.
 kde-misc/kgtk
-
-# Tim Harder <radhermit@gentoo.org> (09 Mar 2012)
-# Masked for testing
-=mail-client/roundcube-0.8*
 
 # Samuli Suominen <ssuominen@gentoo.org> (06 Mar 2012)
 # Masked for testing since this is known to break nearly

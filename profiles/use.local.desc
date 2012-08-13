@@ -311,7 +311,6 @@ app-dicts/myspell-pt:preao - Use the pre ortographic agreement version of the di
 app-doc/csound-manual:html - Install HTML documentation
 app-doc/doxygen:dot - allow to create dot graphs using media-gfx/graphviz
 app-doc/doxygen:nodot - removes graphviz dependency, along with dot graphs
-app-doc/doxygen:tcl - adds experimental support for parsing/documenting Tcl source code
 app-doc/linuxfromscratch:htmlsingle - Install all-on-one-page HTML version.
 app-doc/pms:html - Generate PMS as .html as well
 app-doc/tldp-howto:html - Install the docs in multipage HTML format (default)
@@ -644,8 +643,8 @@ app-misc/freemind:svg - Build plugin for exporting mindmaps to SVG and PDF
 app-misc/gcstar:stats - Enable statistics reporting
 app-misc/gcstar:tellico - Enable support for kde-misc/tellico files
 app-misc/geneweb:ocamlopt - Enable ocamlopt support (dev-lang/ocaml native code compiler)
+app-misc/geoclue:connman - Add support for net-misc/connman
 app-misc/geoclue:geonames - Install geonames.org provider
-app-misc/geoclue:gpsd - Install sci-geosciences/gpsd provider
 app-misc/geoclue:gsmloc - Install GSM location provider
 app-misc/geoclue:gtk - Install gtk-based geoclue-test-gui
 app-misc/geoclue:hostip - Install hostip.info provder
@@ -2187,6 +2186,7 @@ kde-base/kig:kig-scripting - Support Python scripting
 kde-base/kimono:akonadi - Compile bindings for Akonadi.
 kde-base/kimono:plasma - Compile bindings for KDE's Plasma.
 kde-base/klipper:prison - Enable support for barcodes/QRcodes
+kde-base/kmix:canberra - Enable sound event support using media-libs/libcanberra
 kde-base/konqueror:bookmarks - Add dependency on bookmark package.
 kde-base/kopete:addbookmarks - Automatically add incoming urls to bookmarks.
 kde-base/kopete:autoreplace - Automatically replace selected text
@@ -3702,6 +3702,7 @@ net-fs/samba:ads - Enable Active Directory support
 net-fs/samba:aio - Enable asynchronous IO support
 net-fs/samba:client - Enables the client part
 net-fs/samba:cluster - Enable support for clustering
+net-fs/samba:dmapi - Enable support for DMAPI. This currently works only in combination with XFS.
 net-fs/samba:dso - Enable dso support
 net-fs/samba:fulltest - Enabling extra tests in test phase
 net-fs/samba:iprint - Enabling iPrint technology by Novell
@@ -4339,6 +4340,7 @@ net-misc/icecast:yp - Build support for yp public directory listings
 net-misc/iputils:SECURITY_HAZARD - Allow non-root users to flood (ping -f). This is generally a very bad idea.
 net-misc/italc:system-libvncserver - Build against the system libvncserver (experimental)
 net-misc/knock:server - Installs the knockd server daemon.
+net-misc/leechcraft-netstoremanager:googledrive - Support Google Drive storage backend
 net-misc/leechcraft-netstoremanager:yandexdisk - Support Yandex.Disk storage backend
 net-misc/lldpd:snmp - Enable the use of SNMP
 net-misc/mediatomb:inotify - Enable inotify filesystem monitoring support
@@ -4466,6 +4468,7 @@ net-misc/tor:tor-hardening - Compile tor with hardening on vanilla compilers/lin
 net-misc/tor:transparent-proxy - Enable transparent proxying
 net-misc/tor:upnp - Enable Universal Plug and Play
 net-misc/tor:web - Enable tor2web support
+net-misc/uftp:server - Install uftp server daemon
 net-misc/vde:pcap - Enable the pcap-based plugin that allows creating a switch against a real interface.
 net-misc/vde:ssl - Enable the cryptcab plugin that allows creating an encrypted virtual cable.
 net-misc/vidalia:tor - Allow to use a local tor setup
@@ -5106,9 +5109,6 @@ sys-apps/smartmontools:minimal - Do not install the monitoring daemon and associ
 sys-apps/superiotool:pci - Support for PCI-attached "Super I/Os" (e.g. in VIA VT82686A/B).
 sys-apps/systemd:audit - Enable support for sys-process/audit
 sys-apps/systemd:cryptsetup - Use libcryptsetup
-sys-apps/systemd:doc - Build gtk-doc API docs
-sys-apps/systemd:gudev - Enable libudev gobject interface
-sys-apps/systemd:introspection - Use dev-libs/gobject-introspection for introspection
 sys-apps/tcp-wrappers:netgroups - Support matching NIS (host) netgroup names via the @netgroup syntax (if you don't know what this means, you most likely need want it)
 sys-apps/timer_entropyd:debug - Enable printf debugging and logging to the syslog at DEBUG level
 sys-apps/tuxonice-userui:fbsplash - Add support for framebuffer splash
@@ -5665,6 +5665,8 @@ x11-libs/cairo:glib - Compile with GLib Object System support
 x11-libs/cairo:lcdfilter - Add FreeType LCD filtering, ClearType-style behavior for sub-pixel-hinting. Overrides cleartype USE flag. Patch taken from Ubuntu
 x11-libs/cairo:opengl - Use Mesa backend for acceleration
 x11-libs/cairo:openvg - Use OpenVG for backend acceleration
+x11-libs/colord-gtk:introspection - Use dev-libs/gobject-introspection for introspection
+x11-libs/colord-gtk:vala - Generate bindings for dev-lang/vala
 x11-libs/fltk:games - Builds and installs some extra games
 x11-libs/gdk-pixbuf:introspection - Use dev-libs/gobject-introspection for introspection
 x11-libs/glamor:gles - Build glamor based on gles2
@@ -5680,6 +5682,7 @@ x11-libs/gtkmathview:t1lib - Enable media-libs/t1lib support
 x11-libs/gtksourceview:glade - Install a glade catalog file
 x11-libs/gtksourceview:introspection - Use dev-libs/gobject-introspection for introspection
 x11-libs/libSM:uuid - Use UUID for session identification instead of IP address and system time.
+x11-libs/libXaw:deprecated - Install deprecated Xaw6 library.
 x11-libs/libaosd:pango - Enable the textual helpers (requires pangocairo).
 x11-libs/libaosd:tools - Install the aosd_cat tool (requires glib-2.0).
 x11-libs/libcryptui:introspection - Use dev-libs/gobject-introspection for introspection
@@ -5766,7 +5769,6 @@ x11-libs/qt-mobility:location - Build the QtLocation module
 x11-libs/qt-mobility:messaging - Build the QtMessaging module
 x11-libs/qt-mobility:multimedia - Build the QtMultimediaKit module
 x11-libs/qt-mobility:networkmanager - Enable NetworkManager support in QtBearer and QtSystemInfo modules
-x11-libs/qt-mobility:opengl - Enable OpenGL support in QtMultimediaKit module
 x11-libs/qt-mobility:organizer - Build the QtOrganizer module
 x11-libs/qt-mobility:publishsubscribe - Build the QtPublishSubscribe module
 x11-libs/qt-mobility:pulseaudio - Enable PulseAudio support in QtMultimediaKit module

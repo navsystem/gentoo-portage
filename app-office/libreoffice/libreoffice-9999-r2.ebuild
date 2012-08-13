@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.96 2012/08/09 11:35:19 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.101 2012/08/12 09:00:35 scarabeus Exp $
 
 EAPI=4
 
@@ -59,10 +59,11 @@ unset DEV_URI
 # These are bundles that can't be removed for now due to huge patchsets.
 # If you want them gone, patches are welcome.
 ADDONS_SRC+=" ${ADDONS_URI}/ea91f2fb4212a21d708aced277e6e85a-vigra1.4.0.tar.gz"
-ADDONS_SRC+=" xmlsec? ( ${ADDONS_URI}/1f24ab1d39f4a51faf22244c94a6203f-xmlsec1-1.2.14.tar.gz )" # modifies source code
+ADDONS_SRC+=" ${ADDONS_URI}/1f24ab1d39f4a51faf22244c94a6203f-xmlsec1-1.2.14.tar.gz" # modifies source code
 ADDONS_SRC+=" java? ( ${ADDONS_URI}/17410483b5b5f267aa18b7e00b65e6e0-hsqldb_1_8_0.zip )"
 ADDONS_SRC+=" java? ( ${ADDONS_URI}/ada24d37d8d638b3d8a9985e80bc2978-source-9.0.0.7-bj.zip )"
 ADDONS_SRC+=" libreoffice_extensions_wiki-publisher? ( ${ADDONS_URI}/a7983f859eafb2677d7ff386a023bc40-xsltml_2.1.2.zip )" # no release for 8 years, should we package it?
+ADDONS_SRC+=" libreoffice_extensions_scripting-javascript? ( ${ADDONS_URI}/798b2ffdc8bcfe7bca2cf92b62caf685-rhino1_5R5.zip )" # Does not build with 1.6 rhino at all
 ADDONS_SRC+=" odk? ( http://download.go-oo.org/extern/185d60944ea767075d27247c3162b3bc-unowinreg.dll )" # not packageable
 SRC_URI+=" ${ADDONS_SRC}"
 
@@ -72,7 +73,7 @@ unset ADDONS_SRC
 
 IUSE="binfilter binfilterdebug +branding +cups dbus eds gnome +graphite
 gstreamer +gtk gtk3 jemalloc kde mysql odk opengl postgres svg test +vba
-+webdav +xmlsec"
++webdav"
 
 LO_EXTS="nlpsolver pdfimport presenter-console presenter-minimizer scripting-beanshell scripting-javascript wiki-publisher"
 # Unpackaged separate extensions:
@@ -91,10 +92,6 @@ LICENSE="|| ( LGPL-3 MPL-1.1 )"
 SLOT="0"
 [[ ${PV} == *9999* ]] || KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 
-NSS_DEPEND="
-	>=dev-libs/nspr-4.8.8
-	>=dev-libs/nss-3.12.9
-"
 COMMON_DEPEND="
 	app-arch/zip
 	app-arch/unzip
@@ -113,6 +110,8 @@ COMMON_DEPEND="
 	>=dev-libs/glib-2.28
 	>=dev-libs/hyphen-2.7.1
 	>=dev-libs/icu-4.8.1.1
+	>=dev-libs/nspr-4.8.8
+	>=dev-libs/nss-3.12.9
 	>=dev-lang/perl-5.0
 	>=dev-libs/openssl-1.0.0d
 	>=dev-libs/redland-1.0.14[ssl]
@@ -161,7 +160,6 @@ COMMON_DEPEND="
 	postgres? ( >=dev-db/postgresql-base-9.0[kerberos] )
 	svg? ( gnome-base/librsvg )
 	webdav? ( net-libs/neon )
-	xmlsec? ( ${NSS_DEPEND} )
 "
 
 RDEPEND="${COMMON_DEPEND}
@@ -176,7 +174,7 @@ RDEPEND="${COMMON_DEPEND}
 "
 
 PDEPEND="
-	>=app-office/libreoffice-l10n-3.6
+	=app-office/libreoffice-l10n-3.6*
 "
 
 # FIXME: cppunit should be moved to test conditional
@@ -211,6 +209,7 @@ DEPEND="${COMMON_DEPEND}
 		>=dev-java/ant-core-1.7
 		test? ( dev-java/junit:4 )
 	)
+	odk? ( app-doc/doxygen )
 	test? ( dev-util/cppunit )
 "
 
@@ -419,6 +418,7 @@ src_configure() {
 	# --enable-release-build: build the libreoffice as release
 	# --disable-fetch-external: prevent dowloading during compile phase
 	# --disable-gnome-vfs: old gnome virtual fs support
+	# --disable-gstreamer: support for 1.0 api, we use gstreamer-0.10 for now
 	# --disable-kdeab: kde3 adressbook
 	# --disable-kde: kde3 support
 	# --disable-mozilla: mozilla internal is for contact integration, never
@@ -449,12 +449,14 @@ src_configure() {
 		--enable-randr-link \
 		--enable-release-build \
 		--enable-unix-qstart-libpng \
+		--enable-xmlsec \
 		--disable-ccache \
 		--disable-crashdump \
 		--disable-dependency-tracking \
 		--disable-epm \
 		--disable-fetch-external \
 		--disable-gnome-vfs \
+		--disable-gstreamer \
 		--disable-ext-report-builder \
 		--disable-kdeab \
 		--disable-kde \
@@ -494,7 +496,7 @@ src_configure() {
 		$(use_enable gnome gio) \
 		$(use_enable gnome lockdown) \
 		$(use_enable graphite) \
-		$(use_enable gstreamer) \
+		$(use_enable gstreamer gstreamer-0-10) \
 		$(use_enable gtk) \
 		$(use_enable gtk3) \
 		$(use_enable kde kde4) \
@@ -506,9 +508,9 @@ src_configure() {
 		$(use_enable test linkoo) \
 		$(use_enable vba) \
 		$(use_enable webdav neon) \
-		$(use_enable xmlsec) \
 		$(use_with java) \
 		$(use_with mysql system-mysql-cppconn) \
+		$(use_with odk doxygen) \
 		${internal_libs} \
 		${java_opts} \
 		${ext_opts}

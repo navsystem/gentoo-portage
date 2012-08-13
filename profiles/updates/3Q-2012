@@ -20,3 +20,4 @@ move app-emulation/hasp sys-apps/hasp
 move net-wireless/iwl1000-ucode sys-firmware/iwl1000-ucode
 move kde-misc/kdocker x11-misc/kdocker
 move net-misc/ferm net-firewall/ferm
+move sys-apps/whdd sys-block/whdd
