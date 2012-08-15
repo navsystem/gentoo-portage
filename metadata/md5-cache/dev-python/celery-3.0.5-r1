@@ -10,4 +10,4 @@ RDEPEND=>=dev-python/kombu-2.2.5 <dev-python/kombu-3.0 sql? ( dev-python/sqlalch
 SLOT=0
 SRC_URI=mirror://pypi/c/celery/celery-3.0.5.tar.gz
 _eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	multilib	5782800349f728f725f9378105c6a2ab	python	4152846e243ec207de8a1b02a36f1461	toolchain-funcs	d3b5812eeab360bc41aa48b6cdbbc142
-_md5_=f5c4806e41bfd52d9be70ed2d48d8b40
+_md5_=f1c0fa6077a661eb5944d948cc7f5c53
