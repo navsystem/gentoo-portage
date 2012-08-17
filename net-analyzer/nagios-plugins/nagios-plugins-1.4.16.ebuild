@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.16.ebuild,v 1.1 2012/07/31 21:53:01 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.16.ebuild,v 1.3 2012/08/15 18:29:21 flameeyes Exp $
 
 EAPI=4
 
@@ -56,6 +56,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.4.12-pgsqlconfigure.patch
 	epatch "${FILESDIR}"/${PN}-1.4.15-vserver.patch
 	epatch "${FILESDIR}"/${PN}-1.4.15-openldap.patch
+	epatch "${FILESDIR}"/${P}-parallelmake.patch
 
 	eautoreconf
 }
