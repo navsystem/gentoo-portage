@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=dev-python/libgnomeprint-python dev-python/pywebkitgtk dev-python/wxpython =dev-lang/python-2.7*
 SLOT=0
 SRC_URI=http://jenyay.net/uploads/Soft/Outwiker/outwiker-1.6.0-src.tar.gz
-_eclasses_=multilib	5782800349f728f725f9378105c6a2ab	python	4152846e243ec207de8a1b02a36f1461	toolchain-funcs	d3b5812eeab360bc41aa48b6cdbbc142
+_eclasses_=multilib	5782800349f728f725f9378105c6a2ab	python	a0b470c1fca4658ffc97f0df0f25dcdc	toolchain-funcs	d3b5812eeab360bc41aa48b6cdbbc142
 _md5_=50915b9993578711df6435049a35248b
