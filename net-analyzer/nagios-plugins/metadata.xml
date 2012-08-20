@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>netmon</herd>
+  <herd>sysadmin</herd>
   <use>
     <flag name='nagios-dns'>
       Install <pkg>net-dns/bind-tools</pkg> required for monitoring
@@ -32,6 +32,10 @@
     <flag name='jabber'>
       Install the script for sending IM notifications over Jabber with
       Nagios.
+    </flag>
+    <flag name='snmp' restrict='&gt;=net-analyzer/nagios-plugins-1.4.16-r1'>
+      Install <pkg>dev-perl/Net-SNMP</pkg> required for monitoring
+      SNMP values. Disabling the flag does not remove any plugin file.
     </flag>
   </use>
 </pkgmetadata>
