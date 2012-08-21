@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile install postinst postrm prepare setup test
-DEPEND=dev-python/six test? ( www-servers/tornado ) || ( =dev-lang/python-3.2* =dev-lang/python-3.1* =dev-lang/python-2.7* =dev-lang/python-2.6* ) test? ( dev-python/nose )
+DEPEND=dev-python/six dev-python/setuptools test? ( www-servers/tornado ) || ( =dev-lang/python-3.2* =dev-lang/python-3.1* =dev-lang/python-2.7* =dev-lang/python-2.6* ) test? ( dev-python/nose )
 DESCRIPTION=HTTP library with thread-safe connection pooling, file post, and more
 EAPI=4
 HOMEPAGE=https://github.com/shazow/urllib3
-IUSE=doc test test
+IUSE=test test
 KEYWORDS=~amd64 ~x86
 LICENSE=MIT
 RDEPEND=dev-python/six || ( =dev-lang/python-3.2* =dev-lang/python-3.1* =dev-lang/python-2.7* =dev-lang/python-2.6* )
 SLOT=0
 SRC_URI=mirror://pypi/u/urllib3/urllib3-1.5.tar.gz
 _eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	multilib	5782800349f728f725f9378105c6a2ab	python	a0b470c1fca4658ffc97f0df0f25dcdc	toolchain-funcs	d3b5812eeab360bc41aa48b6cdbbc142
-_md5_=0bcda2cb63f239238f509e53e0d2ee89
+_md5_=1c98c0c928523a76cb3719a82448416f
