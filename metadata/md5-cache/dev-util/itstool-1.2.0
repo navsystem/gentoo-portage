@@ -8,5 +8,5 @@ LICENSE=GPL-3 as-is
 RDEPEND=dev-libs/libxml2[python] || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* ) || ( =dev-lang/python-2.7*[xml] =dev-lang/python-2.6*[xml] =dev-lang/python-2.5*[xml] )
 SLOT=0
 SRC_URI=http://files.itstool.org/itstool/itstool-1.2.0.tar.bz2
-_eclasses_=multilib	5782800349f728f725f9378105c6a2ab	python	a0b470c1fca4658ffc97f0df0f25dcdc	toolchain-funcs	d3b5812eeab360bc41aa48b6cdbbc142
+_eclasses_=multilib	564d80d2026ae9f1910d8da4ea211e91	python	a0b470c1fca4658ffc97f0df0f25dcdc	toolchain-funcs	d3b5812eeab360bc41aa48b6cdbbc142
 _md5_=d82e8df0f926f91c4ebe97efe1b95ac3

@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-python/docutils dev-python/egenix-mx-base dev-python/PyQt4[X] dev-python/qscintilla-python dev-vcs/mercurial doc? ( app-text/asciidoc ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
 SLOT=0
 SRC_URI=http://ftp.logilab.org/pub/hgview/hgview-1.5.0.tar.gz
-_eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	multilib	5782800349f728f725f9378105c6a2ab	python	a0b470c1fca4658ffc97f0df0f25dcdc	toolchain-funcs	d3b5812eeab360bc41aa48b6cdbbc142
+_eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	multilib	564d80d2026ae9f1910d8da4ea211e91	python	a0b470c1fca4658ffc97f0df0f25dcdc	toolchain-funcs	d3b5812eeab360bc41aa48b6cdbbc142
 _md5_=97f4bf248162de77ad407e54347293b3
