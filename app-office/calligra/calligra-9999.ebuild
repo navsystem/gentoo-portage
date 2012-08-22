@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-9999.ebuild,v 1.25 2012/07/19 16:18:40 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-9999.ebuild,v 1.28 2012/08/21 19:06:56 dilfridge Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -42,8 +42,8 @@ SLOT="4"
 [[ ${PV} == *9999 ]] || KEYWORDS="~amd64 ~x86"
 
 IUSE="attica +crypt +eigen +exif fftw +fontconfig freetds +gif glew +glib +gsf
-gsl +iconv +jpeg jpeg2k +kdcraw kdepim +lcms marble mysql +mso +okular opengtl openexr
-+pdf postgres +semantic-desktop +ssl sybase test tiff +threads +truetype
+gsl +jpeg jpeg2k +kdcraw kdepim +lcms marble mysql +okular opengtl openexr
++pdf postgres +semantic-desktop spacenav +ssl sybase test tiff +threads +truetype
 word-perfect xbase +xml +xslt"
 
 # please do not sort here, order is same as in CMakeLists.txt
@@ -81,6 +81,7 @@ RDEPEND="
 	media-libs/libpng
 	sys-libs/zlib
 	>=x11-libs/qt-gui-4.8.1-r1:4
+	virtual/libiconv
 	attica? ( dev-libs/libattica )
 	crypt? ( app-crypt/qca:2 )
 	eigen? ( dev-cpp/eigen:2 )
@@ -93,7 +94,6 @@ RDEPEND="
 	glib? ( dev-libs/glib:2 )
 	gsf? ( gnome-extra/libgsf )
 	gsl? ( sci-libs/gsl )
-	iconv? ( virtual/libiconv )
 	jpeg? ( virtual/jpeg )
 	jpeg2k? ( media-libs/openjpeg )
 	kdcraw? ( $(add_kdebase_dep libkdcraw) )
@@ -113,6 +113,7 @@ RDEPEND="
 		dev-libs/libpqxx
 	)
 	semantic-desktop? ( dev-libs/soprano $(add_kdebase_dep kdelibs semantic-desktop) )
+	spacenav? ( dev-libs/libspnav  )
 	ssl? ( dev-libs/openssl )
 	sybase? ( dev-db/freetds )
 	tiff? ( media-libs/tiff )
@@ -150,6 +151,8 @@ src_configure() {
 		"-DGHNS=ON"
 		"-DWITH_X11=ON"
 		"-DWITH_Qt4=ON"
+		"-DBUILD_libmsooxml=ON"      # only internal code, no deps
+		"-DWITH_Iconv=ON"            # available on all supported arches and many more
 		"-DQT3SUPPORT=ON" # kde4-base.eclass pulls this in anyway
 	)
 
@@ -162,7 +165,6 @@ src_configure() {
 		"-DWITH_TINY=OFF"
 		"-DWITH_CreateResources=OFF" # NOT PACKAGED: http://create.freedesktop.org/
 		"-DWITH_DCMTK=OFF"           # NOT PACKAGED: http://www.dcmtk.org/dcmtk.php.en
-		"-DWITH_Spnav=OFF"           # NOT PACKAGED: http://spacenav.sourceforge.net/
 	)
 
 	# regular options
@@ -180,7 +182,6 @@ src_configure() {
 		$(cmake-utils_use_with glib GObject)
 		$(cmake-utils_use_with gsf LIBGSF)
 		$(cmake-utils_use_with gsl GSL)
-		$(cmake-utils_use_with iconv Iconv)
 		$(cmake-utils_use_with jpeg JPEG)
 		$(cmake-utils_use_with jpeg2k OpenJPEG)
 		$(cmake-utils_use_with kdcraw Kdcraw)
@@ -197,6 +198,7 @@ src_configure() {
 		$(cmake-utils_use_with postgres PostgreSQL)
 		$(cmake-utils_use_with semantic-desktop Soprano)
 		$(cmake-utils_use semantic-desktop NEPOMUK)
+		$(cmake-utils_use_with spacenav Spnav)
 		$(cmake-utils_use_with ssl OpenSSL)
 		$(cmake-utils_use_with sybase FreeTDS)
 		$(cmake-utils_use_with tiff TIFF)
@@ -206,7 +208,6 @@ src_configure() {
 		$(cmake-utils_use_with word-perfect WPG)
 		$(cmake-utils_use_with xbase XBase)
 		$(cmake-utils_use_with xslt LibXslt)
-		$(cmake-utils_use_build mso libmsooxml)
 	)
 
 	# applications

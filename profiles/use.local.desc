@@ -761,6 +761,7 @@ app-office/calligra:mso - Enable support for various MS Office TM file formats
 app-office/calligra:okular - Enable bindings for kde-base/okular
 app-office/calligra:openctl - Enable support for transformation algorithms via media-libs/opengtl
 app-office/calligra:opengtl - Enable support for transformation algorithms via media-libs/opengtl
+app-office/calligra:spacenav - Enable support for the 3Dconnexion spacenav input device via dev-libs/libspnav
 app-office/calligra:word-perfect - Enable support for various WordPerfect file formats
 app-office/calligra:xbase - Enable support for xbase compatible database formats
 app-office/calligra:xslt - Enable xslt and exslt support format support
@@ -1988,6 +1989,14 @@ games-strategy/heroes3:music - Installs optional music data
 games-strategy/heroes3:sounds - Installs optional sound data
 games-strategy/ja2-stracciatella:editor - Adds necessary file to run the editor
 games-strategy/ja2-stracciatella:linguas_ru_gold - Support for russian gold ja2 version
+games-strategy/megaglest:editor - Build map editor
+games-strategy/megaglest:freetype - Use Freetype-GL for on-screen fonts
+games-strategy/megaglest:ftgl - Use FTGL for on-screen fonts
+games-strategy/megaglest:model-viewer - Build model viewer
+games-strategy/megaglest:streflop - Use the library streflop. Out of synchs may occur if not enabled.
+games-strategy/megaglest:tools - Build model import/export tools
+games-strategy/megaglest:unicode - Use unicode strings for wxwidgets
+games-strategy/megaglest:wxuniversal - Use the wxUniversal port which implements the various GUI controls by drawing them itself
 games-strategy/naev:mixer - Enables media-libs/sdl-mixer sound backend in addition to media-libs/openal one.
 games-strategy/openra:cg - NVIDIA toolkit plugin
 games-strategy/ufo-ai:editor - Build map editor
@@ -2423,7 +2432,7 @@ media-fonts/mplus-outline-fonts:ipafont - Generates new fonts merged with media-
 media-fonts/sil-charis:compact - Use more compactly spaced font
 media-fonts/sil-gentium:compact - Also install more compact version of the font.
 media-fonts/terminus-font:a-like-o - Changes view of letter 'a' - a looks like o (see homepage)
-media-fonts/terminus-font:bolddiag - Boldified diagonal parts of '4', 'k', 'x' and some other chars
+media-fonts/terminus-font:center-tilda - Place the '~' character vertically centered on the line instead of to the top.
 media-fonts/terminus-font:distinct-l - ll2 variant with more distinctive l (lowercase L)
 media-fonts/terminus-font:pcf - Install Portable Compiled Font (PCF) (required for X11)
 media-fonts/terminus-font:psf - Install PC Screen Font (PSF) with unicode data (for linux console)
@@ -2433,7 +2442,6 @@ media-fonts/terminus-font:ru-dv - Changes view of Russian letters 'de' and 've' 
 media-fonts/terminus-font:ru-g - Changes view of Russian letter 'ge' (see homepage)
 media-fonts/terminus-font:ru-i - Changes view of Russian letter 'i' - not like Latin u, but like "mirrored" N (see homepage)
 media-fonts/terminus-font:ru-k - Changes view of Russian letter 'k' (see homepage)
-media-fonts/terminus-font:width - Wider versions of some font elements
 media-gfx/album:plugins - Install optional plugins
 media-gfx/album:themes - Install optional themes
 media-gfx/asymptote:boehm-gc - Enables using the Boehm-Demers-Weiser conservative garbage collector
@@ -3524,12 +3532,14 @@ net-analyzer/munin:syslog - Configure the node by default to log on syslog. This
 net-analyzer/nagios-core:lighttpd - install www-servers/lighttpd config
 net-analyzer/nagios-core:web - enable web interface
 net-analyzer/nagios-nrpe:command-args - allow clients to specify command arguments
+net-analyzer/nagios-nsca:crypt - Build support for crypted communication with nsca, through dev-libs/mcrypt. It's recommended not to disable this flag unless all the communication will be handled in an absolutely safe environment.
 net-analyzer/nagios-plugins:jabber - Install the script for sending IM notifications over Jabber with Nagios.
 net-analyzer/nagios-plugins:nagios-dns - Install net-dns/bind-tools required for monitoring DNS servers. Disabling the flag does not remove any plugin file.
 net-analyzer/nagios-plugins:nagios-game - Install games-util/qstat required for monitoring FPS servers. Disabling the flag does not remove any plugin file.
 net-analyzer/nagios-plugins:nagios-ntp - Install net-misc/ntp required for monitoring NTP servers and drifts. Disabling the flag does not remove any plugin file.
 net-analyzer/nagios-plugins:nagios-ping - Install net-analyzer/fping required for fancy ping monitoring. Disabling the flag does not remove any plugin file.
 net-analyzer/nagios-plugins:nagios-ssh - Install net-misc/openssh required for monitoring SSH servers. Disabling the flag does not remove any plugin file.
+net-analyzer/nagios-plugins:snmp - Install dev-perl/Net-SNMP required for monitoring SNMP values. Disabling the flag does not remove any plugin file.
 net-analyzer/nagios-plugins:ups - Install sys-power/nut required for monitoring compatible UPS units. Disabling the flag does not remove any plugin file.
 net-analyzer/nagvis:automap - Enable automated map generation using media-gfx/graphviz
 net-analyzer/ncrack:ssh - Compile and link against the internal openssh modified library.
@@ -3540,6 +3550,7 @@ net-analyzer/net-snmp:mfd-rewrites - Use MFD rewrites of mib modules where avail
 net-analyzer/net-snmp:rpm - Enable the rpm snmp probing
 net-analyzer/net-snmp:sendmail - Enable sendmail statistics monitoring
 net-analyzer/net-snmp:smux - Enable the smux MIBS module
+net-analyzer/net-snmp:ucd-compat - Build UCD compatibility library. Increases significantly the install size.
 net-analyzer/nfdump:compat15 - Enable read support for nfdump data files created with nfdump 1.5.x
 net-analyzer/nfdump:ftconv - Build the flow-tools to nfdump converter
 net-analyzer/nfdump:nfprofile - Build nfprofile used by NfSen
@@ -4516,7 +4527,6 @@ net-nds/openldap:smbkrb5passwd - Enable overlay for syncing ldap, unix and lanma
 net-nds/tac_plus:finger - Adds support for checking user counts via fingering the NAS
 net-nds/tac_plus:maxsess - Enforce a limit on maximum sessions per user
 net-news/liferea:libnotify - Enable popup notifications
-net-news/liferea:lua - Enable lua scripting
 net-nntp/inn:innkeywords - Enable automatic keyword generation support
 net-nntp/inn:inntaggedhash - Use tagged hash table for history (disables large file support)
 net-nntp/nzbget:parcheck - Enable support for checking PAR archives
