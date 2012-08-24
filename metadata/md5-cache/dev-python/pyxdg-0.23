@@ -4,10 +4,10 @@ DESCRIPTION=A Python module to deal with freedesktop.org specifications
 EAPI=4
 HOMEPAGE=http://freedesktop.org/wiki/Software/pyxdg http://cgit.freedesktop.org/xdg/pyxdg/
 IUSE=examples
-KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
+KEYWORDS=~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd
 LICENSE=LGPL-2
 RDEPEND=|| ( =dev-lang/python-3.2* =dev-lang/python-3.1* =dev-lang/python-2.7* =dev-lang/python-2.6* )
 SLOT=0
 SRC_URI=http://people.freedesktop.org/~takluyver/pyxdg-0.23.tar.gz
 _eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	multilib	564d80d2026ae9f1910d8da4ea211e91	python	a0b470c1fca4658ffc97f0df0f25dcdc	toolchain-funcs	d3b5812eeab360bc41aa48b6cdbbc142
-_md5_=71a00fb5f2e1a6535e51b9df613322f9
+_md5_=e83f772e4f5c520ad23d33c96cbeef82
