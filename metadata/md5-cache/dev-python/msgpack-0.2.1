@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install postinst postrm prepare test
+DEPEND=dev-python/six || ( =dev-lang/python-3* =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* ) test? ( dev-python/nose )
+DESCRIPTION=MessagePack (de)serializer for Python
+EAPI=3
+HOMEPAGE=http://msgpack.org http://pypi.python.org/pypi/msgpack-python/
+IUSE=test test
+KEYWORDS=~amd64 ~x86
+LICENSE=Apache-2.0
+RDEPEND=|| ( =dev-lang/python-3* =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
+SLOT=0
+SRC_URI=mirror://pypi/m/msgpack-python/msgpack-python-0.2.1.tar.gz
+_eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	multilib	564d80d2026ae9f1910d8da4ea211e91	python	a0b470c1fca4658ffc97f0df0f25dcdc	toolchain-funcs	d3b5812eeab360bc41aa48b6cdbbc142
+_md5_=f32243217ce1c735bb9de46ebae1fb78
