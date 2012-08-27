@@ -7,5 +7,5 @@ KEYWORDS=~amd64 ~x86
 LICENSE=|| ( GPL-2 GPL-3 )
 RDEPEND=app-portage/layman =dev-lang/python-2* =dev-lang/python-2*[xml]
 SLOT=0
-_eclasses_=git-2	15733ab6a6feb34af9837b41623c2bad	multilib	564d80d2026ae9f1910d8da4ea211e91	python	a0b470c1fca4658ffc97f0df0f25dcdc	toolchain-funcs	d3b5812eeab360bc41aa48b6cdbbc142
+_eclasses_=git-2	15733ab6a6feb34af9837b41623c2bad	multilib	c2b85b5c63a44798c1e442147ac14c5c	python	a0b470c1fca4658ffc97f0df0f25dcdc	toolchain-funcs	d3b5812eeab360bc41aa48b6cdbbc142
 _md5_=92d9de3e66969e180b33e25bacd4bc8a
