@@ -1,19 +1,18 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-0.2.1-r1.ebuild,v 1.8 2012/05/05 08:02:42 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-0.2.3.ebuild,v 1.1 2012/08/27 06:15:19 radhermit Exp $
 
 EAPI=4
 
-inherit eutils autotools java-pkg-opt-2 flag-o-matic
+inherit autotools java-pkg-opt-2 flag-o-matic eutils
 
 DESCRIPTION="Blu-ray playback libraries"
 HOMEPAGE="http://www.videolan.org/developers/libbluray.html"
-SRC_URI="ftp://ftp.videolan.org/pub/videolan/libbluray/${PV}/${P}.tar.bz2
-	http://dev.gentoo.org/~radhermit/distfiles/${P}-bdj.patch.gz"
+SRC_URI="ftp://ftp.videolan.org/pub/videolan/libbluray/${PV}/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="aacs java static-libs utils +xml"
 
 COMMON_DEPEND="
@@ -34,10 +33,9 @@ DEPEND="
 "
 REQUIRED_USE="utils? ( static-libs )"
 
-DOCS=( README.txt )
+DOCS=( ChangeLog README.txt )
 
 src_prepare() {
-	epatch "${WORKDIR}"/${P}-bdj.patch
 	use java && export JDK_HOME="$(java-config -g JAVA_HOME)"
 	eautoreconf
 
@@ -81,5 +79,5 @@ src_install() {
 		doenvd "${FILESDIR}"/90${PN}
 	fi
 
-	use static-libs || find "${ED}" -name '*.la' -exec rm -f '{}' +
+	prune_libtool_files
 }
