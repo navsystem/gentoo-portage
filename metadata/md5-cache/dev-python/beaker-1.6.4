@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install postinst postrm prepare test
-DEPEND=dev-python/setuptools test? ( dev-python/webtest ) dev-lang/python test? ( dev-python/nose )
+DEPEND=dev-python/setuptools test? ( dev-python/mock dev-python/webtest ) dev-lang/python test? ( dev-python/nose )
 DESCRIPTION=A Session and Caching library with WSGI Middleware
 EAPI=3
 HOMEPAGE=http://beaker.groovie.org/ http://pypi.python.org/pypi/Beaker
@@ -10,4 +10,4 @@ RDEPEND=dev-lang/python
 SLOT=0
 SRC_URI=mirror://pypi/B/Beaker/Beaker-1.6.4.tar.gz
 _eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	multilib	c2b85b5c63a44798c1e442147ac14c5c	python	a0b470c1fca4658ffc97f0df0f25dcdc	toolchain-funcs	d3b5812eeab360bc41aa48b6cdbbc142
-_md5_=ae3569540b701f742b1fa9ff863edda2
+_md5_=853475ee98fac418ece0f12bdf5461f9
