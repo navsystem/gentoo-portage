@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14071 2012/08/24 18:47:42 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14079 2012/08/28 07:55:54 johu Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,21 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Eray Aslan <eras@gentoo.org> (27 Aug 2012)
+# Mask squid-3.2 until net-libs/libecap-0.2.0 is
+# unmasked - bug #432942
+=net-proxy/squid-3.2.1
+
+# Diego Elio Pettenò <flameeyes@gentoo.org> (26 Aug 2012)
+# Pending removal on 26 Sep 2012
+# Does not work with modern OpenSC (bug #363019)
+app-crypt/scsign
+
+# Doug Goldstein <cardoe@gentoo.org> (25 Aug 2012)
+# Mask the release candidates
+=app-emulation/libvirt-0.10.0_rc1
+=app-emulation/libvirt-0.10.0_rc2
 
 # Mike Gilbert <floppym@gentoo.org> (23 Aug 2012)
 # Dev channel releases are only for people who are developers or want more
@@ -102,10 +117,6 @@ dev-db/pgpool
 # Bugs: 232351, 356263, 387125, 413589, 428498.
 app-text/epdfview
 
-# Tim Harder <radhermit@gentoo.org> (6 Aug 2012)
-# Mask development releases
-=media-sound/lilypond-2.15*
-
 # Jeroen Roovers <jer@gentoo.org> (2 Aug 2012)
 # Development version
 >app-admin/sysstat-10.1
@@ -121,10 +132,6 @@ dev-ruby/spruz
 # by USE="internal-glib" in >=dev-util/pkgconfig-0.27 or
 # you can give dev-util/pkgconf a try.
 dev-util/pkg-config-lite
-
-# Anthony G. Basile <blueness@gentoo.org> (26 Jul 2012)
-# Removal in 30 days, bug #365825
-sys-apps/chpax
 
 # Samuli Suominen <ssuominen@gentoo.org> (26 Jul 2012)
 # We are in process of dropping most of GTK+-2.x Ubuntu
@@ -175,6 +182,20 @@ dev-ruby/mail:0
 # Tests fails to build, needs >=net-libs/telepathy-glib-0.19.0.
 # Not in tree yet...
 >=net-libs/telepathy-qt-0.9.3
+~net-im/kde-telepathy-meta-0.5.0
+~net-im/ktp-accounts-kcm-0.5.0
+~net-im/ktp-approver-0.5.0
+~net-im/ktp-auth-handler-0.5.0
+~net-im/ktp-call-ui-0.5.0
+~net-im/ktp-common-internals-0.5.0
+~net-im/ktp-contact-applet-0.5.0
+~net-im/ktp-contact-list-0.5.0
+~net-im/ktp-contact-runner-0.5.0
+~net-im/ktp-filetransfer-handler-0.5.0
+~net-im/ktp-kded-module-0.5.0
+~net-im/ktp-presence-applet-0.5.0
+~net-im/ktp-send-file-0.5.0
+~net-im/ktp-text-ui-0.5.0
 
 # Ralph Sennhauser <sera@gentoo.org> (13 Jul 2012)
 # Mask for removal in 30 days. Fails to build with java 7 #421917.
@@ -309,11 +330,6 @@ x11-misc/transset-df
 # upstream bug http://bugzilla-geant4.kek.jp/show_bug.cgi?id=1317
 =sci-physics/geant-4.9.5_p01
 =sci-physics/geant-python-4.9.5_p01
-
-# Christian Ruppert <idl0r@gentoo.org> (20 May 2012)
-# Temp. mask gitolite-3* as it likely breaks gitolite-2* setups
-# Also, it has been re-written (almost?) completely.
-=dev-vcs/gitolite-3*
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (20 May 2012)
 # Requires dev-scheme/guile-2.0.5 which is in lisp overlay and masked;

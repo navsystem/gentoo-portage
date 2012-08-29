@@ -129,6 +129,7 @@ ppc64           default/linux/powerpc/ppc64/10.0/64bit-userland/server          
 # S390 Profiles
 s390            default/linux/s390/10.0                         dev
 s390            default/linux/s390/10.0/server                  dev
+s390            default/linux/s390/10.0/server/s390x            dev
 
 # SH Profiles
 sh              default/linux/sh/10.0                           dev
@@ -158,7 +159,7 @@ x86             navsystem/general/x86                           stable
 x86             navsystem/developer/x86                         dev
 
 # Gentoo/FreeBSD Profiles
-amd64-fbsd	default/bsd/fbsd/amd64/9.0			stable
+amd64-fbsd	default/bsd/fbsd/amd64/9.0			dev
 sparc-fbsd	default/bsd/fbsd/sparc/8.2			exp
 x86-fbsd	default/bsd/fbsd/x86/8.2			dev
 x86-fbsd	default/bsd/fbsd/x86/9.0			dev
