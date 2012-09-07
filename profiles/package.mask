@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14090 2012/09/05 18:34:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14092 2012/09/06 07:49:15 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -108,20 +108,6 @@ dev-db/pgpool
 # Regression in iproute code, does not detect IP addresses correctly anymore.
 ~dev-ruby/ohai-6.14.0
 
-# Andreas K. Huettel <dilfridge@gentoo.org> (7 Aug 2012)
-# Many display bugs and compatibility problems, does not build with cups-1.6.
-# Upstream is dead. There's no real way to support this anymore. Masked for
-# removal in 30 days. Possible replacements include:
-# * app-text/qpdfview (Qt application, not in stable yet but nice)
-# * app-text/apvlv
-# * app-text/mupdf
-# * app-text/zathura-meta
-# * app-text/acroread (closed source)
-# * kde-base/okular (KDE application)
-# * app-text/evince (Gnome application)
-# Bugs: 232351, 356263, 387125, 413589, 428498.
-app-text/epdfview
-
 # Jeroen Roovers <jer@gentoo.org> (2 Aug 2012)
 # Development version
 >app-admin/sysstat-10.1
@@ -152,12 +138,6 @@ x11-misc/glipper
 # #258409, #265183, #337691, #342783, #279074
 # Removal in 30 days
 net-fs/mount-cifs
-
-# Michał Górny <mgorny@gentoo.org> (22 Jul 2012)
-# The OpenCL patches have been reported to cause segfaults in the clang
-# compiler. Bug #427206.
-=sys-devel/clang-3.1-r5
-=sys-devel/llvm-3.1-r2
 
 # Pacho Ramos <pacho@gentoo.org> (21 Jul 2012)
 # Contains multiple API changes and needs apps to be ported
