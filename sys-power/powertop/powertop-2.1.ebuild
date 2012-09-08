@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-2.1.ebuild,v 1.1 2012/09/05 15:30:56 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-2.1.ebuild,v 1.5 2012/09/07 11:48:13 pinkbyte Exp $
 
 EAPI="4"
 
@@ -21,22 +21,26 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="unicode"
 
-DEPEND="
-	dev-libs/libnl
+COMMON_DEPEND="
+	dev-libs/libnl:3
 	sys-apps/pciutils
 	sys-devel/gettext
 	sys-libs/ncurses[unicode?]
 	sys-libs/zlib
 "
+
+DEPEND="${COMMON_DEPEND}
+	virtual/pkgconfig
+"
 RDEPEND="
-	${DEPEND}
+	${COMMON_DEPEND}
 	x11-apps/xset
 "
 
 DOCS=( TODO README )
 
 src_configure() {
-	export ac_cv_search_delwin=$(usex unicode -lncursesw no)
+	export ac_cv_search_delwin=$(usex unicode -lncursesw -lncurses)
 	default
 }
 
