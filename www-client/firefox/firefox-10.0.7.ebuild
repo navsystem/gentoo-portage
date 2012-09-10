@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-10.0.7.ebuild,v 1.1 2012/09/01 23:44:39 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-10.0.7.ebuild,v 1.3 2012/09/08 12:31:00 ago Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -37,7 +37,7 @@ inherit check-reqs flag-o-matic toolchain-funcs eutils gnome2-utils mozconfig-3 
 DESCRIPTION="Firefox Web Browser"
 HOMEPAGE="http://www.mozilla.com/firefox"
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 -sparc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 -sparc ~x86 ~amd64-linux ~x86-linux"
 SLOT="0"
 LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
 IUSE="bindist +ipc +minimal pgo selinux system-sqlite +webm"
@@ -136,7 +136,9 @@ src_unpack() {
 
 src_prepare() {
 	# Apply our patches
-	EPATCH_EXCLUDE="6012_fix_shlibsign.patch 6013_fix_abort_declaration.patch" \
+	EPATCH_EXCLUDE="5005_use_resource_urls_appropriately.patch
+		6012_fix_shlibsign.patch
+		6013_fix_abort_declaration.patch" \
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}/firefox"

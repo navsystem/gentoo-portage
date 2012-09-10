@@ -23,6 +23,8 @@ app-accessibility/gnome-speech:freetts - Adds support for the freetts speech dri
 app-accessibility/speech-dispatcher:espeak - Adds support for espeak speech engine
 app-accessibility/speech-dispatcher:flite - Adds support for flite speech engine
 app-accessibility/speechd-el:brltty - brltty support
+app-admin/ansible:paramiko - Use dev-python/paramiko as SSH library
+app-admin/ansible:sudo - Use app-admin/sudo on client nodes
 app-admin/bcfg2:cheetah - Include dev-python/cheetah support
 app-admin/bcfg2:genshi - Include dev-python/genshi support
 app-admin/bcfg2:server - Installs scripts to be used on the server-side of this app
@@ -1261,6 +1263,7 @@ dev-lang/php:mysqlnd - Use native driver for mysql, mysqli, PDO_Mysql
 dev-lang/php:pdo - Enable the bundled PDO extensions
 dev-lang/php:phar - Enables the phar extension to provide phar archive support
 dev-lang/php:pic - Force shared modules to build as PIC on x86 (speed tradeoff with memory usage)
+dev-lang/php:sqlite2 - Add sqlite2 support. Will be removed
 dev-lang/php:suhosin - Add Suhosin support (patch and extension from http://www.suhosin.org/)
 dev-lang/php:xmlreader - Enable XMLReader support
 dev-lang/php:xmlwriter - Enable XMLWriter support
@@ -1323,7 +1326,6 @@ dev-libs/ecore:inotify - Enable support for inotify
 dev-libs/ecore:tslib - Build with tslib support for touchscreen devices.
 dev-libs/ecore:xprint - Enable X11 Xprint support
 dev-libs/eeze:utilities - Install some test utilities for mount/umount support in eeze
-dev-libs/efreet:cache - Enable caching of icons
 dev-libs/eina:default-mempool - By default use system's allocator (pass-through) instead of custom choice for Eina's own data structures.
 dev-libs/eina:mempool-buddy - Compile "buddy" memory pool allocation.
 dev-libs/eina:mempool-chained - Compile "chained-pool" memory pool allocation.
@@ -2582,7 +2584,6 @@ media-libs/devil:nvtt - Add support for dev-util/nvidia-texture-tools
 media-libs/edje:cache - Enable caching
 media-libs/esdl:image - Enable image support
 media-libs/evas:bmp - Support windows bitmap (bmp) image loader
-media-libs/evas:cache - Enable experimental caching to speed up rendering
 media-libs/evas:eet - Support dev-libs/eet
 media-libs/evas:gles - Enable gles flavor of gl instead of standard
 media-libs/evas:ico - Support windows icon (ico) image loader
@@ -2984,6 +2985,7 @@ media-sound/mpd:wildmidi - Enable MIDI support via wildmidi
 media-sound/mpd:zip - Support for ZIP files
 media-sound/mpfc:wav - Enable wav audio codec support
 media-sound/mpg123:3dnowext - Enable 3dnowext cpu instructions
+media-sound/mpg123:int-quality - Use rounding instead of fast truncation for integer output, where possible
 media-sound/mumble:g15 - Enable support for the Logitech G15 LCD (and compatible devices).
 media-sound/mumble:speech - Enable text-to-speech support in Mumble.
 media-sound/murmur:ice - Use dev-cpp/Ice to enable remote control capabilities.
@@ -3930,8 +3932,8 @@ net-im/qutim:telepathy - Enable telepathy-based protocol support
 net-im/qutim:vkontakte - Enable vkontakte protocol support
 net-im/qutim:webkit - Enable Adium-like WebView plugin
 net-im/qutim:xscreensaver - Use X screensaver protocol extension to monitor idle/active status based on mouse/keyboard events
-net-im/skype:pax_kernel - Triggers a paxmarking of the binary
-net-im/skype:qt-static - Installs binaries statically linked to Qt
+net-im/skype:pax_kernel - Triggers a paxmarking of the main skype binary
+net-im/skype:qt-static - Install the main skype binary with internal copy of Qt
 net-im/telepathy-connection-managers:irc - Enable Internet Relay Chat (IRC) support.
 net-im/telepathy-connection-managers:jabber - Enable XMPP protocol handler (this is also Google Talk).
 net-im/telepathy-connection-managers:sip - Enable SIP/SIMPLE messaging and calling.
@@ -4001,7 +4003,6 @@ net-irc/inspircd:gnutls - Enable TLS support
 net-irc/inspircd:ipv6 - Enable support for IP version 6
 net-irc/inspircd:ldap - Enable LDAP support
 net-irc/inspircd:mysql - Enable MySQL database backend
-net-irc/inspircd:openssl - Enable SSL support (obsolete)
 net-irc/inspircd:postgres - Enable PostgreSQL database backend
 net-irc/inspircd:sqlite - Enable Sqlite database backend
 net-irc/inspircd:ssl - Enable SSL support
