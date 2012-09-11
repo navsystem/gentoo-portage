@@ -8,7 +8,7 @@ dev-util/bdelta amd64 x86
 <app-emulation/virt-manager-9999 amd64 x86
 app-misc/pip amd64 x86
 dev-vcs/hgview x86 amd64
-~app-emulation/virtinst-0.600.2 amd64
+~app-emulation/virtinst-0.600.3 amd64
 
 ~app-emulation/hasp-3.2_p7 x86 amd64
 sys-block/megarc amd64
