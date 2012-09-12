@@ -3,10 +3,10 @@ DEPEND=dev-python/setuptools =dev-lang/python-2*
 DESCRIPTION=You can integrate gettext support, themed icons and scrollkeeper based documentation in distutils.
 EAPI=3
 HOMEPAGE=https://launchpad.net/python-distutils-extra
-KEYWORDS=~amd64 ~ppc ~x86
+KEYWORDS=amd64 ~ppc ~x86
 LICENSE=GPL-2
 RDEPEND=dev-python/setuptools =dev-lang/python-2*
 SLOT=0
 SRC_URI=http://launchpad.net/python-distutils-extra/trunk/2.33/+download/python-distutils-extra-2.33.tar.gz
 _eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	multilib	c2b85b5c63a44798c1e442147ac14c5c	python	a0b470c1fca4658ffc97f0df0f25dcdc	toolchain-funcs	d3b5812eeab360bc41aa48b6cdbbc142
-_md5_=fc10cc6632a5f8bdb7c08b30936c984f
+_md5_=ea54c5e7da6395564f1aeb1373cca4ff
