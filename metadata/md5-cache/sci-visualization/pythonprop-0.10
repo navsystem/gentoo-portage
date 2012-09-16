@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=sci-electronics/voacapl dev-python/matplotlib[gtk] dev-python/basemap =dev-lang/python-2*
 SLOT=0
 SRC_URI=mirror://sourceforge/pythonprop/pythonprop-0.10.tar.gz
-_eclasses_=multilib	c2b85b5c63a44798c1e442147ac14c5c	python	a0b470c1fca4658ffc97f0df0f25dcdc	toolchain-funcs	6dbd628eeb45b01b517c4d2bd5c3a44e
+_eclasses_=multilib	c2b85b5c63a44798c1e442147ac14c5c	python	a0b470c1fca4658ffc97f0df0f25dcdc	toolchain-funcs	53a27e9e8acf42332c82a7838d84773f
 _md5_=b54f99a3bfd29888d9c3d8239fe185d2
