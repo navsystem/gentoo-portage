@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=app-cdr/cdlabelgen-4 dev-python/pygtk || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
 SLOT=0
 SRC_URI=mirror://sourceforge/gtkcdlabel/gtkcdlabel-1.14.tar.bz2
-_eclasses_=multilib	c2b85b5c63a44798c1e442147ac14c5c	python	a0b470c1fca4658ffc97f0df0f25dcdc	toolchain-funcs	6dbd628eeb45b01b517c4d2bd5c3a44e
+_eclasses_=multilib	c2b85b5c63a44798c1e442147ac14c5c	python	a0b470c1fca4658ffc97f0df0f25dcdc	toolchain-funcs	53a27e9e8acf42332c82a7838d84773f
 _md5_=dc748b31d0dea8e6ace46e453cab6f80
