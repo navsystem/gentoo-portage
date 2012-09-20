@@ -80,4 +80,4 @@ sys-fs/udev hwdb
 app-misc/2gis-data msk nsk omsk
 
 sys-libs/zlib minizip static-libs
-sys-devel/glibc -gd # bug #204525
+sys-libs/glibc -gd # bug #204525
