@@ -73,4 +73,4 @@ dev-vcs/subversion java
 sys-libs/zlib minizip static-libs
 sys-fs/udev gudev hwdb
 app-office/libreoffice nlpsolver pdfimport
-
+sys-devel/glibc -gd # bug #204525
