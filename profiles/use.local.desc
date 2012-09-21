@@ -1814,6 +1814,7 @@ dev-util/qt-creator:mercurial - Add support for dev-vcs/mercurial version contro
 dev-util/qt-creator:perforce - Add support for Perforce version control system (requires manual installation of Perforce client)
 dev-util/qt-creator:qnx - Build QNX/Blackberry plugin
 dev-util/qt-creator:valgrind - Add support for memory debugging using dev-util/valgrind
+dev-util/scanmem:gui - Enable the GameConqueror GUI
 dev-util/schroot:btrfs - Enable support for chroots using btrfs snapshots.
 dev-util/schroot:dchroot - Enables the building of a wrapper named "dchroot", replacing sys-apps/dchroot.
 dev-util/schroot:lvm - Enable support for chroots using LVM snapshots.
@@ -2468,6 +2469,7 @@ media-fonts/terminus-font:ru-k - Changes view of Russian letter 'k' (see homepag
 media-gfx/album:plugins - Install optional plugins
 media-gfx/album:themes - Install optional themes
 media-gfx/asymptote:boehm-gc - Enables using the Boehm-Demers-Weiser conservative garbage collector
+media-gfx/asymptote:offscreen - Enables off-screen rendering
 media-gfx/asymptote:sigsegv - Enables using dev-libs/libsigsegv
 media-gfx/blender:3dmouse - Adds support for space navigator devices through package dev-libs/libspnav.
 media-gfx/blender:blender-game - Adds Game Engine support to Blender.
@@ -3546,6 +3548,7 @@ net-analyzer/linkchecker:syntax-check - HTML/CSS syntax checks
 net-analyzer/metasploit:gui - Enable Java GUI
 net-analyzer/munin:asterisk - Install the packages required for monitoring Asterisk. Disabling the flag does not remove any plugin files.
 net-analyzer/munin:cgi - Install the CGI-compatible scripts for on-the-fly generation of web pages and graphs. This is only meaningful if the minimal USE flag is disabled.
+net-analyzer/munin:dhcpd - Install dev-perl/Net-IP, dev-perl/HTTP-Date and net-misc/dhcp to monitor DHCP lease usage. This only works if the server is on the same system as the node, so the server is also brought in. Disabling the flag does not remove any plugin file.
 net-analyzer/munin:http - Install dev-perl/libwww-perl required for monitoring HTTP-based services such as Apache and nginx. Disabling the flag does not remove any plugin file.
 net-analyzer/munin:ipmi - Install sys-apps/ipmitool required for monitoring IPMI sensors. Disabling the flag does not remove any plugin file.
 net-analyzer/munin:ipv6 - Add support for IPv6 in munin-node. IPv6 support for the master is always enabled, but the node requires a newer version of dev-perl/net-server, capable of listening to IPv6 sockets.
@@ -4997,6 +5000,7 @@ sci-mathematics/fricas:sbcl - Add support for Steel Bank Common Lisp (dev-lisp/s
 sci-mathematics/geomview:avg - Enable experimental motion averaging technique
 sci-mathematics/geomview:netpbm - Add media-libs/netpbm support for external modules
 sci-mathematics/gretl:R - Enable support for dev-lang/R
+sci-mathematics/gsl-shell:fox - Build a x11-libs/fox GUI
 sci-mathematics/isabelle:CCL - CCL (Classical Computational Logic)
 sci-mathematics/isabelle:CTT - CTT (Constructive Type Theory) is an extensional version of Martin-Löf's Type Theory.
 sci-mathematics/isabelle:Cube - Cube (The Lambda Cube)
