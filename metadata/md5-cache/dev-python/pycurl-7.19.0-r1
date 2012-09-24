@@ -4,10 +4,10 @@ DESCRIPTION=python binding for curl/libcurl
 EAPI=4
 HOMEPAGE=http://pycurl.sourceforge.net/ http://pypi.python.org/pypi/pycurl
 IUSE=curl_ssl_gnutls curl_ssl_nss +curl_ssl_openssl examples ssl
-KEYWORDS=~alpha amd64 arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
+KEYWORDS=~alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
 LICENSE=LGPL-2.1
 RDEPEND=>=net-misc/curl-7.25.0-r1[ssl=] ssl? ( net-misc/curl[curl_ssl_gnutls=,curl_ssl_nss=,curl_ssl_openssl=,-curl_ssl_axtls,-curl_ssl_cyassl,-curl_ssl_polarssl] curl_ssl_gnutls? ( >=net-libs/gnutls-2.11.0 ) ) =dev-lang/python-2*
 SLOT=0
 SRC_URI=http://pycurl.sourceforge.net/download/pycurl-7.19.0.tar.gz
 _eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	eutils	6e25eb368f2a449bd6f5f8b55eadba30	multilib	c2b85b5c63a44798c1e442147ac14c5c	python	a0b470c1fca4658ffc97f0df0f25dcdc	toolchain-funcs	53a27e9e8acf42332c82a7838d84773f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=dfe05b74973ee4bd71e3f87ab912f4b1
+_md5_=3fb422b552569c0cf48b73f2ab752c6e
