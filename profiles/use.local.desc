@@ -5768,6 +5768,7 @@ x11-libs/gdk-pixbuf:introspection - Use dev-libs/gobject-introspection for intro
 x11-libs/glamor:gles - Build glamor based on gles2
 x11-libs/goocanvas:introspection - Use dev-libs/gobject-introspection for introspection
 x11-libs/gtk+:colord - Use x11-misc/colord for color management in printing
+x11-libs/gtk+:egl - Use EGL surfaces and Cairo GL in the wayland backend. This flag has no effect on X or aqua backends.
 x11-libs/gtk+:introspection - Use dev-libs/gobject-introspection for introspection
 x11-libs/gtk+:packagekit - Enable support for the distro-neutral package manager GUI app-admin/packagekit in application chooser
 x11-libs/gtk+:wayland - Enable dev-libs/wayland backend
@@ -6001,6 +6002,7 @@ x11-themes/gentoo-artwork:grub - Install extra sys-boot/grub themes
 x11-themes/gentoo-artwork:icons - Install icons
 x11-themes/gentoo-artwork:lilo - Install extra sys-boot/lilo themes
 x11-themes/gentoo-artwork:pixmaps - Install pixmaps
+x11-themes/gnome-themes-standard:gtk3 - Enable GTK3 theme engines
 x11-themes/gtk-engines-murrine:animation-rtl - Progressbar animation from right to left
 x11-themes/gtk-engines-murrine:themes - Pull in themes via x11-themes/murrine-themes
 x11-themes/gtk-engines-nodoka:animation-rtl - Progressbar animation from right to left
