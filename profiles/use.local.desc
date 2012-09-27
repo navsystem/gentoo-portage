@@ -387,6 +387,7 @@ app-emacs/emacs-common-gentoo:games - Support shared score files for games
 app-emacs/emhacks:jde - Enable support for Java Development Environment
 app-emacs/magit:contrib - Install user-contributed files
 app-emacs/org-mode:contrib - Install user-contributed files
+app-emacs/org-mode:odt-schema - Install non-free schema files for OpenDocument Text exporter
 app-emacs/remember:bbdb - Include support for app-emacs/bbdb
 app-emacs/remember:planner - Include support for app-emacs/planner
 app-emacs/slime:xref - Install xref.lisp cross-referencing tool
