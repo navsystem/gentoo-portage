@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=dev-libs/glib:2 >=x11-libs/gtk+-2.12:2 x11-libs/startup-notification dev-python/pygobject:2 >=net-wireless/bluez-4.21 >=app-mobilephone/obex-data-server-0.4.4 sys-apps/dbus dev-python/pygtk dev-python/notify-python dev-python/dbus-python gnome? ( dev-python/gconf-python ) network? ( || ( net-dns/dnsmasq =net-misc/dhcp-3* >=net-misc/networkmanager-0.8 ) ) policykit? ( sys-auth/polkit ) pulseaudio? ( media-sound/pulseaudio ) =dev-lang/python-2*
 SLOT=0
 SRC_URI=http://download.tuxfamily.org/blueman/blueman-1.21.tar.gz
-_eclasses_=gnome2-utils	e0a2e141b421d38788b23422dfbe4f82	multilib	c2b85b5c63a44798c1e442147ac14c5c	python	a0b470c1fca4658ffc97f0df0f25dcdc	toolchain-funcs	53a27e9e8acf42332c82a7838d84773f
+_eclasses_=gnome2-utils	0d2178d7f87923f3c110366ece3c930f	multilib	c2b85b5c63a44798c1e442147ac14c5c	python	2d51fc3441b5f17f0fe51b5ad6b62206	toolchain-funcs	53a27e9e8acf42332c82a7838d84773f
 _md5_=a69de6bc2952917d665a1f9977e50edb

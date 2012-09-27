@@ -8,5 +8,5 @@ LICENSE=BSD
 RDEPEND=>=dev-vcs/bzr-2.2 dev-vcs/git >=dev-vcs/bzr-fastimport-0.10 dev-python/python-fastimport =dev-lang/python-2*
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~tetromino/distfiles/git-bzr-ng/git-bzr-ng-0_pre20120130.tar.xz
-_eclasses_=multilib	c2b85b5c63a44798c1e442147ac14c5c	python	a0b470c1fca4658ffc97f0df0f25dcdc	toolchain-funcs	53a27e9e8acf42332c82a7838d84773f
+_eclasses_=multilib	c2b85b5c63a44798c1e442147ac14c5c	python	2d51fc3441b5f17f0fe51b5ad6b62206	toolchain-funcs	53a27e9e8acf42332c82a7838d84773f
 _md5_=4214ac0b5ddb7ba4b1de87556759e7c3
