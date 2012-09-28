@@ -10,5 +10,5 @@ RDEPEND=app-crypt/gnupg python_targets_python2_5? ( dev-lang/python:2.5 ) python
 REQUIRED_USE=|| ( python_targets_python2_5 python_targets_python2_6 python_targets_python2_7 python_targets_python3_1 python_targets_python3_2 python_targets_jython2_5 python_targets_pypy1_8 python_targets_pypy1_9 )
 SLOT=0
 SRC_URI=http://python-gnupg.googlecode.com/files/python-gnupg-0.3.0.tar.gz
-_eclasses_=python-distutils-ng	6786a3ab681bb2f21310183278f72e33
+_eclasses_=python-distutils-ng	0b3089b6a855cb3537e477e0f9001014
 _md5_=152ebe29280b3492bd3d95d4e5c05ab0
