@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.117 2012/09/15 16:16:53 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.119 2012/09/28 15:07:30 axs Exp $
 
 # @ECLASS: toolchain-funcs.eclass
 # @MAINTAINER:
@@ -356,6 +356,10 @@ ninj() { [[ ${type} == "kern" ]] && echo $1 || echo $2 ; }
 	local type=$1
 	local host=$2
 	[[ -z ${host} ]] && host=${CTARGET:-${CHOST}}
+
+	local KV=${KV:-${KV_FULL}}
+	[[ ${type} == "kern" ]] && [[ -z ${KV} ]] && \
+	ewarn "QA: Kernel version could not be determined, please inherit kernel-2 or linux-info"
 
 	case ${host} in
 		aarch64*)	ninj aarch64 arm;;
