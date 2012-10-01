@@ -4,10 +4,10 @@ DESCRIPTION=Alternative Python bindings for Subversion
 EAPI=3
 HOMEPAGE=http://samba.org/~jelmer/subvertpy/ http://pypi.python.org/pypi/subvertpy
 IUSE=test
-KEYWORDS=alpha amd64 x86
+KEYWORDS=amd64 x86
 LICENSE=|| ( LGPL-2.1 LGPL-3 )
 RDEPEND=>=dev-vcs/subversion-1.4 =dev-lang/python-2*
 SLOT=0
 SRC_URI=http://samba.org/~jelmer/subvertpy/subvertpy-0.8.0.tar.gz
 _eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	multilib	c2b85b5c63a44798c1e442147ac14c5c	python	28966d5e48c30d472afcbe998dbdb14e	toolchain-funcs	134429b842a6c67254bfd76a8753e4d4
-_md5_=c4c8fd24a317f4fee0ab7b010b67d8ed
+_md5_=2422c20e33925c5422d214795e282988

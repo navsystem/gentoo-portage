@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.104 2012/09/28 16:32:31 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.109 2012/09/29 20:38:12 williamh Exp $
 
 EAPI=4
 
@@ -35,7 +35,20 @@ RDEPEND="virtual/init
 DEPEND="${RDEPEND}
 	virtual/os-headers"
 
-make_args() {
+src_prepare() {
+	sed -i 's:0444:0644:' mk/sys.mk || die
+	sed -i "/^DIR/s:/openrc:/${PF}:" doc/Makefile || die #241342
+
+	if [[ ${PV} == "9999" ]] ; then
+		local ver="git-${EGIT_VERSION:0:6}"
+		sed -i "/^GITVER[[:space:]]*=/s:=.*:=${ver}:" mk/git.mk || die
+	fi
+
+	# Allow user patches to be applied without modifying the ebuild
+	epatch_user
+}
+
+src_compile() {
 	unset LIBDIR #266688
 
 	MAKE_ARGS="${MAKE_ARGS}
@@ -59,29 +72,9 @@ make_args() {
 	fi
 	use newnet || MAKE_ARGS="${MAKE_ARGS} MKNET=oldnet"
 	use prefix && MAKE_ARGS="${MAKE_ARGS} MKPREFIX=yes PREFIX=${EPREFIX}"
-}
-
-pkg_setup() {
 	export DEBUG=$(usev debug)
 	export MKPAM=$(usev pam)
 	export MKTERMCAP=$(usev ncurses)
-}
-
-src_prepare() {
-	sed -i 's:0444:0644:' mk/sys.mk || die
-	sed -i "/^DIR/s:/openrc:/${PF}:" doc/Makefile || die #241342
-
-	if [[ ${PV} == "9999" ]] ; then
-		local ver="git-${EGIT_VERSION:0:6}"
-		sed -i "/^GITVER[[:space:]]*=/s:=.*:=${ver}:" mk/git.mk || die
-	fi
-
-	# Allow user patches to be applied without modifying the ebuild
-	epatch_user
-}
-
-src_compile() {
-	make_args
 
 	tc-export CC AR RANLIB
 	emake ${MAKE_ARGS}
@@ -101,8 +94,7 @@ set_config_yes_no() {
 }
 
 src_install() {
-	make_args
-	emake ${MAKE_ARGS} DESTDIR="${ED}" install
+	emake ${MAKE_ARGS} DESTDIR="${D}" install
 
 	# move the shared libs back to /usr so ldscript can install
 	# more of a minimal set of files
@@ -161,7 +153,7 @@ add_boot_init() {
 	fi
 
 	elog "Auto-adding '${initd}' service to your ${runlevel} runlevel"
-	ln -snf /etc/init.d/${initd} "${EROOT}"/etc/runlevels/${runlevel}/${initd}
+	ln -snf "${EROOT}"/etc/init.d/${initd} "${EROOT}"/etc/runlevels/${runlevel}/${initd}
 }
 add_boot_init_mit_config() {
 	local config=$1 initd=$2
@@ -212,7 +204,7 @@ pkg_preinst() {
 		rm -f "${EROOT}"/etc/init.d/clock
 	fi
 	if [[ -L ${EROOT}/etc/runlevels/boot/clock ]] ; then
-		 rm -f "${EROOT}"/etc/runlevels/boot/clock
+		rm -f "${EROOT}"/etc/runlevels/boot/clock
 		ln -snf /etc/init.d/${clock} "${EROOT}"/etc/runlevels/boot/${clock}
 	fi
 	if [[ -L ${EROOT}${LIBDIR}/rc/init.d/started/clock ]] ; then
@@ -245,6 +237,12 @@ pkg_preinst() {
 
 	# swapfiles was added in 0.9.9 and needed in boot (february 2012)
 	has_version ">=sys-apps/openrc-0.9.9" || add_boot_init swapfiles
+
+	if ! has_version ">=sys-apps/openrc-0.11"; then
+		add_boot_init sysfs sysinit
+		add_boot_init tmpfilesd.sysinit sysinit
+		add_boot_init tmpfilesd.boot boot
+	fi
 
 	# set default interactive shell to sulogin if it exists
 	set_config /etc/rc.conf rc_shell /sbin/sulogin "#" test -e /sbin/sulogin
