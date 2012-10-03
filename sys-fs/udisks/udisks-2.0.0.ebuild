@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.99.0-r1.ebuild,v 1.1 2012/08/06 11:46:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-2.0.0.ebuild,v 1.1 2012/10/03 06:42:55 ssuominen Exp $
 
 EAPI=4
 inherit eutils bash-completion-r1 linux-info systemd toolchain-funcs
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~x86"
 IUSE="debug crypt +gptfdisk +introspection systemd"
 
 COMMON_DEPEND=">=dev-libs/glib-2.32
-	>=sys-auth/polkit-0.106
+	>=sys-auth/polkit-0.107
 	>=dev-libs/libatasmart-0.19
 	>=sys-fs/udev-180[gudev,hwdb]
 	virtual/acl
@@ -52,8 +52,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-2.x-ntfs-3g.patch
-	use systemd || { sed -i -e 's:libsystemd-login:&use_USE_systemd:' configure || die; }
+#	epatch "${FILESDIR}"/${PN}-2.x-ntfs-3g.patch
+	use systemd || { sed -i -e 's:libsystemd-login:&disable:' configure || die; }
 	[[ $(gcc-version) < 4.6 ]] && epatch "${FILESDIR}"/${PN}-2.x-pragma.patch
 }
 
@@ -79,8 +79,8 @@ src_install() {
 		dosym /usr/share/doc/${PF}/html/${htmldir} /usr/share/gtk-doc/html/${htmldir}
 	fi
 
-	rm -rf "${ED}"/etc/bash_completion.d
-	dobashcomp tools/udisksctl-bash-completion.sh
+	rm -rf "${ED}"/usr/share/bash-completion
+	dobashcomp data/completions/udisksctl
 
 	keepdir /var/lib/udisks2 #383091
 }
