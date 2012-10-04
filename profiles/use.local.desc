@@ -909,6 +909,7 @@ app-text/pelican:markdown - Markdown support
 app-text/podofo:boost - Add support for boost
 app-text/poppler:introspection - Enable GObject introspection.
 app-text/poppler:utils - Install command-line PDF converters and various utilities.
+app-text/qpdfview:synctex - Add support for searching TeX sources
 app-text/sgmltools-lite:jadetex - Add support for app-text/jadetex (for processing tex files produced by the TeX backend of Jade)
 app-text/stardict:espeak - Enable text to speech synthesizer using espeak engine
 app-text/stardict:gucharmap - Enable gucharmap dictionary plugin
@@ -2657,7 +2658,10 @@ media-libs/libcanberra:tdb - Enables Trivial Database support for caching purpos
 media-libs/libchamplain:html - Install gtk-doc html version for this package
 media-libs/libchamplain:introspection - Use dev-libs/gobject-introspection for introspection
 media-libs/libchamplain:vala - Generate bindings for dev-lang/vala
+media-libs/libextractor:archive - Enable archive support using app-arch/libarchive
 media-libs/libextractor:gsf - Enable OLE2 (MS Office) plug-in support using gnome-base/libgsf
+media-libs/libextractor:magic - Enable magic support using sys-apps/file
+media-libs/libextractor:midi - Enable MIDI support through media-libs/libsmf
 media-libs/libggi:vis - Enables sparc vis support for libggi
 media-libs/libgnome-media-profiles:twolame - Allow encoding MPEG Audio Layer 2 (MP2) files using twolame
 media-libs/libgpod:gtk - Enable ArtworkDB support
@@ -3649,7 +3653,8 @@ net-analyzer/tcpreplay:pcapnav - Enable if you want the jump to byte offset feat
 net-analyzer/tcpreplay:tcpdump - Use net-analyzer/tcpdump for packet decoding feature
 net-analyzer/wireshark:adns - Use the GNU net-dns/c-ares library to resolve DNS names
 net-analyzer/wireshark:doc-pdf - Build documentation in pdf format (US and a4 paper sizes)
-net-analyzer/wireshark:gcrypt - Use GNU crypto library (dev-libs/libgcrypt) to decrypt ipsec traffic
+net-analyzer/wireshark:gcrypt - Use (dev-libs/libgcrypt) to decrypt IPsec traffic
+net-analyzer/wireshark:ipsec - Use (dev-libs/libgcrypt) to decrypt IPsec traffic
 net-analyzer/wireshark:libadns - Use net-lib/adns (DEPRECATED) instead of net-dns/c-ares to resolve DNS names
 net-analyzer/wireshark:pcap - Use net-libs/libpcap for network packet capturing (build dumpcap, rawshark)
 net-analyzer/wireshark:smi - Use net-libs/libsmi to resolve numeric OIDs into human readable format
