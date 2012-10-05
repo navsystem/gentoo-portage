@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.113 2012/09/11 16:24:47 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.114 2012/10/04 19:30:26 williamh Exp $
 
 EAPI=4
 
@@ -396,7 +396,7 @@ pkg_postinst()
 
 	ewarn
 	ewarn "You need to restart udev as soon as possible to make the upgrade go"
-	ewarn "into affect."
+	ewarn "into effect."
 	ewarn "The method you use to do this depends on your init system."
 
 	ewarn
