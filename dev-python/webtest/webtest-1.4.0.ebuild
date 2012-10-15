@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/webtest-1.4.0.ebuild,v 1.1 2012/10/09 13:44:05 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/webtest-1.4.0.ebuild,v 1.4 2012/10/13 19:00:10 armin76 Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6 3:3.2"
@@ -9,7 +9,7 @@ RESTRICT_PYTHON_ABIS="2.5 3.1"
 PYTHON_TESTS_RESTRICTED_ABIS="*-pypy-*"
 DISTUTILS_SRC_TEST="nosetests"
 
-inherit distutils eutils
+inherit distutils
 
 MY_PN="WebTest"
 MY_P="${MY_PN}-${PV}"
@@ -20,7 +20,7 @@ SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="doc"
 
 RDEPEND=">=dev-python/webob-0.9.2"
@@ -30,11 +30,6 @@ DEPEND="${RDEPEND}
 	test? ( dev-python/pyquery )"
 
 S="${WORKDIR}/${MY_P}"
-
-src_prepare() {
-	epatch "${FILESDIR}/${PN}-1.3.4-index_fixt.patch"
-	distutils_src_prepare
-}
 
 src_compile() {
 	distutils_src_compile

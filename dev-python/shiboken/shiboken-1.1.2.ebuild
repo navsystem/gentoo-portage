@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/shiboken-1.1.2.ebuild,v 1.1 2012/09/08 21:49:51 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/shiboken-1.1.2.ebuild,v 1.3 2012/10/14 13:55:47 pesa Exp $
 
 EAPI=4
 
@@ -29,6 +29,7 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	test? (
+		dev-python/numpy
 		>=x11-libs/qt-gui-4.7.0:4
 		>=x11-libs/qt-test-4.7.0:4
 	)"
@@ -53,7 +54,7 @@ src_configure() {
 	configuration() {
 		local mycmakeargs=(
 			-DPYTHON_EXECUTABLE="$(PYTHON -a)"
-			-DPYTHON_SITE_PACKAGES="$(python_get_sitedir)"
+			-DPYTHON_SITE_PACKAGES="${EPREFIX}$(python_get_sitedir)"
 			-DPYTHON_SUFFIX="-python${PYTHON_ABI}"
 			$(cmake-utils_use_build test TESTS)
 		)
@@ -61,8 +62,8 @@ src_configure() {
 		if [[ $(python_get_version -l --major) == 3 ]]; then
 			mycmakeargs+=(
 				-DUSE_PYTHON3=ON
-				-DPYTHON3_INCLUDE_DIR="$(python_get_includedir)"
-				-DPYTHON3_LIBRARY="$(python_get_library)"
+				-DPYTHON3_INCLUDE_DIR="${EPREFIX}$(python_get_includedir)"
+				-DPYTHON3_LIBRARY="${EPREFIX}$(python_get_library)"
 			)
 		fi
 
