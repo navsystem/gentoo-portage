@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvheadend/tvheadend-2.12.ebuild,v 1.1 2012/08/25 12:37:43 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvheadend/tvheadend-2.12.ebuild,v 1.3 2012/10/16 07:09:34 pinkbyte Exp $
 
 EAPI=4
 
-inherit eutils user
+inherit eutils toolchain-funcs user
 
 MY_PN="hts-${PN}"
 
@@ -36,10 +36,17 @@ src_prepare() {
 	# remove stripping
 	sed -e 's:install -s:install:' \
 		-i support/posix.mk || die "sed failed!"
+
+	# remove '-Werror' wrt bug #438424
+	sed -i 's:-Werror::' Makefile || die "sed on removing '-Werror' failed!"
 }
 
 src_configure() {
 	econf $(use_enable avahi) --release
+}
+
+src_compile() {
+	emake CC="$(tc-getCC)"
 }
 
 src_install() {
