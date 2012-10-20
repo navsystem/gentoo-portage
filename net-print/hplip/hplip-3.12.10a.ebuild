@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.12.10a.ebuild,v 1.1 2012/10/12 17:22:12 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.12.10a.ebuild,v 1.3 2012/10/20 11:54:01 billie Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ PYTHON_DEPEND="!minimal? 2"
 PYTHON_USE_WITH="threads xml"
 PYTHON_USE_WITH_OPT="!minimal"
 
-inherit fdo-mime linux-info python autotools toolchain-funcs
+inherit eutils fdo-mime linux-info python autotools toolchain-funcs
 
 DESCRIPTION="HP Linux Imaging and Printing. Includes printer, scanner, fax drivers and service tools."
 HOMEPAGE="http://hplipopensource.com/hplip-web/index.html"
@@ -21,14 +21,15 @@ KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 
 # zeroconf does not work properly with >=cups-1.4.
 # Thus support for it is also disabled in hplip.
-IUSE="doc fax +hpcups hpijs kde libnotify minimal parport policykit qt4 scanner snmp static-ppds X"
+IUSE="doc fax +hpcups hpijs kde libnotify -libusb0 minimal parport policykit qt4 scanner snmp static-ppds X"
 
 COMMON_DEPEND="
 	virtual/jpeg
 	hpijs? ( >=net-print/foomatic-filters-3.0.20080507[cups] )
 	!minimal? (
 		>=net-print/cups-1.4.0
-		virtual/libusb:1
+		!libusb0? ( virtual/libusb:1 )
+		libusb0? ( virtual/libusb:0 )
 		scanner? ( >=media-gfx/sane-backends-1.0.19-r1 )
 		fax? ( sys-apps/dbus )
 		snmp? (
@@ -119,10 +120,10 @@ src_prepare() {
 	# The hpcups driver does not use foomatic-rip
 	local i
 	for i in ppd/hpijs/*.ppd.gz ; do
-		rm -f ${i}.temp
+		rm -f ${i}.temp || die
 		gunzip -c ${i} | sed 's/foomatic-rip-hplip/foomatic-rip/g' | \
 			gzip > ${i}.temp || die
-		mv ${i}.temp ${i}
+		mv ${i}.temp ${i} || die
 	done
 
 	eautoreconf
@@ -135,6 +136,12 @@ src_configure() {
 		myconf="${myconf} --enable-dbus-build"
 	else
 		myconf="${myconf} --disable-dbus-build"
+	fi
+
+	if use libusb0 ; then
+		myconf="${myconf} --enable-libusb01_build"
+	else
+		myconf="${myconf} --disable-libusb01_build"
 	fi
 
 	if use hpcups ; then
@@ -186,7 +193,6 @@ src_configure() {
 		--disable-foomatic-rip-hplip-install \
 		--disable-shadow-build \
 		--disable-qt3 \
-		--disable-libusb01_build \
 		--disable-udev_sysfs_rules \
 		--disable-udev-acl-rules \
 		--with-cupsbackenddir=$(cups-config --serverbin)/backend \
