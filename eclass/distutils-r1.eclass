@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.12 2012/10/29 09:54:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.14 2012/10/29 13:34:02 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -105,6 +105,62 @@ DEPEND=${PYTHON_DEPS}
 # HTML_DOCS=( doc/html/ )
 # @CODE
 
+# @ECLASS-VARIABLE: DISTUTILS_IN_SOURCE_BUILD
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# If set to a non-null value, in-source builds will be enabled.
+# If unset, the default is to use in-source builds when python_prepare()
+# is declared, and out-of-source builds otherwise.
+#
+# If in-source builds are used, the eclass will create a copy of package
+# sources for each Python implementation in python_prepare_all(),
+# and work on that copy afterwards.
+#
+# If out-of-source builds are used, the eclass will instead work
+# on the sources directly, prepending setup.py arguments with
+# 'build --build-base ${BUILD_DIR}' to enforce keeping & using built
+# files in the specific root.
+
+# @ECLASS-VARIABLE: mydistutilsargs
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# An array containing options to be passed to setup.py.
+#
+# Example:
+# @CODE
+# python_configure_all() {
+# 	mydistutilsargs=( --enable-my-hidden-option )
+# }
+# @CODE
+
+# @FUNCTION: esetup.py
+# @USAGE: [<args>...]
+# @DESCRIPTION:
+# Run the setup.py using currently selected Python interpreter
+# (if ${PYTHON} is set; fallback 'python' otherwise). The setup.py will
+# be passed default command-line arguments, then ${mydistutilsargs[@]},
+# then any parameters passed to this command.
+#
+# This command dies on failure.
+esetup.py() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	local args=()
+	if [[ ! ${DISTUTILS_IN_SOURCE_BUILD} ]]; then
+		if [[ ! ${BUILD_DIR} ]]; then
+			die 'Out-of-source build requested, yet BUILD_DIR unset.'
+		fi
+
+		args+=( build --build-base "${BUILD_DIR}" )
+	fi
+
+	set -- "${PYTHON:-python}" setup.py \
+		"${args[@]}" "${mydistutilsargs[@]}" "${@}"
+
+	echo "${@}" >&2
+	"${@}" || die
+}
+
 # @FUNCTION: distutils-r1_python_prepare_all
 # @DESCRIPTION:
 # The default python_prepare_all(). It applies the patches from PATCHES
@@ -120,8 +176,17 @@ distutils-r1_python_prepare_all() {
 
 	epatch_user
 
-	# create source copies for each implementation
-	python_copy_sources
+	# by default, use in-source build if python_prepare() is used
+	if [[ ! ${DISTUTILS_IN_SOURCE_BUILD+1} ]]; then
+		if declare -f python_prepare >/dev/null; then
+			DISTUTILS_IN_SOURCE_BUILD=1
+		fi
+	fi
+
+	if [[ ${DISTUTILS_IN_SOURCE_BUILD} ]]; then
+		# create source copies for each implementation
+		python_copy_sources
+	fi
 }
 
 # @FUNCTION: distutils-r1_python_prepare
@@ -147,15 +212,12 @@ distutils-r1_python_configure() {
 # @FUNCTION: distutils-r1_python_compile
 # @USAGE: [additional-args...]
 # @DESCRIPTION:
-# The default python_compile(). Runs 'setup.py build' using the correct
-# Python implementation. Any parameters passed to this function will be
-# passed to setup.py.
+# The default python_compile(). Runs 'esetup.py build'. Any parameters
+# passed to this function will be passed to setup.py.
 distutils-r1_python_compile() {
 	debug-print-function ${FUNCNAME} "${@}"
 
-	set -- "${PYTHON}" setup.py build "${@}"
-	echo "${@}"
-	"${@}" || die
+	esetup.py build "${@}"
 }
 
 # @FUNCTION: distutils-r1_python_test
@@ -197,10 +259,9 @@ distutils-r1_rename_scripts() {
 # @FUNCTION: distutils-r1_python_install
 # @USAGE: [additional-args...]
 # @DESCRIPTION:
-# The default python_install(). Runs 'setup.py install' using
-# the correct Python implementation, and appending the optimization
-# flags. Then calls distutils-r1_rename_scripts. Any parameters passed
-# to this function will be passed to setup.py.
+# The default python_install(). Runs 'esetup.py install', appending
+# the optimization flags. Then calls distutils-r1_rename_scripts.
+# Any parameters passed to this function will be passed to setup.py.
 distutils-r1_python_install() {
 	debug-print-function ${FUNCNAME} "${@}"
 
@@ -216,9 +277,7 @@ distutils-r1_python_install() {
 
 	unset PYTHONDONTWRITEBYTECODE
 
-	set -- "${PYTHON}" setup.py install "${flags[@]}" --root="${D}" "${@}"
-	echo "${@}"
-	"${@}" || die
+	esetup.py install "${flags[@]}" --root="${D}" "${@}"
 
 	distutils-r1_rename_scripts
 }
@@ -271,9 +330,15 @@ distutils-r1_python_install_all() {
 distutils-r1_run_phase() {
 	debug-print-function ${FUNCNAME} "${@}"
 
-	pushd "${BUILD_DIR}" &>/dev/null || die
+	if [[ ${DISTUTILS_IN_SOURCE_BUILD} ]]; then
+		pushd "${BUILD_DIR}" &>/dev/null || die
+	fi
+
 	"${@}" || die "${1} failed."
-	popd &>/dev/null || die
+
+	if [[ ${DISTUTILS_IN_SOURCE_BUILD} ]]; then
+		popd &>/dev/null || die
+	fi
 }
 
 distutils-r1_src_prepare() {
