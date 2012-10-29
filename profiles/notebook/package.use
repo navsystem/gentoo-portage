@@ -81,3 +81,5 @@ app-misc/2gis-data msk nsk omsk
 
 sys-libs/zlib minizip static-libs
 sys-libs/glibc -gd # bug #204525
+
+dev-db/postgresql-base kerberos
