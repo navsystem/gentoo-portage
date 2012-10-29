@@ -30,4 +30,4 @@ sys-block/megacli amd64
 ~sys-apps/hwids-20120922 amd64 x86
 ~sys-fs/cryptsetup-1.4.1 amd64 x86
 =media-gfx/splashutils-1.5.4.4-r1 amd64 x86
-~sys-boot/syslinux-4.06_pre11 amd64 x86
+~sys-boot/syslinux-4.06 amd64 x86
