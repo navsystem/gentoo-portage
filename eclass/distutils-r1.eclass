@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.3 2012/10/15 15:01:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.8 2012/10/26 21:38:47 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -34,7 +34,12 @@
 # functions, you should consider calling the defaults (and especially
 # distutils-r1_python_prepare_all).
 #
-# Please note that distutils-r1 sets RDEPEND and DEPEND for you.
+# Please note that distutils-r1 sets RDEPEND and DEPEND unconditionally
+# for you.
+#
+# Also, please note that distutils-r1 will always inherit python-r1
+# as well. Thus, all the variables defined and documented there are
+# relevant to the packages using distutils-r1.
 
 case "${EAPI}" in
 	0|1|2|3)
@@ -55,12 +60,32 @@ RDEPEND="${PYTHON_DEPS}
 	dev-python/python-exec"
 DEPEND=${PYTHON_DEPS}
 
+# @ECLASS-VARIABLE: PATCHES
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# An array containing patches to be applied to the sources before
+# copying them.
+#
+# If unset, no custom patches will be applied.
+#
+# Please note, however, that at some point the eclass may apply
+# additional distutils patches/quirks independently of this variable.
+#
+# Example:
+# @CODE
+# PATCHES=( "${FILESDIR}"/${P}-make-gentoo-happy.patch )
+# @CODE
+
 # @ECLASS-VARIABLE: DOCS
 # @DEFAULT_UNSET
 # @DESCRIPTION:
-# Array containing documents installed using dodoc.
+# An array containing documents installed using dodoc. The files listed
+# there must exist in the directory from which
+# distutils-r1_python_install_all() is run (${S} by default).
 #
-# If unset, the default filename list (from PMS) will be used.
+# If unset, the function will instead look up files matching default
+# filename pattern list (from the Package Manager Specification),
+# and install those found.
 #
 # Example:
 # @CODE
@@ -70,7 +95,11 @@ DEPEND=${PYTHON_DEPS}
 # @ECLASS-VARIABLE: HTML_DOCS
 # @DEFAULT_UNSET
 # @DESCRIPTION:
-# Array containing documents installed using dohtml.
+# An array containing documents installed using dohtml. The files
+# and directories listed there must exist in the directory from which
+# distutils-r1_python_install_all() is run (${S} by default).
+#
+# If unset, no HTML docs will be installed.
 #
 # Example:
 # @CODE
@@ -82,6 +111,9 @@ DEPEND=${PYTHON_DEPS}
 # The default python_prepare_all(). It applies the patches from PATCHES
 # array, then user patches and finally calls python_copy_sources to
 # create copies of resulting sources for each Python implementation.
+#
+# At some point in the future, it may also apply eclass-specific
+# distutils patches and/or quirks.
 distutils-r1_python_prepare_all() {
 	debug-print-function ${FUNCNAME} "${@}"
 
@@ -224,12 +256,12 @@ distutils-r1_python_install_all() {
 	local impl EPYTHON PYTHON
 	for impl in "${PYTHON_COMPAT[@]}"; do
 		if use "python_targets_${impl}"; then
-			_python_set_PYTHON "${impl}"
+			python_export "${impl}" EPYTHON
 			break
 		fi
 	done
 
-	for f in "${D}"/{bin,sbin,usr/bin,usr/sbin}/*-"${EPYTHON}"; do
+	for f in "${D}"/{bin,sbin,usr/bin,usr/sbin,games/bin}/*-"${EPYTHON}"; do
 		if [[ -x ${f} ]]; then
 			debug-print "${FUNCNAME}: found executable at ${f#${D}/}"
 
@@ -254,6 +286,19 @@ distutils-r1_python_install_all() {
 	done
 }
 
+# @FUNCTION: distutils-r1_run_phase
+# @USAGE: [<argv>...]
+# @INTERNAL
+# @DESCRIPTION:
+# Run the given command in BUILD_DIR.
+distutils-r1_run_phase() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	pushd "${BUILD_DIR}" &>/dev/null || die
+	"${@}" || die "${1} failed."
+	popd &>/dev/null || die
+}
+
 distutils-r1_src_prepare() {
 	debug-print-function ${FUNCNAME} "${@}"
 
@@ -265,17 +310,17 @@ distutils-r1_src_prepare() {
 	fi
 
 	if declare -f python_prepare >/dev/null; then
-		python_foreach_impl python_prepare
+		python_foreach_impl distutils-r1_run_phase python_prepare
 	else
-		distutils-r1_python_prepare
+		python_foreach_impl distutils-r1_run_phase distutils-r1_python_prepare
 	fi
 }
 
 distutils-r1_src_configure() {
 	if declare -f python_configure >/dev/null; then
-		python_foreach_impl python_configure
+		python_foreach_impl distutils-r1_run_phase python_configure
 	else
-		distutils-r1_python_configure
+		python_foreach_impl distutils-r1_run_phase distutils-r1_python_configure
 	fi
 
 	if declare -f python_configure_all >/dev/null; then
@@ -287,9 +332,9 @@ distutils-r1_src_compile() {
 	debug-print-function ${FUNCNAME} "${@}"
 
 	if declare -f python_compile >/dev/null; then
-		python_foreach_impl python_compile
+		python_foreach_impl distutils-r1_run_phase python_compile
 	else
-		python_foreach_impl distutils-r1_python_compile
+		python_foreach_impl distutils-r1_run_phase distutils-r1_python_compile
 	fi
 
 	if declare -f python_compile_all >/dev/null; then
@@ -301,9 +346,9 @@ distutils-r1_src_test() {
 	debug-print-function ${FUNCNAME} "${@}"
 
 	if declare -f python_test >/dev/null; then
-		python_foreach_impl python_test
+		python_foreach_impl distutils-r1_run_phase python_test
 	else
-		distutils-r1_python_test
+		python_foreach_impl distutils-r1_run_phase distutils-r1_python_test
 	fi
 
 	if declare -f python_test_all >/dev/null; then
@@ -315,9 +360,9 @@ distutils-r1_src_install() {
 	debug-print-function ${FUNCNAME} "${@}"
 
 	if declare -f python_install >/dev/null; then
-		python_foreach_impl python_install
+		python_foreach_impl distutils-r1_run_phase python_install
 	else
-		python_foreach_impl distutils-r1_python_install
+		python_foreach_impl distutils-r1_run_phase distutils-r1_python_install
 	fi
 
 	if declare -f python_install_all >/dev/null; then

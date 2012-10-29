@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.8.5-r1.ebuild,v 1.13 2012/10/19 05:04:22 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.8.5-r1.ebuild,v 1.17 2012/10/27 14:22:40 klausman Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -16,7 +16,7 @@ SRC_URI="https://ftp.mozilla.org/pub/mozilla.org/js/${TARBALL_P}.tar.gz"
 
 LICENSE="NPL-1.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~mips ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ~mips ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="debug static-libs test"
 
 S="${WORKDIR}/${MY_P}"
@@ -41,6 +41,8 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-fix-ppc64.patch"
 	# https://bugs.gentoo.org/show_bug.cgi?id=400727
 	epatch "${FILESDIR}/${P}-arm_resprect_cflags-1.patch"
+	# https://bugs.gentoo.org/show_bug.cgi?id=438746
+	epatch "${FILESDIR}"/${PN}-1.8.7-freebsd-pthreads.patch
 
 	epatch_user
 

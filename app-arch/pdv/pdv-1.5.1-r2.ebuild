@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pdv/pdv-1.5.1-r2.ebuild,v 1.11 2012/09/12 03:48:58 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pdv/pdv-1.5.1-r2.ebuild,v 1.13 2012/10/24 18:47:57 ulm Exp $
 
 EAPI=4
 
-inherit eutils autotools
+inherit eutils autotools toolchain-funcs
 
 DESCRIPTION="build a self-extracting and self-installing binary package"
 HOMEPAGE="http://sourceforge.net/projects/pdv"
@@ -12,10 +12,10 @@ SRC_URI="mirror://sourceforge/pdv/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~hppa ppc x86 ~x86-linux ~ppc-macos"
+KEYWORDS="~amd64 ~hppa ppc x86 ~x86-linux ~ppc-macos"
 IUSE="X"
 
-DEPEND="X? ( >=x11-libs/openmotif-2.3:0
+DEPEND="X? ( >=x11-libs/motif-2.3:0
 	>=x11-libs/libX11-1.0.0
 	>=x11-libs/libXt-1.0.0
 	>=x11-libs/libXext-1.0.0
@@ -37,6 +37,7 @@ src_prepare() {
 	# re-build configure script since patch was applied to configure.in
 	cd "${S}"/X11
 	eautoreconf
+	tc-export CC
 }
 
 src_configure() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.49.0-r1.ebuild,v 1.7 2012/09/23 12:28:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.49.0-r1.ebuild,v 1.9 2012/10/25 22:04:33 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? *"
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/boost/${MY_P}.tar.bz2"
 
 LICENSE="Boost-1.0"
 SLOT="$(get_version_component_range 1-2)"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="debug doc +eselect icu mpi python static-libs test tools"
 
 RDEPEND="icu? ( >=dev-libs/icu-3.3 )
@@ -609,5 +609,15 @@ pkg_postinst() {
 	if [[ ! -h "${ROOT}etc/eselect/boost/active" ]]; then
 		elog "No active boost version found. Calling eselect to select one..."
 		eselect boost update || ewarn "eselect boost update failed."
+	fi
+
+	if use python; then
+		python_mod_optimize boost_${MAJOR_PV}
+	fi
+}
+
+pkg_postrm() {
+	if use python; then
+		python_mod_cleanup boost_${MAJOR_PV}
 	fi
 }

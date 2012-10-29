@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.117 2012/10/08 11:38:20 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.120 2012/10/28 10:11:17 scarabeus Exp $
 
 EAPI=4
 
@@ -280,7 +280,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-	local mod dest tmplfile tmplname mypv
+	local mod mod2 dest tmplfile tmplname mypv
 
 	[[ -n ${PATCHSET} ]] && unpack ${PATCHSET}
 	if use branding; then
@@ -294,7 +294,11 @@ src_unpack() {
 			fi
 			unpack "${PN}-${mod}-${PV}.tar.xz"
 			if [[ ${mod} != core ]]; then
-				mv -n "${WORKDIR}/${PN}-${mod}-${PV}"/* "${S}"
+				mod2=${mod}
+				# mapping does not match on help
+				[[ ${mod} == help ]] && mod2="helpcontent2"
+				mkdir -p "${S}/${mod2}/" || die
+				mv -n "${WORKDIR}/${PN}-${mod}-${PV}"/* "${S}/${mod2}" || die
 				rm -rf "${WORKDIR}/${PN}-${mod}-${PV}"
 			fi
 		done
@@ -311,7 +315,11 @@ src_unpack() {
 			EGIT_NOUNPACK="true"
 			git-2_src_unpack
 			if [[ ${mod} != core ]]; then
-				mv -n "${WORKDIR}/${PN}-${mod}-${PV}"/* "${S}"
+				mod2=${mod}
+				# mapping does not match on help
+				[[ ${mod} == help ]] && mod2="helpcontent2"
+				mkdir -p "${S}/${mod2}/" || die
+				mv -n "${WORKDIR}/${PN}-${mod}-${PV}"/* "${S}/${mod2}" || die
 				rm -rf "${WORKDIR}/${PN}-${mod}-${PV}"
 			fi
 		done
@@ -379,10 +387,8 @@ src_configure() {
 
 	if use java; then
 		# hsqldb: system one is too new
-		# saxon: system one does not work properly
 		java_opts="
 			--without-system-hsqldb
-			--without-system-saxon
 			--with-ant-home="${ANT_HOME}"
 			--with-jdk-home=$(java-config --jdk-home 2>/dev/null)
 			--with-java-target-version=$(java-pkg_get-target)
@@ -530,7 +536,8 @@ src_compile() {
 	# it is broken because we send --without-help
 	# https://bugs.freedesktop.org/show_bug.cgi?id=46506
 	(
-		source "${S}/config_host.mk" 2&> /dev/null
+		grep "^export" "${S}/config_host.mk" > "${T}/config_host.mk"
+		source "${T}/config_host.mk" 2&> /dev/null
 
 		local path="${SOLARVER}/${INPATH}/res/img"
 		mkdir -p "${path}" || die
