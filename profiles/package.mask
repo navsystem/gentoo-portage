@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14184 2012/11/02 07:59:18 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14189 2012/11/04 04:49:05 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,17 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego Elio Pettenò <flameeyes@gentoo.org> (03 Nov 2012)
+# Old boost (1.46) users, won't work as intended after unslot
+=dev-libs/boost-1.46*
+dev-util/intel-ocl-sdk
+sci-biology/cufflinks
+sci-biology/express
+
+# Markos Chandras <hwoarang@gentoo.org> (03 Nov 2012)
+# Masked for testing
+app-benchmarks/ltp
 
 # Ulrich Müller <ulm@gentoo.org> (02 Nov 2012)
 # Emacs live ebuilds. Use at your own risk.
@@ -70,11 +81,6 @@ x11-apps/grandr
 # Initial LTS release. Needed significant effort to even build.
 # Do not deploy in production. Do not rely on for serious work.
 =net-misc/asterisk-11.0.0
-
-# Michał Górny <mgorny@gentoo.org> (29 Oct 2012)
-# Unmask when packages are switched to virtual/python-argparse.
-=dev-python/argparse-1.2.1-r1
-=virtual/python-argparse-1
 
 # Ben de Groot <yngwin@gentoo.org> (29 Oct 2012)
 # Fails compilation on missing sqlite header - unbundle patch needs updating
@@ -454,10 +460,12 @@ games-strategy/glest
 >sci-electronics/xcircuit-3.8
 
 # Justin Lecher <jlec@gentoo.org> (13 Jun 2012)
+# Justin Lecher <jlec@gentoo.org> (01 Nov 2012)
 # Mask old version numbers
 # Shows newest unstable to users easily
 >=sci-biology/ncbi-tools-20080302
 >=sci-chemistry/dssp-070831
+>=sci-biology/ncbi-tools++-2010.06.15
 
 # Michael Weber <xmw@gentoo.org> (9 Jun 2012)
 # The mentioned versions fail to assemble raid 0/1/5 devices.
@@ -1016,16 +1024,6 @@ games-roguelike/slashem
 games-roguelike/nethack
 games-util/hearse
 games-roguelike/noegnud-nethack
-
-# Robin H. Johnson <robbat2@gentoo.org> (11 Mar 2006)
-# Work-in-progress to clean this up
-# TODO
-# - properly fix lazy bindings
-# - fix read-only stuff
-# - seperate data files from binaries
-# - fix crappy state of runnable only in source tree.
-# - provide log output to /var/log somewhere intelligently
-app-benchmarks/ltp
 
 # Robin H. Johnson <robbat2@gentoo.org> (11 Feb 2006)
 # zlib interaction is badly broken. See bug #124733.
