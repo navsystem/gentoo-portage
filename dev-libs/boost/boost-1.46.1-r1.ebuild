@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.46.1-r1.ebuild,v 1.7 2012/01/08 11:42:28 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.46.1-r1.ebuild,v 1.9 2012/11/01 15:17:23 flameeyes Exp $
 
 EAPI="2"
 
@@ -12,7 +12,8 @@ DESCRIPTION="Boost Libraries for C++"
 HOMEPAGE="http://www.boost.org/"
 SRC_URI="mirror://sourceforge/boost/${MY_P}.tar.bz2"
 LICENSE="Boost-1.0"
-SLOT="$(get_version_component_range 1-2)"
+SLOT=0
+MAJOR_V="$(get_version_component_range 1-2)"
 IUSE="debug doc +eselect icu mpi python static-libs test tools"
 
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
@@ -21,14 +22,14 @@ RDEPEND="icu? ( >=dev-libs/icu-3.3 )
 	mpi? ( || ( sys-cluster/openmpi[cxx] sys-cluster/mpich2[cxx,threads] ) )
 	sys-libs/zlib
 	python? ( dev-lang/python )
-	!!<=dev-libs/boost-1.35.0-r2
-	>=app-admin/eselect-boost-0.3"
+	>=app-admin/eselect-boost-0.3
+	elibc_glibc? ( <sys-libs/glibc-2.16 )"
 DEPEND="${RDEPEND}
-	dev-util/boost-build:${SLOT}"
+	=dev-util/boost-build-${MAJOR_V}*"
 
 S=${WORKDIR}/${MY_P}
 
-MAJOR_PV=$(replace_all_version_separators _ ${SLOT})
+MAJOR_PV=$(replace_all_version_separators _ ${MAJOR_V})
 BJAM="bjam-${MAJOR_PV}"
 
 # Usage:

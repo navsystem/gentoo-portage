@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14167 2012/10/28 16:13:31 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14189 2012/11/04 04:49:05 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,65 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego Elio Pettenò <flameeyes@gentoo.org> (03 Nov 2012)
+# Old boost (1.46) users, won't work as intended after unslot
+=dev-libs/boost-1.46*
+dev-util/intel-ocl-sdk
+sci-biology/cufflinks
+sci-biology/express
+
+# Markos Chandras <hwoarang@gentoo.org> (03 Nov 2012)
+# Masked for testing
+app-benchmarks/ltp
+
+# Ulrich Müller <ulm@gentoo.org> (02 Nov 2012)
+# Emacs live ebuilds. Use at your own risk.
+~app-editors/emacs-vcs-24.2.9999
+~app-editors/emacs-vcs-24.3.9999
+
+# Alexis Ballier <aballier@gentoo.org> (1 Nov 2012)
+# Still requires ocaml-3, mask it until it is ported. If this does not happen in
+# the near future, we should consider removing it.
+dev-ml/ocamlduce
+
+# Diego Elio Pettenò <flameeyes@gentoo.org> (1 Nov 2012)
+# See tracker bug #440342. Will probably require GNOME 3.6 to be
+# unmasked first.
+=dev-libs/libtasn1-3*
+
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (31 Oct 2012)
+# Build and runtime issues, bugs #340883, #369385, #435444.
+# If you require a graphical monitor configuration tool and your desktop
+# environment doesn't provide any, try x11-misc/arandr or lxde-base/lxrandr
+# Masked for removal in 30 days.
+x11-apps/grandr
+
+# Julian Ospald <hasufell@gentoo.org> (31 Oct 2012)
+# broken, removal in 30 days
+# use 0.2.1 instead
+=media-gfx/pornview-0.2.0_pre1-r2
+
+# Sébastien Fabbro <bicatali@gentoo.org> (31 Oct 2012)
+# live ebuild
+=net-fs/redirfs-9999
+
+# Naohiro Aota <naota@gentoo.org> (30 Oct 2012)
+# Masked for test.
+=net-misc/dropbox-1.4.17
+
+# Tony Vroon <chainsaw@gentoo.org> (30 Oct 2012)
+# Initial LTS release. Needed significant effort to even build.
+# Do not deploy in production. Do not rely on for serious work.
+=net-misc/asterisk-11.0.0
+
+# Ben de Groot <yngwin@gentoo.org> (29 Oct 2012)
+# Fails compilation on missing sqlite header - unbundle patch needs updating
+=net-news/quiterss-0.10.3
+
+# Doug Goldstein <cardoe@gentoo.org> (28 Oct 2012)
+# Do not use this ebuild. Stop trying to use it.
+=app-emulation/qemu-1.2.0
 
 # Sergei Trofimovich <slyfox@gentoo.org> (28 Oct 2012)
 # Ancient software. Does not understand alex-2.
@@ -65,6 +124,7 @@ net-misc/libteam
 # Alexandre Rostovtsev <tetromino@gentoo.org> (21 Oct 2012)
 # gstreamer-0.10.36 bump: temporary mask to allow gradual addition to tree;
 # will be unmasked once all compatible plugins are in place.
+>=dev-cpp/gstreamermm-0.10.11
 >=net-misc/rygel-0.16
 ~media-libs/gstreamer-0.10.36
 ~media-libs/gst-plugins-base-0.10.36
@@ -359,10 +419,6 @@ games-strategy/glest
 # Masked rc release. Required by dev-lang/jimctl-0.73
 =dev-embedded/openocd-0.6.0_rc*
 
-# Ulrich Mueller <ulm@gentoo.org> (15 Aug 2012)
-# Emacs live ebuilds. Use at your own risk.
-~app-editors/emacs-vcs-24.2.9999
-
 # Benedikt Böhm <hollow@gentoo.org> (11 Aug 2012)
 # Regression in iproute code, does not detect IP addresses correctly anymore.
 ~dev-ruby/ohai-6.14.0
@@ -370,12 +426,6 @@ games-strategy/glest
 # Jeroen Roovers <jer@gentoo.org> (2 Aug 2012)
 # Development version
 >app-admin/sysstat-10.1
-
-# Pacho Ramos <pacho@gentoo.org> (21 Jul 2012)
-# Contains multiple API changes and needs apps to be ported
->=media-gfx/gphoto2-2.5
->=media-libs/libgphoto2-2.5
->=media-gfx/gtkam-0.2.0
 
 # Ralph Sennhauser <sera@gentoo.org> (18 Jul 2012)
 # Unmaintained, multiple vulnarabilities. #351626
@@ -386,11 +436,6 @@ games-strategy/glest
 # Michael Weber <xmw@gentoo.org> (07 Jul 2012)
 # Masked for testing only beta (bug 424866)
 =sci-electronics/eagle-6.2.1_beta
-
-# Mike Gilbert <floppym@gentoo.org> (06 Jul 2012)
-# Masked for testing per Arfrever.
->=dev-libs/boost-1.50
->=dev-util/boost-build-1.50
 
 # Michael Weber <xmw@gentoo.org> (29 Jun 2012)
 # Masking for security reasons (bug 424025, CVE-2012-3366)
@@ -415,14 +460,12 @@ games-strategy/glest
 >sci-electronics/xcircuit-3.8
 
 # Justin Lecher <jlec@gentoo.org> (13 Jun 2012)
+# Justin Lecher <jlec@gentoo.org> (01 Nov 2012)
 # Mask old version numbers
 # Shows newest unstable to users easily
 >=sci-biology/ncbi-tools-20080302
 >=sci-chemistry/dssp-070831
-
-# Alexis Ballier <aballier@gentoo.org> (10 Jun 2012)
-# Beta release, mask until rev. deps are fixed
->=dev-lang/ocaml-4.00.0_alpha
+>=sci-biology/ncbi-tools++-2010.06.15
 
 # Michael Weber <xmw@gentoo.org> (9 Jun 2012)
 # The mentioned versions fail to assemble raid 0/1/5 devices.
@@ -516,10 +559,6 @@ kde-misc/kgtk
 # Masked until all reverse dependencies have proper versioned
 # DEPENDs.
 >=net-misc/npapi-sdk-0.27.1
-
-# Tim Harder <radhermit@gentoo.org> (10 Feb 2012)
-# Masked for testing
-=net-libs/gnutls-3*
 
 # Angelo Arrifano <miknix@gentoo.org> (10 Feb 2012)
 # Upstream versioning changed, hard masked old versions
@@ -639,14 +678,16 @@ dev-tex/pdftex
 # upcoming 0.0.13
 =dev-python/pyasn1-0.0.13b
 
+# Robin H. Johnson <robbat2@gentoo.org> (01 Nov 2012)
+# Update of mask to 5.6 instead of 5.5
 # Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (28 Jul 2011)
 # A new update of the mysql / mariadb mask
 # Robin H. Johnson <robbat2@gentoo.org> (01 Feb 2010)
-# Mask 5.5/6.0 series that are alpha and and crazy experimental.
+# Mask 5.6/6.0 series that are alpha and and crazy experimental.
 # Mask 5.2/5.3 virtual that exists in the overlay as well (it is MariaDB only)
->=dev-db/mariadb-5.5
->=dev-db/mysql-5.5
->=virtual/mysql-5.5
+>=dev-db/mariadb-5.6
+>=dev-db/mysql-5.6
+>=virtual/mysql-5.6
 =dev-db/mariadb-5.2*
 =virtual/mysql-5.2*
 =dev-db/mariadb-5.3*
@@ -978,10 +1019,6 @@ games-fps/quake4-bin
 games-fps/quake4-data
 games-fps/quake4-demo
 
-# Alon Bar-Lev <alonbl@gentoo.org> (23 Feb 2008)
-# These are not yet stable.
-sys-fs/redirfs
-
 # Piotr Jaroszyński <peper@gentoo.org> (26 Nov 2007)
 # opensync live ebuilds
 =app-pda/libsyncml-9999
@@ -1010,16 +1047,6 @@ games-roguelike/slashem
 games-roguelike/nethack
 games-util/hearse
 games-roguelike/noegnud-nethack
-
-# Robin H. Johnson <robbat2@gentoo.org> (11 Mar 2006)
-# Work-in-progress to clean this up
-# TODO
-# - properly fix lazy bindings
-# - fix read-only stuff
-# - seperate data files from binaries
-# - fix crappy state of runnable only in source tree.
-# - provide log output to /var/log somewhere intelligently
-app-benchmarks/ltp
 
 # Robin H. Johnson <robbat2@gentoo.org> (11 Feb 2006)
 # zlib interaction is badly broken. See bug #124733.

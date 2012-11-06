@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.9.2.ebuild,v 1.4 2012/10/17 18:00:15 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.9.2.ebuild,v 1.6 2012/11/01 19:07:51 idl0r Exp $
 
 # Re dlz/mysql and threads, needs to be verified..
 # MySQL uses thread local storage in its C api. Thus MySQL
@@ -50,7 +50,7 @@ SRC_URI="ftp://ftp.isc.org/isc/bind9/${MY_PV}/${MY_P}.tar.gz
 	)"
 #	rrl? ( http://ss.vix.com/~vixie/rl-${RRL_PV}.patch )"
 
-LICENSE="as-is"
+LICENSE="ISC BSD BSD-2 HPND JNIC RSA-PKCS11 openssl"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="berkdb caps dlz doc filter-aaaa geoip gost gssapi idn ipv6 ldap mysql odbc
@@ -79,7 +79,7 @@ DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )
 	gssapi? ( virtual/krb5 )
 	sdb-ldap? ( net-nds/openldap )
 	gost? ( >=dev-libs/openssl-1.0.0[-bindist] )
-	python? ( dev-python/argparse )"
+	python? ( virtual/python-argparse )"
 
 RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-bind )
