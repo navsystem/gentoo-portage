@@ -427,6 +427,7 @@ app-emulation/emul-linux-x86-qtlibs:development - Install pkgconfig files
 app-emulation/emul-linux-x86-sdl:development - Install pkgconfig files
 app-emulation/emul-linux-x86-soundlibs:development - Install pkgconfig files
 app-emulation/emul-linux-x86-xlibs:development - Install pkgconfig files
+app-emulation/free42:alsa - Adds support for Advanced Linux Sound Architecture
 app-emulation/fuse-utils:gcrypt - Use dev-libs/libgcrypt for low-level crypto of some features, including logfiles.
 app-emulation/ganeti:drbd - Enable DRBD support
 app-emulation/ganeti:filestorage - Enable File Storage
@@ -3414,6 +3415,7 @@ media-video/mplayer2:symlink - Copy all binaries and configuration into location
 media-video/mplayer2:tga - Enables Targa video output
 media-video/mplayer2:vdpau - Enables experimental VDPAU support (requires nVidia video cards) to offload MPEG2/MPEG4/VC1/WMV CPU processing to video card
 media-video/mplayer2:xanim - Enables support for xanim based codecs
+media-video/mplayer2:yuv4mpeg - Enables yuv4mpeg video output
 media-video/ogmrip:ogm - Support for OGM container format
 media-video/ogmrip:srt - Support for SRT subtitle format
 media-video/rtmpdump:gnutls - Use GnuTLS library instead of the default OpenSSL
@@ -4988,7 +4990,8 @@ sci-libs/adolc:sparse - Add support for sparse matrix algebra with sci-libs/colp
 sci-libs/armadillo:atlas - Link with ATLAS libraries for cblas and clapack (needs sci-libs/lapack-atlas)
 sci-libs/arprec:qd - Use sci-libs/qd
 sci-libs/cfitsio:tools - Build execs fpack, funpack, imcopy, fitscopy, listhead
-sci-libs/cholmod:metis - Enable the Partition module to cholmod using metis (sci-libs/metis, sci-libs/parmetis)
+sci-libs/cholmod:cuda - Use nvidia cuda toolkit for speeding up computations
+sci-libs/cholmod:metis - Enable the Partition module to cholmod using sci-libs/metis
 sci-libs/cholmod:supernodal - Enable the Supernodal module (needs virtual/lapack)
 sci-libs/fftw:avx - Adds support for Advanced Vector Extensions
 sci-libs/fftw:float - Link default library to single precision instead of double (symlinks only and fftw-2.1)
@@ -5049,8 +5052,8 @@ sci-libs/shogun:lpsolve - Enable support for Linear Programming Solver
 sci-libs/shogun:octave - Enable support for sci-mathematics/octave
 sci-libs/shogun:snappy - Enable support for snappy compression
 sci-libs/shogun:superlu - Enable support for sci-libs/superlu
-sci-libs/spqr:metis - Use METIS (sci-libs/metis or sci-libs/parmetis) for partitioning
-sci-libs/spqr:tbb - Enable multithreading with the Intel Threads Building Block (needs dev-cpp/tbb)
+sci-libs/spqr:metis - Use sci-libs/metis or sci-libs/parmetis for partitioning
+sci-libs/spqr:tbb - Enable multithreading with the Intel Threads Building Block dev-cpp/tbb
 sci-libs/spr:root - Add sci-physics/root graphics and i/o support
 sci-libs/suitesparse:metis - Use METIS (sci-libs/metis or sci-libs/parmetis) for partitioning
 sci-libs/taucs:cilk - Enable multithreading using dev-lang/cilk)
@@ -5484,7 +5487,7 @@ sys-fs/aufs3:debug - Enable additional debugging support
 sys-fs/aufs3:fuse - Enable fuse support
 sys-fs/aufs3:hfs - Enable hfs support
 sys-fs/aufs3:inotify - Enable inotify support
-sys-fs/aufs3:kernel-patch - Patch the current kernel for aufs2 support
+sys-fs/aufs3:kernel-patch - Patch the current kernel for aufs3 support
 sys-fs/aufs3:nfs - Enable support for nfs export
 sys-fs/aufs3:pax_kernel - Apply patch needed for pax enabled kernels
 sys-fs/aufs3:ramfs - Enable initramfs/rootfs support
