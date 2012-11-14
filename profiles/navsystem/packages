@@ -18,3 +18,5 @@
 *sys-fs/cryptsetup
 *sys-boot/grub-static
 *net-misc/bridge-utils
+*sys-process/vixie-cron
+*app-admin/logrotate
