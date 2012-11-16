@@ -1,9 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.407 2012/11/11 23:25:24 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.409 2012/11/16 05:19:05 phajdan.jr Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+#
+# Pawel Hajdan jr <phajdan.jr@gentoo.org> (15 Nov 2012)
+# Experimental, requires masked ffmpeg, no libav support yet.
+www-client/chromium system-ffmpeg
 
 # Mike Gilbert <floppym@gentoo.org> (11 Nov 2012)
 # Unit tests tend to segfault/crash, upstream doesn't care at the moment.
@@ -106,6 +110,7 @@ sys-boot/grub libzfs
 # mask wayland flag for stable mesa, #419473
 =media-libs/mesa-8.0.3 wayland
 =media-libs/mesa-8.0.4-r1 wayland
+=media-libs/mesa-9.0 wayland
 
 # Zac Medico <zmedico@gentoo.org> (13 Jun 2012)
 # Mask USE=pypy1_9 for sys-apps/portage, since pypy has limited KEYWORDS.
