@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.125 2012/11/09 09:50:16 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.127 2012/11/14 10:13:06 scarabeus Exp $
 
 EAPI=4
 
@@ -68,7 +68,7 @@ unset EXT_URI
 unset ADDONS_SRC
 
 IUSE="bluetooth +branding +cups dbus eds gnome gstreamer +gtk gtk3
-jemalloc kde mysql odk opengl postgres telepathy test +vba +webdav"
+jemalloc kde mysql nsplugin odk opengl postgres telepathy test +vba +webdav"
 
 LO_EXTS="nlpsolver pdfimport presenter-console presenter-minimizer scripting-beanshell scripting-javascript wiki-publisher"
 # Unpackaged separate extensions:
@@ -152,6 +152,7 @@ COMMON_DEPEND="
 		dev-java/tomcat-servlet-api:3.0
 	)
 	mysql? ( >=dev-db/mysql-connector-c++-1.1.0 )
+	nsplugin? ( net-misc/npapi-sdk )
 	opengl? (
 		virtual/glu
 		virtual/opengl
@@ -230,6 +231,7 @@ REQUIRED_USE="
 	libreoffice_extensions_scripting-beanshell? ( java )
 	libreoffice_extensions_scripting-javascript? ( java )
 	libreoffice_extensions_wiki-publisher? ( java )
+	nsplugin? ( gtk )
 "
 
 S="${WORKDIR}/${PN}-core-${PV}"
@@ -423,8 +425,6 @@ src_configure() {
 	# --disable-kde: kde3 support
 	# --disable-mozilla: mozilla internal is for contact integration, never
 	#   worked on linux
-	# --disable-nsplugin: does not work at all, reall effort to fix this
-	#   required
 	# --disable-pch: precompiled headers cause build crashes
 	# --disable-rpath: relative runtime path is not desired
 	# --disable-systray: quickstarter does not actually work at all so do not
@@ -460,7 +460,6 @@ src_configure() {
 		--disable-kdeab \
 		--disable-kde \
 		--disable-mozilla \
-		--disable-nsplugin \
 		--disable-online-update \
 		--disable-pch \
 		--disable-rpath \
@@ -499,6 +498,7 @@ src_configure() {
 		$(use_enable gtk3) \
 		$(use_enable kde kde4) \
 		$(use_enable mysql ext-mysql-connector) \
+		$(use_enable nsplugin) \
 		$(use_enable odk) \
 		$(use_enable opengl) \
 		$(use_enable postgres postgresql-sdbc) \
@@ -553,6 +553,9 @@ src_install() {
 		insinto /usr/$(get_libdir)/${PN}/program
 		newins "${WORKDIR}/branding-sofficerc" sofficerc
 	fi
+
+	# symlink the nsplugin to proper location
+	use nsplugin && inst_plugin /usr/$(get_libdir)/libreoffice/program/libnpsoplugin.so
 
 	# Hack for offlinehelp, this needs fixing upstream at some point.
 	# It is broken because we send --without-help

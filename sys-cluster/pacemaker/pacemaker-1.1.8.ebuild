@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/pacemaker-1.1.8.ebuild,v 1.1 2012/11/09 08:20:25 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/pacemaker-1.1.8.ebuild,v 1.3 2012/11/14 17:24:22 jer Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ SRC_URI="https://github.com/ClusterLabs/${PN}/tarball/${MY_P} -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 REQUIRED_USE="cman? ( !heartbeat )"
 IUSE="acl cman heartbeat smtp snmp static-libs"
 
@@ -27,7 +27,6 @@ DEPEND="
 	dev-libs/libxslt
 	sys-cluster/cluster-glue
 	>=sys-cluster/libqb-0.14.0
-	sys-cluster/crmsh
 	sys-cluster/resource-agents
 	cman? ( sys-cluster/cman )
 	heartbeat? ( >=sys-cluster/heartbeat-3.0.0 )
@@ -36,6 +35,7 @@ DEPEND="
 	snmp? ( net-analyzer/net-snmp )
 "
 RDEPEND="${DEPEND}"
+PDEPEND="sys-cluster/crmsh"
 
 PATCHES=(
 	"${FILESDIR}"/${PV}-backwards_compatibility.patch

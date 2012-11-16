@@ -1226,8 +1226,9 @@ dev-lang/gdl:proj - Add support for sci-libs/proj (geographic projections)
 dev-lang/gdl:udunits - Add support for manipulating units of physical quantities
 dev-lang/gforth:force-reg - Enable a possibly unstable GCC flag for possibly large performance gains
 dev-lang/ghc:binary - Install the binary version directly, rather than using it to build the source version.
-dev-lang/ghc:ghcbootstrap - Internal: Bootstrap GHC from an existing GHC installation.
-dev-lang/ghc:llvm - Enable llvm code geenrator for ghc (-fllvm)
+dev-lang/ghc:ghcbootstrap - Bootstrap from an existing GHC installation.
+dev-lang/ghc:ghcmakebinary - Build with less runtime depends (bundle libffi for building bootstrap binaries).
+dev-lang/ghc:llvm - Enable llvm code geenrator for ghc (-fllvm).
 dev-lang/icc:eclipse - Install the dev-util/eclipse-sdk plugins
 dev-lang/icon:iplsrc - install the icon programming library source
 dev-lang/idb:eclipse - Install the dev-util/eclipse-sdk plugins
@@ -2035,6 +2036,7 @@ games-strategy/megaglest:unicode - Use unicode strings for wxwidgets
 games-strategy/megaglest:wxuniversal - Use the wxUniversal port which implements the various GUI controls by drawing them itself
 games-strategy/naev:mixer - Enables media-libs/sdl-mixer sound backend in addition to media-libs/openal one.
 games-strategy/openra:cg - NVIDIA toolkit plugin
+games-strategy/s25rttr:glfw - Compile another video driver based on media-libs/glfw.
 games-strategy/ufo-ai:editor - Build map editor
 games-strategy/uqm:music - download and install music files (large)
 games-strategy/uqm:remix - download and install music remix files (large)
@@ -3749,6 +3751,7 @@ net-dns/ddclient:hardened - Use iproute2 instead of ifconfig to grab an IP addre
 net-dns/ddclient:ssl - Connect to the server utilizing SSL
 net-dns/dnsmasq:conntrack - Add support for Linux conntrack connection marking.
 net-dns/dnsmasq:dhcp - Enable support for reading ISC DHCPd lease files
+net-dns/dnsmasq:dhcp-tools - Install extra command line tools for manually managing DHCP leases
 net-dns/dnsmasq:script - Enable support for calling scripts when leases change
 net-dns/dnsmasq:tftp - Enables built in TFTP server for netbooting
 net-dns/ldns-utils:ecdsa - Enable ECDSA support
@@ -4356,10 +4359,11 @@ net-mail/vpopmail:maildrop - Enables mail-filter/maildrop support in vdelivermai
 net-mail/vpopmail:spamassassin - Enables mail-filter/spamassassin support
 net-misc/apt-cacher-ng:fuse - Install the sys-fs/fuse based acngfs, to use a userspace filesystem for the apt cache.
 net-misc/aria2:ares - Enables support for asynchronous DNS using the c-ares library
-net-misc/aria2:bittorrent - Enables support for the bittorrent protocol
-net-misc/aria2:metalink - Enables support for metalink
-net-misc/aria2:nettle - Use dev-libs/nettle and dev-libs/gmp for bittorrent/metalink crypto instead of dev-libs/libgcrypt when using net-libs/gnutls for SSL or without SSL support at all.
-net-misc/aria2:scripts - Install additional scripts which use aria2's xmlrpc functionality
+net-misc/aria2:bittorrent - Enable support for the bittorrent protocol.
+net-misc/aria2:libxml2 - Use dev-libs/libxml2 for XML parsing (preferred) instead of dev-libs/expat.
+net-misc/aria2:metalink - Enable support for metalink.
+net-misc/aria2:nettle - Use dev-libs/nettle and dev-libs/gmp for bittorrent/metalink crypto instead of dev-libs/libgcrypt (when dev-libs/openssl is not being used).
+net-misc/aria2:scripts - Install additional scripts which use aria2's xmlrpc functionality.
 net-misc/asterisk:ais - Support clustering using the Application Interface Specification framework
 net-misc/asterisk:cluster - Enable high-availability support through the Corosync Cluster Engine
 net-misc/asterisk:dahdi - Support Digium compatible hardware (formerly known as Zaptel).
@@ -5595,6 +5599,7 @@ sys-kernel/vanilla-sources:deblob - Remove binary blobs from kernel sources to p
 sys-kernel/vserver-sources:deblob - Remove binary blobs from kernel sources to provide libre license compliance.
 sys-kernel/zen-sources:minimal - Clone git tree with --depth 1 to reduce amount of data to download. Use with caution
 sys-libs/db:rpc - Enable rpc client/server
+sys-libs/freeipmi:nagios - Install a nagios plugin to check sensors' status.
 sys-libs/gdbm:berkdb - enable compatibility layer for UNIX-like dbm and ndbm interfaces
 sys-libs/gdbm:exporter - enable gdbmexport binary for exporting data from gdbm-1.8 databases into gdbm-1.9
 sys-libs/glibc:gd - build memusage and memusagestat tools
