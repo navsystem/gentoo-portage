@@ -24,7 +24,7 @@ RDEPEND="app-emulation/wine
 S="${WORKDIR}"
 
 src_unpack() {
-	7z -o"{S}" e "${DISTDIR}/${A}" || die
+	7z -o"${S}" x "${DISTDIR}/${A}" || die
 }
 
 src_install() {
