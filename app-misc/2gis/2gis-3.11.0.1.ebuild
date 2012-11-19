@@ -15,13 +15,17 @@ SLOT="0"
 KEYWORDS="x86 amd64"
 IUSE="+data"
 
-DEPEND="app-arch/unzip
+DEPEND="app-arch/p7zip
 	media-gfx/icoutils"
 
 RDEPEND="app-emulation/wine
 	data? ( app-misc/2gis-data )"
 
 S="${WORKDIR}"
+
+src_unpack() {
+	7z -o"{S}" e "${DISTDIR}/${A}" || die
+}
 
 src_install() {
 	insinto /opt/${PN}
