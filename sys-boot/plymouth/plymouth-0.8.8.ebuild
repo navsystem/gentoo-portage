@@ -10,6 +10,7 @@ DESCRIPTION="Graphical boot animation (splash) and logger"
 HOMEPAGE="http://cgit.freedesktop.org/plymouth/"
 SRC_URI="
 	http://www.freedesktop.org/software/plymouth/releases/${P}.tar.gz
+	http://cgit.freedesktop.org/plymouth/snapshot/${P}.tar.gz
 	http://dev.gentoo.org/~aidecoe/distfiles/${CATEGORY}/${PN}/gentoo-logo.png"
 
 LICENSE="GPL-2"
@@ -59,8 +60,6 @@ src_configure() {
 	use systemd && systemd_to_myeconfargs
 }
 
-S="${WORKDIR}"/plymouth-d7b7e378e6721775b76a99add6a42533bbe0dbf5
-
 src_install() {
 	autotools-utils_src_install
 
@@ -72,7 +71,7 @@ src_install() {
 		local la
 		for la in "${D}/usr/$(get_libdir)"/plymouth/{*.la,renderers/*.la}; do
 			einfo "Removing left ${la#${D}}"
-			rm "${la}" || die "rm '${la}'"
+			rm "${la}"
 		done
 	fi
 
