@@ -31,3 +31,6 @@ sys-block/megacli amd64
 ~sys-fs/cryptsetup-1.4.1 amd64 x86
 =media-gfx/splashutils-1.5.4.4-r1 amd64 x86
 ~sys-boot/syslinux-4.06 amd64 x86
+
+# Mark as stable while not stable in main tree
+~net-misc/tigervnc-1.2.0 x86
