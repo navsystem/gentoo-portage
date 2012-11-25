@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openimageio/openimageio-1.1.1.ebuild,v 1.1 2012/11/24 16:08:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openimageio/openimageio-1.1.1.ebuild,v 1.3 2012/11/25 11:57:33 pinkbyte Exp $
 
 EAPI=5
 
 PYTHON_DEPEND="python? 2:2.7"
 
-inherit cmake-utils multilib python
+inherit cmake-utils multilib python vcs-snapshot
 
 DESCRIPTION="A library for reading and writing images"
 HOMEPAGE="http://sites.google.com/site/openimageio/ http://github.com/OpenImageIO"
@@ -15,24 +15,24 @@ SRC_URI="http://github.com/OpenImageIO/oiio/tarball/Release-${PV} -> ${P}.tar.gz
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc64 ~x86"
-IUSE="jpeg2k opencv opengl python qt4 tbb +truetype" # opencolorio
+IUSE="jpeg2k opencolorio opencv opengl python qt4 tbb +truetype"
 
 RESTRICT="test" #431412
 
-# opencolorio? ( media-gfx/opencolorio )
 RDEPEND="dev-libs/boost[python?]
 	dev-libs/pugixml
 	media-libs/glew
 	media-libs/ilmbase
 	media-libs/libpng:0
-	media-libs/libwebp
+	>=media-libs/libwebp-0.2.1
 	media-libs/openexr
 	media-libs/tiff:0
 	sci-libs/hdf5
 	sys-libs/zlib
 	virtual/jpeg
-	jpeg2k? ( media-libs/openjpeg )
-	opencv? ( media-libs/opencv )
+	jpeg2k? ( >=media-libs/openjpeg-1.5 )
+	opencolorio? ( >=media-gfx/opencolorio-1.0.7 )
+	opencv? ( >=media-libs/opencv-2.3 )
 	opengl? (
 		virtual/glu
 		virtual/opengl
@@ -55,11 +55,6 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-	mv OpenImageIO-* "${WORKDIR}"/${P}
-}
-
 src_prepare() {
 	# remove bundled code to make it build
 	# https://github.com/OpenImageIO/oiio/issues/403
@@ -79,7 +74,7 @@ src_configure() {
 		-DUSE_EXTERNAL_PUGIXML=ON
 		-DUSE_FIELD3D=OFF # missing in Portage
 		$(cmake-utils_use_use truetype freetype)
-		-DUSE_OCIO=OFF # $(cmake-utils_use_use opencolorio OCIO), OpenColorIO is outdated in Portage 2012/10
+		$(cmake-utils_use_use opencolorio OCIO)
 		$(cmake-utils_use_use opencv)
 		$(cmake-utils_use_use opengl)
 		$(cmake-utils_use_use jpeg2k OPENJPEG)
