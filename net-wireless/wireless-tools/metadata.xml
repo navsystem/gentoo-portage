@@ -2,8 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>anarchy@gentoo.org</email>
-		<name>Jory A. Pratt</name>
+		<email>zerochaos@gentoo.org</email>
+		<name>Rick Farina</name>
 	</maintainer>
 	<longdescription lang="en">
 		This package provides all the command line tools for configuring
