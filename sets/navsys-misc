@@ -1,6 +1,5 @@
 sys-fs/ntfs3g
 app-emulation/wine
-sci-mathematics/scilab
 app-editors/gvim
 media-sound/audacity
 app-admin/sudo

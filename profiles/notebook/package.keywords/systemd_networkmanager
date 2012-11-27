@@ -5,6 +5,7 @@
 ~sys-auth/polkit-0.107 amd64
 ~net-dialup/ppp-2.4.5  amd64
 <sys-fs/udev-9999  amd64
+<virtual/udev-9999 amd64
 ~sys-fs/lvm2-2.02.95 amd64
 ~sys-block/thin-provisioning-tools-0.1.5 amd64
 ~net-wireless/bluez-4.101 amd64
