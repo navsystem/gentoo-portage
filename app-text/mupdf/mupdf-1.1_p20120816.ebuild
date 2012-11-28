@@ -1,18 +1,18 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-9999.ebuild,v 1.23 2012/11/28 07:33:08 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-1.1_p20120816.ebuild,v 1.1 2012/11/28 08:05:27 xmw Exp $
 
 EAPI=4
 
-inherit eutils flag-o-matic git-2 multilib toolchain-funcs
+inherit eutils flag-o-matic multilib toolchain-funcs
 
 DESCRIPTION="a lightweight PDF viewer and toolkit written in portable C"
 HOMEPAGE="http://mupdf.com/"
-EGIT_REPO_URI="git://git.ghostscript.com/mupdf.git"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="X vanilla"
 
 RDEPEND="media-libs/freetype:2
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-9999-buildsystem.patch
+	epatch "${FILESDIR}"/${PN}-1.1_rc1-buildsystem.patch
 
 	if ! use vanilla ; then
 		epatch "${FILESDIR}"/${PN}-1.1_rc1-zoom-2.patch
@@ -35,7 +35,7 @@ src_prepare() {
 src_compile() {
 	use X || my_nox11="NOX11=yes MUPDF= "
 
-	emake CC="$(tc-getCC)" OS=Linux \
+	emake CC="$(tc-getCC)" AR="$(tc-getAR)" OS=Linux \
 		build=debug verbose=true ${my_nox11}
 }
 
