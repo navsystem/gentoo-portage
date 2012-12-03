@@ -16,5 +16,6 @@
 ~dev-libs/glib-2.32.3 amd64
 ~net-misc/connman-0.78 amd64
 ~sys-fs/udev-init-scripts-16 amd64
-~sys-apps/kmod-10 amd64
+<sys-apps/kmod-9999 amd64
+~app-arch/xz-utils-5.0.4 amd64
 <sys-apps/dbus-9999 amd64
