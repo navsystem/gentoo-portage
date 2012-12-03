@@ -1,10 +1,15 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.412 2012/11/26 23:29:03 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.414 2012/11/30 20:33:32 ottxor Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Christoph Jungans <ottxor@gentoo.org> (30 Nov 2012)
+# cuda only works on x86/amd64, openmm still under testing
+sci-chemistry/gromacs cuda openmm
+
 # Sergey Popov <pinkbyte@gentoo.org> (26 Nov 2012)
 # PDF docs building failed with sandbox violation
 media-gfx/opencolorio	pdf
@@ -18,10 +23,6 @@ net-libs/libkolabxml php
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (15 Nov 2012)
 # Experimental, requires masked ffmpeg, no libav support yet.
 www-client/chromium system-ffmpeg
-
-# Mike Gilbert <floppym@gentoo.org> (11 Nov 2012)
-# Unit tests tend to segfault/crash, upstream doesn't care at the moment.
-net-misc/freerdp test
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (3 Nov 2012)
 # Requires net-dns/unbound which is not keyworded by most arches

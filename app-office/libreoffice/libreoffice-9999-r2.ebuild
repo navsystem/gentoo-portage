@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.134 2012/11/26 12:55:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.137 2012/11/30 20:53:25 scarabeus Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ QT_MINIMAL="4.7.4"
 KDE_SCM="git"
 CMAKE_REQUIRED="never"
 
-PYTHON_DEPEND="2"
+PYTHON_DEPEND="3:3.3"
 PYTHON_USE_WITH="threads,xml"
 
 # experimental ; release ; old
@@ -67,9 +67,9 @@ unset ADDONS_URI
 unset EXT_URI
 unset ADDONS_SRC
 
-IUSE="bluetooth +branding +cups dbus eds gnome gstreamer +gtk gtk3
-jemalloc kde mysql nsplugin odk opengl pdfimport postgres telepathy
-test +vba +webdav"
+IUSE="bluetooth +branding +cups dbus debug eds gnome gstreamer +gtk
+gtk3 jemalloc kde mysql nsplugin odk opengl pdfimport postgres
+telepathy test +vba +webdav"
 
 LO_EXTS="nlpsolver presenter-console presenter-minimizer scripting-beanshell scripting-javascript wiki-publisher"
 # Unpackaged separate extensions:
@@ -105,7 +105,7 @@ COMMON_DEPEND="
 	dev-libs/expat
 	>=dev-libs/hyphen-2.7.1
 	>=dev-libs/icu-4.8.1.1
-	dev-libs/liborcus
+	>=dev-libs/liborcus-0.3
 	>=dev-libs/nspr-4.8.8
 	>=dev-libs/nss-3.12.9
 	>=dev-lang/perl-5.0
@@ -267,7 +267,7 @@ pkg_setup() {
 	java-pkg-opt-2_pkg_setup
 	kde4-base_pkg_setup
 
-	python_set_active_version 2
+	python_set_active_version 3
 	python_pkg_setup
 
 	[[ ${MERGE_TYPE} != binary ]] && check-reqs_pkg_setup
@@ -482,6 +482,7 @@ src_configure() {
 		--without-sun-templates \
 		$(use_enable bluetooth sdremote-bluetooth) \
 		$(use_enable cups) \
+		$(use_enable debug) \
 		$(use_enable dbus) \
 		$(use_enable eds evolution2) \
 		$(use_enable gnome gconf) \

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/alpine/alpine-2.00-r5.ebuild,v 1.2 2012/10/23 05:50:55 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/alpine/alpine-2.00-r5.ebuild,v 1.4 2012/11/30 11:27:51 ago Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.cac.washington.edu/alpine/${P}.tar.bz2
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="doc ipv6 kerberos ldap nls onlyalpine passfile smime spell ssl threads topal +chappa"
 
 DEPEND="virtual/pam
@@ -104,22 +104,5 @@ src_install() {
 
 		docinto html/tech-notes
 		dohtml -r doc/tech-notes/
-	fi
-}
-
-pkg_postinst() {
-	if use spell ; then
-		elog
-		elog "In order to use spell checking"
-		elog "  emerge app-dicts/aspell-\<your_langs\>"
-		elog "and setup alpine with:"
-		elog "  Speller = /usr/bin/aspell -c"
-		elog
-	fi
-	if use passfile ; then
-		elog
-		elog "${PN} will cache passwords between connections."
-		elog "File ~/.pinepwd will be used for this."
-		elog
 	fi
 }
