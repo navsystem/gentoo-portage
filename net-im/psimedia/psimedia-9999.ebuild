@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psimedia/psimedia-1.0.3-r3.ebuild,v 1.9 2012/12/02 16:56:10 eva Exp $
 
 EAPI="4"
 
@@ -15,23 +15,23 @@ SLOT="0"
 KEYWORDS=""
 IUSE="demo extras"
 
-COMMON_DEPEND="
-	>=dev-libs/glib-2.20.0
-	>=media-libs/gstreamer-0.10.22
-	>=media-libs/gst-plugins-base-0.10.22
-	media-libs/gst-plugins-good
+COMMON_DEPEND=">=dev-libs/glib-2.18
+	>=media-libs/gstreamer-0.10.22:0.10
+	>=media-libs/gst-plugins-base-0.10.22:0.10
+	media-libs/gst-plugins-good:0.10
 	>=dev-libs/liboil-0.3
 	>=x11-libs/qt-gui-4.4:4
 	>=media-libs/speex-1.2_rc1
 "
 RDEPEND="${COMMON_DEPEND}
-	media-plugins/gst-plugins-speex
-	>=media-plugins/gst-plugins-vorbis-0.10.22
-	>=media-plugins/gst-plugins-theora-0.10.22
-	>=media-plugins/gst-plugins-alsa-0.10.22
-	>=media-plugins/gst-plugins-ogg-0.10.22
-	media-plugins/gst-plugins-v4l2
-	media-plugins/gst-plugins-jpeg
+	media-plugins/gst-plugins-speex:0.10
+	>=media-plugins/gst-plugins-vorbis-0.10.22:0.10
+	>=media-plugins/gst-plugins-theora-0.10.22:0.10
+	>=media-plugins/gst-plugins-alsa-0.10.22:0.10
+	>=media-plugins/gst-plugins-ogg-0.10.22:0.10
+	media-plugins/gst-plugins-v4l2:0.10
+	media-plugins/gst-plugins-jpeg:0.10
+	net-im/psi
 	!<net-im/psi-0.13_rc1
 	extras? ( >=net-im/psi-0.15_pre20110125[extras] )
 "
