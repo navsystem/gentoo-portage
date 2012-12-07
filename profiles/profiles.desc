@@ -27,6 +27,7 @@ amd64           notebook/general/amd64                          stable
 amd64           notebook/developer/amd64                        dev
 amd64           navsystem/general/amd64                         stable
 amd64           navsystem/developer/amd64                       dev
+amd64           default/linux/amd64/10.0/x32                    dev
 
 # ARM Profiles
 arm             default/linux/arm/10.0                          stable
