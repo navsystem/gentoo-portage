@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14279 2012/12/06 23:04:52 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14283 2012/12/09 11:41:03 moult Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,17 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michał Górny <mgorny@gentoo.org> (07 Dec 2012)
+# Experimental version disabling XDM-AUTHENTICATION-1 (in favor
+# of MIT-MAGIC-COOKIE-1). It should fix bug #306223 but it can also
+# raise unknown issues. Bug #445662 for more details.
+=x11-apps/xdm-1.1.11-r2
+
+# Doug Goldstein <cardoe@gentoo.org> (07 Dec 2012)
+# Masked for removal in 30 days. (07 Jan 2012)
+# Upstream says the project is dead and is being replaced
+app-emulation/qemulator
 
 # Sergei Trofimovich <slyfox@gentoo.org> (06 Dec 2012)
 # dev-haskell/time is a core library for ghc-6.12 and upper.
@@ -537,11 +548,6 @@ media-libs/gmyth
 media-plugins/gst-plugins-mythtv
 
 # Pacho Ramos <pacho@gentoo.org> (16 Sep 2012)
-# Fails with kernel-3.4, its included alsa version should
-# support affected hardware (#422641). Removal in a month.
-media-sound/xfi-drivers
-
-# Pacho Ramos <pacho@gentoo.org> (16 Sep 2012)
 # Has overflows (#423619), upstream dead and only useful for MP3
 # players released in 1998. Removal in a month.
 app-misc/rio
@@ -712,11 +718,6 @@ kde-misc/kgtk
 # Sébastien Fabbro <bicatali@gentoo.org> (26 Feb 2012)
 # Needs development version x11-libs/wxGTK
 >=sci-visualization/fityk-1.1
-
-# Michał Górny <mgorny@gentoo.org> (21 Feb 2012)
-# Masked until all reverse dependencies have proper versioned
-# DEPENDs.
->=net-misc/npapi-sdk-0.27.1
 
 # Angelo Arrifano <miknix@gentoo.org> (10 Feb 2012)
 # Upstream versioning changed, hard masked old versions
