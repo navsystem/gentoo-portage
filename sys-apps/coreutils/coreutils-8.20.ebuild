@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-8.20.ebuild,v 1.6 2012/12/04 15:36:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-8.20.ebuild,v 1.8 2012/12/08 19:40:53 vapier Exp $
 
 EAPI="3"
 
 inherit eutils flag-o-matic toolchain-funcs
 
-PATCH_VER="1.0"
+PATCH_VER="1.1"
 DESCRIPTION="Standard GNU file utilities (chmod, cp, dd, dir, ls...), text utilities (sort, tr, head, wc..), and shell utilities (whoami, who,...)"
 HOMEPAGE="http://www.gnu.org/software/coreutils/"
 SRC_URI="mirror://gnu-alpha/coreutils/${P}.tar.xz
@@ -54,7 +54,7 @@ src_prepare() {
 	# Also, it's not like we changed the usage on any of these things,
 	# so let's just update the timestamps and skip the help2man step.
 	set -- man/*.x
-	tc-is-cross-compiler && touch ${@/%x/1}
+	touch ${@/%x/1}
 
 	# Avoid perl dep for compiled in dircolors default #348642
 	if ! has_version dev-lang/perl ; then

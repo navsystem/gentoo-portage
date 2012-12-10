@@ -1621,6 +1621,7 @@ dev-python/kaa-base:tls - SSL/TLS support via dev-python/tlslite
 dev-python/ldaptor:web - enable the web front end for ldaptor (uses dev-python/nevow)
 dev-python/markdown:pygments - Enable fancy pygments support
 dev-python/matplotlib:excel - Pull dev-python/xlwt for the exceltools toolkit
+dev-python/matplotlib:gtk3 - Use x11-libs/gtk+:3 instead of x11-libs/gtk+:2
 dev-python/matplotlib:traits - Pull dev-python/traits for the experimental enthought traits support
 dev-python/mpmath:matplotlib - Add support for dev-python/matplotlib
 dev-python/netaddr:cli - Enable netaddr shell with dev-python/ipython
@@ -1989,6 +1990,7 @@ games-mud/tf:option102 - enable telnet option 102 support.
 games-puzzle/cuyo:music - Enable playing of background music
 games-puzzle/jag:editor - Install level editor
 games-puzzle/jag:extras - Install additional graphics
+games-puzzle/pingus:music - Enable playing of background music
 games-puzzle/xlogical:alt_gfx - Use alternate graphics which are closer to the original Amiga version
 games-roguelike/angband:sound - Enable and install sounds
 games-roguelike/stone-soup:ncurses - Enable for console based build (uses ncurses).
@@ -2249,7 +2251,6 @@ kde-base/kdeutils-meta:floppy - Install kde-base/kfloppy to format and create DO
 kde-base/kdm:consolekit - Enables support for authorization using consolekit
 kde-base/kget:bittorrent - Enable bittorrent transfer plugin through net-libs/libktorrent
 kde-base/kget:webkit - Enable KdeWebkit browser plugin using kde-misc/kwebkitpart
-kde-base/kig:kig-scripting - Support Python scripting
 kde-base/kig:scripting - Support Python scripting
 kde-base/kimono:akonadi - Compile bindings for Akonadi.
 kde-base/kimono:plasma - Compile bindings for KDE's Plasma.
@@ -2520,7 +2521,10 @@ media-gfx/blender:tweak-mode - This flag allows you to model without confirming 
 media-gfx/blender:verse - Adds verse clustering features to Blender.
 media-gfx/brlcad:benchmarks - Run benchmarks during test phase (need test option enabled)
 media-gfx/comix:rar - Pulls app-arch/unrar for rar file support
+media-gfx/darktable:colord - Support color management using x11-misc/colord
+media-gfx/darktable:facebook - Add support for uploading photos to facebook
 media-gfx/darktable:flickr - Add support for uploading photos to flickr
+media-gfx/darktable:geo - Enable geotagging support
 media-gfx/darktable:opencl - Enable opencl support
 media-gfx/darktable:rawspeed - Enable the rawspeed backend
 media-gfx/darktable:slideshow - Build the opengl slideshow viewer
@@ -2675,6 +2679,7 @@ media-libs/gst-rtsp-server:vala - Add support for dev-lang/vala
 media-libs/gstreamer:introspection - Use dev-libs/gobject-introspection for introspection
 media-libs/gstreamer:orc - Disable some PaX memory protections to allow plugins that use dev-lang/orc for runtime optimization to be used on hardened PaX systems
 media-libs/gupnp-dlna:introspection - Use dev-libs/gobject-introspection for introspection
+media-libs/jbig2enc:webp - Add support for WEBP image format
 media-libs/leptonica:utils - Install command-line utilities
 media-libs/leptonica:webp - Adds support for the WebP image format
 media-libs/libass:enca - Enables support for charset discovery and conversion.
@@ -3696,7 +3701,7 @@ net-analyzer/snort:zlib - Enables HTTP inspection of compressed web traffic. Req
 net-analyzer/symon:perl - Enables a generic perl symux client
 net-analyzer/symon:symon - Enables the system monitor. Offers no functionality but monitoring and forwarding of measured data
 net-analyzer/symon:symux - Enables the multiplexer which stores incoming symon streams on disk in RRD (net-analyzer/rrdtool) files
-net-analyzer/tcpdump:chroot - Enable chrooting when dropping privileges
+net-analyzer/tcpdump:chroot - Chroot into /var/lib/tcpdump when dropping privileges
 net-analyzer/tcpdump:smi - Build with net-libs/libsmi to load MIBs on the fly to decode SNMP packets
 net-analyzer/tcpreplay:pcapnav - Enable if you want the jump to byte offset feature via net-libs/libpcapnav
 net-analyzer/tcpreplay:tcpdump - Use net-analyzer/tcpdump for packet decoding feature
@@ -3956,7 +3961,7 @@ net-im/leechcraft-azoth:shx - Build shell command executor plugin
 net-im/leechcraft-azoth:standardstyles - Build support for standard Azoth styles engine
 net-im/leechcraft-azoth:xoox - Build Xoox, gloox-based plugin for XMPP support (deprecated, use 'xmpp' for new versions)
 net-im/leechcraft-azoth:xtazy - Build Xtazy for publishing currently playing tune
-net-im/leechcraft-azoth:zheet - Build Zheet, libmsn-based plugin for Windows Live Messenger support
+net-im/leechcraft-azoth:zheet - Build Zheet, libmsn-based plugin for Windows Live Messenger support (deprecated, use 'msn' for new versions)
 net-im/mcabber:aspell - Adds support for app-text/aspell spell checker.
 net-im/mcabber:otr - Enable encrypted conversations using Off-The-Records messaging
 net-im/minbif:video - Add video support
@@ -5271,6 +5276,7 @@ sys-apps/gnome-disk-utility:remote-access - Enable access to remote udisks daemo
 sys-apps/hwdata-gentoo:binary-drivers - Adds support for ATI/NVIDIA binary drivers
 sys-apps/hwloc:numa - Add support for numa memory allocation
 sys-apps/hwloc:pci - Enable PCI device discovery using libpci
+sys-apps/hwloc:plugins - Build hwloc components as plugins so that the hwloc core library does not directly depend on their dependencies (for instance the libpci library)
 sys-apps/ipmitool:openipmi - Use the system OpenIPMI implementation.
 sys-apps/iproute2:iptables - include support for iptables filtering
 sys-apps/irqbalance:numa - Support balancing IRQs across NUMA nodes
@@ -5550,6 +5556,13 @@ sys-fs/ecryptfs-utils:gpg - Enable app-crypt/gnupg key module
 sys-fs/ecryptfs-utils:openssl - Enable dev-libs/openssl key module
 sys-fs/ecryptfs-utils:pkcs11 - Enable PKCS#11 (Smartcards) key module
 sys-fs/ecryptfs-utils:tpm - Enable support for Trusted Platform Module (TPM) using app-crypt/trousers
+sys-fs/eudev:gudev - enable libudev gobject interface
+sys-fs/eudev:hwdb - read vendor/device string database and add it to udev database
+sys-fs/eudev:introspection - Use dev-libs/gobject-introspection for introspection
+sys-fs/eudev:keymap - map custom hardware's multimedia keys
+sys-fs/eudev:kmod - enable module loading through libkmod (requires modules)
+sys-fs/eudev:modutils - enable module loading support
+sys-fs/eudev:openrc - install the OpenRC init scripts
 sys-fs/fur:void-chmod - Enable fake hook for "chmod" that will only return 0
 sys-fs/lessfs:filelog - Enable the ability to log to a file instead of syslog
 sys-fs/lessfs:memtrace - Enable leefs to create a report regarding the memory allocation. This feature should be used for debugging purposes to avoid performance degradation
@@ -6193,6 +6206,7 @@ x11-wm/compiz:gconf - Enable the GConf-based configuration backend; it is not re
 x11-wm/compiz-fusion:emerald - Install the x11-wm/emerald package.
 x11-wm/compiz-fusion:unsupported - Install the x11-plugins/compiz-fusion-plugins-unsupported package.
 x11-wm/echinus:xrandr - Enable support for multihead configuration
+x11-wm/enlightenment:emotion - Enable support for media-libs/emotion
 x11-wm/enlightenment:enlightenment_modules_access - Accessibility module designed to improve ease of use for the vision impaired and the blind
 x11-wm/enlightenment:enlightenment_modules_backlight - Backlight control slider gadget
 x11-wm/enlightenment:enlightenment_modules_battery - A gadget to visualize your battery status
@@ -6274,10 +6288,8 @@ x11-wm/windowmaker:vdesktop - Enable dynamic virtual desktop (conflicts with sof
 x11-wm/windowmaker:xrandr - Enable XRandR window extension support
 x11-wm/xmonad:default-term - Pull terminal specified in default xmonad config to be a bit less hostile by default.
 x11-wm/xpra:clipboard - Enable clipboard support
-x11-wm/xpra:parti - Runtime support for partioning window manager
 x11-wm/xpra:rencode - Enable rencode support
 x11-wm/xpra:server - Build server-side code
-x11-wm/xpra:ssh - Runtime support for secure shell communication
 x11-wm/xpra:vpx - Enable vpx image format support
 x11-wm/xpra:webp - Enable webp image format support
 xfce-base/libxfce4ui:glade - Build support for Glade 3's GtkBuilder implementation
