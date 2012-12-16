@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.496 2012/12/01 11:18:24 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.498 2012/12/15 17:00:34 mgorny Exp $
 
 # Keep them sorted
 
@@ -332,6 +332,7 @@ sybase - Adds support for the Sybase SQL Database Server
 sybase-ct - Adds support for Sybase-CT
 symlink - Force kernel ebuilds to automatically update the /usr/src/linux symlink
 syslog - Enables support for syslog
+systemd - Enable use of systemd-specific libraries and features like socket activation or session tracking
 sysvipc - Support for System V-compatible inter-process communication
 szip - Use the szip compression library
 taglib - Enable tagging support with taglib
@@ -350,7 +351,8 @@ truetype - Adds support for FreeType and/or FreeType2 fonts
 uclibc - Enable uclibc specific patches and build or link uclibc
 udev - Enable sys-fs/udev integration (device discovery, power and storage device support, etc)
 unicode - Adds support for Unicode
-upnp - Enable support for the Universal Plug and Play (UPnP) network protocol
+upnp - Enable UPnP port mapping support
+upnp-av - Enable UPnP audio/video streaming support
 usb - Adds USB support to applications that have optional USB support (e.g. cups)
 v4l - Enable support for video4linux (using linux-headers or userspace libv4l libraries)
 vanilla - Do not add extra patches which change default behaviour; DO NOT USE THIS ON A GLOBAL SCALE as the severity of the meaning changes drastically
