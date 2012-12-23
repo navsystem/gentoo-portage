@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-2.1.3-r1.ebuild,v 1.12 2012/12/22 07:36:33 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-2.1.3-r1.ebuild,v 1.14 2012/12/23 17:04:21 ago Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -15,7 +15,7 @@ SRC_URI="http://people.redhat.com/sgrubb/audit/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ia64 ~mips ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 hppa ~ia64 ~mips ppc ppc64 ~sparc x86"
 IUSE="ldap prelude python"
 # Testcases are pretty useless as they are built for RedHat users/groups and
 # kernels.
@@ -143,6 +143,7 @@ src_install() {
 	gen_usr_ldscript -a audit auparse
 
 	[ -f "${D}"/sbin/audisp-remote ] && \
+	dodir /usr/sbin && \
 	mv "${D}"/{sbin,usr/sbin}/audisp-remote || die
 
 	# remove RedHat garbage
@@ -164,8 +165,6 @@ src_install() {
 }
 
 pkg_preinst() {
-# default functions is missing for pkg_preinst in EAPI 3
-#	default
 	# Preserve from the audit-1 series
 	preserve_old_lib /$(get_libdir)/libau{dit,parse}.so.0
 }
