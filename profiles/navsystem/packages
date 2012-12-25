@@ -13,7 +13,7 @@
 *sys-process/htop
 *net-analyzer/jnettop
 *net-analyzer/netcat6
-net-analyzer/nettop
+*net-analyzer/nettop
 *sys-apps/less
 *sys-process/iotop
 *sys-fs/cryptsetup
