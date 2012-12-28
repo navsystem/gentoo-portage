@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-0.6.9.ebuild,v 1.1 2010/02/24 16:39:28 yngwin Exp $
+# $Header: $
 
-EAPI="2"
+EAPI="4"
 
 inherit qt4-r2
 
@@ -18,12 +18,15 @@ KEYWORDS="amd64 x86"
 IUSE="debug"
 
 DEPEND="x11-libs/qt-opengl:4
-	sys-libs/zlib"
+	sys-libs/zlib
+	virtual/glu"
 
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/glc_lib"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-install_path.patch"
+	epatch	"${FILESDIR}/${PN}-install_path.patch" \
+		"${FILESDIR}/${PN}-depend_on_libGLU.patch" \
+		"${FILESDIR}/${PN}-fix_inline_shared_functions.patch"
 }
