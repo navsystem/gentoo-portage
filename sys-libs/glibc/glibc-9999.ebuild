@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-9999.ebuild,v 1.17 2012/12/25 21:48:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-9999.ebuild,v 1.19 2013/01/02 00:51:16 vapier Exp $
 
 inherit eutils versionator toolchain-funcs flag-o-matic gnuconfig multilib unpacker multiprocessing
 
 DESCRIPTION="GNU libc6 (also called glibc2) C library"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 
-LICENSE="LGPL-2"
+LICENSE="LGPL-2.1+ BSD HPND ISC inner-net rc PCRE"
 #KEYWORDS="~alpha ~amd64 ~arm -hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 RESTRICT="strip" # strip ourself #46186
 EMULTILIB_PKG="true"
@@ -27,7 +27,7 @@ esac
 PATCH_VER=""                                   # Gentoo patchset
 NPTL_KERN_VER=${NPTL_KERN_VER:-"2.6.16"}       # min kernel version nptl requires
 
-IUSE="debug gd hardened multilib selinux systemtap profile vanilla crosscompile_opts_headers-only"
+IUSE="debug gd hardened multilib nscd selinux systemtap profile vanilla crosscompile_opts_headers-only"
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries

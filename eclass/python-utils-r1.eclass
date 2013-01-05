@@ -1,11 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.10 2012/12/27 22:56:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.12 2013/01/02 21:12:44 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
-# Michał Górny <mgorny@gentoo.org>
-# Python herd <python@gentoo.org>
+# Python team <python@gentoo.org>
 # @AUTHOR:
 # Author: Michał Górny <mgorny@gentoo.org>
 # Based on work of: Krzysztof Pawlik <nelchael@gentoo.org>
@@ -490,10 +489,10 @@ python_doscript() {
 
 		debug-print "${FUNCNAME}: ${oldfn} -> ${newfn}"
 		newins "${f}" "${newfn}" || die
-		_python_rewrite_shebang "${D}/${d}/${newfn}"
+		_python_rewrite_shebang "${ED}/${d}/${newfn}"
 
 		# install the wrapper
-		_python_ln_rel "${ED}"/usr/bin/python-exec "${D}/${d}/${oldfn}" || die
+		_python_ln_rel "${ED}"/usr/bin/python-exec "${ED}/${d}/${oldfn}" || die
 	done
 }
 
@@ -501,7 +500,7 @@ python_doscript() {
 # @DEFAULT_UNSET
 # @DESCRIPTION:
 # The current module root for python_domodule(). The path can be either
-# an absolute system path (it must start with a slash, and ${D} will be
+# an absolute system path (it must start with a slash, and ${ED} will be
 # prepended to it) or relative to the implementation's site-packages directory
 # (then it must start with a non-slash character).
 #
@@ -561,7 +560,7 @@ python_domodule() {
 		local PYTHON_SITEDIR=${PYTHON_SITEDIR}
 		[[ ${PYTHON_SITEDIR} ]] || python_export PYTHON_SITEDIR
 
-		d=${PYTHON_SITEDIR}/${python_moduleroot}
+		d=${PYTHON_SITEDIR#${EPREFIX}}/${python_moduleroot}
 	fi
 
 	local INSDESTTREE
@@ -569,7 +568,7 @@ python_domodule() {
 	insinto "${d}"
 	doins -r "${@}" || die
 
-	python_optimize "${D}/${d}"
+	python_optimize "${ED}/${d}"
 }
 
 _PYTHON_UTILS_R1=1

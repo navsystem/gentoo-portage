@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.6.2.ebuild,v 1.1 2012/12/26 21:45:01 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.6.2.ebuild,v 1.6 2013/01/01 14:19:14 ago Exp $
 
 EAPI="5"
 GNOME2_LA_PUNT="yes"
@@ -17,7 +17,7 @@ SRC_URI="${SRC_URI}
 LICENSE="GPL-2+"
 SLOT="0"
 IUSE="accessibility audit +consolekit +fallback fprint +gnome-shell +introspection ipv6 ldap plymouth selinux smartcard systemd tcpd test xinerama"
-KEYWORDS="~amd64 ~sh ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sh ~x86"
 
 # NOTE: x11-base/xorg-server dep is for X_SERVER_PATH etc, bug #295686
 # nspr used by smartcard extension
@@ -135,6 +135,10 @@ src_prepare() {
 
 	# automagic selinux :/
 	epatch "${FILESDIR}/${PN}-3.6.0-selinux-automagic.patch"
+
+	# spurious unicode characters causing build failure, bug #449062
+	# https://bugzilla.gnome.org/show_bug.cgi?id=690842
+	LC_ALL=C epatch "${FILESDIR}/${PN}-3.6.2-gdm-slave.xml-unicode.patch"
 
 	# don't load accessibility support at runtime when USE=-accessibility
 	use accessibility || epatch "${FILESDIR}/${PN}-3.3.92.1-disable-accessibility.patch"
