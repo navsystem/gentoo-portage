@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/spotify-0.8.8.323.ebuild,v 1.1 2013/01/08 04:10:04 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/spotify-0.8.8.323.ebuild,v 1.3 2013/01/09 00:52:09 prometheanfire Exp $
 
 EAPI=4
 inherit pax-utils
@@ -60,6 +60,9 @@ RDEPEND="${DEPEND}
 		gnome? ( gnome-extra/gnome-integration-spotify )"
 
 RESTRICT="mirror strip"
+
+QA_PREBUILT="/opt/spotify/spotify
+			/opt/spotify/libcef.so"
 
 src_unpack() {
 	mkdir "${P}"
