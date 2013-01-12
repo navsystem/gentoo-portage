@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.0.9999.ebuild,v 1.9 2013/01/01 10:56:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.0.9999.ebuild,v 1.11 2013/01/12 10:52:05 scarabeus Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ QT_MINIMAL="4.7.4"
 KDE_SCM="git"
 CMAKE_REQUIRED="never"
 
-PYTHON_COMPAT=( python3_3 )
+PYTHON_COMPAT=( python2_7 python3_3 )
 PYTHON_REQ_USE="threads,xml"
 
 # experimental ; release ; old
@@ -35,15 +35,20 @@ HOMEPAGE="http://www.libreoffice.org"
 SRC_URI="branding? ( http://dev.gentoo.org/~dilfridge/distfiles/${BRANDING} )"
 [[ -n ${PATCHSET} ]] && SRC_URI+=" http://dev.gentooexperimental.org/~scarabeus/${PATCHSET}"
 
-# Split modules following git/tarballs
-# Core MUST be first!
 # Help is used for the image generator
+# We can also build translations and others if needed.
+# Core must be first
 MODULES="core help"
 # Only release has the tarballs
 if [[ ${PV} != *9999* ]]; then
 	for i in ${DEV_URI}; do
 		for mod in ${MODULES}; do
-			SRC_URI+=" ${i}/${PN}-${mod}-${PV}.tar.xz"
+			if [[ ${mod} == core ]]; then
+				# core is now packed without it in the name, git reponame stay
+				SRC_URI+=" ${i}/${P}.tar.xz"
+			else
+				SRC_URI+=" ${i}/${PN}-${mod}-${PV}.tar.xz"
+			fi
 		done
 		unset mod
 	done
@@ -68,8 +73,8 @@ unset EXT_URI
 unset ADDONS_SRC
 
 IUSE="bluetooth +branding +cups dbus debug eds gnome gstreamer +gtk
-gtk3 jemalloc kde mysql nsplugin odk opengl pdfimport postgres
-telepathy test +vba +webdav"
+gtk3 jemalloc kde mysql nsplugin odk opengl postgres telepathy test +vba
++webdav"
 
 LO_EXTS="nlpsolver presenter-minimizer scripting-beanshell scripting-javascript wiki-publisher"
 # Unpackaged separate extensions:
@@ -100,6 +105,7 @@ COMMON_DEPEND="
 	app-text/libwpd:0.9[tools]
 	app-text/libwpg:0.2
 	>=app-text/libwps-0.2.2
+	>=app-text/poppler-0.16[xpdf-headers(+),cxx]
 	>=dev-cpp/clucene-2.3.3.4-r2
 	dev-cpp/libcmis:0.3
 	dev-db/unixODBC
@@ -157,7 +163,6 @@ COMMON_DEPEND="
 		virtual/glu
 		virtual/opengl
 	)
-	pdfimport? ( >=app-text/poppler-0.16[xpdf-headers(+),cxx] )
 	postgres? ( >=dev-db/postgresql-base-9.0[kerberos] )
 	telepathy? (
 		dev-libs/glib:2
@@ -234,8 +239,6 @@ REQUIRED_USE="
 	nsplugin? ( gtk )
 "
 
-S="${WORKDIR}/${PN}-core-${PV}"
-
 CHECKREQS_MEMORY="512M"
 CHECKREQS_DISK_BUILD="6G"
 
@@ -276,21 +279,13 @@ src_unpack() {
 	local mod mod2 dest tmplfile tmplname mypv
 
 	[[ -n ${PATCHSET} ]] && unpack ${PATCHSET}
-	if use branding; then
-		unpack "${BRANDING}"
-	fi
+	use branding && unpack "${BRANDING}"
 
 	if [[ ${PV} != *9999* ]]; then
+		unpack "${P}.tar.xz"
 		for mod in ${MODULES}; do
+			[[ ${mod} == core ]] && continue
 			unpack "${PN}-${mod}-${PV}.tar.xz"
-			if [[ ${mod} != core ]]; then
-				mod2=${mod}
-				# mapping does not match on help
-				[[ ${mod} == help ]] && mod2="helpcontent2"
-				mkdir -p "${S}/${mod2}/" || die
-				mv -n "${WORKDIR}/${PN}-${mod}-${PV}"/* "${S}/${mod2}" || die
-				rm -rf "${WORKDIR}/${PN}-${mod}-${PV}"
-			fi
 		done
 	else
 		for mod in ${MODULES}; do
@@ -405,6 +400,11 @@ src_configure() {
 		mv -v "${WORKDIR}/branding-intro.png" "${S}/icon-themes/galaxy/brand/intro.png" || die
 	fi
 
+	# System python 2.7 enablement:
+	export PYTHON="${PYTHON}"
+	export PYTHON_CFLAGS=`pkg-config --cflags ${EPYTHON}`
+	export PYTHON_LIBS=`pkg-config --libs ${EPYTHON}`
+
 	# system headers/libs/...: enforce using system packages
 	# --enable-unix-qstart-libpng: use libpng splashscreen that is faster
 	# --enable-cairo: ensure that cairo is always required
@@ -441,6 +441,7 @@ src_configure() {
 		--enable-randr-link \
 		--enable-release-build \
 		--enable-unix-qstart-libpng \
+		--enable-hardlink-deliver \
 		--disable-ccache \
 		--disable-crashdump \
 		--disable-dependency-tracking \
@@ -493,7 +494,6 @@ src_configure() {
 		$(use_enable nsplugin) \
 		$(use_enable odk) \
 		$(use_enable opengl) \
-		$(use_enable pdfimport) \
 		$(use_enable postgres postgresql-sdbc) \
 		$(use_enable telepathy) \
 		$(use_enable test linkoo) \
