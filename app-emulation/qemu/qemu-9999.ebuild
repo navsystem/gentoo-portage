@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.38 2012/12/13 20:03:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.41 2013/01/12 07:36:56 cardoe Exp $
 
 EAPI="4"
 
@@ -27,7 +27,7 @@ LICENSE="GPL-2 LGPL-2 BSD-2"
 SLOT="0"
 IUSE="+aio alsa bluetooth brltty +caps +curl debug doc fdt +jpeg kernel_linux \
 kernel_FreeBSD mixemu ncurses opengl +png pulseaudio python rbd sasl +seccomp \
-sdl smartcard spice static systemtap tci +threads tls usbredir +uuid vde \
+sdl selinux smartcard spice static systemtap tci +threads tls usbredir +uuid vde \
 +vhost-net virtfs +vnc xattr xen xfs"
 
 COMMON_TARGETS="i386 x86_64 alpha arm cris m68k microblaze microblazeel mips mipsel or32 ppc ppc64 sh4 sh4eb sparc sparc64 s390x unicore32"
@@ -67,7 +67,7 @@ LIB_DEPEND=">=dev-libs/glib-2.0[static-libs(+)]
 	rbd? ( sys-cluster/ceph[static-libs(+)] )
 	sasl? ( dev-libs/cyrus-sasl[static-libs(+)] )
 	sdl? ( >=media-libs/libsdl-1.2.11[static-libs(+)] )
-	seccomp? ( >=sys-libs/libseccomp-1.0.0[static-libs(+)] )
+	seccomp? ( >=sys-libs/libseccomp-1.0.1[static-libs(+)] )
 	spice? ( >=app-emulation/spice-0.12.0[static-libs(+)] )
 	tls? ( net-libs/gnutls[static-libs(+)] )
 	uuid? ( >=sys-apps/util-linux-2.16.0[static-libs(+)] )
@@ -87,10 +87,11 @@ RDEPEND="!static? ( ${LIB_DEPEND//\[static-libs(+)]} )
 	pulseaudio? ( media-sound/pulseaudio )
 	python? ( =dev-lang/python-2*[ncurses] )
 	sdl? ( media-libs/libsdl[X] )
+	selinux? ( sec-policy/selinux-qemu )
 	smartcard? ( dev-libs/nss )
 	spice? ( >=app-emulation/spice-protocol-0.12.2 )
 	systemtap? ( dev-util/systemtap )
-	usbredir? ( >=sys-apps/usbredir-0.3.4 )
+	usbredir? ( >=sys-apps/usbredir-0.6 )
 	virtfs? ( sys-libs/libcap )
 	xen? ( app-emulation/xen-tools )"
 
@@ -189,16 +190,22 @@ src_prepare() {
 
 	python_convert_shebangs -r 2 "${S}/scripts/kvm/kvm_stat"
 
-	epatch "${FILESDIR}"/qemu-1.2.0-cflags.patch
+	epatch "${FILESDIR}"/${P}-cflags.patch
 	[[ -n ${BACKPORTS} ]] && \
 		EPATCH_FORCE=yes EPATCH_SUFFIX="patch" EPATCH_SOURCE="${S}/patches" \
 			epatch
+
+	# Fix ld and objcopy being called directly
+	tc-export LD OBJCOPY
+
+	# Verbose builds
+	MAKEOPTS+=" V=1"
 
 	epatch_user
 }
 
 src_configure() {
-	local conf_opts audio_opts user_targets
+	local conf_opts audio_opts
 
 	for target in ${IUSE_SOFTMMU_TARGETS} ; do
 		use "qemu_softmmu_targets_${target}" && \
@@ -244,6 +251,7 @@ src_configure() {
 
 	./configure --prefix=/usr \
 		--sysconfdir=/etc \
+		--docdir=/usr/share/doc/${PF}/html \
 		--disable-bsd-user \
 		--disable-guest-agent \
 		--disable-libiscsi \
@@ -319,14 +327,14 @@ src_install() {
 	dodoc Changelog MAINTAINERS TODO pci-ids.txt
 	newdoc pc-bios/README README.pc-bios
 
-	if use doc; then
-		dohtml qemu-doc.html qemu-tech.html || die
-	fi
-
-	use python & dobin scripts/kvm/kvm_stat
+	use python && dobin scripts/kvm/kvm_stat
 
 	# Avoid collision with app-emulation/libcacard
 	use smartcard && mv "${ED}/usr/bin/vscclient" "${ED}/usr/bin/qemu-vscclient"
+
+	# Install binfmt handler init script for user targets
+	[[ -n ${user_targets} ]] && \
+		newinitd "${FILESDIR}/qemu-binfmt.initd" qemu-binfmt
 
 	# Remove SeaBIOS since we're using the SeaBIOS packaged one
 	rm "${ED}/usr/share/qemu/bios.bin"
