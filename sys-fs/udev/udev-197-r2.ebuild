@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r2.ebuild,v 1.5 2013/01/14 20:58:54 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r2.ebuild,v 1.8 2013/01/16 13:55:29 ssuominen Exp $
 
 EAPI=4
 
 KV_min=2.6.39
 
-inherit autotools eutils linux-info multilib systemd
+inherit autotools eutils linux-info multilib systemd toolchain-funcs versionator
 
 if [[ ${PV} = 9999* ]]
 then
@@ -131,6 +131,10 @@ src_prepare()
 
 	# apply user patches
 	epatch_user
+
+	# compile with older versions of gcc #451110
+	version_is_at_least 4.6 $(gcc-version) || \
+		sed -i 's:static_assert:alsdjflkasjdfa:' src/shared/macro.h
 
 	# change rules back to group uucp instead of dialout for now
 	sed -e 's/GROUP="dialout"/GROUP="uucp"/' \
@@ -319,10 +323,9 @@ pkg_preinst()
 		fi
 	done
 	preserve_old_lib /$(get_libdir)/libudev.so.0
-	if has_version '<sys-fs/udev-197'; then
-		net_rules="${ROOT}"etc/udev/rules.d/80-net-name-slot.rules
-		cp "${FILESDIR}"/80-net-name-slot.rules "${net_rules}"
-	fi
+
+	net_rules="${ROOT}"etc/udev/rules.d/80-net-name-slot.rules
+	[[ -f ${net_rules} ]] || cp "${FILESDIR}"/80-net-name-slot.rules "${net_rules}"
 }
 
 # This function determines if a directory is a mount point.

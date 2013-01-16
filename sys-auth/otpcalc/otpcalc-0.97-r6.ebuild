@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/otpcalc/otpcalc-0.97-r6.ebuild,v 1.2 2013/01/14 21:25:26 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/otpcalc/otpcalc-0.97-r6.ebuild,v 1.4 2013/01/16 11:23:43 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://killa.net/infosec/otpCalc/otpCalc-${PV}.tar.gz"
 
 LICENSE="GPL-2+" # bundled crypto functions are not used
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND="x11-libs/gtk+:2
@@ -40,10 +40,8 @@ src_prepare() {
 		-e 's:$(CC) $(CFLAGS) $^:$(CC) $(LDFLAGS) $(CFLAGS) $^:' \
 		-e "s#-s -O3#${CFLAGS}#g" \
 		Makefile.in || die
-}
 
-src_compile() {
-	emake CC="$(tc-getCC)"
+	tc-export CC
 }
 
 src_install() {
