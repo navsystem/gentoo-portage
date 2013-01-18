@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.150 2013/01/13 10:52:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.153 2013/01/15 15:45:50 scarabeus Exp $
 
 EAPI=5
 
@@ -27,7 +27,7 @@ BRANDING="${PN}-branding-gentoo-0.7.tar.xz"
 # PATCHSET="${P}-patchset-01.tar.xz"
 
 [[ ${PV} == *9999* ]] && SCM_ECLASS="git-2"
-inherit base autotools bash-completion-r1 check-reqs eutils java-pkg-opt-2 kde4-base pax-utils python-single-r1 multilib toolchain-funcs flag-o-matic ${SCM_ECLASS}
+inherit base autotools bash-completion-r1 check-reqs eutils java-pkg-opt-2 kde4-base pax-utils python-single-r1 multilib toolchain-funcs flag-o-matic nsplugins ${SCM_ECLASS}
 unset SCM_ECLASS
 
 DESCRIPTION="LibreOffice, a full office productivity suite."
@@ -124,7 +124,6 @@ COMMON_DEPEND="
 	>=media-libs/libcdr-0.0.5
 	media-libs/libvisio
 	>=net-misc/curl-7.21.4
-	net-misc/npapi-sdk
 	net-nds/openldap
 	sci-mathematics/lpsolve
 	virtual/jpeg
@@ -289,7 +288,8 @@ src_unpack() {
 			mypv=${PV/.9999}
 			[[ ${mypv} != ${PV} ]] && EGIT_BRANCH="${PN}-${mypv/./-}"
 			EGIT_PROJECT="${PN}/${mod}"
-			EGIT_SOURCEDIR="${WORKDIR}/${PN}-${mod}-${PV}"
+			EGIT_SOURCEDIR="${WORKDIR}/${P}"
+			[[ ${mod} != core ]] && EGIT_SOURCEDIR="${WORKDIR}/${PN}-${mod}-${PV}"
 			EGIT_REPO_URI="git://anongit.freedesktop.org/${PN}/${mod}"
 			EGIT_NOUNPACK="true"
 			git-2_src_unpack

@@ -183,7 +183,6 @@ app-admin/sagan:pcap - Add support for network packet capture via net-libs/libpc
 app-admin/sagan:smtp - Build witch SMTP (E-Mail) support
 app-admin/sagan:snort - Add support to interact with Snort IDE using net-analyzer/snortsam'
 app-admin/sagan-rules:lognorm - Install normalize rules support with dev-libs/liblognorm
-app-admin/salt:jinja - Add support to use dev-python/jinja to parse Salt states.
 app-admin/salt:libvirt - Support managing virtual machines with app-emulation/libvirt.
 app-admin/salt:mongodb - Support returning data to a mongodb server.
 app-admin/salt:openssl - Add support for using TLS via OpenSSL.
@@ -564,7 +563,9 @@ app-forensics/aide:prelink - Enable support for sys-devel/prelink
 app-forensics/chkrootkit:cron - Install cron script for weekly rootkit scans
 app-forensics/libewf:ewf - Enables the v1 API
 app-forensics/libewf:ewf2 - Enables the v2 API
+app-forensics/libewf:fuse - Enable fuse support for ewfmount
 app-forensics/libewf:rawio - Enables raw IO handling
+app-forensics/libewf:uuid - Enable UUID support in the ewftools
 app-forensics/openscap:nss - Prefer NSS over libgcrypt as the crypto engine
 app-forensics/openscap:rpm - Compiles the RPM probes
 app-forensics/openscap:sql - Build the sql independant probes
@@ -1680,7 +1681,6 @@ dev-ruby/barby:prawn - Add support for writing PDF documents using dev-ruby/praw
 dev-ruby/barby:qrcode - Add support for QRCode 2D codes using dev-ruby/rqrcode.
 dev-ruby/barby:rmagick - Add support for writing images (among others PNG, GIF and JPEG) using dev-ruby/rmagick. Not available on JRuby.
 dev-ruby/camping:mongrel - Also install www-servers/mongrel
-dev-ruby/nokogiri:ffi - Use the Foreign Function Interface library (as provided by dev-java/jruby or dev-ruby/ffi depending on the implementation) rather than building a C extension to wrap around the libxml/libxslt interfaces. Note: JRuby always uses the FFI interface as native extensions are not supported.
 dev-ruby/rails:asset-pipeline - Also install the default components for the asset pipeline. These are not required but they are activated automatically in new Rails projects by default.
 dev-ruby/ruby-sdl:image - Enable media-libs/sdl-image support
 dev-ruby/ruby-sdl:mixer - Enable media-libs/sdl-mixer support
@@ -1804,6 +1804,7 @@ dev-util/nvidia-cuda-sdk:cuda - Build CUDA binaries.
 dev-util/nvidia-cuda-sdk:emulation - Build binaries for device emulation mode. These binaries will not require a CUDA-capable GPU to run.
 dev-util/nvidia-cuda-sdk:opencl - Build OpenCL binaries.
 dev-util/nvidia-cuda-toolkit:debugger - Installs the CUDA debugger.
+dev-util/nvidia-cuda-toolkit:eclipse - Install the dev-util/eclipse-sdk plugins
 dev-util/nvidia-cuda-toolkit:profiler - Installs the NVIDIA CUDA visual profiler.
 dev-util/perf:demangle - Enable C++ symbol name demangling, using libbfd from sys-devel/binutils. When this flag is enabled, the package will have to be rebuilt after every version bump of binutils.
 dev-util/perf:doc - Build documentation and man pages. With this USE flag disabled, the --help parameter for perf and its sub-tools will not be available. This is optional because it depends on a few documentation handling tools that are not always welcome on user systems.
@@ -2575,7 +2576,6 @@ media-gfx/nvidia-texture-tools:cg - Enable NVIDIA C graphics compiler toolkit pl
 media-gfx/nvidia-texture-tools:cuda - Enable NVIDIA CUDA toolkit support
 media-gfx/nvidia-texture-tools:glew - Enable support for The OpenGL Extension Wrangler Library (media-libs/glew)
 media-gfx/openclipart:gzip - Compresses clip art using gzip
-media-gfx/opencolorio:pdf - Install extra documentation in PDF format
 media-gfx/postr:gnome2 - Install plugin for =gnome-base/nautilus-2*. Warning: will make =nautilus-3* crash.
 media-gfx/potrace:metric - default to a4 paper size and metric measurement
 media-gfx/povray:mkl - Enable support for Intel Vector Math Library, part of sci-libs/mkl
@@ -2737,6 +2737,7 @@ media-libs/mlt:ruby - Build SWIG bindings for Ruby
 media-libs/mlt:swfdec - Use media-libs/swfdec for reading .swf files (Macromedia Flash) instead of libavformat.
 media-libs/netpbm:rle - Build converters for the RLE format (utah raster toolkit)
 media-libs/openal:alstream - Build and install the FFmpeg based alstream example utility
+media-libs/opencolorio:pdf - Install extra documentation in PDF format
 media-libs/opencv:cuda - Enable NVIDIA Cuda computations support
 media-libs/opencv:eigen - Enable usage of dev-cpp/eigen for computations
 media-libs/opencv:ipp - Enable Intel Integrated Primitive support
@@ -3242,6 +3243,7 @@ media-video/cheese:sendto - Build the gnome-extra/nautilus-sendto plugin
 media-video/clive:clipboard - Support reading from X clipboard
 media-video/clive:pager - Support pager!?
 media-video/clive:password - Support password controlled sites
+media-video/devede:mencoder - Prefer MPlayer mencoder over Libav avconv or FFmpeg ffmpeg for encoding.
 media-video/dv2sub:kino - install kino plugin
 media-video/dvd-slideshow:themes - Install theme pack
 media-video/dvdauthor:graphicsmagick - Use media-gfx/graphicsmagick instead of media-gfx/imagemagick
@@ -3289,6 +3291,7 @@ media-video/libav:3dnowext - Enable manually-optimised routines using the AMD 3D
 media-video/libav:aac - Use external vo-aacenc library for AAC encoding
 media-video/libav:amr - Enable Adaptive Multi-Rate Audio support
 media-video/libav:avx - Adds support for Advanced Vector Extensions instructions (Intel Sandy Bridge, AMD Bulldozer and later chips)
+media-video/libav:bindist - Build binary redistributable version without including nonfree decoders and encoders.
 media-video/libav:cdio - Enable audio CD grabbing with dev-libs/libcdio.
 media-video/libav:cpudetection - Enables runtime CPU detection (useful for bindist, compatibility on other CPUs).
 media-video/libav:dirac - Enable Dirac video support (an advanced royalty-free video compression format) via the reference library: dirac.
@@ -3569,6 +3572,7 @@ net-analyzer/lilac:nmap - Installs nmap which can be used to automatically disco
 net-analyzer/linkchecker:bookmarks - Mozilla Bookmark parsing
 net-analyzer/linkchecker:login - login form submission
 net-analyzer/linkchecker:nagios - Install nagios cli plugin
+net-analyzer/linkchecker:sqlite - Mozilla Bookmark parsing
 net-analyzer/linkchecker:syntax-check - HTML/CSS syntax checks
 net-analyzer/metasploit:gui - Enable Java GUI
 net-analyzer/munin:apache - Set up the configuration of the CGI generation of HTML and graphs to work with Apache. This also install an include-able configuration file.
@@ -3929,6 +3933,7 @@ net-im/leechcraft-azoth:standardstyles - Build support for standard Azoth styles
 net-im/leechcraft-azoth:xoox - Build Xoox, gloox-based plugin for XMPP support (deprecated, use 'xmpp' for new versions)
 net-im/leechcraft-azoth:xtazy - Build Xtazy for publishing currently playing tune
 net-im/leechcraft-azoth:zheet - Build Zheet, libmsn-based plugin for Windows Live Messenger support (deprecated, use 'msn' for new versions)
+net-im/licq:aosd - Build the advanced on screen display plugin.
 net-im/mcabber:aspell - Adds support for app-text/aspell spell checker.
 net-im/mcabber:otr - Enable encrypted conversations using Off-The-Records messaging
 net-im/minbif:video - Add video support
@@ -4381,6 +4386,7 @@ net-misc/badvpn:server - Build the badvpn-server program, a central server that 
 net-misc/badvpn:tun2socks - Build tun2socks, a program which implements a TUN device that forwards TCP traffic through a SOCKS5 server.
 net-misc/badvpn:udpgw - Build udpgw, a small daemon which allows tun2socks to forward UDP traffic.
 net-misc/batman-adv:bla - B.A.T.M.A.N. bridge loop avoidance
+net-misc/batman-adv:dat - B.A.T.M.A.N. distributed arp table
 net-misc/bfgminer:adl - Enable support for controlling fans and overclocking on AMD cards with AMD Display Library
 net-misc/bfgminer:bitforce - Enable support for mining with ButterFly Labs BitFORCE FPGAs
 net-misc/bfgminer:cpumining - Enable support for mining with CPUs
@@ -4460,6 +4466,8 @@ net-misc/lldpd:dot1 - Enable Dot1 extension (VLAN stuff)
 net-misc/lldpd:dot3 - Enable Dot3 extension (PHY stuff)
 net-misc/lldpd:edp - Enable Extreme Discovery Protocol
 net-misc/lldpd:fdp - Enable Foundry Discovery Protocol
+net-misc/lldpd:graph - Create dot graphs in documentations
+net-misc/lldpd:json - Enable JSON output via Jansson
 net-misc/lldpd:lldpmed - Enable LLDP-MED extension
 net-misc/lldpd:snmp - Enable the use of SNMP
 net-misc/lldpd:sonmp - Enable SynOptics Network Management
@@ -4876,7 +4884,6 @@ sci-chemistry/ball:sql - Include SQL database support
 sci-chemistry/ball:webkit - Uses x11-libs/qt-webkit for drawing
 sci-chemistry/ccp4:arpwarp - Add binary arp-warp for molecular replacement
 sci-chemistry/ccp4:balbes - Install sci-chemistry/balbes
-sci-chemistry/ccpn:extendnmr - Install needed packages for extendNMR support
 sci-chemistry/chemtool:emf - EMF export support
 sci-chemistry/cns:aria - Support patch for sci-chemistry/aria
 sci-chemistry/eden:double-precision - More precise calculations at the expense of speed
@@ -5644,6 +5651,7 @@ sys-libs/libosinfo:vala - Enable bindings for dev-lang/vala
 sys-libs/libseccomp:tools - enable debugging tools
 sys-libs/libunwind:debug-frame - Adds support for DWARF .debug_frame section: Use the information from this section if available
 sys-libs/ncurses:ada - Add bindings for the ADA programming language
+sys-libs/ncurses:tinfo - Build curses library (libncurses) sep from the low-level terminfo library (libtinfo) -- usually needed only for binary packages -- but it is binary compatible in either mode
 sys-libs/ncurses:trace - Enable test trace() support in ncurses calls
 sys-libs/pam:audit - Enable support for sys-process/audit
 sys-libs/pam:berkdb - Build the pam_userdb module, that allows to authenticate users against a Berkeley DB file. Please note that enabling this USE flag will create a PAM module that links to the Berkeley DB (as provided by sys-libs/db) installed in /usr/lib and will thus not work for boot-critical services authentication.
@@ -5752,6 +5760,7 @@ www-client/firefox:custom-optimization - Fine-tune custom compiler optimizations
 www-client/firefox:ipc - Use inter-process communication between tabs and plugins. Allows for greater stability in case of plugin crashes
 www-client/firefox:minimal - Prevent sdk and headers from being installed
 www-client/firefox:pgo - Add support for profile-guided optimization using gcc-4.5, for faster binaries. This option will double the compile time.
+www-client/firefox:system-jpeg - Use the system-wide media-libs/libjpeg-turbo Use system jpeg instead of bundled.
 www-client/firefox:system-sqlite - Use the system-wide dev-db/sqlite installation with secure-delete enabled
 www-client/firefox:webm - Use system media-libs/libvpx for HTML5 WebM video support.
 www-client/google-chrome:plugins - Add system plugins path to launcher
@@ -5791,6 +5800,7 @@ www-client/seamonkey:ipc - Use inter-process communication between tabs and plug
 www-client/seamonkey:mailclient - Build Mozilla's Mail client (default on)
 www-client/seamonkey:methodjit - Enable JIT for JavaScript using MethodJIT for faster JS performance. Hardened users can disable this USE-flag to use MPROTECT on grsecurity kernels.
 www-client/seamonkey:roaming - Build roaming extension support (default on)
+www-client/seamonkey:system-jpeg - Use the system-wide media-libs/libjpeg-turbo Use system jpeg instead of bundled.
 www-client/seamonkey:system-sqlite - Use the system-wide dev-db/sqlite installation with secure-delete enabled
 www-client/seamonkey:webm - Use system media-libs/libvpx for HTML5 WebM video support.
 www-client/uget:aria2 - Enable support for net-misc/aria2 through xmlrpc. You'll find the plugin in the app's settings.

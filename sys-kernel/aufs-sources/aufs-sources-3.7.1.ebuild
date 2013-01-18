@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/aufs-sources-3.7.1.ebuild,v 1.1 2013/01/07 11:09:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/aufs-sources-3.7.1.ebuild,v 1.3 2013/01/16 20:07:32 jlec Exp $
 
 EAPI=5
 
@@ -38,6 +38,9 @@ src_unpack() {
 }
 
 src_prepare() {
+	if ! use module; then
+		sed -e 's:tristate:bool:g' -i "${WORKDIR}"/fs/aufs/Kconfig || die
+	fi
 	cp -i "${WORKDIR}"/include/linux/aufs_type.h include/linux/aufs_type.h || die
 	cp -i "${WORKDIR}"/include/uapi/linux/aufs_type.h include/uapi/linux/aufs_type.h || die
 	cp -ri "${WORKDIR}"/{Documentation,fs} . || die
@@ -48,6 +51,9 @@ pkg_postinst() {
 	kernel-2_pkg_postinst
 	einfo "For more info on this patchset, and how to report problems, see:"
 	einfo "${HOMEPAGE}"
+	if ! has_version sys-fs/aufs-util; then
+		einfo "In order to use aufs FS you need to install sys-fs/aufs-util"
+	fi
 }
 
 pkg_postrm() {
