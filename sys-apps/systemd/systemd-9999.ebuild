@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.5 2013/01/11 19:28:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.9 2013/01/21 00:47:38 floppym Exp $
 
 EAPI=5
 
@@ -53,7 +53,7 @@ RDEPEND="${COMMON_DEPEND}
 		<sys-apps/sysvinit-2.88-r4
 	)
 	!<sys-libs/glibc-2.10
-	!~sys-fs/udev-187"
+	!<sys-fs/udev-197-r2"
 
 # sys-fs/quota is necessary to store correct paths in unit files
 DEPEND="${COMMON_DEPEND}
@@ -70,7 +70,7 @@ SRC_URI=
 KEYWORDS=
 
 DEPEND="dev-libs/gobject-introspection
-	dev-util/gtk-doc"
+	>=dev-util/gtk-doc-1.18"
 #endif
 
 AUTOTOOLS_IN_SOURCE_BUILD=1
@@ -83,8 +83,8 @@ src_prepare() {
 	# systemd-analyze is for python2.7 only nowadays.
 	sed -i -e '1s/python/&2.7/' src/analyze/systemd-analyze
 
-	# link against external udev.
-	sed -i -e 's:libudev\.la:-ludev:' Makefile.am
+	# link against external udev & libsystemd-daemon.
+	sed -i -e 's:lib\(udev\|systemd-daemon\)\.la:-l\1:' Makefile.am
 
 	local PATCHES=(
 		"${FILESDIR}"/197-0001-Disable-udev-targets.patch
@@ -103,7 +103,6 @@ src_prepare() {
 src_configure() {
 	local myeconfargs=(
 		--localstatedir=/var
-		--with-distro=$(use vanilla && echo other || echo gentoo)
 		# install everything to /usr
 		--with-rootprefix=/usr
 		--with-rootlibdir=/usr/$(get_libdir)
@@ -111,6 +110,9 @@ src_configure() {
 		--with-pamlibdir=/$(get_libdir)/security
 		# make sure we get /bin:/sbin in $PATH
 		--enable-split-usr
+		# disable sysv compatibility
+		--with-sysvinit-path=
+		--with-sysvrcnd-path=
 		# udev parts
 		--disable-introspection
 		--disable-gtk-doc
@@ -136,7 +138,8 @@ src_configure() {
 
 src_install() {
 	autotools-utils_src_install \
-		bashcompletiondir=/tmp
+		bashcompletiondir=/tmp \
+		udevlibexecdir=/lib/udev
 
 	# remove pam.d plugin .la-file
 	prune_libtool_files --modules

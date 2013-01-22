@@ -153,6 +153,7 @@ app-admin/gkrellm:hddtemp - Enable monitoring harddrive temperatures via app-adm
 app-admin/gkrellm:lm_sensors - Enable monitoring sensors via sys-apps/lm_sensors
 app-admin/gkrellm:ntlm - Enable NTLM authentication for mail checking with net-libs/libntlm
 app-admin/gkrellm:ssl - Enable SSL support for mail checking with dev-libs/openssl
+app-admin/glance:swift - Adds swift storage support
 app-admin/gnome-system-tools:nfs - Adds support for NFS shares
 app-admin/gtkdiskfree:gtk3 - Use GTK+3 instead of 2
 app-admin/hddtemp:network-cron - Monthly cronjob to update hddtemp.db.
@@ -280,6 +281,7 @@ app-crypt/eid-mw:xpi - Build and install an extension for Mozilla browsers.
 app-crypt/ekeyd:minimal - Only install the ekey-egd-linux service rather than the full ekeyd package.
 app-crypt/ekeyd:munin - Install a plugin for net-analyzer/munin to graph statistical data from ekeyd.
 app-crypt/ekeyd:usb - Build the libusb-based userland daemon for accessing the EntropyKey (alternative to the CDC USB driver). It is suggested to use this option by default, as the CDC driver in the kernel often seems to be fragile (or the gadget implementation on the EntropyKey is too buggy), and can cause various problems.
+app-crypt/gnupg:mta - Build mta support using virtual/mta.
 app-crypt/gnupg:smartcard - Build scdaemon software. Enables usage of OpenPGP cards. For other type of smartcards, try app-crypt/gnupg-pkcs11-scd.
 app-crypt/gnupg:usb - Build direct CCID access for scdaemon; requires dev-libs/libusb.
 app-crypt/gpgme:common-lisp - Install common-lisp files
@@ -484,6 +486,9 @@ app-emulation/qemu:rbd - Enable rados block device backend support, see http://c
 app-emulation/qemu:sdl - Enable the SDL-based console
 app-emulation/qemu:seccomp - Utilize sys-libs/libseccomp to enable kernel filtering of system calls to prevent malicious guests from doing damage.
 app-emulation/qemu:spice - Enable Spice protocol support via app-emulation/spice
+app-emulation/qemu:static - Enables both 'static-softmmu' and 'static-user'
+app-emulation/qemu:static-softmmu - Builds the Software MMU (system) targets as static binaries
+app-emulation/qemu:static-user - Build the User targets as static binaries
 app-emulation/qemu:systemtap - Enable SystemTAP/DTrace tracing
 app-emulation/qemu:tci - Enable the TCG Interpreter which can speed up or slowdown workloads depending on the host and guest CPUs being emulated. In the future it will be a runtime option but for now its compile time.
 app-emulation/qemu:tls - Enable TLS support for the VNC console server
@@ -1365,6 +1370,7 @@ dev-libs/igraph:lapack - Use external lapack numerical library
 dev-libs/intel-common:compiler - Install the libraries needed for the icc and ifort compilers
 dev-libs/jemalloc:stats - Enable statistics calculation/reporting
 dev-libs/keybinder:introspection - Use dev-libs/gobject-introspection for introspection
+dev-libs/libRocket:samples - Build samples
 dev-libs/libappindicator:introspection - Use dev-libs/gobject-introspection for introspection
 dev-libs/libburn:cdio - Enable EXPERIMENTAL use of libcdio as system adapter
 dev-libs/libburn:track-src-odirect - Read track input with O_DIRECT (see man 2 open), this may deliver a better write performance in some situations
@@ -2649,6 +2655,7 @@ media-libs/gmtk:dconf - Enable support for gnome-base/dconf
 media-libs/grilo:introspection - Use dev-libs/gobject-introspection for introspection
 media-libs/grilo:network - Enable network access for media discovery using net-libs/libsoup
 media-libs/grilo:vala - Generate bindings for dev-lang/vala
+media-libs/gst-plugins-base:ivorbis - Enable integer based vorbis decoder.
 media-libs/gst-plugins-base:pango - Enable pango GStreamer plugin
 media-libs/gst-rtsp-server:introspection - Use dev-libs/gobject-introspection for introspection
 media-libs/gst-rtsp-server:vala - Add support for dev-lang/vala
@@ -2732,6 +2739,7 @@ media-libs/mesa:xorg - Enable the Xorg state tracker for Gallium3D. This is not 
 media-libs/mesa:xvmc - Enable the XvMC acceleration interface for the Gallium3D Video Layer.
 media-libs/mlt:compressed-lumas - Compress the luma files in png.
 media-libs/mlt:frei0r - Build the module for media-plugins/frei0r-plugins
+media-libs/mlt:kdenlive - Build support for media-video/kdenlive
 media-libs/mlt:lua - Build SWIG bindings for Lua
 media-libs/mlt:melt - Build the melt commandline tool
 media-libs/mlt:python - Build SWIG bindings for Python
@@ -2940,6 +2948,7 @@ media-sound/clementine:lastfm - Use liblastfm for fetching song info, scrobbling
 media-sound/clementine:moodbar - Enable moodbar support
 media-sound/clementine:projectm - Build with ProjectM visualization
 media-sound/clementine:wiimote - Enable support for Wii remote
+media-sound/cmus:cdio - use libcdio for CD support
 media-sound/cmus:cue - enable CUE sheet parsing
 media-sound/cmus:discid - enable reading the ID of the inserted CD
 media-sound/cmus:pidgin - install support script for net-im/pidgin
@@ -4322,6 +4331,7 @@ net-mail/notmuch:doc - Install API documentation for enabled bindings
 net-mail/notmuch:emacs - Install Emacs UI (the main one)
 net-mail/notmuch:mutt - Install helper script for Mutt
 net-mail/notmuch:nmbug - Install experimental tag sharing / pseudo-bug-tracking script for Notmuch (see http://notmuchmail.org/nmbug/)
+net-mail/notmuch:pick - Experimental threaded message view for the emacs interface
 net-mail/notmuch:vim - Install Vim UI (experimental)
 net-mail/offlineimap:sqlite - Enable runtime support for sqlite mail status backend.
 net-mail/qmailadmin:maildrop - Filter spam using maildrop
@@ -4741,6 +4751,7 @@ net-print/hplip:static-ppds - Use statically-generated PPDs instead of Dynamic P
 net-print/magicfilter:lprng-failsafe - Refuse options for compability with certain LPRng versions.
 net-proxy/dansguardian:kaspersky - Adds support for Kaspersky AntiVirus software
 net-proxy/dansguardian:ntlm - Enable support for the NTLM auth plugin
+net-proxy/obfsproxy:daemon - Run obfsproxy as a standalone daemon
 net-proxy/rejik:banlists - Install upstream provided simple banlists
 net-proxy/squid:ecap - Adds support for loadable content adaptation modules (http://www.e-cap.org)
 net-proxy/squid:epoll - Enables Linux epoll() support

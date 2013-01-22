@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.142 2013/01/18 16:59:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.148 2013/01/20 12:53:28 ssuominen Exp $
 
 EAPI=4
 
@@ -38,21 +38,23 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.20
 	introspection? ( >=dev-libs/gobject-introspection-1.31.1 )
 	kmod? ( >=sys-apps/kmod-12 )
 	selinux? ( sys-libs/libselinux )
-	!<sys-libs/glibc-2.11"
+	!<sys-libs/glibc-2.11
+	!<sys-apps/systemd-${PV}"
 
 DEPEND="${COMMON_DEPEND}
-	dev-util/gperf
 	virtual/os-headers
 	virtual/pkgconfig
 	!<sys-kernel/linux-headers-${KV_min}
 	doc? ( >=dev-util/gtk-doc-1.18 )
-	hwdb? ( >=sys-apps/hwids-20121202.2[udev] )"
+	hwdb? ( >=sys-apps/hwids-20130114[udev] )
+	keymap? ( dev-util/gperf )"
 
 if [[ ${PV} = 9999* ]]
 then
 	DEPEND="${DEPEND}
 		app-text/docbook-xsl-stylesheets
 		dev-libs/libxslt
+		dev-util/gperf
 		>=dev-util/intltool-0.50"
 fi
 
@@ -65,7 +67,7 @@ RDEPEND="${COMMON_DEPEND}
 	!<sys-kernel/dracut-017-r1
 	!<sys-kernel/genkernel-3.4.25"
 
-PDEPEND=">=virtual/udev-180
+PDEPEND=">=virtual/udev-197
 	openrc? ( >=sys-fs/udev-init-scripts-19 )"
 
 S=${WORKDIR}/systemd-${PV}
@@ -139,17 +141,6 @@ src_prepare()
 		eval export {MSG{FMT,MERGE},XGETTEXT}=/bin/true
 	fi
 
-	# This check is for maintainers only
-	if [[ ${PV} = 9999* ]]; then
-		# Support uClibc wrt bug #443030 with a safe kludge so we know when
-		# to check for other uses than logs. See the echo for secure_getenv
-		# at the end of src_prepare().
-		if ! [[ $(grep -r secure_getenv * | wc -l) -eq 13 ]]; then
-			eerror "The line count of secure_getenv failed, see bug #443030"
-			die
-		fi
-	fi
-
 	# apply user patches
 	epatch_user
 
@@ -176,8 +167,21 @@ src_prepare()
 		elibtoolize
 	fi
 
-	# This is the actual fix for bug #443030 if the check earlier doesn't fail.
-	if ! use elibc_glibc; then
+	if [[ ${PV} = 9999* ]]; then
+		# secure_getenv() disable for non-glibc systems wrt bug #443030
+		if ! [[ $(grep -r secure_getenv * | wc -l) -eq 13 ]]; then
+			eerror "The line count for secure_getenv() failed, see bug #443030"
+			die
+		fi
+
+		# gperf disable if keymaps are not requested wrt bug #452760
+		if ! [[ $(grep -i gperf Makefile.am | wc -l) -eq 24 ]]; then
+			eerror "The line count for gperf references failed, see bug 452760"
+			die
+		fi
+	fi
+
+	if ! use elibc_glibc; then #443030
 		echo '#define secure_getenv(x) NULL' >> config.h.in
 		sed -i -e '/error.*secure_getenv/s:.*:#define secure_getenv(x) NULL:' src/shared/missing.h || die
 	fi
@@ -185,6 +189,8 @@ src_prepare()
 
 src_configure()
 {
+	use keymap || export ac_cv_path_GPERF=true #452760
+
 	local econf_args
 
 	econf_args=(
@@ -247,6 +253,10 @@ src_compile()
 		v4l_id
 		accelerometer
 		mtd_probe
+		man/sd_is_fifo.3
+		man/sd_notify.3
+		man/sd_listen_fds.3
+		man/sd-daemon.3
 		man/udev.7
 		man/udevadm.8
 		man/systemd-udevd.8
@@ -282,6 +292,7 @@ src_install()
 		install-dist_udevkeymapforcerelDATA
 		install-dist_udevrulesDATA
 		install-girDATA
+		install-man3
 		install-man7
 		install-man8
 		install-nodist_systemunitDATA
@@ -293,6 +304,7 @@ src_install()
 		systemd-install-hook
 		libudev-install-hook
 		libsystemd-daemon-install-hook
+		install-pkgincludeHEADERS
 	)
 
 	if use gudev
@@ -306,15 +318,22 @@ src_install()
 		rootlibexec_PROGRAMS=systemd-udevd
 		bin_PROGRAMS=udevadm
 		lib_LTLIBRARIES="${lib_LTLIBRARIES}"
-		MANPAGES="man/udev.7 man/udevadm.8 man/systemd-udevd.service.8"
-		MANPAGES_ALIAS="man/systemd-udevd.8"
+		MANPAGES="man/sd-daemon.3 man/sd_notify.3 man/sd_listen_fds.3 \
+				man/sd_is_fifo.3 man/sd_booted.3 man/udev.7 man/udevadm.8 \
+				man/systemd-udevd.service.8"
+		MANPAGES_ALIAS="man/sd_is_socket.3 man/sd_is_socket_unix.3 \
+				man/sd_is_socket_inet.3 man/sd_is_mq.3 man/sd_notifyf.3 \
+				man/SD_LISTEN_FDS_START.3 man/SD_EMERG.3 man/SD_ALERT.3 \
+				man/SD_CRIT.3 man/SD_ERR.3 man/SD_WARNING.3 man/SD_NOTICE.3 \
+				man/SD_INFO.3 man/SD_DEBUG.3 man/systemd-udevd.8"
 		dist_systemunit_DATA="units/systemd-udevd-control.socket \
-			units/systemd-udevd-kernel.socket"
+				units/systemd-udevd-kernel.socket"
 		nodist_systemunit_DATA="units/systemd-udevd.service \
 				units/systemd-udev-trigger.service \
 				units/systemd-udev-settle.service"
 		pkgconfiglib_DATA="${pkgconfiglib_DATA}"
 		systemunitdir="$(systemd_get_unitdir)"
+		pkginclude_HEADERS="src/systemd/sd-daemon.h"
 	)
 	emake -j1 DESTDIR="${D}" "${targets[@]}"
 	if use doc
@@ -334,6 +353,15 @@ src_install()
 
 	# install udevadm symlink
 	dosym ../bin/udevadm /sbin/udevadm
+
+	# move udevd where it should be and remove unlogical /lib/systemd
+	mv "${ED}"/lib/systemd/systemd-udevd "${ED}"/sbin/udevd || die
+	rm -r "${ED}"/lib/systemd
+
+	# install compability symlink for systemd and initramfs tools
+	dosym /sbin/udevd "$(systemd_get_utildir)"/systemd-udevd
+	find "${ED}/$(systemd_get_unitdir)" -name '*.service' -exec \
+		sed -i -e "/ExecStart/s:/lib/systemd:$(systemd_get_utildir):" {} +
 }
 
 pkg_preinst()
@@ -351,6 +379,7 @@ pkg_preinst()
 		fi
 	done
 	preserve_old_lib /$(get_libdir)/libudev.so.0
+
 	if has_version '<sys-fs/udev-197'; then
 		net_rules="${ROOT}"etc/udev/rules.d/80-net-name-slot.rules
 		[[ -f ${net_rules} ]] || cp "${FILESDIR}"/80-net-name-slot.rules "${net_rules}"

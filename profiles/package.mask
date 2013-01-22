@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14389 2013/01/18 13:54:29 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14397 2013/01/21 05:27:53 cardoe Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,31 @@
 
 #--- END OF EXAMPLES ---
 
+# Doug Goldstein <cardoe@gentoo.org> (20 Jan 2013)
+# Under development, feel free to test and report back
+=app-emulation/qemu-1.2.2-r100
+
+# Hans de Graaff <graaff@gentoo.org> (20 Jan 2013) Mask
+# dev-lang/ruby-enterprise for removal, bug 453178.  The current
+# versions have minor security issues, the latest versions are masked
+# and don't work, and upstream announced end-of-life almost a year
+# ago. Ruby 1.9 has almost all of the benefits of REE, so the
+# recommendation is to switch to that if you are still using REE.
+dev-lang/ruby-enterprise
+
+# Ben de Groot <yngwin@gentoo.org> (20 Jan 2013)
+# 2.5* has known security and other issues due to bundled ffmpeg,
+# see (bugs #446468 and #444262)
+# 2.6* is masked for testing, and may have unknown issues due to bundled ffmpeg
+# This package needs a new, dedicated maintainer. We voted for keeping it in
+# the tree for now, so users who are willing to accept the known issues can
+# still easily install it by unmasking this.
+media-video/avidemux
+
+# Marien Zwart <marienz@gentoo.org>
+# Patch tarball is broken, meaning this builds 1.2.0 (bug #452918)
+=app-emulation/qemu-1.2.2-r1
+
 # Mike Pagano <mpagano@gentoo.org>
 # Mask for testing
 >=app-portage/portpeek-2.1.6
@@ -60,7 +85,7 @@ www-apache/mod_vhs
 app-portage/epm
 
 # Pacho Ramos <pacho@gentoo.org>
-# Still uses depend.php (#449820), upstream dead for ages and 
+# Still uses depend.php (#449820), upstream dead for ages and
 # newer versions don't work. Removal in a month.
 www-apps/online-bookmarks
 
@@ -242,7 +267,7 @@ www-apache/mod_authn_pam
 www-apache/mod_cplusplus
 
 # Pacho Ramos <pacho@gentoo.org> (25 Dec 2012)
-# Incompatible with recent kernels (#300047) , upstream dead, 
+# Incompatible with recent kernels (#300047) , upstream dead,
 # net-dialup/martian-modem can be used instead in most cases.
 net-dialup/ltmodem
 
@@ -407,10 +432,6 @@ dev-vcs/gitosis-gentoo
 # Joerg Bornkessel <hd_brummy@gentoo.org> (04 Nov 2012)
 # masked for testing, bug #422605
 =media-plugins/vdr-softdevice-0.5.0.20110417
-
-# Markos Chandras <hwoarang@gentoo.org> (04 Nov 2012)
-# Masked for testing
-=media-video/avidemux-2.6*
 
 # Markos Chandras <hwoarang@gentoo.org> (03 Nov 2012)
 # Masked for testing
