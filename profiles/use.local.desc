@@ -549,6 +549,7 @@ app-emulation/wine:samba - Add support for NTLM auth. see http://wiki.winehq.org
 app-emulation/wine:udisks - Support dynamic storage devices using sys-fs/udisks
 app-emulation/wine:win32 - Build a 32bit version of Wine (won't run Win64 binaries)
 app-emulation/wine:win64 - Build a 64bit version of Wine (won't run Win32 binaries)
+app-emulation/x48:readline - Enables support for libreadline
 app-emulation/xen:flask - Enable the Flask XSM module from NSA
 app-emulation/xen:pae - Enable support for PAE kernels (usually x86-32 with >4GB memory)
 app-emulation/xen:xsm - Enable the Xen Security Modules (XSM)
@@ -800,6 +801,8 @@ app-office/lyx:rtf - Add support for RTF import/export packages
 app-office/lyx:xetex - Add support for XeTeX typesetting
 app-office/rabbit:markdown - Markdown support (dev-ruby/kramdown)
 app-office/rabbit:tgif - tgif support (media-gfx/tgif)
+app-office/scribus:aspell - Enable support for spell checking with app-text/aspell
+app-office/scribus:hunspell - Enable support for spell checking with app-text/hunspell
 app-office/scribus:linguas_cs_CZ - Language support for cs_CZ
 app-office/scribus:linguas_da_DK - Language support for da_DK
 app-office/scribus:linguas_de_1901 - Language support for de_1901
@@ -926,6 +929,7 @@ app-text/texlive:graphics - Add support for several graphics packages (pgf, tikz
 app-text/texlive:humanities - Add LaTeX support for the humanities (dev-texlive/texlive-humanities)
 app-text/texlive:jadetex - Add support for app-text/jadetex (for processing tex files produced by the TeX backend of Jade)
 app-text/texlive:luatex - Add extra support for luatex
+app-text/texlive:metapost - Add support for metapost: A tool for creating graphics in scalable PostScript.
 app-text/texlive:music - Add support for music typesetting (dev-texlive/texlive-music)
 app-text/texlive:omega - Add omega packages (dev-texlive/texlive-omega)
 app-text/texlive:pdfannotextractor - Add dev-tex/pdfannotextractor support, for extracting annotations from PDF files.
@@ -933,6 +937,7 @@ app-text/texlive:pstricks - Add pstricks packages (dev-texlive/texlive-pstricks)
 app-text/texlive:publishers - Add support for publishers (dev-texlive/texlive-publishers)
 app-text/texlive:science - Add typesetting support for natural and computer sciences (dev-texlive/texlive-science)
 app-text/texlive:tex4ht - Add support for dev-tex/tex4ht (for converting (La)TeX to (X)HTML, XML and OO.org)
+app-text/texlive:texi2html - Add support for app-text/texi2html ((for converting texi files to HTML).
 app-text/texlive:xetex - Add support for XeTeX macros (dev-texlive/texlive-xetex)
 app-text/texlive:xindy - Add support for app-text/xindy, a flexible indexing system
 app-text/texlive-core:xetex - Add support for XeTeX: a TeX system with Unicode and modern font technologies.
@@ -2078,8 +2083,6 @@ gnome-base/gnome-control-center:colord - Support color management using x11-misc
 gnome-base/gnome-control-center:gnome-online-accounts - Enable configuration panel for net-libs/gnome-online-accounts accounts
 gnome-base/gnome-control-center:i18n - Enable support for enhanced input methods through app-i18n/ibus
 gnome-base/gnome-control-center:socialweb - Add support for desktop background images from Flickr using net-libs/libsocialweb
-gnome-base/gnome-control-center:systemd - Use sys-apps/systemd instead of sys-auth/consolekit for session tracking
-gnome-base/gnome-control-center:wacom - Enable support for Wacom tablets and drawing devices
 gnome-base/gnome-desktop:license-docs - Install help files documenting GNOME's licenses
 gnome-base/gnome-extra-apps:shotwell - Install the media-gfx/shotwell photo manager
 gnome-base/gnome-extra-apps:tracker - Install the app-misc/tracker indexer and the GNOME packages that require it
@@ -2093,8 +2096,6 @@ gnome-base/gnome-settings-daemon:colord - Support color management using x11-mis
 gnome-base/gnome-settings-daemon:i18n - Enable support for enhanced input methods through app-i18n/ibus
 gnome-base/gnome-settings-daemon:packagekit - Enable support for the distro-neutral package manager GUI app-admin/packagekit
 gnome-base/gnome-settings-daemon:short-touchpad-timeout - Change the touchpad timeout so that it's effective for fast typists
-gnome-base/gnome-settings-daemon:systemd - Use sys-apps/systemd instead of sys-auth/consolekit for session tracking
-gnome-base/gnome-settings-daemon:wacom - Enable support for Wacom tablets and drawing devices
 gnome-base/gnome-shell:i18n - Enable support for enhanced input methods through app-i18n/ibus
 gnome-base/gnome-shell:systemd - Use sys-apps/systemd instead of sys-auth/consolekit for session tracking
 gnome-base/gvfs:afp - Enables support for accessing AFP (Apple Filing Protocol) network shares
@@ -2103,7 +2104,6 @@ gnome-base/gvfs:bluray - Enable playback of Blu-ray filesystems using media-libs
 gnome-base/gvfs:fuse - Enables fuse mount points in $HOME/.gvfs for legacy application access
 gnome-base/gvfs:gdu - Enable sys-apps/gnome-disk-utility integration
 gnome-base/gvfs:http - Enable the HTTP/DAV backend using net-libs/libsoup-gnome
-gnome-base/gvfs:systemd - Use sys-apps/systemd seat information for tracking owners of removable volumes
 gnome-base/gvfs:udev - Enable udev base replacement code for cdda feature
 gnome-base/gvfs:udisks - Enable volume monitoring using sys-fs/udisks
 gnome-base/libgnome-keyring:vala - Enable bindings for dev-lang/vala
@@ -3155,13 +3155,9 @@ media-sound/xnoise:lyrics - Enable support for lyrics fetching
 media-sound/xwax:alsa - Adds support for ALSA audio input/output.
 media-sound/xwax:cdda - Sets runtime dependencies to support decoding audio from a compact disc.
 media-sound/xwax:fallback - Sets runtime dependencies to support decoding "other" audio files.
+media-sound/xwax:jack - Adds support for audio input/output via the JACK Audio Connection Kit.
 media-sound/xwax:mp3 - Sets runtime dependencies to support decoding MP3 audio.
-media-sound/xwax:xwax_decoders_aac - Sets runtime dependencies to support decoding AAC audio.
-media-sound/xwax:xwax_decoders_cd - Sets runtime dependencies to support decoding audio from a compact disc.
-media-sound/xwax:xwax_decoders_flac - Sets runtime dependencies to support decoding FLAC audio.
-media-sound/xwax:xwax_decoders_misc - Sets runtime dependencies to support decoding "other" audio files.
-media-sound/xwax:xwax_decoders_mp3 - Sets runtime dependencies to support decoding MP3 audio.
-media-sound/xwax:xwax_decoders_ogg - Sets runtime dependencies to support decoding Ogg Vorbis audio.
+media-sound/xwax:oss - Adds support for OSS (open sound system) audio input/output.
 media-tv/freevo:ivtv - Enables ivtv support
 media-tv/freevo:mixer - Enable support for adjusting volume via media-sound/aumix
 media-tv/freevo:tv - Enable support for the tv guide plugin
@@ -3643,6 +3639,7 @@ net-analyzer/nsca:crypt - Build support for crypted communication with nsca, thr
 net-analyzer/nsca:minimal - Only build and install the send_nsca command and not the daemon. This allows a very minimal install with no overhead when setting up a node.
 net-analyzer/pchar:pcap - Use the net-libs/libpcap library
 net-analyzer/pmacct:64bit - Use 64bit counters instead of 32bit ones
+net-analyzer/pmacct:mongodb - Add support for mongodb backend
 net-analyzer/pmacct:ulog - Enable ULOG support
 net-analyzer/rrdcollect:exec - Enable exec:/// support
 net-analyzer/rrdcollect:librrd - Use the librrd library from net-analyzer/rrdtool
@@ -6072,6 +6069,7 @@ x11-misc/bmpanel:libev - Use the libev event loop interface
 x11-misc/bmpanel:libevent - Use the libevent event loop interface
 x11-misc/bumblebee:bbswitch - Add dependency on sys-kernel/bbswitch for PM feature
 x11-misc/cdm:consolekit - Enable native consolekit support
+x11-misc/colord:extra-print-profiles - Generate extra print profiles. Warning: significant build time and memory requirements.
 x11-misc/colord:gusb - Enable dev-libs/libgusb support, needed for colorimeter drivers
 x11-misc/colord:vala - Generate bindings for dev-lang/vala
 x11-misc/dmenu:xft - Enable unofficial x11-libs/libXft support
