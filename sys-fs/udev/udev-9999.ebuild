@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.155 2013/01/21 20:41:00 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.163 2013/01/24 10:36:26 ssuominen Exp $
 
 EAPI=4
 
@@ -362,6 +362,10 @@ src_install()
 	dosym /sbin/udevd "$(systemd_get_utildir)"/systemd-udevd
 	find "${ED}/$(systemd_get_unitdir)" -name '*.service' -exec \
 		sed -i -e "/ExecStart/s:/lib/systemd:$(systemd_get_utildir):" {} +
+
+	docinto gentoo
+	dodoc "${FILESDIR}"/80-net-name-slot.rules
+	docompress -x /usr/share/doc/${PF}/gentoo/80-net-name-slot.rules
 }
 
 pkg_preinst()
@@ -379,11 +383,6 @@ pkg_preinst()
 		fi
 	done
 	preserve_old_lib /$(get_libdir)/libudev.so.0
-
-	if has_version '<sys-fs/udev-197'; then
-		net_rules="${ROOT}"etc/udev/rules.d/80-net-name-slot.rules
-		[[ -f ${net_rules} ]] || cp "${FILESDIR}"/80-net-name-slot.rules "${net_rules}"
-	fi
 }
 
 # This function determines if a directory is a mount point.
@@ -398,12 +397,29 @@ ismounted()
 
 pkg_postinst()
 {
-	mkdir -p "${ROOT}"/run
+	mkdir -p "${ROOT}"run
+
+	net_rules="${ROOT}"etc/udev/rules.d/80-net-name-slot.rules
+	copy_net_rules() {
+		[[ -f ${net_rules} ]] || cp "${ROOT}"usr/share/doc/${PF}/gentoo/80-net-name-slot.rules "${net_rules}"
+	}
+
+	if [[ ${REPLACING_VERSIONS} ]] && [[ ${REPLACING_VERSIONS} < 197 ]]; then
+		ewarn "Because this is a upgrade we disable the new predictable network interface"
+		ewarn "name scheme by default."
+		copy_net_rules
+	fi
+
+	if has_version sys-apps/biosdevname; then
+		ewarn "Because sys-apps/biosdevname is installed we disable the new predictable"
+		ewarn "network interface name scheme by default."
+		copy_net_rules
+	fi
 
 	# "losetup -f" is confused if there is an empty /dev/loop/, Bug #338766
 	# So try to remove it here (will only work if empty).
-	rmdir "${ROOT}"/dev/loop 2>/dev/null
-	if [[ -d ${ROOT}/dev/loop ]]
+	rmdir "${ROOT}"dev/loop 2>/dev/null
+	if [[ -d ${ROOT}dev/loop ]]
 	then
 		ewarn "Please make sure your remove /dev/loop,"
 		ewarn "else losetup may be confused when looking for unused devices."
@@ -414,10 +430,10 @@ pkg_postinst()
 
 	# 64-device-mapper.rules now gets installed by sys-fs/device-mapper
 	# remove it if user don't has sys-fs/device-mapper installed, 27 Jun 2007
-	if [[ -f ${ROOT}/etc/udev/rules.d/64-device-mapper.rules ]] &&
+	if [[ -f ${ROOT}etc/udev/rules.d/64-device-mapper.rules ]] &&
 		! has_version sys-fs/device-mapper
 	then
-			rm -f "${ROOT}"/etc/udev/rules.d/64-device-mapper.rules
+			rm -f "${ROOT}"etc/udev/rules.d/64-device-mapper.rules
 			einfo "Removed unneeded file 64-device-mapper.rules"
 	fi
 
@@ -475,6 +491,17 @@ pkg_postinst()
 		ewarn "One way to do this is to run the following command:"
 		ewarn "emerge -av1 \$(qfile -q -S -C /usr/lib/udev)"
 		ewarn "Note that qfile can be found in app-portage/portage-utils"
+	fi
+
+	old_net_rules=${ROOT}etc/udev/rules.d/70-persistent-net.rules
+	if [[ -f ${old_net_rules} ]]; then
+		ewarn "You still have ${old_net_rules} in place from previous udev release."
+		ewarn "Upstream has removed the possibility of renaming to existing"
+		ewarn "network interfaces. For example, it's not possible to assign based"
+		ewarn "on MAC address to existing interface eth0."
+		ewarn "See http://bugs.gentoo.org/453494 for more information."
+		ewarn "Rename your file to something else starting with 70- to silence"
+		ewarn "this warning."
 	fi
 
 	ewarn
