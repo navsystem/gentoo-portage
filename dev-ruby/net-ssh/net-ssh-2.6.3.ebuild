@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh/net-ssh-2.6.1.ebuild,v 1.1 2012/11/23 07:21:53 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh/net-ssh-2.6.3.ebuild,v 1.1 2013/01/28 07:00:58 graaff Exp $
 
-EAPI=4
+EAPI=5
 # no longer compatible with ruby 1.8.
 USE_RUBY="ruby19"
 
@@ -16,8 +16,7 @@ inherit ruby-fakegem
 
 DESCRIPTION="Non-interactive SSH processing in pure Ruby"
 HOMEPAGE="http://net-ssh.rubyforge.org/"
-SRC_URI="https://github.com/${PN}/${PN}/tarball/v${PV} -> net-ssh-git-${PV}.tgz"
-RUBY_S="${PN}-${PN}-*"
+SRC_URI="https://github.com/${PN}/${PN}/archive/v${PV}.tar.gz -> net-ssh-git-${PV}.tgz"
 
 LICENSE="GPL-2"
 SLOT="2.6"
