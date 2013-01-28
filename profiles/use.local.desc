@@ -266,7 +266,7 @@ app-cdr/brasero:nautilus - Build the gnome-base/nautilus extension
 app-cdr/brasero:packagekit - Enable support for the distro-neutral package manager GUI app-admin/packagekit
 app-cdr/brasero:playlist - Enable support for playlists through dev-libs/totem-pl-parser
 app-cdr/brasero:tracker - Enable audio playlist search using the app-misc/tracker indexer
-app-cdr/cdemu:cdemud - Pull app-cdr/cdemud dependency, useful in chroot environment (bug #315491). Do not disable until you know what you are doing.
+app-cdr/cdemu:cdemu-daemon - Pull app-cdr/cdemu-daemon dependency, useful in chroot environment (bug #315491). Do not disable until you know what you are doing.
 app-cdr/cdrdao:gcdmaster - Enable building of gcdmaster application
 app-cdr/cdrkit:hfs - Provide building of HFS (Apple) CD-images
 app-cdr/cuetools:extras - Install additional script that tag files based on cue/toc file information
@@ -6079,6 +6079,7 @@ x11-misc/dmenu:xft - Enable unofficial x11-libs/libXft support
 x11-misc/etm:ical - Enable export of ical format files by depending on dev-python/icalendar
 x11-misc/fbpager:xrender - Enable transparency support via x11-libs/libXrender
 x11-misc/google-gadgets:soup - Enables XML HTTP request extension based on net-libs/libsoup
+x11-misc/i3status:filecaps - Linux capabilities library is required for i3status to be able to read net bandwith
 x11-misc/lightdm:branding - Replace original gnome background with one from Gentoo ten project
 x11-misc/lightdm:gtk - Pull in the gtk+ greeter
 x11-misc/lightdm:introspection - Use dev-libs/gobject-introspection for introspection
