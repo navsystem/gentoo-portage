@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14410 2013/01/27 07:51:18 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14413 2013/01/28 07:52:38 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,18 @@
 
 #--- END OF EXAMPLES ---
 
+# Samuli Suominen <ssuominen@gentoo.org> (28 Jan 2013)
+# Uncompatible with current udev and baselayout
+# Bug 220121 and the ones it Blocks
+# Removal in 30 days
+x11-misc/mkxf86config
+<app-misc/livecd-tools-2.0
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (28 Jan 2013)
+# Beta versions masked for testing
+=net-misc/modemmanager-0.7*
+=net-misc/networkmanager-0.9.7*
+
 # Tim Harder <radhermit@gentoo.org> (27 Jan 2013)
 # Masked due to deprecated API, use dev-python/PyGithub instead
 # Removal in 30 days
@@ -44,14 +56,6 @@ dev-python/github2
 # functionality now provided by >=net-misc/youtube-viewer[gtk]-3.0.3
 # bug 453580, removal in 30 days
 net-misc/gtk-youtube-viewer
-
-# Richard Freeman <rich0@gentoo.org> (23 Jan 2013)
-# Masked for testing - all of mythtv to be unmasked soon...
->=www-apps/mythweb-0.26
-
-# Richard Freeman <rich0@gentoo.org> (23 Jan 2013)
-# Masked until mythweb is updated to 0.26, but works
->=media-plugins/mythplugins-0.26
 
 # Doug Goldstein <cardoe@gentoo.org> (22 Jan 2013)
 # Masked for development
@@ -432,10 +436,6 @@ net-dialup/hsfmodem
 # Richard Freeman <rich0@gentoo.org> (24 Nov 2012)
 # Live ebuild.
 =app-misc/sleepyhead-9999
-
-# Richard Freeman <rich0@gentoo.org> (22 Nov 2012)
-# Masked until mythweb is updated to 0.26, but works
->=media-tv/mythtv-0.26
 
 # Robin H. Johnson <robbat2@gentoo.org> (18 Nov 2012)
 # Dead upstream, replaced by gitolite
