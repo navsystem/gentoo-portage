@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14415 2013/01/28 19:54:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14419 2013/01/31 11:04:47 jlec Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,12 @@
 
 #--- END OF EXAMPLES ---
 
+# Rafael G. Martins <rafaelmartins@gentoo.org> (31 Jan 2013)
+# Renamed to xombrero. Please install www-client/xombrero (bug #417555)
+# The package was not pkg-moved to fix the upstream versioning mess.
+# Removal in 30 days
+www-client/xxxterm
+
 # Michael Sterrett <mr_bones_@gentoo.org> (28 Jan 2013)
 # Doesn't work with newer KDE and upstream seems dead (bug #453756)
 # Masked for removal on 20130227
@@ -40,7 +46,6 @@ games-puzzle/kmagnet
 # Uncompatible with current udev and baselayout
 # Bug 220121 and the ones it Blocks
 # Removal in 30 days
-x11-misc/mkxf86config
 <app-misc/livecd-tools-2.0
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (28 Jan 2013)
@@ -389,22 +394,6 @@ net-wireless/madwifi-ng
 # This is provided by USE=xtended webalizer, bug #445226
 app-admin/webalizer-xtended
 
-# Sebastien Fabbro <bicatali@gentoo.org> (13 Dec 2012)
-# Necessary removal to get rid of very unstable sci-libs/lapack-atlas
-# Packages are in the science overlay
-# until sci-libs/atlas replacement make it to the main tree
-<sci-astronomy/sextractor-2.8.6-r1
-sci-astronomy/scamp
-
-# Justin Lecher <jlec@gentoo.org> (13 Dec 2012)
-# sci-libs/(lapack/blas)-altas will be removed due to
-# fragile build and runtime behaviour #372323.
-# Alternatives are sci-libs/lapack-reference & sci-libs/blas-reference.
-# Follow up package named sci-libs/atlas can be found in
-# sci overlay and will be moved once ready for prime time
-sci-libs/blas-atlas
-sci-libs/lapack-atlas
-
 # Michał Górny <mgorny@gentoo.org> (07 Dec 2012)
 # Experimental version disabling XDM-AUTHENTICATION-1 (in favor
 # of MIT-MAGIC-COOKIE-1). It should fix bug #306223 but it can also
@@ -661,7 +650,6 @@ sys-apps/systemd-sysv-utils
 # Opera Next and Opera snapshots are unsupported and eternally unstable.
 # <http://my.opera.com/desktopteam/blog>
 www-client/opera-next
-=www-client/opera-12.13*
 
 # Ulrich Mueller <ulm@gentoo.org> (13 Dec 2011)
 # SLOTs 21 and 22 of app-editors/emacs, corresponding to
