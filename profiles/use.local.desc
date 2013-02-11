@@ -597,6 +597,7 @@ app-i18n/ibus:gconf - Enable support for gnome-base/gconf
 app-i18n/ibus:gtk3 - Enable support for gtk+3
 app-i18n/ibus:introspection - Use dev-libs/gobject-introspection for introspection
 app-i18n/ibus:vala - Enable support for dev-lang/vala
+app-i18n/ibus-anthy:deprecated - Install deprecated pygtk2 library
 app-i18n/ibus-m17n:gtk - Build the preference interfaces, based on x11-libs/gtk+ (GTK+ 2).
 app-i18n/ibus-pinyin:boost - Compile against dev-libs/boost libraries
 app-i18n/ibus-pinyin:opencc - Enable support for app-i18n/opencc
@@ -1317,6 +1318,14 @@ dev-lang/v8cgi:memcached - Support for the memcached daemon
 dev-lang/v8cgi:xerces - Use the xerces XML parser
 dev-lang/vala:vapigen - Enable vala's library binding generator
 dev-lang/yap:R - Enable support for connecting R to Prolog
+dev-libs/DirectFB:bmp - build BMP image provider
+dev-libs/DirectFB:dynload - enable dynload support
+dev-libs/DirectFB:gles2 - build gles2 gfxdriver
+dev-libs/DirectFB:imlib2 - build Imlib2 image provider
+dev-libs/DirectFB:input_hub - provides an asynchronous interface to the input devices available and those being added/removed
+dev-libs/DirectFB:mpeg2 - build MPEG2 image provider
+dev-libs/DirectFB:multicore - enable multicore support
+dev-libs/DirectFB:pnm - build PNM (PBM/PGM/PPM) image provider
 dev-libs/STLport:boost - Enable the usage of dev-libs/boost
 dev-libs/ace:ciao - Include Component Intergraced Ace ORB into the build of ace
 dev-libs/ace:tao - Include the ACE ORB (CORBA stuff) (called tao) into the build of ace
@@ -1378,6 +1387,7 @@ dev-libs/geoip:perl-geoipupdate - Install pure perl version of geoipupdate, with
 dev-libs/gf2x:bindist - Disable automatic fine-tuning to local processor features like pclmul or sse2.
 dev-libs/glib:systemtap - Build support for profiling and tracing using dev-util/systemtap
 dev-libs/glib:utils - Install gtester-report utility to generate test report files for your software.
+dev-libs/gmp:pgo - after building gmp, run some tests against to produce faster libraries -- this option will double the compile time
 dev-libs/gobject-introspection:doctool - Install g-ir-doc-tool for generating documentation from introspected data
 dev-libs/igraph:arpack - Use external sci-libs/arpack
 dev-libs/igraph:blas - Use external virtual/blas numerical library
@@ -1395,6 +1405,7 @@ dev-libs/libcdio:minimal - Only build the libcdio library and little more, just 
 dev-libs/libcgroup:daemon - Install the configuration tools and init/config files.
 dev-libs/libcgroup:tools - Install the cgroup rules processing daemon and init/config files.
 dev-libs/libdbusmenu:introspection - Use dev-libs/gobject-introspection for introspection
+dev-libs/libffi:pax_kernel - Use PaX emulated trampolines, for we can't use PROT_EXEC
 dev-libs/libgpg-error:common-lisp - Install common-lisp files
 dev-libs/libgusb:vala - Enable bindings for dev-lang/vala
 dev-libs/libindicate:introspection - Use dev-libs/gobject-introspection for introspection
@@ -1453,6 +1464,7 @@ dev-libs/opensc:ctapi - Use CT-API for accessing Smartcard hardware.
 dev-libs/opensc:libtool - Use sys-devel/libtool for dynamically loading libraries rather than the host libdl/dlopen helpers.
 dev-libs/opensc:openct - Use dev-libs/openct (and CT-API) for accessing Smartcard hardware.
 dev-libs/opensc:pcsc-lite - Use sys-apps/pcsc-lite (and PC/SC API) for accessing Smartcard hardware.
+dev-libs/opensc:secure-messaging - Enable secure messaging.
 dev-libs/openssl:bindist - Disable EC/RC5 algorithms (as they seem to be patented)
 dev-libs/openssl:rfc3779 - Enable support for RFC 3779 (X.509 Extensions for IP Addresses and AS Identifiers)
 dev-libs/pkcs11-helper:nss - Enable NSS crypto engine
@@ -1707,6 +1719,7 @@ dev-ruby/barby:prawn - Add support for writing PDF documents using dev-ruby/praw
 dev-ruby/barby:qrcode - Add support for QRCode 2D codes using dev-ruby/rqrcode.
 dev-ruby/barby:rmagick - Add support for writing images (among others PNG, GIF and JPEG) using dev-ruby/rmagick. Not available on JRuby.
 dev-ruby/camping:mongrel - Also install www-servers/mongrel
+dev-ruby/facter:dmi - Use sys-apps/dmidecode to determine system properties
 dev-ruby/rails:asset-pipeline - Also install the default components for the asset pipeline. These are not required but they are activated automatically in new Rails projects by default.
 dev-ruby/ruby-sdl:image - Enable media-libs/sdl-image support
 dev-ruby/ruby-sdl:mixer - Enable media-libs/sdl-mixer support
@@ -1955,6 +1968,7 @@ games-emulation/snes9x:netplay - Enable playing ROMs over the network (not recom
 games-emulation/snes9x:xrandr - Enable support for the X xrandr extension
 games-emulation/vbam:link - Enable GBA linking functionality
 games-emulation/xmess:net - Add network support
+games-emulation/zsnes:debug - Enable the builtin debugger
 games-emulation/zsnes:pax_kernel - Triggers a paxmarking of the binary
 games-engines/frobtads:tads2compiler - Build TADS2 compiler
 games-engines/frobtads:tads3compiler - Build TADS3 compiler
@@ -2079,6 +2093,7 @@ games-strategy/ufo-ai:editor - Build map editor
 games-strategy/uqm:music - download and install music files (large)
 games-strategy/uqm:remix - download and install music remix files (large)
 games-strategy/uqm:voice - download and install voice files (large)
+games-strategy/warzone2100:qt4 - Use qt-gui/qt-opengl for backend rendering instead of sdl
 games-strategy/wesnoth:server - Enable compilation of server
 games-strategy/x2:bonusscripts - Add bonus scripts
 games-strategy/x2:dynamic - Use dynamic binaries instead of static
@@ -2383,6 +2398,7 @@ mail-client/evolution:gnome-online-accounts - Enable using net-libs/gnome-online
 mail-client/evolution:ldap - Enable support for fetching contacts from an LDAP or Active Directory server using net-nds/openldap
 mail-client/evolution:map - Enable support for displaying contacts on a map inside evolution using media-libs/libchamplain
 mail-client/evolution:networkmanager - Allows Evolution to automagically toggle online/offline mode by talking to net-misc/networkmanager and getting the current network state
+mail-client/evolution:weather - Enable optional weather calendar support
 mail-client/mail-notification:gmail - Enable Gmail mailbox checking
 mail-client/mail-notification:mh - Enable MH mailbox checking
 mail-client/mail-notification:pop - Enable support for pop
@@ -2714,6 +2730,7 @@ media-libs/libmikmod:raw - Enable raw file writer plug-in
 media-libs/libmp4v2:utils - Install command-line utilities
 media-libs/libpng:apng - support unofficial APNG (Animated PNG) spec
 media-libs/libpostproc:3dnowext - Enable manually-optimised routines using the AMD 3DNow!Ex SIMD instruction set, present in modern AMD CPUs. (Check for 3dnowext in /proc/cpuinfo to know whether your CPU supports it).
+media-libs/libpostproc:mmxext - Enable mmx2 support.
 media-libs/libpostproc:pic - Force shared libraries to be built as PIC (this is slower).
 media-libs/libpostproc:vis - Adds support for SIMD optimizations for UltraSPARC processors.
 media-libs/libquicktime:schroedinger - Enable Dirac video support (an advanced royalty-free video compression format) via libschroedinger (high-speed implementation in C of the Dirac codec)
@@ -3362,14 +3379,12 @@ media-video/mjpg-streamer:v4l - Uses media-libs/libv4l function mapping for inpu
 media-video/mjpg-streamer:www - Installs WWW content
 media-video/motiontrack:multiprocess - Enables multi-process support (SMP/cluster) for motiontrack programs
 media-video/mplayer:3dnowext - Enable 3dnowext cpu instructions
-media-video/mplayer:amr - Enables Adaptive Multi-Rate format support
+media-video/mplayer:bindist - Enforces license compatibility constraints via REQUIRED_USE.
 media-video/mplayer:bl - Blinkenlights video output
 media-video/mplayer:bluray - Enable playback of Blu-ray filesystems
 media-video/mplayer:bs2b - Enable Bauer stereophonic-to-binaural headphone filter
 media-video/mplayer:cdio - Use libcdio for CD support (instead of cdparanoia)
 media-video/mplayer:cpudetection - Enables runtime CPU detection (useful for bindist, compatibility on other CPUs)
-media-video/mplayer:custom-cpuopts - Fine-tune custom CPU optimizations (UNSUPPORTED)
-media-video/mplayer:dirac - Enable Dirac video support (an advanced royalty-free video compression format) via the reference library: dirac.
 media-video/mplayer:dvdnav - Use forked libdvdnav, navigate menus in GUIs
 media-video/mplayer:dxr3 - Enable DXR3/H+ video output
 media-video/mplayer:enca - Enables support for charset discovery and conversion
@@ -3380,7 +3395,6 @@ media-video/mplayer:live - Enables live.com streaming media support
 media-video/mplayer:md5sum - Enables md5sum video output
 media-video/mplayer:mmxext - Enables mmx2 support
 media-video/mplayer:mng - MNG input support
-media-video/mplayer:mpg123 - Enable support for mp3 decoding over media-sound/mpg123.
 media-video/mplayer:network - Enables network streaming support
 media-video/mplayer:nut - Enables support for the NUT container format
 media-video/mplayer:osdmenu - Enables support for on-screen display (OSD) menus
@@ -3391,7 +3405,6 @@ media-video/mplayer:rar - Enable Unique RAR File Library
 media-video/mplayer:real - Adds Real audio/video support
 media-video/mplayer:rtc - Enables usage of the linux real time clock. The alternative is software emulation of rtc
 media-video/mplayer:rtmp - Enables RTMPDump Streaming Media support
-media-video/mplayer:schroedinger - Enable Dirac video support (an advanced royalty-free video compression format) via libschroedinger (high-speed implementation in C of the Dirac codec).
 media-video/mplayer:shm - Enable support for shm
 media-video/mplayer:ssse3 - faster floating point optimization for SSSE3 capable chips (Intel Core 2 and later chips)
 media-video/mplayer:tga - Enables Targa video output
@@ -3399,7 +3412,6 @@ media-video/mplayer:toolame - Enable toolame MPEG-2 encoding
 media-video/mplayer:tremor - Enable internal support for Vorbis
 media-video/mplayer:twolame - Enable twolame MPEG-2 encoding
 media-video/mplayer:vidix - Support for vidix video output
-media-video/mplayer:vpx - Enables vp8 codec support using libvpx: Decoding vp8 does not require this to be enabled but libvpx can also be used for decoding; encoding vp8 requires this useflag to be enabled though.
 media-video/mplayer:xanim - Enables support for xanim based codecs
 media-video/mplayer:xvmc - Enables X-Video Motion Compensation support
 media-video/mplayer:zoran - Enables ZR360[56]7/ZR36060 video output
@@ -3733,10 +3745,6 @@ net-dialup/freeradius-client:scp - Add service type hints derived from username 
 net-dialup/freeradius-client:shadow - Enable shadow password support
 net-dialup/mgetty:fax - Enables fax support
 net-dialup/mgetty:fidonet - Enables FidoNet support
-net-dialup/misdn:ecaggressive - Make the selected echo canceller a little more aggressive
-net-dialup/misdn:eckb1 - Use the KB1 echo canceller
-net-dialup/misdn:ecmark2 - Use the MARK2 echo canceller
-net-dialup/misdn:ecmg2 - Use the MG2 echo canceller (default)
 net-dialup/ppp:activefilter - Enables active filter support
 net-dialup/ppp:atm - Enables ATM (Asynchronous Transfer Mode) protocol support
 net-dialup/ppp:dhcp - Installs PPP DHCP client plugin for IP address allocation by a DHCP server (see http://www.netservers.co.uk/gpl/)
@@ -4099,6 +4107,13 @@ net-irc/inspircd:mysql - Enable MySQL database backend
 net-irc/inspircd:postgres - Enable PostgreSQL database backend
 net-irc/inspircd:sqlite - Enable Sqlite database backend
 net-irc/inspircd:ssl - Enable SSL support
+net-irc/iroffer-dinoex:admin - Compile with HTTP Admin
+net-irc/iroffer-dinoex:blowfish - Compile with blowfish encryption support
+net-irc/iroffer-dinoex:chroot - Compile with chroot support
+net-irc/iroffer-dinoex:http - Compile with HTTP server support
+net-irc/iroffer-dinoex:kqueue - Compile with kqueue() support
+net-irc/iroffer-dinoex:memsave - Compile with memory protection
+net-irc/iroffer-dinoex:telnet - Compile with Telnet server support
 net-irc/kvirc:dcc_video - Support video connections over DCC protocol
 net-irc/kvirc:dcc_voice - Support voice connections over DCC protocol
 net-irc/kvirc:ipc - Support inter-process communication between KVIrc processes
@@ -4838,7 +4853,6 @@ net-wireless/hostapd:logwatch - Install support files for sys-app/logwatch
 net-wireless/hostapd:madwifi - Add support for madwifi (Atheros chipset)
 net-wireless/hostapd:wps - Add support for Wi-Fi Protected Setup
 net-wireless/kismet:client - Build the ncurses-based user interface
-net-wireless/kismet:ncurses - Build the ncurses-based user interface
 net-wireless/kismet:pcre - Build with pcre support
 net-wireless/kismet:plugin-autowep - Build the autowep plugin
 net-wireless/kismet:plugin-btscan - Build the btscan plugin
@@ -5000,6 +5014,8 @@ sci-geosciences/gmt:mex - Enable compilation of mex supplement which requires Oc
 sci-geosciences/gmt:octave - Enable octave support
 sci-geosciences/googleearth:mdns-bundled - Use bundled nss-mdns library instead of depending on sys-auth/nss-mdns. Enable this if you want to avoid the deptree.
 sci-geosciences/googleearth:qt-bundled - Use bundled Qt4 libraries instead of system ones. Recommended only for troubleshooting.
+sci-geosciences/googleearth:system-mdns - Use nss-mdns library from portagen instead of the bundled one.
+sci-geosciences/googleearth:system-qt - Use Qt4 libraries from portage instead of the bundled ones.
 sci-geosciences/gpsd:dbus - export gpsd data over dbus connections
 sci-geosciences/gpsd:ntp - Enable net-misc/ntp shared memory interface and PPS kernel support for GPS time
 sci-geosciences/gpsd:shm - export gpsd over shared memory
@@ -5016,6 +5032,7 @@ sci-geosciences/mapserver:xslt - Enable xslt and exslt support xml-mapfile suppo
 sci-geosciences/merkaartor:libproxy - Use net-libs/libproxy for getting the HTTP/HTTPS/SOCKS proxy configuration
 sci-geosciences/merkaartor:webkit - Enable Webkit browser plugin using x11-libs/qt-webkit
 sci-geosciences/opencpn:gpsd - Add support for using a GPS device through the GPSD deamon
+sci-geosciences/qgis:bundled-libs - Use internal copy of x11-libs/qwtpolar
 sci-geosciences/qgis:grass - Add support for sci-geosciences/grass
 sci-geosciences/qgis:spatialite - Enable Spatial DBMS over sqlite dev-db/spatialite
 sci-geosciences/qlandkartegt:dmtx - Enable libdmtx support for summarizing waypoints as 2D barcode
@@ -5285,6 +5302,7 @@ sys-apps/hwdata-gentoo:binary-drivers - Adds support for ATI/NVIDIA binary drive
 sys-apps/hwloc:numa - Add support for numa memory allocation
 sys-apps/hwloc:pci - Enable PCI device discovery using libpci
 sys-apps/hwloc:plugins - Build hwloc components as plugins so that the hwloc core library does not directly depend on their dependencies (for instance the libpci library)
+sys-apps/iotools:make-symlinks - Generate sub-command symlinks to iotools -- note that a lot are simple like "xor"
 sys-apps/ipmitool:openipmi - Use the system OpenIPMI implementation.
 sys-apps/iproute2:iptables - include support for iptables filtering
 sys-apps/irqbalance:numa - Support balancing IRQs across NUMA nodes

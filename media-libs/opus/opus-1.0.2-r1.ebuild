@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opus/opus-1.0.2-r1.ebuild,v 1.1 2013/02/04 16:33:46 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opus/opus-1.0.2-r1.ebuild,v 1.3 2013/02/08 16:38:14 ago Exp $
 
 EAPI=4
 
