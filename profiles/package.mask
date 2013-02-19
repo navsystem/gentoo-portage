@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14469 2013/02/14 07:46:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14480 2013/02/17 18:50:40 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,37 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Davide Pesavento <pesa@gentoo.org> (17 Feb 2013)
+# Mask beta version for testing.
+=dev-util/qt-creator-2.7.0_beta*
+
+# Markos Chandras <hwoarang@gentoo.org> (17 Feb 2013)
+# Does not build with libav-0.8
+=media-video/qx11grab-0.4.7
+
+# Doug Goldstein <cardoe@gentoo.org> (16 Feb 2013)
+# For most use cases you can unmask this and use this
+# as there has been ample interested. This however breaks
+# at least one feature fundamental to me.
+# * migration from previous versions is broken and migration
+#   to future versions is broken
+# So this is in the tree for people that want/need it but its masked.
+=app-emulation/qemu-1.4.0
+
+# Rick Farina <zerochaos@gentoo.org> (15 Feb 2013)
+# these firmware packages have been merged into the sys-kernel/linux-firmware
+# package. USE=savedconfig can be used to limit the firmware which gets installed.
+# removal on 18 March 2013
+sys-firmware/iwl3945-ucode
+sys-firmware/iwl4965-ucode
+
+# Alexis Ballier <aballier@gentoo.org> (15 Feb 2013)
+# Starting from this version, some decoders and encoders (like AAC or APE)
+# switched to outputing or needing planar audio, this breaks some applications
+# at runtime and the tree needs to be checked. For instance, <xbmc-12,
+# <vlc-2.0.6 break.
+>=media-video/ffmpeg-1.1
 
 # Michael Sterrett <mr_bones_@gentoo.org> (13 Feb 2013)
 # No longer licensed for sale upstream.
@@ -127,8 +158,8 @@ net-wireless/ar9271-firmware
 net-wireless/libertas-firmware
 net-wireless/rt2860-firmware
 net-wireless/rt2870-firmware
-net-wireless/rt61-firmware
 net-wireless/rt73-firmware
+sys-firmware/rt61-firmware
 net-wireless/i2400m-fw
 
 # Samuli Suominen <ssuominen@gentoo.org> (10 Feb 2013)
@@ -151,7 +182,7 @@ net-wireless/rtl8192su-firmware
 # Diego Elio Pettenò <flameeyes@gentoo.org> (05 Feb 2013)
 # Needs a complete ebuild rewrite to use CMake, and a new patchset to
 # unbundle the bundled libraries. Use at your own risk; don't ask for
-# a bump unless you can provide the two needed items.
+# a bump unless you can provide the two needed items (see bug #364291).
 media-gfx/blender
 
 # Michael Sterrett <mr_bones_@gentoo.org> (31 Jan 2013)
@@ -197,11 +228,6 @@ dev-python/github2
 # Masked for testing
 >=dev-libs/boost-1.53.0_beta1
 >=dev-util/boost-build-1.53.0_beta1
-
-# Julian Ospald <hasufell@gentoo.org> (25 Jan 2013)
-# functionality now provided by >=net-misc/youtube-viewer[gtk]-3.0.3
-# bug 453580, removal in 30 days
-net-misc/gtk-youtube-viewer
 
 # Doug Goldstein <cardoe@gentoo.org> (22 Jan 2013)
 # Masked for development
@@ -275,7 +301,7 @@ sys-apps/i2c
 
 # Maciej Mrozowski <reavertm@gentoo.org>
 # API change breaks packages, bug 449534.
-=app-text/poppler-0.22.0
+>=app-text/poppler-0.22.0
 
 # Alexis Ballier <aballier@gentoo.org>
 # Not really compatible with TeX Live 2012, breaks texdoc, produces some non
@@ -372,11 +398,6 @@ dev-haskell/wxhaskell:2.9
 # stable wpa_supplicant sometimes wants madwifi-ng-tools
 #net-wireless/madwifi-ng-tools
 net-wireless/madwifi-ng
-
-# Julian Ospald <hasufell@gentoo.org> (20 Dev 2012)
-# old and subject to removal
-# version scheme collides with new release
-=games-roguelike/tomenet-100310
 
 # Anthony G. Basile <blueness@gentoo.org> (17 Dec 2012)
 # Masked for removal in 30 days. (17 Jan 2012)
