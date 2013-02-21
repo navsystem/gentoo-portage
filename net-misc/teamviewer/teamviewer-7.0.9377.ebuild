@@ -84,7 +84,7 @@ src_install () {
 
 	newicon -s 48 "${S}"/.tvscript/${PN}.png ${MY_PN}.png
 	dodoc linux_FAQ_{EN,DE}.txt
-	make_desktop_entry ${MY_PN} TeamViewer-7 ${MY_PN}
+	make_desktop_entry ${MY_PN} TeamViewer-${MV} ${MY_PN}
 }
 
 pkg_preinst() {
