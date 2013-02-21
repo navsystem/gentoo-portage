@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit eutils gnome2-utils
+inherit eutils gnome2-utils systemd
 
 # Major version
 MV=${PV/\.*}
@@ -101,7 +101,8 @@ src_install () {
 
 	newicon -s 48 desktop/${PN}.png ${MY_PN}.png
 	dodoc ../linux_FAQ_{EN,DE}.txt
-	make_desktop_entry ${MY_PN} TeamViewer ${MY_PN}
+	make_desktop_entry ${MY_PN} TeamViewer-8 ${MY_PN}
+	systemd_dounit ${FILESDIR}/${PN}.service
 }
 
 pkg_preinst() {
