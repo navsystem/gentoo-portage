@@ -9,5 +9,6 @@ virtual/ooo
 media-libs/phonon
 sys-apps/hasp
 dev-python/xlwt
+dev-python/xlrd
 app-misc/pip
 
