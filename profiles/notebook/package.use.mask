@@ -1,3 +1,1 @@
-sys-auth/polkit -systemd
-sys-power/upower -systemd
 sys-boot/plymouth video_cards_nouveau
