@@ -32,7 +32,7 @@ REQUIRED_USE="
 "
 
 RDEPEND="
-	>=x11-libs/qt-gui-4.4:4[dbus?]
+	>=dev-qt/qtgui-4.4:4[dbus?]
 	>=app-crypt/qca-2.0.2:2
 	|| ( >=sys-libs/zlib-1.2.5.1-r2[minizip] <sys-libs/zlib-1.2.5.1-r1 )
 	whiteboarding? ( x11-libs/qt-svg:4 )
@@ -41,7 +41,7 @@ RDEPEND="
 		!enchant? ( app-text/aspell )
 	)
 	xscreensaver? ( x11-libs/libXScrnSaver )
-	extras? ( webkit? ( x11-libs/qt-webkit:4 ) )
+	extras? ( webkit? ( dev-qt/qtwebkit:4 ) )
 "
 DEPEND="${RDEPEND}
 	extras? (

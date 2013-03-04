@@ -15,7 +15,7 @@ IUSE="debug"
 
 EHG_REPO_URI="ssh://hg@trac:5438/Inet_Loc"
 RDEPEND="
-    >=x11-libs/qt-core-4.6.0
+    >=dev-qt/qtcore-4.6.0
 "
 
 src_unpack() {

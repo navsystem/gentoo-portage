@@ -1,11 +1,11 @@
 DEFINED_PHASES=compile configure install prepare unpack
-DEPEND=>=dev-libs/glib-2.20.0 >=media-libs/gstreamer-0.10.22 >=media-libs/gst-plugins-base-0.10.22 media-libs/gst-plugins-good >=dev-libs/liboil-0.3 >=x11-libs/qt-gui-4.4:4 >=media-libs/speex-1.2_rc1 sys-devel/qconf virtual/pkgconfig dev-vcs/git
+DEPEND=>=dev-libs/glib-2.18 >=media-libs/gstreamer-0.10.22:0.10 >=media-libs/gst-plugins-base-0.10.22:0.10 media-libs/gst-plugins-good:0.10 >=dev-libs/liboil-0.3 >=dev-qt/qtgui-4.4:4 >=media-libs/speex-1.2_rc1 sys-devel/qconf virtual/pkgconfig dev-vcs/git
 DESCRIPTION=Psi plugin for voice/video calls
 EAPI=4
 HOMEPAGE=http://delta.affinix.com/psimedia/
 IUSE=demo extras
 LICENSE=GPL-2
-RDEPEND=>=dev-libs/glib-2.20.0 >=media-libs/gstreamer-0.10.22 >=media-libs/gst-plugins-base-0.10.22 media-libs/gst-plugins-good >=dev-libs/liboil-0.3 >=x11-libs/qt-gui-4.4:4 >=media-libs/speex-1.2_rc1 media-plugins/gst-plugins-speex >=media-plugins/gst-plugins-vorbis-0.10.22 >=media-plugins/gst-plugins-theora-0.10.22 >=media-plugins/gst-plugins-alsa-0.10.22 >=media-plugins/gst-plugins-ogg-0.10.22 media-plugins/gst-plugins-v4l2 media-plugins/gst-plugins-jpeg !<net-im/psi-0.13_rc1 extras? ( >=net-im/psi-0.15_pre20110125[extras] )
+RDEPEND=>=dev-libs/glib-2.18 >=media-libs/gstreamer-0.10.22:0.10 >=media-libs/gst-plugins-base-0.10.22:0.10 media-libs/gst-plugins-good:0.10 >=dev-libs/liboil-0.3 >=dev-qt/qtgui-4.4:4 >=media-libs/speex-1.2_rc1 media-plugins/gst-plugins-speex:0.10 >=media-plugins/gst-plugins-vorbis-0.10.22:0.10 >=media-plugins/gst-plugins-theora-0.10.22:0.10 >=media-plugins/gst-plugins-alsa-0.10.22:0.10 >=media-plugins/gst-plugins-ogg-0.10.22:0.10 media-plugins/gst-plugins-v4l2:0.10 media-plugins/gst-plugins-jpeg:0.10 net-im/psi !<net-im/psi-0.13_rc1 extras? ( >=net-im/psi-0.15_pre20110125[extras] )
 SLOT=0
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	d40dc948067bd3db1c8ebf7d51897313	git-2	15733ab6a6feb34af9837b41623c2bad	multilib	9aa8a023e062fca0ba79362d9d0cc488	qt4-r2	19af9102ca9b827213997cc636e7e33c	toolchain-funcs	134429b842a6c67254bfd76a8753e4d4	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=67f648b3859b6ee3c1a5c88b1495fb9b
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	2824df7f5dc9f47aee293af8a6b517ed	git-2	e92e09651292b1bef5656592364550f7	multilib	ded93e450747134a079e647d888aa80b	qt4-r2	19af9102ca9b827213997cc636e7e33c	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=8ab27b32eeab4e99d41b91df796c71f3

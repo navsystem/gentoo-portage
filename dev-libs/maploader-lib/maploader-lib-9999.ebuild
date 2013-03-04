@@ -15,7 +15,7 @@ IUSE="debug"
 
 ESVN_REPO_URI=http://192.168.99.121/repos/SOFT/Qt/Argo5/MapLoader
 RDEPEND="
-    >=x11-libs/qt-core-4.6.0
+    >=dev-qt/qtcore-4.6.0
 "
 src_unpack(){
 	subversion_src_unpack || die

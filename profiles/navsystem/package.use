@@ -29,7 +29,7 @@ dev-libs/libgcrypt static-libs
 sys-apps/hal -crypt -X
 virtual/ffmpeg encode
 
-dev-util/qt-creator examples git mercurial perforce qml qtscript
+dev-qt/qt-creator examples git mercurial perforce qml qtscript
 app-misc/mc -X slang -ncurses
 dev-vcs/subversion -dso extras
 gnome-base/gvfs gdu

@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="debug"
 
-DEPEND="x11-libs/qt-core:4"
+DEPEND="dev-qt/qtcore:4"
 
 RDEPEND=${DEPEND}
 

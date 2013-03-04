@@ -17,10 +17,9 @@ KEYWORDS="amd64 x86"
 IUSE="test doc examples"
 
 COM_DEPEND="app-arch/zip
-		x11-libs/qt-core:4
-		x11-libs/qt-gui:4"
+		dev-qt/qtgui:4"
 DEPEND="${COM_DEPEND}
-	test? ( x11-libs/qt-test:4 )"
+	test? ( dev-qt/qttest:4 )"
 RDEPEND="${COM_DEPEND}"
 
 pkg_setup()
