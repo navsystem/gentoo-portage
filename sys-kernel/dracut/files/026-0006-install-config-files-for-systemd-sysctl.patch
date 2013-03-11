@@ -1,0 +1,12 @@
+diff -Nur dracut-026_orig/modules.d/98systemd/module-setup.sh dracut-026/modules.d/98systemd/module-setup.sh
+--- dracut-026_orig/modules.d/98systemd/module-setup.sh	2013-03-08 13:07:48.000000000 +0700
++++ dracut-026/modules.d/98systemd/module-setup.sh	2013-03-11 11:57:52.053300654 +0700
+@@ -113,6 +113,8 @@
+             /etc/systemd/system.conf \
+             /etc/hostname \
+             /etc/machine-id \
++            /etc/sysctl.conf \
++            /etc/sysctl.d/*.conf \
+             /etc/vconsole.conf \
+             /etc/locale.conf
+ 
