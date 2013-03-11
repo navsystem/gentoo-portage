@@ -1,0 +1,63 @@
+diff -Nur dracut-026_orig/modules.d/98systemd/dracut-mount.service dracut-026/modules.d/98systemd/dracut-mount.service
+--- dracut-026_orig/modules.d/98systemd/dracut-mount.service	2013-03-08 13:07:48.000000000 +0700
++++ dracut-026/modules.d/98systemd/dracut-mount.service	2013-03-11 15:27:08.723656361 +0700
+@@ -11,8 +11,8 @@
+ Description=dracut mount hook
+ Documentation=man:dracut-mount.service(8)
+ DefaultDependencies=no
+-After=dracut-pre-mount.service dracut-initqueue.service initrd-parse-etc.service local-fs.target
+-Wants=local-fs.target
++After=dracut-pre-mount.service dracut-initqueue.service initrd-parse-etc.service initrd-fs.target
++Wants=initrd-fs.target
+ ConditionPathExists=/etc/initrd-release
+ ConditionDirectoryNotEmpty=|/lib/dracut/hooks/mount
+ ConditionKernelCommandLine=|rd.break=mount
+diff -Nur dracut-026_orig/modules.d/98systemd/dracut-pre-mount.service dracut-026/modules.d/98systemd/dracut-pre-mount.service
+--- dracut-026_orig/modules.d/98systemd/dracut-pre-mount.service	2013-03-08 13:07:48.000000000 +0700
++++ dracut-026/modules.d/98systemd/dracut-pre-mount.service	2013-03-11 15:27:53.907431495 +0700
+@@ -11,7 +11,7 @@
+ Description=dracut pre-mount hook
+ Documentation=man:dracut-pre-mount.service(8)
+ DefaultDependencies=no
+-Before=sysroot.mount local-fs.target
++Before=sysroot.mount initrd-fs.target
+ After=dracut-initqueue.service
+ After=cryptsetup.target
+ ConditionPathExists=/etc/initrd-release
+diff -Nur dracut-026_orig/modules.d/98systemd/dracut-pre-pivot.service dracut-026/modules.d/98systemd/dracut-pre-pivot.service
+--- dracut-026_orig/modules.d/98systemd/dracut-pre-pivot.service	2013-03-08 13:07:48.000000000 +0700
++++ dracut-026/modules.d/98systemd/dracut-pre-pivot.service	2013-03-11 15:26:54.727726226 +0700
+@@ -11,8 +11,8 @@
+ Description=dracut pre-pivot and cleanup hook
+ Documentation=man:dracut-pre-pivot.service(8)
+ DefaultDependencies=no
+-After=dracut-mount.service dracut-initqueue.service initrd-parse-etc.service local-fs.target
+-Wants=local-fs.target
++After=dracut-mount.service dracut-initqueue.service initrd-parse-etc.service initrd-fs.target
++Wants=initrd-fs.target
+ Before=initrd-cleanup.service
+ ConditionPathExists=/etc/initrd-release
+ ConditionDirectoryNotEmpty=|/lib/dracut/hooks/pre-pivot
+diff -Nur dracut-026_orig/modules.d/98systemd/module-setup.sh dracut-026/modules.d/98systemd/module-setup.sh
+--- dracut-026_orig/modules.d/98systemd/module-setup.sh	2013-03-08 13:07:48.000000000 +0700
++++ dracut-026/modules.d/98systemd/module-setup.sh	2013-03-11 15:47:35.058847302 +0700
+@@ -45,8 +45,8 @@
+         $systemdsystemunitdir/basic.target \
+         $systemdsystemunitdir/halt.target \
+         $systemdsystemunitdir/kexec.target \
+-        $systemdsystemunitdir/local-fs.target \
+-        $systemdsystemunitdir/local-fs-pre.target \
++        $systemdsystemunitdir/initrd-fs.target \
++        $systemdsystemunitdir/initrd-fs-pre.target \
+         $systemdsystemunitdir/remote-fs.target \
+         $systemdsystemunitdir/remote-fs-pre.target \
+         $systemdsystemunitdir/network.target \
+@@ -179,7 +179,7 @@
+     inst_simple "$moddir/dracut-pre-pivot.service" ${dracutsystemunitdir}/dracut-pre-pivot.service
+     ln -fs ../dracut-pre-pivot.service "${initdir}${dracutsystemunitdir}/dracut.target.wants/dracut-pre-pivot.service"
+ 
+-    ln -fs ../initrd-parse-etc.service "${initdir}${dracutsystemunitdir}/dracut.target.wants/initrd-parse-etc.service"
++    ln_r ${systemdsystemunitdir}/initrd-parse-etc.service "${dracutsystemunitdir}/dracut.target.wants/initrd-parse-etc.service"
+ 
+     inst_rules 99-systemd.rules
+ 
