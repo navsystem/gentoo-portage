@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-024-r4.ebuild,v 1.3 2013/02/02 23:12:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-025.ebuild,v 1.1 2013/03/09 20:06:40 aidecoe Exp $
 
 EAPI=4
 
@@ -107,6 +107,8 @@ DEPEND="${CDEPEND}
 	>=app-text/docbook-xsl-stylesheets-1.75.2
 	"
 
+DRACUT_LIBDIR="/usr/lib"
+
 #
 # Helper functions
 #
@@ -149,6 +151,11 @@ rm_module() {
 #
 
 src_prepare() {
+	epatch "${FILESDIR}/${PV}-0001-dracut-functions.sh-support-for-altern.patch"
+	epatch "${FILESDIR}/${PV}-0002-gentoo.conf-let-udevdir-be-handled-by-.patch"
+	epatch "${FILESDIR}/${PV}-0003-rootfs-block-mount-root.sh-fixup-for-8.patch"
+	epatch "${FILESDIR}/${PV}-0004-dracut.sh-reverting-return-value-chang.patch"
+	epatch "${FILESDIR}/${PV}-0005-Mount-proc-before-including-dracut-lib.patch"
 	chmod +x "${S}/modules.d/95udev-rules/udev-rules-prepare.sh"
 
 	if use dracut_modules_systemd; then
@@ -168,20 +175,24 @@ src_prepare() {
 	fi
 }
 
+src_configure() {
+	econf --libdir="${DRACUT_LIBDIR}"
+}
+
 src_compile() {
-	emake prefix=/usr sysconfdir=/etc DESTDIR="${D}" doc
+	emake doc
+
 	if use optimization; then
 		ewarn "Enabling experimental optimization!"
 		tc-export CC
-		emake prefix=/usr sysconfdir=/etc DESTDIR="${D}" install/dracut-install
+		emake install/dracut-install
 	fi
 }
 
 src_install() {
-	local libdir="/usr/lib"
+	local libdir="${DRACUT_LIBDIR}"
 
-	emake prefix=/usr libdir="${libdir}" sysconfdir=/etc \
-		DESTDIR="${D}" install
+	emake DESTDIR="${D}" install
 
 	dodir /var/lib/dracut/overlay
 	dodoc HACKING TODO AUTHORS NEWS README*
