@@ -1,4 +1,4 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -8,7 +8,7 @@ inherit eutils rpm linux-info linux-mod systemd
 
 DESCRIPTION="Hardware Against Software Piracy for access to parallel and usb keys"
 HOMEPAGE="http://www.etersoft.ru"
-SRC_URI="http://ftp.etersoft.ru/pub/Etersoft/HASP/3.3/sources/x86_64/Gentoo/2011/haspd-3.3-eter3gentoo.src.rpm"
+SRC_URI="http://ftp.etersoft.ru/pub/Etersoft/HASP/3.3/sources/Gentoo/2009/haspd-3.3-eter5gentoo.src.rpm"
 
 LICENSE="Etersoft"
 SLOT="0"
@@ -87,5 +87,5 @@ src_install() {
 	dodir ${udevrulesdir}
 	insinto ${udevrulesdir}
 	use lpt && doins "${FILESDIR}"/80-lpt-hardlock.rules
-	use usb && doins "${FILESDIR}"/80-hasp.rules
+	use usb && doins aksusbd/udev/rules.d/80-hasp.rules
 }
