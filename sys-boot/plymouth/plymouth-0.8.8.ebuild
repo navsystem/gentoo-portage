@@ -41,7 +41,8 @@ src_prepare() {
 	sed -i 's:/bin/systemd-tty-ask-password-agent:/usr/bin/systemd-tty-ask-password-agent:g' \
 		systemd-units/systemd-ask-password-plymouth.service.in || die \
 		'sed bin failed'
-	autotools-utils_src_prepare
+	sed -i "s:SYSTEMD_UNIT_DIR=.*\$:SYSTEMD_UNIT_DIR=$(systemd_get_unitdir):g" configure.ac || die 'sed configure.ac failed'
+	AUTOTOOLS_AUTORECONF=1 autotools-utils_src_prepare
 }
 
 src_configure() {
