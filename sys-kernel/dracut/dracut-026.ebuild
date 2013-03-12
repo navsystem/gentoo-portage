@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-025.ebuild,v 1.1 2013/03/09 20:06:40 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-026.ebuild,v 1.1 2013/03/10 14:09:35 aidecoe Exp $
 
 EAPI=4
 
@@ -64,7 +64,7 @@ IUSE="debug device-mapper optimization net selinux ${IUSE_DRACUT_MODULES}"
 RESTRICT="test"
 
 CDEPEND=">sys-fs/udev-166
-	dracut_modules_systemd? ( >=sys-apps/systemd-198 )
+	dracut_modules_systemd? ( sys-apps/systemd )
 	"
 RDEPEND="${CDEPEND}
 	app-arch/cpio
@@ -107,6 +107,8 @@ DEPEND="${CDEPEND}
 	>=app-text/docbook-xsl-stylesheets-1.75.2
 	"
 
+DOCS=( AUTHORS HACKING NEWS README README.generic README.kernel README.modules
+	README.testsuite TODO )
 DRACUT_LIBDIR="/usr/lib"
 
 #
@@ -153,12 +155,10 @@ rm_module() {
 src_prepare() {
 	epatch "${FILESDIR}/${PV}-0001-dracut-functions.sh-support-for-altern.patch"
 	epatch "${FILESDIR}/${PV}-0002-gentoo.conf-let-udevdir-be-handled-by-.patch"
+	epatch "${FILESDIR}/${PV}-0003-Revert-crypt-dmraid-mdraid-use-for_eac.patch"
+	chmod +x "${S}/modules.d/95udev-rules/udev-rules-prepare.sh"
 
 	if use dracut_modules_systemd; then
-		epatch "${FILESDIR}/${PV}-0003-use-defined-path-to-systemd-utils.patch"
-		epatch "${FILESDIR}/${PV}-0004-proper-path-to-udevadm.patch"
-		epatch "${FILESDIR}/${PV}-0005-call-systemd-in-private-dir-for-version.patch"
-		epatch "${FILESDIR}/${PV}-0006-install-config-files-for-systemd-sysctl.patch"
 		local systemdutildir="$($(tc-getPKG_CONFIG) systemd \
 			--variable=systemdutildir)"
 		local systemdsystemunitdir="$($(tc-getPKG_CONFIG) systemd \
@@ -190,18 +190,17 @@ src_compile() {
 }
 
 src_install() {
+	default
+
 	local libdir="${DRACUT_LIBDIR}"
 
-	emake DESTDIR="${D}" install
-
-	dodir /var/lib/dracut/overlay
-	dodoc HACKING TODO AUTHORS NEWS README*
-
-	insinto /etc/dracut.conf.d
+	insinto "${libdir}/dracut/dracut.conf.d/"
 	newins dracut.conf.d/gentoo.conf.example gentoo.conf
 
 	insinto /etc/logrotate.d
 	newins dracut.logrotate dracut
+
+	dodir /var/lib/dracut/overlay
 
 	dohtml dracut.html
 

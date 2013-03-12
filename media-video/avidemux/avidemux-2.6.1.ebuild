@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.6.1.ebuild,v 1.3 2013/03/04 16:34:51 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.6.1.ebuild,v 1.5 2013/03/11 12:41:18 tomwij Exp $
 
 EAPI="5"
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PV}/${MY_P}.tar.gz"
 # Multiple licenses because of all the bundled stuff.
 LICENSE="GPL-1 GPL-2 MIT PSF-2 public-domain"
 KEYWORDS="~amd64 ~x86"
-IUSE="aften a52 alsa amr debug dts fontconfig gtk jack lame libsamplerate mmx nls qt4 sdl vorbis truetype xvid xv oss x264"
+IUSE="aften a52 alsa amr debug dts fontconfig gtk jack lame libsamplerate mmx oss nls qt4 sdl -system-ffmpeg vorbis truetype xvid x264 xv"
 
 RDEPEND="
 	>=dev-lang/spidermonkey-1.5-r2
@@ -40,6 +40,7 @@ RDEPEND="
 	lame? ( media-sound/lame )
 	qt4? ( >=dev-qt/qtgui-4.8.3:4 )
 	sdl? ( media-libs/libsdl )
+	system-ffmpeg? ( >=media-video/ffmpeg-1.0[aac,cpudetection,mp3,theora] )
 	truetype? ( >=media-libs/freetype-2.1.5 )
 	x264? ( media-libs/x264 )
 	xv? ( x11-libs/libXv )
@@ -110,19 +111,27 @@ src_prepare() {
 	# The desktop file is broken. It uses avidemux2 instead of avidemux3
 	# so it will actually launch avidemux-2.5 if it is installed.
 	sed -i -re '/^Exec/ s:(avidemux3_)gtk:\1qt4:' ${PN}-2.6.desktop || die "Desktop file fix failed."
+
+	if use system-ffmpeg ; then
+		rm -rf cmake/admFFmpeg* cmake/ffmpeg* avidemux_core/ffmpeg_package buildCore/ffmpeg || die "Failed to remove ffmpeg."
+
+		sed -i -e 's/include(admFFmpegUtil)//g' avidemux/commonCmakeApplication.cmake || die "Failed to remove ffmpeg."
+		sed -i -e '/registerFFmpeg/d' avidemux/commonCmakeApplication.cmake || die "Failed to remove ffmpeg."
+		sed -i -e 's/include(admFFmpegBuild)//g' avidemux_core/CMakeLists.txt || die "Failed to remove ffmpeg."
+	fi
 }
 
 src_configure() {
 	local x mycmakeargs plugin_ui
 
 	mycmakeargs="
-		$(for x in ${IUSE}; do cmake-utils_use $x; done)
-		$(cmake-utils_use dts LIBDCA)
-		$(cmake-utils_use truetype FREETYPE2)
-		$(cmake-utils_use nls GETTEXT)
-		$(cmake-utils_use xv XVIDEO)
+		$(for x in ${IUSE}; do cmake-utils_use ${x/#-/}; done)
 		$(cmake-utils_use amr OPENCORE_AMRWB)
 		$(cmake-utils_use amr OPENCORE_AMRNB)
+		$(cmake-utils_use dts LIBDCA)
+		$(cmake-utils_use nls GETTEXT)
+		$(cmake-utils_use truetype FREETYPE2)
+		$(cmake-utils_use xv XVIDEO)
 	"
 	use debug && POSTFIX="_debug" && mycmakeargs+="-DVERBOSE=1 -DCMAKE_BUILD_TYPE=Debug"
 
