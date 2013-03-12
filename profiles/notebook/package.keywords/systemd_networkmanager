@@ -6,6 +6,7 @@
 <virtual/udev-9999 amd64
 <sys-boot/plymouth-9999  amd64
 <sys-kernel/dracut-9999  amd64
+=sys-apps/hwids-20130309-r1 amd64
 ~sys-auth/pambase-20120417 amd64
 ~sys-apps/shadow-4.1.5.1 amd64
 ~net-misc/connman-0.78 amd64
