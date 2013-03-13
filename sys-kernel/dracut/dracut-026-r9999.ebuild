@@ -161,6 +161,7 @@ src_prepare() {
 		epatch "${FILESDIR}/${PV}-0006-install-config-files-for-systemd-sysctl.patch"
 		epatch "${FILESDIR}/${PV}-0007-replace_local-fs_to_initrd-fs.patch"
 		epatch "${FILESDIR}/${PV}-0008-turn-off-systemd-modules-load.service-in-initrd.patch"
+		epatch "${FILESDIR}/${PV}-0009-add-systemd-vconsole-setup-service-into-dracut-target.patch"
 		local systemdutildir="$($(tc-getPKG_CONFIG) systemd \
 			--variable=systemdutildir)"
 		local systemdsystemunitdir="$($(tc-getPKG_CONFIG) systemd \

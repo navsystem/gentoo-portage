@@ -1,0 +1,11 @@
+diff -Nur dracut-026_orig/modules.d/98systemd/module-setup.sh dracut-026/modules.d/98systemd/module-setup.sh
+--- dracut-026_orig/modules.d/98systemd/module-setup.sh	2013-03-08 13:07:48.000000000 +0700
++++ dracut-026/modules.d/98systemd/module-setup.sh	2013-03-13 14:13:43.013823737 +0700
+@@ -184,6 +184,7 @@
+     inst_rules 99-systemd.rules
+ 
+     for i in \
++        dracut.target \
+         emergency.target \
+         dracut-emergency.service \
+         rescue.service \
