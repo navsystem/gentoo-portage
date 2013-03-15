@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ted-2.22.ebuild,v 1.4 2013/03/12 18:23:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ted-2.22.ebuild,v 1.6 2013/03/15 10:38:47 pinkbyte Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.nluug.nl/pub/editors/ted/${P}.src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
 RDEPEND="x11-libs/gtk+:2
@@ -31,11 +31,14 @@ src_prepare() {
 		"${S}"/appFrame/appFrameConfig.h.in \
 		"${S}"/Ted/tedConfig.h.in || die
 
+	# bug #461256
+	find . -name makefile.in -exec sed -i -e '/ar r/s/ar/$(AR)/' {} \; || die
+
 	mkdir lib || die
 }
 
 src_configure() {
-	tc-export CC
+	tc-export AR CC RANLIB
 
 	local dir
 	for dir in appFrame appUtil bitmap docBuf ind Ted tedPackage; do
