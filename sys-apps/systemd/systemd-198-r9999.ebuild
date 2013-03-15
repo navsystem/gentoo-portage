@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-198.ebuild,v 1.1 2013/03/09 13:47:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-198-r1.ebuild,v 1.1 2013/03/14 09:25:56 mgorny Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 )
-inherit autotools-utils linux-info pam python-single-r1 systemd user
+inherit autotools-utils linux-info multilib pam python-single-r1 systemd user
 
 DESCRIPTION="System and service manager for Linux"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/systemd"
@@ -57,6 +57,11 @@ DEPEND="${COMMON_DEPEND}
 	sys-fs/quota
 	>=sys-kernel/linux-headers-${MINKV}"
 
+# eautomake will likely trigger a full autoreconf
+DEPEND+=" dev-libs/gobject-introspection
+	>=dev-libs/libgcrypt-1.4.5
+	>=dev-util/gtk-doc-1.18"
+
 src_prepare() {
 	# link against external udev.
 	sed -i -e 's:lib\(udev\)\.la:-l\1:' Makefile.am
@@ -64,6 +69,8 @@ src_prepare() {
 	local PATCHES=(
 		"${FILESDIR}"/198-0001-Disable-udev-targets.patch
 		"${FILESDIR}"/198-0001-add_initrd-fs.target_and_initrd-fs-pre.target.patch
+		"${FILESDIR}"/198-0002-build-sys-break-dependency-loop-between-libsystemd-i.patch
+		"${FILESDIR}"/198-0003-build-sys-link-libsystemd-login-also-against-libsyst.patch
 		"${FILESDIR}"/198-0002-units-initrd-_require_initrd-fs.target_rather_than_local-fs.target.patch
 		"${FILESDIR}"/198-0003-fstab-generator_place_sysroot_mountunits_in_initrd-fs.target.patch
 		"${FILESDIR}"/198-0004-udevadm_is_not_in_usr.patch
@@ -121,12 +128,13 @@ src_install() {
 
 	# zsh completion
 	insinto /usr/share/zsh/site-functions
-	doins shell-completion/systemd-zsh-completion.zsh
+	newins shell-completion/systemd-zsh-completion.zsh "_${PN}"
 
 	# remove pam.d plugin .la-file
 	prune_libtool_files --modules
 
 	# move nss_myhostname to rootfs (bug #460640)
+	dodir /$(get_libdir)
 	mv "${D}"/usr/$(get_libdir)/libnss_myhostname* "${D}"/$(get_libdir)/ \
 		|| die "Unable to move nss_myhostname to rootfs"
 
@@ -188,6 +196,10 @@ optfeature() {
 
 pkg_postinst() {
 	enewgroup systemd-journal
+	if use http; then
+		enewgroup systemd-journal-gateway
+		enewuser systemd-journal-gateway -1 -1 -1 systemd-journal-gateway
+	fi
 	systemd_update_catalog
 
 	mkdir -p "${ROOT}"/run || ewarn "Unable to mkdir /run, this could mean trouble."
