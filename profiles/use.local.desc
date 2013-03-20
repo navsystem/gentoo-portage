@@ -2482,6 +2482,7 @@ kde-base/marble:designer-plugin - Enable designer plugin
 kde-base/marble:shapefile - Enable support for ESRI shapefiles
 kde-base/okular:chm - Enable support for Microsoft Compiled HTML Help files
 kde-base/okular:ebook - Add E-Book support
+kde-base/oxygen-icons:bindist - Additionally install the svg sources of the bitmap icons (needed for redistribution)
 kde-base/perlkde:akonadi - Compile bindings for Akonadi.
 kde-base/perlkde:attica - Compile bindings for dev-libs/libattica.
 kde-base/perlkde:kate - Compile bindings for KDE Advanced Text Editor.
@@ -5020,8 +5021,6 @@ net-wireless/bluez:consolekit - Use sys-auth/pambase[consolekit] to determine ac
 net-wireless/bluez:test-programs - Install tools for testing of various Bluetooth functions
 net-wireless/gnome-bluetooth:nautilus - Build the gnome-extra/nautilus-sendto plugin
 net-wireless/gnome-bluetooth:sendto - Build the gnome-extra/nautilus-sendto plugin
-net-wireless/gnuradio:audio - enable audio output
-net-wireless/gnuradio:dot - create dot graphs in documentation
 net-wireless/gnuradio:fcd - enable Funcube Dongle source block
 net-wireless/gnuradio:filter - enable filter signal processing blocks
 net-wireless/gnuradio:grc - enable GNU Radio Companion graphical tool to design signal processing flow graphs
@@ -5098,7 +5097,6 @@ sci-astronomy/predict:xplanet - Project predict data onto world maps generated b
 sci-astronomy/stellarium:stars - Install extra star catalogs
 sci-astronomy/wcslib:fits - Enable support for the FITS format through sci-libs/cfitsio
 sci-astronomy/wcslib:pgplot - Builds PGBSOX routines, needs sci-libs/pgplot library
-sci-biology/amos:qt - Compile the hawkeye assembly viewer
 sci-biology/bioperl:db - Install sci-biology/bioperl-run
 sci-biology/bioperl:network - Install sci-biology/bioperl-run
 sci-biology/bioperl:run - Install sci-biology/bioperl-run
@@ -5825,6 +5823,7 @@ sys-fs/squashfs-tools:xz - Enable support for XZ ("LZMA2") compression using app
 sys-fs/udev:action_modeswitch - switch Mobile Action cables into serial mode
 sys-fs/udev:edd - create /dev/disk/by-id/edd-* links for BIOS EDD data
 sys-fs/udev:extras - Compile udev-extras requiring external dependencies
+sys-fs/udev:firmware-loader - Enable deprecated firmware loader for use with older kernels
 sys-fs/udev:floppy - create historical floppy kernel device nodes (/dev/fd0h1440, ...)
 sys-fs/udev:gudev - enable libudev gobject interface
 sys-fs/udev:hwdb - read vendor/device string database and add it to udev database
