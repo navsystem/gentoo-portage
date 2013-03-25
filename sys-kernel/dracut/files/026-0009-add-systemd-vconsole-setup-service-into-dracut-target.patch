@@ -5,7 +5,7 @@ diff -Nur dracut-026_orig/modules.d/98systemd/module-setup.sh dracut-026/modules
      inst_rules 99-systemd.rules
  
      for i in \
-+        dracut.target \
++        initrd.target \
          emergency.target \
          dracut-emergency.service \
          rescue.service \
