@@ -23,7 +23,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
-EGIT_REPO_URI="git://git.kernel.org/pub/scm/boot/${PN}/${PN}.git"
+EGIT_REPO_URI="git://github.com/eegorov/${PN}.git"
 
 REQUIRED_USE="dracut_modules_crypt-gpg? ( dracut_modules_crypt )
 	dracut_modules_crypt-loop? ( dracut_modules_crypt )
@@ -157,11 +157,6 @@ rm_module() {
 src_prepare() {
 	epatch "${FILESDIR}/026-0001-dracut-functions.sh-support-for-altern.patch"
 	epatch "${FILESDIR}/026-0002-gentoo.conf-let-udevdir-be-handled-by-.patch"
-#	epatch "${FILESDIR}/026-0004-lsinitrd.sh-fix-for-default-initrd-not.patch"
-#	epatch "${FILESDIR}/026-0005-lsinitrd.sh-removed-trailing.patch"
-#	epatch "${FILESDIR}/026-0006-make-host_fs_types-a-hashmap.patch"
-	epatch "${FILESDIR}/026-0009-add-systemd-vconsole-setup-service-into-dracut-target.patch"
-	chmod +x "${S}/modules.d/95udev-rules/udev-rules-prepare.sh"
 
 	if use dracut_modules_systemd; then
 		local systemdutildir="$($(tc-getPKG_CONFIG) systemd \
