@@ -65,8 +65,8 @@ IUSE="debug device-mapper optimization net selinux ${IUSE_DRACUT_MODULES}"
 
 RESTRICT="test"
 
-CDEPEND=">sys-fs/udev-166
-	dracut_modules_systemd? ( sys-apps/systemd )
+CDEPEND=">=virtual/udev-197-r2
+	dracut_modules_systemd? ( >=sys-apps/systemd-199 )
 	"
 RDEPEND="${CDEPEND}
 	app-arch/cpio
