@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.212 2013/03/27 08:38:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.214 2013/03/29 06:54:57 ssuominen Exp $
 
 EAPI=5
 
@@ -32,7 +32,7 @@ HOMEPAGE="http://www.freedesktop.org/wiki/Software/systemd"
 
 LICENSE="LGPL-2.1 MIT GPL-2"
 SLOT="0"
-IUSE="acl doc firmware-loader gudev hwdb introspection keymap +kmod +openrc selinux static-libs"
+IUSE="acl doc +firmware-loader gudev hwdb introspection keymap +kmod +openrc selinux static-libs"
 
 RESTRICT="test"
 
@@ -71,8 +71,8 @@ RDEPEND="${COMMON_DEPEND}
 	!<sec-policy/selinux-base-2.20120725-r10"
 
 PDEPEND=">=virtual/udev-197-r1
-	hwdb? ( >=sys-apps/hwids-20130309-r1[udev] )
-	openrc? ( >=sys-fs/udev-init-scripts-23 )"
+	hwdb? ( >=sys-apps/hwids-20130326.1[udev] )
+	openrc? ( >=sys-fs/udev-init-scripts-25 )"
 
 S=${WORKDIR}/systemd-${PV}
 
