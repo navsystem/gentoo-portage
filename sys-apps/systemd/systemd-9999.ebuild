@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.31 2013/03/26 22:02:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.37 2013/03/30 17:02:32 floppym Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ inherit git-2
 #endif
 
 PYTHON_COMPAT=( python2_7 )
-inherit autotools-utils linux-info multilib pam python-single-r1 systemd udev user
+inherit autotools-utils linux-info multilib pam python-single-r1 systemd toolchain-funcs udev user
 
 DESCRIPTION="System and service manager for Linux"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/systemd"
@@ -50,7 +50,6 @@ COMMON_DEPEND=">=sys-apps/dbus-1.6.8-r1
 # baselayout-2.2 has /run
 RDEPEND="${COMMON_DEPEND}
 	>=sys-apps/baselayout-2.2
-	>=sys-apps/hwids-20130309-r1[udev]
 	|| (
 		>=sys-apps/util-linux-2.22
 		<sys-apps/sysvinit-2.88-r4
@@ -58,6 +57,8 @@ RDEPEND="${COMMON_DEPEND}
 	!sys-auth/nss-myhostname
 	!<sys-libs/glibc-2.10
 	!sys-fs/udev"
+
+PDEPEND=">=sys-apps/hwids-20130326.1[udev]"
 
 # sys-fs/quota is necessary to store correct paths in unit files
 DEPEND="${COMMON_DEPEND}
@@ -73,8 +74,6 @@ DEPEND="${COMMON_DEPEND}
 
 #if LIVE
 DEPEND="${DEPEND}
-	app-text/docbook-xsl-stylesheets
-	dev-libs/libxslt
 	dev-libs/gobject-introspection
 	>=dev-libs/libgcrypt-1.4.5
 	>=dev-util/gtk-doc-1.18"
@@ -87,15 +86,13 @@ pkg_pretend() {
 	ewarn "and it is an easy way to get your system broken and unbootable."
 	ewarn "Please consider using the release ebuilds instead."
 }
-#endif
 
 src_prepare() {
-#if LIVE
 	gtkdocize --docdir docs/ || die
-#endif
 
 	autotools-utils_src_prepare
 }
+#endif
 
 src_configure() {
 	local myeconfargs=(
@@ -139,6 +136,9 @@ src_configure() {
 	# Keep using the one where the rules were installed.
 	MY_UDEVDIR=$(get_udevdir)
 
+	# Work around bug 463846.
+	tc-export CC
+
 	autotools-utils_src_configure
 }
 
@@ -151,6 +151,13 @@ src_install() {
 	autotools-utils_src_install -j1 \
 		udevlibexecdir="${MY_UDEVDIR}" \
 		dist_udevhwdb_DATA=
+
+	# keep udev working without initramfs, for openrc compat
+	dodir /sbin
+	mv "${D}"/usr/lib/systemd/systemd-udevd "${D}"/sbin/udevd || die
+	mv "${D}"/usr/bin/udevadm "${D}"/sbin/udevadm || die
+	dosym ../../../sbin/udevd /usr/lib/systemd/systemd-udevd
+	dosym ../../sbin/udevadm /usr/bin/udevadm
 
 	# zsh completion
 	insinto /usr/share/zsh/site-functions
@@ -188,8 +195,12 @@ src_install() {
 		/etc/systemd/ntp-units.d /etc/systemd/user /var/lib/systemd
 
 	# Check whether we won't break user's system.
-	[[ -x "${D}"/bin/systemd ]] || die '/bin/systemd symlink broken, aborting.'
-	[[ -x "${D}"/usr/bin/systemd ]] || die '/usr/bin/systemd symlink broken, aborting.'
+	local x
+	for x in /bin/systemd /usr/bin/systemd \
+		/usr/bin/udevadm /usr/lib/systemd/systemd-udevd
+	do
+		[[ -x ${D}${x} ]] || die "${x} symlink broken, aborting."
+	done
 }
 
 pkg_preinst() {
@@ -224,6 +235,12 @@ pkg_postinst() {
 		enewuser systemd-journal-gateway -1 -1 -1 systemd-journal-gateway
 	fi
 	systemd_update_catalog
+
+	# Keep this here in case the database format changes so it gets updated
+	# when required. Despite that this file is owned by sys-apps/hwids.
+	if has_version "sys-apps/hwids[udev]"; then
+		udevadm hwdb --update --root="${ROOT%/}"
+	fi
 
 	if [[ ! -L "${ROOT}"/etc/mtab ]]; then
 		ewarn "Upstream suggests that the /etc/mtab file should be a symlink to /proc/mounts."
