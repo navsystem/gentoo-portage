@@ -23,7 +23,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
-EGIT_REPO_URI="git://github.com/eegorov/${PN}.git"
+#EGIT_REPO_URI="git://github.com/eegorov/${PN}.git"
+EGIT_REPO_URI="git://github.com/haraldh/${PN}.git"
+
 
 REQUIRED_USE="dracut_modules_crypt-gpg? ( dracut_modules_crypt )
 	dracut_modules_crypt-loop? ( dracut_modules_crypt )
