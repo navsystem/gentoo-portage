@@ -21,8 +21,8 @@ app-accessibility/gnome-speech:freetts - Adds support for the freetts speech dri
 app-accessibility/speech-dispatcher:espeak - Adds support for espeak speech engine
 app-accessibility/speech-dispatcher:flite - Adds support for flite speech engine
 app-accessibility/speechd-el:brltty - brltty support
-app-admin/ansible:paramiko - Use dev-python/paramiko as SSH library
-app-admin/ansible:sudo - Use app-admin/sudo on client nodes
+app-admin/ansible:paramiko - Use dev-python/paramiko as SSH library (deprecated)
+app-admin/ansible:sudo - Use app-admin/sudo on client nodes (deprecated)
 app-admin/bcfg2:cheetah - Include dev-python/cheetah support
 app-admin/bcfg2:genshi - Include dev-python/genshi support
 app-admin/bcfg2:server - Installs scripts to be used on the server-side of this app
@@ -282,7 +282,7 @@ app-cdr/k3b:emovix - Enable burning support for eMoviX images
 app-cdr/mirage2iso:pinentry - Support app-crypt/pinentry password input backend.
 app-cdr/mybashburn:normalize - Add support for normalizing audio file volume levels
 app-crypt/ccid:twinserial - Enable twinserial reader
-app-crypt/eid-mw:gtk - Enable the dialog pages, by using x11-libs/gtk:2
+app-crypt/eid-mw:gtk - Enable the dialog pages, by using x11-libs/gtk+:2
 app-crypt/eid-mw:xpi - Build and install an extension for Mozilla browsers.
 app-crypt/ekeyd:minimal - Only install the ekey-egd-linux service rather than the full ekeyd package.
 app-crypt/ekeyd:munin - Install a plugin for net-analyzer/munin to graph statistical data from ekeyd.
@@ -779,6 +779,7 @@ app-misc/strigi:clucene - Enable dev-cpp/clucene backend support.
 app-misc/strigi:hyperestraier - Enable app-text/hyperestraier backend support.
 app-misc/strigi:inotify - Enable support for inotify.
 app-misc/strigi:log - Enables advanced logging through dev-libs/log4cxx.
+app-misc/subsurface:map - Adds support for OpenStreetMap maps that can be used with your dive logs.
 app-misc/tablix:pvm - Add support for parallel virtual machine (sys-cluster/pvm)
 app-misc/tasque:hiveminder - Allows you to use http://www.hiveminder.com/ as your storage backend.
 app-misc/tasque:rememberthemilk - Allows you to use http://www.rememberthemilk.com/ as your storage backend.
@@ -791,6 +792,7 @@ app-misc/tracker:gsf - Enable gnome-extra/libgsf based data extractor and for OD
 app-misc/tracker:iptc - Enable extraction of IPTC data from pictures
 app-misc/tracker:iso - Enable extraction of metadata from ISO disk images
 app-misc/tracker:laptop - Make tracker power management aware
+app-misc/tracker:libsecret - Enable libsecret support to store login credentials
 app-misc/tracker:miner-fs - Enable tracker-miner-fs (required for filesystem indexing)
 app-misc/tracker:nautilus - Enable tracker to integrate with gnome-base/nautilus by providing entries in its context menu
 app-misc/tracker:playlist - Add support for playlists
@@ -1349,13 +1351,13 @@ dev-lang/php:hash - Enable the hash extension
 dev-lang/php:intl - Enables the intl extension for extended internalization support
 dev-lang/php:json - Enable JSON support
 dev-lang/php:ldap-sasl - Add SASL support for the PHP LDAP extension
+dev-lang/php:libmysqlclient - Use libmyslclient driver for mysql, mysqli, PDO_Mysql (not recommended)
 dev-lang/php:mysqlnd - Use native driver for mysql, mysqli, PDO_Mysql
 dev-lang/php:opcache - Enables built-in opcode cache, replacing pecl-apc et.al
 dev-lang/php:pdo - Enable the bundled PDO extensions
 dev-lang/php:phar - Enables the phar extension to provide phar archive support
 dev-lang/php:pic - Force shared modules to build as PIC on x86 (speed tradeoff with memory usage)
 dev-lang/php:sqlite2 - Add sqlite2 support. Will be removed
-dev-lang/php:suhosin - Add the Suhosin patch from http://www.suhosin.org/)
 dev-lang/php:xmlreader - Enable XMLReader support
 dev-lang/php:xmlwriter - Enable XMLWriter support
 dev-lang/php:zip - Enable ZIP file support
@@ -1463,6 +1465,7 @@ dev-libs/libcgroup:daemon - Install the configuration tools and init/config file
 dev-libs/libcgroup:tools - Install the cgroup rules processing daemon and init/config files.
 dev-libs/libdbusmenu:introspection - Use dev-libs/gobject-introspection for introspection
 dev-libs/libffi:pax_kernel - Use PaX emulated trampolines, for we can't use PROT_EXEC
+dev-libs/libgdata:vala - Enable bindings for dev-lang/vala
 dev-libs/libgpg-error:common-lisp - Install common-lisp files
 dev-libs/libgusb:vala - Enable bindings for dev-lang/vala
 dev-libs/libindicate:introspection - Use dev-libs/gobject-introspection for introspection
@@ -1643,6 +1646,7 @@ dev-php/pecl-apc:lock_pthreadrw - Enable pthread read/write locking
 dev-php/pecl-apc:lock_semaphore - Enable semaphore locks instead of fcntl
 dev-php/pecl-apc:lock_spinlock - Enable spin locks (EXPERIMENTAL)
 dev-php/pecl-memcached:igbinary - Enable support for the igbinary serializer
+dev-php/pecl-memcached:json - Enable support for json serialization
 dev-php/smarty-docs:html - Install the documentation in HTML format
 dev-php/smarty-docs:pdf - Install the documentation in PDF format
 dev-python/PyFoam:extras - Enable optional dependencies
@@ -1761,6 +1765,7 @@ dev-python/sympy:imaging - Add support for dev-python/imaging
 dev-python/sympy:ipython - Add support for dev-python/ipython
 dev-python/sympy:mathml - Add support for mathml
 dev-python/sympy:pyglet - Use dev-python/pyglet for plots and print preview
+dev-python/sympy:system-mpmath - Use mpmath from portage instead of the bundled one
 dev-python/sympy:texmacs - Add app-office/texmacs interface
 dev-python/translate-toolkit:html - Support conversion between po and html files
 dev-python/translate-toolkit:ical - Support conversion between po and ical files
@@ -2268,7 +2273,6 @@ games-strategy/warzone2100:qt4 - Use qt-gui/qt-opengl for backend rendering inst
 games-strategy/wesnoth:server - Enable compilation of server
 games-util/gslist:web - Enable the web interface
 games-util/pyfa:graph - Enable support for graphs
-gnome-base/dconf:vala - Add support for dev-lang/vala
 gnome-base/gconf:ldap - Build backend which enables default mail accounts, addressbooks and calendars for Evolution to be configured using each user's LDAP entry."
 gnome-base/gconf:orbit - Use gnome-base/orbit for IPC, same as in gconf-2.x
 gnome-base/gdm:audit - Enable support for sys-process/audit
@@ -2306,13 +2310,13 @@ gnome-base/gvfs:archive - Enables support for accessing files in archives transp
 gnome-base/gvfs:bluray - Enable playback of Blu-ray filesystems using media-libs/libbluray
 gnome-base/gvfs:fuse - Enables fuse mount points in $HOME/.gvfs for legacy application access
 gnome-base/gvfs:gdu - Enable sys-apps/gnome-disk-utility integration
+gnome-base/gvfs:gnome-online-accounts - Enable configuration panel for net-libs/gnome-online-accounts accounts
 gnome-base/gvfs:http - Enable the HTTP/DAV backend using net-libs/libsoup-gnome
 gnome-base/gvfs:udev - Enable udev base replacement code for cdda feature
 gnome-base/gvfs:udisks - Enable volume monitoring using sys-fs/udisks
 gnome-base/libgnome-keyring:vala - Enable bindings for dev-lang/vala
 gnome-base/libgnomecanvas:glade - Enable glade support
 gnome-base/libgtop:introspection - Use dev-libs/gobject-introspection for introspection
-gnome-base/librsvg:gtk3 - Build with gtk+-3 support
 gnome-base/librsvg:introspection - Use dev-libs/gobject-introspection for introspection
 gnome-base/librsvg:tools - Build miscellaneous tools
 gnome-base/librsvg:vala - Enable bindings for dev-lang/vala
@@ -2326,6 +2330,7 @@ gnome-extra/avant-window-navigator:vala - Enable installation of dev-lang/vala b
 gnome-extra/avant-window-navigator-extras:gconf - Enable GConf as configuration backend
 gnome-extra/evolution-data-server:api-doc-extras - Build documentation for private APIs
 gnome-extra/evolution-data-server:gnome-online-accounts - Enable using net-libs/gnome-online-accounts for authorization
+gnome-extra/evolution-data-server:google - Enable Google Contacts support
 gnome-extra/evolution-data-server:vala - Build dev-lang/vala bindings
 gnome-extra/evolution-data-server:weather - Enable optional weather calendar support
 gnome-extra/file-browser-applet:gtkhotkey - Enable hotkey support via x11-libs/gtkhotkey
@@ -2558,13 +2563,16 @@ mail-client/claws-mail:dillo - Enables support for inline HTTP email viewing wit
 mail-client/claws-mail:smime - Build plugin for S/MIME support
 mail-client/claws-mail:spamassassin - Build mail-filter/spamassassin plugin
 mail-client/claws-mail:ssl - Use gnutls for Secure Socket Layer transactions (deprecated, USE=gnutls should be used)
+mail-client/evolution:bogofilter - Build mail-filter/bogofilter plugin
 mail-client/evolution:clutter - Build with clutter support for animation effects
 mail-client/evolution:connman - Enable net-misc/connman support (requires 'networkmanager' USE flag to be disabled).
 mail-client/evolution:crypt - Enable GPG encryption support using app-crypt/gnupg and app-crypt/pinentry
 mail-client/evolution:gnome-online-accounts - Enable using net-libs/gnome-online-accounts for authorization
+mail-client/evolution:highlight - Enable text highlighting plugin
 mail-client/evolution:ldap - Enable support for fetching contacts from an LDAP or Active Directory server using net-nds/openldap
 mail-client/evolution:map - Enable support for displaying contacts on a map inside evolution using media-libs/libchamplain
 mail-client/evolution:networkmanager - Allows Evolution to automagically toggle online/offline mode by talking to net-misc/networkmanager and getting the current network state
+mail-client/evolution:spamassassin - Build mail-filter/spamassassin plugin
 mail-client/evolution:weather - Enable optional weather calendar support
 mail-client/mail-notification:gmail - Enable Gmail mailbox checking
 mail-client/mail-notification:mh - Enable MH mailbox checking
@@ -2765,7 +2773,10 @@ media-gfx/graphviz:gts - Enables support for gts
 media-gfx/graphviz:lasi - Enables PostScript output via media-libs/lasi, for plugin -Tlasi (needs cairo)
 media-gfx/graphviz:qt4 - Builds gvedit front-end
 media-gfx/gthumb:http - Enable webservice integration through net-libs/libsoup
+media-gfx/gthumb:json - Compile code that uses the libjson-glib library
+media-gfx/gthumb:libsecret - Enable libsecret support to store login credentials
 media-gfx/gthumb:slideshow - Enable slideshow plugin
+media-gfx/gthumb:webp - Enable support for webp image format
 media-gfx/hugin:sift - automatically align images with media-gfx/autopano-sift or media-gfx/autopano-sift-C
 media-gfx/imagemagick:autotrace - Use media-gfx/autotrace to convert bitmaps into vector graphics
 media-gfx/imagemagick:corefonts - Use media-fonts/corefonts which is required by some commands
@@ -2814,11 +2825,16 @@ media-libs/allegro:vga - Enables the VGA graphics driver
 media-libs/alsa-lib:alisp - Enable support for ALISP (ALSA LISP) interpreter for advanced features.
 media-libs/alure:dumb - Enable media-libs/dumb module library support
 media-libs/alure:fluidsynth - Enables Fluidsynth MIDI software synthesis
-media-libs/avidemux-core:aften - Enable A/52 (AC-3) audio encoder support
-media-libs/avidemux-core:amr - Enable Adaptive Multi-Rate format support via media-libs/opencore-amr
+media-libs/avidemux-core:aften - Enable A/52 (AC-3) audio encoder support.
+media-libs/avidemux-core:amr - Enable Adaptive Multi-Rate format support via media-libs/opencore-amr.
 media-libs/avidemux-core:system-ffmpeg - Use the ffmpeg provided by the system.
-media-libs/avidemux-plugins:aften - Enable A/52 (AC-3) audio encoder support
-media-libs/avidemux-plugins:amr - Enable Adaptive Multi-Rate format support via media-libs/opencore-amr
+media-libs/avidemux-plugins:aften - Enable A/52 (AC-3) audio encoder support.
+media-libs/avidemux-plugins:amr - Enable Adaptive Multi-Rate format support via media-libs/opencore-amr.
+media-libs/avidemux-plugins:faac - Enable free MPEG-4 audio codecs support via media-libs/faac.
+media-libs/avidemux-plugins:faad - Enable AAC audio decoding library support via media-libs/faad2.
+media-libs/avidemux-plugins:fribidi - Enable unicode bidirectional algorithm support via dev-libs/fribidi.
+media-libs/avidemux-plugins:twolame - Enable TwoLAME support via media-sound/twolame, an optimised MPEG Audio Layer 2 (MP2) encoder.
+media-libs/avidemux-plugins:vpx - Enable WebM VP8 Codec SDK support via media-libs/libvpx.
 media-libs/babl:introspection - Use dev-libs/gobject-introspection for introspection
 media-libs/babl:vala - Enable bindings for dev-lang/vala
 media-libs/cal3d:16bit-indices - Enables use of 16bit indices
@@ -3454,9 +3470,9 @@ media-video/aravis:X - Build the GTK+-based video viewer for aravis. This requir
 media-video/aravis:gstreamer - Build the GStreamer plugin for aravis, but not the video viewer.
 media-video/arista:faac - Use external faac library for AAC encoding
 media-video/arista:nautilus - Add an entry in the Nautilus context menu to transcode media files for a specified device.
-media-video/avidemux:aften - Enable A/52 (AC-3) audio encoder support
-media-video/avidemux:amr - Enable Adaptive Multi-Rate format support via media-libs/opencore-amr
-media-video/avidemux:vpx - Enable VP8 codec support via media-libs/libvpx
+media-video/avidemux:aften - Enable A/52 (AC-3) audio encoder support.
+media-video/avidemux:amr - Enable Adaptive Multi-Rate format support via media-libs/opencore-amr.
+media-video/avidemux:vpx - Enable VP8 codec support via media-libs/libvpx.
 media-video/bombono-dvd:gnome - Use GVFS for desktop integration
 media-video/chaplin:transcode - Enable DVD ripping and transcoding
 media-video/cheese:sendto - Build the gnome-extra/nautilus-sendto plugin
@@ -3642,6 +3658,7 @@ media-video/transcode:pic - disable optimized assembly code that is not PIC frie
 media-video/transcode:postproc - Build with ffmpeg libpostproc support
 media-video/tsmuxer:qt4 - Installs tsMuxerGUI (needs Qt4)
 media-video/ushare:dlna - Add DLNA (media-libs/libdlna) support
+media-video/vdr:alternatechannel - Use alternate channel on record
 media-video/vdr:analogtv - Add support for the analogtv plugin
 media-video/vdr:atsc - Support for NorthAmerican Broadcast ( rudimentary )
 media-video/vdr:cmdreccmdi18n - loads translated commands and reccommands files if existing
@@ -3663,7 +3680,9 @@ media-video/vdr:dxr3 - Enable tweaks to improve vdr behaviour on dxr3-cards
 media-video/vdr:em84xx - Add support for em84xx plugin
 media-video/vdr:graphtft - support for grapftft plugin up from vdr-graphtft-0.1.7
 media-video/vdr:hardlinkcutter - Speed up cutting by hardlinking unchanged files
+media-video/vdr:html - Install HTML documentation
 media-video/vdr:iptv - Enables channel parameters for vdr-iptv and other input plugins
+media-video/vdr:jumpingseconds - skip seconds in played records
 media-video/vdr:jumpplay - Enables automatic jumping over cut marks while watching a recording
 media-video/vdr:liemikuutio - Formerly known as AIO (all-in-one) patch, adds some nice must haves, plus changes from extensions patch
 media-video/vdr:lircsettings - Allows to change lirc settings delay, freq and timeout values in OSD
@@ -3671,9 +3690,11 @@ media-video/vdr:livebuffer - does timeshifting/background recording all the time
 media-video/vdr:lnbshare - Enables support for two or more dvb cards sharing the same cable to the lnb
 media-video/vdr:mainmenuhooks - Allows to replace main menu entries by some special plugins (like epgsearch, extrecmenu, ...)
 media-video/vdr:menuorg - Enables support for the menuorg-plugin
+media-video/vdr:naludump - Removes NALU fill data from h.264-Streams of TS files
 media-video/vdr:noepg - Adds code to selectively disable epg-reception for specific channels
 media-video/vdr:osdmaxitems - Support for text2skin
 media-video/vdr:parentalrating - Support Parental Rating
+media-video/vdr:permashift - permanent timeshift by recording live TV on hard disk, need plugin vdr-permashift
 media-video/vdr:pinplugin - Support for pin plugin
 media-video/vdr:rotor - Enable support for plugin vdr-rotor for dish-positioner.
 media-video/vdr:settime - set system time per script instead of via syscal
@@ -3686,6 +3707,7 @@ media-video/vdr:timercmd - Adds submenu for user defined commands in timer menu
 media-video/vdr:timerinfo - Show with chars +/- if space on HD will suffice for a timer
 media-video/vdr:ttxtsubs - support for ttxtsubs plugin
 media-video/vdr:validinput - Signal if it is possible to go left/right in lists with chars < >
+media-video/vdr:vasarajanauloja - replacement for the liemikuutio patch, adds some nice must haves features
 media-video/vdr:volctrl - allows volume control using left/right keys
 media-video/vdr:wareagleicon - Replace original icon set in menu
 media-video/vdr:yaepg - Enables support for the plugin vdr-yaepg
@@ -4496,8 +4518,9 @@ net-libs/wt:server - Compile in stand-alone httpd connector
 net-libs/wvstreams:boost - Use dev-libs/boost to provide TR1-compatible functional interface. This USE flag is only needed with GCC earlier than version 4.1, or with other compilares not providing said interface.
 net-libs/xrootd:fuse - Enable the sys-fs/fuse filesystem driver
 net-libs/zeromq:pgm - 0MQ is build with 'Pragmatic General Multicast' (RFC 3208) support using the excellent OpenPGM implementation.
+net-mail/automx:memcached - Enable memcached support
 net-mail/automx:sql - Enable support for SQL backends
-net-mail/automx:tools - Install additional tool: automx-test
+net-mail/automx:tools - Install additional automx-test tool
 net-mail/courier-imap:trashquota - include deleted messages, and the Trash folder, in the estimated quota usage for maildirs
 net-mail/cyrus-imapd:replication - Enable replication support in the cyrus imap server
 net-mail/cyrus-imapd:sieve - Enable sieve support
@@ -4551,7 +4574,6 @@ net-mail/vpopmail:ipalias - Enables enable-ip-alias-domains
 net-mail/vpopmail:maildrop - Enables mail-filter/maildrop support in vdelivermail
 net-mail/vpopmail:spamassassin - Enables mail-filter/spamassassin support
 net-misc/apt-cacher-ng:fuse - Install the sys-fs/fuse based acngfs, to use a userspace filesystem for the apt cache.
-net-misc/aria2:ares - Enables support for asynchronous DNS using the c-ares library
 net-misc/aria2:bittorrent - Enable support for the bittorrent protocol.
 net-misc/aria2:libxml2 - Use dev-libs/libxml2 for XML parsing (preferred) instead of dev-libs/expat.
 net-misc/aria2:metalink - Enable support for metalink.
@@ -5583,6 +5605,7 @@ sys-apps/util-linux:cramfs - build mkfs/fsck helpers for cramfs filesystems
 sys-apps/util-linux:ddate - build ddate helper (Discordian dates)
 sys-apps/util-linux:loop-aes - include support for Loop AES encryption
 sys-apps/util-linux:perl - install the chkdupexe helper script
+sys-apps/util-linux:suid - install mount/umount as setuid so non-root users may mount/umount devices, and wall/write as setgid so non-root users can notify other users
 sys-apps/v86d:x86emu - Use x86emu for Video BIOS calls
 sys-apps/watchdog:nfs - enable support for checking nfs mounts
 sys-apps/xinetd:rpc - support RPC services
@@ -5845,10 +5868,10 @@ sys-fs/quota:rpc - Enable quota interaction via RPC
 sys-fs/s3ql:contrib - Install additional contributed scripts
 sys-fs/snapraid:ssl - use the MD5 fast implementation of the OpenSSL
 sys-fs/squashfs-tools:xz - Enable support for XZ ("LZMA2") compression using app-arch/xz-utils
-sys-fs/udev:action_modeswitch - switch Mobile Action cables into serial mode
+sys-fs/udev:action_modeswitch - switch Mobile Action cables into serial mode (DEPRECATED, replaced by sys-apps/usb_modeswitch)
 sys-fs/udev:edd - create /dev/disk/by-id/edd-* links for BIOS EDD data
-sys-fs/udev:extras - Compile udev-extras requiring external dependencies
-sys-fs/udev:firmware-loader - Enable deprecated firmware loader for use with older kernels
+sys-fs/udev:extras - no-op USE flag (DEPRECATED, replaced by other USE flags in sys-fs/udev)
+sys-fs/udev:firmware-loader - Enable userspace firmware loader (DEPRECATED, replaced by loader in kernels 3.8 and newer)
 sys-fs/udev:floppy - create historical floppy kernel device nodes (/dev/fd0h1440, ...)
 sys-fs/udev:gudev - enable libudev gobject interface
 sys-fs/udev:hwdb - read vendor/device string database and add it to udev database
@@ -5856,7 +5879,7 @@ sys-fs/udev:introspection - Use dev-libs/gobject-introspection for introspection
 sys-fs/udev:keymap - map custom hardware's multimedia keys
 sys-fs/udev:kmod - enable udev to load kernel modules
 sys-fs/udev:openrc - install the OpenRC init scripts
-sys-fs/udev:rule_generator - enable persistent network and optical device rule generator
+sys-fs/udev:rule_generator - enable persistent network and optical device rule generator (DEPRECATED, replaced by the new predictable network interface names in udev 197 and newer
 sys-fs/udisks:gptfdisk - Pull in sys-apps/gptfdisk for sgdisk command as used by partitioning functionality
 sys-fs/udisks:introspection - Use dev-libs/gobject-introspection for introspection
 sys-fs/udisks:remote-access - Control whether connections from other clients over LAN are allowed
@@ -6164,6 +6187,9 @@ www-servers/uwsgi:zeromq - Enable logging and deployment via ZeroMQ. Together wi
 www-servers/varnish:jemalloc - Use dev-libs/jemalloc for allocations
 www-servers/varnish:tools - Build additional tools: varnishhist, varnishstat, varnishtop, varnishsizes
 x11-apps/ardesia:cwiid - cwiid support: collection of Linux tools written in C for interfacing to the Nintendo Wiimote.
+x11-apps/mesa-progs:egl - Build EGL utilities
+x11-apps/mesa-progs:gles1 - Build OpenGL ES 1 utilities
+x11-apps/mesa-progs:gles2 - Build OpenGL ES 2 utilities
 x11-apps/xdm:consolekit - Enable native sys-auth/consolekit support
 x11-apps/xdpyinfo:dmx - Builds support for Distributed Multiheaded X x11-base/xorg-server
 x11-apps/xinit:minimal - Control dependencies on legacy apps (xterm, twm, ...). Safe to enable if you use a modern desktop environment.
@@ -6302,6 +6328,7 @@ x11-terms/aterm:background - Enable background image support via media-libs/liba
 x11-terms/aterm:xgetdefault - Enable resources via X instead of aterm small version
 x11-terms/eterm:escreen - Enable built-in app-misc/screen support
 x11-terms/eterm:utempter - Include libutempter support
+x11-terms/gnome-terminal:nautilus - Build gnome-base/nautilus extension
 x11-terms/hanterm:utempter - Records user logins. Useful on multi-user systems
 x11-terms/mlterm:ibus - Enable app-i18n/ibus support
 x11-terms/mlterm:libssh2 - Enable net-libs/libssh2 support
