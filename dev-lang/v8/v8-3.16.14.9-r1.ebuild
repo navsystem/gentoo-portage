@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.16.14.9-r1.ebuild,v 1.2 2013/03/22 16:58:27 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.16.14.9-r1.ebuild,v 1.5 2013/04/05 14:36:24 floppym Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )
@@ -14,7 +14,7 @@ LICENSE="BSD"
 
 soname_version="${PV}"
 SLOT="0/${soname_version}"
-KEYWORDS="~amd64 ~arm ~x86 ~x86-fbsd ~x64-macos ~x86-macos"
+KEYWORDS="amd64 ~arm x86 ~x86-fbsd ~x64-macos ~x86-macos"
 IUSE=""
 
 DEPEND="${PYTHON_DEPS}"
@@ -65,12 +65,12 @@ src_compile() {
 	)
 
 	# Build mksnapshot so we can pax-mark it.
-	emake "${makeargs[@]}" mksnapshot || die
+	emake "${makeargs[@]}" mksnapshot
 	pax-mark m out/${mytarget}/mksnapshot
 
 	# Build everything else.
-	emake "${makeargs[@]}" || die
-	pax-mark m out/${mytarget}/{cctest,d8,shell} || die
+	emake "${makeargs[@]}"
+	pax-mark m out/${mytarget}/{cctest,d8,shell}
 }
 
 src_test() {
