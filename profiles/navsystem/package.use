@@ -81,3 +81,4 @@ dev-db/postgresql-base kerberos
 net-misc/tigervnc server
 
 sci-geosciences/gpsd python
+x11-libs/wxGTK -odbc
