@@ -1,0 +1,13 @@
+diff -ur qxbsql-0.2_orig/xbsql.pro qxbsql-0.2/xbsql.pro
+--- qxbsql-0.2_orig/xbsql.pro	2008-05-24 21:20:53.000000000 +0700
++++ qxbsql-0.2/xbsql.pro	2013-04-10 09:16:52.176955595 +0700
+@@ -4,8 +4,7 @@
+ SOURCES		= main.cpp \
+ 		  driver/qsql_xbsql.cpp
+ 
+-INCLUDEPATH += libs/xbase/include
+-LIBS += -Llibs/xbase/lib -lxbsql -lxbase
++LIBS += -lxbsql -lxbase64
+ 
+ target.path     += $$[QT_INSTALL_PLUGINS]/sqldrivers
+ INSTALLS        += target
