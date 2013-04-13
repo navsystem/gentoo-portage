@@ -4,7 +4,7 @@
 <sys-apps/systemd-9999  amd64
 <sys-fs/udev-9999  amd64
 <virtual/udev-9999 amd64
-<sys-boot/plymouth-9999  amd64
+sys-boot/plymouth  amd64
 <sys-kernel/dracut-9999  amd64
 =sys-apps/hwids-20130309-r1 amd64
 ~sys-auth/pambase-20120417 amd64

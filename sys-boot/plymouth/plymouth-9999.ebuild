@@ -19,7 +19,7 @@ EGIT_REPO_URI="git://anongit.freedesktop.org/plymouth"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE_VIDEO_CARDS="video_cards_intel video_cards_nouveau video_cards_radeon"
+IUSE_VIDEO_CARDS="video_cards_intel video_cards_radeon"
 IUSE="${IUSE_VIDEO_CARDS} debug gdm +gtk +libkms +openrc +pango static-libs systemd"
 
 CDEPEND=">=media-libs/libpng-1.2.16
@@ -28,7 +28,6 @@ CDEPEND=">=media-libs/libpng-1.2.16
 	libkms? ( x11-libs/libdrm[libkms] )
 	pango? ( >=x11-libs/pango-1.21 )
 	video_cards_intel? ( x11-libs/libdrm[video_cards_intel] )
-	video_cards_nouveau? ( x11-libs/libdrm[video_cards_nouveau] )
 	video_cards_radeon? ( x11-libs/libdrm[video_cards_radeon] )
 	"
 DEPEND="${CDEPEND}
@@ -59,7 +58,6 @@ src_configure() {
 		$(use_enable pango)
 		$(use_enable gdm gdm-transition)
 		$(use_enable video_cards_intel libdrm_intel)
-		$(use_enable video_cards_nouveau libdrm_nouveau)
 		$(use_enable video_cards_radeon libdrm_radeon)
 		$(use_enable systemd systemd-integration)
 		)
