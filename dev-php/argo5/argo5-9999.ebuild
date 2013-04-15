@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: Exp $
 
-EAPI="2"
+EAPI="5"
 
 PHP_EXT_NAME="Argo5"
 PHP_EXT_INI="yes"
@@ -18,7 +18,8 @@ LICENSE="NAVSYSTEM"
 SLOT="0"
 IUSE=""
 
-RDEPEND="dev-libs/argo-php"
+DEPEND="dev-libs/argo-php"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
     mercurial_src_unpack || die
