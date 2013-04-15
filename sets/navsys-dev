@@ -4,7 +4,7 @@ kde-misc/yakuake
 dev-vcs/kdesvn
 dev-qt/qt-creator
 sys-apps/net-tools
-dev-db/postgresql-server:8.4
+dev-db/postgresql-server
 x11-misc/x11vnc
 x11-misc/slim
 lxde-base/lxde-meta
