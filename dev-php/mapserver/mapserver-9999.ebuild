@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: Exp $
 
-EAPI="2"
+EAPI="5"
 
 PHP_EXT_NAME="MapServer"
 PHP_EXT_INI="yes"
@@ -18,7 +18,8 @@ LICENSE="NAVSYSTEM"
 SLOT="0"
 IUSE=""
 
-RDEPEND="dev-libs/maploader-lib"
+DEPEND="dev-libs/maploader-lib"
+RDEPEND="${DEPEND}"
 
 src_prepare(){
 	phpize && rm aclocal.m4 && autoreconf || die
