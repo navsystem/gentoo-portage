@@ -18,3 +18,4 @@ sys-block/megacli amd64
 # Mark as stable while not stable in main tree
 ~net-misc/tigervnc-1.2.0 x86
 =dev-qt/qxbsql-0.2 x86 amd64
+www-plugins/chrome-binary-plugins:stable x86 amd64
