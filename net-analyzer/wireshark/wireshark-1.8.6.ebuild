@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.8.6.ebuild,v 1.10 2013/04/02 21:04:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.8.6.ebuild,v 1.13 2013/04/24 14:50:58 jer Exp $
 
 EAPI=5
 PYTHON_DEPEND="python? 2"
@@ -15,13 +15,14 @@ LICENSE="GPL-2"
 SLOT="0/${PV}"
 KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="
-	adns crypt doc doc-pdf +filecaps geoip gtk ipv6 kerberos libadns lua +pcap
+	adns +caps crypt doc doc-pdf geoip gtk ipv6 kerberos libadns lua +pcap
 	portaudio profile python selinux smi ssl zlib
 "
 RDEPEND="
 	>=dev-libs/glib-2.14:2
 	adns? ( !libadns? ( >=net-dns/c-ares-1.5 ) )
 	crypt? ( dev-libs/libgcrypt )
+	caps? ( sys-libs/libcap )
 	geoip? ( dev-libs/geoip )
 	gtk? (
 		>=x11-libs/gtk+-2.4.0:2
@@ -73,6 +74,7 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-1.6.13-ldflags.patch \
 		"${FILESDIR}"/${PN}-1.8.3-gnutls3.patch
 	sed -i -e 's|.png||g' ${PN}.desktop || die
+	sed -i -e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:g' configure.in || die
 	eautoreconf
 }
 
@@ -119,13 +121,13 @@ src_configure() {
 
 	# dumpcap requires libcap, setuid-install requires dumpcap
 	econf \
-		$(use pcap && use_enable !filecaps setuid-install) \
-		$(use pcap && use_enable filecaps setcap-install) \
+		$(use pcap && use_enable !caps setuid-install) \
+		$(use pcap && use_enable caps setcap-install) \
 		$(use_enable gtk wireshark) \
 		$(use_enable ipv6) \
 		$(use_enable profile profile-build) \
 		$(use_with crypt gcrypt) \
-		$(use_with filecaps libcap) \
+		$(use_with caps libcap) \
 		$(use_with geoip) \
 		$(use_with kerberos krb5) \
 		$(use_with lua) \

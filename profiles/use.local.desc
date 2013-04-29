@@ -195,8 +195,10 @@ app-admin/salt:openssl - Add support for using TLS via OpenSSL.
 app-admin/salt:redis - Support returning data to a redis database.
 app-admin/sshguard:ipfilter - Enable ipfilter firewall support (only for *bsd)
 app-admin/sudo:offensive - Let sudo print insults when the user types the wrong password.
+app-admin/sysklogd:logrotate - use app-admin/logrotate for rotating logs rather than custom cron scripts
 app-admin/syslog-ng:json - Enable support for JSON template formatting via dev-libs/json-glib
 app-admin/syslog-ng:mongodb - Enable support for mongodb destinations
+app-admin/syslog-ng:smtp - Enable support for SMTP destinations
 app-admin/syslog-ng:spoof-source - Enable support for spoofed source addresses
 app-admin/syslog-ng:sql - Enable support for SQL destinations
 app-admin/sysstat:cron - Install /etc/cron.d script to periodically run sar
@@ -309,6 +311,8 @@ app-crypt/mit-krb5:doc - Creates and installs the API and implementation documen
 app-crypt/mit-krb5:keyutils - Enable for the keyring ccache using keyutils.
 app-crypt/mit-krb5:openldap - Enable support for ldap as a database backend.
 app-crypt/mit-krb5:pkinit - Enable pkinit support for the initial ticket.
+app-crypt/oclhashcat-lite-bin:virtualcl - Support for Mosix VirtualCL Clustering Platform
+app-crypt/oclhashcat-plus-bin:virtualcl - Support for Mosix VirtualCL Clustering Platform
 app-crypt/ophcrack:tables - Require the additional tables used to carry out cracking (app-crypt/ophcrack-tables)
 app-crypt/ophcrack-tables:vistafree - Installs the free Vista ophcrack tables
 app-crypt/ophcrack-tables:xpfast - Installs the fast XP ophcrack tables
@@ -377,7 +381,6 @@ app-editors/jasspa-microemacs:nanoemacs - Build NanoEmacs instead of MicroEmacs
 app-editors/joe:xterm - Enable full xterm clipboard support
 app-editors/latexila:latexmk - Install dev-tex/latexmk (used by default for the build tools)
 app-editors/latexila:rubber - Install dev-tex/rubber (can be used for the build tools)
-app-editors/latexila:vala - Enable bindings for dev-lang/vala
 app-editors/leafpad:emacs - Enable Emacs key theme
 app-editors/nano:debug - Enable debug messages and assert warnings. Note that these will all be sent straight to stderr rather than some logging facility.
 app-editors/nano:justify - Enable justify/unjustify functions for text formatting.
@@ -745,6 +748,8 @@ app-misc/lcd4linux:mpd - Add support for display of mpd controlled music (media-
 app-misc/lcdproc:ftdi - Enable support for FTDI connections in some selected LCD_DEVICES (currently hd44780)
 app-misc/lcdproc:hid - Enable HID support using libhid
 app-misc/lcdproc:irman - Enable support for IRMan (media-libs/libirman)
+app-misc/lcdproc:lcd_devices_sdeclcd - Enable support for VLSYS M428 display
+app-misc/lcdproc:lcd_devices_vlsys_m428 - Enable support for VLSYS M428 display
 app-misc/lcdproc:nfs - Adds support for NFS file system
 app-misc/lcdproc:seamless-hbars - Try to avoid gaps in horizontal bars
 app-misc/lirc:hardware-carrier - The transmitter device generates its clock signal in hardware
@@ -969,16 +974,12 @@ app-text/evince:t1lib - Enable the Type-1 fonts for the built-in DVI viewer (med
 app-text/evince:xps - Enable XPS viewer using app-text/libgxps
 app-text/getxbook:ocr - Use app-text/tesseract for optical character recognition
 app-text/ghostscript-gpl:bindist - Disable dejavu support for binary distribution because of licensing issue
-app-text/gonzui:lha - Enable LHA archive support
-app-text/gonzui:rpm - Enable rpm support
-app-text/gonzui:zip - Enable ZIP archive support
 app-text/gtranslator:http - Enable support for open translation plugin using net-libs/libsoup
 app-text/hyperestraier:mecab - Enable app-text/mecab support for Estraier
 app-text/lcdf-typetools:kpathsea - Enable integration with kpathsea search library (TeX related)
 app-text/libgxps:introspection - Use dev-libs/gobject-introspection for introspection
 app-text/liblangtag:introspection - Use dev-libs/gobject-introspection for introspection
 app-text/libwpd:tools - Build miscellaneous tools
-app-text/libwpg:tools - Build miscellaneous tools
 app-text/lodgeit:vim - Install a vim plugin allowing to paste and download from within vim
 app-text/mathtex:png - Generate png images by default instead of gif
 app-text/pandoc:embed_data_files - Embed data files in binary for relocatable executable.
@@ -1740,6 +1741,7 @@ dev-python/pandas:R - Enable support for R via dev-python/rpy
 dev-python/pandas:excel - Pull a few Python packages for Microsoft Excel i/o
 dev-python/paste:flup - enable support for flup (and therefore for various wgsi servers and middleware)
 dev-python/paste:openid - enable OpenID support
+dev-python/pillow:webp - Enable support for webp image format.
 dev-python/psycopg:mxdatetime - Enable support for MX DateTime and use it instead of Python's built-in datetime module
 dev-python/py-amqp:extras - Install extra tools to generate initial Python mod from an AMQP XML file
 dev-python/pylons:genshi - Add optional genshi support
@@ -1981,7 +1983,6 @@ dev-util/anjuta:glade - Build glade plugin for anjuta
 dev-util/anjuta:packagekit - Use packagekit to search for missing tools
 dev-util/anjuta:vala - Enable support for the Vala programming language
 dev-util/apitrace:egl - Enable EGL support
-dev-util/astyle:libs - builds and installs both shared and static library interfaces
 dev-util/buildbot:irc - Add support for status delivery through an ircbot.
 dev-util/buildbot:mail - Add support for watching a maildir for commits.
 dev-util/buildbot:manhole - Add support for manhole (debug over ssh)
@@ -2055,6 +2056,7 @@ dev-vcs/bzr-gtk:sourceview - Enable GtkSourceView support
 dev-vcs/cvs:server - Enable server support
 dev-vcs/cvs2svn:bazaar - Support for dev-vcs/bzr
 dev-vcs/cvs2svn:git - Support for dev-vcs/git
+dev-vcs/fossil:json - Enable the JSON API of Fossil's wiki
 dev-vcs/fossil:sqlite - Use the system SQLite instead of the bundled one
 dev-vcs/fromcvs:git - Add support for conversion to dev-vcs/git repositories
 dev-vcs/fromcvs:mercurial - Add support for conversion to dev-vcs/mercurial repositories
@@ -2396,11 +2398,14 @@ gnome-extra/polkit-gnome:introspection - Use dev-libs/gobject-introspection for 
 gnome-extra/sushi:office - Support viewing file formats such as generated by app-office/libreoffice
 gnome-extra/synapse:plugins - Build support for plugins using librest
 gnome-extra/synapse:zeitgeist - Add support for Zeitgeist event tracking system
+gnome-extra/zeitgeist:datahub - Use build datahub for passive event injection
+gnome-extra/zeitgeist:downloads-monitor - Monitor the XDG_DOWNLOAD_DIRECTORY
 gnome-extra/zeitgeist:extensions - Use gnome-extra/zeitgeist-extentions to enhance the internal routines
 gnome-extra/zeitgeist:fts - Enable the full text search extension
 gnome-extra/zeitgeist:passiv - Use gnome-extra/zeitgeist-datahub to passively inject events
 gnome-extra/zeitgeist:plugins - Use gnome-extra/zeitgeist-datasources to enable numerous packages to inject events
 gnome-extra/zeitgeist:sql-debug - Enable SQL debugging
+gnome-extra/zeitgeist:telepathy - Enable telepathy framework as data source
 gnome-extra/zeitgeist-datahub:download - Monitor XDG download directory
 gnome-extra/zeitgeist-datahub:telepathy - Telepathy logging support for 1-to-1 chats, calls and file transfers
 gnome-extra/zeitgeist-datasources:bzr - Zeitgeist plugin for dev-vcs/bzr as data source
@@ -3303,6 +3308,7 @@ media-sound/mumble:g15 - Enable support for the Logitech G15 LCD (and compatible
 media-sound/mumble:speech - Enable text-to-speech support in Mumble.
 media-sound/murmur:ice - Use dev-cpp/Ice to enable remote control capabilities.
 media-sound/ncmpc:artist-screen - Enable artist screen
+media-sound/ncmpc:chat-screen - Enable the chat screen
 media-sound/ncmpc:colors - Enable color support
 media-sound/ncmpc:help-screen - Enable the help screen
 media-sound/ncmpc:key-screen - Enable key editor screen
@@ -3349,6 +3355,7 @@ media-sound/qmmp:lyrics - Fetch track lyrics from the web
 media-sound/qmmp:midi - Enable midi support using wildmidi library
 media-sound/qmmp:mpris - Enable MPRIS support
 media-sound/qmmp:notifier - Enable qmmps' notifier system
+media-sound/qmmp:opus - Enable the opus plugin
 media-sound/qmmp:projectm - Enable projectm music visualization plugin
 media-sound/qmmp:scrobbler - Enable audioscrobbler/last.fm support
 media-sound/qmmp:stereo - Enable stereo effect
@@ -3365,6 +3372,7 @@ media-sound/rhythmbox:clutter - Build the visualizer plugin which uses media-lib
 media-sound/rhythmbox:daap - Build the local network music sharing plugin which uses the DAAP protocol using net-libs/libdmapsharing
 media-sound/rhythmbox:html - Use net-libs/webkit-gtk for detecting and displaying HTML podcast episode descriptions.
 media-sound/rhythmbox:lastfm - Build a plugin for Last.fm and Librefm scrobbling
+media-sound/rhythmbox:libsecret - Enable libsecret support to store login credentials
 media-sound/rhythmbox:zeitgeist - Build the plugin to inject events to gnome-extra/zeitgeist
 media-sound/rubyripper:cdrdao - Add support for advanced toc scanning using app-cdr/cdrdao
 media-sound/rubyripper:cli - Build command line interface rubyripper
@@ -3664,6 +3672,18 @@ media-video/mplayer2:symlink - Copy all binaries and configuration into location
 media-video/mplayer2:tga - Enables Targa video output
 media-video/mplayer2:xanim - Enables support for xanim based codecs
 media-video/mplayer2:yuv4mpeg - Enables yuv4mpeg video output
+media-video/mpv:bluray - Enable playback of Blu-ray filesystems
+media-video/mpv:bs2b - Enable Bauer stereophonic-to-binaural headphone filter
+media-video/mpv:cdio - Use libcdio for CD support (instead of cdparanoia)
+media-video/mpv:enca - Enables support for charset discovery and conversion
+media-video/mpv:mng - MNG input support
+media-video/mpv:mp3 - Enable support for mp3 decoding over media-sound/mpg123 instead of relying on ffmpeg support.
+media-video/mpv:network - Enables network streaming support
+media-video/mpv:postproc - Enable image post-processing via libpostproc
+media-video/mpv:pvr - Enable Video4Linux2 MPEG PVR
+media-video/mpv:quvi - Enable support for streaming sites using media-libs/libquvi
+media-video/mpv:radio - Enable V4L2 radio interface and support
+media-video/mpv:shm - Enable support for shm
 media-video/ogmrip:ogm - Support for OGM container format
 media-video/ogmrip:srt - Support for SRT subtitle format
 media-video/pgcedit:video - Add support for video preview
@@ -3690,6 +3710,7 @@ media-video/ushare:dlna - Add DLNA (media-libs/libdlna) support
 media-video/vdr:alternatechannel - Use alternate channel on record
 media-video/vdr:analogtv - Add support for the analogtv plugin
 media-video/vdr:atsc - Support for NorthAmerican Broadcast ( rudimentary )
+media-video/vdr:bidi - fribid support, for languages, written from right to left
 media-video/vdr:cmdreccmdi18n - loads translated commands and reccommands files if existing
 media-video/vdr:cmdsubmenu - Allows the creation of submenus in the commands menu
 media-video/vdr:cutterlimit - Limit IO bandwith used for cutting
@@ -4003,6 +4024,7 @@ net-dns/bind-tools:gssapi - Enable gssapi support
 net-dns/bind-tools:urandom - Use /dev/urandom instead of /dev/random
 net-dns/ddclient:hardened - Use iproute2 instead of ifconfig to grab an IP address
 net-dns/ddclient:ssl - Connect to the server utilizing SSL
+net-dns/dnsmasq:auth-dns - Add support for acting as an authorative DNS server.
 net-dns/dnsmasq:conntrack - Add support for Linux conntrack connection marking.
 net-dns/dnsmasq:dhcp - Enable support for reading ISC DHCPd lease files
 net-dns/dnsmasq:dhcp-tools - Install extra command line tools for manually managing DHCP leases
@@ -4187,7 +4209,6 @@ net-im/kadu:sdk - Install Kadu SDK (cmake module, API headers)
 net-im/kadu:speech - Enables speech module
 net-im/kmess:konqueror - Enable integration with konqueror
 net-im/kmess:libnotify - Enable desktop notifications using the knotify library
-net-im/ktp-text-ui:history - Enables saving chat history.
 net-im/licq:aosd - Build the advanced on screen display plugin.
 net-im/mcabber:aspell - Adds support for app-text/aspell spell checker.
 net-im/mcabber:otr - Enable encrypted conversations using Off-The-Records messaging
@@ -4663,6 +4684,7 @@ net-misc/badvpn:tun2socks - Build tun2socks, a program which implements a TUN de
 net-misc/badvpn:udpgw - Build udpgw, a small daemon which allows tun2socks to forward UDP traffic.
 net-misc/batman-adv:bla - B.A.T.M.A.N. bridge loop avoidance
 net-misc/batman-adv:dat - B.A.T.M.A.N. distributed arp table
+net-misc/batman-adv:nc - B.A.T.M.A.N. network coding
 net-misc/bfgminer:adl - Enable support for controlling fans and overclocking on AMD cards with AMD Display Library
 net-misc/bfgminer:avalon - Enable support for mining with Avalon ASIC modules
 net-misc/bfgminer:bitforce - Enable support for mining with ButterFly Labs BitFORCE ASICs and/or FPGAs
@@ -5145,6 +5167,7 @@ net-wireless/wpa_supplicant:fasteap - Add support for FAST-EAP authentication al
 net-wireless/wpa_supplicant:madwifi - Add support for madwifi (Atheros chipset)
 net-wireless/wpa_supplicant:p2p - Add support for Wi-Fi Direct mode
 net-wireless/wpa_supplicant:ps3 - Add support for ps3 hypervisor driven gelic wifi
+net-wireless/wpa_supplicant:smartcard - Add support for smartcards
 net-wireless/wpa_supplicant:wimax - Add support for Wimax EAP-PEER authentication algorithm
 net-wireless/wpa_supplicant:wps - Add support for Wi-Fi Protected Setup
 razorqt-base/razorqt-meta:lightdm - Install x11-misc/lightdm display manager and Razor-qt's LightDM greeter
@@ -5361,7 +5384,9 @@ sci-libs/netcdf:dap - Support for remote data access with the built-in OPeNDAP c
 sci-libs/netcdf:hdf - Add support for the Hierarchical Data Format v.4 sci-libs/hdf
 sci-libs/netcdf:tools - Build the utilities nccopy, ncgen and ncdump
 sci-libs/nlopt:octave - Add plugin for sci-mathematics/octave
+sci-libs/opencascade:freeimage - Enable support for image i/o via media-libs/freeimage
 sci-libs/opencascade:gl2ps - Use gl2ps PostScript printing library
+sci-libs/opencascade:tbb - tEnable multithreading with the Intel Threads Building Block dev-cpp/tbb
 sci-libs/openmm:cuda - enable cuda back-end
 sci-libs/openmm:opencl - enable opencl back-end
 sci-libs/openmm:wrappers - build wrappers for C and Fortran
@@ -5412,7 +5437,7 @@ sci-mathematics/form:doxygen - Build and install API documentation
 sci-mathematics/freemat:volpack - Add volume rendering via media-libs/volpack
 sci-mathematics/freemat:vtk - Add 3D capabilities via sci-libs/vtk
 sci-mathematics/fricas:clisp - Add support for GNU CLISP (dev-lisp/clisp)
-sci-mathematics/fricas:clozurecl - Add support for Clozure Common Lisp (dev-lisp/closurecl)
+sci-mathematics/fricas:clozurecl - Add support for Clozure Common Lisp (dev-lisp/clozurecl)
 sci-mathematics/fricas:cmucl - Add support for CMU Common Lisp (dev-lisp/cmucl)
 sci-mathematics/fricas:ecl - Add support for Embeddable Common Lisp (dev-lisp/ecls)
 sci-mathematics/fricas:gcl - Add support for GNU Common Lisp (dev-lisp/gcl)
@@ -5602,6 +5627,7 @@ sys-apps/paludis:ruby-bindings - Enable Ruby bindings.
 sys-apps/paludis:search-index - Enable cave search --index. Requires sqlite.
 sys-apps/paludis:visibility - Enable visibility support (g++ >=4.1)
 sys-apps/pciutils:compress-db - Compress pci.ids database by default
+sys-apps/pciutils:kmod - Enable sys-apps/kmod support for the -k switch in lspci command
 sys-apps/pciutils:network-cron - Monthly cronjob the update-pciids script
 sys-apps/pciutils:zlib - Support compressed pci.ids database
 sys-apps/pcmciautils:staticsocket - Add support for static sockets
@@ -5631,7 +5657,6 @@ sys-apps/smartmontools:minimal - Do not install the monitoring daemon and associ
 sys-apps/superiotool:pci - Support for PCI-attached "Super I/Os" (e.g. in VIA VT82686A/B).
 sys-apps/systemd:audit - Enable support for sys-process/audit
 sys-apps/systemd:cryptsetup - Use libcryptsetup
-sys-apps/systemd:efi - Enable EFI support (installs bootctl)
 sys-apps/systemd:firmware-loader - Enable user-space firmware loader (for kernels prior to 3.8)
 sys-apps/systemd:gcrypt - Enable sealing of journal files using gcrypt
 sys-apps/systemd:gudev - enable libudev gobject interface
@@ -5917,18 +5942,12 @@ sys-fs/quota:rpc - Enable quota interaction via RPC
 sys-fs/s3ql:contrib - Install additional contributed scripts
 sys-fs/snapraid:ssl - use the MD5 fast implementation of the OpenSSL
 sys-fs/squashfs-tools:xz - Enable support for XZ ("LZMA2") compression using app-arch/xz-utils
-sys-fs/udev:action_modeswitch - switch Mobile Action cables into serial mode (DEPRECATED, replaced by sys-apps/usb_modeswitch)
-sys-fs/udev:edd - create /dev/disk/by-id/edd-* links for BIOS EDD data
-sys-fs/udev:extras - no-op USE flag (DEPRECATED, replaced by other USE flags in sys-fs/udev)
-sys-fs/udev:firmware-loader - Enable userspace firmware loader (DEPRECATED, replaced by loader in kernels 3.8 and newer)
-sys-fs/udev:floppy - create historical floppy kernel device nodes (/dev/fd0h1440, ...)
-sys-fs/udev:gudev - enable libudev gobject interface
-sys-fs/udev:hwdb - read vendor/device string database and add it to udev database
-sys-fs/udev:introspection - Use dev-libs/gobject-introspection for introspection
-sys-fs/udev:keymap - map custom hardware's multimedia keys
-sys-fs/udev:kmod - enable udev to load kernel modules
-sys-fs/udev:openrc - install the OpenRC init scripts
-sys-fs/udev:rule_generator - enable persistent network and optical device rule generator (DEPRECATED, replaced by the new predictable network interface names in udev 197 and newer
+sys-fs/udev:firmware-loader - Enable userspace firmware loader (DEPRECATED, replaced by in-kernel loader in 3.8+)
+sys-fs/udev:gudev - Build the gobject interface library
+sys-fs/udev:hwdb - Read vendor/device string database and add it to udev database
+sys-fs/udev:keymap - Map custom hardware's multimedia keys
+sys-fs/udev:kmod - Enable kernel module loading/unloading support using sys-apps/kmod
+sys-fs/udev:openrc - Install the OpenRC init scripts
 sys-fs/udisks:gptfdisk - Pull in sys-apps/gptfdisk for sgdisk command as used by partitioning functionality
 sys-fs/udisks:introspection - Use dev-libs/gobject-introspection for introspection
 sys-fs/udisks:remote-access - Control whether connections from other clients over LAN are allowed
@@ -6126,7 +6145,6 @@ www-client/midori:unique - Enable single instance support using dev-libs/libuniq
 www-client/midori:webkit2 - Enable WebKit2 API that splits web content rendering and application UI into separate processes
 www-client/midori:zeitgeist - Add support for Zeitgeist event tracking system
 www-client/netsurf:bmp - enable bmp bitmap support (media-libs/libnsbmp)
-www-client/netsurf:freetype - use media-libs/freetype for font rendering on framebuffer
 www-client/netsurf:pdf-writer - Enable pdf output support (media-libs/libharu)
 www-client/netsurf:rosprite - enable RISC OS Sprite bitmap support (media-libs/librosprite)
 www-client/netsurf:svgtiny - enable svg image support via media-libs/svgatiny instead of gnome-base/librsvg
@@ -6330,7 +6348,6 @@ x11-misc/compton:opengl - Enable VSync with SGI_swap_control OpenGL extension
 x11-misc/dmenu:xft - Enable unofficial x11-libs/libXft support
 x11-misc/etm:ical - Enable export of ical format files by depending on dev-python/icalendar
 x11-misc/fbpager:xrender - Enable transparency support via x11-libs/libXrender
-x11-misc/google-gadgets:soup - Enables XML HTTP request extension based on net-libs/libsoup
 x11-misc/i3status:filecaps - Linux capabilities library is required for i3status to be able to read net bandwith
 x11-misc/lightdm:branding - Replace original gnome background with one from Gentoo ten project
 x11-misc/lightdm:gtk - Pull in the gtk+ greeter

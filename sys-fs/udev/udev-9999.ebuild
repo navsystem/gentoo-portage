@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.222 2013/04/10 07:15:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.225 2013/04/27 11:10:43 ssuominen Exp $
 
 EAPI=5
 
@@ -122,7 +122,7 @@ pkg_setup() {
 src_prepare() {
 	if ! [[ ${PV} = 9999* ]]; then
 		# secure_getenv() disable for non-glibc systems wrt bug #443030
-		if ! [[ $(grep -r secure_getenv * | wc -l) -eq 16 ]]; then
+		if ! [[ $(grep -r secure_getenv * | wc -l) -eq 19 ]]; then
 			eerror "The line count for secure_getenv() failed, see bug #443030"
 			die
 		fi
@@ -186,13 +186,14 @@ src_prepare() {
 		sed -i -e '/error.*secure_getenv/s:.*:#define secure_getenv(x) NULL:' src/shared/missing.h || die
 	fi
 
-	# link udevd(8) to systemd-udevd.service(8) manpage
+	# link udevd(8) and systemd-udevd(8) manpages to systemd-udevd.service(8) manpage
 	echo '.so systemd-udevd.service.8' > "${T}"/udevd.8
+	echo '.so systemd-udevd.service.8' > "${T}"/systemd-udevd.8
 }
 
 src_configure() {
 	tc-export CC #463846
-	use keymap || export ac_cv_path_GPERF=true #452760
+	use keymap || export ac_cv_prog_ac_ct_GPERF=true #452760
 
 	local econf_args
 
@@ -263,7 +264,6 @@ src_compile() {
 		mtd_probe
 		man/udev.7
 		man/udevadm.8
-		man/systemd-udevd.8
 		man/systemd-udevd.service.8
 	)
 	use keymap && targets+=( keymap )
@@ -316,7 +316,7 @@ src_install() {
 		lib_LTLIBRARIES="${lib_LTLIBRARIES}"
 		MANPAGES="man/udev.7 man/udevadm.8 \
 				man/systemd-udevd.service.8"
-		MANPAGES_ALIAS="man/systemd-udevd.8"
+		MANPAGES_ALIAS=""
 		pkgconfiglib_DATA="${pkgconfiglib_DATA}"
 		INSTALL_DIRS='$(sysconfdir)/udev/rules.d \
 				$(sysconfdir)/udev/hwdb.d'
@@ -338,6 +338,7 @@ src_install() {
 	insinto /lib/udev/rules.d
 	doins "${T}"/40-gentoo.rules
 	doman "${T}"/udevd.8
+	doman "${T}"/systemd-udevd.8
 
 	# install udevadm compatibility symlink
 	dosym {../bin,sbin}/udevadm

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-200.ebuild,v 1.19 2013/04/13 21:00:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-200.ebuild,v 1.21 2013/04/27 11:10:43 ssuominen Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ else
 					http://dev.gentoo.org/~ssuominen/${P}-patches-${patchset}.tar.xz
 					http://dev.gentoo.org/~williamh/dist/${P}-patches-${patchset}.tar.xz"
 			fi
-	KEYWORDS="alpha amd64 arm ~hppa ia64 ~m68k ~mips ppc ppc64 s390 sh sparc x86"
+	KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 s390 sh sparc x86"
 fi
 
 DESCRIPTION="Linux dynamic and persistent device naming support (aka userspace devfs)"
@@ -185,8 +185,9 @@ src_prepare() {
 		sed -i -e '/error.*secure_getenv/s:.*:#define secure_getenv(x) NULL:' src/shared/missing.h || die
 	fi
 
-	# link udevd(8) to systemd-udevd.service(8) manpage
+	# link udevd(8) and systemd-udevd(8) manpages to systemd-udevd.service(8) manpage
 	echo '.so systemd-udevd.service.8' > "${T}"/udevd.8
+	echo '.so systemd-udevd.service.8' > "${T}"/systemd-udevd.8
 }
 
 src_configure() {
@@ -266,7 +267,6 @@ src_compile() {
 		mtd_probe
 		man/udev.7
 		man/udevadm.8
-		man/systemd-udevd.8
 		man/systemd-udevd.service.8
 	)
 	use keymap && targets+=( keymap )
@@ -320,7 +320,7 @@ src_install() {
 		lib_LTLIBRARIES="${lib_LTLIBRARIES}"
 		MANPAGES="man/udev.7 man/udevadm.8 \
 				man/systemd-udevd.service.8"
-		MANPAGES_ALIAS="man/systemd-udevd.8"
+		MANPAGES_ALIAS=""
 		pkgconfiglib_DATA="${pkgconfiglib_DATA}"
 		INSTALL_DIRS='$(sysconfdir)/udev/rules.d \
 				$(sysconfdir)/udev/hwdb.d'
@@ -342,6 +342,7 @@ src_install() {
 	insinto /lib/udev/rules.d
 	doins "${T}"/40-gentoo.rules
 	doman "${T}"/udevd.8
+	doman "${T}"/systemd-udevd.8
 
 	# install udevadm compatibility symlink
 	dosym {../bin,sbin}/udevadm

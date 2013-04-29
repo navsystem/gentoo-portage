@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/capisuite-0.4.5-r7.ebuild,v 1.1 2013/04/01 17:28:16 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/capisuite-0.4.5-r7.ebuild,v 1.4 2013/04/26 08:58:35 pinkbyte Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.capisuite.org/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 
 DEPEND="${PYTHON_DEPS}
 	media-sound/sox
@@ -46,6 +46,8 @@ PATCHES=(
 	"${FILESDIR}/${P}-sox.patch"
 	# Compatibility with automake >= 1.11.2 (bug #424892)
 	"${FILESDIR}/${P}-automake-1.11.patch"
+	# Respect AR (bug #467222)
+	"${FILESDIR}/${P}-respect-ar.patch"
 )
 
 src_configure() {
