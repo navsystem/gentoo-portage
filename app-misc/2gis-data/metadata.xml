@@ -5,6 +5,7 @@
 		<email>egor.y.egorov@gmail.com</email>
 	</maintainer>
 	<use>
+		<flag name='kaluga'>The map of Kaluga for <pkg>app-misc/2gis</pkg></flag>
 		<flag name='omsk'>The map of Omsk for <pkg>app-misc/2gis</pkg></flag>
 		<flag name='nsk'>The map of Novosibirsk for <pkg>app-misc/2gis</pkg></flag>
 		<flag name='msk'>The map of Moscow for <pkg>app-misc/2gis</pkg></flag>

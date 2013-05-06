@@ -38,6 +38,7 @@ my_add_town() {
 #my_add_town chel Chelyabinsk 2007 8
 #my_add_town ekb Ekaterinburg 2005 12
 #my_add_town irk Irkutsk 2006 4
+my_add_town kaluga Kaluga 2012 2
 #my_add_town kaz Kazan 2008 11
 #my_add_town kdar Krasnodar 2010 1
 #my_add_town kem Kemerovo 2005 4
