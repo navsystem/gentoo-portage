@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.10.0_rc1.ebuild,v 1.1 2013/04/27 17:05:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.10.0_rc1.ebuild,v 1.7 2013/05/08 02:38:56 jer Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_5 python2_6 python2_7 )
@@ -18,6 +18,10 @@ IUSE="
 	adns +caps crypt doc doc-pdf geoip gtk ipv6 kerberos libadns lua
 	+netlink +pcap portaudio profile python selinux smi ssl zlib
 "
+REQUIRED_USE="
+	ssl? ( crypt )
+"
+
 RDEPEND="
 	>=dev-libs/glib-2.14:2
 	netlink? ( dev-libs/libnl )
@@ -39,22 +43,24 @@ RDEPEND="
 	python? ( ${PYTHON_DEPS} )
 	selinux? ( sec-policy/selinux-wireshark )
 	smi? ( net-libs/libsmi )
-	ssl? ( net-libs/gnutls dev-libs/libgcrypt )
+	ssl? ( net-libs/gnutls )
 	zlib? ( sys-libs/zlib !=sys-libs/zlib-1.2.4 )
 "
 
 DEPEND="
 	${RDEPEND}
-	dev-lang/perl
 	doc? (
 		app-doc/doxygen
 		dev-libs/libxml2
 		dev-libs/libxslt
 		doc-pdf? ( dev-java/fop )
 	)
+	>=virtual/perl-Pod-Simple-3.170.0
 	sys-apps/sed
 	sys-devel/bison
 	sys-devel/flex
+	virtual/perl-Getopt-Long
+	virtual/perl-Time-Local
 	virtual/pkgconfig
 "
 
@@ -73,13 +79,13 @@ pkg_setup() {
 
 src_prepare() {
 	epatch \
-		"${FILESDIR}"/${PN}-1.6.13-ldflags.patch
+		"${FILESDIR}"/${PN}-1.6.13-ldflags.patch \
+		"${FILESDIR}"/${PN}-1.10.0-pkg-config.patch
 
 	sed -i \
 		-e '/^Icon/s|.png||g' \
 		-e '/^MimeType.*[[:alnum:]]$/s|$|;|g' \
 		${PN}.desktop || die
-	sed -i -e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:g' configure.ac || die
 
 	eautoreconf
 }
@@ -111,7 +117,7 @@ src_configure() {
 	# Workaround bug #213705. If krb5-config --libs has -lcrypto then pass
 	# --with-ssl to ./configure. (Mimics code from acinclude.m4).
 	if use kerberos; then
-		case `krb5-config --libs` in
+		case $(krb5-config --libs) in
 			*-lcrypto*)
 				ewarn "Kerberos was built with ssl support: linkage with openssl is enabled."
 				ewarn "Note there are annoying license incompatibilities between the OpenSSL"
@@ -153,7 +159,7 @@ src_configure() {
 
 src_compile() {
 	default
-	use doc && emake -C docbook
+	use doc && emake -j1 -C docbook
 }
 
 src_install() {
