@@ -1,14 +1,20 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/opensmtpd/opensmtpd-5.3.1_p1.ebuild,v 1.1 2013/04/22 12:04:30 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/opensmtpd/opensmtpd-5.3.2_p1.ebuild,v 1.2 2013/05/18 17:59:49 zx2c4 Exp $
 
 EAPI=5
 
-inherit multilib user flag-o-matic eutils pam toolchain-funcs autotools
+inherit multilib user flag-o-matic eutils pam toolchain-funcs autotools versionator
 
 DESCRIPTION="Lightweight but featured SMTP daemon from OpenBSD"
 HOMEPAGE="http://www.opensmtpd.org/"
-SRC_URI="http://www.opensmtpd.org/archives/${P/_}.tar.gz"
+MY_DP="${P}"
+MY_P="${P}"
+if [ $(get_last_version_component_index) -eq 4 ]; then
+	MY_DP="${PN}-$(get_version_component_range 4-)"
+	MY_P="${PN}-${PV/.$(get_version_component_range 4)}"
+fi
+SRC_URI="http://www.opensmtpd.org/archives/${MY_DP/_}.tar.gz"
 
 LICENSE="ISC BSD BSD-1 BSD-2 BSD-4"
 SLOT="0"
@@ -35,10 +41,11 @@ DEPEND="dev-libs/openssl
 "
 RDEPEND="${DEPEND}"
 
-S=${WORKDIR}/${P/_}
+S=${WORKDIR}/${MY_P/_}
 
 src_prepare() {
 	epatch "${FILESDIR}"/build-warnings.patch
+	epatch_user
 	eautoreconf
 }
 
