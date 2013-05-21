@@ -795,8 +795,11 @@ app-misc/strigi:clucene - Enable dev-cpp/clucene backend support.
 app-misc/strigi:hyperestraier - Enable app-text/hyperestraier backend support.
 app-misc/strigi:inotify - Enable support for inotify.
 app-misc/strigi:log - Enables advanced logging through dev-libs/log4cxx.
-app-misc/subsurface:linguas_de_CH - Language support for de_CH
-app-misc/subsurface:linguas_hr_HR - Language support for hr_HR
+app-misc/subsurface:linguas_da_DK - Language support for da_DK.
+app-misc/subsurface:linguas_de_CH - Language support for de_CH.
+app-misc/subsurface:linguas_dk - Language support for dk.
+app-misc/subsurface:linguas_gsw - Language support for gsw.
+app-misc/subsurface:linguas_hr_HR - Language support for hr_HR.
 app-misc/subsurface:map - Adds support for OpenStreetMap maps that can be used with your dive logs.
 app-misc/tablix:pvm - Add support for parallel virtual machine (sys-cluster/pvm)
 app-misc/tasque:hiveminder - Allows you to use http://www.hiveminder.com/ as your storage backend.
@@ -4055,7 +4058,13 @@ net-dns/opendnssec:external-hsm - Enables support for storing DNSSEC keys throug
 net-dns/opendnssec:opensc - Enables support for storing DNSSEC keys through a dev-libs/opensc PKCS#11 interface
 net-dns/opendnssec:signer - Enables signing capabilities for OpenDNSSEC
 net-dns/opendnssec:softhsm - Enables support for storing DNSSEC keys in a dev-libs/softhsm PKCS#11 object
-net-dns/pdns:opendbx - Enable the OpenDBX backend
+net-dns/pdns:botan - Make it possible to use the dev-libs/botan library for crypto-related stuff (like DNSSec) which can be significantly faster than PolarSSL.
+net-dns/pdns:cryptopp - Make it possible to use the dev-libs/crypto++ library for crypto-related stuff (like DNSSec) which can be significantly faster than PolarSSL.
+net-dns/pdns:mydns - Making it possible to use a MyDNS MySQL database with PowerDNS (not recommended for new deployments).
+net-dns/pdns:opendbx - Use a database supported by dev-db/opendbx as backend.
+net-dns/pdns:remote - Use a generic socket or pipe as a backend (via JSON RPC requests).
+net-dns/pdns:remote-http - Enable remote connections to HTTP as backends (via RESTful JSON requests).
+net-dns/pdns:tinydns - Use a TinyDNS CDB database as backend.
 net-dns/pdnsd:isdn - Linux-only: check status of ippp interfaces with ISDN-specific system calls.
 net-dns/pdnsd:urandom - Linux-only: use /dev/urandom (pseudo-random number generation) instead of the default use of random() PRNG.
 net-dns/resolvconf-symlink:symlink - Actually replace /etc/resolv.conf with a symlink. Without this flag, the ebuild is a no-op.
@@ -5298,6 +5307,7 @@ sci-geosciences/gmt:gmttria - Non GNU triangulation method, more efficient
 sci-geosciences/gmt:metric - Use SI (cm) units instead of US (inches) ones
 sci-geosciences/gmt:mex - Enable compilation of mex supplement which requires Octave/Matlab
 sci-geosciences/gmt:octave - Enable octave support
+sci-geosciences/googleearth:bundled-libs - Use bundled libraries.
 sci-geosciences/googleearth:mdns-bundled - Use bundled nss-mdns library instead of depending on sys-auth/nss-mdns. Enable this if you want to avoid the deptree.
 sci-geosciences/googleearth:qt-bundled - Use bundled Qt4 libraries instead of system ones. Recommended only for troubleshooting.
 sci-geosciences/googleearth:system-mdns - Use nss-mdns library from portagen instead of the bundled one.
@@ -6175,7 +6185,6 @@ www-misc/monitorix:hddtemp - Use SMART to monitor the temperature of hard drives
 www-misc/monitorix:httpd - Enables the CGI webserver with any package that satisfies virtual/httpd-cgi.
 www-misc/monitorix:lm_sensors - Additional hardware mnitoring sensors with sys-apps/lm_sensors.
 www-misc/monitorix:postfix - Analyze postfix logs with net-mail/pflogsumm.
-www-misc/profile-sync-daemon:cron - Install hourly cronjob to resync profiles.
 www-misc/vdradmin-am:vdr - Support for media-video/vdr. Disable this if the VDR you want to control runs at a remote machine.
 www-misc/xxv:themes - Enable more themes via x11-themes/xxv-skins
 www-plugins/adobe-flash:32bit - For amd64-multilib, installs the 32-bit plugin
