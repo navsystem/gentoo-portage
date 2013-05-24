@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14770 2013/05/22 09:30:14 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14773 2013/05/24 13:58:37 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pawel Hajdan jr <phajdan.jr@gentoo.org> (23 May 2013)
+# Dev channel releases are only for people who are developers or want more
+# experimental features and accept a more unstable release.
+>=www-client/chromium-29
+>=dev-lang/v8-3.19
 
 # Tim Harder <radhermit@gentoo.org> (22 May 2013)
 # masked for testing
@@ -235,12 +241,6 @@ mail-client/postler
 # experimental features and accept a more unstable release.
 www-client/google-chrome:unstable
 www-plugins/chrome-binary-plugins:unstable
-
-# Pawel Hajdan jr <phajdan.jr@gentoo.org> (04 Apr 2013)
-# Dev channel releases are only for people who are developers or want more
-# experimental features and accept a more unstable release.
->=www-client/chromium-28
->=dev-lang/v8-3.18
 
 # Ryan Hill <dirtyepic@gentoo.org> (03 Apr 2013)
 # masked for porting (bug #461954)
@@ -483,10 +483,6 @@ app-text/cuneiform
 x11-drivers/xf86-input-citron
 
 # Julian Ospald <hasufell@gentoo.org> (10 Mar 2013)
-# Depends on masked dev-lang/python:3.3
-=media-gfx/blender-2.66
-
-# Julian Ospald <hasufell@gentoo.org> (10 Mar 2013)
 # Unsupported and full of bundled libs. Only left
 # for people who don't have python-3.3 yet.
 # Will be removed once python-3.3 and >=blender-2.66 enter ~arch.
@@ -536,8 +532,12 @@ media-gfx/yafaray
 # Alexis Ballier <aballier@gentoo.org> (15 Feb 2013)
 # Starting from this version, some decoders and encoders (like AAC or APE)
 # switched to outputing or needing planar audio, this breaks some applications
-# at runtime and the tree needs to be checked. For instance, <xbmc-12,
-# <vlc-2.0.6 break.
+# at runtime and the tree needs to be checked.
+# For instance, <xbmc-12 would fail to decode AAC files, <xbmc-13 segfaults when
+# trying to transcode to AC3 (https://github.com/xbmc/xbmc/pull/2117 for
+# AAC playback, https://github.com/xbmc/xbmc/pull/2657 for AC3 transcoding).
+# <vlc-2.0.6 breaks at playback too encoding is still broken in 2.0.6 
+# ( https://bugs.gentoo.org/show_bug.cgi?id=468890 )
 >=media-video/ffmpeg-1.1
 
 # Eray Aslan <eras@gentoo.org> (13 Feb 2013)
