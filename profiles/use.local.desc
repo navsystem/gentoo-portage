@@ -23,8 +23,6 @@ app-accessibility/simon:sphinx - Build sphinx backend (pulls app-accessibility/j
 app-accessibility/speech-dispatcher:espeak - Adds support for espeak speech engine
 app-accessibility/speech-dispatcher:flite - Adds support for flite speech engine
 app-accessibility/speechd-el:brltty - brltty support
-app-admin/ansible:paramiko - Use dev-python/paramiko as SSH library (deprecated)
-app-admin/ansible:sudo - Use app-admin/sudo on client nodes (deprecated)
 app-admin/bcfg2:cheetah - Include dev-python/cheetah support
 app-admin/bcfg2:genshi - Include dev-python/genshi support
 app-admin/bcfg2:server - Installs scripts to be used on the server-side of this app
@@ -1156,6 +1154,8 @@ dev-embedded/openocd:minidriver - Build the dummy minidriver
 dev-embedded/openocd:parport - Enable support for parport JTAG devices
 dev-embedded/openocd:presto - Enable support for AXIS PRESTO devices
 dev-embedded/openocd:segger - Enable support for the Segger J-Link JTAG
+dev-embedded/openocd:stlink - Enable building support for the ST-Link JTAG Programmer
+dev-embedded/openocd:verbose-io - Verbose IO and comm JTAG and USB messages
 dev-embedded/openocd:versaloon - Enable building support for the Versallon-lInk JTAG
 dev-embedded/ponyprog:epiphany - Enable support for www-client/epiphany
 dev-embedded/sdcc:boehm-gc - Enable Hans Boehm's garbage collector (dev-libs/boehm-gc)
@@ -1224,6 +1224,8 @@ dev-haskell/json:pretty - Add support for using pretty printing combinators
 dev-haskell/monad-control:instancest - If enabled this package will export MonadBaseControl instances for the lazy and strict ST monad. If disabled these instances are only exported when base >= 4.4. If enabled it is required that the transformer-base package exports MonadBase instances for ST. It will do this by default.
 dev-haskell/quickcheck:template_haskell - Enable additional test modules requiring Template Haskell support.
 dev-haskell/texmath:cgi - Build texmath-cgi executable.
+dev-haskell/text:developer - operate in developer mode
+dev-haskell/text:integer-simple - Use the simple integer library instead of GMP
 dev-haskell/unix-compat:old-time - build against old-time package
 dev-haskell/x11:screensaver - whether to build XScreenSaver.
 dev-haskell/zip-archive:executable - Build the Zip executable.
@@ -1507,6 +1509,7 @@ dev-libs/libjit:long-double - Enable the use of long double for jit_nfloat
 dev-libs/libmail:apop - Enables the APOP authentication method
 dev-libs/libmemcached:hsieh - Use Hsieh hash algorithm.
 dev-libs/libmemcached:libevent - Use the libevent event loop interface.
+dev-libs/libnfc:pcsc-lite - Enable NFC drivers that require pcsc-lite
 dev-libs/libnl:doc - Install development documentation
 dev-libs/libnl:utils - Install command line interface utils
 dev-libs/libowfat:diet - Compile against dev-libs/dietlibc
@@ -6249,6 +6252,7 @@ www-servers/nginx:http - Enable HTTP core support
 www-servers/nginx:http-cache - Enable HTTP cache support
 www-servers/nginx:libatomic - Use libatomic instead of builtin atomic operations
 www-servers/nginx:pcre-jit - Enable JIT for pcre
+www-servers/nginx:rtmp - NGINX-based Media Streaming Server
 www-servers/nginx:ssl - Enable HTTPS module for http. Enable SSL/TLS support for POP3/IMAP/SMTP for mail.
 www-servers/ocsigen:ocamlduce - Enables ocamlduce XML typechecking for generated web pages
 www-servers/pound:dynscaler - Enable dynamic rescaling of back-end priorities
