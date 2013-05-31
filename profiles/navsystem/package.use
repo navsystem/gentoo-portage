@@ -82,3 +82,4 @@ net-misc/tigervnc server
 
 sci-geosciences/gpsd python
 x11-libs/wxGTK -odbc gnome
+media-libs/mesa gles2
