@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kate/kate-4.10.3.ebuild,v 1.1 2013/05/06 20:18:29 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kate/kate-4.10.3.ebuild,v 1.3 2013/05/30 13:23:04 kensington Exp $
 
 EAPI=5
 KDE_HANDBOOK="optional"
 KMNAME="kate"
-PYTHON_COMPAT=( python{2_7,3_1,3_2} )
+PYTHON_COMPAT=( python{2_7,3_1,3_2,3_3} )
 
 inherit python-single-r1 kde4-meta
 
@@ -13,10 +13,15 @@ DESCRIPTION="Kate is an MDI texteditor."
 KEYWORDS=" ~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug +plasma python"
 
+REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
+
 DEPEND="
 	dev-libs/libxml2
 	dev-libs/libxslt
-	python? ( $(add_kdebase_dep pykde4 "${PYTHON_USEDEP}" 4.9.2-r1) )
+	python? (
+		${PYTHON_DEPEND}
+		$(add_kdebase_dep pykde4 "${PYTHON_USEDEP}" 4.9.2-r1)
+	)
 "
 RDEPEND="${DEPEND}
 	$(add_kdebase_dep katepart)
