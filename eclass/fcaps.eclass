@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fcaps.eclass,v 1.5 2013/04/28 04:24:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fcaps.eclass,v 1.7 2013/06/02 15:21:04 vapier Exp $
 
 # @ECLASS: fcaps.eclass
 # @MAINTAINER:
@@ -33,7 +33,8 @@ ___ECLASS_ONCE_FCAPS="recur -_+^+_- spank"
 
 IUSE="+filecaps"
 
-DEPEND="filecaps? ( || ( sys-libs/libcap sys-libs/libcap-ng ) )"
+# We can't use libcap-ng atm due to #471414.
+DEPEND="filecaps? ( sys-libs/libcap )"
 
 # @ECLASS-VARIABLE: FILECAPS
 # @DEFAULT_UNSET
@@ -145,7 +146,8 @@ fcaps() {
 						-e "s:^.{${#file}} +::" \
 						-e 's:, +:\n:g' \
 						-e 2p | \
-					LC_ALL=C sort) || return 1
+					LC_ALL=C sort)
+				[[ ${PIPESTATUS[0]} -eq 0 ]] || return 1
 				icaps=$(echo "${caps//,cap_}" | LC_ALL=C sort)
 				[[ ${rcaps} == ${icaps} ]]
 			}
