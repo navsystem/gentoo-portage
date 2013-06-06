@@ -330,6 +330,7 @@ app-crypt/shishi:null - Enable dummy NULL encryption/checksum type.
 app-crypt/tpm-tools:pkcs11 - Build Token data management utilities based on OpenCryptoki's (dev-libs/opencryptoki) PKCS#11 implementation.
 app-crypt/truecrypt:asm - Enable assembly for optimization
 app-dicts/aspell-be:classic - Support classic spelling by default
+app-dicts/gwaei:mecab - Enable app-text/mecab support
 app-dicts/gwaei:unique - Enable single instance support using dev-libs/libunique.
 app-dicts/myspell-pt:preao - Use the pre ortographic agreement version of the dictionary
 app-doc/csound-manual:html - Install HTML documentation
@@ -980,6 +981,7 @@ app-text/evince:t1lib - Enable the Type-1 fonts for the built-in DVI viewer (med
 app-text/evince:xps - Enable XPS viewer using app-text/libgxps
 app-text/getxbook:ocr - Use app-text/tesseract for optical character recognition
 app-text/ghostscript-gpl:bindist - Disable dejavu support for binary distribution because of licensing issue
+app-text/gtkspell:vala - Enable bindings for dev-lang/vala
 app-text/gtranslator:http - Enable support for open translation plugin using net-libs/libsoup
 app-text/hyperestraier:mecab - Enable app-text/mecab support for Estraier
 app-text/lcdf-typetools:kpathsea - Enable integration with kpathsea search library (TeX related)
@@ -1127,11 +1129,7 @@ dev-db/spatialite:geos - Add the sci-libs/geos library for exact topological tes
 dev-db/spatialite:proj - Add the sci-libs/proj library for reprojection features
 dev-db/spatialite:xls - Add the dev-libs/freexl library for xls import support
 dev-db/sqlite:extensions - Enable support for dynamic loading of extensions
-dev-db/sqlite:fts3 - Full text search using the fts3 module
 dev-db/sqlite:secure-delete - Overwrite deleted information with zeros in addition to marking the space as available for reuse. This causes a performance penalty.
-dev-db/sqlite:soundex - Enable the soundex function to compute soundex encodings of strings
-dev-db/sqlite:threadsafe - Enable thread safe operation of sqlite
-dev-db/sqlite:unlock-notify - Adds API for notifications when a database is unlocked in shared-cache mode
 dev-db/unixODBC:minimal - Disable bundled drivers and extra libraries (most users don't need these)
 dev-db/unixODBC:odbcmanual - Administrator, Internal Structure, Programmer and User documentation
 dev-embedded/avrdude:ftdi - Enable support for USB FTDI chips via dev-embedded/libftdi
@@ -2946,6 +2944,8 @@ media-libs/gst-rtsp-server:introspection - Use dev-libs/gobject-introspection fo
 media-libs/gst-rtsp-server:vala - Add support for dev-lang/vala
 media-libs/gstreamer:orc - Disable some PaX memory protections to allow plugins that use dev-lang/orc for runtime optimization to be used on hardened PaX systems
 media-libs/gupnp-dlna:introspection - Use dev-libs/gobject-introspection for introspection
+media-libs/harfbuzz:glib - Compile with GLib Unicode support
+media-libs/harfbuzz:graphite - Use graphite to render complex non-Roman writing systems
 media-libs/jbig2enc:webp - Add support for WEBP image format
 media-libs/leptonica:utils - Install command-line utilities
 media-libs/leptonica:webp - Adds support for the WebP image format
@@ -3449,6 +3449,7 @@ media-sound/xwax:oss - Adds support for OSS (open sound system) audio input/outp
 media-tv/freevo:mixer - Enable support for adjusting volume via media-sound/aumix
 media-tv/freevo:tv - Enable support for the tv guide plugin
 media-tv/gentoo-vdr-scripts:nvram - Add support for using nvram-wakeup to set wakeup time in bios
+media-tv/linuxtv-dvb-apps:alevt - Build videotext decoder
 media-tv/me-tv:http - Installation of Web-frontend
 media-tv/mythtv:alsa - Allows MythTV to directly output sound to ALSA devices, this is needed if you are using ALSA dmix or SPDIF. Note, you will have to physically type your device into the MythTV configuration since it will only give you /dev/dsp devices in the drop down.
 media-tv/mythtv:altivec - Builds ffmpeg's codec libraries with altivec support.
@@ -3580,6 +3581,7 @@ media-video/ffmpeg:vis - Adds support for SIMD optimizations for UltraSPARC proc
 media-video/ffmpeg:vpx - Enables vp8 codec support using libvpx: Decoding vp8 does not require this to be enabled but libvpx can also be used for decoding; encoding vp8 requires this useflag to be enabled though.
 media-video/ffmpeg2theora:kate - Adds support for Ogg Kate subtitles via libkate.
 media-video/gnome-mplayer:dconf - Enable support for gnome-base/dconf
+media-video/gnome-mplayer:gda - Enable support for gnome-extra/libgda
 media-video/google2srt:html - Install HTML documentation
 media-video/gxine:gnome-screensaver - Enable dbus support to communicate with gnome-extra/gnome-screensaver
 media-video/h264enc:ogm - Support for OGM container format
@@ -3994,6 +3996,7 @@ net-analyzer/symon:perl - Enables a generic perl symux client
 net-analyzer/symon:symon - Enables the system monitor. Offers no functionality but monitoring and forwarding of measured data
 net-analyzer/symon:symux - Enables the multiplexer which stores incoming symon streams on disk in RRD (net-analyzer/rrdtool) files
 net-analyzer/tcpdump:chroot - Chroot into /var/lib/tcpdump when dropping privileges
+net-analyzer/tcpdump:drop-root - Drop privileges to tcpdump:tcpdump when run as root
 net-analyzer/tcpdump:smi - Build with net-libs/libsmi to load MIBs on the fly to decode SNMP packets
 net-analyzer/tcpreplay:pcapnav - Enable if you want the jump to byte offset feature via net-libs/libpcapnav
 net-analyzer/tcpreplay:tcpdump - Use net-analyzer/tcpdump for packet decoding feature
@@ -5930,6 +5933,10 @@ sys-fs/aufs3:pax_kernel - Apply patch needed for pax enabled kernels
 sys-fs/aufs3:ramfs - Enable initramfs/rootfs support
 sys-fs/btrfs-progs:debug-utils - Build additional utils for debugging
 sys-fs/cryptsetup:dynamic - Build cryptsetup dynamically
+sys-fs/cryptsetup:gcrypt - Enable the dev-libs/libgcrypt crypto backend
+sys-fs/cryptsetup:kernel - Enable the kernel crypto backend
+sys-fs/cryptsetup:nettle - Enable the dev-libs/nettle crypto backend
+sys-fs/cryptsetup:openssl - Enable the dev-libs/openssl crypto backend
 sys-fs/cryptsetup:reencrypt - Build cryptsetup-reencrypt
 sys-fs/cryptsetup:urandom - Use /dev/urandom instead of /dev/random
 sys-fs/dmraid:dietlibc - Compile against dev-libs/dietlibc
