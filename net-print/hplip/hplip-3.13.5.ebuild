@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.13.5.ebuild,v 1.1 2013/05/18 08:07:20 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.13.5.ebuild,v 1.3 2013/06/09 10:48:56 billie Exp $
 
 EAPI=5
 
@@ -55,7 +55,7 @@ RDEPEND="${COMMON_DEPEND}
 		kernel_linux? ( virtual/udev !<sys-fs/udev-114 )
 		scanner? (
 			>=dev-python/reportlab-2.6[${PYTHON_USEDEP}]
-			>=dev-python/imaging-1.1.7-r2[${PYTHON_USEDEP}]
+			>=virtual/python-imaging-1[${PYTHON_USEDEP}]
 			X? ( || (
 				kde? ( kde-misc/skanlite )
 				media-gfx/xsane
@@ -73,6 +73,8 @@ RDEPEND="${COMMON_DEPEND}
 			)
 		)
 	)"
+
+REQUIRED_USE="!minimal? ( ${PYTHON_REQUIRED_USE} )"
 
 CONFIG_CHECK="~PARPORT ~PPDEV"
 ERROR_PARPORT="Please make sure kernel parallel port support is enabled (PARPORT and PPDEV)."

@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999- Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.27 2013/04/11 02:37:53 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.29 2013/06/09 11:00:15 blueness Exp $
 
-EAPI=5
+EAPI="5"
 
 KV_min=2.6.31
 
@@ -22,7 +22,7 @@ HOMEPAGE="https://github.com/gentoo/eudev"
 
 LICENSE="LGPL-2.1 MIT GPL-2"
 SLOT="0"
-IUSE="doc gudev hwdb kmod introspection legacy-libudev keymap +modutils +openrc +rule-generator selinux static-libs"
+IUSE="doc gudev hwdb kmod introspection keymap +modutils +openrc +rule-generator selinux static-libs"
 
 RESTRICT="test"
 
@@ -55,20 +55,11 @@ RDEPEND="${COMMON_DEPEND}
 PDEPEND=">=virtual/udev-180
 	openrc? ( >=sys-fs/udev-init-scripts-18 )"
 
-udev_check_KV()
-{
-	if kernel_is lt ${KV_min//./ }
-	then
-		return 1
-	fi
-	return 0
-}
-
 pkg_pretend()
 {
 	if ! use rule-generator; then
 		ewarn
-		ewarn "As of 2013-01-29, eudev-9999 provides the new interface renaming functionality,"
+		ewarn "As of 2013-01-29, ${P} provides the new interface renaming functionality,"
 		ewarn "as described in the URL below:"
 		ewarn "http://www.freedesktop.org/wiki/Software/systemd/PredictableNetworkInterfaceNames"
 		ewarn
@@ -81,64 +72,29 @@ pkg_pretend()
 		ewarn "We are working on a better solution for the next beta release."
 		ewarn
 	fi
-
-	if has_version "<sys-fs/udev-180" && ! use legacy-libudev; then
-		ewarn
-		ewarn "This version of eudev does not contain the libudev.so.0 library by "
-		ewarn "default.  This is an issue when migrating from sys-fs/udev-180 or older."
-		ewarn
-		ewarn "Removal of libudev.so.0 will effectively break any active Xorg sessions, and"
-		ewarn "will probably have repercussions with other software as well.  A revdep-rebuild"
-		ewarn "is required to resolve these issues."
-		ewarn
-		ewarn "Add USE=legacy-libudev to tell eudev to install a copy of libudev.so.0, if"
-		ewarn "you wish to continue to use your system while migrating to libudev.so.1"
-		ewarn
-	elif use legacy-libudev ; then
-		ewarn
-		ewarn "You are installing eudev with USE=legacy-libudev , this should only be used"
-		ewarn "to support binary-only applications or legacy applications while in the"
-		ewarn "process of doing a full systems upgrade, that require libudev.so.0 -- it is"
-		ewarn "HIGHLY RECOMMENDED to leave this flag disabled unless absolutely necessary."
-		ewarn
-	fi
 }
 
 pkg_setup()
 {
-	# required kernel options
-	CONFIG_CHECK="~BLK_DEV_BSG ~DEVTMPFS ~!IDE ~INOTIFY_USER ~SIGNALFD ~!SYSFS_DEPRECATED ~!SYSFS_DEPRECATED_V2"
-	ERROR_DEVTMPFS="DEVTMPFS is not set in this kernel. Udev will not run."
-
 	linux-info_pkg_setup
-
-	if ! udev_check_KV; then
-		eerror
-		eerror "Your kernel version (${KV_FULL}) is too old to run ${P}"
-		eerror "It must be at least ${KV_min}!"
-		eerror
-	fi
-
-	KV_FULL_SRC=${KV_FULL}
 	get_running_version
-	if ! udev_check_KV
-	then
-		eerror
-		eerror "Your running kernel version (${KV_FULL}) is too old"
-		eerror "for this version of udev."
-		eerror "You must upgrade your kernel or downgrade udev."
-		eerror
-	fi
 
-	# for USE=legacy-libudev
-	QA_SONAME_NO_SYMLINK="$(get_libdir)/libudev.so.0"
+	# These are required kernel options, but we don't error out on them
+	# because you can build under one kernel and run under another.
+	CONFIG_CHECK="~BLK_DEV_BSG ~DEVTMPFS ~!IDE ~INOTIFY_USER ~SIGNALFD ~!SYSFS_DEPRECATED ~!SYSFS_DEPRECATED_V2"
+
+	if kernel_is lt ${KV_min//./ }; then
+		ewarn
+		ewarn "Your current running kernel version ${KV_FULL} is too old to run ${P}."
+		ewarn "Make sure to run udev under kernel version ${KV_min} or above."
+		ewarn
+	fi
 }
 
 src_prepare()
 {
 	# change rules back to group uucp instead of dialout for now
-	sed -e 's/GROUP="dialout"/GROUP="uucp"/' \
-		-i rules/*.rules \
+	sed -e 's/GROUP="dialout"/GROUP="uucp"/' -i rules/*.rules \
 	|| die "failed to change group dialout to uucp"
 
 	epatch_user
@@ -183,7 +139,6 @@ src_configure()
 		$(use_enable selinux)
 		$(use_enable static-libs static)
 		$(use_enable rule-generator)
-		$(use_enable legacy-libudev legacylib)
 	)
 	econf "${econf_args[@]}"
 }
@@ -226,8 +181,8 @@ pkg_postinst()
 	rmdir "${EROOT}"dev/loop 2>/dev/null
 	if [[ -d ${EROOT}dev/loop ]]
 	then
-		ewarn "Please make sure you remove /dev/loop,"
-		ewarn "else losetup may be confused when looking for unused devices."
+		ewarn "Please make sure you remove /dev/loop, else losetup"
+		ewarn "may be confused when looking for unused devices."
 	fi
 
 	# 64-device-mapper.rules now gets installed by sys-fs/device-mapper
@@ -258,4 +213,5 @@ pkg_postinst()
 	elog "For more information on eudev on Gentoo, writing udev rules, and"
 	elog "fixing known issues visit:"
 	elog "         http://www.gentoo.org/doc/en/udev-guide.xml"
+	elog
 }
