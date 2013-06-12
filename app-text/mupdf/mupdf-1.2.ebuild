@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-1.2.ebuild,v 1.6 2013/06/08 13:07:55 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-1.2.ebuild,v 1.8 2013/06/11 08:57:43 xmw Exp $
 
 EAPI=5
 
@@ -42,6 +42,10 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-1.2-mubusy_rename_fix.patch \
 		"${FILESDIR}"/${PN}-1.2-pkg-config.patch
 
+	sed -e "/^libdir=/s:/lib:/$(get_libdir):" \
+		-e "/^prefix=/s:=.*:=${EROOR}/usr:" \
+		-i debian/mupdf.pc || die
+
 	use vanilla || epatch \
 		"${FILESDIR}"/${PN}-1.1_rc1-zoom-2.patch
 
@@ -62,6 +66,7 @@ src_prepare() {
 
 	if use static-libs || use static ; then
 		cp -a "${S}" "${S}"-static || die
+		#add missing Libs.private for xcb and freetype
 		sed -e 's:\(pkg-config --libs\):\1 --static:' \
 		    -e '/^X11_LIBS :=/s:\(.*\):\1 -lbz2 -ldl -lpthread:' \
 			-i "${S}"-static/Makerules || die
