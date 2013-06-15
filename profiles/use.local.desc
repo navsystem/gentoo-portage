@@ -1804,6 +1804,7 @@ dev-python/sympy:mathml - Add support for mathml
 dev-python/sympy:pyglet - Use dev-python/pyglet for plots and print preview
 dev-python/sympy:system-mpmath - Use mpmath from portage instead of the bundled one
 dev-python/sympy:texmacs - Add app-office/texmacs interface
+dev-python/tdaemon:coverage - Enable code coverage support
 dev-python/translate-toolkit:html - Support conversion between po and html files
 dev-python/translate-toolkit:ical - Support conversion between po and ical files
 dev-python/translate-toolkit:ini - Support conversion between po and ini files
@@ -1972,7 +1973,6 @@ dev-scheme/kawa:swt - Assume SWT is available with dev-java/swt
 dev-scheme/kawa:xqtests - Support XQuery Test Suite
 dev-scheme/racket:backtrace - Support GC backtrace dumps
 dev-scheme/racket:futures - Enable racket/future library for fine-grained hardware parallelism
-dev-scheme/racket:jit - Enable just-in-time compiler
 dev-scheme/racket:places - Enable racket/place library for share-nothing parallelism and message-passing communication. Compared to futures, places are heavyweight, but they have a simpler performance model.
 dev-scheme/racket:plot - Enable plot libraries
 dev-scheme/racket:threads - Enable support for green threads
@@ -1990,6 +1990,7 @@ dev-scheme/scm:unix - Support for: nice, acct, lstat, readlink, symlink, mknod a
 dev-tcltk/expect-lite:debug - pull in packages needed for runtime interactive debugger
 dev-tcltk/tktreectrl:shellicon - shellicon extension
 dev-tex/abntex:lyx - Install with app-office/lyx layout
+dev-tex/circuit_macros:script - Install CM2pdf to automatically create a correctly sized PDF from a circuit_macro m4 source
 dev-tex/dot2texi:pgf - Enable support for dev-tex/pgf (The TeX Portable Graphic Format)
 dev-tex/dot2texi:pstricks - Enable pstricks support
 dev-tex/latex-beamer:lyx - Install with app-office/lyx layouts
@@ -3664,7 +3665,6 @@ media-video/mplayer:pnm - Add PNM video output option, to create PPM/PGM/PGMYUV 
 media-video/mplayer:pvr - Enable Video4Linux2 MPEG PVR
 media-video/mplayer:radio - Enable V4L2 radio interface and support
 media-video/mplayer:rar - Enable Unique RAR File Library
-media-video/mplayer:real - Adds Real audio/video support
 media-video/mplayer:rtc - Enables usage of the linux real time clock. The alternative is software emulation of rtc
 media-video/mplayer:rtmp - Enables RTMPDump Streaming Media support
 media-video/mplayer:shm - Enable support for shm
@@ -3683,7 +3683,6 @@ media-video/mplayer2:bluray - Enable playback of Blu-ray filesystems
 media-video/mplayer2:bs2b - Enable Bauer stereophonic-to-binaural headphone filter
 media-video/mplayer2:cdio - Use libcdio for CD support (instead of cdparanoia)
 media-video/mplayer2:cpudetection - Enables runtime CPU detection (useful for bindist, compatibility on other CPUs)
-media-video/mplayer2:custom-cpuopts - Fine-tune custom CPU optimizations (UNSUPPORTED)
 media-video/mplayer2:dvdnav - Use forked libdvdnav, navigate menus in GUIs
 media-video/mplayer2:dxr3 - Enable DXR3/H+ video output
 media-video/mplayer2:enca - Enables support for charset discovery and conversion
@@ -3700,7 +3699,6 @@ media-video/mplayer2:pvr - Enable Video4Linux2 MPEG PVR
 media-video/mplayer2:quvi - Enable support for streaming sites using media-libs/libquvi
 media-video/mplayer2:radio - Enable V4L2 radio interface and support
 media-video/mplayer2:rar - Enable Unique RAR File Library
-media-video/mplayer2:real - Adds real audo/video support
 media-video/mplayer2:rtc - Enables usage of the linux real time clock. The alternative is software emulation of rtc
 media-video/mplayer2:shm - Enable support for shm
 media-video/mplayer2:ssse3 - Faster floating point optimization for SSSE3 capable chips (Intel Core 2 and later chips)
@@ -4009,9 +4007,11 @@ net-analyzer/tcpreplay:tcpdump - Use net-analyzer/tcpdump for packet decoding fe
 net-analyzer/wireshark:adns - Use the GNU net-dns/c-ares library to resolve DNS names
 net-analyzer/wireshark:crypt - Use dev-libs/libgcrypt to decrypt traffic
 net-analyzer/wireshark:doc-pdf - Build documentation in pdf format (US and a4 paper sizes)
+net-analyzer/wireshark:gtk - Build the wireshark executable with a GTK+ UI.
 net-analyzer/wireshark:libadns - Use net-lib/adns (DEPRECATED) instead of net-dns/c-ares to resolve DNS names
 net-analyzer/wireshark:netlink - Use dev-libs/libnl
 net-analyzer/wireshark:pcap - Use net-libs/libpcap for network packet capturing (build dumpcap, rawshark)
+net-analyzer/wireshark:qt4 - Build the wireshark executable with a Qt UI.
 net-analyzer/wireshark:smi - Use net-libs/libsmi to resolve numeric OIDs into human readable format
 net-analyzer/zabbix:agent - Enable zabbix agent (for to-be-monitored machines)
 net-analyzer/zabbix:frontend - Enable zabbix web frontend
@@ -4116,8 +4116,10 @@ net-firewall/nufw:plaintext - Add support for authentication with plaintext file
 net-firewall/pftop:altq - Enable altq(4) support — alternate queuing of network packets.
 net-firewall/pglinux:cron - Install cron script
 net-firewall/pglinux:logrotate - Install logrotate.d file
+net-fs/autofs:dmalloc - Enable debugging with the dmalloc library
 net-fs/autofs:hesiod - Install hesiod module
 net-fs/autofs:ldap - Install LDAP module
+net-fs/autofs:libtirpc - Use libtirpc lib support
 net-fs/autofs:mount-locking - Enable locking to prevent corruption of /etc/mtab in the presence of concurrent auto-mounting. If enabled, recursive auto-mounting (eg. using autofs to bind or loop mount a filesystem which is itself auto-mounted) is not possible.
 net-fs/autofs:sasl - Enable SASL support in the LDAP module
 net-fs/cifs-utils:ads - Enable Active Directory support
@@ -4344,6 +4346,7 @@ net-im/vacuum:multiuserchat - Enable Jabber multi-user conferences
 net-im/vacuum:pepmanager - Allows other plugins to recieve and publish PEP events
 net-im/vacuum:privacylists - Enable blocking the undesirable contacts
 net-im/vacuum:privatestorage - Allow other modules to store arbitrary data on the server
+net-im/vacuum:recentcontacts - Displays a recently used contacts
 net-im/vacuum:registration - Enable creating accounts in Jabber services
 net-im/vacuum:remotecontrol - Allows to remotely control the client
 net-im/vacuum:rosteritemexchange - Allows to exchange contact list items
@@ -4369,6 +4372,7 @@ net-irc/epic5:archive - Use app-arch/libarchive to use zip and tar archives from
 net-irc/epic5:valgrind - Compile against dev-util/valgrind headers to improve memory-leak checking when running epic5 under valgrind.
 net-irc/ezbounce:boost - Compile against dev-libs/boost libraries
 net-irc/hexchat:fastscroll - Make scrolling of large text buffers faster by circumventing some of pango's overhead
+net-irc/hexchat:libcanberra - Enable sound event support using media-libs/libcanberra
 net-irc/hexchat:libproxy - Enable proxy support.
 net-irc/hexchat:ntlm - Enable NTLM authentication
 net-irc/hexchat:plugin-checksum - Build Checksum plugin (needs plugins)
