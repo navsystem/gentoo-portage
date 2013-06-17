@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/pambase-20120417-r1.ebuild,v 1.1 2012/06/19 07:55:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/pambase-20120417-r2.ebuild,v 1.1 2013/06/15 21:08:49 johu Exp $
 
-EAPI=4
+EAPI=5
 inherit eutils
 
 DESCRIPTION="PAM base configuration files"
