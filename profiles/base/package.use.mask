@@ -1,10 +1,18 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.477 2013/06/13 18:24:24 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.480 2013/06/18 23:01:48 xmw Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Michael Weber <xmw@gentoo.org>  (19 Jun 2013)
+# Not fit for production
+=www-client/netsurf-3.0 fbcon pdf-writer gstreamer
+
+# Anthony G. Basile <blueness@gentoo.org> (18 Jun 2013)
+# Only work on amd64/x86 
+net-libs/cyassl aes-ni
 
 # Sergey Popov <pinkbyte@gentoo.org> (08 Jun 2013)
 # mask because requires unstable depends not ready for the stabilization
@@ -150,10 +158,6 @@ dev-ml/eliom ocamlduce
 # Causes problems with e.g. NVidia drivers, bug #413637.
 www-client/chromium tcmalloc
 
-# Johannes Huber <johu@gentoo.org> (14 Sep 2012)
-# Masked for stabilization as the use flag pulls a dep tree of hell.
-media-libs/phonon zeitgeist
-
 # Diego Elio Pettenò (27 Aug 2012)
 # The libpci access is only used for linux.
 net-analyzer/net-snmp pci
@@ -178,7 +182,7 @@ dev-lang/idb eclipse
 
 # Michael Weber<xmw@gentoo.org>  (18 Jun 2012)
 # Not fit for production
-www-client/netsurf pdf-writer javascript gstreamer
+=www-client/netsurf-2.9 pdf-writer javascript gstreamer
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (16 Jul 2012)
 # Stop glibc/uclibc from using iconv in blender

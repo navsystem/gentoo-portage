@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/freebsd.eclass,v 1.24 2012/11/24 11:22:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/freebsd.eclass,v 1.28 2013/06/18 17:30:56 aballier Exp $
 #
 # Diego Pettenò <flameeyes@gentoo.org>
 
@@ -105,9 +105,6 @@ freebsd_src_compile() {
 
 	mymakeopts="${mymakeopts} NO_MANCOMPRESS= NO_INFOCOMPRESS= NO_FSCHG="
 
-	# Many things breaks when using ricer flags here
-	[[ -z "${NOFLAGSTRIP}" ]] && strip-flags
-
 	# Make sure to use FreeBSD definitions while crosscompiling
 	[[ -z "${BMAKE}" ]] && BMAKE="$(freebsd_get_bmake)"
 
@@ -118,6 +115,53 @@ freebsd_src_compile() {
 	fi
 
 	bsdmk_src_compile
+}
+
+# Helper function to make a multilib build with FreeBSD Makefiles.
+# Usage: 
+# MULTIBUILD_VARIANTS=( $(get_all_abis) )
+# multibuild_foreach_variant freebsd_multilib_multibuild_wrapper my_function
+#
+# Important note: To use this function you _have_ to:
+# - inherit multilib.eclass and multibuild.eclass
+# - set MULTILIB_VARIANTS
+# - have a multilib useflag in IUSE
+
+freebsd_multilib_multibuild_wrapper() {
+	# Get the ABI from multibuild.eclass
+	# This assumes MULTILIB_VARIANTS contains only valid ABIs.
+	local ABI=${MULTIBUILD_VARIANT}
+
+	# First, save the variables: CFLAGS, CXXFLAGS, LDFLAGS, LDADD and mymakeopts.
+	for i in CFLAGS CXXFLAGS LDFLAGS LDADD mymakeopts ; do
+		export ${i}_SAVE="${!i}"
+	done
+
+	# Setup the variables specific to this ABI.
+	multilib_toolchain_setup "${ABI}"
+
+	local target="$(tc-arch-kernel ${CHOST})"
+	mymakeopts="${mymakeopts} TARGET=${target} MACHINE=${target} MACHINE_ARCH=${target} SHLIBDIR=/usr/$(get_libdir) LIBDIR=/usr/$(get_libdir)"
+	if use multilib && [ "${ABI}" != "${DEFAULT_ABI}" ] ; then
+		mymakeopts="${mymakeopts} COMPAT_32BIT="
+		# Teach gcc where to find crt* files.
+		export LDFLAGS="${LDFLAGS} -L/usr/$(get_libdir) -B/usr/$(get_libdir)"
+	fi
+
+	einfo "Building for ABI=${ABI} and TARGET=${target}"
+
+	export MAKEOBJDIRPREFIX="${BUILD_DIR}"
+	if [ ! -d "${MAKEOBJDIRPREFIX}" ] ; then
+		mkdir "${MAKEOBJDIRPREFIX}" || die "Could not create ${MAKEOBJDIRPREFIX}."
+	fi
+	
+	CTARGET="${CHOST}" "$@"
+	
+	# Restore the variables now.
+	for i in CFLAGS CXXFLAGS LDFLAGS LDADD mymakeopts ; do
+		ii="${i}_SAVE"
+		export ${i}="${!ii}"
+	done
 }
 
 freebsd_src_install() {

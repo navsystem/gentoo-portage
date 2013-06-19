@@ -374,6 +374,7 @@ app-editors/emacs-vcs:wide-int - Prefer wide Emacs integers (typically 62-bit). 
 app-editors/fe:sendmail - Send mail after editor abend
 app-editors/gedit:zeitgeist - Build the plugin to inject events to gnome-extra/zeitgeist
 app-editors/gedit-plugins:charmap - Insert special characters just by clicking on them
+app-editors/gedit-plugins:git - Shows document changes related to git's HEAD
 app-editors/gedit-plugins:synctex - Synchronize between LaTeX and PDF with gedit and evince
 app-editors/gedit-plugins:terminal - Embed a terminal in the bottom pane
 app-editors/gvim:netbeans - Include netbeans externaleditor integration support
@@ -1994,7 +1995,6 @@ dev-tex/abntex:lyx - Install with app-office/lyx layout
 dev-tex/circuit_macros:script - Install CM2pdf to automatically create a correctly sized PDF from a circuit_macro m4 source
 dev-tex/dot2texi:pgf - Enable support for dev-tex/pgf (The TeX Portable Graphic Format)
 dev-tex/dot2texi:pstricks - Enable pstricks support
-dev-tex/latex-beamer:lyx - Install with app-office/lyx layouts
 dev-util/anjuta:devhelp - Enable devhelp integration
 dev-util/anjuta:glade - Build glade plugin for anjuta
 dev-util/anjuta:packagekit - Use packagekit to search for missing tools
@@ -2593,6 +2593,7 @@ kde-base/step:qalculate - Enable the libqalculate library for unit conversion
 kde-misc/kcm-grub2:hwinfo - Used to work out supported framebuffer resolutions
 kde-misc/kcm-grub2:imagemagick - Create splash images compatible with GRUB2
 kde-misc/kcm-grub2:packagekit - Add support for packagekit integration
+kde-misc/kepas:oscar - Enables ICQ (AIM) support.
 kde-misc/krusader:bookmarks - Add dependency on bookmark package.
 kde-misc/networkmanagement:openconnect - Build support for the OpenConnect VPN client
 kde-misc/synaptiks:upower - Handle mouse devices correctly across suspend and resume with upower
@@ -3302,7 +3303,6 @@ media-sound/lame:mp3rtp - Build the mp3-to-RTP streaming utility. **UNSUPPORTED*
 media-sound/lmms:fluidsynth - Enables Fluidsynth MIDI software synthesis plugin.
 media-sound/lmms:stk - Enables STK Mallet plugin.
 media-sound/lmms:vst - Enables the VeSTige plugin to run VST plugins through Wine.
-media-sound/mangler:celt - High quality, low delay audio codec
 media-sound/mangler:espeak - Text to speech engine
 media-sound/mangler:g15 - Logitech g15 lcd support
 media-sound/mangler:opus - Codec specialized for speech over the internet
@@ -3864,6 +3864,7 @@ media-video/vlc:wma-fixed - Enables fixed point WMA decoder.
 media-video/vlc:zvbi - Enables support for teletext subtitles via the zvbi library.
 media-video/winki:mjpeg - Enables mjpegtools support
 media-video/x264-encoder:10bit - Set output bit depth to 10
+media-video/x264-encoder:avs - enable AvxSynth support in the AviSynth input module
 media-video/x264-encoder:ffmpegsource - Enable ffmpegsource aka ffms support, disables lavf
 media-video/x264-encoder:interlaced - Enable interlaced encoding support, this can decrease encoding speed by up to 2%
 media-video/xine-ui:vdr - Enables Video Disk Recorder support
@@ -5164,6 +5165,7 @@ net-voip/linphone:gsm-nonstandard - Support non-standard GSM frequencies
 net-voip/linphone:video - Enable video support (display/capture)
 net-voip/sflphone:doxygen - Support for building documentation with doxygen
 net-voip/sflphone:iax - Support for IAX (Inter Asterisk eXchange)
+net-voip/yate:dahdi - Enable the DAHDI driver for Digium compatible hardware
 net-voip/yate:h323 - Build H.323 Channel plugin
 net-voip/yate:ilbc - Build ILBC codec plugin
 net-voip/yate:sctp - Support for Stream Control Transmission Protocol
@@ -5186,6 +5188,13 @@ net-wireless/gnuradio:performance-counters - enable block performance counters
 net-wireless/gnuradio:uhd - install UHD source and sink blocks
 net-wireless/gnuradio:utils - install scripts to enable viewing and analysis of files produced by flow graphs
 net-wireless/gnuradio:wavelet - enable wavelet signal processing blocks
+net-wireless/gr-osmosdr:fcd - Build with Funcube Dongle support
+net-wireless/gr-osmosdr:hackrf - Build with Great Scott Gadgets "HackRF" support
+net-wireless/gr-osmosdr:iqbalance - Enable support for I/Q balancing using gr-iqbal
+net-wireless/gr-osmosdr:mirisdr - Build with Mirics MSi2500 + MSi001 SDR support
+net-wireless/gr-osmosdr:osmosdr - Build with Osmocom Osmosdr support
+net-wireless/gr-osmosdr:rtlsdr - Build with Realtek RTL2832U (rtlsdr) support
+net-wireless/gr-osmosdr:uhd - Build with Ettus Research USRP Hardware Driver support
 net-wireless/hostapd:crda - Add CRDA support
 net-wireless/hostapd:logwatch - Install support files for sys-app/logwatch
 net-wireless/hostapd:madwifi - Add support for madwifi (Atheros chipset)
@@ -5450,7 +5459,6 @@ sci-libs/plplot:octave - Add bindings for sci-mathematics/octave
 sci-libs/plplot:qhull - Add bindings for media-libs/qhull
 sci-libs/scikits_image:freeimage - Enable support for image i/o via media-libs/freeimage
 sci-libs/scipy:sparse - Adds support for sparse solving with sci-libs/umfpack
-sci-libs/scipy:umfpack - Adds support for sparse solving with sci-libs/umfpack
 sci-libs/scotch:int64 - Build the 64 bits integer library (needed for > 2^31 vertices)
 sci-libs/scotch:tools - Build and install extra exec tools
 sci-libs/shogun:R - Enable support for dev-lang/R
@@ -5562,7 +5570,7 @@ sci-physics/geant:dawn - Add support for media-gfx/dawn (3D postscript rendering
 sci-physics/geant:gdml - Enable geometry markup language for xml
 sci-physics/geant:geant3 - Add compatibility for geant321 to geant4
 sci-physics/geant:granular - Produce many small libraries instead of global ones
-sci-physics/geant:openinventor - Add support for media-libs/openinventor SGI toolkit
+sci-physics/geant:inventor - Add support for Open Inventor SGI toolkit via Coin3D
 sci-physics/geant:raytracerx - Enable raytracing for physics events
 sci-physics/geant:vrml - Enable output of geant4 in vrml formats
 sci-physics/hepmc:cm - Build with cm instead of default mm for length units
@@ -6211,11 +6219,16 @@ www-client/midori:deprecated - Enable GTK+-2 instead of GTK+-3 because of extern
 www-client/midori:unique - Enable single instance support using dev-libs/libunique
 www-client/midori:webkit2 - Enable WebKit2 API that splits web content rendering and application UI into separate processes
 www-client/midori:zeitgeist - Add support for Zeitgeist event tracking system
-www-client/netsurf:bmp - enable bmp bitmap support (media-libs/libnsbmp)
-www-client/netsurf:pdf-writer - Enable pdf output support (media-libs/libharu)
-www-client/netsurf:rosprite - enable RISC OS Sprite bitmap support (media-libs/librosprite)
-www-client/netsurf:svgtiny - enable svg image support via media-libs/svgatiny instead of gnome-base/librsvg
-www-client/netsurf:webp - enable WebP image support (media-libs/libwebp)
+www-client/netsurf:bmp - BMP bitmap image support (media-libs/libnsbmp)
+www-client/netsurf:fbcon_frontend_able - Use framebuffer frontend able
+www-client/netsurf:fbcon_frontend_linux - Use framebuffer frontend linux
+www-client/netsurf:fbcon_frontend_sdl - Use framebuffer frontend sdl
+www-client/netsurf:fbcon_frontend_vnc - Use framebuffer frontend vnc
+www-client/netsurf:fbcon_frontend_x - Use framebuffer frontend X
+www-client/netsurf:pdf-writer - PDF output support (media-libs/libharu)
+www-client/netsurf:rosprite - RISC OS Sprite bitmap image support (media-libs/librosprite)
+www-client/netsurf:svgtiny - SVG image support via media-libs/svgatiny instead of gnome-base/librsvg
+www-client/netsurf:webp - WebP image support (media-libs/libwebp)
 www-client/opera:gtk - Install support libraries and runtime dependencies to support GTK+/GNOME desktop integration
 www-client/opera:kde - Install support libraries and runtime dependencies to support KDE desktop integration
 www-client/opera-next:gtk - Install support libraries and runtime dependencies to support GTK+/GNOME desktop integration
