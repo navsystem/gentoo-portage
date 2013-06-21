@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-pdf-mupdf/zathura-pdf-mupdf-9999.ebuild,v 1.2 2013/06/13 12:16:29 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-pdf-mupdf/zathura-pdf-mupdf-9999.ebuild,v 1.4 2013/06/20 11:25:55 xmw Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ EGIT_BRANCH="mupdf-git"
 LICENSE="ZLIB"
 SLOT="0"
 KEYWORDS=""
-IUSE="cairo"
+IUSE=""
 
 RDEPEND="!app-text/zathura-pdf-poppler
 	>=app-text/mupdf-9999:=
@@ -22,18 +22,26 @@ RDEPEND="!app-text/zathura-pdf-poppler
 	media-libs/jbig2dec
 	media-libs/openjpeg:2
 	virtual/jpeg
-	cairo? ( x11-libs/cairo )"
+	x11-libs/cairo:="
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 pkg_setup() {
+	# does not render w/o cairo
 	myzathuraconf=(
-		WITH_CAIRO=$(usex cairo 1 0)
+		WITH_CAIRO=1
 		CC="$(tc-getCC)"
 		LD="$(tc-getLD)"
 		VERBOSE=1
 		DESTDIR="${D}"
 	)
+}
+
+src_prepare() {
+	epatch \
+		"${FILESDIR}"/${P}-mupdf-fz_new_text_page.patch \
+		"${FILESDIR}"/${P}-mupdf-pkgconfig.patch \
+		"${FILESDIR}"/${P}-mupdf-split-headers.patch
 }
 
 src_compile() {
