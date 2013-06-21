@@ -9,5 +9,6 @@
 		<flag name='omsk'>The map of Omsk for <pkg>app-misc/2gis</pkg></flag>
 		<flag name='nsk'>The map of Novosibirsk for <pkg>app-misc/2gis</pkg></flag>
 		<flag name='msk'>The map of Moscow for <pkg>app-misc/2gis</pkg></flag>
+		<flag name='minvody'>The map of KMV for <pkg>app-misc/2gis</pkg></flag>
 	</use>
 </pkgmetadata>

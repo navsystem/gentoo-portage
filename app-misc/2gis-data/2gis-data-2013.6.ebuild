@@ -46,6 +46,7 @@ my_add_town kaluga Kaluga 2012 2
 #my_add_town kur Kurgan 2006 3
 #my_add_town nkuz Novokuznetsk 2005 8
 #my_add_town nnov N_Novgorod 2008 9
+my_add_town minvody Minvody 2013 4
 my_add_town nsk Novosibirsk 1998 9
 #my_add_town nvar Nizhnevartovsk 2006 5
 #my_add_town odes Odessa 2007 2
