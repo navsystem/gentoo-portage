@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.52 2013/05/31 15:35:40 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.54 2013/06/22 16:24:19 slyfox Exp $
 
 EAPI=5
 
@@ -30,7 +30,7 @@ HOMEPAGE="http://www.qemu.org http://www.linux-kvm.org"
 
 LICENSE="GPL-2 LGPL-2 BSD-2"
 SLOT="0"
-IUSE="+aio alsa bluetooth brltty +caps +curl debug fdt iscsi +jpeg \
+IUSE="accessibility +aio alsa bluetooth +caps +curl debug fdt iscsi +jpeg \
 kernel_linux kernel_FreeBSD mixemu ncurses opengl +png pulseaudio python \
 rbd sasl +seccomp sdl selinux smartcard spice static static-softmmu \
 static-user systemtap tci test +threads tls usbredir +uuid vde +vhost-net \
@@ -63,6 +63,7 @@ REQUIRED_USE="${REQUIRED_USE}
 	virtfs? ( xattr )"
 
 # Yep, you need both libcap and libcap-ng since virtfs only uses libcap.
+# Currently, >=sys-apps/dtc-1.4.0 means -9999 as <libfdt_env.h> appeared only in git tree (after 1.3.0)
 LIB_DEPEND=">=dev-libs/glib-2.0[static-libs(+)]
 	sys-apps/pciutils[static-libs(+)]
 	sys-libs/zlib[static-libs(+)]
@@ -70,7 +71,7 @@ LIB_DEPEND=">=dev-libs/glib-2.0[static-libs(+)]
 	aio? ( dev-libs/libaio[static-libs(+)] )
 	caps? ( sys-libs/libcap-ng[static-libs(+)] )
 	curl? ( >=net-misc/curl-7.15.4[static-libs(+)] )
-	fdt? ( >=sys-apps/dtc-1.2.0[static-libs(+)] )
+	fdt? ( >=sys-apps/dtc-1.4.0[static-libs(+)] )
 	jpeg? ( virtual/jpeg[static-libs(+)] )
 	ncurses? ( sys-libs/ncurses[static-libs(+)] )
 	png? ( media-libs/libpng[static-libs(+)] )
@@ -100,7 +101,7 @@ RDEPEND="!static-softmmu? ( ${LIB_DEPEND//\[static-libs(+)]} )
 	)
 	alsa? ( >=media-libs/alsa-lib-1.0.13 )
 	bluetooth? ( net-wireless/bluez )
-	brltty? ( app-accessibility/brltty )
+	accessibility? ( app-accessibility/brltty )
 	iscsi? ( net-libs/libiscsi )
 	opengl? ( virtual/opengl )
 	pulseaudio? ( media-sound/pulseaudio )
@@ -131,7 +132,8 @@ QA_PREBUILT="
 	usr/share/qemu/openbios-ppc
 	usr/share/qemu/openbios-sparc64
 	usr/share/qemu/openbios-sparc32
-	usr/share/qemu/palcode-clipper"
+	usr/share/qemu/palcode-clipper
+	usr/share/qemu/s390-ccw.img"
 
 QA_WX_LOAD="usr/bin/qemu-i386
 	usr/bin/qemu-x86_64
@@ -278,7 +280,7 @@ qemu_src_configure() {
 		conf_opts+=" $(use_enable bluetooth bluez)"
 		conf_opts+=" $(use_enable sdl)"
 		conf_opts+=" $(use_enable aio linux-aio)"
-		conf_opts+=" $(use_enable brltty brlapi)"
+		conf_opts+=" $(use_enable accessibility brlapi)"
 		conf_opts+=" $(use_enable caps cap-ng)"
 		conf_opts+=" $(use_enable curl)"
 		conf_opts+=" $(use_enable fdt)"

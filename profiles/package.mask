@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14844 2013/06/19 17:18:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14851 2013/06/23 17:50:06 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,25 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Joerg Bornkessel <hd_brummy@gentoo.org> (23 Jun 2013)
+# Mask for removal ~2013/07/23
+# depends on wrt bug 474480 155253 414177
+# use as alternative the console tool media-tv/w_scan
+media-plugins/vdr-channelscan
+
+# Pacho Ramos <pacho@gentoo.org> (23 Jun 2013)
+# Mask for packages currently included in emul-linux-x86-baselibs
+# that are incorporating native multilib support.
+>=app-arch/bzip2-1.0.6-r4
+>=sys-libs/zlib-1.2.8-r1
+>=media-libs/libpng-1.6.2-r1
+
+# Justin Bronder <jsbronder@gentoo.org> (21 Jun 2013)
+# Only ever used to build older version of media-gfx/openmesh
+# which are no longer in the tree.  Newer versions use cmake.
+# Remove in 30 days.
+dev-util/acgmake
 
 # Sebastien Fabbro <bicatali@gentoo.org> (18 Jun 2013)
 # Masked for some API incompatibility with previous versions
@@ -170,7 +189,7 @@ dev-util/lafilefixer
 =dev-python/imaging-2.0.0
 
 # Joerg Bornkessel <hd_brummy@gentoo.org> (26 May 2013)
-# dead on upstream, homepage dead 
+# dead on upstream, homepage dead
 # failed on compile >=media-video/vdr-1.7.27
 # see wrt bug 414245 414177, use as alternative media-plugins/vdr-cdplayer
 # Removal in ~ 30 days
@@ -204,12 +223,6 @@ sys-fs/aufs2
 # broken dependencies -> uninstallable #470712
 app-portage/g-ctan
 
-# Joerg Bornkessel <hd_brummy@gentoo.org> (20 May 2013)
-# dead on upstream, failed on compile >=media-video/vdr-1.7.27
-# see wrt bug 424277 414177, use as alternative media-plugins/vdr-arghdirector
-# Removal in ~ 30 days
-media-plugins/vdr-director
-
 # Ole Markus With <olemarkus@gentoo.org> (19 May 2013)
 # Removing the last eZ components packages. Removal in 30 days
 dev-php/ezc-Base
@@ -224,18 +237,6 @@ x11-themes/pekwm-themes-hewphoria
 # Needs masked ffmpeg-9
 =media-video/mplayer2-2.0_p20130428
 =media-libs/ffmpegsource-2.17.4_pre755
-
-# Ian Delaney <idella4@gentoo.org> (14 May 2013)
-# package, no longer valid, otherwise replaced in new packages
-# Revised list, masked for removal in 30 days
-dev-python/setupdocs
-dev-python/etsprojecttools
-dev-python/envisagecore
-dev-python/traitsbackendwx
-dev-python/traitsbackendqt
-dev-python/traitsgui
-dev-python/enthoughtbase
-dev-python/envisageplugins
 
 # Markos Chandras <hwoarang@gentoo.org> (12 May 2013)
 # Does not build. Dead upstream. Bug #467286
@@ -709,7 +710,6 @@ dev-vcs/gitosis-gentoo
 # Diego Elio Pettenò <flameeyes@gentoo.org> (14 Nov 2012)
 # Masked for testing as some packages fail.
 # See bug #443230 for tracking the progress
-=media-video/libav-9.7*
 ~virtual/ffmpeg-9
 
 # Joerg Bornkessel <hd_brummy@gentoo.org> (04 Nov 2012)
