@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.179 2013/06/23 09:39:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.181 2013/06/24 21:03:44 scarabeus Exp $
 
 EAPI=5
 
@@ -121,7 +121,7 @@ COMMON_DEPEND="
 	media-gfx/graphite2
 	>=media-libs/fontconfig-2.8.0
 	media-libs/freetype:2
-	>=media-libs/harfbuzz-0.9.10:=
+	>=media-libs/harfbuzz-0.9.10:=[icu(+)]
 	media-libs/lcms:2
 	>=media-libs/libpng-1.4
 	>=media-libs/libcdr-0.0.5
@@ -202,7 +202,7 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/cppunit
 	>=dev-util/gperf-3
 	dev-util/intltool
-	>=dev-util/mdds-0.8.1:=
+	>=dev-util/mdds-0.9.0:=
 	virtual/pkgconfig
 	net-misc/npapi-sdk
 	>=sys-apps/findutils-4.4.2
