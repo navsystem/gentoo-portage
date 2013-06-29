@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.10.0.ebuild,v 1.2 2013/06/25 03:51:18 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.10.0.ebuild,v 1.5 2013/06/28 03:09:43 cardoe Exp $
 
 EAPI=5
 
 #BACKPORTS=
 
 PYTHON_COMPAT=( python{2_6,2_7} )
-#PYTHON_REQ_USE=""
+DISTUTILS_SINGLE_IMPL=1
 
 inherit eutils gnome2 distutils-r1
 
@@ -26,7 +26,7 @@ fi
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="gnome-keyring policykit sasl +spice +vnc"
+IUSE="gnome-keyring policykit sasl"
 
 RDEPEND="!app-emulation/virtinst
 	x11-libs/gtk+:3[introspection]
@@ -37,11 +37,11 @@ RDEPEND="!app-emulation/virtinst
 	dev-python/ipaddr[${PYTHON_USEDEP}]
 	dev-python/pygobject:3[${PYTHON_USEDEP}]
 	dev-python/urlgrabber[${PYTHON_USEDEP}]
-	x11-libs/vte:2.90[glade,introspection]
+	>=net-libs/gtk-vnc-0.3.8[gtk3,introspection,python,${PYTHON_USEDEP}]
+	net-misc/spice-gtk[gtk3,introspection,python,sasl?]
+	x11-libs/vte:2.90[introspection]
 	gnome-keyring? ( dev-python/gnome-keyring-python )
-	policykit? ( sys-auth/polkit )
-	spice? ( net-misc/spice-gtk[gtk3,introspection,python,sasl?] )
-	vnc? ( >=net-libs/gtk-vnc-0.3.8[gtk3,introspection,python,${PYTHON_USEDEP}] )"
+	policykit? ( sys-auth/polkit )"
 DEPEND="${RDEPEND}
 	dev-lang/perl
 	dev-util/intltool"
@@ -56,10 +56,15 @@ python_prepare_all() {
 distutils-r1_python_compile() {
 	local defgraphics=
 
-	use vnc && defgraphics="vnc"
-	use spice && defgraphics="spice"
-
 	esetup.py configure \
 		--qemu-user=qemu \
-		--default-graphics=${defgraphics}
+		--default-graphics=spice
+}
+
+python_install_all() {
+	python_fix_shebang "${ED}/usr/share/virt-manager/virt-clone"
+	python_fix_shebang "${ED}/usr/share/virt-manager/virt-convert"
+	python_fix_shebang "${ED}/usr/share/virt-manager/virt-image"
+	python_fix_shebang "${ED}/usr/share/virt-manager/virt-install"
+	python_fix_shebang "${ED}/usr/share/virt-manager/virt-manager"
 }

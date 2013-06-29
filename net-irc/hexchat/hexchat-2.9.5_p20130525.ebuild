@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-2.9.5_p20130525.ebuild,v 1.2 2013/06/24 19:48:37 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-2.9.5_p20130525.ebuild,v 1.4 2013/06/27 18:14:48 hasufell Exp $
 
 EAPI=5
 
@@ -61,6 +61,8 @@ src_prepare() {
 	epatch -p1 \
 		"${FILESDIR}"/${PN}-2.9.5-autoconf-missing-macros.patch
 
+	epatch_user
+
 	cp $(type -p gettextize) "${T}"/ || die
 	sed -i -e 's:read dummy < /dev/tty::' "${T}/gettextize" || die
 	einfo "Running gettextize -f --no-changelog..."
@@ -120,26 +122,32 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	if use !gtk ; then
+	if use gtk ; then
+		gnome2_icon_cache_update
+		einfo
+	else
 		einfo
 		elog "You have disabled the gtk USE flag. This means you don't have"
 		elog "the GTK-GUI for HexChat but only a text interface called \"hexchat-text\"."
-	else
-		gnome2_icon_cache_update
+		elog
 	fi
 
 	if use theme-manager ; then
-		einfo
 		elog "Themes are available at:"
 		elog "  http://hexchat.org/themes.html"
+		elog
 	fi
 
-	ewarn
-	ewarn "If you're upgrading from hexchat <=2.9.3 remember to rename"
-	ewarn "the xchat.conf file found in ~/.config/hexchat/ to hexchat.conf"
-	ewarn
-	ewarn "If you're upgrading from hexchat <=2.9.5 you will have to adjust"
-	ewarn "your auto-join channel settings."
+	elog "If you're upgrading from hexchat <=2.9.3 remember to rename"
+	elog "the xchat.conf file found in ~/.config/hexchat/ to hexchat.conf"
+	elog
+	elog "If you're upgrading from hexchat <=2.9.5 you will have to fix"
+	elog "your auto-join channel settings, see:"
+	elog "  https://bugs.gentoo.org/show_bug.cgi?id=473514#c1"
+	elog "Also, some internal hotkeys such as \"Ctrl+l\" (clear screen)"
+	elog "have been removed, but you can add them yourself via:"
+	elog "  Settings -> Keyboard Shortcuts"
+	einfo
 }
 
 pkg_postrm() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.198 2013/06/20 03:58:52 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.201 2013/06/27 15:05:23 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -132,7 +132,15 @@ gclient_runhooks() {
 
 src_unpack() {
 	# First grab depot_tools.
-	ESVN_REVISION= subversion_fetch "http://src.chromium.org/svn/trunk/tools/depot_tools"
+	DEPOT_TOOLS_REPO="https://src.chromium.org/svn/trunk/tools/depot_tools"
+	addwrite "${ESVN_STORE_DIR}"
+	if subversion_wc_info "${DEPOT_TOOLS_REPO}"; then
+		if [ "${ESVN_WC_URL}" != "${DEPOT_TOOLS_REPO}" ]; then
+			einfo "Removing old (http) depot_tools ${ESVN_WC_PATH}"
+			rm -rf "${ESVN_WC_PATH}" || die
+		fi
+	fi
+	ESVN_REVISION= subversion_fetch "${DEPOT_TOOLS_REPO}"
 	mv "${S}" "${WORKDIR}"/depot_tools || die
 
 	cd "${ESVN_STORE_DIR}/${PN}" || die
@@ -148,14 +156,16 @@ src_unpack() {
 
 	subversion_wc_info
 
+	cd src || die
+	${PYTHON} build/util/lastchange.py -o build/util/LASTCHANGE || die
+	${PYTHON} build/util/lastchange.py -s third_party/WebKit \
+		-o build/util/LASTCHANGE.blink || die
+
 	mkdir -p "${S}" || die
 	einfo "Copying source to ${S}"
-	rsync -rlpgo --exclude=".svn/" src/ "${S}" || die
+	rsync -rlpgo --exclude=".svn/" . "${S}" || die
 
-	# Display correct svn revision in about box, and log new version.
-	echo "LASTCHANGE=${ESVN_WC_REVISION}" > "${S}"/build/util/LASTCHANGE || die
-
-	. src/chrome/VERSION
+	. chrome/VERSION
 	elog "Installing/updating to version ${MAJOR}.${MINOR}.${BUILD}.${PATCH} (Developer Build ${ESVN_WC_REVISION})"
 }
 
@@ -200,7 +210,7 @@ src_prepare() {
 	# Remove most bundled libraries. Some are still needed.
 	find third_party -type f \! -iname '*.gyp*' \
 		\! -path 'third_party/WebKit/*' \
-		\! -path 'third_party/angle/*' \
+		\! -path 'third_party/angle_dx11/*' \
 		\! -path 'third_party/cacheinvalidation/*' \
 		\! -path 'third_party/cld/*' \
 		\! -path 'third_party/cros_system_api/*' \
@@ -410,6 +420,11 @@ src_configure() {
 	if ! use custom-cflags; then
 		replace-flags "-Os" "-O2"
 		strip-flags
+
+		# Prevent linker from running out of address space, bug #471810 .
+		if use x86; then
+			filter-flags "-g*"
+		fi
 	fi
 
 	# Make sure the build system will use the right tools, bug #340795.
