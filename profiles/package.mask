@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14872 2013/06/27 18:42:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14886 2013/06/30 12:27:07 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Joerg Bornkessel <hd_brummy@gentoo.org> (30 Jun 2013)
+# temp masked for testing, wrt bug 474888
+=media-plugins/vdr-music-0.9.9
 
 # Alexis Ballier <aballier@gentoo.org> (27 Jun 2013)
 # TeX Live 2013 mask.
@@ -533,6 +537,16 @@ net-irc/xchatosd
 >=gnome-base/gnome-common-3.7.4
 >=media-gfx/colorhug-client-0.2.0
 >=gnome-extra/gnome-shell-extensions-topicons-16
+games-puzzle/five-or-more
+games-board/four-in-a-row
+games-board/gnome-chess
+games-puzzle/gnome-klotski
+games-board/gnome-mines
+games-arcade/gnome-robots
+games-puzzle/gnome-tetravex
+games-board/iagno
+games-puzzle/quadrapassel
+games-puzzle/swell-foop
 
 # Jeroen Roovers <jer@gentoo.org> (25 Mar 2013)
 # Unlocking fails (bug #463180)
@@ -563,6 +577,15 @@ app-text/cuneiform
 # Samuli Suominen <ssuominen@gentoo.org> (16 Mar 2013)
 # Waiting for new emul-linux-x86-{media,sound}libs without
 # the duplicate files.
+# Other reasons to keep them masked:
+# - libsamplerate depends on libsndfile
+# - libsndfile depends on emul-linux for sqlite which doesn't scale
+# - libv4l depends on emul-linux for jpeg
+# - portaudio is not commited yet: bug #468706
+# - twolame depends on libsndfile
+# - wavpack multilib ebuild is in theory broken as it requires a multilib
+#           libiconv and is lacking the usedep on it since it has not been
+#           converted
 >=media-libs/libsamplerate-0.1.8-r1
 >=media-libs/libsndfile-1.0.25-r1
 >=media-libs/libv4l-0.9.5-r1
@@ -675,12 +698,6 @@ media-gfx/yafaray
 # Jeroen Roovers <jer@gentoo.org> (09 Jan 2013)
 # Testing branch, unstable upstream
 >net-nntp/tin-2.1
-
-# Torsten Veller <tove@gentoo.org> (08 Jan 2013)
-# Mask dev-perl/Class-MOP. It was merge with dev-perl/Moose-2.
-# Now as the last arch stabilized Moose-2, dev-perl/Class-MOP will be removed.
-# bug #350612
-dev-perl/Class-MOP
 
 # Alexander Vershilov <qnikst@gentoo.org> (06 Jan 2013)
 # Requires >=net-fs/samba-4 (bug #450226)
