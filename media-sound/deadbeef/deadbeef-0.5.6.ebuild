@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_PV}.tar.bz2
 		 http://sourceforge.net/projects/${PN}/files/${PN}-${MY_PV}.tar.bz2/download -> ${PN}-${MY_PV}.tar.bz2"
 KEYWORDS="x86 amd64"
 
-DESCRIPTION="foobar2k-like music player"
+DESCRIPTION="foobar2000-like music player"
 HOMEPAGE="http://deadbeef.sourceforge.net/"
 
 LICENSE="GPL-2
@@ -23,7 +23,7 @@ LICENSE="GPL-2
 	shn? ( shorten )"
 SLOT="0"
 IUSE="adplug aac alsa psf ape cdda cover cover-imlib2 dts dumb converter curl ffmpeg flac gme
-	hotkeys lastfm m3u midi mms mp3 musepack nls notify nullout oss pulseaudio rpath mono2stereo
+	hotkeys infobar lastfm m3u midi mms mp3 musepack nls notify nullout oss pulseaudio rpath mono2stereo
 	shellexec shn sid sndfile src static supereq threads tta vorbis vtx wavpack zip gtk3 +gtk2"
 
 LANGS="be bg bn ca cs da de el en_GB es fa fi fr gl he hr hu id it ja kk km lg nb nl pl pt_BR pt ru si sk sl sr@latin sr sv te tr uk vi zh_CN zh_TW"
@@ -37,8 +37,12 @@ RDEPEND="aac? ( media-libs/faad2 )
 	cover? ( media-libs/imlib2 )
 	ffmpeg? ( virtual/ffmpeg )
 	flac? ( media-libs/flac )
-	gtk2? ( x11-libs/gtk+:2 )
-	gtk3? ( x11-libs/gtk+:3 )
+	gtk2? ( x11-libs/gtk+:2
+		x11-libs/libICE
+		x11-libs/libSM )
+	gtk3? ( x11-libs/gtk+:3
+		x11-libs/libICE
+		x11-libs/libSM )
 	lastfm? ( net-misc/curl )
 	notify? ( sys-apps/dbus )
 	midi? ( media-sound/timidity-freepats )
@@ -54,12 +58,14 @@ RDEPEND="aac? ( media-libs/faad2 )
 		sys-libs/zlib )"
 
 DEPEND="
+	ape? ( dev-lang/yasm )
 	dev-util/intltool
 	${RDEPEND}"
 S="${WORKDIR}/${PN}-${MY_PV}"
 pkg_setup() {
-	if use psf || use dumb || use shn && use static ; then
-		die "ao/converter/dumb or shn plugins can't be builded statically"
+	# fixme, is it fine?
+	if { use psf || use dumb || use shn; } && use static ; then
+		die "ao/converter/dumb or shn plugins can't be built statically"
 	fi
 }
 

@@ -82,3 +82,4 @@ sys-libs/glibc -gd # bug #204525
 
 dev-db/postgresql-base kerberos
 sci-libs/hdf5 -cxx -fortran
+media-sound/deadbeef -ffmpeg
