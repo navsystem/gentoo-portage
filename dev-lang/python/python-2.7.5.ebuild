@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.7.5.ebuild,v 1.8 2013/07/04 13:29:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.7.5.ebuild,v 1.11 2013/07/07 15:15:56 ago Exp $
 
 EAPI="4"
 WANT_AUTOMAKE="none"
@@ -18,7 +18,7 @@ SRC_URI="http://www.python.org/ftp/python/${PV}/${MY_P}.tar.xz
 
 LICENSE="PSF-2"
 SLOT="2.7"
-KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 IUSE="-berkdb build doc elibc_uclibc examples gdbm hardened ipv6 +ncurses +readline sqlite +ssl +threads tk +wide-unicode wininst +xml"
 
 # Do not add a dependency on dev-lang/python to this ebuild.
@@ -320,10 +320,10 @@ src_install() {
 	if use build; then
 		rm -fr "${ED}usr/bin/idle${SLOT}" "${libdir}/"{bsddb,dbhash.py,idlelib,lib-tk,sqlite3,test}
 	else
-		use elibc_uclibc && rm -fr "${libdir}/"{bsddb/test,test}
 		use berkdb || rm -r "${libdir}/"{bsddb,dbhash.py,test/test_bsddb*} || die
 		use sqlite || rm -r "${libdir}/"{sqlite3,test/test_sqlite*} || die
 		use tk || rm -r "${ED}usr/bin/idle${SLOT}" "${libdir}/"{idlelib,lib-tk} || die
+		use elibc_uclibc && rm -fr "${libdir}/"{bsddb/test,test}
 	fi
 
 	use threads || rm -r "${libdir}/multiprocessing" || die
