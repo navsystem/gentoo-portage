@@ -6,6 +6,7 @@ EAPI="5"
 
 PHP_EXT_NAME="Argo5"
 PHP_EXT_INI="yes"
+USE_PHP="php5-5 php5-4 php5-3"
 
 inherit php-ext-source-r2 confutils mercurial
 
