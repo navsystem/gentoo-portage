@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.183 2013/07/08 09:29:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.185 2013/07/10 07:56:42 scarabeus Exp $
 
 EAPI=5
 
@@ -109,6 +109,7 @@ COMMON_DEPEND="
 	>=dev-cpp/clucene-2.3.3.4-r2
 	>=dev-cpp/libcmis-0.3.1:0.3
 	dev-db/unixODBC
+	>=dev-libs/boost-1.46:=
 	dev-libs/expat
 	>=dev-libs/hyphen-2.7.1
 	>=dev-libs/icu-4.8.1.1:=
@@ -195,7 +196,6 @@ fi
 #        after everything upstream is under gbuild
 #        as dmake execute tests right away
 DEPEND="${COMMON_DEPEND}
-	>=dev-libs/boost-1.46
 	>=dev-libs/libxml2-2.7.8
 	dev-libs/libxslt
 	dev-perl/Archive-Zip
@@ -423,7 +423,6 @@ src_configure() {
 	# --disable-gnome-vfs: old gnome virtual fs support
 	# --disable-kdeab: kde3 adressbook
 	# --disable-kde: kde3 support
-	# --disable-rpath: relative runtime path is not desired
 	# --disable-systray: quickstarter does not actually work at all so do not
 	#   promote it
 	# --enable-extension-integration: enable any extension integration support
@@ -455,7 +454,6 @@ src_configure() {
 		--disable-kdeab \
 		--disable-kde \
 		--disable-online-update \
-		--disable-rpath \
 		--disable-systray \
 		--with-alloc=$(use jemalloc && echo "jemalloc" || echo "system") \
 		--with-build-version="Gentoo official package" \
