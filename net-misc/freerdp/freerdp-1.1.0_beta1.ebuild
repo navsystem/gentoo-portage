@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-1.1.0_beta1.ebuild,v 1.1 2013/06/09 20:42:52 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-1.1.0_beta1.ebuild,v 1.4 2013/07/14 14:12:28 floppym Exp $
 
 EAPI="5"
 
@@ -11,7 +11,7 @@ if [[ ${PV} != 9999* ]]; then
 	MY_P=FreeRDP-${MY_PV}
 	S=${WORKDIR}/${MY_P}
 	SRC_URI="https://github.com/FreeRDP/FreeRDP/archive/${MY_PV}.tar.gz -> ${MY_P}.tar.gz"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="amd64 x86"
 else
 	inherit git-2
 	SRC_URI=""
@@ -64,6 +64,7 @@ DEPEND="${RDEPEND}
 "
 
 DOCS=( README )
+PATCHES=( "${FILESDIR}/${P}-avx.patch" )
 
 src_configure() {
 	local mycmakeargs=(

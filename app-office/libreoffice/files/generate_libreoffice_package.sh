@@ -5,12 +5,15 @@
 #  * for amd64: CFLAGS="-march=x86-64 -mtune=generic -O2 -pipe -g"
 
 # What you can set:
-VERSION="3.6.6.2"
-BINVERSION="3.6.6.2"
+VERSION="4.0.4.2"
+BINVERSION="4.0.4.2"
 OPTS="-v"
 USEFILE="/etc/portage/package.use/libreo"
 MYPKGDIR="$( portageq pkgdir )"
 ################################################
+
+# bug 473974
+export LC_MESSAGES=C
 
 die() {
         echo "${1}"
@@ -44,7 +47,7 @@ do
 done
 
 # first the default subset of useflags
-IUSES_BASE="bash-completion branding cups dbus gstreamer gtk opengl vba webdav -aqua -binfilter -jemalloc -mysql -odk -postgres"
+IUSES_BASE="bash-completion branding cups dbus gstreamer gtk opengl vba webdav -aqua -binfilter -bluetooth -debug -jemalloc -mysql -odk -postgres -telepathy"
 
 ENABLE_EXTENSIONS="presenter-console presenter-minimizer"
 DISABLE_EXTENSIONS="nlpsolver pdfimport scripting-beanshell scripting-javascript wiki-publisher"
