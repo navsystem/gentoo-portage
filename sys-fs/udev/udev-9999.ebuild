@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.235 2013/07/15 11:03:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.237 2013/07/17 04:28:55 ssuominen Exp $
 
 EAPI=5
 
@@ -32,7 +32,7 @@ HOMEPAGE="http://www.freedesktop.org/wiki/Software/systemd"
 
 LICENSE="LGPL-2.1 MIT GPL-2"
 SLOT="0"
-IUSE="acl doc +firmware-loader gudev hwdb introspection keymap +kmod +openrc selinux static-libs"
+IUSE="acl doc +firmware-loader gudev hwdb introspection +kmod +openrc selinux static-libs"
 
 RESTRICT="test"
 
@@ -45,8 +45,6 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.20
 	!<sys-libs/glibc-2.11
 	!sys-apps/systemd"
 DEPEND="${COMMON_DEPEND}
-	app-text/docbook-xsl-stylesheets
-	dev-libs/libxslt
 	dev-util/gperf
 	>=sys-devel/make-3.82-r4
 	virtual/os-headers
@@ -55,6 +53,9 @@ DEPEND="${COMMON_DEPEND}
 	doc? ( >=dev-util/gtk-doc-1.18 )"
 if [[ ${PV} = 9999* ]]; then
 	DEPEND="${DEPEND}
+		app-text/docbook-xml-dtd:4.2
+		app-text/docbook-xsl-stylesheets
+		dev-libs/libxslt
 		>=dev-util/intltool-0.50"
 fi
 RDEPEND="${COMMON_DEPEND}
@@ -228,7 +229,6 @@ src_configure() {
 		$(use_enable acl)
 		$(use_enable doc gtk-doc)
 		$(use_enable gudev)
-		$(use_enable keymap)
 		$(use_enable kmod)
 		$(use_enable selinux)
 		$(use_enable static-libs static)
@@ -265,7 +265,6 @@ src_compile() {
 		accelerometer
 		mtd_probe
 		)
-	use keymap && helper_targets+=( keymap )
 	emake "${helper_targets[@]}"
 
 	local man_targets=(
@@ -293,9 +292,6 @@ src_install() {
 		install-rootlibexecPROGRAMS
 		install-udevlibexecPROGRAMS
 		install-dist_udevconfDATA
-		install-dist_udevhomeSCRIPTS
-		install-dist_udevkeymapDATA
-		install-dist_udevkeymapforcerelDATA
 		install-dist_udevrulesDATA
 		install-girDATA
 		install-man7
