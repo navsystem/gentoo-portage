@@ -45,7 +45,7 @@ dev-libs/ecore -directfb
 net-im/pidgin -zeroconf
 media-libs/elementary weather
 
-app-arch/p7zip rar
+app-arch/p7zip rar wxwidgets
 dev-db/sqlite secure-delete unlock-notify
 
 dev-vcs/git -perl -subversion
