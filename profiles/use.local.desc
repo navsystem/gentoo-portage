@@ -4146,6 +4146,8 @@ net-dns/nsd:ratelimit - Enables ratelimiting, based on query name, type and sour
 net-dns/nsd:root-server - Configure NSD as a root server
 net-dns/nsd:runtime-checks - Enable runtime checks, this could lead to a reduced service level
 net-dns/nsd:zone-stats - Enable per-zone statistics logging, this could lead to a reduced service level
+net-dns/opendnssec:auditor - Enables auditing capabilities for OpenDNSSEC
+net-dns/opendnssec:eppclient - Enables support for automatic submission of DNSSEC keys to an upstream epp server
 net-dns/opendnssec:external-hsm - Enables support for storing DNSSEC keys through an arbitrary non-portage PKCS#11 interface, specified through an environment variable
 net-dns/opendnssec:opensc - Enables support for storing DNSSEC keys through a dev-libs/opensc PKCS#11 interface
 net-dns/opendnssec:signer - Enables signing capabilities for OpenDNSSEC
@@ -4695,6 +4697,7 @@ net-libs/telepathy-qt:farstream - Enable support for audio/video calls via farst
 net-libs/telepathy-qt:glib - Enable support for various telepathy/glib related packages
 net-libs/webkit-gtk:coverage - Enable code coverage support
 net-libs/webkit-gtk:geoloc - Enable geolocation support through app-misc/geoclue
+net-libs/webkit-gtk:libsecret - Enable libsecret support to store login credentials
 net-libs/webkit-gtk:webgl - Build support for the WebGL HTML API using virtual/opengl
 net-libs/webkit-gtk:webkit2 - Enable WebKit2 API that splits web content rendering and application UI into separate processes
 net-libs/wt:extjs - Build Wt Ext library with JavaScript-only widgets (http://extjs.com/)
@@ -5741,6 +5744,7 @@ sys-apps/irqbalance:numa - Support balancing IRQs across NUMA nodes
 sys-apps/kexec-tools:booke - Include support for Book-E memory management
 sys-apps/kexec-tools:lzma - Enables support for LZMA compressed kernel images
 sys-apps/kexec-tools:xen - Enable extended xen support
+sys-apps/kmod:openrc - Install the OpenRC init scripts
 sys-apps/kmod:tools - Install module loading/unloading tools.
 sys-apps/kmscon:drm - Enable Linux DRM for backend
 sys-apps/kmscon:fbdev - Enable Linux FBDev for backend
