@@ -219,6 +219,7 @@ app-antivirus/clamav:clamdtop - A Top like tool which shows what clamd is curren
 app-arch/cabextract:extra-tools - Install experimental tools: wince_info and wince_rename for examining and processing Windows CE installation cabinet header files; cabinfo for examining the structure of a cab file.
 app-arch/cfv:bittorrent - Enable support for checking .torrent files
 app-arch/dpkg:dselect - Build the dselect package-management frontend
+app-arch/dpkg:update-alternatives - Install update-alternatives
 app-arch/dump:ermt - encrypted rmt support
 app-arch/file-roller:nautilus - Enable file-roller to integrate with gnome-base/nautilus by providing entries in its context menu
 app-arch/file-roller:packagekit - Enable support for the distro-neutral package manager GUI app-admin/packagekit
@@ -601,7 +602,6 @@ app-forensics/openscap:nss - Prefer NSS over libgcrypt as the crypto engine
 app-forensics/openscap:rpm - Compiles the RPM probes
 app-forensics/openscap:sql - Build the sql independant probes
 app-forensics/ovaldi:rpm - Enable the RPM probes
-app-forensics/rdd:rawio - Enables raw IO handling
 app-forensics/sleuthkit:aff - Enable extra aff formats
 app-forensics/sleuthkit:ewf - Enable libewf support
 app-i18n/anthy:canna-2ch - Enable support for app-dicts/canna-2ch
@@ -1712,6 +1712,7 @@ dev-php/pecl-apcu:lock_semaphore - Enable semaphore locks instead of fcntl
 dev-php/pecl-apcu:lock_spinlock - Enable spin locks (EXPERIMENTAL)
 dev-php/pecl-memcached:igbinary - Enable support for the igbinary serializer
 dev-php/pecl-memcached:json - Enable support for json serialization
+dev-php/pecl-redis:igbinary - Enables igbinary serialisation support
 dev-php/smarty-docs:html - Install the documentation in HTML format
 dev-php/smarty-docs:pdf - Install the documentation in PDF format
 dev-python/PyFoam:extras - Enable optional dependencies
@@ -1796,6 +1797,7 @@ dev-python/pypax:ptpax - Enable PT_PAX_FLAGS support.
 dev-python/pypax:xtpax - Enable XATTR_PAX_FLAGS support.
 dev-python/pypy:sandbox - Enable sandboxing functionality
 dev-python/pypy:shadowstack - Use a shadow stack for finding GC roots
+dev-python/pypy-bin:shadowstack - Use a shadow stack for finding GC roots
 dev-python/pyquery:beautifulsoup3 - Support BeautifulSoup 3
 dev-python/pyrax:keyring - adds support for the keyring auth backend
 dev-python/pyside:X - Build QtGui, QtDesigner, QtTest and QtUiTools modules
@@ -1923,6 +1925,7 @@ dev-qt/qtdemo:exceptions - Add support for exceptions - like catching them insid
 dev-qt/qtdemo:multimedia - Build QtMultimedia examples and demos
 dev-qt/qtdemo:opengl - Build QtOpenGL examples and demos
 dev-qt/qtdemo:openvg - Build QtOpenVG examples and demos
+dev-qt/qtdemo:phonon - Build Phonon examples and demos
 dev-qt/qtdemo:qt3support - Build Qt3Support examples and demos
 dev-qt/qtdemo:webkit - Build QtWebKit examples and demos
 dev-qt/qtdemo:xmlpatterns - Build QtXmlPatterns examples and demos
@@ -2331,6 +2334,11 @@ games-rpg/nwn-data:nowin - For those people who cant grab the 1.2 gigs of data f
 games-rpg/nwn-data:sou - Installs the Shadows of Undrentide expension pack
 games-rpg/sumwars:tools - Builds editor tools
 games-rpg/valyriatear:editor - Compile the Qt editor along with the game
+games-simulation/corsix-th:ffmpeg - Use ffmpeg for playing in-game cutscenes.
+games-simulation/corsix-th:opengl - Use OpenGL for rendering.
+games-simulation/corsix-th:sdl - Use SDL for rendering.
+games-simulation/corsix-th:sound - Use SDL mixer for MIDI sound.
+games-simulation/corsix-th:truetype - Use high quality fonts.
 games-simulation/flightgear:fgpanel - Enables standalone lightweight 2D-panel rendering utility
 games-simulation/flightgear:jsbsim - Enables JSBSim Flight Dynamics Model (default)
 games-simulation/flightgear:oldfdm - Enables deprecated Flight Dynamics Models (LaRCsim, UIUC)
@@ -3455,7 +3463,6 @@ media-sound/qmmp:tray - Build tray icon
 media-sound/qsampler:libgig - Enable libgig support for loading Gigasampler files and DLS (Downloadable Sounds) Level 1/2 files
 media-sound/qtractor:dssi - Enable support for DSSI Soft Synth Interface
 media-sound/qtractor:rubberband - Enable support for in-place audio clip pitch-shifting through the rubberband library
-media-sound/qtractor:suil - Enable LV2 Plug-in UI instantiation support via media-libs/suil.
 media-sound/qtscrobbler:cli - Build commandline client
 media-sound/quark:gnome - Provides tray-icon and enables gconf support
 media-sound/rezound:16bittmp - Use 16bit temporary files (default 32bit float), useful for slower computers
@@ -5778,7 +5785,6 @@ sys-apps/pciutils:zlib - Support compressed pci.ids database
 sys-apps/pcmciautils:staticsocket - Add support for static sockets
 sys-apps/pcsc-lite:libusb - Use dev-libs/libusb detection to hotplug new smartcard readers. This flag should only be enabled if you're running a non-Linux kernel or you don't want to use sys-fs/udev.
 sys-apps/pcsc-lite:udev - Use sys-fs/udev rules to handle devices' permissions and hotplug support. Unless you know what you're doing do not disable this flag on Linux kernels. This is provided as an option for completeness.
-sys-apps/pcsc-lite:usb - Use dev-libs/libusb detection to hotplug new smartcard readers. This flag only makes sense on non-Linux systems, as on Linux, sys-fs/udev is used instead.
 sys-apps/pcsc-tools:network-cron - Monthly cronjob the update-smartcard_list script
 sys-apps/pkgcore:doc - Build and install API docs.
 sys-apps/policycoreutils:audit - Enable support for sys-process/audit and use the audit_* functions (like audit_getuid instead of getuid())
@@ -5907,9 +5913,12 @@ sys-cluster/drbd:xen - Enable Xen integration
 sys-cluster/gearmand:drizzle - Support dev-db/libdrizzle for the queue storage. This also adds support for MySQL storage.
 sys-cluster/gearmand:memcache - Support memcache daemon (via dev-libs/libmemcached) for the queue storage.
 sys-cluster/gearmand:tokyocabinet - Support dev-db/tokyocabinet for the queue storage.
+sys-cluster/glusterfs:bd-xlator - Enable the blockdevice translator (requires sys-fs/lvm2)
 sys-cluster/glusterfs:extras - Install extra helper scripts
 sys-cluster/glusterfs:fuse - Add FUSE mount helper
+sys-cluster/glusterfs:georeplication - Enable support for georeplication (requires dev-lang/python)
 sys-cluster/glusterfs:infiniband - Add support for Infiniband ibverbs transport. Libraries can be found in science overlay
+sys-cluster/glusterfs:systemtap - Enable support for dev-util/systemtap
 sys-cluster/maui:pbs - Enable pbs integration
 sys-cluster/maui:slurm - Enable slurm integration
 sys-cluster/moosefs:cgi - Install CGI server and scripts.
