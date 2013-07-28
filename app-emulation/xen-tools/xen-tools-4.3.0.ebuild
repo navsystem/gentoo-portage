@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.3.0.ebuild,v 1.10 2013/07/24 09:19:00 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.3.0.ebuild,v 1.13 2013/07/27 15:50:36 idella4 Exp $
 
 EAPI=5
 
@@ -69,7 +69,6 @@ DEPEND="${CDEPEND}
 	hvm? ( x11-proto/xproto
 		!net-libs/libiscsi )
 	qemu? ( x11-libs/pixman )"
-
 RDEPEND="${CDEPEND}
 	sys-apps/iproute2
 	net-misc/bridge-utils
@@ -118,9 +117,6 @@ pkg_setup() {
 			die "Unsupported architecture!"
 		fi
 	fi
-
-	use api     && export "LIBXENAPI_BINDINGS=y"
-	use flask   && export "FLASK_ENABLE=y"
 }
 
 src_prepare() {
@@ -197,7 +193,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN/-tools/}-4.2.0-nostrip.patch
 
 	# fix jobserver in Makefile
-	epatch "${FILESDIR}"/${PN/-tools/}-4.2.0-jserver.patch
+	epatch "${FILESDIR}"/${PN/-tools/}-4.3-jserver.patch
 
 	# add missing header
 	epatch "${FILESDIR}"/xen-4-ulong.patch
@@ -215,6 +211,15 @@ src_prepare() {
 
 	# Bug 477676
 	epatch "${FILESDIR}"/${PN}-4.3-ar-cc.patch
+
+	# Prevent file collision with qemu package Bug 478064
+	if use qemu; then
+		epatch "${FILESDIR}"/qemu-bridge.patch
+		mv tools/qemu-xen/qemu-bridge-helper.c tools/qemu-xen/xen-bridge-helper.c || die
+	fi
+
+	use flask || sed -e "/SUBDIRS-y += flask/d" -i tools/Makefile || die
+	use api   || sed -e "/SUBDIRS-\$(LIBXENAPI_BINDINGS) += libxen/d" -i tools/Makefile || die
 
 	epatch_user
 }
@@ -356,8 +361,14 @@ pkg_postinst() {
 	fi
 
 	if use xend; then
-		echo
-		elog "xend capability has been enabled and installed"
+		elog"";elog "xend capability has been enabled and installed"
+	fi
+
+	if use qemu; then
+		elog "The qemu-bridge-helper is renamed to the xen-bridge-helper in the in source"
+		elog "build of qemu.  This allows for app-emulation/qemu to be emerged concurrently"
+		elog "with the qemu capable xen.  It is up to the user to distinguish between and utilise"
+		elog "the qemu-bridge-helper and the xen-bridge-helper.  File bugs of any issues that arise"
 	fi
 
 	if grep -qsF XENSV= "${ROOT}/etc/conf.d/xend"; then
