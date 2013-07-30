@@ -18,6 +18,8 @@ amd64           notebook/general/amd64                          stable
 amd64           notebook/developer/amd64                        dev
 amd64           navsystem/general/amd64                         stable
 amd64           navsystem/developer/amd64                       dev
+amd64           navsystem/general/amd64/systemd                 stable
+amd64           navsystem/developer/amd64/systemd               dev
 
 amd64           default/linux/amd64/13.0                        stable
 amd64           default/linux/amd64/13.0/selinux                dev
