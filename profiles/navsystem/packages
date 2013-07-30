@@ -21,3 +21,4 @@
 *net-misc/bridge-utils
 *sys-process/vixie-cron
 *app-admin/logrotate
+*app-shells/gentoo-bashcomp

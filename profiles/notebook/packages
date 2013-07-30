@@ -13,3 +13,4 @@
 *sys-apps/less
 *net-misc/bridge-utils
 *sys-apps/kexec-tools
+*app-shells/gentoo-bashcomp
