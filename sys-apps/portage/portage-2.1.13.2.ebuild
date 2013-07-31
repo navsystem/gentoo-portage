@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.13.2.ebuild,v 1.2 2013/07/30 07:01:10 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.13.2.ebuild,v 1.4 2013/07/31 01:14:16 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -457,13 +457,16 @@ pkg_postinst() {
 			REPOS_CONF_SYNC=$(grep "^sync-uri =" "${ROOT}/usr/share/portage/config/repos.conf")
 			REPOS_CONF_SYNC=${REPOS_CONF_SYNC##* }
 		fi
+		local sync_type=
+		[[ ${REPOS_CONF_SYNC} == git://* ]] && sync_type=git
+
 		cat <<-EOF > "${T}/repos.conf"
 		[DEFAULT]
 		main-repo = ${repo_name:-gentoo}
 
 		[${repo_name:-gentoo}]
 		location = ${PORTDIR:-/usr/portage}
-		sync-type = rsync
+		sync-type = ${sync_type:-rsync}
 		sync-uri = ${REPOS_CONF_SYNC}
 		EOF
 		local dest=${ROOT}/etc/portage/repos.conf
@@ -475,6 +478,26 @@ pkg_postinst() {
 		# their config (bug #478726).
 		[[ -e ${ROOT}/etc/portage/repos.conf/${repo_name:-gentoo}.conf ]] || \
 			mv "${T}/repos.conf" "$(new_config_protect "${dest}")"
+
+		if [[ ${PORTDIR} == /usr/portage ]] ; then
+			einfo "Generating make.conf PORTDIR setting for backward compatibility"
+			for dest in "${ROOT}/etc/make.conf" "${ROOT}/etc/portage/make.conf" ; do
+				[[ -e ${dest} ]] && break
+			done
+			[[ -d ${dest} ]] && dest=${dest}/portdir.conf
+			rm -rf "${T}/make.conf"
+			[[ -f ${dest} ]] && cat "${dest}" > "${T}/make.conf"
+			cat <<-EOF >> "${T}/make.conf"
+
+			# Set PORTDIR for backward compatibility with various tools:
+			#   gentoo-bashcomp - bug #478444
+			#   euse - bug #474574
+			#   euses and ufed - bug #478318
+			PORTDIR="/usr/portage"
+			EOF
+			mkdir -p "${dest%/*}"
+			mv "${T}/make.conf" "$(new_config_protect "${dest}")"
+		fi
 	fi
 
 	if ${NEEDED_REBUILD_UPGRADE} ; then
