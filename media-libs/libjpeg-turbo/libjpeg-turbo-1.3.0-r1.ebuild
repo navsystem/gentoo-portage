@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.3.0-r1.ebuild,v 1.1 2013/07/31 06:28:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.3.0-r1.ebuild,v 1.5 2013/07/31 21:28:57 aballier Exp $
 
 EAPI=5
 
@@ -28,7 +28,9 @@ IUSE="java static-libs"
 ASM_DEPEND="|| ( dev-lang/nasm dev-lang/yasm )"
 COMMON_DEPEND="!media-libs/jpeg:0"
 RDEPEND="${COMMON_DEPEND}
-	java? ( >=virtual/jre-1.5 )"
+	java? ( >=virtual/jre-1.5 )
+	abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224-r3
+		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] )"
 DEPEND="${COMMON_DEPEND}
 	amd64? ( ${ASM_DEPEND} )
 	x86? ( ${ASM_DEPEND} )
@@ -38,6 +40,8 @@ DEPEND="${COMMON_DEPEND}
 	x86-linux? ( ${ASM_DEPEND} )
 	x64-macos? ( ${ASM_DEPEND} )
 	java? ( >=virtual/jdk-1.5 )"
+
+MULTILIB_WRAPPED_HEADERS=( /usr/include/jconfig.h )
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.2.0-x32.patch #420239
@@ -78,7 +82,7 @@ multilib_src_compile() {
 	use java && _java_makeopts="-j1"
 	emake ${_java_makeopts}
 
-	if ! [[ ${ABI} == ${DEFAULT_ABI} ]]; then
+	if [[ ${ABI} == ${DEFAULT_ABI} ]]; then
 		ebegin "Building exifautotran and jpegexiforient extra tools"
 		pushd ../debian/extra >/dev/null
 		emake CC="$(tc-getCC)" CFLAGS="${LDFLAGS} ${CFLAGS}"
@@ -97,6 +101,15 @@ multilib_src_install() {
 		docdir="${EPREFIX}"/usr/share/doc/${PF} \
 		exampledir="${EPREFIX}"/usr/share/doc/${PF} \
 		install
+
+	if [[ ${ABI} == ${DEFAULT_ABI} ]] && use java; then
+		insinto /usr/share/doc/${PF}/html/java
+		doins -r "${S}/"java/doc/*
+		newdoc "${S}/"java/README README.java
+
+		rm -rf "${ED}"usr/classes
+		java-pkg_dojar java/turbojpeg.jar
+	fi
 }
 
 multilib_src_install_all() {
@@ -104,15 +117,6 @@ multilib_src_install_all() {
 
 	insinto /usr/share/doc/${PF}/html
 	doins -r doc/html/*
-
-	if use java; then
-		insinto /usr/share/doc/${PF}/html/java
-		doins -r java/doc/*
-		newdoc java/README README.java
-
-		rm -rf "${ED}"usr/classes
-		java-pkg_dojar java/turbojpeg.jar
-	fi
 
 	ebegin "Installing exifautotran and jpegexiforient extra tools"
 	pushd ../debian/extra >/dev/null
