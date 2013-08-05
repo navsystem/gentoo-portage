@@ -1,6 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.159 2013/07/30 14:27:59 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.161 2013/08/04 19:51:18 maekke Exp $
+
+# Markus Meier <maekke@gentoo.org> (04 Aug 2013)
+# Unkeyworded deps, bug #474026
+app-admin/conky lua-cairo lua-imlib xmms2 audacious moc
 
 # Sergey Popov <pinkbyte@gentoo.org> (30 Jul 2013)
 # Not tested
@@ -95,7 +99,7 @@ dev-vcs/subversion java
 =media-gfx/graphviz-2.26.3-r3 java
 =media-gfx/graphviz-2.26.3-r4 java
 =media-libs/libcaca-0.99_beta17 java
-=media-libs/libjpeg-turbo-1.2.1 java
+media-libs/libjpeg-turbo java
 net-dns/libidn java
 =net-misc/tigervnc-1.1.0-r7 java
 =net-misc/tigervnc-1.2.0 java
