@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-24.3-r2.ebuild,v 1.9 2013/07/14 17:37:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-24.3-r2.ebuild,v 1.13 2013/08/04 11:40:18 ago Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gnu/emacs/${P}.tar.xz
 
 LICENSE="GPL-3+ FDL-1.3+ BSD HPND MIT W3C unicode PSF-2"
 SLOT="24"
-KEYWORDS="alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="alsa aqua athena dbus games gconf gif gnutls gpm gsettings gtk +gtk3 gzip-el hesiod imagemagick jpeg kerberos libxml2 livecd m17n-lib motif pax_kernel png selinux sound source svg tiff toolkit-scroll-bars wide-int X Xaw3d xft +xpm"
 REQUIRED_USE="?? ( aqua X )"
 
@@ -36,7 +36,7 @@ RDEPEND="sys-libs/ncurses
 		gconf? ( >=gnome-base/gconf-2.26.2 )
 		gsettings? ( >=dev-libs/glib-2.28.6 )
 		gif? ( media-libs/giflib )
-		jpeg? ( virtual/jpeg )
+		jpeg? ( virtual/jpeg:0= )
 		png? ( >=media-libs/libpng-1.4:0= )
 		svg? ( >=gnome-base/librsvg-2.0 )
 		tiff? ( media-libs/tiff )
@@ -283,7 +283,7 @@ src_install () {
 	use X && DOC_CONTENTS+="\\n\\nYou need to install some fonts for Emacs.
 		Installing media-fonts/font-adobe-{75,100}dpi on the X server's
 		machine would satisfy basic Emacs requirements under X11.
-		See also http://www.gentoo.org/proj/en/lisp/emacs/xft.xml
+		See also https://wiki.gentoo.org/wiki/Project:Emacs/Xft_support
 		for how to enable anti-aliased fonts."
 	use aqua && DOC_CONTENTS+="\\n\\nEmacs${EMACS_SUFFIX#emacs}.app is in
 		\"${EPREFIX}/Applications/Gentoo\". You may want to copy or symlink
