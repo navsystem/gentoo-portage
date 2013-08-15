@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.5.1.ebuild,v 1.1 2013/07/19 14:34:23 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.5.1.ebuild,v 1.4 2013/08/14 11:22:41 patrick Exp $
 
 EAPI=5
 
 inherit eutils autotools flag-o-matic versionator depend.apache apache-module db-use libtool
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 
 function php_get_uri ()
 {
@@ -228,7 +228,6 @@ php_install_ini() {
 	# Set the include path to point to where we want to find PEAR packages
 	sed -e 's|^;include_path = ".:/php/includes".*|include_path = ".:'"${EPREFIX}"'/usr/share/php'${PHP_MV}':'"${EPREFIX}"'/usr/share/php"|' -i "${phpinisrc}"
 
-	
 	dodir "${PHP_INI_DIR#${EPREFIX}}"
 	insinto "${PHP_INI_DIR#${EPREFIX}}"
 	newins "${phpinisrc}" "${PHP_INI_FILE}"
@@ -452,7 +451,7 @@ src_configure() {
 	local mysqlilib="mysqlnd"
 	use libmysqlclient && mysqllib="${EPREFIX}/usr"
 	use libmysqlclient && mysqlilib="${EPREFIX}/usr/bin/mysql_config"
-	
+
 	my_conf+=" $(use_with mysql mysql $mysqllib)"
 	my_conf+=" $(use_with mysqli mysqli $mysqlilib)"
 
