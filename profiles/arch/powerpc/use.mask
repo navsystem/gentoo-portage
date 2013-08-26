@@ -1,5 +1,8 @@
 # PPC Specific use flags
 #
+#Klibc does not work
+klibc
+
 # Masking out llvm
 llvm
 clang
@@ -209,3 +212,7 @@ clvm
 
 # for gnome 3.6 keywording
 -zeitgeist
+
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (22 Aug 2013)
+# virtual/opencl is not keyworded
+opencl
