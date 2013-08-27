@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-9999.ebuild,v 1.1 2013/08/26 04:24:59 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-9999.ebuild,v 1.5 2013/08/27 01:33:09 twitch153 Exp $
 
 EAPI=5
 
@@ -12,13 +12,13 @@ if [[ ${PV} == 9999* ]]
 then
 	EGIT_REPO_URI="https://code.google.com/p/dolphin-emu/"
 	inherit git-2
-	KEYWORKD=""
+	KEYWORDS=""
 else
 	SRC_URI="http://${PN}-emu.googlecode.com/files/${P}-src.zip"
-	KEYWORDS="~amd"
+	KEYWORDS="~amd64"
 fi
 
-DESCRIPTION="Dolphin is a Gamecube and Wii game emulator"
+DESCRIPTION="Gamecube and Wii game emulator"
 HOMEPAGE="http://www.dolphin-emulator.com/"
 
 LICENSE="GPL-2"
@@ -51,9 +51,21 @@ DEPEND="${RDEPEND}
 	x11-libs/wxGTK:2.9
 	"
 
-src_prepare() {
+pkg_pretend() {
 
-	version_is_at_least 4.6.0 $(gcc-fullversion) || die "${PN} needs >=gcc-4.6.0 set to compile."
+	local ver=4.6.0
+	local msg="${PN} needs at least GCC ${ver} set to compile."
+
+	if [[ ${MERGE_TYPE} != binary ]]; then
+		if ! version_is_at_least ${ver} $(gcc-fullversion); then
+			eerror ${msg}
+			die ${msg}
+		fi
+	fi
+
+}
+
+src_prepare() {
 
 	# Remove automatic dependencies to prevent building without flags enabled.
 	if use !alsa; then
@@ -109,7 +121,7 @@ src_install() {
 
 	dodoc Readme.txt
 	if use doc; then
-		doins -r doc
+		dodoc -r docs/ActionReplay docs/DSP docs/WiiMote
 	fi
 
 	doicon Source/Core/DolphinWX/resources/Dolphin.xpm
