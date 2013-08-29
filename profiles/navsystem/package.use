@@ -84,3 +84,5 @@ sci-geosciences/gpsd python
 x11-libs/wxGTK -odbc gnome
 media-libs/mesa gles2
 media-sound/deadbeef -ffmpeg
+net-misc/spice-gtk gtk3
+app-emulation/libvirt-glib python
