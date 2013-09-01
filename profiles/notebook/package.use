@@ -88,3 +88,5 @@ dev-libs/protobuf python
 sys-apps/usb_modeswitch jimtcl
 net-misc/spice-gtk gtk3
 app-emulation/libvirt-glib python
+
+sys-libs/talloc python
