@@ -1275,7 +1275,6 @@ dev-haskell/skein:big-endian - When manually selecting the endianness, use big-e
 dev-haskell/skein:force-endianness - Use a manually selected endian when compiling (see flag 'big-endian')
 dev-haskell/texmath:cgi - Build texmath-cgi executable.
 dev-haskell/text:developer - operate in developer mode
-dev-haskell/text:integer-simple - Use the simple integer library instead of GMP
 dev-haskell/tls:compat - Accept SSLv2 compatible handshake
 dev-haskell/unix-compat:old-time - build against old-time package
 dev-haskell/void:safe - dissable effective but unsafe coersions
@@ -1451,7 +1450,7 @@ dev-lang/ruby:readline - Use the sys-libs/readline library to provide the readli
 dev-lang/ruby:rubytests - Install ruby tests that can only be run after ruby is installed
 dev-lang/ruby:yaml - Use the dev-libs/libyaml library to build the psych extension, available since Ruby 1.9.2_rc2, in alternative to the bundled syck-based parser.
 dev-lang/scala:binary - Install from (Gentoo-compiled) binary instead of building from sources. Set this when you run out of memory during build.
-dev-lang/spidermonkey:debug - Enable assertions to allow for easier debugging of programs that link to spidemronkey -- note this will often crash software on regular end-user systems
+dev-lang/spidermonkey:debug - Enable assertions to allow for easier debugging of programs that link to spidermonkey -- note this will often crash software on regular end-user systems
 dev-lang/spidermonkey:threadsafe - Build a threadsafe version of spidermonkey
 dev-lang/swi-prolog:archive - Use libarchive for extension packs
 dev-lang/swig:ccache - build ccache-swig(a fast compiler cache)
@@ -1806,7 +1805,7 @@ dev-python/falcon:cython - Build cython-based python modules
 dev-python/icalendar:doc - Generate examples and other extra documentation
 dev-python/ipython:matplotlib - Add support for dev-python/matplotlib
 dev-python/ipython:mongodb - Enable support for MongoDB via dev-python/pymongo
-dev-python/ipython:nbconvert - Enable support for converting notebooks to various formats using app-text/tornado
+dev-python/ipython:nbconvert - Enable support for converting notebooks to various formats using app-text/pandoc
 dev-python/ipython:notebook - Install requirements for the web notebook based on www-servers/tornado
 dev-python/ipython:octave - Enable octave bridge via dev-python/oct2py
 dev-python/jinja:i18n - Enables support for i18n with dev-python/Babel
@@ -2184,13 +2183,13 @@ dev-vcs/git-annex:android - Building for Android
 dev-vcs/git-annex:assistant - Enable git-annex assistant and watch command
 dev-vcs/git-annex:dns - Enable the haskell DNS library for DNS lookup
 dev-vcs/git-annex:feed - Enable podcast feed support
-dev-vcs/git-annex:pairing - Enable pairing
+dev-vcs/git-annex:pairing - Enable pairing of git annex repositories
 dev-vcs/git-annex:production - Enable production build (slower build; faster binary)
-dev-vcs/git-annex:s3 - Enable S3 support
+dev-vcs/git-annex:s3 - Enable Amazon S3 remote
 dev-vcs/git-annex:tdfa - Use regex-tdfa for wildcards
 dev-vcs/git-annex:testsuite - Embed the test suite into git-annex
 dev-vcs/git-annex:webapp - Enable git-annex webapp
-dev-vcs/git-annex:webdav - Enable webdav support
+dev-vcs/git-annex:webdav - Enable webdav remote
 dev-vcs/gitg:glade - Install a glade catalog file
 dev-vcs/gitolite:contrib - Install user-contributed files
 dev-vcs/gitolite:tools - Install tools to e.g. convert a Gitosis config to gitolite or one to check if your setup is gitolite >= 3.x compatible
@@ -3016,6 +3015,7 @@ media-libs/alure:fluidsynth - Enables Fluidsynth MIDI software synthesis
 media-libs/avidemux-core:aften - Enable A/52 (AC-3) audio encoder support.
 media-libs/avidemux-core:amr - Enable Adaptive Multi-Rate format support via media-libs/opencore-amr.
 media-libs/avidemux-core:system-ffmpeg - Use the ffmpeg provided by the system.
+media-libs/avidemux-core:vaapi - Enable VAAPI (Video Acceleration API) for hardware decoding.
 media-libs/avidemux-plugins:aften - Enable A/52 (AC-3) audio encoder support.
 media-libs/avidemux-plugins:amr - Enable Adaptive Multi-Rate format support via media-libs/opencore-amr.
 media-libs/avidemux-plugins:faac - Enable free MPEG-4 audio codecs support via media-libs/faac.
@@ -3119,6 +3119,13 @@ media-libs/libsdl:joystick - Control joystick support (disable at your own risk)
 media-libs/libsdl:ps3 - Build the PS3 video driver
 media-libs/libsdl:tslib - Build with tslib support for touchscreen devices
 media-libs/libsdl:video - Control video support (disable at your own risk)
+media-libs/libsdl2:audio - Control audio support (disable at your own risk)
+media-libs/libsdl2:fusionsound - use FusionSound audio driver
+media-libs/libsdl2:gles - include OpenGL ES support
+media-libs/libsdl2:haptic - Enable the haptic (force feedback) subsystem
+media-libs/libsdl2:joystick - Control joystick support (disable at your own risk)
+media-libs/libsdl2:tslib - Build with tslib support for touchscreen devices
+media-libs/libsdl2:video - Control video support (disable at your own risk)
 media-libs/libvpx:postproc - Enable additional post processing filters
 media-libs/libvpx:sse3 - Enable optimization for SSE3 capable chips
 media-libs/libvpx:sse4_1 - Enable optimization for SSE4_1 capable processors (Intel Core 2 Penryn and later chips)
@@ -3198,6 +3205,14 @@ media-libs/sdl-mixer:playtools - Install playwave and playmus tools (useful for 
 media-libs/sdl-mixer:smpeg - Use media-libs/smpeg for MP3 support
 media-libs/sdl-mixer:wav - support WAVE files
 media-libs/sdl-sound:physfs - Enable physfs support
+media-libs/sdl2-image:webp - support loading WEBP images
+media-libs/sdl2-mixer:fluidsynth - Use media-sound/fluidsynth for MIDI support
+media-libs/sdl2-mixer:midi - basic support for MIDI files
+media-libs/sdl2-mixer:mod - basic support for MOD files
+media-libs/sdl2-mixer:playtools - Install playwave and playmus tools (useful for testing)
+media-libs/sdl2-mixer:smpeg - Use media-libs/smpeg for MP3 support
+media-libs/sdl2-mixer:tremor - enable OGG Vorbis music via libtremor
+media-libs/sdl2-mixer:wav - support WAVE files
 media-libs/sge:image - enable sdl-image support
 media-libs/silgraphite:pango - Enables the pango-graphite pango module.
 media-libs/spandsp:fixed-point - Enable fixed point support
@@ -3672,6 +3687,7 @@ media-video/arista:faac - Use external faac library for AAC encoding
 media-video/arista:nautilus - Add an entry in the Nautilus context menu to transcode media files for a specified device.
 media-video/avidemux:aften - Enable A/52 (AC-3) audio encoder support.
 media-video/avidemux:amr - Enable Adaptive Multi-Rate format support via media-libs/opencore-amr.
+media-video/avidemux:vaapi - Enable VAAPI (Video Acceleration API) for hardware decoding.
 media-video/avidemux:vpx - Enable VP8 codec support via media-libs/libvpx.
 media-video/bombono-dvd:gnome - Use GVFS for desktop integration
 media-video/chaplin:transcode - Enable DVD ripping and transcoding
@@ -4901,6 +4917,7 @@ net-misc/bfgminer:icarus - Enable support for mining with Icarus-compatible devi
 net-misc/bfgminer:modminer - Enable support for mining with ModMiner FPGAs
 net-misc/bfgminer:opencl - Enable support for mining with OpenCL-capable devices (GPUs)
 net-misc/bfgminer:padlock - Enable support for mining with VIA Padlock CPUs
+net-misc/bfgminer:proxy - Enable support for getwork proxy device (often used with Block Erupter Blades)
 net-misc/bfgminer:scrypt - Enable support for scrypt mining algorithm
 net-misc/bfgminer:sse2_4way - Enable support for CPU SSE2 4way mining algorithm
 net-misc/bfgminer:sse4 - Enable support for CPU SSE4 mining algorithm
