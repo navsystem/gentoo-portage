@@ -1,4 +1,3 @@
-<sys-apps/portage-2.3 amd64 x86
 app-portage/deltup amd64 x86
 app-portage/getdelta amd64 x86
 dev-util/bdelta amd64 x86
@@ -12,10 +11,8 @@ sys-block/megamgr amd64
 sys-block/megactl amd64
 sys-block/megacli amd64
 
-~dev-db/pgpool2-3.2.1 amd64
+~dev-db/pgpool2-3.2.5 amd64
 
-# Mark as stable while not stable in main tree
-~net-misc/tigervnc-1.2.0 x86
 =dev-qt/qxbsql-0.2 x86 amd64
-<www-plugins/chrome-binary-plugins-29 x86 amd64
-=sci-electronics/kicad-99999999-r1 x86 amd64
+<www-plugins/chrome-binary-plugins-30 x86 amd64
+~sci-electronics/kicad-20130518 x86 amd64
