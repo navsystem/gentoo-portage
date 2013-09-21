@@ -3880,6 +3880,7 @@ media-video/mplayer2:yuv4mpeg - Enables yuv4mpeg video output
 media-video/mpv:bluray - Enable playback of Blu-ray filesystems
 media-video/mpv:bs2b - Enable Bauer stereophonic-to-binaural headphone filter
 media-video/mpv:cdio - Use libcdio for CD support (instead of cdparanoia)
+media-video/mpv:doc-pdf - Build documentation in pdf format
 media-video/mpv:enca - Enables support for charset discovery and conversion using app-i18n/enca
 media-video/mpv:libguess - Enables support for charset discovery and conversion using app-i18n/libguess
 media-video/mpv:mng - MNG input support
@@ -4197,6 +4198,8 @@ net-analyzer/zabbix:proxy - Enable proxy support
 net-analyzer/zabbix:server - Enable zabbix server
 net-analyzer/zabbix:ssh - SSH v2 based checks
 net-analyzer/zabbix:static - Build statically linked binaries
+net-analyzer/zmap:json - Add support to store results JSON based
+net-analyzer/zmap:redis - Add support for storing in a redis DB via dev-libs/hiredis
 net-dialup/accel-ppp:shaper - Support for traffic shaping
 net-dialup/capi4k-utils:fax - Install capi-fax demo programs
 net-dialup/capi4k-utils:pppd - Installs pppdcapiplugin modules
