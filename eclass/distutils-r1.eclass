@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.79 2013/09/17 13:33:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.82 2013/09/19 17:36:50 ottxor Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -305,7 +305,7 @@ distutils_install_for_testing() {
 	fi
 
 	mkdir -p "${libdir}" || die
-	esetup.py "${add_args[@]}"
+	esetup.py "${add_args[@]}" "${@}"
 }
 
 # @FUNCTION: _distutils-r1_disable_ez_setup
@@ -424,7 +424,7 @@ _distutils-r1_wrap_scripts() {
 		local PYTHON_SCRIPTDIR=${EPREFIX}/usr/bin
 	fi
 
-	mkdir -p "${path}/usr/bin" || die
+	mkdir -p "${path}${EPREFIX}/usr/bin" || die
 	local f
 	while IFS= read -r -d '' f; do
 		local basename=${f##*/}
@@ -510,25 +510,7 @@ distutils-r1_python_install() {
 distutils-r1_python_install_all() {
 	debug-print-function ${FUNCNAME} "${@}"
 
-	if declare -p DOCS &>/dev/null; then
-		# an empty list == don't install anything
-		if [[ ${DOCS[@]} ]]; then
-			dodoc -r "${DOCS[@]}"
-		fi
-	else
-		local f
-		# same list as in PMS
-		for f in README* ChangeLog AUTHORS NEWS TODO CHANGES \
-				THANKS BUGS FAQ CREDITS CHANGELOG; do
-			if [[ -s ${f} ]]; then
-				dodoc "${f}"
-			fi
-		done
-	fi
-
-	if declare -p HTML_DOCS &>/dev/null; then
-		dohtml -r "${HTML_DOCS[@]}"
-	fi
+	einstalldocs
 
 	if declare -p EXAMPLES &>/dev/null; then
 		local INSDESTTREE=/usr/share/doc/${PF}/examples

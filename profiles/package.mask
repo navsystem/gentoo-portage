@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15118 2013/09/17 09:13:30 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15127 2013/09/20 15:44:10 axs Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,9 +31,59 @@
 
 #--- END OF EXAMPLES ---
 
-# Tim Harder <radhermit@gentoo.org> (16 Sep 2013)
-# masked until libmatroska-1.4.1 is released
->=media-video/mkvtoolnix-6.4.0
+# Ian Stakenvicius <axs@gentoo.org> (20 Sep 2013)
+# on behalf of mozilla@gentoo.org
+# Severely outdated, no interest in maintaining,
+# only a matter of time before it breaks,
+# major QA issues with newer versions.
+# See bug #442122 for discussion
+# Masked for removal in 30 days
+www-plugins/mozplugger
+
+
+# Michael Sterrett <mr_bones_@gentoo.org> (19 Sep 2013)
+# Old nasty gtk+-1-using things.
+# masked for removal on 20131019
+app-dicts/babytrans
+app-dicts/babytrans-en2en
+app-dicts/babytrans-en2fre
+app-dicts/babytrans-en2ger
+app-dicts/babytrans-en2ita
+app-dicts/babytrans-en2pt
+app-dicts/babytrans-en2spa
+app-mobilephone/tsemgr
+dev-embedded/xgpasm
+net-dialup/gcdial
+net-p2p/gnapster
+net-p2p/lopster
+x11-plugins/mountapp
+x11-plugins/yawmppp
+
+# Michael Sterrett <mr_bones_@gentoo.org> (19 Sep 2013)
+# dead upstream and unused by anything in the tree
+# masked for removal on 20131019
+dev-db/edb
+
+# Tom Wijsman <TomWij@gentoo.org> (18 Sep 2013)
+# Temporarily masked due to QA issue during attempts to unbundle dependencies;
+# we need to check the jar contents to check for differences, especially the
+# stax dependency seems to be problematic in this regard but we'll check all of
+# them to ensure that unbundling doesn't hurt some missed functionality.
+# Bug #471942 tracks the progress of these unbundling efforts.
+>=app-admin/ec2-api-tools-1.6.7.2-r4
+
+# Sergey Popov <pinkbyte@gentoo.org> (18 Sep 2013)
+# Mask development releases of botan:
+# - causes many API breakages
+# - do not compile in some USE-flag combinations
+# - requires at least gcc 4.7(and possibly even 4.8 for some features)
+>=dev-libs/botan-1.11.0
+
+# Michał Górny <mgorny@gentoo.org> (17 Sep 2013)
+# Mask for testing. It enables some new eclass code, some new distutils
+# magic and certainly will trigger some random failures.
+# http://thread.gmane.org/gmane.linux.gentoo.devel/88175
+>=dev-python/python-exec-2
 
 # Joerg Bornkessel <hd_brummy@gentoo.org> (15 Sep 2013)
 # removal on ~15 Oct 2013
@@ -272,13 +322,6 @@ dev-games/neotools
 ~dev-util/boost-build-1.54.0
 ~dev-libs/boost-1.54.0
 
-# Ian Stakenvicius <axs@gentoo.org> (26 Aug 2013)
-# on behalf of mozilla@gentoo.org
-# Severely outdated, no interest in maintaining,
-# only a matter of time before it breaks
-# Masked for removal in 30 days.
-www-plugins/mozplugger
-
 # Julian Ospald <hasufell@gentoo.org> (25 Aug 2013)
 # experimental alpha software, may be insecure
 # https://github.com/Bitmessage/PyBitmessage/issues/376
@@ -291,20 +334,9 @@ net-p2p/pybitmessage
 >=www-client/chromium-31
 >=dev-lang/v8-3.21
 
-# Manuel Rüger <mrueg@gentoo.org> (19 Aug 2013)
-# Last release in 2005, Homepage dead, unclear license situation
-# Various other issues see bug #481560
-# Masked for removal in 30 days.
-net-im/kf
-
 # Patrick Lauer <patrick@gentoo.org> (19 Aug 2013)
 # Masking live ebuilds
 =www-apps/trac-mercurial-1.0.0.3_pre20130206
-
-# Manuel Rüger <mrueg@gentoo.org> (16 Aug 2013)
-# Outdated documentation as ruby18 will be removed soon.
-# Masked for removal in 30 days.
-dev-ruby/programming-ruby
 
 # Michał Górny <mgorny@gentoo.org> (16 Aug 2013)
 # Getting more broken every day. No commit for 5 years. Nothing
