@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/pgadmin3-1.16.1-r1.ebuild,v 1.4 2013/02/20 15:57:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/pgadmin3-1.18.0.ebuild,v 1.1 2013/09/25 17:37:46 titanofold Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.pgadmin.org/"
 SRC_URI="mirror://postgresql/${PN}/release/v${PV}/src/${P}.tar.gz"
 
 LICENSE="POSTGRESQL"
-KEYWORDS="amd64 ppc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 SLOT="0"
 IUSE="debug +databasedesigner"
 
@@ -31,6 +31,10 @@ pkg_setup() {
 		eerror "    postgresql-config set 8.4"
 		die "PostgreSQL slot is not set to 8.4 or higher."
 	fi
+}
+
+src_prepare() {
+	epatch "${FILESDIR}/pgadmin3-desktop.patch"
 }
 
 src_configure() {
