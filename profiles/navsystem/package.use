@@ -87,5 +87,6 @@ media-sound/deadbeef -ffmpeg
 net-misc/spice-gtk gtk3
 app-emulation/libvirt-glib python
 sys-libs/talloc python
-sci-libs/gdal geos
-sci-geosciences/qgis-2.0.1 gps grass gsl mapserver postgres python spatialite
+sci-libs/gdal geos python
+sci-geosciences/qgis gps grass gsl mapserver postgres python spatialite
+sci-geosciences/grass python
