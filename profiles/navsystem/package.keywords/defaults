@@ -17,3 +17,4 @@ sys-block/megacli amd64
 <www-plugins/chrome-binary-plugins-30 x86 amd64
 ~sci-electronics/kicad-20130518 x86 amd64
 ~sci-geosciences/qgis-2.0.1 x86 amd64
+=net-misc/tigervnc-1.2.80_p5065 amd64
