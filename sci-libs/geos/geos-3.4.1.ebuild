@@ -29,6 +29,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/3.4.1-solaris-isnan.patch
+	epatch "${FILESDIR}"/3.4.1-missing-include.patch
 	eautoreconf
 	echo "#!${EPREFIX}/bin/bash" > py-compile
 }

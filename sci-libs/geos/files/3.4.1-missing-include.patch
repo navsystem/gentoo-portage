@@ -1,0 +1,20 @@
+--- geos-3.4.1.orig/include/geos/Makefile.in	2013-08-17 16:08:12.000000000 +0200
++++ geos-3.4.1/include/geos/Makefile.in	2013-10-01 07:35:29.025859295 +0200
+@@ -338,6 +338,7 @@
+     opRelate.h \
+     opValid.h \
+     planargraph.h \
++    platform.h \
+     precision.h \
+     profiler.h \
+     spatialIndex.h \
+--- geos-3.4.1.orig/include/geos/Makefile.am	2013-08-17 16:08:05.000000000 +0200
++++ geos-3.4.1/include/geos/Makefile.am	2013-10-01 03:00:53.366262252 +0200
+@@ -46,6 +46,7 @@
+     opRelate.h \
+     opValid.h \
+     planargraph.h \
++    platform.h \
+     precision.h \
+     profiler.h \
+     spatialIndex.h \
