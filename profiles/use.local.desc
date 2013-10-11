@@ -3795,6 +3795,7 @@ media-video/ffmpeg:twolame - Enables MP2 encoding via media-sound/twolame as an 
 media-video/ffmpeg:vaapi - Enables VAAPI (Video Acceleration API) for hardware decoding
 media-video/ffmpeg:vis - Adds support for SIMD optimizations for UltraSPARC processors.
 media-video/ffmpeg:vpx - Enables vp8 codec support using libvpx: Decoding vp8 does not require this to be enabled but libvpx can also be used for decoding; encoding vp8 requires this useflag to be enabled though.
+media-video/ffmpeg:zvbi - Enables media-libs/zvbi based teletext decoder.
 media-video/ffmpeg2theora:kate - Adds support for Ogg Kate subtitles via libkate.
 media-video/gnome-mplayer:dconf - Enable support for gnome-base/dconf
 media-video/gnome-mplayer:gda - Enable support for gnome-extra/libgda
@@ -5290,8 +5291,6 @@ net-p2p/bitcoin-qt:1stclassmsg - Enable first-class Bitcoin message tools
 net-p2p/bitcoin-qt:bip16 - Enable backported support for relaying and mining new BIP16 pay-to-script-hash transactions
 net-p2p/bitcoin-qt:eligius - Enable using lower fees accepted by Eligius
 net-p2p/bitcoin-qt:qrcode - Enable generation of QR Codes for receiving payments
-net-p2p/bitcoind:bip16 - Enable backported support for relaying and mining new BIP16 pay-to-script-hash transactions
-net-p2p/bitcoind:eligius - Enable using lower fees accepted by Eligius
 net-p2p/bitcoind:logrotate - Use app-admin/logrotate for rotating logs
 net-p2p/dbhub:switch_user - Enable support for switching user
 net-p2p/deluge:setproctitle - Install dependencies needed for beautifying the process name
@@ -5432,7 +5431,6 @@ net-wireless/blueman:sendto - Install the sendto-plugin for gnome-base/nautilus
 net-wireless/bluez:consolekit - Use sys-auth/pambase[consolekit] to determine access to bluetooth devices based on whether a user is logged in locally or remotely
 net-wireless/bluez:test-programs - Install tools for testing of various Bluetooth functions
 net-wireless/gnome-bluetooth:nautilus - Build the gnome-extra/nautilus-sendto plugin
-net-wireless/gnome-bluetooth:sendto - Build the gnome-extra/nautilus-sendto plugin
 net-wireless/gnuradio:fcd - enable Funcube Dongle source block
 net-wireless/gnuradio:filter - enable filter signal processing blocks
 net-wireless/gnuradio:grc - enable GNU Radio Companion graphical tool to design signal processing flow graphs
