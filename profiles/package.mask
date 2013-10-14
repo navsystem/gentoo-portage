@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15159 2013/10/13 17:01:28 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15161 2013/10/14 13:33:19 jlec Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Justin Lecher <jlec@gentoo.org> (14 Oct 2013)
+# Seems to break all deps - API change?
+>=sci-libs/metis-5
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (13 Oct 2013)
 # Masked for security bug #472280, CVE 2013-1872
@@ -928,8 +932,10 @@ net-misc/netcf
 app-crypt/hmaccalc
 
 # Patrick Lauer <patrick@gentoo.org> (07 Apr 2010)
-# Keeping samba-4 masked until release.
->net-fs/samba-4
+# Lars Wendler <polynomial-c@gentoo.org> (14 Oct 2013)
+# Keeping samba-4.0 masked until bug #447022 is fixed. 4.1 masked for testing.
+=net-fs/samba-4.0*
+=net-fs/samba-4.1*
 
 # Mike Frysinger <vapier@gentoo.org> (07 Mar 2010)
 # Very old packages that people should have upgraded away from
