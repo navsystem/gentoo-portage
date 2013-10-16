@@ -3,7 +3,7 @@ app-portage/getdelta amd64 x86
 dev-util/bdelta amd64 x86
 ~dev-util/codeblocks-10.05 amd64 x86
 =dev-vcs/hgview-1.7.1 x86 amd64
-=kde-misc/kio-mtp-0_p20130211 amd64 x86
+=kde-misc/kio-mtp-0.75_p20130912 amd64 x86
 
 ~app-emulation/hasp-3.2_p7 x86 amd64
 sys-block/megarc amd64
