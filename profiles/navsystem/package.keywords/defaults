@@ -18,3 +18,5 @@ sys-block/megacli amd64
 ~sci-electronics/kicad-20130518 x86 amd64
 ~sci-geosciences/qgis-2.0.1 x86 amd64
 =net-misc/tigervnc-1.2.80_p5065 amd64
+=media-libs/freetype-2.4.11-r2 x86 amd64
+=sys-libs/zlib-1.2.8-r1 x86 amd64

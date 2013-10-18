@@ -1,1 +1,0 @@
-sys-boot/plymouth video_cards_nouveau
