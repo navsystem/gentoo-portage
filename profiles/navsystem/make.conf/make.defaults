@@ -4,7 +4,7 @@ exif semantic-desktop laptop consolekit mysql mssql policykit subversion udev vo
 gif flac mpeg mikmod spell libnotify acpi mng png mmx -pulseaudio spice sse sse2 lcms sasl icq jabber rdp xml gd icu xmpp virt-network apache2
 networkmanager private-headers declarative bash-completion pm-utils vnc rdesktop system-sqlite lxde udisks libkms
 oscar phonon qml valgrind ebook djvu idn lame mod vdpau g3dvl encode
-dri cups infinality natspec odbc pdf aac ffmpeg gpm opus upcall winbind
+dri cups infinality natspec odbc pdf aac ffmpeg gpm opus upcall winbind ads
 
 input_devices_evdev video_cards_intel video_cards_nouveau video_cards_radeon video_cards_vesa
 video_cards_i915 video_cards_i965 video_cards_r100 video_cards_r200 video_cards_r300 video_cards_r600
@@ -30,7 +30,6 @@ LINGUAS="ru en"
 LDFLAGS="-Wl,--as-needed"
 PORTAGE_NICENESS=10
 EMERGE_DEFAULT_OPTS="-j4 --keep-going --binpkg-respect-use=n"
-#http_proxy="http://192.168.99.111:3128/"
 ACCEPT_LICENSE="*"
 
 GENTOO_MIRRORS="http://mirror.yandex.ru/gentoo-distfiles/"
