@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.18 2013/10/14 20:30:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.21 2013/10/27 13:44:35 mgorny Exp $
 
 # @ECLASS: git-r3.eclass
 # @MAINTAINER:
@@ -374,7 +374,7 @@ _git-r3_smart_fetch() {
 # <local-id> specifies the local branch identifier that will be used to
 # locally store the fetch result. It should be unique to multiple
 # fetches within the repository that can be performed at the same time
-# (including parallel merges). It defaults to ${CATEGORY}/${PN}/${SLOT}.
+# (including parallel merges). It defaults to ${CATEGORY}/${PN}/${SLOT%/*}.
 # This default should be fine unless you are fetching multiple trees
 # from the same repository in the same ebuild.
 #
@@ -398,7 +398,7 @@ git-r3_fetch() {
 
 	local branch=${EGIT_BRANCH:+refs/heads/${EGIT_BRANCH}}
 	local remote_ref=${2:-${EGIT_COMMIT:-${branch:-HEAD}}}
-	local local_id=${3:-${CATEGORY}/${PN}/${SLOT}}
+	local local_id=${3:-${CATEGORY}/${PN}/${SLOT%/*}}
 	local local_ref=refs/heads/${local_id}/__main__
 
 	[[ ${repos[@]} ]] || die "No URI provided and EGIT_REPO_URI unset"
@@ -515,8 +515,13 @@ git-r3_fetch() {
 			if [[ ! ${commit} ]]; then
 				die "Unable to get commit id for submodule ${subname}"
 			fi
+			if [[ ${url} == ./* || ${url} == ../* ]]; then
+				local subrepos=( "${repos[@]/%//${url}}" )
+			else
+				local subrepos=( "${url}" )
+			fi
 
-			git-r3_fetch "${url}" "${commit}" "${local_id}/${subname}"
+			git-r3_fetch "${subrepos[*]}" "${commit}" "${local_id}/${subname}"
 
 			submodules=( "${submodules[@]:3}" ) # shift
 		done
@@ -556,7 +561,7 @@ git-r3_checkout() {
 	fi
 
 	local out_dir=${2:-${EGIT_CHECKOUT_DIR:-${WORKDIR}/${P}}}
-	local local_id=${3:-${CATEGORY}/${PN}/${SLOT}}
+	local local_id=${3:-${CATEGORY}/${PN}/${SLOT%/*}}
 
 	local -x GIT_DIR GIT_WORK_TREE
 	_git-r3_set_gitdir "${repos[0]}"
@@ -615,6 +620,10 @@ git-r3_checkout() {
 			local url=${submodules[1]}
 			local path=${submodules[2]}
 
+			if [[ ${url} == ./* || ${url} == ../* ]]; then
+				url=${repos[0]%%/}/${url}
+			fi
+
 			git-r3_checkout "${url}" "${GIT_WORK_TREE}/${path}" \
 				"${local_id}/${subname}"
 
@@ -625,6 +634,11 @@ git-r3_checkout() {
 	# keep this *after* submodules
 	export EGIT_DIR=${GIT_DIR}
 	export EGIT_VERSION=${new_commit_id}
+
+	# create a fake '.git' directory to satisfy 'git rev-parse HEAD'
+	GIT_DIR=${GIT_WORK_TREE}/.git
+	git init || die
+	echo "${EGIT_VERSION}" > "${GIT_WORK_TREE}"/.git/HEAD || die
 }
 
 # @FUNCTION: git-r3_peek_remote_ref
