@@ -130,3 +130,4 @@ net-misc/netifrc amd64
 kde-base/kimgio amd64
 dev-libs/soprano amd64
 kde-base/nepomuk-widgets amd64
+kde-base/kppp amd64
