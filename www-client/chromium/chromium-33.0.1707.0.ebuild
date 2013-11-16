@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-33.0.1707.0.ebuild,v 1.1 2013/11/13 19:25:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-33.0.1707.0.ebuild,v 1.3 2013/11/16 06:03:19 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -60,6 +60,7 @@ RDEPEND=">=app-accessibility/speech-dispatcher-0.8:=
 	pulseaudio? ( media-sound/pulseaudio:= )
 	sys-apps/dbus:=
 	sys-apps/pciutils:=
+	>=sys-libs/libcap-2.22:=
 	sys-libs/zlib:=[minizip]
 	virtual/udev
 	x11-libs/gtk+:2=
@@ -396,6 +397,14 @@ src_configure() {
 	export CXX_host=$(tc-getBUILD_CXX)
 	export LD_host=${CXX_host}
 
+	# Re-configure bundled ffmpeg. See bug #491378 for example reasons.
+	einfo "Configuring bundled ffmpeg..."
+	pushd third_party/ffmpeg > /dev/null || die
+	chromium/scripts/build_ffmpeg.sh linux ${target_arch} `pwd` config-only || die
+	chromium/scripts/copy_config.sh || die
+	popd > /dev/null || die
+
+	einfo "Configuring Chromium..."
 	build/linux/unbundle/replace_gyp_files.py ${myconf} || die
 	egyp_chromium ${myconf} || die
 }
