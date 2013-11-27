@@ -1259,6 +1259,7 @@ dev-games/physfs:wad - Enable Doom WAD archive support
 dev-games/physfs:zip - Enable ZIP archive support
 dev-haskell/abstract-deque:usecas - Enable the reference implementation to use hardware compare-and-swap.
 dev-haskell/aeson:developer - Operate in developer mode.'
+dev-haskell/aeson-pretty:lib-only - don't build 'aeson-pretty' executable.
 dev-haskell/cabal-install:noprefs - Ignore 'preferred-versions' file from hackage's tarball.
 dev-haskell/certificate:executable - Build the executable
 dev-haskell/cgi:extensible-exceptions-in-base - Required to be enabled for >=dev-lang/ghc-7.
@@ -1305,8 +1306,15 @@ dev-haskell/lens:test-properties - Build the properties test if we're building t
 dev-haskell/lens:trustworthy - Assert that we are trustworthy when we can
 dev-haskell/monad-control:instancest - If enabled this package will export MonadBaseControl instances for the lazy and strict ST monad. If disabled these instances are only exported when base >= 4.4. If enabled it is required that the transformer-base package exports MonadBase instances for ST. It will do this by default.
 dev-haskell/monad-par:chaselev - Use Chase-Lev Deques for higher-perf work-stealing.
+dev-haskell/pandoc-citeproc:bibutils - use Chris Putnam's app-text/bibutils
+dev-haskell/pandoc-citeproc:embed_data_files - Embed locale files into the library (needed for windows packaging)
+dev-haskell/pandoc-citeproc:hexpat - use dev-haskell/hexpat instead of dev-haskell/xml for XML parsing
+dev-haskell/pandoc-citeproc:network - use dev-haskell/network and dev-haskell/http to retrieve CSL file from URIs
+dev-haskell/pandoc-citeproc:small_base - Choose the new smaller, split-up base package.
+dev-haskell/pandoc-citeproc:unicode_collation - Use Haskell bindings to the dev-libs/icu
 dev-haskell/persistent-sqlite:systemlib - Use the system-wide sqlite library
 dev-haskell/quickcheck:template_haskell - Enable additional test modules requiring Template Haskell support.
+dev-haskell/rfc5051:mkunicodedata - build codes generator itself
 dev-haskell/sendfile:portable - Explicitly enable portable sendfile support (implemented in Haskell)
 dev-haskell/shakespeare:test_export - Test export.
 dev-haskell/shakespeare-js:test_coffee - Test coffee.
@@ -1530,7 +1538,6 @@ dev-libs/ace:tao - Include the ACE ORB (CORBA stuff) (called tao) into the build
 dev-libs/antlr-c:debugger - Compiles debug info into the library
 dev-libs/apr:older-kernels-compatibility - Enable binary compatibility with older kernels
 dev-libs/apr:urandom - Use /dev/urandom instead of /dev/random
-dev-libs/apr:uuid - Enable UUID support
 dev-libs/apr-util:nss - Install apr_crypto_nss module
 dev-libs/apr-util:openssl - Install apr_crypto_openssl module
 dev-libs/bitset:jemalloc - Use dev-libs/jemalloc for allocations
@@ -1607,6 +1614,7 @@ dev-libs/libdivecomputer:tools - Install tools that can be used to test the libr
 dev-libs/libffi:pax_kernel - Use PaX emulated trampolines, for we can't use PROT_EXEC
 dev-libs/libgdata:vala - Enable bindings for dev-lang/vala
 dev-libs/libgit2:ssh - Enable SSH transport support
+dev-libs/libgit2:trace - Enable tracing support
 dev-libs/libgpg-error:common-lisp - Install common-lisp files
 dev-libs/libgusb:vala - Enable bindings for dev-lang/vala
 dev-libs/libindicate:introspection - Use dev-libs/gobject-introspection for introspection
@@ -2288,6 +2296,9 @@ games-action/d2x-rebirth:mpu401 - Enable MPU401 music support
 games-action/d2x-rebirth:music - Support for ingame music
 games-action/d2x-rebirth:opl3-musicpack - Include alternate version of the game's music, recorded with the Yamaha YMF262 OPL3 soundchip
 games-action/d2x-rebirth:sc55-musicpack - Include alternate version of the game's music, recorded with the Roland Sound Canvas SC-55 MIDI module
+games-action/hotline-miami:bundled-libs - Use bundled libraries.
+games-action/hotline-miami:launcher - Install qt launcher
+games-action/minetest:leveldb - Enable LevelDB backend
 games-action/minetest:luajit - Use dev-lang/luajit instead of dev-lang/lua
 games-action/minetest:server - Build minetest server
 games-action/openlierox:breakpad - Compile with support for breakpad crash reporting system
@@ -2364,16 +2375,17 @@ games-fps/doomsday:snowberry - Install Snowberry doomsday front-end
 games-fps/doomsday:tools - Build additional tools such as doomsday-shell, md2tool and texc
 games-fps/duke3d:demo - Install the demo files
 games-fps/duke3d:pic - disable optimized assembly code that is not PIC friendly
+games-fps/duke3d-data:gog - Extract the data from the GOG.com installer.
 games-fps/eduke32:demo - Install games-fps/duke3d-demodata as well
 games-fps/eduke32:gtk - Compile with gtk launcher
-games-fps/eduke32:offensive - Include optional XXX texture pack
+games-fps/eduke32:offensive - Include optional XXX texture pack (needs USE 'textures')
 games-fps/eduke32:opl-musicpack - Include optional OPL (AdLib) music pack
 games-fps/eduke32:samples - Install samples
 games-fps/eduke32:sc55-musicpack - Include optional Roland SC-55 music pack
 games-fps/eduke32:server - Compile with server support
-games-fps/eduke32:textures - Include optional high-resolution textures
+games-fps/eduke32:textures - Include optional high-resolution textures (needs USE 'opengl')
 games-fps/eduke32:tools - Build several tools for modding and development
-games-fps/eduke32:vpx - Enable support for WebM VP8 Codecs
+games-fps/eduke32:vpx - Enable support for WebM VP8 Codecs (needs USE 'opengl')
 games-fps/ezquake-bin:security - install the security module needed for some servers
 games-fps/lsdldoom:freedoom - Install games-fps/freedoom wad file
 games-fps/lsdldoom:net - Enables network game support
@@ -2456,6 +2468,7 @@ games-simulation/flightgear:jsbsim - Enables JSBSim Flight Dynamics Model (defau
 games-simulation/flightgear:oldfdm - Enables deprecated Flight Dynamics Models (LaRCsim, UIUC)
 games-simulation/flightgear:subversion - Enables terrasync scenery downloader
 games-simulation/flightgear:udev - Enables event-based Input devices through virtual/udev
+games-simulation/flightgear:utils - Builds various utilities (fgpanel, terrasync, fgviewer among others)
 games-simulation/flightgear:yasim - Enables YASim Flight Dynamics Model
 games-simulation/openttd:aplaymidi - Enables midi music in game, using aplaymidi as an external player
 games-simulation/openttd:dedicated - Build only the openttd server, and not the client.
@@ -3674,7 +3687,6 @@ media-sound/teamspeak-server-bin:tsdns - Make use of TeamSpeak DNS.
 media-sound/tomahawk:telepathy - Enable support for the real-time communication framework telepathy
 media-sound/tomahawk:twitter - Enable twitter support
 media-sound/traverso:lv2 - Add support for Ladspa V2
-media-sound/umurmur:polarssl - Use net-libs/polarssl instead of dev-libs/openssl
 media-sound/vorbis-tools:kate - Adds support for Ogg Kate subtitles via libkate.
 media-sound/vorbis-tools:ogg123 - Build ogg123 player, needs libao and curl
 media-sound/xmms2:airplay - Support for airplay format
@@ -4744,6 +4756,7 @@ net-libs/cyassl:aes-gcm - Enable AES Galois/Counter mode
 net-libs/cyassl:aes-ni - Enable Intel AES instruction support
 net-libs/cyassl:arc4 - Enable ARC4 cipher support
 net-libs/cyassl:asn - Enable ASN cipher support
+net-libs/cyassl:atomicuser - Enable Atomic User Record Layer
 net-libs/cyassl:big - Choose big cache size (excludes small or huge)
 net-libs/cyassl:blake2 - Enable CyaSSL BLAKE2 support
 net-libs/cyassl:camellia - Enable Camellia-CBC cipher support
@@ -4763,6 +4776,7 @@ net-libs/cyassl:hc128 - Enable HC-128 support
 net-libs/cyassl:httpd - Enable features for yaSSL web server
 net-libs/cyassl:huge - Choose big cache size (excludes small or big)
 net-libs/cyassl:leanpsk - Enable lean PSK support (requires psk)
+net-libs/cyassl:maxfragment - Enable Maximum Fragment Length
 net-libs/cyassl:mcapi - Enable Microchip API
 net-libs/cyassl:md2 - Enable MD2 support
 net-libs/cyassl:md4 - Enable MD4 support
@@ -4770,6 +4784,7 @@ net-libs/cyassl:md5 - Enable MD5 support
 net-libs/cyassl:memory - Enable memory callbacks
 net-libs/cyassl:nullcipher - Enable nullcipher support
 net-libs/cyassl:ocsp - Enable Online Certificate Status Protocol
+net-libs/cyassl:pkcallbacks - Enable Public Key Callbacks
 net-libs/cyassl:psk - Enable Pre-Shared Key support
 net-libs/cyassl:pwdbased - Enable PWDBASED (requires extra)
 net-libs/cyassl:rabbit - Enable RABBIT cipher support
@@ -4777,6 +4792,7 @@ net-libs/cyassl:ripemd - Enable RIPEMD-160 support
 net-libs/cyassl:rsa - Enable RSA cihper support
 net-libs/cyassl:savecert - Support certificate saving
 net-libs/cyassl:savesession - Support session saving
+net-libs/cyassl:sep - Enable sep extensions
 net-libs/cyassl:sessioncerts - Store session certificates
 net-libs/cyassl:sha - Enable SHA cipher support
 net-libs/cyassl:sha512 - Enable SHA-160 support
@@ -4784,6 +4800,8 @@ net-libs/cyassl:small - Choose small cache size (excludes big or huge)
 net-libs/cyassl:sni - Enable server name indication
 net-libs/cyassl:sniffer - Allow collection/decryption of SSL traffic
 net-libs/cyassl:testcert - Enable certificate testing
+net-libs/cyassl:tlsx - Enable all TLS Extensions
+net-libs/cyassl:truncatedhmac - Enable Truncated HMAC
 net-libs/daq:afpacket - Build the AFPacket data acquisition module. Functions similar to the PCAP module but with better performance. Snort can run unprivileged when using this module. AFpacket supports both inline and passive modes.
 net-libs/daq:dump - Build the Dump data acquisition module. The dump DAQ allows you to test the various inline mode features available in 2.9 Snort like injection and normalization.
 net-libs/daq:ipq - Build the IPQ data acquisition module. IPQ is the old way to process iptables packets for inline deployments. Snort can not run unprivileged when using this module.
@@ -5337,6 +5355,7 @@ net-nds/openldap:smbkrb5passwd - Enable overlay for syncing ldap, unix and lanma
 net-nds/tac_plus:finger - Adds support for checking user counts via fingering the NAS
 net-nds/tac_plus:maxsess - Enforce a limit on maximum sessions per user
 net-news/liferea:libnotify - Enable popup notifications
+net-news/quiterss:phonon - Enable sound support via media-libs/phonon or dev-qt/qtphonon
 net-nntp/inn:innkeywords - Enable automatic keyword generation support
 net-nntp/inn:inntaggedhash - Use tagged hash table for history (disables large file support)
 net-nntp/nzbget:parcheck - Enable support for checking PAR archives
@@ -6565,6 +6584,7 @@ www-apps/viewvc:cvsgraph - Add dev-vcs/cvsgraph support to show graphical views 
 www-apps/viewvc:mod_wsgi - Add www-apache/mod_wsgi support
 www-apps/viewvc:pygments - Add dev-python/pygments support for syntax highlighting
 www-apps/webdavcgi:rcs - Adds support for a revision controlled backend with RCS (dev-vcs/rcs)
+www-client/chromium:aura - Enable Aura, new UI architecture that is GPU accelerated, see http://www.chromium.org/developers/design-documents/aura .
 www-client/chromium:bindist - Disable patent-encumbered HTML5 video codecs
 www-client/chromium:system-sqlite - Use system sqlite instead of bundled sqlite. This breaks WebSQL on websites, please report compatibility issues to https://bugs.gentoo.org .
 www-client/chromium:tcmalloc - Use bundled tcmalloc instead of system malloc.
