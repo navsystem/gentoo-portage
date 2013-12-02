@@ -24,3 +24,4 @@ sys-block/megacli amd64
 ~kde-misc/customizable-weather-1.8.3 x86 amd64
 
 ~media-fonts/paratype-1 x86 amd64
+~dev-python/mailer-0.7 x86 amd64
