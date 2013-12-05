@@ -93,3 +93,4 @@ sci-geosciences/grass python
 
 
 sys-devel/llvm clang
+sci-geosciences/mapnik python
