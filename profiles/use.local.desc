@@ -159,7 +159,6 @@ app-admin/gkrellm:ntlm - Enable NTLM authentication for mail checking with net-l
 app-admin/gkrellm:ssl - Enable SSL support for mail checking with dev-libs/openssl
 app-admin/glance:swift - Adds swift storage support
 app-admin/gnome-system-tools:nfs - Adds support for NFS shares
-app-admin/gtkdiskfree:gtk3 - Use GTK+3 instead of 2
 app-admin/hddtemp:network-cron - Monthly cronjob to update hddtemp.db.
 app-admin/keepass:aot - Generate native code at build time, rather than runtime.
 app-admin/lcap:lids - If you have the Linux Intrusion Detection System
@@ -1900,6 +1899,7 @@ dev-python/lxml:beautifulsoup3 - Enable support for Beautiful Soup 3
 dev-python/markdown:pygments - Enable fancy pygments support
 dev-python/matplotlib:excel - Pull dev-python/xlwt for the exceltools toolkit
 dev-python/matplotlib:gtk3 - Use x11-libs/gtk+:3 instead of x11-libs/gtk+:2
+dev-python/matplotlib:pyside - Qt support via dev-python/pyside
 dev-python/mpmath:matplotlib - Add support for dev-python/matplotlib
 dev-python/mwlib:server - Install the daemons required when using mwlib for generating PDFs on a MediaWiki instance.
 dev-python/mwlib-rl:pdftk - Enable support for app-text/pdftk, required to generate TOCs
@@ -2252,6 +2252,7 @@ dev-vcs/bzr-gtk:sourceview - Enable GtkSourceView support
 dev-vcs/cvs:server - Enable server support
 dev-vcs/cvs2svn:bazaar - Support for dev-vcs/bzr
 dev-vcs/fossil:json - Enable the JSON API of Fossil's wiki
+dev-vcs/fossil:lineedit - Enable line-editing with libedit or readline
 dev-vcs/fossil:sqlite - Use the system SQLite instead of the bundled one
 dev-vcs/git:blksha1 - Use the new optimized SHA1 implementation
 dev-vcs/git:cgi - Install gitweb too
@@ -2362,6 +2363,16 @@ games-emulation/higan:profile_accuracy - Compile a binary optimized for accuracy
 games-emulation/higan:profile_balanced - Compile a binary with balanced optimization
 games-emulation/higan:profile_performance - Compile a binary optimized for performance
 games-emulation/mednafen:debugger - Build with internal debugger
+games-emulation/mupen64plus:audio-sdl - Enable SDL audio plugin.
+games-emulation/mupen64plus:input-sdl - Enable SDL input plugin.
+games-emulation/mupen64plus:rsp-hle - Enable HLE RSP plugin.
+games-emulation/mupen64plus:ui-console - Enable default console UI.
+games-emulation/mupen64plus:ui-m64py - Enable PyQt4 UI using games-emulation/m64py.
+games-emulation/mupen64plus:video-glide64mk2 - Enable Glide64mk2 video plugin.
+games-emulation/mupen64plus:video-rice - Enable Rice video plugin.
+games-emulation/mupen64plus-core:new-dynarec - Enable new experimental dynamic recompiler implementation (only for x86 and arm)
+games-emulation/mupen64plus-core:osd - Overlay emulator messages using on-screen-display
+games-emulation/mupen64plus-video-glide64mk2:hires - Support hi-resolution textures (requires dev-libs/boost)
 games-emulation/pcsxr:cdio - Use libcdio for CD support
 games-emulation/pcsxr:sdl - Use SDL sound backend (other parts of SDL are used unconditionally)
 games-emulation/snes9x:netplay - Enable playing ROMs over the network (not recommended)
@@ -2761,8 +2772,6 @@ kde-base/ksnapshot:kipi - Support for the KDE Image Plugin Interface.
 kde-base/kstars:fits - Enable support for the FITS image format through cfitsio
 kde-base/kstars:indi - Enable support for Astronomical control library using libindi
 kde-base/kwin:gles - Enable support for GLES.
-kde-base/libkdcraw:jasper - Use media-libs/jasper to support RedOne digital movie cameras (R3D format)
-kde-base/libplasmaclock:holidays - Include support for holidays in plasma calendar
 kde-base/marble:designer-plugin - Enable designer plugin
 kde-base/marble:shapefile - Enable support for ESRI shapefiles
 kde-base/marble:zip - Enable support for reading and displaying .kmz files
@@ -3463,7 +3472,6 @@ media-sound/alsa-utils:libsamplerate - install utils that use libsamplerate (e.g
 media-sound/alsa-utils:minimal - omit utils that rely on extra packages (e.g. alsaconf and alsa-info)
 media-sound/alsa-utils:ncurses - install utils that use ncurses (e.g. alsamixer)
 media-sound/alsaplayer:id3tag - Enables ID3 tagging with id3tag library
-media-sound/amarok:daap - Enable the scripts for music sharing through DAAP. This flag adds dependencies on www-servers/mongrel to allow sharing of the Amarok music collection through DAAP protocol. Please note that turning this flag off has no effect on DAAP browsing.
 media-sound/amarok:embedded - Use libmysqld, MySQL embedded server library. Try disabling this if you encounter -PIC related in amarok, it will make amarok rely only on standalone MySQL server.
 media-sound/amarok:lastfm - Enable Last.fm streaming services support through media-libs/liblastfm
 media-sound/amarok:mp3tunes - Enable mp3tunes integration
@@ -4832,7 +4840,6 @@ net-libs/daq:dump - Build the Dump data acquisition module. The dump DAQ allows 
 net-libs/daq:ipq - Build the IPQ data acquisition module. IPQ is the old way to process iptables packets for inline deployments. Snort can not run unprivileged when using this module.
 net-libs/daq:nfq - Build the NFQ data acquisition module. NFQ is the new way to process iptables packets for inline deployments. Snort can not run unprivileged when using this module.
 net-libs/daq:pcap - Build the PCAP data acquisition module.
-net-libs/farstream:introspection - Use dev-libs/gobject-introspection for introspection
 net-libs/glib-networking:gnome - Extract HTTP/HTTPS/SOCKS proxy configuration stored using GSettings
 net-libs/glib-networking:libproxy - Use net-libs/libproxy for getting the HTTP/HTTPS/SOCKS proxy configuration
 net-libs/gnome-online-accounts:gnome - Use gnome-base/gnome-control-center to set GNOME online accounts preferences
@@ -4923,8 +4930,6 @@ net-libs/opal:vpb - Enable Voicetronics VPB card support
 net-libs/opal:vxml - Enable VXML support
 net-libs/opal:wav - Enable WAVFILE support
 net-libs/opal:x264-static - Install x264 plugin statically linked with x264
-net-libs/openh323:audio - Enable audio codecs
-net-libs/openh323:video - Enable video codecs
 net-libs/ortp:ntp-timestamp - Turn on NTP timestamping on received packet
 net-libs/ortp:srtp - Add support for Secure RTP
 net-libs/pjsip:cli - Installs pjsua, a simple command-line SIP client
@@ -5804,6 +5809,7 @@ sci-libs/libghemical:mopac7 - Use sci-chemistry/mopac7 for semi-empirical calcul
 sci-libs/libghemical:mpqc - Use sci-chemistry/mpqc for quantum-mechanical calculations
 sci-libs/libsvm:tools - Install python based tool scripts
 sci-libs/linux-gpib:firmware - Install firmware
+sci-libs/linux-gpib:isa - Build ISA kernel modules; from 3.12 on the setting is ignored and the decision based on the kernel configuration
 sci-libs/lis:fma - Use the Fused Multiply Add instruction set (x86 arches)
 sci-libs/lis:quad - Enable quadruple precision operations
 sci-libs/lis:saamg - Build the Smoothed Aggregation Algebraic MultiGrid preconditioner
