@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
+DEPEND=alsa? ( media-libs/alsa-lib ) opengl? ( virtual/opengl virtual/glu ) sdl? ( media-libs/libsdl ) virtual/jpeg media-libs/libogg media-libs/libpng media-libs/libvorbis sys-libs/zlib x11-libs/libX11 x11-libs/libXext x11-libs/libXxf86dga x11-libs/libXxf86vm >=dev-vcs/git-1.8.2.1
+DESCRIPTION=Enhanced Quake 2 engine
+EAPI=2
+HOMEPAGE=https://github.com/eegorov/qudos
+IUSE=alsa cdinstall dedicated demo dga ipv6 joystick mods opengl qmax oss sdl textures
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=alsa? ( media-libs/alsa-lib ) opengl? ( virtual/opengl virtual/glu ) sdl? ( media-libs/libsdl ) virtual/jpeg media-libs/libogg media-libs/libpng media-libs/libvorbis sys-libs/zlib x11-libs/libX11 x11-libs/libXext x11-libs/libXxf86dga x11-libs/libXxf86vm cdinstall? ( games-fps/quake2-data ) demo? ( games-fps/quake2-demodata ) textures? ( games-fps/quake2-textures )
+SLOT=0
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	a82a329b538368791f5a6113c60e557e	games	0fb7637597e0869f6c8be79b11d0135a	git-r3	f089608c770d9ad72a2c92b547d2b20d	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=b3367e9012ccda8e09e0579d0bbb581f
