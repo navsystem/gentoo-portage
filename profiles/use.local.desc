@@ -585,6 +585,7 @@ app-emulation/wine:custom-cflags - Bypass strip-flags; use at your own peril
 app-emulation/wine:dos - Pull in games-emulation/dosbox to run DOS applications
 app-emulation/wine:gecko - Add support for the Gecko engine when using iexplore
 app-emulation/wine:mono - Add support for .NET using Wine's Mono add-on
+app-emulation/wine:netapi - Use libnetapi from net-fs/samba to support Windows networks in netapi32.dll
 app-emulation/wine:opencl - Enable OpenCL support
 app-emulation/wine:osmesa - Add support for OpenGL in bitmaps using libOSMesa
 app-emulation/wine:perl - Install helpers written in perl (winedump/winemaker)
@@ -4213,7 +4214,10 @@ net-analyzer/linkchecker:login - login form submission
 net-analyzer/linkchecker:nagios - Install nagios cli plugin
 net-analyzer/linkchecker:sqlite - Mozilla Bookmark parsing
 net-analyzer/linkchecker:syntax-check - HTML/CSS syntax checks
+net-analyzer/metasploit:development - Install dependancies needed for metasploit and exploit development
 net-analyzer/metasploit:gui - Enable Java GUI
+net-analyzer/metasploit:lorcon - Enable lorcon for raw packet injection
+net-analyzer/metasploit:pcap - Enable libpcap for packet sniffing
 net-analyzer/munin:apache - Set up the configuration of the CGI generation of HTML and graphs to work with Apache. This also install an include-able configuration file.
 net-analyzer/munin:asterisk - Install the packages required for monitoring Asterisk. Disabling the flag does not remove any plugin files.
 net-analyzer/munin:cgi - Install the CGI-compatible scripts for on-the-fly generation of web pages and graphs. This is only meaningful if the minimal USE flag is disabled.
@@ -4916,8 +4920,6 @@ net-libs/opal:ilbc - Enable iLBC (RFC 3951) speech codec
 net-libs/opal:ivr - Enable Interactive Voice Response
 net-libs/opal:ixj - Enable xJack cards support
 net-libs/opal:lid - Enable Line Interface Device
-net-libs/opal:noaudio - Disable audio codecs
-net-libs/opal:novideo - Disable video codecs
 net-libs/opal:plugins - Enable plugins support
 net-libs/opal:sbc - Enable the Bluetooth low-complexity, SubBand Codec
 net-libs/opal:sip - Enable Session Initiation Protocol
