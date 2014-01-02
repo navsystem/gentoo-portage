@@ -1407,8 +1407,6 @@ dev-java/icedtea:nss - Enable NSS security provider support.
 dev-java/icedtea:pax_kernel - For building when running a PaX enabled kernel.
 dev-java/icedtea:systemtap - Enable SystemTap probes in HotSpot.
 dev-java/icedtea:webstart - Enable Web Start support (via NetX).
-dev-java/icedtea-web:gtk2 - Use x11-libs/gtk+:2 instead of x11-libs/gtk+:3
-dev-java/icedtea-web:gtk3 - Use x11-libs/gtk+:3 (default)
 dev-java/icedtea-web:icedtea7 - Build icedtea-7 support in addition to icedtea-6 support. Requires icedtea{-bin}-7
 dev-java/icedtea-web:javascript - Enable support for using proxy auto config (PAC) files.
 dev-java/icedtea-web:nsplugin - Enable the browser plugin (NPPlugin).
@@ -1497,7 +1495,6 @@ dev-lang/path64:debugger - Build PathDB
 dev-lang/path64:native - Use EKOPath/Path64 for bootstraping
 dev-lang/path64:valgrind - Use dev-util/valgrind for memory debbuging
 dev-lang/perl:ithreads - Enable Perl threads, has some compatibility problems
-dev-lang/perl:perlsuid - Enable Perl SUID install. Has some risks associated.
 dev-lang/php:cli - Enable CLI SAPI
 dev-lang/php:embed - Enable embed SAPI
 dev-lang/php:enchant - Add supports Enchant spelling library.
@@ -5108,12 +5105,16 @@ net-misc/batman-adv:nc - B.A.T.M.A.N. network coding
 net-misc/bfgminer:adl - Enable support for controlling fans and overclocking on AMD cards with AMD Display Library
 net-misc/bfgminer:avalon - Enable support for mining with Avalon ASIC modules
 net-misc/bfgminer:bfsb - Enable support for mining on BFSB host Raspberry Pi
+net-misc/bfgminer:bifury - Enable support for mining with Bi*fury USB sticks
 net-misc/bfgminer:bigpic - Enable support for mining with Big Picture Mining USB sticks (Red/BlueFury, BF1, etc)
 net-misc/bfgminer:bitforce - Enable support for mining with ButterFly Labs BitFORCE ASICs and/or FPGAs
 net-misc/bfgminer:bitfury - Enable support for mining with 55nm Bitfury-based devices
 net-misc/bfgminer:cpumining - Enable support for mining with CPUs
 net-misc/bfgminer:hashbuster - Enable support for mining with HashBuster nano boards
+net-misc/bfgminer:hashbuster2 - Enable support for mining with HashBuster micro boards
 net-misc/bfgminer:icarus - Enable support for mining with Icarus-compatible devices (including Block Erupter Sapphire ASICs)
+net-misc/bfgminer:klondike - Enable support for mining with Klondike USB miners
+net-misc/bfgminer:libusb - Use libusb
 net-misc/bfgminer:littlefury - Enable support for mining with LittleFury USB sticks
 net-misc/bfgminer:metabank - Enable support for mining on Metabank host Raspberry Pi
 net-misc/bfgminer:modminer - Enable support for mining with ModMiner FPGAs
@@ -5126,6 +5127,7 @@ net-misc/bfgminer:proxy_stratum - Enable proxy support for stratum protocol
 net-misc/bfgminer:scrypt - Enable support for scrypt mining algorithm
 net-misc/bfgminer:sse2_4way - Enable support for CPU SSE2 4way mining algorithm
 net-misc/bfgminer:sse4 - Enable support for CPU SSE4 mining algorithm
+net-misc/bfgminer:twinfury - Enable support for mining with Twinfury USB sticks
 net-misc/bfgminer:x6500 - Enable support for mining with X6500 FPGAs
 net-misc/bfgminer:ztex - Enable support for mining with Ztex FPGAs
 net-misc/cfengine:html - Install HTML documentation
@@ -5436,8 +5438,6 @@ net-p2p/eiskaltdcpp:cli - Enable sample cli based on readline
 net-p2p/eiskaltdcpp:daemon - Enable eiskaltdcpp-daemon
 net-p2p/eiskaltdcpp:dht - Enable DHT (distributed hash table) support for libeiskaltdcpp
 net-p2p/eiskaltdcpp:emoticons - Install emoticon packs
-net-p2p/eiskaltdcpp:gnome - Enable sound notifications support over libgnome2 in EiskaltDC++ Gtk
-net-p2p/eiskaltdcpp:gtk3 - Use x11-libs/gtk+:3 instead of x11-libs/gtk+:2
 net-p2p/eiskaltdcpp:json - Enable JSON for cli and daemon
 net-p2p/eiskaltdcpp:libcanberra - Enable sound notifications support over libcanberra in EiskaltDC++ Gtk
 net-p2p/eiskaltdcpp:minimal - Don't install headers
@@ -5700,7 +5700,6 @@ sci-chemistry/gromacs:avx128fma - Enable 128bit avx with fma (e.g. AMD BullDozer
 sci-chemistry/gromacs:avx256 - Enable 256bit avx (e.g. Intel Sandy Bridge)
 sci-chemistry/gromacs:cuda - Enable cuda non-bonded kernels
 sci-chemistry/gromacs:double-precision - More precise calculations at the expense of speed
-sci-chemistry/gromacs:fkernels - Enable building of Fortran Kernels for platforms that dont have assembly loops
 sci-chemistry/gromacs:mkl - Use sci-libs/mkl for fft, blas, lapack routines
 sci-chemistry/gromacs:offensive - Enable gromacs partly offensive quotes
 sci-chemistry/gromacs:openmm - Add acceleration through sci-libs/openmm
@@ -6100,6 +6099,7 @@ sys-apps/paludis:python-bindings - Enable Python bindings. Requires a lot of RAM
 sys-apps/paludis:ruby-bindings - Enable Ruby bindings.
 sys-apps/paludis:search-index - Enable cave search --index. Requires sqlite.
 sys-apps/paludis:visibility - Enable visibility support (g++ >=4.1)
+sys-apps/pciutils:dns - Enable support for querying the central database of PCI IDs using DNS
 sys-apps/pciutils:kmod - Enable sys-apps/kmod support for the -k switch in lspci command
 sys-apps/pciutils:zlib - Support compressed pci.ids database
 sys-apps/pcmciautils:staticsocket - Add support for static sockets
@@ -6132,6 +6132,7 @@ sys-apps/systemd:firmware-loader - Enable user-space firmware loader (for kernel
 sys-apps/systemd:gcrypt - Enable sealing of journal files using gcrypt
 sys-apps/systemd:gudev - enable libudev gobject interface
 sys-apps/systemd:http - Enable embedded HTTP server in journald
+sys-apps/systemd:kdbus - Connect to kernel dbus (KDBUS) instead of userspace dbus if available
 sys-apps/systemd:keymap - Map custom hardware's multimedia keys
 sys-apps/systemd:kmod - Enable kernel module loading via sys-apps/kmod
 sys-apps/systemd:openrc - Depend on sys-fs/udev-init-scripts
@@ -6354,7 +6355,6 @@ sys-devel/gettext:cvs - When running `autopoint`, use cvs to store the internal 
 sys-devel/gettext:git - When running `autopoint`, use git to store the internal development files; this requires git at runtime, but will be faster/smaller than raw archives
 sys-devel/kgcc64:multislot - Allow for SLOTs to include minor version (eg. 3.3.4 instead of just 3.3)
 sys-devel/kgcc64:regression-test - Run the testsuite and install the results (requires FEATURES=test)
-sys-devel/libperl:ithreads - Enable Perl threads, has some compatibility problems
 sys-devel/llvm:clang - Build the clang C/C++ compiler
 sys-devel/llvm:doc - Build and install the HTML documentation and regenerate the man pages
 sys-devel/llvm:gold - Build the gold linker plugin
@@ -6860,6 +6860,7 @@ x11-libs/libdesktop-agnostic:gconf - Enable GConf as configuration backend
 x11-libs/libdesktop-agnostic:glade - Install the Glade catalog for the desktop-agnotstic GTK widgets.
 x11-libs/libdesktop-agnostic:introspection - Use dev-libs/gobject-introspection for introspection
 x11-libs/libdrm:libkms - Enable building of libkms, a library for applications to interface with KMS
+x11-libs/libfm:udisks - Use libfm's udisks-based volume monitor implementation instead of using the one from gvfs
 x11-libs/libfm:vala - Support custom actions in menus
 x11-libs/libmatchbox:pango - Enable x11-libs/pango support
 x11-libs/libmatchbox:xsettings - Enable the use of xsettings for settings management
