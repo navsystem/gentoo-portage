@@ -271,7 +271,6 @@ app-backup/deja-dup:nautilus - Build gnome-base/nautilus extension
 app-backup/duplicity:s3 - Support for backing up to the Amazon S3 system
 app-backup/rear:udev - Have ReaR start backup when attaching your USB drive.
 app-backup/spideroak-bin:headless - Build without graphic frontend
-app-backup/spideroak-bin:qt-bundled - Use bundled Qt4 libraries
 app-backup/tsm:hsm - Installs Tivoli Storage Manager for Space Management
 app-backup/tsm:tsm_cit - IBM Tivoli Common Inventory Technology
 app-backup/tsm:tsm_hw - Difference snapshot support for NetApp and N-Series file servers
@@ -1407,8 +1406,6 @@ dev-java/icedtea:nss - Enable NSS security provider support.
 dev-java/icedtea:pax_kernel - For building when running a PaX enabled kernel.
 dev-java/icedtea:systemtap - Enable SystemTap probes in HotSpot.
 dev-java/icedtea:webstart - Enable Web Start support (via NetX).
-dev-java/icedtea-web:gtk2 - Use x11-libs/gtk+:2 instead of x11-libs/gtk+:3
-dev-java/icedtea-web:gtk3 - Use x11-libs/gtk+:3 (default)
 dev-java/icedtea-web:icedtea7 - Build icedtea-7 support in addition to icedtea-6 support. Requires icedtea{-bin}-7
 dev-java/icedtea-web:javascript - Enable support for using proxy auto config (PAC) files.
 dev-java/icedtea-web:nsplugin - Enable the browser plugin (NPPlugin).
@@ -1497,7 +1494,6 @@ dev-lang/path64:debugger - Build PathDB
 dev-lang/path64:native - Use EKOPath/Path64 for bootstraping
 dev-lang/path64:valgrind - Use dev-util/valgrind for memory debbuging
 dev-lang/perl:ithreads - Enable Perl threads, has some compatibility problems
-dev-lang/perl:perlsuid - Enable Perl SUID install. Has some risks associated.
 dev-lang/php:cli - Enable CLI SAPI
 dev-lang/php:embed - Enable embed SAPI
 dev-lang/php:enchant - Add supports Enchant spelling library.
@@ -1533,19 +1529,30 @@ dev-lang/ruby:rubytests - Install ruby tests that can only be run after ruby is 
 dev-lang/ruby:yaml - Use the dev-libs/libyaml library to build the psych extension, available since Ruby 1.9.2_rc2, in alternative to the bundled syck-based parser.
 dev-lang/scala:binary - Install from (Gentoo-compiled) binary instead of building from sources. Set this when you run out of memory during build.
 dev-lang/spidermonkey:debug - Enable assertions to allow for easier debugging of programs that link to spidermonkey -- note this will often crash software on regular end-user systems
+dev-lang/spidermonkey:system-icu - Use the system-wide dev-libs/icu instead of bundled -- note, only takes effect when icu flag is enabled
 dev-lang/spidermonkey:threadsafe - Build a threadsafe version of spidermonkey
 dev-lang/swi-prolog:archive - Use libarchive for extension packs
 dev-lang/swig:ccache - build ccache-swig(a fast compiler cache)
 dev-lang/vala:vapigen - Enable vala's library binding generator
 dev-lang/yap:R - Enable support for connecting R to Prolog
 dev-libs/DirectFB:bmp - build BMP image provider
+dev-libs/DirectFB:divine - enable DiVine
+dev-libs/DirectFB:drmkms - build with DRM/KMS support
 dev-libs/DirectFB:dynload - enable dynload support
+dev-libs/DirectFB:egl - build with EGL support
+dev-libs/DirectFB:fusiondale - enable FusionDale
+dev-libs/DirectFB:fusionsound - enable FusionSound
 dev-libs/DirectFB:gles2 - build gles2 gfxdriver
 dev-libs/DirectFB:imlib2 - build Imlib2 image provider
 dev-libs/DirectFB:input_hub - provides an asynchronous interface to the input devices available and those being added/removed
 dev-libs/DirectFB:mpeg2 - build MPEG2 image provider
+dev-libs/DirectFB:mpeg3 - build Libmpeg3 video provider
 dev-libs/DirectFB:multicore - enable multicore support
 dev-libs/DirectFB:pnm - build PNM (PBM/PGM/PPM) image provider
+dev-libs/DirectFB:sawman - enable SaWMan (window manager and application manager)
+dev-libs/DirectFB:swfdec - build Swfdec (Flash decoder) video provider
+dev-libs/DirectFB:tremor - build Ogg/Vorbis music provider using Tremor
+dev-libs/DirectFB:webp - build WebP image provider
 dev-libs/STLport:boost - Enable the usage of dev-libs/boost
 dev-libs/ace:ciao - Include Component Intergraced Ace ORB into the build of ace
 dev-libs/ace:tao - Include the ACE ORB (CORBA stuff) (called tao) into the build of ace
@@ -1557,6 +1564,7 @@ dev-libs/apr-util:openssl - Install apr_crypto_openssl module
 dev-libs/bitset:jemalloc - Use dev-libs/jemalloc for allocations
 dev-libs/bitset:tcmalloc - Use tcmalloc from dev-util/google-perftools for allocations
 dev-libs/blitz:boost - Enable usage of boost::serialization
+dev-libs/boost:context - Build and install the Boost.Context library and all other Boostlibraries that depends on it
 dev-libs/boost:debug - Build and install only the debug version of the Boost libraries. Only enable this flag if you're developing against boost.
 dev-libs/boost:doc - Install the full API documentation documentation. This takes over 200MB of extra disk space.
 dev-libs/boost:nls - Build libboost_locale. This library requires compatible C library interfaces, which might not be provided by uClibc or other embedded libraries.
@@ -2238,6 +2246,7 @@ dev-util/pkgconf:pkg-config - Install as a replacement for dev-util/pkgconfig
 dev-util/pkgconf:strict - Adhere to POSIX pkg-config specification. Useful for finding uses of non-standard pkg-config invocations.
 dev-util/pkgconfig:internal-glib - Use internal copy of dev-libs/glib
 dev-util/pkgconfig-openbsd:pkg-config - Install as a replacement for dev-util/pkgconfig
+dev-util/qbs:gui - Build QBS graphical configuration tool
 dev-util/qdevelop:plugins - Build and install additional plugins
 dev-util/reviewboard:codebase - Enables a build of the docs/codebase folder
 dev-util/reviewboard:manual - Enables a build of the docs/manual folder
@@ -2265,6 +2274,7 @@ dev-vcs/git:curl - Support fetching and pushing (requires webdav too) over http:
 dev-vcs/git:gpg - Pull in gnupg for signing -- without gnupg, attempts at signing will fail at runtime!
 dev-vcs/git:gtk - Include the gitview contrib tool
 dev-vcs/git:highlight - GitWeb support for app-text/highlight
+dev-vcs/git:mediawiki - Support pulling and pushing from MediaWiki
 dev-vcs/git:ppcsha1 - Make use of a bundled routine that is optimized for the PPC arch
 dev-vcs/git:subversion - Include git-svn for dev-vcs/subversion support
 dev-vcs/git:webdav - Adds support for push'ing to HTTP/HTTPS repositories via DAV
@@ -2299,6 +2309,7 @@ dev-vcs/rabbitvcs:thunar - Enable extension for xfce-base/thunar
 dev-vcs/subversion:ctypes-python - Build and install Ctypes Python bindings
 dev-vcs/subversion:dso - Enable runtime module search
 dev-vcs/subversion:extras - Install extra scripts (examples, tools, hooks)
+dev-vcs/subversion:http - Enable http support using net-libs/serf
 dev-vcs/subversion:webdav-neon - Enable WebDAV support using net-libs/neon
 dev-vcs/subversion:webdav-serf - Enable WebDAV support using net-libs/serf
 games-action/awesomenauts:bundled-libs - Use the upstream provided bundled libraries.
@@ -2587,7 +2598,6 @@ gnome-base/gnome-settings-daemon:packagekit - Enable support for the distro-neut
 gnome-base/gnome-settings-daemon:short-touchpad-timeout - Change the touchpad timeout so that it's effective for fast typists
 gnome-base/gnome-shell:i18n - Enable support for enhanced input methods through app-i18n/ibus
 gnome-base/gnome-shell:openrc-force - Skip systemd dependency (#480336), enabling this flag will become your setup to be fully unsupported by upstream and downstream Gnome team. Do not try to enable it unless completely needed
-gnome-base/gnome-shell:systemd - Use sys-apps/systemd instead of sys-auth/consolekit for session tracking
 gnome-base/gvfs:afp - Enables support for accessing AFP (Apple Filing Protocol) network shares
 gnome-base/gvfs:archive - Enables support for accessing files in archives transparently via app-arch/libarchive
 gnome-base/gvfs:bluray - Enable playback of Blu-ray filesystems using media-libs/libbluray
@@ -2624,11 +2634,7 @@ gnome-extra/gnome-color-manager:packagekit - Enable support for the distro-neutr
 gnome-extra/gnome-do-plugins:banshee - Enables the Banshee (media-sound/banshee) plugin
 gnome-extra/gnome-dvb-daemon:totem - Build a plugin for media-video/totem
 gnome-extra/gnome-dvb-daemon:vala - Add support for dev-lang/vala
-gnome-extra/gnome-games:aisleriot - Install the card game Aisleriot (Solitaire)
 gnome-extra/gnome-games:artworkextra - Installs extra artwork for various games
-gnome-extra/gnome-games:clutter - Install games that use media-libs/clutter
-gnome-extra/gnome-games:glchess - Install Chess written in dev-lang/vala and OpenGL
-gnome-extra/gnome-games:sudoku - Install the game Sudoku which uses dev-python/pygobject and introspection
 gnome-extra/gnome-media:twolame - Allow encoding MPEG Audio Layer 2 (MP2) files using twolame
 gnome-extra/gnome-packagekit:systemd - Use sys-apps/systemd instead of sys-auth/consolekit for rebooting
 gnome-extra/gnome-power-manager:applet - Build battery monitor applet
@@ -3078,6 +3084,7 @@ media-gfx/graphicsmagick:fpx - Enable FlashPix support with media-libs/libfpx
 media-gfx/graphicsmagick:modules - Compile graphicsmagick with dynamically loadable modules
 media-gfx/graphicsmagick:q16 - Set storage quantum size to 16 (~2*memory)
 media-gfx/graphicsmagick:q32 - Set storage quantum size to 32 (~5*memory)
+media-gfx/graphicsmagick:webp - Enable support for webp image format
 media-gfx/graphviz:X - Builds lefty front-end, builds plugin -Txlib, and enables support for x11 in various other modules (needs cairo)
 media-gfx/graphviz:devil - Enables DevIL output plugin -Tdevil
 media-gfx/graphviz:gdk-pixbuf - Enables gdk-pixbuf2 plugin
@@ -3126,6 +3133,7 @@ media-gfx/povray:mkl - Enable support for Intel Vector Math Library, part of sci
 media-gfx/pstoedit:emf - Enable media-libs/libemf support
 media-gfx/pstoedit:flash - Enable media-libs/ming SWF support
 media-gfx/pstoedit:pptx - Enable support for generating PowerPoint pptx files
+media-gfx/qiv:magic - Use libmagic to determine mimetypes
 media-gfx/qiviewer:webp - Build support for WEBP image format
 media-gfx/splashutils:fbcondecor - Support for the fbcondecor kernel patch.
 media-gfx/ufraw:contrast - enable contrast setting option
@@ -4740,7 +4748,6 @@ net-irc/iroffer-dinoex:http - Compile with HTTP server support
 net-irc/iroffer-dinoex:kqueue - Compile with kqueue() support
 net-irc/iroffer-dinoex:memsave - Compile with memory protection
 net-irc/iroffer-dinoex:telnet - Compile with Telnet server support
-net-irc/irssi:tinfo - Use only libtinfo from sys-libs/ncurses
 net-irc/kvirc:dcc_video - Support video connections over DCC protocol
 net-irc/kvirc:dcc_voice - Support voice connections over DCC protocol
 net-irc/kvirc:ipc - Support inter-process communication between KVIrc processes
@@ -5107,12 +5114,16 @@ net-misc/batman-adv:nc - B.A.T.M.A.N. network coding
 net-misc/bfgminer:adl - Enable support for controlling fans and overclocking on AMD cards with AMD Display Library
 net-misc/bfgminer:avalon - Enable support for mining with Avalon ASIC modules
 net-misc/bfgminer:bfsb - Enable support for mining on BFSB host Raspberry Pi
+net-misc/bfgminer:bifury - Enable support for mining with Bi*fury USB sticks
 net-misc/bfgminer:bigpic - Enable support for mining with Big Picture Mining USB sticks (Red/BlueFury, BF1, etc)
 net-misc/bfgminer:bitforce - Enable support for mining with ButterFly Labs BitFORCE ASICs and/or FPGAs
 net-misc/bfgminer:bitfury - Enable support for mining with 55nm Bitfury-based devices
 net-misc/bfgminer:cpumining - Enable support for mining with CPUs
 net-misc/bfgminer:hashbuster - Enable support for mining with HashBuster nano boards
+net-misc/bfgminer:hashbuster2 - Enable support for mining with HashBuster micro boards
 net-misc/bfgminer:icarus - Enable support for mining with Icarus-compatible devices (including Block Erupter Sapphire ASICs)
+net-misc/bfgminer:klondike - Enable support for mining with Klondike USB miners
+net-misc/bfgminer:libusb - Use libusb
 net-misc/bfgminer:littlefury - Enable support for mining with LittleFury USB sticks
 net-misc/bfgminer:metabank - Enable support for mining on Metabank host Raspberry Pi
 net-misc/bfgminer:modminer - Enable support for mining with ModMiner FPGAs
@@ -5125,6 +5136,7 @@ net-misc/bfgminer:proxy_stratum - Enable proxy support for stratum protocol
 net-misc/bfgminer:scrypt - Enable support for scrypt mining algorithm
 net-misc/bfgminer:sse2_4way - Enable support for CPU SSE2 4way mining algorithm
 net-misc/bfgminer:sse4 - Enable support for CPU SSE4 mining algorithm
+net-misc/bfgminer:twinfury - Enable support for mining with Twinfury USB sticks
 net-misc/bfgminer:x6500 - Enable support for mining with X6500 FPGAs
 net-misc/bfgminer:ztex - Enable support for mining with Ztex FPGAs
 net-misc/cfengine:html - Install HTML documentation
@@ -5188,6 +5200,7 @@ net-misc/icecast:logrotate - Install support files for app-admin/logrotate?
 net-misc/icecast:yp - Build support for yp public directory listings
 net-misc/iputils:SECURITY_HAZARD - Allow non-root users to flood (ping -f). This is generally a very bad idea.
 net-misc/knock:server - Installs the knockd server daemon.
+net-misc/libreswan:dnssec - Use DNSSEC resolver (requires net-dns/unbound
 net-misc/lldpd:cdp - Enable Cisco Discovery Protocol
 net-misc/lldpd:dot1 - Enable Dot1 extension (VLAN stuff)
 net-misc/lldpd:dot3 - Enable Dot3 extension (PHY stuff)
@@ -5427,6 +5440,7 @@ net-p2p/amule:stats - Enable statistic reporting
 net-p2p/bitcoin-qt:1stclassmsg - Enable first-class Bitcoin message tools
 net-p2p/bitcoin-qt:qrcode - Enable generation of QR Codes for receiving payments
 net-p2p/bitcoind:logrotate - Use app-admin/logrotate for rotating logs
+net-p2p/datacoin-hp:logrotate - Use app-admin/logrotate for rotating logs
 net-p2p/dbhub:switch_user - Enable support for switching user
 net-p2p/deluge:setproctitle - Install dependencies needed for beautifying the process name
 net-p2p/deluge:webinterface - Install dependencies needed for the web interface
@@ -5434,8 +5448,6 @@ net-p2p/eiskaltdcpp:cli - Enable sample cli based on readline
 net-p2p/eiskaltdcpp:daemon - Enable eiskaltdcpp-daemon
 net-p2p/eiskaltdcpp:dht - Enable DHT (distributed hash table) support for libeiskaltdcpp
 net-p2p/eiskaltdcpp:emoticons - Install emoticon packs
-net-p2p/eiskaltdcpp:gnome - Enable sound notifications support over libgnome2 in EiskaltDC++ Gtk
-net-p2p/eiskaltdcpp:gtk3 - Use x11-libs/gtk+:3 instead of x11-libs/gtk+:2
 net-p2p/eiskaltdcpp:json - Enable JSON for cli and daemon
 net-p2p/eiskaltdcpp:libcanberra - Enable sound notifications support over libcanberra in EiskaltDC++ Gtk
 net-p2p/eiskaltdcpp:minimal - Don't install headers
@@ -5487,6 +5499,7 @@ net-print/cups:filters - Pull in net-print/foomatic-filters for filtering by def
 net-print/cups:java - Add support for the Java interpeter in the web server CGIs.
 net-print/cups:lprng-compat - Do not install lp... binaries so cups and lprng can coexist.
 net-print/cups:python - Add support for the Python interpeter in the web server CGIs.
+net-print/cups-filters:foomatic - Build the included foomatic-rip printer driver. Strongly recommended.
 net-print/fax4cups:capisuite-fax - Install net-dialup/capisuite backend
 net-print/fax4cups:efax - Install net-misc/efax backend
 net-print/fax4cups:hylafax - Install net-misc/hylafax backend
@@ -5698,7 +5711,6 @@ sci-chemistry/gromacs:avx128fma - Enable 128bit avx with fma (e.g. AMD BullDozer
 sci-chemistry/gromacs:avx256 - Enable 256bit avx (e.g. Intel Sandy Bridge)
 sci-chemistry/gromacs:cuda - Enable cuda non-bonded kernels
 sci-chemistry/gromacs:double-precision - More precise calculations at the expense of speed
-sci-chemistry/gromacs:fkernels - Enable building of Fortran Kernels for platforms that dont have assembly loops
 sci-chemistry/gromacs:mkl - Use sci-libs/mkl for fft, blas, lapack routines
 sci-chemistry/gromacs:offensive - Enable gromacs partly offensive quotes
 sci-chemistry/gromacs:openmm - Add acceleration through sci-libs/openmm
@@ -5708,6 +5720,8 @@ sci-chemistry/gsim:emf - Support for .emf export
 sci-chemistry/icm:32bit - Automatically generated description for 32bit
 sci-chemistry/icm:64bit - Automatically generated description for 64bit
 sci-chemistry/jmol:client-only - Install the viewer only, no applet files for httpd
+sci-chemistry/molequeue:client - Build the client application
+sci-chemistry/molequeue:server - Build the serve application
 sci-chemistry/molequeue:zeromq - Build with net-libs/zeromq support
 sci-chemistry/mopac7:gmxmopac7 - Add support library for gromacs
 sci-chemistry/oasis:minimal - Restricts functionality on free software
@@ -5831,6 +5845,8 @@ sci-libs/linux-gpib:isa - Build ISA kernel modules; from 3.12 on the setting is 
 sci-libs/lis:fma - Use the Fused Multiply Add instruction set (x86 arches)
 sci-libs/lis:quad - Enable quadruple precision operations
 sci-libs/lis:saamg - Build the Smoothed Aggregation Algebraic MultiGrid preconditioner
+sci-libs/magma:fermi - Compile for GPU NVIDIA Fermi family (2.x cards)
+sci-libs/magma:kepler - Compile for GPU NVIDIA Kepler family (GF 6xx cards)
 sci-libs/mathgl:hdf - Add support for the Hierarchical Data Format v.4 sci-libs/hdf
 sci-libs/mathgl:octave - Add bindings for sci-mathematics/octave
 sci-libs/matio:sparse - Extend formats for sparse matrix (not matlab)
@@ -6098,6 +6114,7 @@ sys-apps/paludis:python-bindings - Enable Python bindings. Requires a lot of RAM
 sys-apps/paludis:ruby-bindings - Enable Ruby bindings.
 sys-apps/paludis:search-index - Enable cave search --index. Requires sqlite.
 sys-apps/paludis:visibility - Enable visibility support (g++ >=4.1)
+sys-apps/pciutils:dns - Enable support for querying the central database of PCI IDs using DNS
 sys-apps/pciutils:kmod - Enable sys-apps/kmod support for the -k switch in lspci command
 sys-apps/pciutils:zlib - Support compressed pci.ids database
 sys-apps/pcmciautils:staticsocket - Add support for static sockets
@@ -6130,6 +6147,7 @@ sys-apps/systemd:firmware-loader - Enable user-space firmware loader (for kernel
 sys-apps/systemd:gcrypt - Enable sealing of journal files using gcrypt
 sys-apps/systemd:gudev - enable libudev gobject interface
 sys-apps/systemd:http - Enable embedded HTTP server in journald
+sys-apps/systemd:kdbus - Connect to kernel dbus (KDBUS) instead of userspace dbus if available
 sys-apps/systemd:keymap - Map custom hardware's multimedia keys
 sys-apps/systemd:kmod - Enable kernel module loading via sys-apps/kmod
 sys-apps/systemd:openrc - Depend on sys-fs/udev-init-scripts
@@ -6147,7 +6165,6 @@ sys-apps/util-linux:cramfs - build mkfs/fsck helpers for cramfs filesystems
 sys-apps/util-linux:cytune - build cytune for Cyclades-Z multiport serial cards
 sys-apps/util-linux:ddate - build ddate helper (Discordian dates)
 sys-apps/util-linux:fdformat - build fdformat (floppy disk format)
-sys-apps/util-linux:loop-aes - include support for Loop AES encryption
 sys-apps/util-linux:pam - build runuser helper
 sys-apps/util-linux:perl - install the chkdupexe helper script
 sys-apps/util-linux:suid - install mount/umount as setuid so non-root users may mount/umount devices, and wall/write as setgid so non-root users can notify other users
@@ -6352,7 +6369,6 @@ sys-devel/gettext:cvs - When running `autopoint`, use cvs to store the internal 
 sys-devel/gettext:git - When running `autopoint`, use git to store the internal development files; this requires git at runtime, but will be faster/smaller than raw archives
 sys-devel/kgcc64:multislot - Allow for SLOTs to include minor version (eg. 3.3.4 instead of just 3.3)
 sys-devel/kgcc64:regression-test - Run the testsuite and install the results (requires FEATURES=test)
-sys-devel/libperl:ithreads - Enable Perl threads, has some compatibility problems
 sys-devel/llvm:clang - Build the clang C/C++ compiler
 sys-devel/llvm:doc - Build and install the HTML documentation and regenerate the man pages
 sys-devel/llvm:gold - Build the gold linker plugin
@@ -6561,6 +6577,57 @@ sys-power/cpufreqd:nvidia - Enable nvidia overclocking (media-video/nvclock) plu
 sys-power/cpufreqd:pmu - Enable Power Management Unit plug-in
 sys-power/cpupower:cpufreq_bench - Build and install the cpufreq_bench binary
 sys-power/nut:ipmi - Support IPMI-based UPSes.
+sys-power/nut:ups_drivers_al175 - Driver for Eltek UPS models with AL175 alarm module
+sys-power/nut:ups_drivers_apcsmart - Driver for American Power Conversion Smart Protocol UPS equipment
+sys-power/nut:ups_drivers_apcsmart-old - Driver for American Power Conversion Smart Protocol UPS equipment
+sys-power/nut:ups_drivers_apcupsd-ups - Driver for apcupsd client access
+sys-power/nut:ups_drivers_bcmxcp - Driver for UPSes supporting the serial BCM/XCP protocol
+sys-power/nut:ups_drivers_bcmxcp_usb - Experimental driver for UPSes supporting the BCM/XCP protocol over USB
+sys-power/nut:ups_drivers_belkin - Driver for Belkin serial UPS equipment
+sys-power/nut:ups_drivers_belkinunv - Driver for Belkin "Universal UPS" and compatible
+sys-power/nut:ups_drivers_bestfcom - Driver for Best Power Fortress/Ferrups
+sys-power/nut:ups_drivers_bestfortress - Driver for old Best Fortress UPS equipment
+sys-power/nut:ups_drivers_bestuferrups - Driver for Best Power Micro-Ferrups
+sys-power/nut:ups_drivers_bestups - Driver for Best Power / SOLA (Phoenixtec protocol) UPS equipment
+sys-power/nut:ups_drivers_blazer_ser - Driver for Megatec/Q1 protocol serial based UPS equipment
+sys-power/nut:ups_drivers_blazer_usb - Driver for Megatec/Q1 protocol USB based UPS equipment
+sys-power/nut:ups_drivers_clone - Fake driver to clone outlets for device grouping
+sys-power/nut:ups_drivers_clone-outlet - Fake driver to clone outlets for device grouping
+sys-power/nut:ups_drivers_dummy-ups - Driver for multi-purpose UPS emulation
+sys-power/nut:ups_drivers_etapro - Driver for ETA UPS equipment
+sys-power/nut:ups_drivers_everups - Driver for Ever UPS models
+sys-power/nut:ups_drivers_gamatronic - Driver for Gamatronic UPS equipment
+sys-power/nut:ups_drivers_genericups - Driver for contact-closure UPS equipment
+sys-power/nut:ups_drivers_isbmex - Driver for ISBMEX UPS equipment
+sys-power/nut:ups_drivers_ivtscd - driver for the IVT Solar Controller Device
+sys-power/nut:ups_drivers_liebert - Driver for Liebert contact-closure UPS equipment
+sys-power/nut:ups_drivers_liebert-esp2 - Driver for Liebert UPS, using the ESP-II serial protocol
+sys-power/nut:ups_drivers_masterguard - Driver for Masterguard UPS equipment
+sys-power/nut:ups_drivers_metasys - Driver for Meta System UPS equipment
+sys-power/nut:ups_drivers_mge-shut - Driver for SHUT Protocol UPS equipment
+sys-power/nut:ups_drivers_mge-utalk - Driver for MGE UPS SYSTEMS UTalk protocol equipment
+sys-power/nut:ups_drivers_microdowell - Driver for Microdowell Enterprise UPS series
+sys-power/nut:ups_drivers_netxml-ups - Driver for Eaton / MGE Network Management Card / Proxy (XML/HTTP Protocol) equipment
+sys-power/nut:ups_drivers_nut-ipmipsu - Driver for IPMI Power Supply Units (PSU)
+sys-power/nut:ups_drivers_nutdrv_qx - Driver for Q* protocol serial and USB based UPS equipment
+sys-power/nut:ups_drivers_oldmge-shut - Driver for SHUT Protocol UPS equipment (older implementation)
+sys-power/nut:ups_drivers_oneac - Driver for Oneac UPS equipment
+sys-power/nut:ups_drivers_optiups - Driver for Opti-UPS (Viewsonic) UPS and Zinto D (ONLINE-USV) equipment
+sys-power/nut:ups_drivers_powercom - UPS driver for serial Powercom/Trust/Advice UPS equipment
+sys-power/nut:ups_drivers_powerpanel - Driver for PowerPanel Plus compatible UPS equipment
+sys-power/nut:ups_drivers_rhino - Driver for Brazilian Microsol RHINO UPS equipment
+sys-power/nut:ups_drivers_richcomm_usb - Driver UPS equipment using Richcomm dry-contact to USB solution
+sys-power/nut:ups_drivers_riello_ser - Driver for Riello UPS Protocol UPS equipment
+sys-power/nut:ups_drivers_riello_usb - Driver for Riello UPS Protocol UPS equipment via USB
+sys-power/nut:ups_drivers_safenet - Driver for SafeNet compatible UPS equipment
+sys-power/nut:ups_drivers_snmp-ups - Multi-MIB Driver for SNMP UPS equipment
+sys-power/nut:ups_drivers_solis - Driver for Brazilian Microsol SOLIS UPS equipment
+sys-power/nut:ups_drivers_tripplite - Driver for Tripp-Lite SmartPro UPS equipment
+sys-power/nut:ups_drivers_tripplite_usb - Driver for older Tripp Lite USB UPSes (not PDC HID)
+sys-power/nut:ups_drivers_tripplitesu - Driver for Tripp-Lite SmartOnline (SU) UPS equipment
+sys-power/nut:ups_drivers_upscode2 - Driver for UPScode II compatible UPS equipment
+sys-power/nut:ups_drivers_usbhid-ups - Driver for USB/HID UPS equipment
+sys-power/nut:ups_drivers_victronups - Driver for IMV/Victron UPS unit Match, Match Lite, NetUps
 sys-power/nvclock:gtk - Install the GTK+ based graphical interface
 sys-power/nvclock:nvcontrol - Add NVCONTROL support for OpenGL options
 sys-power/phctool:sudo - Enable support for sudo to run gui from non-root user
@@ -6858,6 +6925,7 @@ x11-libs/libdesktop-agnostic:gconf - Enable GConf as configuration backend
 x11-libs/libdesktop-agnostic:glade - Install the Glade catalog for the desktop-agnotstic GTK widgets.
 x11-libs/libdesktop-agnostic:introspection - Use dev-libs/gobject-introspection for introspection
 x11-libs/libdrm:libkms - Enable building of libkms, a library for applications to interface with KMS
+x11-libs/libfm:udisks - Use libfm's udisks-based volume monitor implementation instead of using the one from gvfs
 x11-libs/libfm:vala - Support custom actions in menus
 x11-libs/libmatchbox:pango - Enable x11-libs/pango support
 x11-libs/libmatchbox:xsettings - Enable the use of xsettings for settings management

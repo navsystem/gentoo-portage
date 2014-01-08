@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/foomatic-db-engine-4.0.9.ebuild,v 1.8 2013/12/24 12:54:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/foomatic-db-engine-4.0.9.ebuild,v 1.10 2014/01/05 21:58:33 dilfridge Exp $
 
 EAPI=5
 
@@ -18,7 +18,8 @@ IUSE=""
 DEPEND="net-print/cups"
 RDEPEND="
 	dev-libs/libxml2
-	net-print/foomatic-filters"
+	|| ( >=net-print/cups-filters-1.0.43-r1[foomatic] net-print/foomatic-filters )
+"
 PDEPEND="net-print/foomatic-db"
 
 src_prepare() {
