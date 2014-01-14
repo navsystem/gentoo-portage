@@ -938,8 +938,6 @@ app-office/lyx:monolithic-build - This should speed up compilation significantly
 app-office/lyx:rcs - Add support for revision control via dev-vcs/rcs
 app-office/lyx:rtf - Add support for RTF import/export packages
 app-office/lyx:xetex - Add support for XeTeX typesetting
-app-office/rabbit:markdown - Markdown support (dev-ruby/kramdown)
-app-office/rabbit:tgif - tgif support (media-gfx/tgif)
 app-office/scribus:aspell - Enable support for spell checking with app-text/aspell
 app-office/scribus:graphicsmagick - Add support for media-gfx/graphicsmagick
 app-office/scribus:hunspell - Enable support for spell checking with app-text/hunspell
@@ -1488,6 +1486,7 @@ dev-lang/mercury:erlang - Support Mercury Erlang grade
 dev-lang/mlton:binary - install a binary version (need to do this once to bootstrap, until smlnj is supported)
 dev-lang/mono:pax_kernel - Enable if the user plans to run the package under a pax enabled hardened kernel
 dev-lang/mono:xen - Make mono generate code that is considerably faster on xen VMs but slightly slower on for normal systems.
+dev-lang/nqp:moar - Build the MoarVM backend (experimental/broken)
 dev-lang/nqp:parrot - Build the parrot backend (default)
 dev-lang/path64:assembler - Build PathAS
 dev-lang/path64:debugger - Build PathDB
@@ -2505,6 +2504,7 @@ games-rpg/nwn-data:hou - Install the Hordes of the Underdark expansion pack
 games-rpg/nwn-data:nowin - For those people who cant grab the 1.2 gigs of data files from a windows partition
 games-rpg/nwn-data:sou - Installs the Shadows of Undrentide expension pack
 games-rpg/sumwars:tools - Builds editor tools
+games-rpg/to-the-moon:bundled-libs - Use bundled libraries
 games-rpg/valyriatear:editor - Compile the Qt editor along with the game
 games-simulation/corsix-th:ffmpeg - Use ffmpeg for playing in-game cutscenes.
 games-simulation/corsix-th:midi - Use SDL mixer and timidity for in-game music.
@@ -4912,6 +4912,7 @@ net-libs/libsoup:samba - Use net-fs/samba for NTLM Single Sign-On
 net-libs/libsrtp:aesicm - Use AES ICM cryptographic algorithm
 net-libs/libsrtp:console - Use /dev/console instead of stdout for error messages
 net-libs/libsrtp:syslog - Use syslog for error messages
+net-libs/libssh:gcrypt - Prefer dev-libs/libgcrypt over dev-libs/openssl for encryption
 net-libs/libssh:pcap - Build with PCAP output support
 net-libs/libssh:server - Build with SSH server support
 net-libs/libssh:sftp - Build with SFTP support
@@ -5897,7 +5898,11 @@ sci-libs/vtk:R - Enable support for dev-lang/R
 sci-libs/vtk:boost - Add support for boost
 sci-libs/vtk:cg - Use nvidia's cg shaders
 sci-libs/vtk:chemistry - Add chemistry support
+sci-libs/vtk:imaging - Building Imaging modules
+sci-libs/vtk:offscreen - Offscreen rendering through OSMesa
 sci-libs/vtk:patented - Build patented classes
+sci-libs/vtk:rendering - Building Redering modules
+sci-libs/vtk:views - Building Views modules
 sci-mathematics/Macaulay2:optimization - Accept upstream's choices for -O option, i.e. -O3 almost everywhere.
 sci-mathematics/agda:epic - Add support for the epic compiler.
 sci-mathematics/agda:stdlib - Install the standard library.
