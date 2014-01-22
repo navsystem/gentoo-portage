@@ -12,7 +12,7 @@ SRC_URI="http://${PN}.freedesktop.org/releases/${P}.tar.xz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="doc +introspection ios kernel_FreeBSD kernel_linux systemd"
+IUSE="+deprecated doc +introspection ios kernel_FreeBSD kernel_linux systemd"
 
 COMMON_DEPEND=">=dev-libs/dbus-glib-0.100
 	>=dev-libs/glib-2.22
@@ -58,7 +58,7 @@ src_configure() {
 
 	if use kernel_linux; then
 		backend=linux
-		myconf="$(use_enable !systemd deprecated)"
+		myconf="$(use_enable deprecated)"
 	elif use kernel_FreeBSD; then
 		backend=freebsd
 	else
