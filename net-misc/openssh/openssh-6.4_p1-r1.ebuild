@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.4_p1-r1.ebuild,v 1.10 2014/01/26 12:07:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.4_p1-r1.ebuild,v 1.12 2014/02/01 18:52:46 armin76 Exp $
 
 EAPI="4"
 inherit eutils user flag-o-matic multilib autotools pam systemd versionator
