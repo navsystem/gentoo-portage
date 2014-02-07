@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15376 2014/01/30 22:25:28 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15383 2014/02/05 07:50:31 pinkbyte Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 
 #--- END OF EXAMPLES ---
 
+# Tim Harder <radhermit@gentoo.org> (04 Feb 2014)
+# Masked for testing
+=media-sound/lilypond-2.19*
+
 # Aaron W. Swenson <titanofold@gentoo.org> (30 Jan 2014)
 # Package no longer maintained separately from x11-misc/slim. Removal
 # in 30 days.
@@ -37,8 +41,12 @@ x11-misc/slimlock
 
 # Mike Gilbert <floppym@gentoo.org> (29 Jan 2014)
 # I suspect this package is not used. If you are using it, please contact me.
-# Otherwise, it will be removed along with its dependencies in 30 days.
+# Otherwise, it will be removed in 30 days.
 dev-python/mozrunner
+dev-python/mozinfo
+dev-python/mozprofile
+dev-python/mozprocess
+dev-python/mozfile
 
 # Naohiro Aota <naota@gentoo.org> (29 Jan 2014)
 # Mask for removal in 30 days. No ruby19 support. #464286
@@ -56,7 +64,6 @@ dev-libs/suikyo
 # Mask for removal in 30 days. Used to be used by farsight1 but no longer. No
 # other reverse deps. (bug #489550)
 dev-libs/jrtplib
-dev-libs/jthread
 
 # Mike Gilbert <floppym@gentoo.org> (26 Jan 2014)
 # Python library that has no reverse deps. Removal in 30 days.
@@ -249,21 +256,11 @@ media-plugins/vdr-analogtv
 # breaks every consumer
 =dev-games/ogre-1.9.0
 
-# Samuli Suominen <ssuominen@gentoo.org> (28 Dec 2013)
-# Replaced by 'emerge @module-rebuild' set in Portage itself.
-# Removal in 30 days, see http://bugs.gentoo.org/410739
-sys-kernel/module-rebuild
-
 # Samuli Suominen <ssuominen@gentoo.org> (25 Dec 2013)
 # The required icons from faenza-xfce-icon-theme are now part of
 # the faenza-icon-theme itself for a long time now.
 # Removal in 30 days.
 x11-themes/faenza-xfce-icon-theme
-
-# Sergey Popov <pinkbyte@gentoo.org> (23 Dec 2013)
-# Masked for removal, please migrate to dev-python/irc,
-# which is in fact just a newer version of this package.
-dev-python/python-irclib
 
 # Luca Barbato <lu_zero@gentoo.org> (18 Dec 2013)
 # Alpha ebuild, unmask to test the tree.
@@ -830,10 +827,6 @@ app-pda/multisync-gui
 # Masking alpha releases
 net-analyzer/ncrack
 
-# Peter Volkov <pva@gentoo.org> (29 Oct 2010)
-# mask beta release
-=net-analyzer/tcpreplay-3.5*
-
 # Luca Barbato <lu_zero@gentoo.org> (21 Jul 2010)
 # Not ready for public consumption, clashes with current mesa-git
 media-libs/shivavg
@@ -915,9 +908,7 @@ app-portage/layman-dbtools
 net-misc/netcomics-cvs
 =media-plugins/vdr-xineliboutput-9999
 =media-plugins/vdr-xvdr-9999
-# rdep for sci-astronomy/casacore
-sci-astronomy/casa-data
-sci-astronomy/casacore
+=sci-astronomy/casa-data-99999
 =sys-fs/redirfs-9999
 sys-kernel/zen-sources
 =www-plugins/google-talkplugin-9999
