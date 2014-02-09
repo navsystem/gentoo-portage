@@ -96,3 +96,4 @@ sci-geosciences/qgis gps grass gsl mapserver postgres python spatialite
 sci-geosciences/grass python
 kde-base/kdelibs semantic-desktop
 games-fps/qudos qmax textures
+x11-themes/qtcurve gtk
