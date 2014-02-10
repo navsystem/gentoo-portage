@@ -31,6 +31,7 @@ PATCHES=(
 	"${FILESDIR}/moc-boost-lexical-cast.patch"
 	"${FILESDIR}/CVE-2013-4549-01-disallow-deep-or-widely-nested-entity-refs.patch"
 	"${FILESDIR}/CVE-2013-4549-02-fully-expand-entities.patch"
+	"${FILESDIR}/Ibc2fc94d.patch"
 )
 
 pkg_setup() {
