@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15395 2014/02/14 07:19:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15398 2014/02/15 15:36:08 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,23 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ulrich Müller <ulm@gentoo.org> (15 Feb 2014)
+# Doesn't appear to work with Emacs 24.
+# Last upstream release in 2002.
+# Masked for removal in 30 days, bug 501412.
+app-emacs/alt-font-menu
+
+# Ulrich Müller <ulm@gentoo.org> (15 Feb 2014)
+# Included with Emacs since version 23.
+# cperl-mode-6.2 does not work with Emacs 24.
+# Masked for removal in 30 days, bug 501410.
+app-emacs/cperl-mode
+
+# Ulrich Müller <ulm@gentoo.org> (15 Feb 2014)
+# Now included with app-emacs/vm.
+# Masked for removal in 30 days, bug 501414.
+app-emacs/u-vm-color
 
 # Ulrich Müller <ulm@gentoo.org> (14 Feb 2014)
 # Included with Emacs since version 22.3.
@@ -182,30 +199,6 @@ www-client/google-chrome:unstable
 # Do not unmask without prior review from multilib@g.o.
 # https://bugs.gentoo.org/show_bug.cgi?id=474654#c5
 =media-gfx/exiv2-0.23-r2
-
-# Joerg Bornkessel <hd_brummy@gentoo.org (14 Jan 2014)
-# plugin fails on compile >=vdr-1.7.27
-# dead on upstream, dead on src-uri, wrt bug 414181
-# removal ~ 14/02/2014
-media-plugins/vdr-xxvautotimer
-
-# Joerg Bornkessel <hd_brummy@gentoo.org> (14 Jan 2014)
-# plugin fails on compile >=vdr-1.7.27
-# dead on upstream, wrt bug 414887
-# removal ~ 14/02/2014
-media-plugins/vdr-skinclassic
-
-# Joerg Bornkessel <hd_brummy@gentoo.org> (14 Jan 2014)
-# plugin fails on compile
-# dead on upstream, wrt bug 420869
-# removal ~ 14/02/2014
-media-plugins/vdr-sky
-
-# Joerg Bornkessel <hd_brummy@gentoo.org> (14 Jan 2014)
-# vdr-skinreel fails on compile >=vdr-1.7.27
-# see wrt bug 420873
-# removal ~ 14/02/2014
-media-plugins/vdr-skinreel
 
 # Tony Vroon <chainsaw@gentoo.org> (13 Jan 2014)
 # Asterisk 12 is a short term "standard" release 
@@ -704,11 +697,6 @@ kde-misc/kgtk
 # Masked for testing since this is known to break nearly
 # every reverse dependency wrt bug 407091
 >=dev-lang/lua-5.2.0
-
-# Michał Górny <mgorny@gentoo.org> (21 Jan 2012)
-# Blocks sysvinit yet doesn't provide all tools provided by it.
-# Masking until we get the necessary tools out of sysvinit.
-sys-apps/systemd-sysv-utils
 
 # Jeroen Roovers <jer@gentoo.org> (27 Mar 2012)
 # Opera Next and Opera snapshots are unsupported and eternally unstable.
