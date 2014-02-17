@@ -1,0 +1,13 @@
+DEFINED_PHASES=install unpack
+DEPEND=app-arch/p7zip media-gfx/icoutils
+DESCRIPTION=Proprietary freeware multimedia map of several Russian and Ukrainian towns
+EAPI=4
+HOMEPAGE=http://2gis.ru
+IUSE=+data
+KEYWORDS=x86 amd64
+LICENSE=2Gis-ru
+RDEPEND=>=app-emulation/wine-1.5 data? ( app-misc/2gis-data )
+SLOT=0
+SRC_URI=http://download.2gis.ru/arhives/2GISShell-3.13.12.0.orig.zip
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=ba20ed0af3335ee868dbe98e06600bcf
