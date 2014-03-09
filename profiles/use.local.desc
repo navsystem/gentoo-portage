@@ -1319,6 +1319,7 @@ dev-haskell/lens:test-hunit - You can disable the hunit test suite with -f-test-
 dev-haskell/lens:test-properties - Build the properties test if we're building tests
 dev-haskell/lens:trustworthy - Assert that we are trustworthy when we can
 dev-haskell/monad-control:instancest - If enabled this package will export MonadBaseControl instances for the lazy and strict ST monad. If disabled these instances are only exported when base >= 4.4. If enabled it is required that the transformer-base package exports MonadBase instances for ST. It will do this by default.
+dev-haskell/monad-logger:template_haskell - Enable Template Haskell support.
 dev-haskell/monad-par:chaselev - Use Chase-Lev Deques for higher-perf work-stealing.
 dev-haskell/pandoc-citeproc:bibutils - use Chris Putnam's app-text/bibutils
 dev-haskell/pandoc-citeproc:embed_data_files - Embed locale files into the library (needed for windows packaging)
@@ -1326,6 +1327,7 @@ dev-haskell/pandoc-citeproc:hexpat - use dev-haskell/hexpat instead of dev-haske
 dev-haskell/pandoc-citeproc:network - use dev-haskell/network and dev-haskell/http to retrieve CSL file from URIs
 dev-haskell/pandoc-citeproc:small_base - Choose the new smaller, split-up base package.
 dev-haskell/pandoc-citeproc:unicode_collation - Use Haskell bindings to the dev-libs/icu
+dev-haskell/persistent:nooverlap - Use OverlappingInstances only for String. Only developers should use this.
 dev-haskell/persistent-sqlite:systemlib - Use the system-wide sqlite library
 dev-haskell/quickcheck:template_haskell - Enable additional test modules requiring Template Haskell support.
 dev-haskell/rfc5051:mkunicodedata - build codes generator itself
@@ -1351,10 +1353,16 @@ dev-haskell/unix-compat:old-time - build against old-time package
 dev-haskell/vector:boundschecks - Enable bounds checking
 dev-haskell/vector:internalchecks - Enable internal consistency checks at the cost of a significant performance penalty
 dev-haskell/vector:unsafechecks - Enable bounds checking in unsafe operations at the cost of a significant performance penalty
+dev-haskell/vector-algorithms:bench - Build a benchmarking program.
+dev-haskell/vector-algorithms:boundschecks - Enable bounds checking.
+dev-haskell/vector-algorithms:internalchecks - Enable internal consistency checks at the cost of a significant performance penalty.
+dev-haskell/vector-algorithms:properties - Enable quickcheck tests.
+dev-haskell/vector-algorithms:unsafechecks - Enable bounds checking in unsafe operations at the cost of a significant performance penalty.
 dev-haskell/void:safe - dissable effective but unsafe coersions
 dev-haskell/wai-app-static:print - print debug info.
 dev-haskell/warp:allow-sendfilefd - Allow use of sendfileFd (not available on GNU/kFreeBSD).
 dev-haskell/x11:screensaver - whether to build XScreenSaver.
+dev-haskell/x509-store:executable - Build the executable
 dev-haskell/yaml:no-exe - don't install the yaml2json executable
 dev-haskell/yaml:system-libyaml - Use system libyaml instead on generic one
 dev-haskell/zip-archive:executable - Build the Zip executable.
@@ -2908,7 +2916,7 @@ mail-client/nail:ssl - If network is enabled, this adds support for S/MIME and S
 mail-client/novell-groupwise-client:novell-jre - Use the Java Runtime Environment provided by Novell
 mail-client/squirrelmail:filter - Enable mail-filter/amavisd-new filtering
 mail-client/sylpheed:oniguruma - Use dev-libs/oniguruma for regular expression
-mail-client/thunderbird:bindist - Disable official Firefox branding (icons, name) which are not binary-redistributable according to upstream.
+mail-client/thunderbird:bindist - Disable official Thunderbird branding (icons, name) which are not binary-redistributable according to upstream.
 mail-client/thunderbird:crypt - Enable encryption support with enigmail
 mail-client/thunderbird:custom-optimization - Fine-tune custom compiler optimizations (-Os, -O0, -O1, -O2, -O3)
 mail-client/thunderbird:gconf - Enable gnome2 gconf support
@@ -3007,6 +3015,11 @@ mail-mta/qmail-ldap:rfc2307 - Add support for RFC2307 compliant uid/gid attribut
 mail-mta/qmail-ldap:rfc822 - Add support for RFC822 compliant mail attributes
 mail-mta/qpsmtpd:postfix - create user with permissions for proper postfix interaction
 mail-mta/ssmtp:mta - Install symlinks for sendmail-compatible MTA.
+mate-base/mate-file-manager:mate - Install x11-themes/mate-icon-theme which is needed when this package is used in the MATE desktop environment.
+mate-base/mate-file-manager:unique - Enable single instance support using dev-libs/libunique.
+mate-extra/mate-power-manager:applet - Enable building of the MATE applet.
+mate-extra/mate-power-manager:man - Build power manager's man page.
+mate-extra/mate-power-manager:unique - Enable single instance support using dev-libs/libunique.
 media-fonts/culmus:ancient - Install ancient semitic scripts
 media-fonts/culmus:fancy - Install fancy fonts
 media-fonts/culmus:fontforge - Use media-gfx/fontforge to build fonts from source
@@ -4643,6 +4656,7 @@ net-im/err:plugins - Enable support for installing plugins with dev-vcs/git
 net-im/gajim:idle - Enable idle module
 net-im/gajim:srv - SRV capabilities
 net-im/gajim:xhtml - Enable XHTML support
+net-im/jabberd2:experimental - Enable experimental features such as TLS Everywhere.
 net-im/jabberd2:memdebug - Enable nad and pool debug. Requires USE="debug" to be set.
 net-im/kadu:gadu - Enables Gadu communication protocol
 net-im/kadu:mpd - Enables Music Player Daemon support
@@ -6470,6 +6484,7 @@ sys-devel/gcc-apple:multislot - Allow for SLOTs to include minor version (3.3.4 
 sys-devel/gcc-apple:objc - Build support for the Objective C code language
 sys-devel/gcc-apple:objc++ - Build support for the Objective C++ language
 sys-devel/gdb:client - Install the main "gdb" program (most people want this)
+sys-devel/gdb:lzma - Support lzma compression in ELF debug info
 sys-devel/gdb:multitarget - Support all known targets in one gdb binary
 sys-devel/gdb:python - Enable support for the new internal scripting language, as well as extended pretty printers
 sys-devel/gdb:server - Install the "gdbserver" program (useful for embedded/remote targets)
