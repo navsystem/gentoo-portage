@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/efl-1.9.0.ebuild,v 1.1 2014/03/01 16:30:55 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/efl-1.9.0.ebuild,v 1.3 2014/03/06 01:04:33 zerochaos Exp $
 
 EAPI="5"
 
@@ -126,8 +126,25 @@ RDEPEND="
 	sys-apps/dbus
 	>=sys-apps/util-linux-2.20.0
 	sys-libs/zlib
+
+	!dev-libs/ecore
+	!dev-libs/edbus
+	!dev-libs/eet
+	!dev-libs/eeze
+	!dev-libs/efreet
+	!dev-libs/eina
+	!dev-libs/eio
+	!dev-libs/embryo
+	!dev-libs/eobj
+	!dev-libs/ephysics
+	!media-libs/edje
+	!media-libs/emotion
+	!media-libs/ethumb
+	!media-libs/evas
 "
 
+#soft blockers added above for binpkg users
+#hard blocks are needed for building
 CORE_EFL_CONFLICTS="
 	!!dev-libs/ecore
 	!!dev-libs/edbus
@@ -247,11 +264,13 @@ src_configure() {
 
 	--disable-tizen
 	--disable-gesture
+	--disable-gstreamer1
 	--enable-xinput2
 	--disable-xinput22
 	--disable-multisense
 	--enable-libmount
 	"
+# disable gstreamer:1.0 support until evas_generic_loaders has it too
 
 	enlightenment_src_configure
 }
