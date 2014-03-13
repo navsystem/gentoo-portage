@@ -131,5 +131,6 @@ kde-base/kimgio amd64
 dev-libs/soprano amd64
 kde-base/nepomuk-widgets amd64
 kde-base/kppp amd64
+kde-base/kwalletmanager amd64
 
 ~dev-util/gtk-doc-am-1.20 amd64
