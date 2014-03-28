@@ -66,7 +66,7 @@ sys-apps/systemd-units server
 sys-fs/udev gudev extras hwdb
 virtual/udev hwdb
 net-misc/connman google ntpd ofono openvpn vpnc
-media-libs/mesa g3dvl gles2
+media-libs/mesa g3dvl gles2 gbm
 
 #required by gnome-extra/cinnamon-1.4, required by =gnome-extra/cinnamon-1.4 (argument)
 gnome-base/gnome-menus python
