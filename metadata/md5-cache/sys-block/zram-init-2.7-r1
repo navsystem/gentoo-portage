@@ -1,0 +1,12 @@
+DEFINED_PHASES=install postinst prepare unpack
+DEPEND=virtual/pkgconfig
+DESCRIPTION=Scripts to support compressed swap devices or ramdisks with zram
+EAPI=5
+HOMEPAGE=https://github.com/vaeth/zram-init/
+KEYWORDS=amd64 x86
+LICENSE=GPL-2
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/vaeth/zram-init/tarball/2.7 -> zram-init-2.7.tar.gz
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	readme.gentoo	be2652cdd5c20f4689ccb4769072ea99	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
+_md5_=9ee91ca17f758a30a5e7deef06fc66a4
