@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15557 2014/04/11 06:54:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15560 2014/04/12 06:14:18 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -242,7 +242,7 @@ media-plugins/vdr-ac3mode
 # not converted to xgettext handling, dead on upstream since ~2008
 media-plugins/vdr-bitstreamout
 
-# Rick Farina <zerochaos@gentoo.org> (22 Mar 2014)
+# Rick Farina <zerochaos@gentoo.org> (11 Apr 2014)
 # Upstream has replaced dev-util/dissy with dev-util/emilpro
 # Please switch to emilpro or report issues in bug #505380
 # removal in 30 days.
@@ -316,12 +316,6 @@ net-ftp/pftpfxp
 kde-misc/youtube-servicemenu
 
 # Ulrich Müller <ulm@gentoo.org> (13 Mar 2014)
-# No license, therefore not redistributable. SRC_URI dead.
-# Gentoo live media don't use gdm any more.
-# Masked for removal in 30 days, bug 446794.
-x11-themes/gdm-themes-livecd
-
-# Ulrich Müller <ulm@gentoo.org> (13 Mar 2014)
 # No reverse dependencies. Use dev-libs/libbsd instead.
 # Masked for removal in 60 days, bug 504456.
 dev-libs/clens
@@ -348,6 +342,7 @@ dev-libs/clens
 =xfce-extra/xfce4-xkb-plugin-0.7*
 =xfce-extra/xfce4-indicator-plugin-2*
 =media-sound/pragha-1.3*
+=xfce-extra/xfce4-mixer-4.11*
 
 # Michał Górny <mgorny@gentoo.org> (06 Mar 2014)
 # Compatibility packages masked for removal in 30 days.
