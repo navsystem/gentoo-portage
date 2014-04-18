@@ -134,4 +134,10 @@ kde-base/kppp amd64
 kde-base/kwalletmanager amd64
 kde-base/zeroconf-ioslave amd64
 
-~dev-util/gtk-doc-am-1.20 amd64
+media-libs/libraw amd64
+kde-base/kfilemetadata amd64
+kde-base/baloo amd64
+media-libs/lcms amd64
+dev-libs/libical amd64
+kde-base/libkdcraw amd64
+dev-util/gtk-doc-am amd64
