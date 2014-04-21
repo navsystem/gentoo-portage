@@ -141,3 +141,4 @@ media-libs/lcms amd64
 dev-libs/libical amd64
 kde-base/libkdcraw amd64
 dev-util/gtk-doc-am amd64
+kde-base/baloo-widgets amd64
