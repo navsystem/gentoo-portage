@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15617 2014/04/27 16:10:44 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15620 2014/04/27 22:54:36 mrueg Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Manuel Rüger <mrueg@gentoo.org> (28 Apr 2014)
+# Fails to build with gnutls-3, on behalf of python herd
+# See bug #446016
+dev-python/python-gnutls
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (27 Apr 2014)
 # Mask for testing
@@ -427,20 +432,6 @@ www-apache/mod_ruby
 # Removal in 30 days, use alternative panels like x11-misc/fbpanel
 x11-misc/suxpanel
 
-# Manuel Rüger <mrueg@gentoo.org> (16 Mar 2014)
-# Ruby 1.8 has no longer been supported upstream since July 2013 and
-# has known security issues (bug #492282). Ruby packages in general
-# are no longer compatible with ruby 1.8. Removal is tracked in bug
-# 434064.
-#
-# This mask also includes all packages still depending in ruby 1.8.
-# Removal in 30 days
-dev-lang/ruby:1.8
-virtual/rubygems:ruby18
-virtual/ruby-rdoc:ruby18
-virtual/ruby-ssl:ruby18
-virtual/ruby-threads:ruby18
-
 # Lars Wendler <polynomial-c@gentoo.org> (14 Mar 2014)
 # Masked for security reasons.
 # Do NOT remove this mask or the affected packages without speaking to
@@ -549,7 +540,7 @@ app-emacs/delicious
 >=app-arch/engrampa-1.7
 >=app-editors/pluma-1.7
 >=app-text/mate-doc-utils-1.7
->=app-text/mate-document-viewer-1.7
+>=app-text/atril-1.7
 >=dev-libs/libmateweather-1.7
 >=dev-python/python-caja-1.7
 >=mate-base/caja-1.7
