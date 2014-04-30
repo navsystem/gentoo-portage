@@ -765,7 +765,6 @@ app-leechcraft/lc-poshuku:wyfv - Build WYFV for replacing Flash-based video play
 app-leechcraft/lc-vrooby:udisks - Use sys-fs/udisks:0 for block device access (e.g., automounting)
 app-leechcraft/lc-vrooby:udisks2 - Use sys-fs/udisks:2 for block device access (e.g., automounting)
 app-leechcraft/leechcraft-meta:de - Install components, that allow using Leechcraft as Desktop Environment
-app-leechcraft/leechcraft-meta:unstable - Pull plugins from ~arch
 app-misc/anki:recording - Enable support for audio recording
 app-misc/anki:sound - Enable support for adding sound to cards
 app-misc/binwalk:graph - Enable support for generating entropy graphs
@@ -1018,6 +1017,11 @@ app-shells/shish:diet - Use dev-libs/dietlibc
 app-shells/tcsh:catalogs - Add support for NLS catalogs
 app-text/acroread:html - HTML support and help reading capability (only for x86).
 app-text/asciidoc:highlight - Enable source code highlighting
+app-text/atril:caja - Enable property page extension in mate-base/mate-file-manager
+app-text/atril:dvi - Enable build-in DVI viewer
+app-text/atril:ps - Enable build-in postscript viewer
+app-text/atril:t1lib - Enable the Type-1 fonts for the build-in DVI viewer (media-libs/t1lib)
+app-text/atril:xps - Enable XPS viewer using app-text/libxps
 app-text/calibre:udisks - Add run-time dependency on sys-fs/udisks in order to mount and unmount reading devices.
 app-text/crm114:mew - Add support for using the mewdecode mime decoder (app-emacs/mew)
 app-text/crm114:mimencode - Add support for using the mimencode mime (net-mail/metamail)
@@ -1666,7 +1670,6 @@ dev-libs/folks:utils - Build the folks-inspect utility
 dev-libs/folks:zeitgeist - Add support for Zeitgeist event tracking system
 dev-libs/gecode:gist - Enable Gist, the Gecode Interactive Search Tool
 dev-libs/geoip:city - Install the city based IP address database
-dev-libs/geoip:perl-geoipupdate - Install pure perl version of geoipupdate, with Proxy Server support via the "http_proxy" environment variable and easy to customize.
 dev-libs/gf2x:bindist - Disable automatic fine-tuning to local processor features like pclmul or sse2.
 dev-libs/glib:systemtap - Build support for profiling and tracing using dev-util/systemtap
 dev-libs/glib:utils - Install gtester-report utility to generate test report files for your software.
@@ -2969,6 +2972,7 @@ mail-client/thunderbird:system-icu - Use the system-wide dev-libs/icu Use system
 mail-client/thunderbird:system-jpeg - Use the system-wide media-libs/libjpeg-turbo Use system jpeg instead of bundled.
 mail-client/thunderbird:system-sqlite - Use the system-wide dev-db/sqlite installation with secure-delete enabled
 mail-client/thunderbird-bin:crashreporter - Enable crash reporter for bugs
+mail-client/trojita:password - Store passwords securely via dev-libs/qtkeychain
 mail-filter/MailScanner:exim - Set mail-mta to used MTA
 mail-filter/MailScanner:postfix - Set mail-mta/postfix to used MTA
 mail-filter/MailScanner:spamassassin - Enable usage of mail-filter/spamassassin for spam protection
@@ -5379,6 +5383,7 @@ net-misc/lldpd:lldpmed - Enable LLDP-MED extension
 net-misc/lldpd:seccomp - Enable use of libseccomp for system call filtering
 net-misc/lldpd:snmp - Enable the use of SNMP
 net-misc/lldpd:sonmp - Enable SynOptics Network Management
+net-misc/mediatomb:curl - Support YouTube and external media sources (e.g. internet radio)
 net-misc/mediatomb:id3tag - Use media-libs/libid3tag for reading files' metadata rather than taglib
 net-misc/mediatomb:inotify - Enable inotify filesystem monitoring support
 net-misc/mediatomb:lastfm - Enable last.fm support
@@ -5745,11 +5750,23 @@ net-voip/linphone:tools - Compile tools
 net-voip/linphone:video - Enable video support (display/capture)
 net-voip/sflphone:doxygen - Support for building documentation with doxygen
 net-voip/telepathy-gabble:plugins - Enable plugin loader
-net-voip/yate:dahdi - Enable the DAHDI driver for Digium compatible hardware
-net-voip/yate:h323 - Build H.323 Channel plugin
-net-voip/yate:ilbc - Build ILBC codec plugin
-net-voip/yate:sctp - Support for Stream Control Transmission Protocol
-net-voip/yate:spandsp - Enable support for the spandsp codec
+net-voip/yate:amrnb - use AMR-NB
+net-voip/yate:dahdi - Enable Dahdi driver
+net-voip/yate:gsm - use GSM codec
+net-voip/yate:h323 - use OpenH323
+net-voip/yate:ilbc - Enable iLBC codec
+net-voip/yate:ilbc-webrtc - Enable iLBC webrtc codec
+net-voip/yate:isac-fixed - Enable iSAC fixed codec
+net-voip/yate:isac-float - Enable iSAC float codec
+net-voip/yate:mysql - use MySQL client library
+net-voip/yate:postgres - use Postgress SQL
+net-voip/yate:sctp - Enable SCTP sockets
+net-voip/yate:spandsp - use spandsp library
+net-voip/yate:speex - use Speex codec
+net-voip/yate:tdmcard - Enable TDMV API card driver
+net-voip/yate:wanpipe - Enable Wanpipe support
+net-voip/yate:wpcard - Enable Wanpipe card driver
+net-voip/yate:zaptel - Enable Zaptel driver
 net-wireless/aircrack-ng:airdrop-ng - Build airdrop-ng
 net-wireless/aircrack-ng:airgraph-ng - Build airgraph-ng
 net-wireless/aircrack-ng:netlink - Use netlink for channel control instead of WEXT
@@ -5794,6 +5811,7 @@ net-wireless/kismet:speech - Audio support using app-accessibility/flite
 net-wireless/kismet:suid - Install a setuid root helper binary with limited functionality; this allows running kismet as a normal user, significantly reducing security risks
 net-wireless/madwifi-ng:injection - Adds support for net-wireless/aircrack-ng aireplay-ng packet injection
 net-wireless/neard:tools - build and install extra helper utilities
+net-wireless/osmocom-bb:transmit - Enable transmission capabilities.
 net-wireless/pyrit:cuda - Enable CUDA support via net-wireless/cpyrit-cuda
 net-wireless/pyrit:opencl - Enable OpenCL support via net-wireless/cpyrit-opencl
 net-wireless/spectools:debug - Build the raw output client for spectools. (for developers)
@@ -5816,6 +5834,10 @@ net-wireless/wpa_supplicant:ps3 - Add support for ps3 hypervisor driven gelic wi
 net-wireless/wpa_supplicant:smartcard - Add support for smartcards
 net-wireless/wpa_supplicant:wimax - Add support for Wimax EAP-PEER authentication algorithm
 net-wireless/wpa_supplicant:wps - Add support for Wi-Fi Protected Setup
+net-wireless/yatebts:bladerf - Build bladeRF transceiver
+net-wireless/yatebts:rad1 - Build RAD1 transceiver
+net-wireless/yatebts:uhd - Build UHD transceiver
+net-wireless/yatebts:usrp1 - Build USRP1 transceiver
 razorqt-base/razorqt-meta:lightdm - Install x11-misc/lightdm display manager and Razor-qt's LightDM greeter
 razorqt-base/razorqt-panel:clock - Add clock panel applet
 razorqt-base/razorqt-panel:colorpicker - Add colorpicker panel applet
@@ -6367,7 +6389,7 @@ sys-apps/systemd:kmod - Enable kernel module loading via sys-apps/kmod
 sys-apps/systemd:qrcode - Enable qrcode output support in journal
 sys-apps/systemd:seccomp - Enable system call filtering via seccomp
 sys-apps/systemd:vanilla - Disable Gentoo-specific behavior and compatibility quirks
-sys-apps/tcp-wrappers:netgroups - Support matching NIS (host) netgroup names via the @netgroup syntax (if you don't know what this means, you most likely need want it)
+sys-apps/tcp-wrappers:netgroups - Support matching NIS (host) netgroup names via the @netgroup syntax (if you don't know what this means, you most likely do not need it)
 sys-apps/timer_entropyd:debug - Enable printf debugging and logging to the syslog at DEBUG level
 sys-apps/tuxonice-userui:fbsplash - Add support for framebuffer splash
 sys-apps/ucspi-ssl:tls - Add TLS support (see also http://www.suspectclass.com/~sgifford/ucspi-tls/)
@@ -7241,6 +7263,7 @@ x11-terms/aterm:background - Enable background image support via media-libs/liba
 x11-terms/aterm:xgetdefault - Enable resources via X instead of aterm small version
 x11-terms/eterm:escreen - Enable built-in app-misc/screen support
 x11-terms/eterm:utempter - Include libutempter support
+x11-terms/gnome-terminal:gnome-shell - Integrate with gnome-base/gnome-shell search
 x11-terms/gnome-terminal:nautilus - Build gnome-base/nautilus extension
 x11-terms/hanterm:utempter - Records user logins. Useful on multi-user systems
 x11-terms/mlterm:ibus - Enable app-i18n/ibus support

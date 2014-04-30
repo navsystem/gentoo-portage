@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lcr/lcr-9999.ebuild,v 1.1 2014/04/27 12:08:21 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lcr/lcr-9999.ebuild,v 1.3 2014/04/29 01:24:56 zx2c4 Exp $
 
 EAPI=5
 
@@ -16,12 +16,13 @@ KEYWORDS=""
 IUSE="asterisk +ssl +gsm-bs +gsm-ms ss5 +sip gsmhr misdn"
 
 DEPEND="
+	media-libs/opencore-amr
 	asterisk? ( net-misc/asterisk )
 	ssl? ( dev-libs/openssl )
 	gsm-bs? ( net-wireless/openbsc )
 	sip? ( net-libs/sofia-sip )
+	gsm-ms? ( net-wireless/osmocom-bb )
 "
-	#gsm-ms? ( net-wireless/osmobb )
 	#mdisn? ( net-misc/misdn )
 RDEPEND="${DEPEND}"
 
