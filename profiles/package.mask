@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15656 2014/05/06 16:33:58 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15659 2014/05/07 10:32:36 jlec Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,11 +30,36 @@
 
 #--- END OF EXAMPLES ---
 
+# Justin Lecher <jlec@gentoo.org> (07 May 2014)
+# Still doesn't work as expected
+=sci-chemistry/ccpn-2.4.0_p140425-r1
+
+# Pacho Ramos <pacho@gentoo.org> (06 May 2014)
+# Mask for testing
+>=app-emulation/emul-linux-x86-baselibs-20140506
+>=app-emulation/emul-linux-x86-compat-20140506
+>=app-emulation/emul-linux-x86-cpplibs-20140506
+>=app-emulation/emul-linux-x86-db-20140506
+>=app-emulation/emul-linux-x86-gstplugins-20140506
+>=app-emulation/emul-linux-x86-gtklibs-20140506
+>=app-emulation/emul-linux-x86-gtkmmlibs-20140506
+>=app-emulation/emul-linux-x86-jna-20140506
+>=app-emulation/emul-linux-x86-medialibs-20140506
+>=app-emulation/emul-linux-x86-motif-20140506
+>=app-emulation/emul-linux-x86-opengl-20140506
+>=app-emulation/emul-linux-x86-qtlibs-20140506
+>=app-emulation/emul-linux-x86-sdl-20140506
+>=app-emulation/emul-linux-x86-soundlibs-20140506
+>=app-emulation/emul-linux-x86-xlibs-20140506
+
 # Alexandre Rostovtsev <tetromino@gentoo.org> (06 May 2014)
 # Mask individual pieces of Cinnamon 2.2 until it's complete
+gnome-extra/cjs
 gnome-extra/cinnamon-desktop
+gnome-extra/cinnamon-menus
 gnome-extra/cinnamon-session
 gnome-extra/cinnamon-settings-daemon
+gnome-extra/cinnamon-control-center
 net-wireless/cinnamon-bluetooth
 >=x11-wm/muffin-2.2
 >=gnome-extra/nemo-2.2
