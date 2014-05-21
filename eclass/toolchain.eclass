@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.625 2014/05/15 05:18:33 rhill Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.628 2014/05/20 10:41:23 rhill Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -148,7 +148,7 @@ fi
 #---->> DEPEND <<----
 
 RDEPEND="sys-libs/zlib
-	nls? ( sys-devel/gettext )"
+	nls? ( virtual/libintl )"
 
 tc_version_is_at_least 3 && RDEPEND+=" virtual/libiconv"
 
@@ -835,7 +835,6 @@ toolchain_src_configure() {
 		fi
 		is_objcxx && GCC_LANG+=",obj-c++"
 	fi
-	is_treelang && GCC_LANG+=",treelang"
 
 	# fortran support just got sillier! the lang value can be f77 for
 	# fortran77, f95 for fortran95, or just plain old fortran for the
@@ -1341,7 +1340,8 @@ gcc_do_filter_flags() {
 	# dont want to funk ourselves
 	filter-flags '-mabi*' -m31 -m32 -m64
 
-	filter-flags '-frecord-gcc-switches' # 490738
+	filter-flags -frecord-gcc-switches # 490738
+	filter-flags -mno-rtm -mno-htm # 506202
 
 	if tc_version_is_between 3.2 3.4 ; then
 		# XXX: this is so outdated it's barely useful, but it don't hurt...
@@ -2109,14 +2109,6 @@ is_objc() {
 is_objcxx() {
 	gcc-lang-supported 'obj-c++' || return 1
 	use cxx && use_if_iuse objc++
-}
-
-is_treelang() {
-	use_if_iuse boundschecking && return 1 #260532
-	is_crosscompile && return 1 #199924
-	gcc-lang-supported treelang || return 1
-	#use treelang
-	return 0
 }
 
 # Grab a variable from the build system (taken from linux-info.eclass)
