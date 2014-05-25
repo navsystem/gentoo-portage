@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15721 2014/05/24 08:51:42 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15725 2014/05/25 11:05:33 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Joerg Bornkessel <hd_brummy@gentoo.org (24 May 2014)
+# masked for removal old, plz. upgrade to vdr-2
+# lazyness to update does not count ;)
+# removal ~ 15 Jun 2014
+=media-video/vdr-1.6*
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (24 May 2014)
 # Dev channel releases are only for people who are developers or want more
@@ -186,10 +192,6 @@ app-emulation/qemu-user
 # Fails to build with gnutls-3, on behalf of python herd
 # See bug #446016
 dev-python/python-gnutls
-
-# Andreas K. Huettel <dilfridge@gentoo.org> (27 Apr 2014)
-# Mask for testing
-=app-text/poppler-0.26*
 
 # Gilles Dartiguelongue <eva@gentoo.org> (27 Apr 2014)
 # Gnome 3.12 mask. Also requires:
@@ -526,6 +528,9 @@ lxde-base/lxpolkit
 >=app-emulation/emul-linux-x86-medialibs-20140508-r1
 >=dev-libs/openssl-0.9.8y-r1:0.9.8
 >=app-emulation/emul-linux-x86-baselibs-20140508-r5
+>=net-dns/libidn-1.28-r1
+>=dev-libs/libnl-3.2.24-r1
+>=app-emulation/emul-linux-x86-baselibs-20140508-r6
 
 # Luca Barbato <lu_zero@gentoo.org> (20 Feb 2014)
 # Beta ebuild, unmask to test the tree.
