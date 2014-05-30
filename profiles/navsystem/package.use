@@ -97,3 +97,4 @@ sci-geosciences/mapnik python
 sys-libs/gpm static-libs
 x11-themes/qtcurve gtk
 dev-libs/elfutils static-libs
+media-gfx/exiv2 xmp
