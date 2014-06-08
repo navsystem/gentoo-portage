@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15763 2014/06/06 00:26:20 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15770 2014/06/08 10:35:06 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -39,8 +39,9 @@
 # in denial of service) or for privilege escalation.
 #
 # https://bugs.gentoo.org/show_bug.cgi?id=CVE-2014-3153
-#
-# More revision bumps and masks will occur as soon as possible.
+=sys-kernel/gentoo-sources-3.2.58-r2
+~sys-kernel/gentoo-sources-3.4.90
+=sys-kernel/gentoo-sources-3.4.91
 ~sys-kernel/gentoo-sources-3.10.40
 =sys-kernel/gentoo-sources-3.10.41
 ~sys-kernel/gentoo-sources-3.12.20
@@ -78,20 +79,14 @@ dev-java/ibm-jdk-bin:1.5
 # Michał Górny <mgorny@gentoo.org> (29 May 2014)
 # New multilib conversions. Unmask along with corresponding
 # emul-linux-x86 packages, and make sure they're committed first :).
->=media-libs/libart_lgpl-2.3.21-r2
->=sys-libs/cracklib-2.9.1-r1
->=app-emulation/emul-linux-x86-baselibs-20140508-r7
->=sys-process/audit-2.2.2-r2
->=net-libs/libtirpc-0.2.4-r2
->=sys-devel/flex-2.5.39-r1
->=sys-libs/pam-1.1.8-r2
->=virtual/pam-0-r1
->=sys-auth/nss-mdns-0.10-r2
->=sys-auth/nss_ldap-265-r5
->=sys-auth/pam_ldap-186-r1
->=app-emulation/emul-linux-x86-baselibs-20140508-r8
->=dev-libs/cyrus-sasl-2.1.26-r6
->=sys-libs/libsemanage-2.3-r1
+>=dev-util/cppunit-1.13.2-r1
+>=media-libs/taglib-1.9.1-r1
+>=media-libs/libofa-0.9.3-r1
+>=app-emulation/emul-linux-x86-medialibs-20140508-r3
+>=media-video/libav-9.13-r1
+>=virtual/ffmpeg-9-r1
+>=media-libs/libpostproc-10.20140517-r1
+>=app-emulation/emul-linux-x86-medialibs-20140508-r4
 
 # Vladimir Smirnov <civil@gentoo.org> (27 May 2014)
 # Masked for testing, will defenitely cause major breakage
@@ -173,24 +168,6 @@ games-emulation/neopocott
 # Dead for ages, now in mjpegtools, bug #492886
 # Removal in a month.
 media-video/y4mscaler
-
-# Ulrich Müller <ulm@gentoo.org> (08 May 2014)
-# SLOTs 21 and 22 of app-editors/emacs, corresponding to
-# GNU Emacs versions 21.4 and 22.3. These versions were
-# released in February 2005 and September 2008, respectively.
-# Please upgrade to >=app-editors/emacs-23 and update your
-# Emacs Lisp packages with emacs-updater.
-# Multiple security issues with temporary files, bug 509830.
-# Masked since 13 Dec 2011, removal at 07 Jun 2014. Bug 394589.
-=app-editors/emacs-21*
-=app-editors/emacs-22*
-~virtual/emacs-21
-~virtual/emacs-22
-
-# Manuel Rüger <mrueg@gentoo.org> (07 May 2014)
-# Useful for removed ruby18, no-op in ruby19 and later.
-# Masked for removal in 30 days.
-dev-ruby/fastthread
 
 # Justin Lecher <jlec@gentoo.org> (07 May 2014)
 # Still doesn't work as expected
