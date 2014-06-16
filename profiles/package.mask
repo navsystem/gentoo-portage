@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15784 2014/06/11 21:24:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15801 2014/06/15 13:36:22 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,10 +30,25 @@
 
 #--- END OF EXAMPLES ---
 
+# Anthony G. Basile <blueness@gentoo.org> (14 Jun 2014)
+# Masked for removal in 30 days, bug #495848
+net-libs/cyassl
+
+# Markos Chandras <hwoarang@gentoo.org> (14 Jun 2014)
+# Masked for testing in production
+>=sys-auth/sssd-1.11.6
+
+# Mike Gilbert <floppym@gentoo.org> (13 Jun 2014)
+# Masked due to security bug 499870.
+# Please migrate to net-misc/libreswan.
+# If you are a Gentoo developer, feel free to pick up maintenence of openswan
+# and remove this mask after resolving the security issue.
+net-misc/openswan
+
 # Mike Gilbert <floppym@gentoo.org> (10 Jun 2014)
 # Masked due to pending dev-python/imaging removal, bug 471488.
 media-sound/decibel-audio-player
-net-im/pymsn-t
+=net-im/pymsn-t-0.11.3-r3
 sci-physics/camfr
 
 # Tom Wijsman <TomWij@gentoo.org> (8 Jun 2014)
@@ -97,173 +112,19 @@ dev-java/ibm-jdk-bin:1.5
 # Michał Górny <mgorny@gentoo.org> (29 May 2014)
 # New multilib conversions. Unmask along with corresponding
 # emul-linux-x86 packages, and make sure they're committed first :).
->=dev-util/cppunit-1.13.2-r1
->=media-libs/taglib-1.9.1-r1
->=media-libs/libofa-0.9.3-r1
->=app-emulation/emul-linux-x86-medialibs-20140508-r3
->=media-video/libav-9.13-r1
->=media-video/ffmpeg-2.2.3-r1
->=virtual/ffmpeg-9-r1
->=media-libs/libpostproc-10.20140517-r1
->=app-emulation/emul-linux-x86-medialibs-20140508-r4
->=net-libs/libsoup-2.46.0-r1
->=net-libs/neon-0.30.0-r1
->=app-emulation/emul-linux-x86-baselibs-20140508-r9
->=net-libs/gssdp-0.14.8-r1
->=net-libs/gupnp-0.20.12-r1
->=net-libs/gupnp-igd-0.2.3-r1
->=net-libs/libnice-0.1.4-r1
->=media-libs/libquicktime-1.2.4-r1
->=media-video/mjpegtools-2.1.0-r2
->=app-emulation/emul-linux-x86-medialibs-20140508-r5
->=media-libs/gstreamer-0.10.36-r1:0.10
->=media-libs/gstreamer-1.2.4-r1:1.0
->=media-libs/gst-plugins-base-0.10.36-r1:0.10
->=media-libs/gst-plugins-base-1.2.4-r1:1.0
->=app-emulation/emul-linux-x86-medialibs-20140508-r6
->=media-libs/gst-plugins-bad-0.10.23-r2:0.10
->=media-libs/gst-plugins-bad-1.2.4-r1:1.0
->=media-libs/gst-plugins-good-0.10.31-r1:0.10
->=media-libs/gst-plugins-good-1.2.4-r1:1.0
->=media-libs/gst-plugins-ugly-0.10.19-r1:0.10
->=media-libs/gst-plugins-ugly-1.2.4-r1:1.0
->=media-plugins/gst-plugins-a52dec-0.10.19-r1:0.10
->=media-plugins/gst-plugins-a52dec-1.2.4-r1:1.0
->=media-plugins/gst-plugins-alsa-0.10.36-r1:0.10
->=media-plugins/gst-plugins-amr-0.10.19-r1:0.10
->=media-plugins/gst-plugins-amr-1.2.4-r1:1.0
->=media-plugins/gst-plugins-annodex-0.10.31-r1:0.10
->=media-plugins/gst-plugins-assrender-0.10.23-r1:0.10
->=media-plugins/gst-plugins-assrender-1.2.4-r1:1.0
->=media-plugins/gst-plugins-cdio-0.10.19-r1:0.10
->=media-plugins/gst-plugins-cdio-1.2.4-r1:1.0
->=media-plugins/gst-plugins-cdparanoia-0.10.36-r1:0.10
->=media-plugins/gst-plugins-cdparanoia-1.2.4-r1:1.0
->=media-plugins/gst-plugins-dash-1.2.4-r1:1.0
->=media-plugins/gst-plugins-dts-0.10.23-r1:0.10
->=media-plugins/gst-plugins-dts-1.2.4-r1:1.0
->=media-plugins/gst-plugins-dv-0.10.31-r1:0.10
->=media-plugins/gst-plugins-dv-1.2.4-r1:1.0
->=media-plugins/gst-plugins-dvb-0.10.23-r1:0.10
->=media-plugins/gst-plugins-dvb-1.2.4-r1:1.0
->=media-plugins/gst-plugins-dvdread-0.10.19-r1:0.10
->=media-plugins/gst-plugins-dvdread-1.2.4-r1:1.0
->=media-plugins/gst-plugins-faac-0.10.23-r1:0.10
->=media-plugins/gst-plugins-faac-1.2.4-r1:1.0
->=media-plugins/gst-plugins-faad-0.10.23-r1:0.10
->=media-plugins/gst-plugins-faad-1.2.4-r1:1.0
->=media-plugins/gst-plugins-ffmpeg-0.10.13_p201211-r2:0.10
->=media-plugins/gst-plugins-flac-0.10.31-r1:0.10
->=media-plugins/gst-plugins-flac-1.2.4-r1:1.0
->=media-plugins/gst-plugins-gdkpixbuf-0.10.31-r1:0.10
->=media-plugins/gst-plugins-gdkpixbuf-1.2.4-r1:1.0
->=media-plugins/gst-plugins-gio-0.10.36-r1:0.10
->=media-plugins/gst-plugins-gl-0.10.3-r1
->=media-plugins/gst-plugins-gsm-0.10.23-r1:0.10
->=media-plugins/gst-plugins-hls-1.2.4-r1:1.0
->=media-plugins/gst-plugins-ivorbis-0.10.36-r1:0.10
->=media-plugins/gst-plugins-jack-0.10.31-r1:0.10
->=media-plugins/gst-plugins-jack-1.2.4-r1:1.0
->=media-plugins/gst-plugins-jpeg-0.10.31-r1:0.10
->=media-plugins/gst-plugins-jpeg-1.2.4-r1:1.0
->=media-plugins/gst-plugins-ladspa-0.10.23-r1:0.10
->=media-plugins/gst-plugins-lame-0.10.19-r1:0.10
->=media-plugins/gst-plugins-lame-1.2.4-r1:1.0
->=media-plugins/gst-plugins-libav-1.2.0-r1:1.0
->=media-plugins/gst-plugins-libmms-0.10.23-r1:0.10
->=media-plugins/gst-plugins-libmms-1.2.4-r1:1.0
->=media-plugins/gst-plugins-libnice-0.1.4-r1:0.10
->=media-plugins/gst-plugins-libnice-0.1.4-r101:1.0
->=media-plugins/gst-plugins-libpng-0.10.31-r1:0.10
->=media-plugins/gst-plugins-libpng-1.2.4-r1:1.0
->=media-plugins/gst-plugins-libvisual-0.10.36-r1:0.10
->=media-plugins/gst-plugins-libvisual-1.2.4-r1:1.0
->=media-plugins/gst-plugins-mad-0.10.19-r1:0.10
->=media-plugins/gst-plugins-mad-1.2.4-r1:1.0
->=media-plugins/gst-plugins-meta-0.10-r9:0.10
->=media-plugins/gst-plugins-meta-1.0-r2:1.0
->=media-plugins/gst-plugins-mimic-0.10.23-r1:0.10
->=media-plugins/gst-plugins-mimic-1.2.4-r1:1.0
->=media-plugins/gst-plugins-modplug-0.10.23-r1:0.10
->=media-plugins/gst-plugins-modplug-1.2.4-r1:1.0
->=media-plugins/gst-plugins-mpeg2dec-0.10.19-r1:0.10
->=media-plugins/gst-plugins-mpeg2dec-1.2.4-r1:1.0
->=media-plugins/gst-plugins-mpeg2enc-0.10.23-r1:0.10
->=media-plugins/gst-plugins-mpeg2enc-1.2.4-r1:1.0
->=media-plugins/gst-plugins-mplex-0.10.23-r1:0.10
->=media-plugins/gst-plugins-mplex-1.2.4-r1:1.0
->=media-plugins/gst-plugins-musepack-0.10.23-r1:0.10
->=media-plugins/gst-plugins-neon-0.10.23-r1:0.10
->=media-plugins/gst-plugins-neon-1.2.4-r1:1.0
->=media-plugins/gst-plugins-ofa-0.10.23-r1:0.10
->=media-plugins/gst-plugins-ofa-1.2.4-r1:1.0
->=media-plugins/gst-plugins-ogg-0.10.36-r1:0.10
->=media-plugins/gst-plugins-opus-0.10.23-r1:0.10
->=media-plugins/gst-plugins-opus-1.2.4-r1:1.0
->=media-plugins/gst-plugins-oss-0.10.31-r1:0.10
->=media-plugins/gst-plugins-oss-1.2.4-r1:1.0
->=media-plugins/gst-plugins-pango-0.10.36-r1:0.10
->=media-plugins/gst-plugins-pulse-0.10.31-r1:0.10
->=media-plugins/gst-plugins-pulse-1.2.4-r1:1.0
->=media-plugins/gst-plugins-raw1394-0.10.31-r1:0.10
->=media-plugins/gst-plugins-raw1394-1.2.4-r1:1.0
->=media-plugins/gst-plugins-resindvd-0.10.23-r1:0.10
->=media-plugins/gst-plugins-resindvd-1.2.4-r1:1.0
->=media-plugins/gst-plugins-rtmp-0.10.23-r1:0.10
->=media-plugins/gst-plugins-rtmp-1.2.4-r1:1.0
->=media-plugins/gst-plugins-schroedinger-0.10.23-r1:0.10
->=media-plugins/gst-plugins-schroedinger-1.2.4-r1:1.0
->=media-plugins/gst-plugins-shout2-0.10.31-r1:0.10
->=media-plugins/gst-plugins-shout2-1.2.4-r1:1.0
->=media-plugins/gst-plugins-sidplay-0.10.19-r1:0.10
->=media-plugins/gst-plugins-sidplay-1.2.4-r1:1.0
->=media-plugins/gst-plugins-smoothstreaming-1.2.4-r1:1.0
->=media-plugins/gst-plugins-soundtouch-0.10.23-r1:0.10
->=media-plugins/gst-plugins-soundtouch-1.2.4-r1:1.0
->=media-plugins/gst-plugins-soup-0.10.31-r1:0.10
->=media-plugins/gst-plugins-soup-1.2.4-r1:1.0
->=media-plugins/gst-plugins-speex-0.10.31-r1:0.10
->=media-plugins/gst-plugins-speex-1.2.4-r1:1.0
->=media-plugins/gst-plugins-taglib-0.10.31-r1:0.10
->=media-plugins/gst-plugins-taglib-1.2.4-r1:1.0
->=media-plugins/gst-plugins-theora-0.10.36-r1:0.10
->=media-plugins/gst-plugins-twolame-0.10.19-r1:0.10
->=media-plugins/gst-plugins-twolame-1.2.4-r1:1.0
->=media-plugins/gst-plugins-v4l2-0.10.31-r1:0.10
->=media-plugins/gst-plugins-v4l2-1.2.4-r1:1.0
->=media-plugins/gst-plugins-vaapi-0.5.8-r1:1.0
->=media-plugins/gst-plugins-voaacenc-1.2.4-r1:1.0
->=media-plugins/gst-plugins-voamrwbenc-1.2.4-r1:1.0
->=media-plugins/gst-plugins-vorbis-0.10.36-r1:0.10
->=media-plugins/gst-plugins-vp8-0.10.23-r2:0.10
->=media-plugins/gst-plugins-vpx-1.2.4-r1:1.0
->=media-plugins/gst-plugins-wavpack-0.10.31-r1:0.10
->=media-plugins/gst-plugins-wavpack-1.2.4-r1:1.0
->=media-plugins/gst-plugins-x-0.10.36-r1:0.10
->=media-plugins/gst-plugins-x264-0.10.19-r1:0.10
->=media-plugins/gst-plugins-x264-1.2.4-r1:1.0
->=media-plugins/gst-plugins-ximagesrc-0.10.31-r1:0.10
->=media-plugins/gst-plugins-ximagesrc-1.2.4-r1:1.0
->=media-plugins/gst-plugins-xvid-0.10.23-r1:0.10
->=media-plugins/gst-plugins-xvideo-0.10.36-r1:0.10
->=app-emulation/emul-linux-x86-gstplugins-20140508-r1
-=net-fs/samba-3.6.23-r1
->=gnome-base/gconf-3.2.6-r3
->=gnome-base/gnome-vfs-2.24.4-r2
->=media-plugins/gst-plugins-gconf-0.10.31-r1
->=media-plugins/gst-plugins-gnomevfs-0.10.36-r1
->=app-emulation/emul-linux-x86-gtklibs-20140508-r2
+>=dev-libs/nspr-4.10.6-r1
+>=dev-libs/nss-3.16-r1
+>=app-emulation/emul-linux-x86-baselibs-20140508-r10
+>=net-misc/curl-7.37.0-r1
+>=app-emulation/emul-linux-x86-baselibs-20140508-r11
+>=media-libs/libquvi-0.9.4-r1:0
+>=media-libs/libquvi-0.4.1-r2:0.4
+>=media-libs/libquvi-scripts-0.9.20131130-r1:0
+>=media-libs/libquvi-scripts-0.4.21-r2:0.4
 
 # Vladimir Smirnov <civil@gentoo.org> (27 May 2014)
 # Masked for testing, will defenitely cause major breakage
 =dev-lang/perl-5.20*
-
-# Joerg Bornkessel <hd_brummy@gentoo.org (24 May 2014)
-# masked for removal old, plz. upgrade to vdr-2
-# lazyness to update does not count ;)
-# removal ~ 15 Jun 2014
-=media-video/vdr-1.6*
-media-plugins/vdr-noepgmenu
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (24 May 2014)
 # Dev channel releases are only for people who are developers or want more
@@ -368,11 +229,6 @@ net-wireless/mate-bluetooth
 # static user helpers.  See #508098 for more info. Removal in a month
 app-emulation/qemu-user
 
-# Eray Aslan <eras@gentoo.org> (26 Apr 2014)
-# Non-functional and no longer needed - bug #450116
-# Removal in 30 days
-net-mail/fetchyahoo
-
 # Michał Górny <mgorny@gentoo.org> (26 Apr 2014)
 # (on behalf of Python team)
 # Python 2.6 is no longer supported upstream and security issue fixes
@@ -396,7 +252,9 @@ dev-python/manifestdestiny
 # Masked slotted lua for testing
 app-admin/eselect-lua
 =dev-lang/lua-5.1.5-r2
+=dev-lang/lua-5.1.5-r100
 =dev-lang/lua-5.2.3
+=dev-lang/lua-5.2.3-r1
 
 # Samuli Suominen <ssuominen@gentoo.org> (12 Apr 2014)
 # Dead upstream, unused in gentoo-x86.
@@ -503,12 +361,6 @@ lxde-base/lxpolkit
 # me know such that we can continue to keep it around. Guess nobody even still
 # uses this package either, but that's for another day...
 =dev-java/jikes-1.22-r1
-
-# Eray Aslan <eras@gentoo.org> (17 Feb 2014)
-# Security mask - bug #492494 until
-# mail-filter/dovecot-antispam is punted/fixed
-=net-mail/dovecot-2.0*
-=net-mail/dovecot-2.1*
 
 # Tim Harder <radhermit@gentoo.org> (04 Feb 2014)
 # Masked for testing
