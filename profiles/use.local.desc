@@ -3541,7 +3541,6 @@ media-libs/mlt:melt - Build the melt commandline tool
 media-libs/mlt:python - Build SWIG bindings for Python
 media-libs/mlt:rtaudio - Builds rtaudio consumer for native audio support on multiple platforms.
 media-libs/mlt:ruby - Build SWIG bindings for Ruby
-media-libs/mlt:swfdec - Use media-libs/swfdec for reading .swf files (Macromedia Flash) instead of libavformat.
 media-libs/netpbm:rle - Build converters for the RLE format (utah raster toolkit)
 media-libs/openal:alstream - Build and install the FFmpeg based alstream example utility
 media-libs/opencolorio:pdf - Install extra documentation in PDF format
@@ -3837,6 +3836,7 @@ media-sound/lame:mp3rtp - Build the mp3-to-RTP streaming utility. **UNSUPPORTED*
 media-sound/lmms:fluidsynth - Enables Fluidsynth MIDI software synthesis plugin.
 media-sound/lmms:stk - Enables STK Mallet plugin.
 media-sound/lmms:vst - Enables the VeSTige plugin to run VST plugins through Wine.
+media-sound/lyvi:mpris - Enable MPRIS support
 media-sound/mangler:espeak - Text to speech engine
 media-sound/mangler:g15 - Logitech g15 lcd support
 media-sound/mangler:opus - Codec specialized for speech over the internet
@@ -4023,6 +4023,10 @@ media-tv/mythtv:raop - Remote Audio Output Protocol (aka AirTunes/AirPlay)
 media-tv/mythtv:vaapi - Enables VAAPI (Video Acceleration API) for hardware decoding
 media-tv/mythtv:xmltv - Pulls in the media-tv/xmltv TV listing grabbers for users not using Schedules Direct.
 media-tv/tvbrowser:themes - Install extra theme packs
+media-tv/tvheadend:ccache - Use dev-util/ccache
+media-tv/tvheadend:dvbscan - Use media-tv/linuxtv-dvb-apps
+media-tv/tvheadend:imagecache - Enable support for image caching
+media-tv/tvheadend:uriparser - Use dev-libs/uriparser
 media-tv/tvheadend:xmltv - Use media-tv/xmltv
 media-tv/v4l-dvb-saa716x:firmware - Install firmware
 media-tv/xawtv:xext - Enable use of XFree extensions (DGA,VidMode,DPMS)
