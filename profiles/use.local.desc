@@ -780,13 +780,16 @@ app-leechcraft/lc-monocle:spectre - Enable PostScript backend for Monocle using 
 app-leechcraft/lc-musiczombie:acoustid - Use media-libs/chromaprint for acoustic fingerprinting
 app-leechcraft/lc-netstoremanager:googledrive - Support Google Drive storage backend
 app-leechcraft/lc-netstoremanager:yandexdisk - Support Yandex.Disk storage backend
+app-leechcraft/lc-poshuku:autosearch - Provide automatic search suggestions for Poshuku.
 app-leechcraft/lc-poshuku:cleanweb - Build CleanWeb for ad blocking compatible with Firefox's AdBlock+.
+app-leechcraft/lc-poshuku:dcac - Build color inverter module providing a night mode.
 app-leechcraft/lc-poshuku:fatape - Build FatApe, GreaseMonkey userscripts support layer.
 app-leechcraft/lc-poshuku:filescheme - Build FileScheme for accessing local URLs.
 app-leechcraft/lc-poshuku:fua - Build FUA for faking user agents for different hosts.
 app-leechcraft/lc-poshuku:keywords - Build Keywords for adjusting search shortcuts.
 app-leechcraft/lc-poshuku:onlinebookmarks - Build OnlineBookmarks for syncing bookmarks with social bookmarking services like Read It Later.
 app-leechcraft/lc-poshuku:pcre - Use dev-libs/libpcre for rules matching in CleanWeb instead of slower QRegExp.
+app-leechcraft/lc-poshuku:qrd - Build module for displaying the QR code of a web page.
 app-leechcraft/lc-poshuku:wyfv - Build WYFV for replacing Flash-based video players on some sites.
 app-leechcraft/lc-vrooby:udisks - Use sys-fs/udisks:0 for block device access (e.g., automounting)
 app-leechcraft/lc-vrooby:udisks2 - Use sys-fs/udisks:2 for block device access (e.g., automounting)
@@ -4853,7 +4856,6 @@ net-im/ktp-accounts-kcm:modemmanager - Enable support for mobile broadband devic
 net-im/licq:aosd - Build the advanced on screen display plugin.
 net-im/mcabber:aspell - Adds support for app-text/aspell spell checker.
 net-im/mcabber:otr - Enable encrypted conversations using Off-The-Records messaging
-net-im/minbif:video - Add video support
 net-im/pidgin:gadu - Enable Gadu Gadu protocol support
 net-im/pidgin:groupwise - Enable Novell Groupwise protocol support
 net-im/pidgin:gstreamer - Enables voice and video sessions
@@ -5138,6 +5140,7 @@ net-libs/ldns:gost - Enable GOST support
 net-libs/libbtbb:pcap - Add support for network packet capture via net-libs/libpcap
 net-libs/libbtbb:wireshark - Build the wireshark plugin for bluetooth baseband sniffing
 net-libs/libbtbb:wireshark-plugins - Build the wireshark plugins for bluetooth baseband sniffing
+net-libs/libcrafter:pcap - Use net-libs/libpcap for packet capturing
 net-libs/libeXosip:srv - enable support for SRV records DNS queries
 net-libs/libesmtp:ssl - Enable support for advanced SMTP authentication methods, like NTML and STARTTLS. Also use OpenSSL's MD5 implementation over internal version.
 net-libs/libetpan:liblockfile - Enable support for liblockfile library
@@ -5319,6 +5322,7 @@ net-mail/vpopmail:maildrop - Enables mail-filter/maildrop support in vdelivermai
 net-mail/vpopmail:spamassassin - Enables mail-filter/spamassassin support
 net-misc/apt-cacher-ng:fuse - Install the sys-fs/fuse based acngfs, to use a userspace filesystem for the apt cache.
 net-misc/aria2:bittorrent - Enable support for the bittorrent protocol.
+net-misc/aria2:jemalloc - Use dev-libs/jemalloc to replace the malloc() implementation with a possibly faster one
 net-misc/aria2:libuv - Use dev-libs/libuv backend.
 net-misc/aria2:libxml2 - Use dev-libs/libxml2 for XML parsing (preferred) instead of dev-libs/expat.
 net-misc/aria2:metalink - Enable support for metalink.
@@ -5403,6 +5407,7 @@ net-misc/bfgminer:sse2_4way - Enable support for CPU SSE2 4way mining algorithm
 net-misc/bfgminer:sse4 - Enable support for CPU SSE4 mining algorithm
 net-misc/bfgminer:twinfury - Enable support for mining with Twinfury USB sticks
 net-misc/bfgminer:x6500 - Enable support for mining with X6500 FPGAs
+net-misc/bfgminer:zeusminer - Enable support for mining with ZeusMiner units
 net-misc/bfgminer:ztex - Enable support for mining with Ztex FPGAs
 net-misc/cfengine:html - Install HTML documentation
 net-misc/cfengine:libvirt - Enable support for virtual machine management through app-emulation/libvirt
@@ -6018,13 +6023,19 @@ sci-chemistry/ghemical:openbabel - Use sci-chemistry/openbabel for file conversi
 sci-chemistry/ghemical:toolbar - Build the shortcuts toolbar
 sci-chemistry/gromacs:avx128fma - Enable 128bit avx with fma (e.g. AMD BullDozer)
 sci-chemistry/gromacs:avx256 - Enable 256bit avx (e.g. Intel Sandy Bridge)
+sci-chemistry/gromacs:avx2_256 - Enable 256bit avx2 (e.g. Intel Haswell)
+sci-chemistry/gromacs:avx_128_fma - Enable 128bit avx with fma (e.g. AMD BullDozer)
+sci-chemistry/gromacs:avx_256 - Enable 256bit avx (e.g. Intel Sandy Bridge)
+sci-chemistry/gromacs:boost - Enable external boost library
 sci-chemistry/gromacs:cuda - Enable cuda non-bonded kernels
 sci-chemistry/gromacs:double-precision - More precise calculations at the expense of speed
+sci-chemistry/gromacs:make-symlinks - Create symbolic links for pre-5.0 binary names
 sci-chemistry/gromacs:mkl - Use sci-libs/mkl for fft, blas, lapack routines
 sci-chemistry/gromacs:offensive - Enable gromacs partly offensive quotes
 sci-chemistry/gromacs:openmm - Add acceleration through sci-libs/openmm
 sci-chemistry/gromacs:single-precision - Single precision version of gromacs (default)
 sci-chemistry/gromacs:sse4_1 - Enable sse4.1 acceleration
+sci-chemistry/gromacs:tng - Enable new trajectory format - tng
 sci-chemistry/gsim:emf - Support for .emf export
 sci-chemistry/icm:32bit - Automatically generated description for 32bit
 sci-chemistry/icm:64bit - Automatically generated description for 64bit
@@ -6568,6 +6579,8 @@ sys-block/gparted:xfs - Include XFS support (sys-fs/xfsprogs, sys-fs/xfsdump)
 sys-block/parted:debug - Enable debugging as encouraged by upstream: [The default configuration] includes --enable-debug (by default), which contains many assertions. Obviously, these "waste" space, but in the past, they have caught potentially dangerous bugs before they would have done damage, so we think it's worth it. Also, it means we get more bug reports ;)
 sys-block/parted:device-mapper - Enable device-mapper support from sys-fs/lvm2 in parted
 sys-block/partimage:nologin - Do not include login support when connecting partimaged
+sys-block/sas2ircu:efi - Install EFI variant as well
+sys-block/sas3ircu:efi - Install EFI variant as well
 sys-block/tgt:fcoe - Add support for FCoE protocol
 sys-block/tgt:fcp - Add support for new FC protocol
 sys-block/tgt:ibmvio - Add support for IBM Virtual I/O
@@ -6635,18 +6648,11 @@ sys-cluster/neutron:linuxbridge - Installs the initscripts for the neutron linux
 sys-cluster/neutron:metadata - Installs the initscripts for the neutron metadata agent service
 sys-cluster/neutron:openvswitch - Installs the initscripts for the neutron openvswitch agent service
 sys-cluster/neutron:server - Installs the initscripts for the neutron server service
-sys-cluster/nova:api - Installs the initscripts for the nova api service
-sys-cluster/nova:cert - Installs the initscripts for the nova scheduler service
 sys-cluster/nova:compute - Installs the initscripts for the nova volume service
-sys-cluster/nova:conductor - Installs the initscripts for the nova conductor service
-sys-cluster/nova:consoleauth - Installs the initscripts for the nova consoleauth service
 sys-cluster/nova:kvm - qemu-kvm hypervisor support
 sys-cluster/nova:network - Installs the initscripts for the nova network service
 sys-cluster/nova:novncproxy - Installs the initscripts for the nova novncproxy service
-sys-cluster/nova:scheduler - Installs the initscripts for the nova scheduler service
-sys-cluster/nova:spicehtml5proxy - Installs the initscripts for the nova spicehtml5proxy service
 sys-cluster/nova:xen - xen hypervisor support
-sys-cluster/nova:xvpvncproxy - Installs the initscripts for the nova xvpvncproxy service
 sys-cluster/ocfs:aio - Add aio support
 sys-cluster/openmpi:cma - Enable the CMA (Cross Memory Attach) MCA
 sys-cluster/openmpi:cuda - Add GPU direct support
