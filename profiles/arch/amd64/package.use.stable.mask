@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.13 2014/06/15 09:49:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.33 2014/07/03 17:01:37 pacho Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -64,6 +64,7 @@ dev-java/jna abi_x86_32
 dev-lang/orc abi_x86_32
 dev-lang/perl abi_x86_32
 dev-lang/python abi_x86_32
+dev-lang/tcl abi_x86_32
 dev-libs/angelscript abi_x86_32
 dev-libs/atk abi_x86_32
 dev-libs/boost abi_x86_32
@@ -81,6 +82,7 @@ dev-libs/libcdio abi_x86_32
 dev-libs/libcdio-paranoia abi_x86_32
 dev-libs/libconfig abi_x86_32
 dev-libs/libcss abi_x86_32
+dev-libs/libcroco abi_x86_32
 dev-libs/libedit abi_x86_32
 dev-libs/libelf abi_x86_32
 dev-libs/libevent abi_x86_32
@@ -111,6 +113,7 @@ dev-libs/nsgenbind abi_x86_32
 dev-libs/nspr abi_x86_32
 dev-libs/nss abi_x86_32
 dev-libs/openssl abi_x86_32
+dev-util/pkgconfig abi_x86_32
 dev-libs/re2 abi_x86_32
 dev-libs/udis86 abi_x86_32
 dev-libs/wayland abi_x86_32
@@ -128,6 +131,10 @@ dev-qt/qtxmlpatterns abi_x86_32
 gnome-base/gconf abi_x86_32
 gnome-base/gnome-vfs abi_x86_32
 gnome-base/libglade abi_x86_32
+gnome-base/libgnomecanvas abi_x86_32
+gnome-base/libgnomeprint abi_x86_32
+gnome-base/libgnomeprintui abi_x86_32
+gnome-base/librsvg abi_x86_32
 gnome-base/orbit abi_x86_32
 media-gfx/graphite2 abi_x86_32
 media-gfx/sane-backends abi_x86_32
@@ -148,6 +155,7 @@ media-libs/freeglut abi_x86_32
 media-libs/freetype abi_x86_32
 media-libs/game-music-emu abi_x86_32
 media-libs/gavl abi_x86_32
+media-libs/gd abi_x86_32
 media-libs/giflib abi_x86_32
 media-libs/glew abi_x86_32
 media-libs/glu abi_x86_32
@@ -228,6 +236,7 @@ media-libs/soxr abi_x86_32
 media-libs/speex abi_x86_32
 media-libs/taglib abi_x86_32
 media-libs/tiff abi_x86_32
+media-libs/tremor abi_x86_32
 media-libs/vo-aacenc abi_x86_32
 media-libs/vo-amrwbenc abi_x86_32
 media-libs/webrtc-audio-processing abi_x86_32
@@ -305,10 +314,16 @@ media-video/mjpegtools abi_x86_32
 media-video/vcdimager abi_x86_32
 net-dialup/capi4k-utils abi_x86_32
 net-dns/libidn abi_x86_32
+net-fs/samba abi_x86_32
+net-libs/glib-networking abi_x86_32
 net-libs/gnutls abi_x86_32
+net-libs/gssdp abi_x86_32
+net-libs/gupnp abi_x86_32
 net-libs/libdom abi_x86_32
 net-libs/libgssglue abi_x86_32
 net-libs/libhubbub abi_x86_32
+net-libs/libnice abi_x86_32
+net-libs/libproxy abi_x86_32
 net-libs/libsoup abi_x86_32
 net-libs/libtirpc abi_x86_32
 net-libs/nacl abi_x86_32
@@ -317,6 +332,7 @@ net-libs/polarssl abi_x86_32
 net-misc/curl abi_x86_32
 net-nds/openldap abi_x86_32
 net-print/cups abi_x86_32
+net-print/libgnomecups abi_x86_32
 net-wireless/bluez abi_x86_32
 sci-libs/djbfft abi_x86_32
 sci-libs/fftw abi_x86_32
@@ -378,9 +394,12 @@ virtual/opengl abi_x86_32
 virtual/udev abi_x86_32
 virtual/libudev abi_x86_32
 virtual/libgudev abi_x86_32
+virtual/pam abi_x86_32
+virtual/pkgconfig abi_x86_32
 x11-libs/cairo abi_x86_32
 x11-libs/gdk-pixbuf abi_x86_32
 x11-libs/gtk+ abi_x86_32
+x11-libs/gtkglext abi_x86_32
 x11-libs/libdrm abi_x86_32
 x11-libs/libICE abi_x86_32
 x11-libs/libnotify abi_x86_32
@@ -416,6 +435,7 @@ x11-libs/libXxf86dga abi_x86_32
 x11-libs/libXxf86vm abi_x86_32
 x11-libs/motif abi_x86_32
 x11-libs/pango abi_x86_32
+x11-libs/pangox-compat abi_x86_32
 x11-libs/pixman abi_x86_32
 x11-proto/compositeproto abi_x86_32
 x11-proto/damageproto abi_x86_32
