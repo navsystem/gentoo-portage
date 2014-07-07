@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15824 2014/07/01 07:02:54 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15853 2014/07/06 11:27:24 zlogene Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,28 @@
 
 #--- END OF EXAMPLES ---
 
+# Hans de Graaff <graaff@gentoo.org> (6 Jul 2014)
+# Mask old slot for removal in 30 days since there are no longer
+# dependencies on it.
+dev-ruby/builder:0
+
+# Andreas K. Huettel <dilfridge@gentoo.org> (05 Jul 2014)
+# Class::ISA is long gone from core Perl, thus the package
+# was moved from perl-core to dev-perl and the virtual will be
+# removed. Please depend on dev-perl/Class-ISA directly.
+virtual/perl-Class-ISA
+
+# Michael Sterrett <mr_bones_@gentoo.org> (02 Jul 2014)
+# No longer maintained upstream.
+# Masked for removal on 20140801.
+# Use games-action/d2x-rebirth instead which is actively maintained.
+games-action/d2x
+
+# Michael Sterrett <mr_bones_@gentoo.org> (02 Jul 2014)
+# No longer maintained upstream and segfaults on
+# modern systems.  Masked for removal on 20140801.
+games-arcade/koules
+
 # Andreas K. Huettel <dilfridge@gentoo.org> (29 Jun 2014)
 # Severe security issue (bug 460780), unhandled for over a year.
 # Masked for removal in 30 days.
@@ -41,6 +63,7 @@ dev-php/PEAR-MDB2_Driver_ibase
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (29 Jun 2014)
 # Mask perl-5.12 and related package versions prior to removal
+# If you require the Switch package, emerge perl-core/Switch
 =dev-lang/perl-5.12*
 =perl-core/Module-CoreList-2.800.0
 =virtual/perl-ExtUtils-MakeMaker-6.56
@@ -151,22 +174,32 @@ games-util/rubygfe
 # URL:        http://www.securityfocus.com/bid/53959/
 dev-java/ibm-jdk-bin:1.5
 
-# Michał Górny <mgorny@gentoo.org> (29 May 2014)
-# New multilib conversions. Unmask along with corresponding
-# emul-linux-x86 packages, and make sure they're committed first :).
->=dev-libs/nspr-4.10.6-r1
->=dev-libs/nss-3.16-r1
->=app-emulation/emul-linux-x86-baselibs-20140508-r13
->=net-misc/curl-7.37.0-r1
->=app-emulation/emul-linux-x86-baselibs-20140508-r14
->=media-libs/libquvi-0.9.4-r1:0
->=media-libs/libquvi-0.4.1-r2:0.4
->=media-libs/libquvi-scripts-0.9.20131130-r1:0
->=media-libs/libquvi-scripts-0.4.21-r2:0.4
-
 # Vladimir Smirnov <civil@gentoo.org> (27 May 2014)
 # Masked for testing, will defenitely cause major breakage
+# Single modules with 5.20 versions added here too -dilfridge
 =dev-lang/perl-5.20*
+=virtual/perl-Archive-Tar-1.960.0
+=virtual/perl-Attribute-Handlers-0.960.0
+=virtual/perl-AutoLoader-5.740.0
+=virtual/perl-B-Debug-1.190.0
+=virtual/perl-CGI-3.650.0
+=virtual/perl-CPAN-2.0.5
+=virtual/perl-CPAN-Meta-2.140.640
+=virtual/perl-CPAN-Meta-YAML-0.12.0
+=virtual/perl-Carp-1.330.100
+=virtual/perl-Compress-Raw-Bzip2-2.64.0
+=virtual/perl-Compress-Raw-Zlib-2.65.0
+=virtual/perl-DB_File-1.831.0
+=virtual/perl-Data-Dumper-2.151.0
+=virtual/perl-Devel-PPPort-3.210.0
+=virtual/perl-Digest-SHA-5.880.0
+=virtual/perl-Encode-2.600.0
+=virtual/perl-Exporter-5.700.0
+=virtual/perl-ExtUtils-CBuilder-0.280.216
+=virtual/perl-ExtUtils-Install-1.670.0
+=virtual/perl-ExtUtils-MakeMaker-6.980.0
+=virtual/perl-ExtUtils-Manifest-1.630.0-r1
+=perl-core/B-Debug-1.190.0
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (24 May 2014)
 # Dev channel releases are only for people who are developers or want more
