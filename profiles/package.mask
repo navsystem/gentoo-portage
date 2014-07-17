@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15905 2014/07/15 21:25:09 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15908 2014/07/17 05:44:26 dlan Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Yixun Lan <dlan@gentoo.org> (17 Jul 2014)
+# Masked for proper testing. (Major updates in the code).
+=net-misc/tinc-1.1_pre*
 
 # Ulrich Müller <ulm@gentoo.org> (15 Jul 2014)
 # Permanently mask sys-libs/lib-compat and its reverse dependencies,
@@ -287,6 +291,8 @@ dev-java/ibm-jdk-bin:1.5
 =virtual/perl-i18n-langtags-0.400.0
 =virtual/perl-if-0.60.300
 =virtual/perl-locale-maketext-1.250.0
+=virtual/perl-net-ping-2.430.0
+=virtual/perl-threads-1.930.0
 =perl-core/B-Debug-1.190.0
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (24 May 2014)
