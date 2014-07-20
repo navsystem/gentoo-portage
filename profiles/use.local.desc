@@ -250,7 +250,7 @@ app-arch/cfv:bittorrent - Enable support for checking .torrent files
 app-arch/dpkg:dselect - Build the dselect package-management frontend
 app-arch/dpkg:update-alternatives - Install update-alternatives
 app-arch/dump:ermt - encrypted rmt support
-app-arch/engrampa:caja - Enable engrampa to integrate with mate-base/mate-file-manager by providing entries in its context menu
+app-arch/engrampa:caja - Enable engrampa to integrate with mate-base/caja by providing entries in its context menu
 app-arch/file-roller:nautilus - Enable file-roller to integrate with gnome-base/nautilus by providing entries in its context menu
 app-arch/file-roller:packagekit - Enable support for the distro-neutral package manager GUI app-admin/packagekit
 app-arch/gzip:pic - disable optimized assembly code that is not PIC friendly
@@ -876,7 +876,6 @@ app-misc/recoll:tex - Index TeX files
 app-misc/recoll:wordperfect - Index WordPerfect documents
 app-misc/recoll:xml - Index several XML-based formats (Abiword, FictionBook, Kword, Office OpenXML, OpenDocument, SVG)
 app-misc/roadnav:festival - Enable support for app-accessibility/festival
-app-misc/roadnav:flite - Enable support for app-accessibility/flite (festival-lite)
 app-misc/roadnav:openstreetmap - Enable openstreetmap support
 app-misc/roadnav:scripting - Enable scripting support
 app-misc/screen:multiuser - Enable multiuser support (by setting correct permissions)
@@ -2043,8 +2042,8 @@ dev-python/jinja:i18n - Enables support for i18n with dev-python/Babel
 dev-python/kaa-base:tls - SSL/TLS support via dev-python/tlslite
 dev-python/kazoo:gevent - Enable support for the gevent based handler
 dev-python/kombu:amqplib - Enable amqplib support
-dev-python/kombu:msgpack - enables MessagePack (de)serializer for Python
-dev-python/kombu:sqs - enables Amazon SQS transport module for Kombu
+dev-python/kombu:msgpack - Enables MessagePack (de)serializer for Python
+dev-python/kombu:sqs - Enables Amazon SQS transport module for Kombu
 dev-python/ldaptor:web - enable the web front end for ldaptor (uses dev-python/nevow)
 dev-python/lxml:beautifulsoup3 - Enable support for Beautiful Soup 3
 dev-python/markdown:pygments - Enable fancy pygments support
@@ -3157,6 +3156,7 @@ mail-filter/opendkim:opendbx - Use opendbx backend to facilitate dataset driven 
 mail-filter/opendkim:poll - Use poll() instead of select() for the provided asynchronous resolver library.
 mail-filter/opendkim:sasl - Used to authenticate to a LDAP server in various ways if required.
 mail-filter/opendkim:unbound - Use the unbound dnssec library to perform DKIM DNS queries.
+mail-filter/postfwd:tools - Install additional tools for testing postfwd
 mail-filter/postgrey:targrey - Enables the targrey patch
 mail-filter/qmail-scanner:spamassassin - Build faster mail-filter/spamassassin checks into qmail-scanner
 mail-filter/spamassassin:qmail - Build qmail functionality and docs
@@ -3197,10 +3197,11 @@ mail-mta/netqmail:highvolume - Prepare netqmail for high volume servers
 mail-mta/netqmail:noauthcram - If you do NOT want AUTHCRAM to be available
 mail-mta/opensmtpd:mta - Enable this to install as system-wide MTA
 mail-mta/postfix:dovecot-sasl - Enable net-mail/dovecot protocol version 1 (server only) SASL implementation
-mail-mta/postfix:ldap-bind - Adds support for binding to LDAP backend using dev-libs/cyrus-sasl
-mail-mta/postfix:lmdb - Adds support for using dev-db/lmdb for lookup tables
-mail-mta/postfix:memcached - Adds support for using net-misc/memcached for lookup tables
-mail-mta/postfix:vda - Adds support for virtual delivery agent quota enforcing
+mail-mta/postfix:eai - Add support for SMTPUTF8
+mail-mta/postfix:ldap-bind - Add support for binding to LDAP backend using dev-libs/cyrus-sasl
+mail-mta/postfix:lmdb - Add support for using dev-db/lmdb for lookup tables
+mail-mta/postfix:memcached - Add support for using net-misc/memcached for lookup tables
+mail-mta/postfix:vda - Add support for virtual delivery agent quota enforcing
 mail-mta/qmail-ldap:cluster - Enable this if you want to have cluster support in qmail-ldap
 mail-mta/qmail-ldap:gencertdaily - Generate SSL certificates daily instead of hourly
 mail-mta/qmail-ldap:highvolume - Prepare qmail for high volume servers
@@ -4468,6 +4469,17 @@ net-analyzer/bmon:rrdtool - Enables net-analyzer/rrdtool support
 net-analyzer/bwm-ng:csv - Enable csv output
 net-analyzer/bwm-ng:html - Enable html output
 net-analyzer/cacti:doc - install html documentation
+net-analyzer/check_mk:agent-only - Install only the check_mk agent.
+net-analyzer/check_mk:apache_status - Install check_mk-agent apache-status plugin.
+net-analyzer/check_mk:dmi_sysinfo - Install check_mk-agent dmi_sysinfo plugin.
+net-analyzer/check_mk:livestatus - Enable livestatus.
+net-analyzer/check_mk:logwatch - Install check_mk-agent logwatch plugin.
+net-analyzer/check_mk:mysql - Install check_mk-agent mysql plugin.
+net-analyzer/check_mk:nfsexports - Install check_mk-agent nfsexports plugin.
+net-analyzer/check_mk:postgres - Install check_mk-agent postgres plugin.
+net-analyzer/check_mk:smart - Install check_mk-agent S.M.A.R.T plugin.
+net-analyzer/check_mk:wato - Enable check_mk WATO - check_mk's Web Administration Tool.
+net-analyzer/check_mk:zypper - Install check_mk-agent zypper plugin.
 net-analyzer/echoping:http - enable support for http protocol.
 net-analyzer/echoping:icp - enable support for ICP (used to monitor proxies).
 net-analyzer/echoping:priority - enable socket priority support.
@@ -5088,63 +5100,6 @@ net-libs/c-client:doc - Install RFCs related to IMAP
 net-libs/c-client:topal - Enable support for net-mail/topal for use with mail-client/alpine
 net-libs/courier-authlib:vpopmail - Enable vpopmail support
 net-libs/cvm:vpopmail - Enable vpopmail support
-net-libs/cyassl:aes - Enable AES cipher support
-net-libs/cyassl:aes-ccm - Eanble AES Counter with CBC-MAC mode
-net-libs/cyassl:aes-gcm - Enable AES Galois/Counter mode
-net-libs/cyassl:aes-ni - Enable Intel AES instruction support
-net-libs/cyassl:arc4 - Enable ARC4 cipher support
-net-libs/cyassl:asn - Enable ASN cipher support
-net-libs/cyassl:atomicuser - Enable Atomic User Record Layer
-net-libs/cyassl:big - Choose big cache size (excludes small or huge)
-net-libs/cyassl:blake2 - Enable CyaSSL BLAKE2 support
-net-libs/cyassl:camellia - Enable Camellia-CBC cipher support
-net-libs/cyassl:coding - Enable Coding base 16/64
-net-libs/cyassl:crl - Enable Certificate Revocation List
-net-libs/cyassl:crl-monitor - Enable Certificate Revocation List Directory Monitoring
-net-libs/cyassl:cyassl-hardening - Add hardening flags to CFLAGS/LDFLAGS
-net-libs/cyassl:des3 - Enable triple DES support
-net-libs/cyassl:dh - Enable DH cipher support
-net-libs/cyassl:dsa - Enable DSA cipher support
-net-libs/cyassl:dtls - Enable datagram TLS (must be disabled for tests)
-net-libs/cyassl:ecc - Enable Elliptic Curve support
-net-libs/cyassl:errorstrings - Enable error strings table
-net-libs/cyassl:extra - Enable extra OpenSSL API
-net-libs/cyassl:fortress - Enable fortress SSL build (requires extra and SHA512)
-net-libs/cyassl:hc128 - Enable HC-128 support
-net-libs/cyassl:hkdf - Enable HKDF (HMAC-KDF) support
-net-libs/cyassl:httpd - Enable features for yaSSL web server
-net-libs/cyassl:huge - Choose big cache size (excludes small or big)
-net-libs/cyassl:leanpsk - Enable lean PSK support (requires psk)
-net-libs/cyassl:maxfragment - Enable Maximum Fragment Length
-net-libs/cyassl:mcapi - Enable Microchip API
-net-libs/cyassl:md2 - Enable MD2 support
-net-libs/cyassl:md4 - Enable MD4 support
-net-libs/cyassl:md5 - Enable MD5 support
-net-libs/cyassl:memory - Enable memory callbacks
-net-libs/cyassl:nullcipher - Enable nullcipher support
-net-libs/cyassl:ocsp - Enable Online Certificate Status Protocol
-net-libs/cyassl:pkcallbacks - Enable Public Key Callbacks
-net-libs/cyassl:pkcs7 - Enable PKCS7 standard
-net-libs/cyassl:psk - Enable Pre-Shared Key support
-net-libs/cyassl:pwdbased - Enable PWDBASED (requires extra)
-net-libs/cyassl:rabbit - Enable RABBIT cipher support
-net-libs/cyassl:ripemd - Enable RIPEMD-160 support
-net-libs/cyassl:rsa - Enable RSA cihper support
-net-libs/cyassl:savecert - Support certificate saving
-net-libs/cyassl:savesession - Support session saving
-net-libs/cyassl:scep - Enable wolfSCEP
-net-libs/cyassl:sep - Enable sep extensions
-net-libs/cyassl:sessioncerts - Store session certificates
-net-libs/cyassl:sha - Enable SHA cipher support
-net-libs/cyassl:sha512 - Enable SHA-160 support
-net-libs/cyassl:small - Choose small cache size (excludes big or huge)
-net-libs/cyassl:smallstack - Enable Small Stack Usage (excludes big or huge)
-net-libs/cyassl:sni - Enable server name indication
-net-libs/cyassl:sniffer - Allow collection/decryption of SSL traffic
-net-libs/cyassl:supportedcurves - Enable Supported Elliptic Curves
-net-libs/cyassl:testcert - Enable certificate testing
-net-libs/cyassl:tlsx - Enable all TLS Extensions
-net-libs/cyassl:truncatedhmac - Enable Truncated HMAC
 net-libs/daq:afpacket - Build the AFPacket data acquisition module. Functions similar to the PCAP module but with better performance. Snort can run unprivileged when using this module. AFpacket supports both inline and passive modes.
 net-libs/daq:dump - Build the Dump data acquisition module. The dump DAQ allows you to test the various inline mode features available in 2.9 Snort like injection and normalization.
 net-libs/daq:ipq - Build the IPQ data acquisition module. IPQ is the old way to process iptables packets for inline deployments. Snort can not run unprivileged when using this module.
@@ -5173,7 +5128,7 @@ net-libs/libbtbb:pcap - Add support for network packet capture via net-libs/libp
 net-libs/libbtbb:wireshark-plugins - Build the wireshark plugins for bluetooth baseband sniffing
 net-libs/libcrafter:pcap - Use net-libs/libpcap for packet capturing
 net-libs/libeXosip:srv - enable support for SRV records DNS queries
-net-libs/libesmtp:ssl - Enable support for advanced SMTP authentication methods, like NTML and STARTTLS. Also use OpenSSL's MD5 implementation over internal version.
+net-libs/libesmtp:ntlm - Enable support for NTLM authentication
 net-libs/libetpan:liblockfile - Enable support for liblockfile library
 net-libs/libgsasl:gcrypt - Use dev-libs/libgcrypt for low-level crypto
 net-libs/libgsasl:ntlm - Add support for Microsoft's NTLM mechanism using net-libs/libntlm
@@ -5691,6 +5646,9 @@ net-misc/tigervnc:internal-fltk - Build+link internal and enhanced fltk library
 net-misc/tigervnc:server - Build TigerVNC server
 net-misc/tigervnc:xorgmodule - Build the Xorg module
 net-misc/tightvnc:server - Build vncserver. Allows us to only build server on one machine if set, build only viewer otherwise.
+net-misc/tinc:gcrypt - Add support for encrypted log files using dev-libs/libgcrypt
+net-misc/tinc:gui - Add GUI support, using dev-python/wxpython
+net-misc/tinc:openssl - Using dev-libs/openssl for cryptography-related functions
 net-misc/tinc:uml - Enable support for User Mode Linux Sockets
 net-misc/tinc:vde - Enable Virtual Distributed Ethernet (VDE) based networking
 net-misc/tor:bufferevents - Use libevent's buffered IO implementation (unstable, buggy)
@@ -6660,10 +6618,14 @@ sys-cluster/gearmand:drizzle - Support dev-db/libdrizzle for the queue storage. 
 sys-cluster/gearmand:memcache - Support memcache daemon (via dev-libs/libmemcached) for the queue storage.
 sys-cluster/gearmand:tokyocabinet - Support dev-db/tokyocabinet for the queue storage.
 sys-cluster/glusterfs:bd-xlator - Enable the blockdevice translator (requires sys-fs/lvm2)
+sys-cluster/glusterfs:crypt-xlator - Enable the encryption translator
 sys-cluster/glusterfs:extras - Install extra helper scripts
 sys-cluster/glusterfs:fuse - Add FUSE mount helper
 sys-cluster/glusterfs:georeplication - Enable support for georeplication (requires dev-lang/python)
+sys-cluster/glusterfs:glupy - Enable support for translators written in Python
 sys-cluster/glusterfs:infiniband - Add support for Infiniband ibverbs transport. Libraries can be found in science overlay
+sys-cluster/glusterfs:qemu-block - Transparently create files as QCow2/QED images in the backend, including the possibility to snapshot.
+sys-cluster/glusterfs:rsyslog - Install configuration snippet for app-admin/rsyslog
 sys-cluster/glusterfs:systemtap - Enable support for dev-util/systemtap
 sys-cluster/maui:pbs - Enable pbs integration
 sys-cluster/maui:slurm - Enable slurm integration
