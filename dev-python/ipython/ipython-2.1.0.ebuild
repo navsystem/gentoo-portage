@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-2.1.0.ebuild,v 1.2 2014/08/07 14:54:50 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-2.1.0.ebuild,v 1.4 2014/08/13 07:38:42 idella4 Exp $
 
 EAPI=5
 
@@ -59,6 +59,7 @@ DEPEND="${CDEPEND}
 		dev-python/cython[${PYTHON_USEDEP}]
 		dev-python/rpy[${PYTHON_USEDEP}]
 		$(python_gen_cond_dep 'dev-python/fabric[${PYTHON_USEDEP}]' python2_7)
+		>=www-servers/tornado-3.1[${PYTHON_USEDEP}]
 	)"
 
 REQUIRED_USE="doc? ( matplotlib mongodb octave )"
@@ -119,6 +120,7 @@ python_install() {
 
 python_install_all() {
 	use doc && local HTML_DOCS=( docs/build/html/. )
+	use examples && local EXAMPLES=( examples/. )
 	distutils-r1_python_install_all
 }
 
