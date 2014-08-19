@@ -102,6 +102,8 @@ kde-base/nsplugins amd64
 kde-base/okular amd64
 kde-base/oxygen-icons amd64
 kde-base/phonon-kde amd64
+<media-libs/phonon-vlc-9999 amd64
+<media-libs/phonon-9999 amd64
 kde-base/plasma-apps amd64
 kde-base/plasma-runtime amd64
 kde-base/plasma-workspace amd64
