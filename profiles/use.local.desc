@@ -1354,7 +1354,6 @@ dev-games/ogre:tools - build+install helper tools
 dev-games/ogre:zip - support zip archives
 dev-games/openscenegraph:fox - Build examples using x11-libs/fox library
 dev-games/openscenegraph:gdal - Enable support for sci-libs/gdal library
-dev-games/openscenegraph:itk - Build dev-tcltk/itk plugin
 dev-games/openscenegraph:openinventor - Build OpenInventor plugin
 dev-games/openscenegraph:osgapps - Build osg applications
 dev-games/openscenegraph:xrandr - Enable support for the X xrandr extension
@@ -7282,7 +7281,6 @@ www-servers/lighttpd:webdav - Enable webdav properties
 www-servers/monkeyd:debug - Enable lots of debugging info
 www-servers/monkeyd:jemalloc - Use dev-libs/jemalloc for allocations
 www-servers/monkeyd:minimal - Do not install shared lib and include files
-www-servers/monkeyd:musl - Enable musl compatibility mode
 www-servers/nginx:aio - Enables file AIO support
 www-servers/nginx:http - Enable HTTP core support
 www-servers/nginx:http-cache - Enable HTTP cache support
