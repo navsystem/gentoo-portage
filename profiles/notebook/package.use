@@ -98,3 +98,6 @@ kde-base/kdelibs semantic-desktop
 games-fps/qudos qmax textures
 x11-themes/qtcurve gtk
 dev-libs/elfutils static-libs
+
+media-libs/mlt kdenlive
+
