@@ -15,7 +15,7 @@ sys-block/megacli amd64
 
 ~sci-libs/gdal-1.10.0 x86 amd64
 =dev-qt/qxbsql-0.2 x86 amd64
-<www-plugins/chrome-binary-plugins-34 x86 amd64
+<www-plugins/chrome-binary-plugins-38 x86 amd64
 ~sci-electronics/kicad-20130518 x86 amd64
 ~sci-geosciences/qgis-2.0.1 x86 amd64
 ~net-misc/tigervnc-1.3.1 x86 amd64
@@ -27,3 +27,5 @@ sys-block/megacli amd64
 ~dev-python/mailer-0.7 x86 amd64
 ~dev-db/pgadmin3-1.18.1 x86 amd64
 ~media-gfx/splashutils-1.5.4.4 x86 amd64
+net-im/skype x86 amd64
+
