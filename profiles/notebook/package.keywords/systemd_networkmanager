@@ -10,7 +10,7 @@
 <virtual/udev-9999 amd64
 <virtual/libudev-999 amd64
 <virtual/libgudev-9999 amd64
-~sys-boot/plymouth-0.8.8 amd64
+=sys-boot/plymouth-9999 amd64
 <sys-kernel/dracut-9999  amd64
 ~sys-apps/hwids-20130915.1 amd64
 ~sys-auth/pambase-20120417 amd64
