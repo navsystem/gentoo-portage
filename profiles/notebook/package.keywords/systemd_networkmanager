@@ -23,3 +23,5 @@
 ~sys-apps/baselayout-2.2 amd64
 ~app-arch/xz-utils-5.0.5 amd64
 ~net-misc/modem-manager-gui-0.0.16 amd64
+=net-libs/libndp-1.4 amd64
+=dev-libs/newt-0.52.15 amd64
