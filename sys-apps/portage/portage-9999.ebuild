@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.102 2014/09/26 02:28:58 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.105 2014/09/26 20:32:03 dolsen Exp $
 
 EAPI=5
 
@@ -38,7 +38,7 @@ RDEPEND="
 	dev-lang/python-exec:2
 	!build? (
 		>=sys-apps/sed-4.0.5
-		|| ( >=app-shells/bash-4.2_p37[readline] ( <app-shells/bash-4.2_p37 >=app-shells/bash-3.2_p17 ) )
+		app-shells/bash:0[readline]
 		>=app-admin/eselect-1.2
 	)
 	elibc_FreeBSD? ( sys-freebsd/freebsd-bin )
@@ -51,7 +51,6 @@ RDEPEND="
 		$(python_gen_cond_dep 'dev-python/pyxattr[${PYTHON_USEDEP}]' \
 			python{2_7,3_2} pypy)
 	) )
-	!<app-shells/bash-3.2_p17
 	!<app-admin/logrotate-3.8.0"
 PDEPEND="
 	!build? (
@@ -157,6 +156,8 @@ python_test() {
 }
 
 python_install() {
+	# Install sbin scripts to bindir for python-exec linking
+	# they will be relocated in pkg_preinst()
 	distutils-r1_python_install \
 		--system-prefix="${EPREFIX}/usr" \
 		--bindir="$(python_get_scriptdir)" \
@@ -179,6 +180,16 @@ python_install_all() {
 	if [[ ${targets[@]} ]]; then
 		esetup.py "${targets[@]}"
 	fi
+
+	# Due to distutils/python-exec limitations
+	# they must be installed to /usr/bin.
+	local sbin_relocations='archive-conf dispatch-conf emaint env-update etc-update fixpackages regenworld'
+	einfo "Moving admin scripts to the correct directory"
+	dodir /usr/sbin
+	for target in ${sbin_relocations}; do
+		einfo "Moving /usr/bin/${target} to /usr/sbin/${target}"
+		mv "${ED}usr/bin/${target}" "${ED}usr/sbin/${target}"
+	done
 }
 
 pkg_preinst() {
@@ -201,13 +212,4 @@ pkg_preinst() {
 	if chown portage:portage "${ED}"var/log/portage{,/elog} 2>/dev/null ; then
 		chmod g+s,ug+rwx "${ED}"var/log/portage{,/elog}
 	fi
-
-	local sbin_deprecated='archive-conf dispatch-conf emaint env-update etc-update fixpackages regenworld'
-	local relative_path=../lib/portage/bin
-	einfo "Creating symlinks for deprecated /usr/sbin/ paths"
-
-	for target in ${sbin_deprecated}; do
-		einfo "linking: ${relative_path}/deprecated-path to sbin/${target}"
-		dosym  "${relative_path}/deprecated-path" "usr/sbin/${target}" || die "Failed to create symlinks"
-	done
 }
