@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16057 2014/09/27 13:43:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16061 2014/09/28 15:42:37 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -115,6 +115,7 @@ dev-php/PEAR-MDB2_Driver_ibase
 =dev-qt/qtnetwork-5.3.2*
 =dev-qt/qtopengl-5.3.2*
 =dev-qt/qtpaths-5.3.2*
+=dev-qt/qtpositioning-5.3.2*
 =dev-qt/qtprintsupport-5.3.2*
 =dev-qt/qtquick1-5.3.2*
 =dev-qt/qtquickcontrols-5.3.2*
