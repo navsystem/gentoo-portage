@@ -1,19 +1,17 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/zram-init/zram-init-3.0.ebuild,v 1.1 2014/09/29 21:48:20 jauhien Exp $
 
 EAPI=5
-RESTRICT="mirror"
-inherit eutils readme.gentoo systemd vcs-snapshot
+inherit eutils readme.gentoo systemd
 
 DESCRIPTION="Scripts to support compressed swap devices or ramdisks with zram"
 HOMEPAGE="https://github.com/vaeth/zram-init/"
-SRC_URI="https://github.com/vaeth/${PN}/tarball/${PV} -> ${P}.tar.gz"
+SRC_URI="https://github.com/vaeth/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
-IUSE=""
+KEYWORDS="~amd64 ~x86"
 
 DISABLE_AUTOFORMATTING="true"
 DOC_CONTENTS="To use zram, activate it in your kernel and add it to default runlevel:
