@@ -29,4 +29,5 @@ src_install(){
 	dobin bin/${PN}
 	dodoc ReadMe
 	use doc && dohtml -r doc/html/*
-	make_desktop_entry ${PN} ${MY_P# Cop
+	make_desktop_entry ${PN} ${MY_PN}
+}

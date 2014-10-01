@@ -65,14 +65,18 @@ src_configure() {
 		--enable-trans \
 		$(use_enable mmx) \
 		$(use_enable sse2) \
-		$(use_enable uni# Copyright 1999-2012 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-9999.ebuild,v 1.20 2012/08/23 04:06:33 ottxor Exp $
+		$(use_enable unicode multi-charset) \
+		$(use_enable utempter utmp) \
+		--with-delete=execute \
+		--with-backspace=auto
+}
 
-EAPI="3"
-inherit eutils autotools
+src_install() {
+	emake DESTDIR="${D}" install || die
+	dodoc ChangeLog README ReleaseNotes
+	use escreen && dodoc doc/README.Escreen
+	dodoc bg/README.backgrounds
 
-MY_P=Eterm-${PV}
-
-if [[ ${PV} == "9999" ]] ; then
-	ESVN_REPO_URI="http://svn.enlightenment.org/svn/e/trunk/eterm
+	# We don't install headers to link against this library
+	rm -f "${D}"/usr/*/libEterm.{so,la}
+}

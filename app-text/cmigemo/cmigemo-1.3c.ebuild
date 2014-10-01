@@ -42,21 +42,24 @@ src_install() {
 	rm -rf ${D}/usr/share/migemo/{cp932,euc-jp}
 
 	if has_version 'app-editors/vim-core' ; then
-		insinto /usr/share/vim/vim# Copyright 1999-2009 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cmigemo/cmigemo-1.3c.ebuild,v 1.7 2009/09/23 16:31:00 patrick Exp $
+		insinto /usr/share/vim/vimfiles/plugin
+		doins tools/migemo.vim
+	fi
 
-inherit eutils
+	dodoc tools/migemo.vim
+	dodoc doc/{README_j,TODO_j,vimigemo}.txt
+}
 
-DESCRIPTION="C/Migemo -- Migemo library implementation in C"
-HOMEPAGE="http://www.kaoriya.net/#CMIGEMO"
-SRC_URI="http://www.kaoriya.net/dist/var/${P}.tar.bz2"
-
-LICENSE="cmigemo"
-SLOT="0"
-KEYWORDS="x86 alpha ppc"	# development branch
-IUSE="emacs"
-
-DEPEND="app-i18n/qkc
-	app-dicts/migemo-dict"
-RDEPEND="app-dicts/mig
+pkg_postinst() {
+	if use emacs ; then
+		elog
+		elog "Please add to your ~/.emacs"
+		elog "    (setq migemo-command \"cmigemo\")"
+		elog "    (setq migemo-options '(\"-q\" \"--emacs\" \"-i\" \"\\\\a\"))"
+		elog "    (setq migemo-dictionary \"/usr/share/migemo/migemo-dict\")"
+		elog "    (setq migemo-user-dictionary nil)"
+		elog "    (setq migemo-regex-dictionary nil)"
+		elog "to use cmigemo instead of migemo under emacs."
+		elog
+	fi
+}

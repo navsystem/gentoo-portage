@@ -35,11 +35,18 @@ src_compile() {
 }
 
 src_install() {
-	readme.gentoo_create# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dibbler/dibbler-0.8.4.ebuild,v 1.4 2014/02/22 08:07:15 ago Exp $
+	readme.gentoo_create_doc
 
-EAPI="5"
-inherit eutils readme.gentoo systemd
+	dosbin dibbler-{client,relay,server}
+	doman doc/man/*.8
 
-DESCRIPTION="Portable DHCPv6 implementation (server, client a
+	insinto /etc/dibbler
+	doins doc/examples/*.conf
+	dodir /var/lib/dibbler
+
+	dodoc AUTHORS CHANGELOG RELNOTES TODO
+	use doc && dodoc doc/dibbler-user.pdf
+
+	doinitd "${FILESDIR}"/dibbler-{client,relay,server}
+	systemd_dounit "${FILESDIR}"/dibbler-client.service
+}

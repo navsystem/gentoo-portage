@@ -45,23 +45,45 @@ src_configure() {
 	use nls || myconf="${myconf} --disable-nls"
 	strip-linguas ${MY_AVAILABLE_LINGUAS}
 
-	if use debug ;# Copyright 1999-2013 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r12.ebuild,v 1.17 2013/05/01 03:22:51 tetromino Exp $
+	if use debug ; then
+		myconf="${myconf} --enable-debug=yes"
+	else
+		myconf="${myconf} --enable-debug=minimum"
+	fi
 
-EAPI=4
-GNOME_TARBALL_SUFFIX="gz"
-inherit gnome.org eutils toolchain-funcs autotools
+	econf \
+		--sysconfdir=/etc \
+		--with-xinput=xfree \
+		--with-x \
+		${myconf}
+}
 
-DESCRIPTION="The GIMP Toolkit"
-HOMEPAGE="http://www.gtk.org/"
-SRC_URI="${SRC_URI} http://www.ibiblio.org/gentoo/distfiles/gtk+-1.2.10-r8-gentoo.diff.bz2"
+src_compile() {
+	emake CC="$(tc-getCC)"
+}
 
-LICENSE="LGPL-2.1+"
-SLOT="1"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
-IUSE="nls debug"
+src_install() {
+	default
 
-# Supported languages and translated documentation
-# Be sure all languages are prefixed with a single space!
-MY_AVAILABLE_LINGUAS=" az ca cs da de el es et eu fi fr ga gl hr hu it ja ko lt nl nn no pl pt_BR pt ro ru sk sl sr sv 
+	dodoc AUTHORS ChangeLog* HACKING
+	dodoc NEWS* README* TODO
+	docinto docs
+	cd docs
+	dodoc *.txt *.gif text/*
+	dohtml -r html
+
+	#install nice, clean-looking gtk+ style
+	insinto /usr/share/themes/Gentoo/gtk
+	doins "${FILESDIR}"/gtkrc
+}
+
+pkg_postinst() {
+	if [[ -e /etc/X11/gtk/gtkrc ]] ; then
+		ewarn "Older versions added /etc/X11/gtk/gtkrc which changed settings for"
+		ewarn "all themes it seems.  Please remove it manually as it will not due"
+		ewarn "to /env protection."
+	fi
+
+	echo ""
+	einfo "The old gtkrc is available through the new Gentoo gtk theme."
+}

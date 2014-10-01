@@ -12,20 +12,6 @@
   <product type="ebuild">wireshark</product>
   <announced>August 29, 2006</announced>
   <revised>August 29, 2006: 01</revised>
-  <bug<?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet href="/xsl/glsa.xsl" type="text/xsl"?>
-<?xml-stylesheet href="/xsl/guide.xsl" type="text/xsl"?>
-<!DOCTYPE glsa SYSTEM "http://www.gentoo.org/dtd/glsa.dtd">
-
-<glsa id="200608-26">
-  <title>Wireshark: Multiple vulnerabilities</title>
-  <synopsis>
-    Wireshark is vulnerable to several security issues that may lead to a
-    Denial of Service and/or the execution of arbitrary code.
-  </synopsis>
-  <product type="ebuild">wireshark</product>
-  <announced>August 29, 2006</announced>
-  <revised>August 29, 2006: 01</revised>
   <bug>144946</bug>
   <access>remote</access>
   <affected>
@@ -75,4 +61,17 @@
   <references>
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4330">CVE-2006-4330</uri>
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4331">CVE-2006-4331</uri>
-    <uri link="http://cve.mitre
+    <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4332">CVE-2006-4332</uri>
+    <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4333">CVE-2006-4333</uri>
+    <uri link="http://www.wireshark.org/security/wnpa-sec-2006-02.html">Wireshark official advisory</uri>
+  </references>
+  <metadata tag="requester" timestamp="Fri, 25 Aug 2006 07:36:40 +0000">
+    jaervosz
+  </metadata>
+  <metadata tag="bugReady" timestamp="Sat, 26 Aug 2006 14:34:42 +0000">
+    falco
+  </metadata>
+  <metadata tag="submitter" timestamp="Sat, 26 Aug 2006 14:55:04 +0000">
+    falco
+  </metadata>
+</glsa>

@@ -29,21 +29,22 @@ DEPEND="${RDEPEND}
 	nls? ( app-text/po4a sys-devel/gettext )"
 
 pkg_setup() {
-	python_set# Copyright 1999-2012 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/roxterm-2.6.5.ebuild,v 1.1 2012/07/31 06:12:20 ssuominen Exp $
+	python_set_active_version 2
+	python_pkg_setup
+}
 
-EAPI=4
-inherit gnome2-utils python toolchain-funcs
+src_prepare() {
+	python_convert_shebangs 2 mscript.py
+}
 
-DESCRIPTION="A terminal emulator designed to integrate with the ROX environment"
-HOMEPAGE="http://roxterm.sourceforge.net/"
-SRC_URI="mirror://sourceforge/roxterm/${P}.tar.bz2"
+src_configure() {
+	local myconf=( CC="$(tc-getCC)" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" --prefix=/usr --docdir=/usr/share/doc/${PF} --destdir="${D}" )
+	use nls || myconf+=( --disable-gettext --disable-po4a --disable-translations )
+	./mscript.py configure "${myconf[@]}"
+}
 
-LICENSE="GPL-2 LGPL-3"
-SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="nls"
-
-RDEPEND=">=dev-libs/dbus-glib-0.100
-	>=dev-libs/glib-
+src_compile() { ./mscript.py build; }
+src_install() { ./mscript.py install; }
+pkg_preinst() { gnome2_icon_savelist; }
+pkg_postinst() { gnome2_icon_cache_update; }
+pkg_postrm() { gnome2_icon_cache_update; }

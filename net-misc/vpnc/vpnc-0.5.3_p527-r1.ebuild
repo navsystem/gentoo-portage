@@ -48,28 +48,26 @@ src_prepare() {
 
 	sed \
 		-e 's:/var/run:/run:g' \
-		-i ChangeLog co# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.5.3_p527-r1.ebuild,v 1.11 2014/09/10 21:29:50 zerochaos Exp $
+		-i ChangeLog config.c TODO  || die
+}
 
-EAPI=5
+src_install() {
+	emake PREFIX="/usr" DESTDIR="${D}" install
+	dodoc README TODO VERSION
+	keepdir /etc/vpnc/scripts.d
+	newinitd "${FILESDIR}/vpnc-3.init" vpnc
+	newconfd "${FILESDIR}/vpnc.confd" vpnc
+	sed -e "s:/usr/local:/usr:" -i "${D}"/etc/vpnc/vpnc-script || die
 
-inherit eutils linux-info systemd toolchain-funcs
+	systemd_dotmpfilesd "${FILESDIR}"/vpnc-tmpfiles.conf
+	systemd_newunit "${FILESDIR}"/vpnc.service vpnc@.service
 
-DESCRIPTION="Free client for Cisco VPN routing software"
-HOMEPAGE="http://www.unix-ag.uni-kl.de/~massar/vpnc/"
-SRC_URI="http://dev.gentoo.org/~jlec/distfiles/${P}.tar.xz"
+	# COPYING file resides here, should not be installed
+	rm -rf "${ED}"/usr/share/doc/vpnc/ || die
+}
 
-LICENSE="GPL-2 BSD"
-SLOT="0"
-KEYWORDS="amd64 arm ppc ppc64 sparc x86"
-IUSE="resolvconf +gnutls bindist selinux"
-
-REQUIRED_USE="bindist? ( gnutls )"
-
-DEPEND="
-	dev-lang/perl
-	dev-libs/libgcrypt:0=
-	>=sys-apps/iproute2-2.6.19.20061214[-minimal]
-	gnutls? ( net-libs/gnutls:= )
-	!gnutls? ( dev-libs/op
+pkg_postinst() {
+	elog "You can generate a configuration file from the original Cisco profiles of your"
+	elog "connection by using /usr/bin/pcf2vpnc to convert the .pcf file"
+	elog "A guide is available in http://www.gentoo.org/doc/en/vpnc-howto.xml"
+}

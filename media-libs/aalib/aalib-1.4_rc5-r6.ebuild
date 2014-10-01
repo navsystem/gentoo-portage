@@ -57,6 +57,11 @@ src_configure() {
 		$(use_enable static-libs static)
 	)
 
-	PKG_CONFIG=$(tc-# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-li
+	PKG_CONFIG=$(tc-getPKG_CONFIG) \
+	autotools-multilib_src_configure
+}
+
+src_install() {
+	autotools-multilib_src_install
+	use static-libs || prune_libtool_files --all
+}

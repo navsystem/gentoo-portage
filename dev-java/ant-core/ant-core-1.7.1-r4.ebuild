@@ -89,15 +89,17 @@ src_install() {
 	if use doc; then
 		dohtml welcome.html
 		dohtml -r docs/*
-		java-pkg_dojavadoc --sym# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.7.1-r4.ebuild,v 1.8 2014/08/10 20:07:23 slyfox Exp $
+		java-pkg_dojavadoc --symlink manual/api build/javadocs
+	fi
 
-EAPI="2"
+	use source && java-pkg_dosrc src/main/*
+}
 
-# don't depend on itself
-JAVA_ANT_DISABLE_ANT_CORE_DEP=true
-# rewriting build.xml files for the testcases has no reason atm
-JAVA_PKG_BSFIX_ALL=no
-JAVA_PKG_IUSE="doc source"
-inherit java-
+pkg_postinst() {
+	elog "The way of packaging ant in Gentoo has changed significantly since"
+	elog "the 1.7.0 version, For more information, please see:"
+	elog "http://www.gentoo.org/proj/en/java/ant-guide.xml"
+	elog
+	elog "Since 1.7.1, the ant-tasks meta-ebuild has been removed and its USE"
+	elog "flags have been moved to dev-java/ant."
+}

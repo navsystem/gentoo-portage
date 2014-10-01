@@ -53,26 +53,38 @@ src_configure() {
 		"$(systemd_with_unitdir 'systemd-unitdir')"
 }
 
-src# Copyright 1999-2013 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firewalld/firewalld-0.2.12.ebuild,v 1.1 2013/02/19 04:52:25 cardoe Exp $
+src_install() {
+	python_foreach_impl \
+		emake DESTDIR="${ED}" pythondir="$(python_get_sitedir)" install
 
-EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7} )
-#BACKPORTS=190680ba
+	# Get rid of junk
+	rm -f "${ED}/etc/rc.d/init.d/firewalld"
+	rm -f "${ED}/etc/sysconfig/firewalld"
+	rm -rf "${ED}/etc/rc.d/"
+	rm -rf "${ED}/etc/sysconfig/"
 
-inherit autotools eutils gnome2-utils python-r1 systemd multilib
+	# For non-gui installs we need to remove GUI bits
+	if ! use gui; then
+		rm -f "${ED}/usr/bin/firewall-applet"
+		rm -f "${ED}/usr/bin/firewall-config"
+		rm -rf "${ED}/usr/share/icons"
+		rm -rf "${ED}/usr/share/applications"
+	fi
 
-DESCRIPTION="A firewall daemon with D-BUS interface providing a dynamic firewall"
-HOMEPAGE="http://fedorahosted.org/firewalld"
-SRC_URI="https://fedorahosted.org/released/firewalld/${P}.tar.bz2
-	${BACKPORTS:+http://dev.gentoo.org/~cardoe/distfiles/${P}-${BACKPORTS}.tar.xz}"
+	newinitd "${FILESDIR}"/firewalld.init firewalld
+}
 
-LICENSE="GPL-2+"
-SLOT="0"
-KEYWORDS="~amd64 ~x86"
-IUSE="gui"
+pkg_preinst() {
+	gnome2_icon_savelist
+	gnome2_schemas_savelist
+}
 
-RDEPEND="${PYTHON_DEPS}
-	dev-python/dbus-python
-	
+pkg_postinst() {
+	gnome2_icon_cache_update
+	gnome2_schemas_update
+}
+
+pkg_postrm() {
+	gnome2_icon_cache_update
+	gnome2_schemas_update
+}

@@ -45,18 +45,27 @@ src_configure() {
 		$(use_enable sse2) \
 		$(use_enable sse3) \
 		$(use_enable sse4) \
-		$(use_ena# Copyright 1999-2013 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeverb3/freeverb3-3.0.2.ebuild,v 1.1 2013/11/19 21:31:08 sping Exp $
+		$(use_enable avx) \
+		--disable-fma \
+		--disable-fma4 \
+		$(use_enable openmp omp) \
+		--disable-sample \
+		$(use_enable jack) \
+		$(use_enable audacious) \
+		--disable-srcnewcoeffs \
+		$(use_enable plugdouble) \
+		--disable-pluginit \
+		|| die "econf failed"
+}
 
-EAPI=5
-inherit multilib versionator
+src_install() {
+	emake DESTDIR="${D}" install || die "emake install failed"
+	dodoc ChangeLog README || die 'dodoc failed'
 
-DESCRIPTION="High Quality Reverb and Impulse Response Convolution library including XMMS/Audacious Effect plugins"
-HOMEPAGE="http://freeverb3.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.xz"
+	if use audacious ; then
+		find "${D}/usr/$(get_libdir)/audacious/" -name '*.la' -print -delete || die
+	fi
 
-LICENSE="GPL-2"
-SLOT="0"
-KEYWORDS="~amd64 ~x86"
-_IUSE_INSTRUCTION_SETS="3dnow avx ss
+	insinto /usr/share/${PN}/samples/IR
+	doins samples/IR/*.wav || die
+}

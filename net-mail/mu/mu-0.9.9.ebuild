@@ -63,23 +63,33 @@ src_install () {
 	if use gui; then
 		dobin toys/mug/mug || die
 	fi
-	dodoc A# Copyright 1999-2012 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mu/mu-0.9.9.ebuild,v 1.7 2012/12/06 04:37:52 phajdan.jr Exp $
+	dodoc AUTHORS HACKING NEWS TODO README ChangeLog INSTALL
+	if use doc; then
+		dodoc mu4e-manual-${PV}.pdf
+	fi
+	if use emacs; then
+		elisp-install ${PN} mu4e/*.el mu4e/*.elc
+		elisp-site-file-install "${FILESDIR}/${SITEFILE}"
+	fi
+}
 
-EAPI=4
+src_test () {
+	emake check
+}
 
-inherit base elisp-common
+pkg_postinst() {
+	if use emacs; then
+		einfo "To use mu4e you need to configure it in your .emacs file"
+		einfo "See the manual for more information:"
+		einfo "http://www.djcbsoftware.nl/code/mu/mu4e/Getting-started.html"
+	fi
 
-DESCRIPTION="Set of tools to deal with Maildirs, in particular, searching and indexing"
-HOMEPAGE="http://www.djcbsoftware.nl/code/mu/"
-SRC_URI="http://mu0.googlecode.com/files/${P}.tar.gz
-		doc? ( http://mu0.googlecode.com/files/mu4e-manual-${PV}.pdf )"
+	elog "If you upgrade from an older major version,"
+	elog "then you need to rebuild your mail index."
 
-LICENSE="GPL-3"
-SLOT="0"
-KEYWORDS="amd64 x86"
-IUSE="doc emacs gui"
+	use emacs && elisp-site-regen
+}
 
-# Without webkit-gtk there is no pdf-preview functionality, everything
-# else works as of 0.9.
+pkg_postrm() {
+	use emacs && elisp-site-regen
+}

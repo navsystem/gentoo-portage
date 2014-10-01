@@ -56,6 +56,13 @@ src_install() {
 	if ! use static; then
 		make DESTDIR="${D}" install
 		keepdir /var/lib/ebtables/
-		newinitd "${FILE# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ebtables-2.0.10.2.ebuild,v 1.2 201
+		newinitd "${FILESDIR}"/ebtables.initd-r1 ebtables
+		newconfd "${FILESDIR}"/ebtables.confd-r1 ebtables
+	else
+		into /
+		newsbin static ebtables
+		insinto /etc
+		doins ethertypes
+	fi
+	dodoc ChangeLog THANKS || die
+}

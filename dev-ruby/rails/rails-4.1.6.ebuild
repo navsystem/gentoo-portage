@@ -31,11 +31,14 @@ ruby_add_rdepend "
 	~dev-ruby/activemodel-${PV}
 	~dev-ruby/activerecord-${PV}
 	~dev-ruby/activesupport-${PV}
-	~dev-ruby/rai# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/rails-4.1.6.ebuild,v 1.1 2014/09/12 06:27:56 graaff Exp $
+	~dev-ruby/railties-${PV}
+	>=dev-ruby/bundler-1.3 =dev-ruby/bundler-1*
+	=dev-ruby/sprockets-rails-2*
+	asset-pipeline? (
+		dev-ruby/jquery-rails
+		>=dev-ruby/sass-rails-4.0.3:4.0
+		>=dev-ruby/uglifier-1.3.0
+		>=dev-ruby/coffee-rails-4.0.0:4.0
+	)"
 
-EAPI=5
-USE_RUBY="ruby19 ruby20 ruby21"
-
-RUBY_FAKEGEM_B
+# also: turbolinks, >=jbuilder-1.2:1

@@ -70,4 +70,5 @@ all_ruby_prepare() {
 	sed -i -e '/test_locals_option_to_assert_template_is_not_supported/,/end/ s:^:#:'  test/controller/render_test.rb || die
 
 	# Avoid test broken by security updates in i18n.
-	sed -i -e '/test_number_to_i18n_currency/,/end/ s:^:#:' test/template/number_helper_i18n_# Copyright 1999-
+	sed -i -e '/test_number_to_i18n_currency/,/end/ s:^:#:' test/template/number_helper_i18n_test.rb || die
+}

@@ -36,10 +36,18 @@ src_prepare() {
 	preparation() {
 		if [[ "${PYTHON_ABI}" == 3.* ]]; then
 			2to3-${PYTHON_ABI} -nw --no-diffs feedparser/feedparsertest.py
-		else# Copyright 1999-2012 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/feedparser/feedparser-5.1.1.ebuild,v 1.1 2012/03/20 17:54:19 sping Exp $
+		else
+			# Avoid SyntaxErrors with Python 2.
+			echo "raise ImportError" > feedparser/_feedparser_sgmllib.py
+		fi
+	}
+	python_execute_function -s preparation
+}
 
-EAPI="4"
-SUPPORT_PYTHON_ABIS="1"
-PYTHON_TESTS_RESTRICTE
+src_test() {
+	testing() {
+		cd feedparser || return 1
+		"$(PYTHON)" feedparsertest.py
+	}
+	python_execute_function -s testing
+}

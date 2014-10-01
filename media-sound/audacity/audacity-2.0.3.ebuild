@@ -19,27 +19,6 @@ KEYWORDS="~amd64 ~mips ~ppc ~ppc64 ~x86"
 IUSE="alsa ffmpeg flac id3tag jack ladspa libsamplerate +libsoxr midi mp3 sbsms soundtouch twolame vamp vorbis"
 RESTRICT="test"
 
-COMM# Copyright 1999-2013 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-2.0.3.ebuild,v 1.3 2013/07/11 19:25:22 vincent Exp $
-
-EAPI=4
-
-inherit eutils wxwidgets autotools versionator
-
-MY_PV=$(replace_version_separator 3 -)
-MY_P="${PN}-src-${MY_PV}"
-MY_T="${PN}-minsrc-${MY_PV}"
-DESCRIPTION="Free crossplatform audio editor"
-HOMEPAGE="http://audacity.sourceforge.net/"
-SRC_URI="http://audacity.googlecode.com/files/${MY_T}.tar.xz"
-
-LICENSE="GPL-2"
-SLOT="0"
-KEYWORDS="~amd64 ~mips ~ppc ~ppc64 ~x86"
-IUSE="alsa ffmpeg flac id3tag jack ladspa libsamplerate +libsoxr midi mp3 sbsms soundtouch twolame vamp vorbis"
-RESTRICT="test"
-
 COMMON_DEPEND="x11-libs/wxGTK:2.8[X]
 	>=app-arch/zip-2.3
 	>=media-libs/libsndfile-1.0.0
@@ -88,3 +67,36 @@ src_configure() {
 	econf \
 		--enable-unicode \
 		--enable-nyquist \
+		--disable-dynamic-loading \
+		$(use_enable ladspa) \
+		--with-libsndfile=system \
+		--with-expat=system \
+		$(use_with libsamplerate) \
+		$(use_with !libsamplerate libresample) \
+		$(use_with libsoxr) \
+		$(use_with vorbis libvorbis) \
+		$(use_with mp3 libmad) \
+		$(use_with flac libflac) \
+		$(use_with id3tag libid3tag) \
+		$(use_with sbsms) \
+		$(use_with soundtouch) \
+		$(use_with vamp libvamp) \
+		$(use_with twolame libtwolame) \
+		$(use_with ffmpeg) \
+		$(use_with midi) \
+		$(use_with alsa) \
+		$(use_with jack)
+}
+
+# $(use_with lv2 slv2) \
+# $(use_with ladspa liblrdf) \
+
+src_install() {
+	emake DESTDIR="${D}" install
+
+	# Remove bad doc install
+	rm -rf "${D}"/usr/share/doc
+
+	# Install our docs
+	dodoc README.txt
+}

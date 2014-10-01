@@ -33,22 +33,31 @@ src_prepare() {
 	local File
 	for File in $(find "${S}" -type f); do
 		if grep -sq ccache ${File}; then
-			sed# Copyright 1999-2013 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/photivo/photivo-9999.ebuild,v 1.7 2013/12/17 21:13:39 hwoarang Exp $
+			sed -e 's/ccache//' -i "${File}"
+		fi
+	done
 
-EAPI=4
+	# useless check (no pkgconfig file is provided)
+	sed -e "/PKGCONFIG += CImg/d" \
+		-i photivoProject/photivoProject.pro || die
+	qt4-r2_src_prepare
+}
 
-inherit qt4-r2 mercurial
+src_configure() {
+	local config="WithSystemCImg"
+	if use gimp ; then
+		config+=" WithGimp"
+	fi
 
-DESCRIPTION="Photo processor for RAW and Bitmap images"
-HOMEPAGE="http://www.photivo.org"
-EHG_REPO_URI="https://photivo.googlecode.com/hg/"
+	eqmake4 "CONFIG+=${config}"
+}
 
-LICENSE="GPL-3"
-SLOT="0"
-KEYWORDS=""
-IUSE="gimp"
+src_install() {
+	qt4-r2_src_install
 
-RDEPEND="dev-qt/qtcore:4
-	dev-qt/
+	if use gimp; then
+		exeinto $(gimptool-2.0 --gimpplugindir)/plug-ins
+		doexe ptGimp
+		doexe "mm extern photivo.py"
+	fi
+}

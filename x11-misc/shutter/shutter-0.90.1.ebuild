@@ -53,27 +53,18 @@ src_prepare() {
 src_install() {
 	dobin bin/${PN} || die "dobin failed"
 	insinto /usr/share/${PN}
-	doins -r share/${PN}/* || die # Copyright 1999-2013 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shutter/shutter-0.90.1.ebuild,v 1.1 2013/09/08 10:40:14 hwoarang Exp $
-
-EAPI="5"
-
-inherit eutils
-
-DESCRIPTION="Feature-rich screenshot program"
-HOMEPAGE="http://shutter-project.org/"
-SRC_URI="http://shutter-project.org/wp-content/uploads/releases/tars/${P}.tar.gz"
-
-LICENSE="GPL-3"
-SLOT="0"
-KEYWORDS="~amd64 ~x86"
-IUSE="drawing webphoto"
-
-RDEPEND="dev-lang/perl
-	drawing? ( dev-perl/Goo-Canvas  )
-	webphoto? ( gnome-extra/gnome-web-photo )
-	|| ( media-gfx/imagemagick[perl] media-gfx/graphicsmagick[imagemagick,perl] )
-	dev-perl/libxml-perl
-	dev-perl/gnome2-wnck
-	dev-perl/
+	doins -r share/${PN}/* || die "doins failed"
+	dodoc README || die "dodoc failed"
+	domenu share/applications/${PN}.desktop
+	# Man page is broken. Reconstruct it.
+	gunzip share/man/man1/${PN}.1.gz || die "gunzip failed"
+	doman share/man/man1/${PN}.1 || die "doman failed"
+	doicon share/pixmaps/${PN}.png
+	doins -r share/locale || die "doins failed"
+	insinto /usr/share/icons/hicolor
+	doins -r share/icons/hicolor/* || die "doins failed"
+	find "${D}"/usr/share/shutter/resources/system/plugins/ -type f ! -name '*.*' -exec chmod 755 {} \; \
+		|| die "failed to make plugins executables"
+	find "${D}"/usr/share/shutter/resources/system/upload_plugins/upload -type f \
+		-name "*.pm" -exec chmod 755 {} \; || die "failed to make upload plugins executables"
+}

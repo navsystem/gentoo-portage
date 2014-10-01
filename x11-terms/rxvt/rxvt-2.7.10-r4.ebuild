@@ -89,10 +89,10 @@ src_install() {
 
 pkg_postinst() {
 	einfo
-	einfo "If you want to change default TERM vari# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.10-r4.ebuild,v 1.11 2014/08/30 12:07:41 mgorny Exp $
-
-EAPI=1
-
-inherit eutils flag-o-matic libtool toolchain-fu
+	einfo "If you want to change default TERM variable other than rxvt,"
+	einfo "set RXVT_TERM environment variable and then emerge rxvt."
+	einfo "Especially, if you use rxvt under monochrome X you might need to run"
+	einfo "\t RXVT_TERM=rxvt-basic emerge rxvt"
+	einfo "otherwise curses based program will not work."
+	einfo
+}

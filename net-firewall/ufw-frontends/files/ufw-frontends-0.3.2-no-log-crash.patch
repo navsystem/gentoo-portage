@@ -52,7 +52,10 @@ index 75ebb33..75dfde0 100644
              self.ui.events_model.append(data)
 -        self._notifier = Notifier(callback)
 +        self._notifier = Notifier(callback,
-+                lambda: self.ui.events_view.set_seFrom e7bcf87788588c3a38ce18c9a8d69bbe156860e9 Mon Sep 17 00:00:00 2001
-From: =?UTF-8?q?S=C5=82awomir=20Nizio?= <slawomir.nizio@sabayon.org>
-Date: Mon, 3 Mar 2014 08:31:47 +0100
-Subject: [PATCH
++                lambda: self.ui.events_view.set_sensitive(False))
+         self.ui.main_window.show_all()
+         ## FIXME: for the 0.3.0 release, hide the tab for the connections view
+         page = self.ui.view.get_nth_page(2)
+-- 
+1.9.0
+

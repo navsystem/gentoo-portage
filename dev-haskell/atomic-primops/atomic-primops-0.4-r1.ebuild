@@ -1,7 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gento# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/dev-haskell/atomic-primops/atomic-primops-0.4-r1.ebuild,v 1.2 2014/07/25 09:16:30 slyfox Exp $
 
 EAPI=5
@@ -25,4 +23,10 @@ RDEPEND="dev-haskell/bits-atomic:=[profile?]
 		dev-haskell/primitive:=[profile?]
 		>=dev-lang/ghc-7.4.1:="
 DEPEND="${RDEPEND}
-		profile? 
+		profile? ( !<dev-haskell/cabal-1.17 )
+		>=dev-haskell/cabal-1.8"
+
+src_configure() {
+	haskell-cabal_src_configure \
+		$(cabal_flag debug debug)
+}

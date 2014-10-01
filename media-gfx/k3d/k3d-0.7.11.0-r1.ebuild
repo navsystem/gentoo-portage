@@ -97,15 +97,16 @@ src_configure() {
 		$(k3d_use_module graphviz GRAPHVIZ)
 		$(k3d_use_module gts GTS)
 		$(k3d_use_module gts GTS_IO)
-		$# Copyright 1999-2013 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.7.11.0-r1.ebuild,v 1.14 2013/08/31 14:07:29 pacho Exp $
+		$(k3d_use_module imagemagick IMAGEMAGICK_IO)
+		$(k3d_use_module jpeg JPEG_IO)
+		$(k3d_use_enable nls NLS)
+		$(k3d_use_module openexr OPENEXR_IO)
+		$(k3d_use_module png PNG_IO)
+		$(k3d_use_module python PYTHON)
+		$(k3d_use_module python PYUI)
+		$(k3d_use_module python NGUI_PYTHON_SHELL)
+		$(k3d_use_module tiff TIFF_IO)
+		$(k3d_use_module truetype FREETYPE2)"
 
-EAPI="2"
-
-inherit eutils cmake-utils flag-o-matic
-
-MY_P="${PN}-source-${PV}"
-
-DESCRIPTION="A free 3D modeling, animation, and rendering system"
-HOMEPAGE="http://www.k-3d.
+	cmake-utils_src_configure
+}

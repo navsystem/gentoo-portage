@@ -59,5 +59,6 @@ src_install() {
 
 	dolib.so solib/lib*
 
-	dodoc RE# Copyright 1999-2013 Gentoo Foundation
-# Distributed under
+	dodoc README
+	use doc && dohtml -r README.html html_graphics doc
+}

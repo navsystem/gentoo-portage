@@ -61,13 +61,11 @@ pkg_postinst() {
 	elog "  virtual/eject      (eject via devmon)"
 	if ! has_version 'sys-fs/udisks' ; then
 		elog
-		elog "When using ${PN} withou# Copyright 1999-2013 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/udevil/udevil-0.4.1.ebuild,v 1.5 2013/08/12 02:10:45 hasufell Exp $
-
-EAPI=5
-
-inherit eutils autotools user
-
-DESCRIPTION="mount and unmount removable devices without a password"
-HOMEPAGE="http://ign
+		elog "When using ${PN} without udisks, and without the udisks-daemon running,"
+		elog "you may need to enable kernel polling for device media changes to be detected."
+		elog "See http://ignorantguru.github.com/${PN}/#polling"
+		has_version '<virtual/udev-173' && ewarn "You need at least udev-173"
+		kernel_is lt 2 6 38 && ewarn "You need at least kernel 2.6.38"
+		einfo
+	fi
+}

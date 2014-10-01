@@ -17,25 +17,6 @@
   <affected>
     <package name="dev-libs/nss" auto="yes" arch="*">
       <unaffected range="ge">3.15.3</unaffected>
-      <vulner<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet href="/xsl/glsa.xsl" type="text/xsl"?>
-<?xml-stylesheet href="/xsl/guide.xsl" type="text/xsl"?>
-<!DOCTYPE glsa SYSTEM "http://www.gentoo.org/dtd/glsa.dtd">
-<glsa id="201406-19">
-  <title>Mozilla Network Security Service: Multiple vulnerabilities </title>
-  <synopsis>Multiple vulnerabilities have been discovered in Mozilla Network
-    Security Service, the worst of which could lead to Denial of Service. 
-  </synopsis>
-  <product type="ebuild">nss</product>
-  <announced>June 21, 2014</announced>
-  <revised>June 21, 2014: 1</revised>
-  <bug>455558</bug>
-  <bug>486114</bug>
-  <bug>491234</bug>
-  <access>remote</access>
-  <affected>
-    <package name="dev-libs/nss" auto="yes" arch="*">
-      <unaffected range="ge">3.15.3</unaffected>
       <vulnerable range="lt">3.15.3</vulnerable>
     </package>
   </affected>
@@ -72,4 +53,16 @@
     </p>
   </resolution>
   <references>
-    <ur
+    <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2013-1620">CVE-2013-1620</uri>
+    <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2013-1739">CVE-2013-1739</uri>
+    <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2013-1741">CVE-2013-1741</uri>
+    <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2013-2566">CVE-2013-2566</uri>
+    <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2013-5605">CVE-2013-5605</uri>
+    <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2013-5606">CVE-2013-5606</uri>
+    <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2013-5607">CVE-2013-5607</uri>
+  </references>
+  <metadata tag="requester" timestamp="Thu, 19 Jun 2014 01:57:31 +0000">
+    BlueKnight
+  </metadata>
+  <metadata tag="submitter" timestamp="Sat, 21 Jun 2014 21:43:15 +0000">K_F</metadata>
+</glsa>

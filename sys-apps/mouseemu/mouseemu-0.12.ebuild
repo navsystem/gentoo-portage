@@ -34,6 +34,8 @@ src_install() {
 pkg_postinst() {
 	einfo "For mouseemu to work you need uinput support in your kernel:"
 	einfo "        CONFIG_INPUT_UINPUT=y"
-	einfo "(Device Drivers->Input device support->M# Copyright 1999-2007 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mouseemu/mouseemu-0.12.ebuild,v 1.5 2007/04/2
+	einfo "(Device Drivers->Input device support->Misc->User level driver support)"
+	einfo "Don't forget to add mouseemu to your default runlevel:"
+	einfo "        rc-update add mouseemu default"
+	einfo "Configuration is in /etc/mouseemu.conf."
+}

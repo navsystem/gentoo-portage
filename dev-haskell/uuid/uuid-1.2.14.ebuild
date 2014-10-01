@@ -33,4 +33,5 @@ DEPEND="${RDEPEND}
 		>=dev-haskell/quickcheck-2.4 <dev-haskell/quickcheck-2.7
 		>=dev-haskell/test-framework-0.8 <dev-haskell/test-framework-0.9
 		>=dev-haskell/test-framework-hunit-0.3 <dev-haskell/test-framework-hunit-0.4
-		>=dev-haskell/test-framework-quickcheck2-0.3 <dev-haskell/test-framework-quickcheck2-0.4 )# C
+		>=dev-haskell/test-framework-quickcheck2-0.3 <dev-haskell/test-framework-quickcheck2-0.4 )
+"

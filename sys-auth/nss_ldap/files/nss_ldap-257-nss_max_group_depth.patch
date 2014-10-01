@@ -7,15 +7,6 @@ Rediffed-by: Robin H. Johnson <robbat2@gentoo.org>
 @@ -3,2 +3,7 @@
  
 +257.1	Heath Caldwell <hncaldwell@csupomona.edu>
-Gentoo-Bug: 155492
-Original-Author: Heath Caldwell <hncaldwell@csupomona.edu>
-Rediffed-by: Robin H. Johnson <robbat2@gentoo.org>
-
---- nss_ldap-257.orig/ChangeLog	2007-09-18 15:02:59.997686000 -0700
-+++ nss_ldap-257/ChangeLog	2007-09-18 15:04:07.925113592 -0700
-@@ -3,2 +3,7 @@
- 
-+257.1	Heath Caldwell <hncaldwell@csupomona.edu>
 +
 +	* add configurable maximum group depth with new
 +	  configuration file option called nss_max_group_depth
@@ -92,4 +83,10 @@ Rediffed-by: Robin H. Johnson <robbat2@gentoo.org>
 --- nss_ldap-257.orig/util.h	2007-09-18 15:03:00.001020000 -0700
 +++ nss_ldap-257/util.h	2007-09-18 15:05:11.295822638 -0700
 @@ -84,6 +84,7 @@
- #define NSS_LDAP_KEY_INITGROUP
+ #define NSS_LDAP_KEY_INITGROUPS		"nss_initgroups"
+ #define NSS_LDAP_KEY_INITGROUPS_IGNOREUSERS	"nss_initgroups_ignoreusers"
+ #define NSS_LDAP_KEY_GETGRENT_SKIPMEMBERS	"nss_getgrent_skipmembers"
++#define NSS_LDAP_KEY_MAX_GROUP_DEPTH	"nss_max_group_depth"
+ 
+ /* more reconnect policy fine-tuning */
+ #define NSS_LDAP_KEY_RECONNECT_TRIES		"nss_reconnect_tries"

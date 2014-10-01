@@ -31,18 +31,37 @@ multilib_src_configure() {
 	local ldverscript=
 	[[ ${CHOST} == *-solaris* ]] && ldverscript="--disable-ld-version-script"
 
-	ECONF_SOURCE=$# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-9a.ebuild,v 1.4 2014/06/09 23:22:19 vapier Exp $
+	ECONF_SOURCE=${S} \
+	econf \
+		$(use_enable static-libs static) \
+		--enable-maxmem=64 \
+		${ldverscript}
+}
 
-EAPI=5
-inherit eutils libtool toolchain-funcs multilib-minimal
+multilib_src_compile() {
+	emake
 
-DESCRIPTION="Library to load, handle and manipulate images in the JPEG format"
-HOMEPAGE="http://jpegclub.org/ http://www.ijg.org/"
-SRC_URI="http://www.ijg.org/files/${PN}src.v${PV}.tar.gz
-	mirror://debian/pool/main/libj/lib${PN}8/lib${PN}8_8d-1.debian.tar.gz"
+	if multilib_is_native_abi; then
+		# Build exifautotran and jpegexiforient
+		cd ../debian/extra
+		emake CC="$(tc-getCC)" CFLAGS="${LDFLAGS} ${CFLAGS}"
+	fi
+}
 
-LICENSE="IJG"
-SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd 
+multilib_src_install() {
+	emake DESTDIR="${D}" install
+}
+
+multilib_src_install_all() {
+	prune_libtool_files
+
+	dodoc change.log example.c README *.txt
+
+	# Install exifautotran and jpegexiforient
+	newdoc ../debian/changelog changelog.debian
+	cd ../debian/extra
+	emake \
+		DESTDIR="${D}" prefix="${EPREFIX}"/usr \
+		INSTALL="install -m755" INSTALLDIR="install -d -m755" \
+		install
+}

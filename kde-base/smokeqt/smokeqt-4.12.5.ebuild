@@ -4,12 +4,6 @@
 
 EAPI=5
 
-DECLARATIVE_REQUIRED="# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smokeqt/smokeqt-4.12.5.ebuild,v 1.5 2014/05/08 07:32:23 ago Exp $
-
-EAPI=5
-
 DECLARATIVE_REQUIRED="optional"
 MULTIMEDIA_REQUIRED="optional"
 QTHELP_REQUIRED="optional"
@@ -49,4 +43,11 @@ src_configure() {
 		$(cmake-utils_use_disable multimedia QtMultimedia)
 		$(cmake-utils_use_disable opengl QtOpenGL)
 		$(cmake-utils_use_with phonon)
-		$(cm
+		$(cmake-utils_use_with qimageblitz QImageBlitz)
+		$(cmake-utils_use_with qscintilla QScintilla)
+		$(cmake-utils_use_disable qthelp QtHelp)
+		$(cmake-utils_use_disable qwt Qwt5)
+		$(cmake-utils_use_disable webkit QtWebKit)
+	)
+	kde4-base_src_configure
+}

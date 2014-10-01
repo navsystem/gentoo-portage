@@ -43,13 +43,29 @@ src_prepare() {
 	local qlconfig=${PN}/config.py
 
 	if ! use gstreamer; then
-		sed -i -e '/backend/s# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-2.6.3.ebuild,v 1.1 2014/02/17 19:52:24 ssuominen Exp $
+		sed -i -e '/backend/s:gstbe:xinebe:' ${qlconfig} || die
+	fi
 
-EAPI=5
-PYTHON_COMPAT=( python2_7 )
-inherit distutils-r1 gnome2-utils fdo-mime
+	sed -i -e '/gst_pipeline/s:"":"alsasink":' ${qlconfig} || die
 
-DESCRIPTION="audio library tagger, manager, and player for GTK+"
-HOMEPAGE="http://code
+	distutils-r1_src_prepare
+}
+
+src_install() {
+	distutils-r1_src_install
+	dodoc NEWS README
+}
+
+pkg_preinst() {
+	gnome2_icon_savelist
+}
+
+pkg_postinst() {
+	fdo-mime_desktop_database_update
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	fdo-mime_desktop_database_update
+	gnome2_icon_cache_update
+}

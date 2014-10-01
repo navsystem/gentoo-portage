@@ -68,6 +68,6 @@ http://bugs.gentoo.org/406899
  #ifdef HAVE_ZLIB
 -			gzclose(ribin);
 +			gzclose((gzFile)ribin);
- #http://bugs.gentoo.org/406899
-
--
+ #else
+ 			fclose(ribin);
+ #endif

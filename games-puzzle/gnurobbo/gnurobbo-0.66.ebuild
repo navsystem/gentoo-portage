@@ -30,11 +30,11 @@ src_compile() {
 }
 
 src_install() {
-	dogamesbin gnurobbo# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnurobbo/gnurobbo-0.66.ebuild,v 1.6 2014/05/15 16:51:43 ulm Exp $
-
-EAPI=2
-inherit eutils games
-
-DESCRI
+	dogamesbin gnurobbo || die "dogamesbin failed"
+	insinto "${GAMES_DATADIR}/${PN}"
+	doins -r data/{levels,skins,locales,rob,sounds} || die "doins failed"
+	dodoc AUTHORS Bugs ChangeLog README TODO
+	newicon icon32.png ${PN}.png
+	make_desktop_entry ${PN} Gnurobbo
+	prepgamesdirs
+}

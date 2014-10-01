@@ -49,19 +49,19 @@ src_compile() {
 	# containing:
 	# datadir    = "/usr/share/agda-9999/ghc-7.6.1"
 	# it fails without the --css option like:
-	# /usr/share/a# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda-stdlib/agda-stdlib-0.8.ebuild,v 1.1 2014/07/02 15:24:38 gienah Exp $
+	# /usr/share/agda-9999/ghc-7.4.1/Agda.css: copyFile: does not exist
+	local cssdir=$(egrep 'datadir *=' "${S}/dist/build/autogen/Paths_lib.hs" | sed -e 's@datadir    = \(.*\)@\1@')
+	agda --html -i "${S}" -i "${S}"/src --css="${cssdir}/Agda.css" "${S}"/README.agda || die
+}
 
-EAPI=5
+src_test() {
+	agda -i "${S}" -i "${S}"/src README.agda || die
+}
 
-CABAL_FEATURES="bin"
-inherit haskell-cabal elisp-common
-
-DESCRIPTION="Agda standard library"
-HOMEPAGE="http://wiki.portal.chalmers.se/agda/"
-SRC_URI="https://github.com/agda/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-
-LICENSE="MIT"
-SLOT="0"
-KEYWORDS="~amd64 ~x86"
+src_install() {
+	insinto usr/share/agda-stdlib
+	export INSOPTIONS=--preserve-timestamps
+	doins -r src/*
+	dodoc -r html/*
+	elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die
+}

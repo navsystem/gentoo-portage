@@ -51,6 +51,7 @@ src_install() {
 	dosym /usr/bin/parity.gnu.ld${exeext} /usr/bin/i586-pc-winnt$(uname -r)-ld
 
 	# we don't need the header files installed by parity... private
-	# header files are supporte# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x
+	# header files are supported with a patch from 2.1.0-r1 onwards,
+	# so they won't be there anymore, but -f does the job in any case.
+	rm -f "${ED}"/usr/include/*.h
+}

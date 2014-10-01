@@ -35,12 +35,16 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/libnss-mysql/libnss-mysql-1.5_p20060915-r2.ebuild,v 1.6 2014/08/10 20:22:14 slyfox Exp $
+	emake DESTDIR="${D}" install || die
 
-EAPI=2
+	find "${D}" -name '*.la' -delete
 
-inherit eutils multilib autotools
+	newdoc sample/README README.sample
+	dodoc AUTHORS DEBUGGING FAQ INSTALL NEWS README THANKS \
+		TODO UPGRADING ChangeLog
 
-KEYWO
+	for subdir in sample/{linux,freebsd,complex,minimal} ; do
+		docinto "${subdir}"
+		dodoc "${subdir}/"{*.sql,*.cfg}
+	done
+}

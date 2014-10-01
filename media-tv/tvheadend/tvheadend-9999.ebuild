@@ -1,7 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvheadend/tvheadend-9999.ebuild,v 1.2 2014/06/22 # Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/media-tv/tvheadend/tvheadend-9999.ebuild,v 1.2 2014/06/22 20:05:06 prometheanfire Exp $
 
 EAPI=5
@@ -76,4 +74,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "The Tvheadend web interface can be r
+	elog "The Tvheadend web interface can be reached at:"
+	elog "http://localhost:9981/"
+	elog
+	elog "Make sure that you change the default username"
+	elog "and password via the Configuration / Access control"
+	elog "tab in the web interface."
+}

@@ -54,6 +54,12 @@ src_configure() {
 src_install () {
 	default
 
-	newinitd "${F# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/privoxy-3.0.21-r2.ebuild,v 1.8 2014/01/18 19:49:06 ago Exp 
+	newinitd "${FILESDIR}/privoxy.initd" privoxy
+	systemd_dounit "${FILESDIR}"/${PN}.service
+
+	insinto /etc/logrotate.d
+	newins "${FILESDIR}/privoxy.logrotate" privoxy
+
+	diropts -m 0750 -g privoxy -o privoxy
+	keepdir /var/log/privoxy
+}

@@ -51,14 +51,25 @@ src_configure() {
 	local UDEVDIR="$(get_udevdir)"/rules.d
 	local MODELS=${INPUT_DEVICES//roccat_/}
 	mycmakeargs=( -DDEVICES=${MODELS// /;} \
-	-# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/roccat-tools/roccat-tools-1.4.0.ebuild,v 1.2 2014/07/24 17:46:58 axs Exp $
+	-DUDEVDIR="${UDEVDIR/"//"//}" )
+	cmake-utils_src_configure
+}
+src_install() {
+	cmake-utils_src_install
+	local stat_dir=/var/lib/roccat
+	keepdir $stat_dir
+	fowners root:roccat $stat_dir
+	fperms 2770 $stat_dir
+	readme.gentoo_src_install
+}
+pkg_preinst() {
+	gnome2_icon_savelist
+}
+pkg_postinst() {
+	gnome2_icon_cache_update
+	readme.gentoo_print_elog
+}
 
-EAPI=5
-
-inherit readme.gentoo cmake-utils gnome2-utils udev user
-
-DESCRIPTION="Utility for advanced configuration of Roccat devices"
-
-HOMEPAGE="http://roccat.sourc
+pkg_postrm() {
+	gnome2_icon_cache_update
+}

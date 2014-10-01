@@ -40,23 +40,30 @@ multilib_src_configure() {
 	econf \
 		$(use_enable nls gettext) \
 		--enable-shared $(use_enable static-libs static) \
-		--l# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.47-r1.ebuild,v 1.15 2014/07/13 20:30:00 tgall Exp $
+		--libexecdir="${EPREFIX}"/usr/$(get_libdir) \
+		--bindir="${EPREFIX}"/bin
+}
 
-EAPI="4"
+multilib_src_compile() {
+	emake $(multilib_is_native_abi || echo TOOL_SUBDIRS=)
+}
 
-inherit eutils toolchain-funcs multilib-minimal
+multilib_src_install() {
+	emake \
+		$(multilib_is_native_abi || echo TOOL_SUBDIRS=) \
+		DIST_ROOT="${D}" \
+		install install-lib install-dev
 
-DESCRIPTION="Extended attributes tools"
-HOMEPAGE="http://savannah.nongnu.org/projects/attr"
-SRC_URI="mirror://nongnu/${PN}/${P}.src.tar.gz"
+	if multilib_is_native_abi; then
+		# we install attr into /bin, so we need the shared lib with it
+		gen_usr_ldscript -a attr
+		# the man-pages packages provides the man2 files
+		# note: man-pages are installed by TOOL_SUBDIRS
+		rm -r "${ED}"/usr/share/man/man2 || die
+	fi
+}
 
-LICENSE="LGPL-2.1"
-SLOT="0"
-KEYWORDS="alpha amd64 arm arm64 hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-linux ~arm-linux ~x86-linux"
-IUSE="nls static-libs"
-
-DEPEND="nls? ( sys-devel/gettext )
-	sys-devel/autoconf"
-RDEPEND="abi_x86_32
+multilib_src_install_all() {
+	use static-libs || prune_libtool_files --all
+	einstalldocs
+}

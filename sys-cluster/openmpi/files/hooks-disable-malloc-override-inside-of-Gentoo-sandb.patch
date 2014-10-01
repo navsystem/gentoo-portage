@@ -27,7 +27,16 @@ index 6a1646f..5ded08c 100644
 +
 +       This is also an issue when using Gentoo's version of 'fakeroot',
 +       sandbox v2.5.  Sandbox environments can also be detected fairly
-+       easily by looking for SANDBOX_OFrom 3bd5897c7ca8ab61fb024957aeae891e204b3e3f Mon Sep 17 00:00:00 2001
-From: Justin Bronder <jsbronder@gmail.com>
-Date: Mon, 1 Jul 2013 20:37:17 -0400
-Subject: [PATCH] hooks:  disable malloc override inside of Gentoo s
++       easily by looking for SANDBOX_ON.
++    */
++
+     if (getenv("FAKEROOTKEY") != NULL ||
+-        getenv("FAKED_MODE") != NULL) {
++        getenv("FAKED_MODE") != NULL ||
++        getenv("SANDBOX_ON") != NULL ) {
+         return;
+     }
+ 
+-- 
+1.8.1.5
+

@@ -27,24 +27,35 @@ RDEPEND="${RDEPEND}
 LICENSE="Apache-1.1"
 SLOT="3.0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
-IUSE="doc sou# Copyright 1999-2012 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j-core/mx4j-core-3.0.2.ebuild,v 1.4 2012/12/02 08:29:18 ulm Exp $
+IUSE="doc source"
 
-inherit eutils java-pkg-2 java-ant-2
+S="${WORKDIR}/${MY_P}"
 
-MY_PN="${PN/-core/}"
-MY_P="${MY_PN}-${PV}"
-DESCRIPTION="Open Source implementation of the JMX and JMX Remote API (JSR 160) specifications"
-HOMEPAGE="http://mx4j.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${MY_PN}/${MY_P}-src.tar.gz"
+src_unpack() {
+	unpack ${A}
 
-# The ${S}/BUILD-HOWTO is a good source for dependencies
-# This package could also be built with jdk-1.3; see special
-# handling instructions in ${S}/BUILD-HOWTO.
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-split-javadoc-build.patch"
 
-RDEPEND="dev-java/bcel
-	dev-java/commons-logging
-	dev-java/log4j"
-DEPEND="${RDEPEND}
-	
+	cd "${S}/lib"
+	java-pkg_jar-from bcel bcel.jar
+	java-pkg_jar-from commons-logging commons-logging.jar
+	java-pkg_jar-from log4j
+}
+
+src_compile() {
+	eant -f build/build.xml compile.jmx compile.rjmx $(use_doc javadocs.core)
+}
+
+src_install() {
+	java-pkg_dojar dist/lib/*.jar
+	dodoc README.txt
+	use doc && java-pkg_dojavadoc dist/docs/api
+	use source && java-pkg_dosrc "${S}/src/core/*"
+}
+
+pkg_postinst() {
+	elog "This is a a new split ebuild for just the core jmx to reduce"
+	elog "dependencies for packages that only require the core. You can"
+	elog "find the examples in dev-java/mx4j and the tools in dev-java/mx4j-tools"
+}

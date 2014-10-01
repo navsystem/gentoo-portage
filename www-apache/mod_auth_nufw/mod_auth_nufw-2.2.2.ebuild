@@ -19,13 +19,30 @@ DEPEND="mysql? ( virtual/mysql )
 	postgres? ( dev-db/postgresql-server )"
 RDEPEND="${DEPEND}"
 
-APACHE2_MOD_FILE="mod_auth_nufw.so"# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_nufw/mod_auth_nufw-2.2.2.ebuild,v 1.3 2014/08/10 20:14:07 slyfox Exp $
+APACHE2_MOD_FILE="mod_auth_nufw.so"
+APACHE2_MOD_CONF="50_${PN}"
+APACHE2_MOD_DEFINE="AUTH_NUFW"
 
-EAPI="2"
+DOCFILES="doc/mod_auth_nufw.html"
 
-inherit autotools confutils apache-module
+need_apache2_2
 
-DESCRIPTION="A NuFW authentication module for Apache"
-HOMEPAGE="http://software.inl.fr/trac/wiki/EdenWall/mod_auth_nufw"
+pkg_setup() {
+	confutils_require_one mysql postgres
+}
+
+src_prepare() {
+	eautoreconf
+}
+
+src_configure() {
+	CPPFLAGS="-I$(/usr/bin/apr-1-config --includedir) ${CPPFLAGS}" \
+	econf \
+		--with-apache22 \
+		$(use_with mysql) \
+		|| die "econf failed"
+}
+
+src_compile() {
+	emake || die "emake failed"
+}

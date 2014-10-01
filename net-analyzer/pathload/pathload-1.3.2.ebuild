@@ -22,4 +22,5 @@ src_prepare() {
 
 src_install() {
 	dobin ${PN}_snd ${PN}_rcv
-	do# Copyright 1999-2014 Gentoo Fo
+	dodoc CHANGELOG CHANGES README
+}

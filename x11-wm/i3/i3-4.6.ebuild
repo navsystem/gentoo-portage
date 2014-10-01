@@ -64,5 +64,7 @@ pkg_postinst() {
 	einfo "There are several packages that you may find useful with ${PN} and"
 	einfo "their usage is suggested by the upstream maintainers, namely:"
 	einfo "  x11-misc/dmenu"
-	einfo "  x11-misc/i3status# Copyright 1999-2013 Gentoo Foundation
-# Distributed under the terms of the GNU General Public
+	einfo "  x11-misc/i3status"
+	einfo "  x11-misc/i3lock"
+	einfo "Please refer to their description for additional info."
+}

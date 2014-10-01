@@ -61,6 +61,7 @@ panic() {
 }
 
 save() {
-#!/sbin/runscript
-# Copyright 1999-2012 Gentoo Foundation
-# Distributed un
+	ebegin "Saving FireHOL configuration"
+	/usr/sbin/firehol save
+	eend $?
+}

@@ -7,15 +7,6 @@ GNOME2_LA_PUNT="yes"
 
 inherit gnome2 virtualx
 
-DESCRIPTION="Javascript bindings for Webkit-GTK and G# Copyright 1999-2013 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/seed/seed-3.8.1.ebuild,v 1.5 2013/12/08 18:07:10 pacho Exp $
-
-EAPI=5
-GNOME2_LA_PUNT="yes"
-
-inherit gnome2 virtualx
-
 DESCRIPTION="Javascript bindings for Webkit-GTK and GNOME libraries"
 HOMEPAGE="http://live.gnome.org/Seed"
 
@@ -82,4 +73,18 @@ src_configure() {
 		--enable-dbus-module \
 		--enable-mpfr-module \
 		--enable-sqlite-module \
-		-
+		--enable-libxml-module \
+		--enable-xorg-module \
+		--docdir="${EPREFIX}/usr/share/doc/${PF}/html" \
+		${myconf}
+}
+
+src_test() {
+	Xemake check
+}
+
+src_install() {
+	gnome2_src_install
+	# Don't install two copies of standard doc files
+	rm "${ED}/usr/share/doc/${PF}/html/"{AUTHORS,ChangeLog,COPYING,INSTALL,README} || die
+}

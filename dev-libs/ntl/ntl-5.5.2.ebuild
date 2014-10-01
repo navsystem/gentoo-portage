@@ -65,5 +65,11 @@ src_install() {
 
 	cd ..
 	insinto /usr/include
-	doins -r include/NTL || die "installation of the headers fai# Copyright 1999-2011 Gentoo Foundation
-# Distributed under the terms of the GNU General Pub
+	doins -r include/NTL || die "installation of the headers failed"
+
+	dodoc README
+	if use doc ; then
+		dodoc doc/*.txt || die
+		dohtml doc/* || die
+	fi
+}

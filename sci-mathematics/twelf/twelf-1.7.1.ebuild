@@ -88,15 +88,21 @@ src_install() {
 	fi
 	exeinto /usr/bin
 	doexe bin/twelf-server
-	dohtml doc/html/# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/twelf/twelf-1.7.1.ebuild,v 1.5 2014/08/10 20:24:19 slyfox Exp $
+	dohtml doc/html/index.html
+	doinfo doc/guide/twelf.info
+	dodoc doc/guide/twelf.dvi doc/guide/twelf.ps doc/guide/twelf.pdf
+	dohtml doc/guide/twelf/*
+}
 
-EAPI="5"
+pkg_postinst() {
+	if use emacs; then
+		elisp-site-regen
+		ewarn "For twelf emacs, add this line to ~/.emacs"
+		ewarn ""
+		ewarn '(load (concat twelf-root "/twelf-init.el"))'
+	fi
+}
 
-inherit base elisp-common multilib
-
-MY_PN="${PN}-src"
-MY_P="${MY_PN}-${PV}"
-
-DESCRIPTION="Twelf is an implementation of the logical
+pkg_postrm() {
+	use emacs && elisp-site-regen
+}

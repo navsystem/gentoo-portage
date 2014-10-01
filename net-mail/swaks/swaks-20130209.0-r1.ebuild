@@ -1,7 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/swaks/swaks-20130# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/net-mail/swaks/swaks-20130209.0-r1.ebuild,v 1.2 2014/07/29 16:00:20 dilfridge Exp $
 
 EAPI=5
@@ -34,4 +32,11 @@ src_prepare() {
 }
 
 src_compile() {
-	/usr/bin/pod2man -s 1 doc/re
+	/usr/bin/pod2man -s 1 doc/ref.pod swaks.1 || die "man page compulation failed"
+}
+
+src_install() {
+	newbin swaks swaks || die "newbin failed"
+	doman swaks.1 || die
+	dodoc README doc/*.txt || die
+}

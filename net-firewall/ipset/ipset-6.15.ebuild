@@ -66,31 +66,47 @@ pkg_setup() {
 			die "Nonmodular kernel detected, will not build kernel modules"
 		fi
 	fi
-	[[ ${build_modules} -eq 1 ]] &&# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-6.15.ebuild,v 1.5 2014/08/10 20:55:50 slyfox Exp $
+	[[ ${build_modules} -eq 1 ]] && linux-mod_pkg_setup
+}
 
-EAPI="4"
-inherit autotools linux-info linux-mod
+src_prepare() {
+	[[ ${build_modules} -eq 1 ]] && check_header_patch
+	eautoreconf
+}
 
-DESCRIPTION="IPset tool for iptables, successor to ippool"
-HOMEPAGE="http://ipset.netfilter.org/"
-SRC_URI="http://ipset.netfilter.org/${P}.tar.bz2"
+src_configure() {
+	econf \
+		$(use_with modules kmod) \
+		--disable-static \
+		--with-maxsets=${IP_NF_SET_MAX} \
+		--libdir="${EPREFIX}/$(get_libdir)" \
+		--with-ksource="${KV_DIR}" \
+		--with-kbuild="${KV_OUT_DIR}" \
+		--disable-silent-rules
+}
 
-LICENSE="GPL-2"
-SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
-IUSE="modules"
+src_compile() {
+	einfo "Building userspace"
+	emake
 
-RDEPEND=">=net-firewall/iptables-1.4.7
-	net-libs/libmnl"
-DEPEND="${RDEPEND}"
+	if [[ ${build_modules} -eq 1 ]]; then
+		einfo "Building kernel modules"
+		set_arch_to_kernel
+		emake modules
+	fi
+}
 
-DOCS=( ChangeLog INSTALL README UPGRADE )
+src_install() {
+	einfo "Installing userspace"
+	default
+	prune_libtool_files
 
-# configurable from outside, e.g. /etc/make.conf
-IP_NF_SET_MAX=${IP_NF_SET_MAX:-256}
+	newinitd "${FILESDIR}"/ipset.initd-r2 ${PN}
+	newconfd "${FILESDIR}"/ipset.confd ${PN}
+	keepdir /var/lib/ipset
 
-BUILD_TARGETS="modules"
-MODULE_NAMES_ARG="kernel/net/netfilter/ipset/:${S}/kernel/net/netfilter/ipset"
-MODULE_NAMES="xt_set(ke
+	if [[ ${build_modules} -eq 1 ]]; then
+		einfo "Installing kernel modules"
+		linux-mod_src_install
+	fi
+}

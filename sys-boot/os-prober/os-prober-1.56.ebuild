@@ -54,13 +54,15 @@ src_install() {
 	done
 
 	if use amd64 || use x86; then
-		exeinto /usr/lib/os-probes/# Copyright 1999-2012 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/os-prober/os-prober-1.56.ebuild,v 1.1 2012/10/14 19:10:30 abcd Exp $
+		exeinto /usr/lib/os-probes/mounted
+		doexe os-probes/mounted/powerpc/20macosx
+	fi
 
-EAPI=4
+	dodoc README TODO debian/changelog
+}
 
-#inherit eutils multilib toolchain-funcs
-inherit toolchain-funcs
-
-DESCRIPTION="Utility to detect other OSs on a set o
+pkg_postinst() {
+	elog "If you intend for os-prober to detect versions of Windows installed on"
+	elog "NTFS-formatted partitions, your system must be capable of reading the"
+	elog "NTFS filesystem. One way to do this is by installing sys-fs/ntfs3g"
+}

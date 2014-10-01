@@ -19,4 +19,6 @@ RDEPEND=">=virtual/perl-File-Spec-0.83
 	>=dev-perl/Class-Inspector-1.12
 	dev-perl/Config-Tiny
 	>=dev-perl/Params-Util-1.00"
-DEPEN# Copyright 1999-2014 Gentoo
+DEPEND="${RDEPEND}"
+
+SRC_TEST=do

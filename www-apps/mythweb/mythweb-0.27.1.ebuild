@@ -1,7 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.27.1.ebuild,v 1.2 2014/08/10 20# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.27.1.ebuild,v 1.2 2014/08/10 20:14:07 slyfox Exp $
 
 EAPI=4
@@ -82,4 +80,11 @@ src_install() {
 	# Data needs to be writable and modifiable by the web server
 	webapp_serverowned -R "${MY_HTDOCSDIR}"/data
 
-	# Message to 
+	# Message to display after install
+	webapp_postinst_txt en "${FILESDIR}"/0.25-postinstall-en.txt
+
+	# Script to set the correct defaults on install
+	webapp_hook_script "${FILESDIR}"/reconfig
+
+	webapp_src_install
+}

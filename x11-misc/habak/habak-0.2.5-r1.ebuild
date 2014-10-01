@@ -28,12 +28,16 @@ src_prepare() {
 	sed -i \
 		-e '/(LDFLAGS)/s:$: -lImlib2 -lm -lX11:' \
 		-e 's:gcc:$(CC):' \
-		"${S}"/Mak# Copyright 1999-2012 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/habak/habak-0.2.5-r1.ebuild,v 1.5 2012/08/03 06:22:33 xmw Exp $
+		"${S}"/Makefile || die "Makefile fixing failed"
+}
 
-EAPI=2
+src_compile() {
+	emake CC="$(tc-getCC)" ${PN} || die "make failed"
+}
 
-inherit eutils toolchain-funcs
+src_install() {
+	dobin ${PN} || die "dobin failed"
 
-DESCRI
+	cd "${WORKDIR}/${P}"
+	dodoc ChangeLog README TODO "${FILESDIR}"/README.en || die "dodoc failed"
+}

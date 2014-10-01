@@ -20,5 +20,5 @@ S="${WORKDIR}/${PN}-${MY_PV}"
 
 src_install() {
 	emake DESTDIR="${D}" prefix=/usr install || die "make install failed"
-	mv "# Copyright 1999-2012 Gentoo Foundation
-# Distributed under
+	mv "${D}"/usr/share/doc/"${PN}" "${D}"/usr/share/doc/"${PF}"
+}

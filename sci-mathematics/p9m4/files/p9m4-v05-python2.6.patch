@@ -32,10 +32,13 @@ diff -Nur p9m4-0.5/partition_input.py p9m4-0.5.new/partition_input.py
 +                    keep_end = m2.start()
 +                else:
 +                    keep_end = len(str)
-     diff -Nur p9m4-0.5/my_setup.py p9m4-0.5.new/my_setup.py
---- p9m4-0.5/my_setup.py	2008-01-14 23:30:55.000000000 +0000
-+++ p9m4-0.5.new/my_setup.py	2008-01-14 23:35:45.000000000 +0000
-@@ -158,7 +158,9 @@
-                     self.ed.SetStyle(start, end,
-                                      wx.TextAttr('RED',
-                                        
+             else:
+                 keep_start = m1.start()
+-                keep_end = m2.end() if m2 else len(str)
++                if m2:
++                    keep_end = m2.end()
++                else:
++                    keep_end = len(str)
+             matched += str[keep_start:keep_end]
+             next = other_start = match_end
+         else:

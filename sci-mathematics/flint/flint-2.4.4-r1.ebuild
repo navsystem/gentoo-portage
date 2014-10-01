@@ -43,12 +43,25 @@ src_configure() {
 		$(use_enable static-libs static) \
 		$(usex gc "--with-gc=${EPREFIX}/usr" "") \
 		CC=$(tc-getCC) \
-		CXX=$(tc-g# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/flint/flint-2.4.4-r1.ebuild,v 1.3 2014/08/14 16:22:26 phajdan.jr Exp $
+		CXX=$(tc-getCXX) \
+		AR=$(tc-getAR) \
+		|| die
+}
 
-EAPI="5"
+src_compile() {
+	emake verbose
 
-inherit eutils multilib toolchain-funcs
+	if use doc ; then
+		emake -C doc/latex
+	fi
+}
 
-DESCRIPTION="Fast Library for Nu
+src_test() {
+	emake AT= QUIET_CC= QUIET_CXX= QUIET_AR= check
+}
+
+src_install() {
+	emake DESTDIR="${D}" LIBDIR="$(get_libdir)" install
+	einstalldocs
+	use doc && dodoc doc/latex/flint-manual.pdf
+}

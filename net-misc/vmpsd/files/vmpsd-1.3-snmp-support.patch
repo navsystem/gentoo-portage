@@ -63,12 +63,10 @@ diff -Nuar --exclude '*~' vmpsd.orig/vmpsd.c vmpsd/vmpsd.c
  	opterr = 0;
 @@ -74,7 +74,7 @@
  	printf("\t-d         do not detach, log to stderr also\n");
- 	printf("\t-e path    use external program for mac tFix SNMP support and also make application work on platforms where char is
-unsigned by design, which would otherwise break getopt.
-
-Signed-off-by: Robin H. Johnson <robbat2@gentoo.org>
-Date: 30 Sept 2006
-Bugzilla-URL: http://bugs.gentoo.org/show_bug.cgi?id=148575
-
-diff -Nuar --exclude '*~' vmpsd.orig/Makefile.in vmpsd/Makefile.in
---- vmpsd.orig/Makefile.in	2004-10-30 17:54:44.000000000 
+ 	printf("\t-e path    use external program for mac to vlan assignment\n");
+ 	printf("\t           when/if used with -f, -f is disregarded\n");
+-	printf("\t-f file    read VMPS database from file (/etc/vmps.db)\n");
++	printf("\t-f file    read VMPS database from file ("SYSCONFDIR"/vmps.db)\n");
+ 	printf("\t-l level   set logging level:\n");
+ 	printf("\t                 0x0100 - fatal,\n");
+ 	printf("\t                 0x0200 - info,\n");

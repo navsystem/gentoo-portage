@@ -36,15 +36,23 @@ src_unpack() {
 
 	# build.xml expects it here
 	mkdir -p legal/src/main/resources/META-INF || die
-	cp mail/src/main/resources/META-INF/LICENSE.t# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-javamail/sun-javamail-1.4.3.ebuild,v 1.12 2014/08/10 20:24:39 slyfox Exp $
+	cp mail/src/main/resources/META-INF/LICENSE.txt \
+		legal/src/main/resources/META-INF || die
+}
 
-EAPI=2
-JAVA_PKG_IUSE="doc source"
-inherit java-pkg-2 java-ant-2
+java_prepare() {
+	java-pkg_jar-from --virtual jaf
+}
 
-DESCRIPTION="A Java-based framework to build multiplatform mail and messaging applications"
-HOMEPAGE="http://java.sun.com/products/javamail/index.html"
+EANT_DOC_TARGET="docs"
+EANT_EXTRA_ARGS="-Djavaee.jar=activation.jar -Dspec.dir=doc/spec"
 
-# error 500 without the double slash, wonder wha
+src_install() {
+	java-pkg_dojar target/release/mail.jar
+
+	dodoc doc/release/{CHANGES,COMPAT,NOTES,README,SSLNOTES,distributionREADME}.txt || die
+	dohtml -r doc/release/{*.html,images} || die
+
+	use doc && java-pkg_dojavadoc target/release/docs/javadocs
+	use source && java-pkg_dosrc mail/src/main/java
+}

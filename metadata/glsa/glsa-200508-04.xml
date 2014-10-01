@@ -11,19 +11,6 @@
   </synopsis>
   <product type="ebuild">Netpbm</product>
   <announced>August 05, 2005</announced>
-  <revised>May 28, 2009: <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet href="/xsl/glsa.xsl" type="text/xsl"?>
-<?xml-stylesheet href="/xsl/guide.xsl" type="text/xsl"?>
-<!DOCTYPE glsa SYSTEM "http://www.gentoo.org/dtd/glsa.dtd">
-
-<glsa id="200508-04">
-  <title>Netpbm: Arbitrary code execution in pstopnm</title>
-  <synopsis>
-    The pstopnm utility, part of the Netpbm tools, contains a vulnerability
-    which can potentially result in the execution of arbitrary code.
-  </synopsis>
-  <product type="ebuild">Netpbm</product>
-  <announced>August 05, 2005</announced>
   <revised>May 28, 2009: 06</revised>
   <bug>100398</bug>
   <access>remote</access>
@@ -74,4 +61,19 @@
     </p>
     <code>
     # emerge --sync
-    # emer
+    # emerge --ask --oneshot --verbose media-libs/netpbm</code>
+  </resolution>
+  <references>
+    <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2471">CAN-2005-2471</uri>
+    <uri link="http://secunia.com/advisories/16184/">Secunia Advisory SA16184</uri>
+  </references>
+  <metadata tag="requester" timestamp="Tue, 02 Aug 2005 10:10:20 +0000">
+    koon
+  </metadata>
+  <metadata tag="submitter" timestamp="Tue, 02 Aug 2005 11:24:11 +0000">
+    adir
+  </metadata>
+  <metadata tag="bugReady" timestamp="Fri, 05 Aug 2005 10:42:23 +0000">
+    koon
+  </metadata>
+</glsa>

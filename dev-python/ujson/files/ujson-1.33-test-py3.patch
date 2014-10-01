@@ -33,7 +33,6 @@ index d210bc6..71f8074 100644
 -    #@unittest.skipIf(_python_ver(3), "No exception in Python 3")
      def test_encodeUnicode4BytesUTF8Fail(self):
 +        _skip_if_python_ver(3)
-          tests/tests.py | 8 +++++---
- 1 file changed, 5 insertions(+), 3 deletions(-)
-
-diff --gi
+         input = "\xfd\xbf\xbf\xbf\xbf\xbf"
+         try:
+             enc = ujson.encode(input)

@@ -77,12 +77,15 @@ src_configure() {
 		$(use_with png) \
 		$(use_with pulseaudio) \
 		$(use_with sndfile) \
-		$(use_enable stati# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-14.4.1.ebuild,v 1.11 2014/02/03 16:06:22 hattya Exp $
+		$(use_enable static-libs static) \
+		$(use_with twolame) \
+		$(use_with wavpack) \
+		--with-distro="Gentoo"
+}
 
-EAPI=4
-inherit eutils flag-o-matic autotools
-
-DESCRIPTION="The swiss army knife of sound processing programs"
-HOMEP
+src_install() {
+	default
+	# libltdl is used for loading plugins, keeping libtool files with empty
+	# dependency_libs what otherwise would be -exec rm -f {} +
+	find "${ED}" -name '*.la' -exec sed -i -e "/^dependency_libs/s:=.*:='':" {} +
+}

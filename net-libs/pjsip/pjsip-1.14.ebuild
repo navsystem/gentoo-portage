@@ -95,4 +95,5 @@ src_install() {
 
 	# Remove files that pjproject should not install
 	rm -r "${D}/usr/lib/libportaudio.a" \
-		"${D}/usr/# Copyright 1999-
+		"${D}/usr/lib/libsrtp.a"
+}

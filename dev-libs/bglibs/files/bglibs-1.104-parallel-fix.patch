@@ -1,4 +1,4 @@
-Fixes for parallFixes for parallel compile.
+Fixes for parallel compile.
 
 - Redirection straight to an output target that is later used for dependancies
   is not safe. The output file must be come into existence atomically.
@@ -84,4 +84,4 @@ Signed-off-by: Robin H. Johnson <robbat2@gentoo.org>
 +libraries: libs-shared libs-static
  
  libvmailmgr.a: makelib vmailmgr/req_arg.o vmailmgr/req_init.o vmailmgr/req_write.o vmailmgr/resp_read.o vmailmgr/vpwentry_export.o vmailmgr/vpwentry_free.o vmailmgr/vpwentry_import.o
- 	./makelib libvmailmgr.a vmailmgr/req_arg.o vmailmgr/req_init.o vmailmgr/req_write.o vmailmgr/resp_read.o vmailmgr/vpwentry_export.o vmailmgr/vpwentry_free.o vmailmgr/vp
+ 	./makelib libvmailmgr.a vmailmgr/req_arg.o vmailmgr/req_init.o vmailmgr/req_write.o vmailmgr/resp_read.o vmailmgr/vpwentry_export.o vmailmgr/vpwentry_free.o vmailmgr/vpwentry_import.o

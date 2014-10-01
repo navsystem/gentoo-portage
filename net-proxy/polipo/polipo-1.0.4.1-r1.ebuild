@@ -34,10 +34,16 @@ src_install() {
 
 	newinitd "${FILESDIR}/polipo.initd" polipo
 	insinto /etc/polipo ; doins "${FILESDIR}/config"
-	exeinto /etc/cron.daily ; newexe "${FILESDIR}/polipo.cro# Copyright 1999-2013 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/polipo-1.0.4.1-r1.ebuild,v 1.2 2013/03/04 14:34:10 dastergon Exp $
+	exeinto /etc/cron.daily ; newexe "${FILESDIR}/polipo.crond" polipo.sh
 
-EAPI="4"
+	diropts -m0750 -o polipo -g polipo
+	keepdir /var/cache/polipo
 
-inherit eut
+	dodoc CHANGES README
+	dohtml html/*
+}
+
+pkg_postinst() {
+	einfo "Do not forget to read the manual."
+	einfo "Change the config file in /etc/polipo to suit your needs."
+}

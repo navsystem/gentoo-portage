@@ -21,15 +21,11 @@
  
  example$(EXE): example.o $(LIBS)
 -	$(CC) $(CFLAGS) -o $@ example.o $(LDFLAGS)
-+	$(CC) $(CFLAGS) -o $@ examp--- zlib-1.2.3/Makefile.in
-+++ zlib-1.2.3/Makefile.in
-@@ -24,7 +24,7 @@
- #CFLAGS=-O3 -Wall -Wwrite-strings -Wpointer-arith -Wconversion \
- #           -Wstrict-prototypes -Wmissing-prototypes
++	$(CC) $(CFLAGS) -o $@ example.o $(LDFLAGS) $(TEST_LDFLAGS)
  
--LDFLAGS=libz.a
-+TEST_LDFLAGS=libz.a
- LDSHARED=$(CC)
- CPP=$(CC) -E
+ minigzip$(EXE): minigzip.o $(LIBS)
+-	$(CC) $(CFLAGS) -o $@ minigzip.o $(LDFLAGS)
++	$(CC) $(CFLAGS) -o $@ minigzip.o $(LDFLAGS) $(TEST_LDFLAGS)
  
-@@ -8
+ install-libs: $(LIBS)
+ 	-@if [ ! -d $(exec_prefix) ]; then mkdir -p $(exec_prefix); fi

@@ -62,5 +62,6 @@ pkg_postinst() {
 	elog "    icap_send_client_ip on"
 	elog "    icap_send_client_username on"
 	elog ""
-	elog "    icap_service clamav res# Copyright 1999-2012 Gentoo Foundation
-# Distributed under the terms of the GNU General Public Licens
+	elog "    icap_service clamav respmod_precache bypass=0 icap://localhost:1344/clamav"
+	elog "    adaptation_access clamav allow all"
+}

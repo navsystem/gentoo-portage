@@ -23,16 +23,18 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 ruby_add_rdepend ">=dev-ruby/faraday-0.8
-	># Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth2/oauth2-0.9.4.ebuild,v 1.3 2014/08/15 14:14:47 blueness Exp $
+	>=dev-ruby/jwt-0.1.8
+	>=dev-ruby/multi_json-1.0.3
+	>=dev-ruby/multi_xml-0.5
+	>=dev-ruby/rack-1.2"
+ruby_add_bdepend "test? ( >=dev-ruby/rspec-2.5.0:2 )"
 
-EAPI=5
+all_ruby_prepare() {
+	sed -i -e '/simplecov/,/^end/ s:^:#:' spec/helper.rb || die
 
-USE_RUBY="ruby19 ruby20"
+	sed -i -e '/yardstick/,/^end/ s:^:#:' Rakefile || die
+}
 
-RUBY_FAKEGEM_TASK_TEST="none"
-RUBY_FAKEGEM_TASK_DOC="doc:rdoc"
-
-RUBY_FAKEGEM_DOCDIR="rdoc"
-RUBY_FA
+each_ruby_test() {
+	CI=true ${RUBY} -S rspec spec || die
+}

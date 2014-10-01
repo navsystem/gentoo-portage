@@ -45,11 +45,15 @@ java_prepare() {
 	epatch "${FILESDIR}/${PROJ_PN}-20090620-less-maven.patch"
 	java-ant_bsfix_one "${S}/build-common.xml"
 	libdir="${S}/${SUB_PN}/lib"
-	mkdir -p "${libdir}" || # Copyright 1999-2012 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/istack-commons-buildtools/istack-commons-buildtools-20090620.ebuild,v 1.2 2012/04/13 18:07:27 ulm Exp $
+	mkdir -p "${libdir}" || die
+	java-pkg_jar-from --into "${libdir}" ant-core
+	java-pkg_jar-from --into "${libdir}" codemodel-2
+	java-pkg_jar-from --into "${libdir}" istack-commons-runtime-1.1
+}
 
-EAPI=2
-JAVA_PKG_IUSE="source"
+EANT_BUILD_XML="${SUB_PN}/build.xml"
 
-inherit java-pkg-2 java-an
+src_install() {
+	java-pkg_dojar ${SUB_PN}/build/${PN}.jar
+	use source && java-pkg_dosrc ${SUB_PN}/src/*
+}

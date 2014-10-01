@@ -38,16 +38,20 @@ RDEPEND="${DEPEND}
 
 src_configure() {
 	local mycmakeargs=(
-		-DSPLIT_BUILD=On# Copyright 1999-2013 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/razorqt-base/razorqt-panel/razorqt-panel-0.5.2.ebuild,v 1.3 2013/04/05 14:40:56 ago Exp $
+		-DSPLIT_BUILD=On
+		-DMODULE_PANEL=On
+	)
 
-EAPI=4
-inherit cmake-utils
+	local i
+	for i in clock colorpicker cpuload desktopswitch mainmenu mount networkmonitor \
+			quicklaunch screensaver sensors showdesktop taskbar tray volume; do
+		use $i || mycmakeargs+=( -D${i^^}_PLUGIN=No )
+	done
 
-DESCRIPTION="Razor-qt panel and its plugins"
-HOMEPAGE="http://razor-qt.org/"
-
-if [[ ${PV} = *9999* ]]; then
-	inherit git-2
-	EG
+	if use volume; then
+		for i in alsa pulseaudio; do
+			use $i || mycmakeargs+=( -DVOLUME_USE_${i^^}=No )
+		done
+	fi
+	cmake-utils_src_configure
+}

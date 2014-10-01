@@ -17,7 +17,9 @@ https://bbs.archlinux.org/viewtopic.php?id=129302
 +            int extra_lines = nrow-1;
 +            if (screen.cur.row == 0)
 +              extra_lines += nrow;
-+            for (int i = 0; i < extra_lines; +store visible lines to buffer before clearing the screen when pressing ctrl-l
-
-patch by rlblaster
-https://bbs.archlinux.org/viewtopic.php?id=1293
++            for (int i = 0; i < extra_lines; ++i)
++              scr_add_lines (L"\r\n", 2);
++          }
+         scr_gotorc (arg[0] - 1, nargs < 2 ? 0 : (arg[1] - 1), 0);
+         break;
+ 

@@ -61,9 +61,17 @@ src_install() {
 	fi
 }
 
-src_# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mpop/mpop-1.0.29.ebuild,v 1.1 2014/03/09 22:05:28 radhermit Exp $
-
-EAPI=5
-PYTHON_COMPAT=( pyth
+src_install_contrib() {
+	subdir="$1"
+	bins="$2"
+	docs="$3"
+	local dir=/usr/share/${PN}/$subdir
+	insinto ${dir}
+	exeinto ${dir}
+	for i in $bins ; do
+		doexe scripts/$subdir/$i
+	done
+	for i in $docs ; do
+		newdoc scripts/$subdir/$i $subdir.$i
+	done
+}

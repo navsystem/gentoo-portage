@@ -44,6 +44,14 @@ src_compile() {
 	emake || die "emake failed"
 }
 
-src_inst# Copyright 1999-2013 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ladspa-cmt-1.16-
+src_install() {
+	insinto /usr/share/ladspa/rdf/
+	doins "${FILESDIR}/cmt.rdf"
+
+	insopts -m755
+	insinto /usr/$(get_libdir)/ladspa
+	doins ../plugins/*.so
+
+	dodoc ../README
+	dohtml ../doc/*
+}

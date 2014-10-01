@@ -52,6 +52,17 @@ RDEPEND="${PYTHON_DEPS}
 "
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
-	dev-util/# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundconverter/soundconverter-2.1.3.ebuild,v 1.3 2014/07/23 15
+	dev-util/intltool
+	virtual/pkgconfig
+	sys-devel/gettext
+"
+
+src_prepare() {
+	python_fix_shebang .
+	gnome2_src_prepare
+}
+
+src_install() {
+	gnome2_src_install
+	python_optimize "${ED%/}"/usr/$(get_libdir)/soundconverter/python
+}

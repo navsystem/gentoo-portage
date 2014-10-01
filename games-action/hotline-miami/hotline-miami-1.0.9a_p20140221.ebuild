@@ -16,24 +16,6 @@ SRC_URI="HotlineMiami_linux_1392944501.tar.gz"
 LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="bundl# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/hotline-miami/hotline-miami-1.0.9a_p20140221.ebuild,v 1.3 2014/06/25 13:03:31 mgorny Exp $
-
-# TODO: unbundle Qt5
-#		remove emul-linux-x86* deps (bug 484060)
-
-EAPI=5
-
-inherit eutils games
-
-DESCRIPTION="High-octane action game overflowing with raw brutality"
-HOMEPAGE="http://www.devolverdigital.com/games/view/hotline-miami"
-SRC_URI="HotlineMiami_linux_1392944501.tar.gz"
-
-LICENSE="all-rights-reserved"
-SLOT="0"
-KEYWORDS="~amd64 ~x86"
 IUSE="bundled-libs +launcher"
 RESTRICT="bindist fetch splitdebug"
 
@@ -93,4 +75,28 @@ S=${WORKDIR}
 
 pkg_nofetch() {
 	einfo "Please buy & download ${SRC_URI} from:"
-	einfo "  https://www.humblebundle.co
+	einfo "  https://www.humblebundle.com/store"
+	einfo "and move it to ${DISTDIR}"
+}
+
+src_install() {
+	insinto "${MYGAMEDIR}"
+	doins HotlineMiami_GL.wad *.ogg
+
+	exeinto "${MYGAMEDIR}"
+	doexe Hotline
+	use launcher && doexe hotline_launcher
+
+	exeinto "${MYGAMEDIR}/lib"
+	use launcher && doexe lib/libQt5*
+	use bundled-libs && doexe libCg* libopenal*
+
+	games_make_wrapper ${PN} "./Hotline" "${MYGAMEDIR}" "${MYGAMEDIR}/lib"
+	make_desktop_entry ${PN}
+	if use launcher ; then
+		games_make_wrapper ${PN}-launcher "./hotline_launcher" "${MYGAMEDIR}" "${MYGAMEDIR}/lib"
+		make_desktop_entry ${PN}-launcher "${PN} (launcher)"
+	fi
+
+	prepgamesdirs
+}

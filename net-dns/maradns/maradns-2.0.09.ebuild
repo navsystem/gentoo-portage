@@ -1,7 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/maradns-2.# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/maradns-2.0.09.ebuild,v 1.3 2014/02/28 09:54:31 pinkbyte Exp $
 
 EAPI="5"
@@ -93,4 +91,8 @@ src_install() {
 
 	# systemd unit
 	# please keep paths in sync!
-	sed -e "s^@bindir@^${EPR
+	sed -e "s^@bindir@^${EPREFIX}/usr/sbin^" \
+		-e "s^@sysconfdir@^${EPREFIX}/etc/maradns^" \
+		"${FILESDIR}"/maradns.service.in > "${T}"/maradns.service
+	systemd_dounit "${T}"/maradns.service
+}

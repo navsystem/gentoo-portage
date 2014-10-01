@@ -1,7 +1,5 @@
 diff -Naurw postgis-1.5.8.orig/loader/Makefile.in postgis-1.5.8/loader/Makefile.in
 --- postgis-1.5.8.orig/loader/Makefile.in	2010-09-10 20:44:05.000000000 +0000
-+++ postgis-1.5diff -Naurw postgis-1.5.8.orig/loader/Makefile.in postgis-1.5.8/loader/Makefile.in
---- postgis-1.5.8.orig/loader/Makefile.in	2010-09-10 20:44:05.000000000 +0000
 +++ postgis-1.5.8/loader/Makefile.in	2013-01-30 14:31:01.189692941 +0000
 @@ -79,16 +79,16 @@
  	$(CC) $(CFLAGS) $(ICONV_CFLAGS) $(PGSQL_FE_CPPFLAGS) -c $<
@@ -19,4 +17,12 @@ diff -Naurw postgis-1.5.8.orig/loader/Makefile.in postgis-1.5.8/loader/Makefile.
  
  $(SHP2PGSQL-GUI): stringbuffer.o shpopen.o dbfopen.o safileio.o shp2pgsql-core.o shp2pgsql-gui.o getopt.o $(LIBLWGEOM) $(GTK_WIN32_RES)
 -	$(CC) $(CFLAGS) $(GTK_WIN32_FLAGS) $^ -o $@ $(GTK_LIBS) $(ICONV_LDFLAGS) $(PGSQL_FE_LDFLAGS) -lm 
-+	$(CC) $(CFLAGS) $(GTK_WIN32_FLAGS) $^ -o $@ $(LDFLAGS) $(GTK_LIBS) $(IC
++	$(CC) $(CFLAGS) $(GTK_WIN32_FLAGS) $^ -o $@ $(LDFLAGS) $(GTK_LIBS) $(ICONV_LDFLAGS) $(PGSQL_FE_LDFLAGS) -lm
+ 
+ installdir:
+ 	@mkdir -p $(DESTDIR)$(bindir)
+@@ -106,4 +106,3 @@
+ 
+ clean:
+ 	@rm -f *.o $(SHP2PGSQL-CLI) $(PGSQL2SHP) $(GTK_WIN32_RES)
+-

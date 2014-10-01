@@ -76,16 +76,16 @@ src_configure() {
 }
 
 src_compile() {
-	# Build system is not parallel-sa# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/gtk-gnutella-1.0.1.ebuild,v 1.5 2014/05/10 13:42:53 ago Exp $
+	# Build system is not parallel-safe, bug 500760
+	emake -j1
+}
 
-EAPI=5
+src_install() {
+	dodir /usr/bin
+	emake INSTALL_PREFIX="${D}" install || die "Install failed"
+	dodoc AUTHORS ChangeLog README TODO
 
-inherit eutils
-
-IUSE="nls dbus ssl +gtk"
-
-DESCRIPTION="A GTK+ Gnutella client"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
-HOMEPAGE="htt
+	# Touch the symbols file into the future to avoid warnings from
+	# gtk-gnutella later on, since we will most likely strip the binary.
+	touch --date="next minute" "${D}/usr/lib/gtk-gnutella/gtk-gnutella.nm" || die
+}

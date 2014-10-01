@@ -13,21 +13,6 @@ LICENSE="BSD zfs? ( CDDL )"
 IUSE="atm netware nis zfs"
 
 if [[ ${PV} != *9999* ]]; then
-	KEYWORDS="~amd64-fbsd # Copyright 1999-2013 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-rescue/freebsd-rescue-9.2_rc1.ebuild,v 1.1 2013/08/11 19:45:47 aballier Exp $
-
-EAPI=5
-
-inherit bsdmk freebsd toolchain-funcs
-
-DESCRIPTION="FreeBSD's rescue binaries"
-SLOT="0"
-LICENSE="BSD zfs? ( CDDL )"
-
-IUSE="atm netware nis zfs"
-
-if [[ ${PV} != *9999* ]]; then
 	KEYWORDS="~amd64-fbsd ~x86-fbsd"
 	SRC_URI="mirror://gentoo/${UBIN}.tar.bz2
 			mirror://gentoo/${CONTRIB}.tar.bz2
@@ -69,4 +54,23 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# As they are patches
+	# As they are patches from ${WORKDIR} apply them by hand
+	cd "${WORKDIR}"
+	epatch "${FILESDIR}/${PN}"-7.1-zlib.patch
+	epatch "${FILESDIR}/freebsd-sbin-bsdxml2expat.patch"
+}
+
+src_compile() {
+	tc-export CC
+	# crunchgen is now checks env MAKE.
+	# Use to force BSD's make
+	export MAKE=/usr/bin/make
+
+	cd "${WORKDIR}/lib/libarchive"
+	echo "#include <expat.h>" > bsdxml.h
+	freebsd_src_compile
+	export CC="${CC} -L${WORKDIR}/lib/libarchive"
+
+	cd "${S}"
+	freebsd_src_compile
+}

@@ -45,4 +45,5 @@ src_prepare() {
 src_configure() {
 	append-cppflags -D_GNU_SOURCE
 
-	econf $(use_enable gtk) $(use_enable ncurses)# Copyright 1999-2014
+	econf $(use_enable gtk) $(use_enable ncurses) $(use_enable nls)
+}

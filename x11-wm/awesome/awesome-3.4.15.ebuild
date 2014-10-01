@@ -13,21 +13,6 @@ SRC_URI="http://awesome.naquadah.org/download/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 arm ppc ppc64 x86 ~x86-fbsd"
-IUSE="dbus doc # Copyright 1999-2013 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.4.15.ebuild,v 1.9 2013/12/27 14:16:45 maksbotan Exp $
-
-EAPI="3"
-CMAKE_MIN_VERSION="2.8"
-inherit cmake-utils eutils
-
-DESCRIPTION="A dynamic floating and tiling window manager"
-HOMEPAGE="http://awesome.naquadah.org/"
-SRC_URI="http://awesome.naquadah.org/download/${P}.tar.bz2"
-
-LICENSE="GPL-2"
-SLOT="0"
-KEYWORDS="amd64 arm ppc ppc64 x86 ~x86-fbsd"
 IUSE="dbus doc elibc_FreeBSD gnome"
 
 COMMON_DEPEND=">=dev-lang/lua-5.1
@@ -126,4 +111,22 @@ src_install() {
 			mv html doxygen
 			dohtml -r doxygen || die
 		)
-		mv "${ED}"/usr/share/d
+		mv "${ED}"/usr/share/doc/${PN}/luadoc "${ED}"/usr/share/doc/${PF}/html/luadoc || die
+	fi
+	rm -rf "${ED}"/usr/share/doc/${PN} || die
+
+	exeinto /etc/X11/Sessions
+	newexe "${FILESDIR}"/${PN}-session ${PN} || die
+
+	# GNOME-based awesome
+	if use gnome ; then
+		# GNOME session
+		insinto /usr/share/gnome-session/sessions
+		doins "${FILESDIR}/${PN}-gnome.session" || die
+		# Application launcher
+		domenu "${FILESDIR}/${PN}-gnome.desktop" || die
+		# X Session
+		insinto /usr/share/xsessions/
+		doins "${FILESDIR}/${PN}-gnome-xsession.desktop" || die
+	fi
+}

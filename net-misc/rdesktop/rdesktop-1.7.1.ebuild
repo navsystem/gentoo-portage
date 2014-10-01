@@ -63,20 +63,20 @@ src_configure() {
 		$(use_with debug) \
 		$(use_with ipv6) \
 		$(use_with libsamplerate) \
-	# Copyright 1999-2013 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/rdesktop-1.7.1.ebuild,v 1.12 2013/11/10 15:16:18 pinkbyte Exp $
+		$(use_enable pcsc-lite smartcard) \
+		${sound_conf}
+}
 
-EAPI=4
+src_install() {
+	emake DESTDIR="${D}" install
+	dodoc doc/HACKING doc/TODO doc/keymapping.txt
 
-inherit autotools eutils
-
-MY_PV=${PV/_/-}
-
-DESCRIPTION="A Remote Desktop Protocol Client"
-HOMEPAGE="http://rdesktop.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_PV}.tar.gz"
-
-LICENSE="GPL-3"
-SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~arm-linu
+	# For #180313 - applies to versions >= 1.5.0
+	# Fixes sf.net bug
+	# http://sourceforge.net/tracker/index.php?func=detail&aid=1725634&group_id=24366&atid=381349
+	# check for next version to see if this needs to be removed
+	insinto /usr/share/rdesktop/keymaps
+	newins "${FILESDIR}/rdesktop-keymap-additional" additional
+	newins "${FILESDIR}/rdesktop-keymap-cs" cs
+	newins "${FILESDIR}/rdesktop-keymap-sk" sk
+}

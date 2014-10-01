@@ -26,5 +26,9 @@ RDEPEND=">=dev-haskell/binary-0.4.1:=[profile?]
 		<dev-haskell/timezone-series-0.2:=[profile?]
 		>=dev-lang/ghc-6.10.4:="
 DEPEND="${RDEPEND}
-		>=dev-haskel# Copyright 1999-2013 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License 
+		>=dev-haskell/cabal-1.2"
+
+src_prepare() {
+	cabal_chdeps \
+		'binary >= 0.4.1 && < 0.6' 'binary >= 0.4.1 && < 0.8'
+}

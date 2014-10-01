@@ -76,4 +76,5 @@ src_install() {
 	insinto ${MMDIR}
 	doins -r auxil help macros man setup tips
 
-	dodoc # Copyright 1999-
+	dodoc HISTORY README
+}

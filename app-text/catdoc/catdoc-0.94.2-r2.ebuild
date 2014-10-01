@@ -40,13 +40,13 @@ src_compile() {
 	emake LIB_DIR="${EPREFIX}"/usr/share/catdoc || die
 }
 
-src# Copyright 1999-2010 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/catdoc/catdoc-0.94.2-r2.ebuild,v 1.3 2010/09/15 11:22:35 grobian Exp $
+src_install() {
+	emake -j1 mandir="${EPREFIX}"/usr/share/man/man1 install || die
 
-EAPI=3
-WANT_AUTOMAKE=none
+	if [[ -e ${ED}/usr/bin/xls2csv ]]; then
+		einfo "Renaming xls2csv to xls2csv-${PN} because of bug 314657."
+		mv -vf "${ED}"/usr/bin/xls2csv "${ED}"/usr/bin/xls2csv-${PN} || die
+	fi
 
-inherit autotools eutils
-
-DES
+	dodoc ${DOCS}
+}

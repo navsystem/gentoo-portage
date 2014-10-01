@@ -20,6 +20,16 @@ DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${PN}
 
-src_p# Copyright 1999-2013 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/include-what-you-use/include-what-you-use-3.3-r1.ebuild,v 1.2 2013/10/03 06:17:19 s
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-issue-110-elaboration.patch
+	epatch_user
+}
+
+src_configure() {
+	append-ldflags -L$(llvm-config --libdir)
+
+	local mycmakeargs=(
+		-DLLVM_PATH=$(llvm-config --libdir)
+	)
+	cmake-utils_src_configure
+}

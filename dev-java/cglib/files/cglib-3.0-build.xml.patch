@@ -22,11 +22,15 @@ diff -Nru /tmp/cglib-3.0.orig/build.xml ./build.xml
 -      <include name="**/*"/>
 -      <exclude name="samples/**"/>
 -    </jarjar> 
-   </target>diff -Nru /tmp/cglib-3.0.orig/build.xml ./build.xml
---- /tmp/cglib-3.0.orig/build.xml	2012-08-17 19:21:37.387574672 +0300
-+++ ./build.xml	2012-08-17 19:26:58.982564260 +0300
-@@ -73,7 +73,7 @@
-   <target depends="prepare" description="Compile shareable components" 
-           name="compile">
-     <javac debug="${compile.debug}" deprecation="${compile.deprecation}" destdir="${build.home}/classes" optimize="${compile.optimize}" srcdir="${source.home}"
--      target="${compile.target}" bootclasspath="${compile.b
+   </target>
+ 
+   <target depends="compile,javadoc" description="Create docs and source distribution" name="srcjar">
+@@ -246,7 +238,7 @@
+   <!-- <jvmarg value="-verbose:class"/> -->
+   <!-- <jvmarg value="-Xprof"/> -->
+   <!-- <jvmarg value="-server"/> -->
+-  <!-- <sysproperty key="cglib.debugLocation" value="debug"/> -->
++  <sysproperty key="cglib.debugLocation" value="${cglib.debugLocation}"/>
+   <!-- <jvmarg value="-Djava.security.policy==java.policy" /> -->
+   <!-- <jvmarg value="-Djava.security.manager" />  -->
+  

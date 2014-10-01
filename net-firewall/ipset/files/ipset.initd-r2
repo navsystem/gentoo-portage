@@ -13,21 +13,6 @@ depend() {
 
 checkconfig() {
     if [ ! -f "${IPSET_SAVE}" ] ; then
-        #!/sbin/runscript
-# Copyright 1999-2013 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/files/ipset.initd-r2,v 1.2 2013/12/01 19:16:15 robbat2 Exp $
-
-extra_commands="save"
-
-IPSET_SAVE=${IPSET_SAVE:-/var/lib/ipset/rules-save}
-
-depend() {
-    before iptables ip6tables
-}
-
-checkconfig() {
-    if [ ! -f "${IPSET_SAVE}" ] ; then
         eerror "Not starting ${SVCNAME}. First create some rules then run:"
         eerror "/etc/init.d/${SVCNAME} save"
         return 1
@@ -50,4 +35,26 @@ stop() {
         ($1 == "Type:" && $2 == "list:set") { set = 1 }
         (scan) { if ($0 != "") setcnt++; else { scan = 0; set = 0 } }
         (set && $1 == "Members:") {scan = 1}
-        END { if (
+        END { if ((refcnt - setcnt) > 0) exit 1 }
+    '; then
+        eerror "ipset is in use, can't stop"
+        return 1
+    fi
+
+    if [ "${SAVE_ON_STOP}" = "yes" ] ; then
+        save || return 1
+    fi
+
+    ebegin "Removing kernel IP sets"
+    ipset flush
+    ipset destroy
+    eend $?
+}
+
+save() {
+    ebegin "Saving ipset session"
+    touch "${IPSET_SAVE}"
+    chmod 0600 "${IPSET_SAVE}"
+    ipset save > "${IPSET_SAVE}"
+    eend $?
+}

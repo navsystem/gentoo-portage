@@ -11,19 +11,6 @@
   <announced>January 23, 2012</announced>
   <revised>January 23, 2012: 1</revised>
   <bug>394879</bug>
-  <a<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="/xsl/glsa.xsl"?>
-<?xml-stylesheet type="text/xsl" href="/xsl/guide.xsl"?>
-<!DOCTYPE glsa SYSTEM "http://www.gentoo.org/dtd/glsa.dtd">
-<glsa id="201201-10">
-  <title>JasPer: User-assisted execution of arbitrary code</title>
-  <synopsis>Multiple memory management errors in JasPer could result in
-    execution of arbitrary code or a Denial of Service.
-  </synopsis>
-  <product type="ebuild">JasPer</product>
-  <announced>January 23, 2012</announced>
-  <revised>January 23, 2012: 1</revised>
-  <bug>394879</bug>
   <access>remote</access>
   <affected>
     <package name="media-libs/jasper" auto="yes" arch="*">
@@ -62,4 +49,20 @@
     <p>There is no known workaround at this time.</p>
   </workaround>
   <resolution>
-    <p>All JasPer users
+    <p>All JasPer users should upgrade to the latest version:</p>
+    
+    <code>
+      # emerge --sync
+      # emerge --ask --oneshot --verbose "&gt;=media-libs/jasper-1.900.1-r4"
+    </code>
+    
+  </resolution>
+  <references>
+    <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2011-4516">CVE-2011-4516</uri>
+    <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2011-4517">CVE-2011-4517</uri>
+  </references>
+  <metadata timestamp="Tue, 27 Dec 2011 05:22:50 +0000" tag="requester">
+    underling
+  </metadata>
+  <metadata timestamp="Mon, 23 Jan 2012 19:50:54 +0000" tag="submitter">ackle</metadata>
+</glsa>

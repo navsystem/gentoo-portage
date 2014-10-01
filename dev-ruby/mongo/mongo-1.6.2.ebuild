@@ -29,14 +29,18 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="test"
 
-# This is the same source package a# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mongo/mongo-1.6.2.ebuild,v 1.4 2014/08/05 16:00:35 mrueg Exp $
+# This is the same source package as bson, so keep them the same
+# version, but not revision
+ruby_add_rdepend "~dev-ruby/bson-${PV}"
 
-EAPI=4
+ruby_add_bdepend \
+	"test? (
+		dev-ruby/rake
+		dev-ruby/shoulda
+		dev-ruby/mocha
+	)"
 
-USE_RUBY="ruby19"
-
-RUBY_FAKEGEM_TASK_TEST="test:unit"
-
-RUBY_FAKEGEM_TASK_DOC="r
+all_ruby_prepare() {
+	# remove the stuff that is actually part of dev-ruby/bson
+	rm -rf lib/bson* bin/{b2j,j2b}son
+}

@@ -78,4 +78,7 @@ index 0eb9438..36457f4 100644
 +      int err = inet_pton4(curtok, tp);
        if (err == 0) {
          tp += sizeof(struct in_addr);
- From f58b02f2cf068e1bed10bf9f632bad39
+         seen_xdigits = 0;
+-- 
+1.9.3
+

@@ -16,24 +16,6 @@ IUSE="clamav kaspersky debug ntlm pcre"
 RDEPEND="sys-libs/zlib
 	pcre? ( >=dev-libs/libpcre-8.32 )
 	clamav? ( >=app-antivirus/clamav-0.93 )"
-# Copyright 1999-2013 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.10.0.3-r1.ebuild,v 1.1 2013/04/09 18:36:01 tomwij Exp $
-
-inherit eutils
-
-DESCRIPTION="Web content filtering via proxy"
-HOMEPAGE="http://dansguardian.org"
-SRC_URI="http://dansguardian.org/downloads/2/Stable/${P}.tar.gz"
-
-LICENSE="GPL-2"
-SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="clamav kaspersky debug ntlm pcre"
-
-RDEPEND="sys-libs/zlib
-	pcre? ( >=dev-libs/libpcre-8.32 )
-	clamav? ( >=app-antivirus/clamav-0.93 )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
@@ -105,4 +87,26 @@ src_install() {
 		sed -r -i -e 's/^#( *contentscanner *=.*clamdscan[.]conf.*)/\1/' "${D}/etc/dansguardian/dansguardian.conf"
 		sed -r -i -e 's/^#( *clamdudsfile *=.*)/\1/' "${D}/etc/dansguardian/contentscanners/clamdscan.conf"
 	elif use kaspersky; then
-	
+		sed -r -i -e 's/^#( *contentscanner *=.*kavdscan[.]conf.*)/\1/' "${D}/etc/dansguardian/dansguardian.conf"
+	fi
+
+	# Copying logrotation file
+	insinto /etc/logrotate.d
+	newins "${FILESDIR}/dansguardian.logrotate" dansguardian
+
+	keepdir /var/log/dansguardian
+	fperms o-rwx /var/log/dansguardian
+}
+
+pkg_postinst() {
+	local runas="nobody:nobody"
+	if use clamav ; then
+		runas="clamav:clamav"
+	fi
+	einfo "The dansguardian daemon will run by default as ${runas}"
+
+	if [ -d "${ROOT}/var/log/dansguardian" ] ; then
+		chown -R ${runas} "${ROOT}/var/log/dansguardian"
+		chmod o-rwx "${ROOT}/var/log/dansguardian"
+	fi
+}

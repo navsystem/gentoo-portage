@@ -32,4 +32,4 @@
 +#CCOMPILER = @PTHREAD_CC@
  
  ##### For the general-purpose X facility, uncomment this line
---- Makefile.in.oric	
+ XPOWER = -DANYDEPTH

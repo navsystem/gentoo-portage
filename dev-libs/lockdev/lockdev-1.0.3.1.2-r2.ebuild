@@ -5,13 +5,6 @@
 EAPI=5
 
 GENTOO_DEPEND_ON_PERL="no"
-inherit toolchain-funcs base perl-module eutils v# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lockdev/lockdev-1.0.3.1.2-r2.ebuild,v 1.7 2014/08/21 12:52:24 armin76 Exp $
-
-EAPI=5
-
-GENTOO_DEPEND_ON_PERL="no"
 inherit toolchain-funcs base perl-module eutils versionator autotools
 
 MAJOR=$(get_major_version)
@@ -88,4 +81,20 @@ src_test() {
 src_install() {
 	emake DESTDIR="${D}" install
 
-	dodoc AUTHORS ChangeLog* debian/NEWS README.deb
+	dodoc AUTHORS ChangeLog* debian/NEWS README.debug
+	newdoc debian/changelog changelog.debian
+
+	if use perl; then
+		cd "${PERL_S}"
+		mytargets="pure_install"
+		docinto perl
+		perl-module_src_install
+	fi
+
+	# Remove *.la files
+	find "${D}" -name "*.la" -exec rm {} + || die "removal of *.la files failed"
+}
+
+pkg_preinst() {
+	use perl && perl-module_pkg_preinst
+}

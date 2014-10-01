@@ -25,5 +25,8 @@ src_install() {
 	prune_libtool_files
 
 	if use examples; then
-		find examples/ -name 'Make# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General
+		find examples/ -name 'Makefile*' -delete
+		dodoc -r examples/
+		docompress -x /usr/share/doc/${PF}/examples
+	fi
+}

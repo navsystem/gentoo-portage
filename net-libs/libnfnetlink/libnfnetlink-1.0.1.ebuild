@@ -23,17 +23,24 @@ pkg_setup() {
 		ewarn "${PN} requires at least 2.6.18 kernel version"
 	fi
 
-	#netf# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfnetlink/libnfnetlink-1.0.1.ebuild,v 1.9 2014/08/01 18:48:38 tgall Exp $
+	#netfilter core team has changed some option names with kernel 2.6.20
+	error_common=' is not set when it should be. You can activate it in the Core Netfilter Configuration'
+	if kernel_is lt 2 6 20 ; then
+		CONFIG_CHECK="~IP_NF_CONNTRACK_NETLINK"
+		ERROR_IP_NF_CONNTRACK_NETLINK="CONFIG_IP_NF_CONNTRACK_NETLINK:\t${error_common}"
+	else
+		CONFIG_CHECK="~NF_CT_NETLINK"
+		ERROR_NF_CT_NETLINK="CONFIG_NF_CT_NETLINK:\t${error_common}"
+	fi
 
-EAPI=4
-inherit linux-info eutils
+	check_extra_config
+}
 
-DESCRIPTION="the low-level library for netfilter related kernel/userspace communication"
-HOMEPAGE="http://www.netfilter.org/projects/libnfnetlink/"
-SRC_URI="http://www.netfilter.org/projects/${PN}/files/${P}.tar.bz2"
+src_configure() {
+	econf $(use_enable static-libs static)
+}
 
-LICENSE="GPL-2"
-SLOT="0"
-KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc
+src_install() {
+	default
+	prune_libtool_files
+}

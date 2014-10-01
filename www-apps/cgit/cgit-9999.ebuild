@@ -10,18 +10,6 @@ inherit webapp eutils multilib user toolchain-funcs git-2
 
 [[ -z "${CGIT_CACHEDIR}" ]] && CGIT_CACHEDIR="/var/cache/${PN}/"
 
-DESCRIPTION="a fast web-interface for g# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/cgit/cgit-9999.ebuild,v 1.11 2014/07/04 20:32:57 hasufell Exp $
-
-EAPI="4"
-
-WEBAPP_MANUAL_SLOT="yes"
-
-inherit webapp eutils multilib user toolchain-funcs git-2
-
-[[ -z "${CGIT_CACHEDIR}" ]] && CGIT_CACHEDIR="/var/cache/${PN}/"
-
 DESCRIPTION="a fast web-interface for git repositories"
 HOMEPAGE="http://git.zx2c4.com/cgit/about"
 SRC_URI=""
@@ -83,4 +71,22 @@ src_install() {
 
 	emake V=1 AR="$(tc-getAR)" CC="$(tc-getCC)" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" install
 
-	insi
+	insinto /etc
+	doins "${FILESDIR}"/cgitrc
+
+	dodoc README
+	use doc && doman cgitrc.5
+
+	webapp_postinst_txt en "${FILESDIR}"/postinstall-en.txt
+	webapp_src_install
+
+	keepdir "${CGIT_CACHEDIR}"
+	fowners ${PN}:${PN} "${CGIT_CACHEDIR}"
+	fperms 700 "${CGIT_CACHEDIR}"
+}
+
+pkg_postinst() {
+	webapp_pkg_postinst
+	ewarn "If you intend to run cgit using web server's user"
+	ewarn "you should change ${CGIT_CACHEDIR} permissions."
+}

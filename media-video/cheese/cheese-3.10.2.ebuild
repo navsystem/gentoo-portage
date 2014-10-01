@@ -57,15 +57,26 @@ DEPEND="${COMMON_DEPEND}
 	>=dev-util/gtk-doc-am-1.14
 	>=dev-util/intltool-0.50
 	virtual/pkgconfig
-	x11-proto/xf86vidmodeproto# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-3.10.2.ebuild,v 1.5 2014/07/24 18:53:20 ssuominen Exp $
+	x11-proto/xf86vidmodeproto
+	test? ( dev-libs/glib:2[utils] )
+"
 
-EAPI="5"
-GCONF_DEBUG="no"
-VALA_MIN_API_VERSION="0.18"
+src_configure() {
+	gnome2_src_configure \
+		GST_INSPECT=$(type -P true) \
+		$(use_enable introspection) \
+		--disable-lcov \
+		--disable-static \
+		ITSTOOL=$(type -P true)
+}
 
-inherit gnome2 vala virtualx
+src_compile() {
+	# Clutter-related sandbox violations when USE="doc introspection" and
+	# FEATURES="-userpriv" (see bug #385917).
+	unset DISPLAY
+	gnome2_src_compile
+}
 
-DESCRIPTION="A cheesy program to take pictures and videos from your webcam"
-HOMEPAGE="http://project
+src_test() {
+	Xemake check
+}

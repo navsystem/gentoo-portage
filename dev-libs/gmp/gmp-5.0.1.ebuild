@@ -44,28 +44,44 @@ src_unpack() {
 }
 
 src_compile() {
-	# Because of# Copyright 1999-2011 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-5.0.1.ebuild,v 1.11 2011/11/13 20:03:31 vapier Exp $
+	# Because of our 32-bit userland, 1.0 is the only HPPA ABI that works
+	# http://gmplib.org/manual/ABI-and-ISA.html#ABI-and-ISA (bug #344613)
+	if [[ ${CHOST} == hppa2.0-* ]] ; then
+		export GMPABI="1.0"
+	fi
 
-inherit flag-o-matic eutils libtool toolchain-funcs
+	# ABI mappings (needs all architectures supported)
+	case ${ABI} in
+		32|x86)       GMPABI=32;;
+		64|amd64|n64) GMPABI=64;;
+		o32|n32)      GMPABI=${ABI};;
+	esac
+	export GMPABI
 
-DESCRIPTION="Library for arithmetic on arbitrary precision integers, rational numbers, and floating-point numbers"
-HOMEPAGE="http://gmplib.org/"
-SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2"
-#	doc? ( http://www.nada.kth.se/~tege/${PN}-man-${PV}.pdf )"
+	tc-export CC
+	econf \
+		--localstatedir=/var/state/gmp \
+		--disable-mpbsd \
+		$(use_enable cxx) \
+		|| die "configure failed"
 
-LICENSE="LGPL-3"
-SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="cxx" #doc
+	emake || die "emake failed"
+}
 
-DEPEND="sys-devel/m4"
-RDEPEND=""
+src_install() {
+	emake DESTDIR="${D}" install || die "make install failed"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	[[ -d ${FILESDIR}/${PV} ]] && EPATCH_SUFFIX="diff" EPATCH_FORCE="yes" epatch "${FILESDIR}"/${PV}
-	epatch "${FILESDIR}"/${PN}-4.1.4-noexecstack.patch
-	epatch "${FILESDIR}"/${P}-perfpow-test
+	dodoc AUTHORS ChangeLog NEWS README
+	dodoc doc/configuration doc/isa_abi_headache
+	dohtml -r doc
+
+	#use doc && cp "${DISTDIR}"/gmp-man-${PV}.pdf "${D}"/usr/share/doc/${PF}/
+}
+
+pkg_preinst() {
+	preserve_old_lib /usr/$(get_libdir)/libgmp.so.3
+}
+
+pkg_postinst() {
+	preserve_old_lib_notify /usr/$(get_libdir)/libgmp.so.3
+}

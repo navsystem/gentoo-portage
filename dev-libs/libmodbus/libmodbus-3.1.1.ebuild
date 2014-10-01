@@ -11,10 +11,16 @@ SRC_URI="http://libmodbus.org/releases/${P}.tar.gz"
 LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="static-# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmodbus/libmodbus-3.1.1.ebuild,v 1.1 2014/07/10 15:59:24 xmw Exp $
+IUSE="static-libs"
 
-EAPI=4
+src_configure() {
+	econf \
+		--disable-silent-rules \
+		$(use_enable static-libs static)
+}
 
-DESCRIP
+src_install() {
+	emake install DESTDIR="${D}"
+	dodoc AUTHORS MIGRATION NEWS README.md
+	use static-libs || rm "${D}"/usr/*/libmodbus.la
+}

@@ -71,6 +71,12 @@ src_install() {
 		delete_gui() {
 				rm -rf \
 					"${ED}"/usr/bin/linkchecker-gui* \
-					"${ED}"/$(python_get_sitedir)/l# Copyright 1999-2013 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/linkchecker
+					"${ED}"/$(python_get_sitedir)/linkcheck/gui* || die
+		}
+		python_execute_function -q delete_gui
+	fi
+	if use doc; then
+		dohtml doc/html/*
+	fi
+	use bash-completion && dobashcomp config/linkchecker-completion
+}

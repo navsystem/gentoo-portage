@@ -80,4 +80,7 @@ src_install() {
 	exeinto ${MMDIR}
 	newexe src/main/molmol molmol.lnx
 	insinto ${MMDIR}
-	doins -r auxil help macros man setup ti# Copyright 1999-2013 Gentoo
+	doins -r auxil help macros man setup tips
+
+	dodoc HISTORY README
+}

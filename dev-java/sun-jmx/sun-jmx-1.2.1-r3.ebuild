@@ -45,5 +45,7 @@ src_install() {
 	java-pkg_dojar lib/*.jar
 	if use doc; then
 		java-pkg_dojavadoc doc/api
-		java-p# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General
+		java-pkg_dohtml -r doc/doc doc/index.html
+	fi
+	use examples && java-pkg_doexamples examples
+}

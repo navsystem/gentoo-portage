@@ -47,50 +47,39 @@ index f1eaa26..92d3130 100644
 +	$(CXX) $(CXXFLAGS) cdhit-est.o cdhit-common.o cdhit-utility.o $(LDFLAGS) cd-hit-est
  
  cd-hit-est-2d: cdhit-common.o cdhit-utility.o cdhit-est-2d.o
--	$(CC) $(CCFLdiff --git a/Makefile b/Makefile
-index f1eaa26..92d3130 100644
---- a/Makefile
-+++ b/Makefile
-@@ -10,7 +10,7 @@ CCFLAGS = -O2 -DNO_OPENMP
- # in command line: 
- # make openmp=yes
- ifeq ($(openmp),yes)
--CCFLAGS = -O2 -fopenmp
-+CXXFLAGS += -fopenmp
- endif
+-	$(CC) $(CCFLAGS) cdhit-est-2d.o cdhit-common.o cdhit-utility.o $(LDFLAGS) cd-hit-est-2d
++	$(CXX) $(CXXFLAGS) cdhit-est-2d.o cdhit-common.o cdhit-utility.o $(LDFLAGS) cd-hit-est-2d
  
- # support debugging
-@@ -18,16 +18,16 @@ endif
- # make debug=yes
- # make openmp=yes debug=yes
- ifeq ($(debug),yes)
--CCFLAGS += -ggdb
-+CXXFLAGS += -ggdb
- endif
+ cd-hit-div: cdhit-common.o cdhit-utility.o cdhit-div.o
+-	$(CC) $(CCFLAGS) cdhit-div.o cdhit-common.o cdhit-utility.o $(LDFLAGS) cd-hit-div
++	$(CXX) $(CXXFLAGS) cdhit-div.o cdhit-common.o cdhit-utility.o $(LDFLAGS) cd-hit-div
  
- #LDFLAGS = -static -o
--LDFLAGS = -o
-+LDFLAGS += -o
+ # objects
+ cdhit-common.o: cdhit-common.c++ cdhit-common.h
+-	$(CC) $(CCFLAGS) cdhit-common.c++ -c
++	$(CXX) $(CXXFLAGS) cdhit-common.c++ -c
  
- PROGS = cd-hit cd-hit-est cd-hit-2d cd-hit-est-2d cd-hit-div
+ cdhit-utility.o: cdhit-utility.c++ cdhit-utility.h
+-	$(CC) $(CCFLAGS) cdhit-utility.c++ -c
++	$(CXX) $(CXXFLAGS) cdhit-utility.c++ -c
  
- .c++.o:
--	$(CC) $(CCFLAGS) -c $<
-+	$(CXX) $(CXXFLAGS) -c $<
+ cdhit.o: cdhit.c++ cdhit-utility.h
+-	$(CC) $(CCFLAGS) cdhit.c++ -c
++	$(CXX) $(CXXFLAGS) cdhit.c++ -c
  
- all: $(PROGS)
+ cdhit-2d.o: cdhit-2d.c++ cdhit-utility.h
+-	$(CC) $(CCFLAGS) cdhit-2d.c++ -c
++	$(CXX) $(CXXFLAGS) cdhit-2d.c++ -c
  
-@@ -37,39 +37,39 @@ clean:
- # programs
+ cdhit-est.o: cdhit-est.c++ cdhit-utility.h
+-	$(CC) $(CCFLAGS) cdhit-est.c++ -c
++	$(CXX) $(CXXFLAGS) cdhit-est.c++ -c
  
- cd-hit: cdhit-common.o cdhit-utility.o cdhit.o
--	$(CC) $(CCFLAGS) cdhit.o cdhit-common.o cdhit-utility.o $(LDFLAGS) cd-hit
-+	$(CXX) $(CXXFLAGS) cdhit.o cdhit-common.o cdhit-utility.o $(LDFLAGS) cd-hit
+ cdhit-est-2d.o: cdhit-est-2d.c++ cdhit-utility.h
+-	$(CC) $(CCFLAGS) cdhit-est-2d.c++ -c
++	$(CXX) $(CXXFLAGS) cdhit-est-2d.c++ -c
  
- cd-hit-2d: cdhit-common.o cdhit-utility.o cdhit-2d.o
--	$(CC) $(CCFLAGS) cdhit-2d.o cdhit-common.o cdhit-utility.o $(LDFLAGS) cd-hit-2d
-+	$(CXX) $(CXXFLAGS) cdhit-2d.o cdhit-common.o cdhit-utility.o $(LDFLAGS) cd-hit-2d
+ cdhit-div.o: cdhit-div.c++ cdhit-common.h
+-	$(CC) $(CCFLAGS) cdhit-div.c++ -c
++	$(CXX) $(CXXFLAGS) cdhit-div.c++ -c
  
- cd-hit-est: cdhit-common.o cdhit-utility.o cdhit-est.o
--	$(CC) $(CCFLAGS) cdhit-est.o cdhit-common.o cdhit-utility.o $(LDFLAGS) cd-hit-est
-+	$(CXX) $(CXXFLAGS) cdhit-est.o cdhit-common.o

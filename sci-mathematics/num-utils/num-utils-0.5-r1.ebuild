@@ -8,16 +8,6 @@ inherit eutils
 
 DEB_PR=11
 
-DESCRIP# Copyright 1999-2012 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/num-utils/num-utils-0.5-r1.ebuild,v 1.2 2012/06/19 11:56:26 jlec Exp $
-
-EAPI=4
-
-inherit eutils
-
-DEB_PR=11
-
 DESCRIPTION="A set of programs for dealing with numbers from the command line"
 HOMEPAGE="http://suso.suso.org/programs/num-utils/"
 SRC_URI="
@@ -42,4 +32,17 @@ src_prepare() {
 	done
 
 	sed \
-		-e 's/^RPMDIR/#RPMDIR
+		-e 's/^RPMDIR/#RPMDIR/' \
+		-e 's/COPYING//' \
+		-e 's/LICENSE//' \
+		-e '/^DOCS/s/MANIFEST//' \
+		-i Makefile || die "sed Makefile failed"
+}
+
+src_install () {
+	emake ROOT="${ED}" install
+}
+
+pkg_postinst() {
+	elog "All ${PN} programs have been renamed with prefix 'num' to avoid collisions"
+}

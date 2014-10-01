@@ -80,10 +80,11 @@
  
  	// Show local tags.
  	action = new QAction(tr("Local &Tags"), this);
-@@ -348,6--- trunk/app/actions.cpp	2009/08/26 13:17:03	203
-+++ trunk/app/actions.cpp	2009/09/07 19:58:30	204
-@@ -264,69 +264,58 @@
- 	QActionGroup* queryGroup = new QActionGroup(this);
- 	connect(queryGroup, SIGNAL(triggered(QAction*)), this,
- 	        SLOT(query(QAction*)));
-+	connect(P
+@@ -348,6 +337,7 @@
+ 	action->setStatusTip(tr("Create a call tree"));
+ 	connect(action, SIGNAL(triggered()), mainWnd(), SLOT(promptCallTree()));
+ 	menu->addAction(action);
++	projectGroup->addAction(action);
+ 
+ 	// Settings menu.
+ 	menu = mainWnd()->menuBar()->addMenu(tr("&Settings"));

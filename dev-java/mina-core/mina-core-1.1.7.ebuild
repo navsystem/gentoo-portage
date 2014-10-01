@@ -18,8 +18,19 @@ RDEPEND=">=virtual/jre-1.5
 	dev-java/slf4j-api"
 DEPEND=">=virtual/jdk-1.5
 	dev-java/slf4j-api
-	app-arch/unzi# Copyright 1999-2011 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mina-core/mina-core-1.1.7.ebuild,v 1.6 2011/03/25 19:28:22 xarthisius Exp $
+	app-arch/unzip"
 
-JAVA_PKG_IUS
+S="${WORKDIR}"
+
+EANT_GENTOO_CLASSPATH="slf4j-api"
+
+src_unpack() {
+	unpack ${A}
+	cp -v "${FILESDIR}"/build.xml . || die
+}
+
+src_install() {
+	java-pkg_dojar ${PN}.jar
+	use doc && java-pkg_dojavadoc docs
+	use source && java-pkg_dosrc org
+}

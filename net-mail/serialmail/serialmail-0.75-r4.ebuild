@@ -42,6 +42,9 @@ src_compile() {
 src_install() {
 	dobin serialsmtp serialqmtp maildirsmtp maildirserial maildirqmtp
 
-	dodoc AUTOTURN CHANGES # Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/serialmail/ser
+	dodoc AUTOTURN CHANGES FROMISP SYSDEPS THANKS TOISP \
+		BLURB FILES INSTALL README TARGETS TODO VERSION
+
+	doman maildirqmtp.1 maildirserial.1 maildirsmtp.1 \
+		serialqmtp.1 serialsmtp.1
+}

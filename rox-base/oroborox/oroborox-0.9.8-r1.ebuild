@@ -59,6 +59,16 @@ unset CHOICESPATH
 
 src_unpack() {
 	unpack ${A}
-	epatch "${FILESDIR}"/${P# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/oroborox/oroborox-0.9.8-r1.ebuild,
+	epatch "${FILESDIR}"/${P}-respectflags.patch
+	cd ${MY_PN}/src
+	eautoreconf
+	tc-export CC
+}
+
+src_compile() {
+	rox_src_compile
+
+	# Remove the leftover '=build' directory
+	cd "${S}/${APPNAME}"
+	rm -rf '=build'
+}

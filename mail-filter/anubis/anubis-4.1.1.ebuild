@@ -54,25 +54,41 @@ src_configure() {
 	fi
 	econf --with-unprivileged-user=anubis \
 		--disable-rpath \
-		$(use_with my# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/anubis/anubis-4.1.1.ebuild,v 1.5 2014/08/10 21:15:20 slyfox Exp $
+		$(use_with mysql) \
+		$(use_with postgres) \
+		$(use_with pam) \
+		$(use_with pcre) \
+		$(use_enable nls) \
+		$(use_with guile) \
+		$(use_with sasl gsasl) \
+		$(use_with gnutls) \
+		$(use_with tcpd tcp-wrappers) \
+		$(use_with socks5 socks-proxy) \
+		${myconf}
+}
 
-EAPI=4
-inherit eutils autotools pam user
+src_compile() {
+	# parallel make fails
+	emake -j1
+}
 
-DESCRIPTION="GNU Anubis is an outgoing mail processor"
-HOMEPAGE="http://www.gnu.org/software/anubis/"
+src_test() {
+	cd "${S}/testsuite"
+	emake -j1 check
+}
 
-SRC_URI="mirror://gnu/anubis/${P}.tar.gz"
-LICENSE="GPL-2"
+src_install() {
+	emake DESTDIR="${D}" install
 
-SLOT="0"
-KEYWORDS="ppc x86"
-IUSE="crypt guile mysql postgres nls pam pcre sasl socks5 +gnutls tcpd test"
+	dodoc AUTHORS ChangeLog INSTALL NEWS README* THANKS TODO
+	docinto examples
+	dodoc examples/*anubis*
+	docinto guile
+	dodoc guile/*.scm
 
-RDEPEND="sys-libs/gdbm
-	crypt? ( >=app-crypt/gpgme-0.9.0 )
-	guile? ( >=dev-scheme/guile-1.8 )
-	mysql? ( virtual/mysql )
-	
+	if use pam ; then
+		pamd_mimic system-auth anubis auth account session
+	fi
+
+	rm -rf "${D}"/usr/share/anubis
+}

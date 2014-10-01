@@ -7,15 +7,6 @@
 # Keep it sorted.
 
 
-af9005 - DVB_CARDS setting to add support for the afatech af9005 USB1.1 DVB-T # Copyright 1999-2006 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/dvb_cards.desc,v 1.9 2009/11/12 18:12:12 billie Exp $
-
-# This file contains descriptions of DVB_CARDS USE_EXPAND flags.
-
-# Keep it sorted.
-
-
 af9005 - DVB_CARDS setting to add support for the afatech af9005 USB1.1 DVB-T Demodulator (Various NoName devices, Terratec Xinergy XE rev.1)
 bcm3510 - DVB_CARDS setting to add support for the Broadcom BCM3510 ATSC demodulator (Air2PC)
 cx18 - DVB_CARDS setting to add support for the Conexant cx23418 chip (Hauppauge HVR1600)
@@ -43,4 +34,7 @@ usb-dib0700 - DVB_CARDS setting to add support for the usb-dib0700 USB DVB-T-dev
 usb-dw2104 - DVB_CARDS setting to add support for the usb-dw2104 USB DVB-S2-device (TeVii S650 DVB-S2 USB)
 usb-dtt200u - DVB_CARDS setting to add support for the usb-dtt200u USB DVB-T-devices (Yakumo, Yuan, Hama, TYPHOON, WideView, V-Gear)
 usb-umt - DVB_CARDS setting to add support for the usb-umt USB2.0-DVB-T-device (Hanftek)
-usb-vp702x - DVB_CARDS setting to add support for the usb-vp702x USB DVB-S-devices (TwinhanDTV, DigitalR
+usb-vp702x - DVB_CARDS setting to add support for the usb-vp702x USB DVB-S-devices (TwinhanDTV, DigitalRise, TYPHOON)
+usb-vp7045 - DVB_CARDS setting to add support for the usb-vp7045 USB DVB-T-devices (TwinhanDTV, DigitalNow, DigitalRise, dnt)
+usb-wt220u - DVB_CARDS setting to add support for the usb-wt220u USB DVB-T-devices (Yakumo, Yuan, TYPHOON, WideView, Freecom, V-Gear, dnt, Redbell)
+vp7041 - DVB_CARDS setting to add support for the vp7041 USB DVB-T-devices (TwinhanDTV)

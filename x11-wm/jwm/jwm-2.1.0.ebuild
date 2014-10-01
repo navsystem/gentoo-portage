@@ -64,6 +64,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Put an appropriate co# Copyright 1999-2013 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo
+	einfo "Put an appropriate configuration file in /etc/system.jwmrc"
+	einfo "or in ~/.jwmrc."
+	einfo "An example file can be found in ${EROOT}/usr/share/doc/${PF}/"
+}

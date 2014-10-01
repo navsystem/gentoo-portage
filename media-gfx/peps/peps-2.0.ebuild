@@ -50,4 +50,5 @@ src_install() {
 	doins peps.mime
 
 	# copy PDF so it won't be compressed
-	cp peps.pdf "${D}usr/share/doc/${P# Copy
+	cp peps.pdf "${D}usr/share/doc/${PF}"
+}

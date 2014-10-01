@@ -24,6 +24,14 @@ DEPEND="
 	dev-qt/qtsql:4[sqlite]
 	wifi? ( net-wireless/wireless-tools )
 "
-R# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knemo/knemo-0.
+RDEPEND="${DEPEND}"
+
+DOCS=( AUTHORS ChangeLog README )
+
+src_configure() {
+	mycmakeargs=(
+		$(cmake-utils_use_no wifi WIRELESS_SUPPORT)
+	)
+
+	kde4-base_src_configure
+}

@@ -20,28 +20,6 @@ SLOT="0/49" # subslot = libcamel-1.2 soname version
 IUSE="api-doc-extras +gnome-online-accounts +gtk +introspection ipv6 ldap kerberos vala +weather"
 REQUIRED_USE="vala? ( introspection )"
 
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-l# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.12.4.ebuild,v 1.3 2014/07/23 15:17:53 ago Exp $
-
-EAPI="5"
-GCONF_DEBUG="no"
-# python3 not really supported, bug #478678
-PYTHON_COMPAT=( python2_7 pypy pypy2_0 )
-VALA_MIN_API_VERSION="0.18"
-VALA_USE_DEPEND="vapigen"
-
-inherit db-use flag-o-matic gnome2 python-any-r1 vala virtualx
-
-DESCRIPTION="Evolution groupware backend"
-HOMEPAGE="https://wiki.gnome.org/Apps/Evolution"
-
-# Note: explicitly "|| ( LGPL-2 LGPL-3 )", not "LGPL-2+".
-LICENSE="|| ( LGPL-2 LGPL-3 ) BSD Sleepycat"
-SLOT="0/49" # subslot = libcamel-1.2 soname version
-IUSE="api-doc-extras +gnome-online-accounts +gtk +introspection ipv6 ldap kerberos vala +weather"
-REQUIRED_USE="vala? ( introspection )"
-
 KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-solaris"
 
 RDEPEND="
@@ -108,4 +86,43 @@ src_prepare() {
 src_configure() {
 	# /usr/include/db.h is always db-1 on FreeBSD
 	# so include the right dir in CPPFLAGS
-	appe
+	append-cppflags "-I$(db_includedir)"
+
+	# phonenumber does not exist in tree
+	gnome2_src_configure \
+		$(use_enable api-doc-extras gtk-doc) \
+		$(use_with api-doc-extras private-docs) \
+		$(use_enable gnome-online-accounts goa) \
+		$(use_enable gtk) \
+		$(use_enable introspection) \
+		$(use_enable ipv6) \
+		$(use_with kerberos krb5 "${EPREFIX}"/usr) \
+		$(use_with ldap openldap) \
+		$(use_enable vala vala-bindings) \
+		$(use_enable weather) \
+		--enable-google \
+		--enable-largefile \
+		--enable-smime \
+		--with-libdb="${EPREFIX}"/usr \
+		--without-phonenumber \
+		--disable-examples \
+		--disable-uoa
+}
+
+src_install() {
+	gnome2_src_install
+
+	if use ldap; then
+		insinto /etc/openldap/schema
+		doins "${FILESDIR}"/calentry.schema
+		dosym /usr/share/${PN}/evolutionperson.schema /etc/openldap/schema/evolutionperson.schema
+	fi
+}
+
+src_test() {
+	unset DBUS_SESSION_BUS_ADDRESS
+	unset ORBIT_SOCKETDIR
+	unset SESSION_MANAGER
+	unset DISPLAY
+	Xemake check
+}

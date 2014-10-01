@@ -46,20 +46,26 @@ src_compile() {
 	case $(tc-arch) in
 		ia64) iarch=ia64 ;;
 		x86)  iarch=ia32 ;;
-		amd64) iarch=x86_64 # Copyright 1999-2011 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/elilo/elilo-3.12.ebuild,v 1.3 2011/04/02 12:00:12 armin76 Exp $
+		amd64) iarch=x86_64 ;;
+		*)    die "unknown architecture: $(tc-arch)" ;;
+	esac
 
-inherit toolchain-funcs eutils
+	# "prefix" on the next line specifies where to find gcc, as, ld,
+	# etc.  It's not the usual meaning of "prefix".  By blanking it we
+	# allow PATH to be searched.
+	emake -j1 prefix= CC="$(tc-getCC)" ARCH=${iarch} || die "emake failed"
+}
 
-DESCRIPTION="Linux boot loader for EFI-based systems such as IA-64"
-HOMEPAGE="http://elilo.sourceforge.net/"
-SRC_URI="mirror://sourceforge/elilo/${P}-source.tar.gz"
-SRC_URI="${SRC_URI} mirror://debian/pool/main/e/elilo/elilo_3.12-1.diff.gz"
+src_install() {
+	exeinto /usr/lib/elilo
+	doexe elilo.efi || die "elilo.efi failed"
 
-LICENSE="GPL-2"
-SLOT="0"
-KEYWORDS="~amd64 ia64 ~x86"
-IUSE=""
+	newsbin debian/elilo.sh elilo || die "elilo failed"
+	dosbin tools/eliloalt || die "eliloalt failed"
 
-# gnu-efi contains only static libs, so there's no run-time dep on it
+	insinto /etc
+	newins "${FILESDIR}"/elilo.conf.sample elilo.conf
+
+	dodoc docs/* "${FILESDIR}"/elilo.conf.sample
+	doman debian/*.[0-9]
+}

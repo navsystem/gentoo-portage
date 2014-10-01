@@ -67,14 +67,16 @@ src_install() {
 	newicon CGLogo.png ${PN}.png
 	newgamesbin "${FILESDIR}"/commandergenius-wrapper commandergenius
 	make_desktop_entry commandergenius
-# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/commandergenius/commandergenius-1.7.3.0.ebuild,v 1.2 2014/05/15 12:35:12 ulm Exp $
+	prepgamesdirs
+}
 
-EAPI=5
-
-CMAKE_IN_SOURCE_BUILD=1
-inherit cmake-utils eutils games
-
-MY_P=CGenius-${PV}-Release-src
-DESCRIPTION="Open Source Commander Keen clone (needs origin
+pkg_postinst() {
+	games_pkg_postinst
+	elog "Check your settings in ~/.CommanderGenius/cgenius.cfg"
+	elog "after you have started the game for the first time."
+	use opengl && elog "You may also want to set \"OpenGL = true\""
+	elog
+	elog "Run the game via:"
+	elog "    'commandergenius [path-to-keen-data]'"
+	elog "or add your keen data dir to the search paths in cgenius.cfg"
+}

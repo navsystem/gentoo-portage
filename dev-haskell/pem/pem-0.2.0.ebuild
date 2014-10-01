@@ -28,4 +28,5 @@ DEPEND="${RDEPEND}
 		>=dev-haskell/quickcheck-2.4.0.1
 		>=dev-haskell/test-framework-0.3.3
 		dev-haskell/test-framework-hunit
-		dev-haskell/test-framework-quic# Copyright 
+		dev-haskell/test-framework-quickcheck2 )
+"

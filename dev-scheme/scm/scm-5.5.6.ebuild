@@ -1,7 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsro# Copyright 1999-2012 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/dev-scheme/scm/scm-5.5.6.ebuild,v 1.6 2012/06/07 20:36:43 zmedico Exp $
 
 EAPI="3"
@@ -153,4 +151,11 @@ src_install() {
 	doinfo hobbit.info
 }
 
-pkg_postins
+pkg_postinst() {
+	[ "${ROOT}" == "/" ] && pkg_config
+}
+
+pkg_config() {
+	einfo "Regenerating catalog..."
+	scm -e "(require 'new-catalog)"
+}

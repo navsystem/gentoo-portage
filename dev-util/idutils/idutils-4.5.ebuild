@@ -34,6 +34,12 @@ src_unpack() {
 src_compile() {
 	use emacs || export EMACS=no
 	econf \
-		$(use# Copyright 1999-2012 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/idutils/idutils-4.5.ebuild,v 1.1 2012/02/21 08:57:58 robbat
+		$(use_enable nls) \
+		"$(use_with emacs lispdir "${SITELISP}/${PN}")"
+	emake || die
+}
+
+src_install() {
+	emake DESTDIR="${D}" install || die "emake install failed"
+	dodoc NEWS README* ChangeLog AUTHORS THANKS TODO
+}

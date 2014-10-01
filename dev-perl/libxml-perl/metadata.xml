@@ -18,10 +18,9 @@
     <remote-id type="cpan-module">XML::PatAct::ACTION</remote-id>
     <remote-id type="cpan-module">XML::PatAct::Amsterdam</remote-id>
     <remote-id type="cpan-module">XML::PatAct::MatchName</remote-id>
-    <remote-id type="cpan-module">XML::PatA<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-  <herd>perl</herd>
-  <upstream>
-    <remote-id type="cpan">libxml-perl</remote-id>
-    <remote-id type="cpan-module">
+    <remote-id type="cpan-module">XML::PatAct::PATTERN</remote-id>
+    <remote-id type="cpan-module">XML::PatAct::ToObjects</remote-id>
+    <remote-id type="cpan-module">XML::Perl2SAX</remote-id>
+    <remote-id type="cpan-module">XML::SAX2Perl</remote-id>
+  </upstream>
+</pkgmetadata>

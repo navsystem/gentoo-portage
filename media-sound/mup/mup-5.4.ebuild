@@ -25,13 +25,18 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-Makefile.patch
-	sed -i -e "s:/lib# Copyright 1999-2012 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/mup-5.4.ebuild,v 1.10 2012/01/19 09:13:24 ssuominen Exp $
+	sed -i -e "s:/lib:/$(get_libdir):g" Makefile || die "sed failed"
+}
 
-EAPI=2
-inherit eutils multilib toolchain-funcs
+src_compile() {
+	emake CC="$(tc-getCC)" CXX="$(tc-getCXX)" CXXFLAGS="${CXXFLAGS}" \
+		CFLAGS="${CFLAGS}" || die "emake failed"
+}
 
-DESCRIPTION="Program for printing music scores"
-HOMEPAGE="http://www.arkkra.com/"
-SRC_URI="ftp
+src_install() {
+	emake DESTDIR="${D}" install || die "emake install failed"
+	dodoc docs/{*.txt,README0}
+	dohtml docs/{*.html,uguide/*}
+	docinto sample
+	dodoc docs/{*.mup,*.ps}
+}

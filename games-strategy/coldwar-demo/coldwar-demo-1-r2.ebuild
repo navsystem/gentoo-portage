@@ -80,4 +80,5 @@ pkg_postinst() {
 	elog "The instruction manual is available as:"
 	elog "   http://demofiles.linuxgamepublishing.com/coldwar/manual.pdf"
 	echo
-	einfo "To pla# Copyright 1999-2014 Gent
+	einfo "To play the game, run: ${PN}"
+}

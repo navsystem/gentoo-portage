@@ -51,6 +51,13 @@ src_install() {
 	dosbin gencert nss_pcache
 	dohtml docs/mod_nss.html
 	newbin migrate.pl nss_migrate
-	dodir /etc# Copyright 1999-2012 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_nss/mod_nss-1.0.8-r1.ebuild,v 1.5 2012/10
+	dodir /etc/apache2/nss
+	apache-module_src_install
+}
+
+pkg_postinst() {
+	apache-module_pkg_postinst
+
+	elog "If you need to generate a SSL certificate,"
+	elog "please use gencert tool from net-dns/bind-tools"
+}

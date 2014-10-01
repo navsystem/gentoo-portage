@@ -22,6 +22,11 @@ DEPEND="${RDEPEND}
 RESTRICT="test"
 
 src_prepare() {
-	epatch "${F# Copyright 1999-2013 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/bindfs/bi
+	epatch "${FILESDIR}"/${PN}-1.10.7-cflags.patch
+	epatch "${FILESDIR}"/${PN}-1.12.2-ac-config-headers.patch
+	eautoreconf
+}
+
+src_configure() {
+	econf $(use_enable debug)
+}

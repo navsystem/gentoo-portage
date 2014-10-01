@@ -100,28 +100,24 @@ src_install() {
 
 	keepdir /var/lib/datacoin/.datacoin
 	fperms 700 /var/lib/datacoin
-	fowners ${PN}:${PN} /v# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/datacoin-hp/datacoin-hp-9999.ebuild,v 1.5 2014/08/28 22:52:09 blueness Exp $
+	fowners ${PN}:${PN} /var/lib/datacoin/
+	fowners ${PN}:${PN} /var/lib/datacoin/.datacoin
+	dosym /etc/datacoin/datacoin.conf /var/lib/datacoin/.datacoin/datacoin.conf
 
-EAPI=5
+	dodoc doc/README.md doc/release-notes.md
+	newman contrib/debian/manpages/bitcoind.1 ${MyPN}.1
+	newman contrib/debian/manpages/bitcoin.conf.5 datacoin.conf.5
 
-DB_VER="4.8"
+	sed -i -e 's/bitcoin/datacoin-hp/g' contrib/bitcoind.bash-completion
+	newbashcomp contrib/bitcoind.bash-completion ${PN}.bash-completion
 
-inherit bash-completion-r1 git-2 eutils db-use systemd user
+	if use examples; then
+		docinto examples
+		dodoc -r contrib/{bitrpc,pyminer,spendfrom,tidy_datadir.sh,wallettools}
+	fi
 
-MyPV="${PV/_/-}"
-MyPN="${PN/-hp/d}"
-MyP="primecoin-${MyPV}"
-
-DESCRIPTION="High-performance version of datacoin (primecoin-hp fork)"
-HOMEPAGE="https://github.com/foo1inge/datacoin-hp"
-EGIT_REPO_URI="https://github.com/foo1inge/${PN}.git"
-
-LICENSE="MIT"
-SLOT="0"
-KEYWORDS=""
-IUSE="examples upnp ipv6 examples logrotate hardened"
-
-RDEPEND="
-	dev-libs/boost[thread
+	if use logrotate; then
+		insinto /etc/logrotate.d
+		newins "${FILESDIR}/datacoind.logrotate" ${MyPN}
+	fi
+}

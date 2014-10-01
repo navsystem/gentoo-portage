@@ -54,12 +54,19 @@ each_ruby_configure() {
 		$(cmake-utils_use_with akonadi)
 		$(cmake-utils_use_with akonadi KdepimLibs)
 		$(cmake-utils_use_with nepomuk)
-		$(cmake-util# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/korundum-4.14.0.ebuild,v 1.1 2014/08/20 16:02:51 johu Exp $
+		$(cmake-utils_use_with nepomuk Soprano)
+		$(cmake-utils_use_disable kate)
+		$(cmake-utils_use_with okular)
+	)
+	kde4-base_src_configure
+}
 
-EAPI=5
+each_ruby_compile() {
+	CMAKE_USE_DIR=${S}
+	kde4-base_src_compile
+}
 
-OPENGL_REQUIRED="always"
-
-USE_RU
+each_ruby_install() {
+	CMAKE_USE_DIR=${S}
+	kde4-base_src_install
+}

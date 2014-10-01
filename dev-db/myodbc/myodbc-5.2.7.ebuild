@@ -10,18 +10,6 @@ MY_PN="mysql-connector-odbc"
 MY_P="${MY_PN}-${PV/_p/r}-src"
 
 DESCRIPTION="ODBC driver for MySQL"
-HOMEPAGE="http://www.mysql# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/myodbc/myodbc-5.2.7.ebuild,v 1.2 2014/08/20 18:52:50 grknight Exp $
-
-EAPI=5
-inherit cmake-utils eutils flag-o-matic versionator
-
-MAJOR="$(get_version_component_range 1-2 $PV)"
-MY_PN="mysql-connector-odbc"
-MY_P="${MY_PN}-${PV/_p/r}-src"
-
-DESCRIPTION="ODBC driver for MySQL"
 HOMEPAGE="http://www.mysql.com/products/myodbc/"
 SRC_URI="mirror://mysql/Downloads/Connector-ODBC/${MAJOR}/${MY_P}.tar.gz"
 RESTRICT="primaryuri"
@@ -109,4 +97,20 @@ pkg_config() {
 	msg='sample MySQL ODBC DSN'
 	if echo $sources | grep -vq "^\[${DRIVER_NAME}-test\]$"; then
 		ebegin "Installing ${msg}"
-		/usr/bin/odbcinst -i -s -l -f /usr/share/${PN}-${SLOT}/odbc.in
+		/usr/bin/odbcinst -i -s -l -f /usr/share/${PN}-${SLOT}/odbc.ini
+		rc=$?
+		eend $rc
+		[ $rc -ne 0 ] && die
+	else
+		einfo "Skipping already installed ${msg}"
+	fi
+}
+
+pkg_postinst() {
+
+	elog "If this is a new install, please run the following command"
+	elog "to configure the MySQL ODBC drivers and sources:"
+	elog "emerge --config =${CATEGORY}/${PF}"
+	elog "Please note that the driver name used to form the DSN now includes the SLOT."
+	elog "The myodbc-install utility is installed as myodbc-install-${MAJOR}"
+}

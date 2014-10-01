@@ -24,4 +24,5 @@ RDEPEND=""
 
 python_test() {
 	# https://bugs.launchpad.net/testscenarios/+bug/1260573
-	nosetests || die "Tests failed under# Copyright 199
+	nosetests || die "Tests failed under ${EPYTHON}"
+}

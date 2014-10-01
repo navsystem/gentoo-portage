@@ -57,19 +57,29 @@ src_prepare() {
 	echo "LIBDIR = /usr/$(get_libdir)" >> makefiles/target.mk
 
 	echo "UI_TYPE = qt4" >> makefiles/target.mk
-	sed -e 's:MOC = moc-qt4:MOC = /usr/bin/moc:' # Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/fbreader-0.99.4-r2.ebuild,v 1.2 2014/08/06 07:09:31 patrick Exp $
+	sed -e 's:MOC = moc-qt4:MOC = /usr/bin/moc:' \
+		-i makefiles/arch/desktop.mk || die "updating desktop.mk failed"
 
-EAPI=5
+	if use debug; then
+		echo "TARGET_STATUS = debug" >> makefiles/target.mk
+	else
+		echo "TARGET_STATUS = release" >> makefiles/target.mk
+	fi
 
-inherit eutils multilib
+	# bug #452636
+	epatch "${FILESDIR}"/${P}.patch
+	# bug #515698
+	epatch "${FILESDIR}"/${P}-qreal-cast.patch
+	# bug #516794
+	epatch "${FILESDIR}"/${P}-mimetypes.patch
+}
 
-DESCRIPTION="E-Book Reader. Supports many e-book formats"
-HOMEPAGE="http://www.fbreader.org/"
-SRC_URI="http://www.fbreader.org/files/desktop/${PN}-sources-${PV}.tgz"
+src_compile() {
+	# bug #484516
+	emake -j1
+}
 
-LICENSE="GPL-2"
-SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~x86"
-IUSE="deb
+src_install() {
+	default
+	dosym /usr/bin/FBReader /usr/bin/fbreader
+}

@@ -61,12 +61,17 @@ src_compile() {
 	ln -s ncc bcc
 	cd ..
 	cd bootblocks
-# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/dev86/dev86-0.16.20.ebuild,v 1.2 2014/05/18 17:26:27 vapier Exp $
+	ln -s ../bcc/version.h .
+	emake DIST="${D}"
+}
 
-EAPI="5"
-
-inherit eutils multilib
-
-DESCRIPTION="Bruce's C compiler - Simple C compiler t
+src_install() {
+	emake -j1 install-all DIST="${D}"
+	dobin bootblocks/makeboot
+	# remove all the stuff supplied by bin86
+	cd "${D}"
+	rm usr/bin/{as,ld,nm,objdump,size}86 || die
+	rm usr/man/man1/{as,ld}86.1 || die
+	dodir /usr/share/man
+	mv usr/man usr/share/
+}

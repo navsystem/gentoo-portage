@@ -3,11 +3,6 @@
 # $Header: /var/cvsroot/gentoo-x86/dev-python/twistedsnmp/twistedsnmp-0.3.13.ebuild,v 1.3 2013/08/03 09:45:50 mgorny Exp $
 
 EAPI="2"
-# Copyright 1999-2013 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twistedsnmp/twistedsnmp-0.3.13.ebuild,v 1.3 2013/08/03 09:45:50 mgorny Exp $
-
-EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils
@@ -40,3 +35,14 @@ src_prepare() {
 
 src_test() {
 	testing() {
+		PYTHONPATH="build-${PYTHON_ABI}/lib" "$(PYTHON)" test/test.py
+	}
+	python_execute_function testing
+}
+
+src_install() {
+	distutils_src_install
+	dohtml doc/index.html
+	insinto /usr/share/doc/${PF}/html/style/
+	doins doc/style/sitestyle.css
+}

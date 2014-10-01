@@ -21,4 +21,6 @@ DEPEND="dev-libs/protobuf:=
 	dev-qt/qtscript:4"
 RDEPEND="${DEPEND}"
 
-src_configure(# Copyright 1999-2014 Gentoo Found
+src_configure(){
+	eqmake4 PREFIX=/usr ost.pro
+}

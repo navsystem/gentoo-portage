@@ -4,12 +4,6 @@
 
 EAPI=4
 
-WANT_AUTOMAK# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/memphis/memphis-0.2.3.ebuild,v 1.23 2014/01/15 12:58:16 ago Exp $
-
-EAPI=4
-
 WANT_AUTOMAKE=1.11
 
 AUTOTOOLS_AUTORECONF=true
@@ -43,4 +37,17 @@ PATCHES=( "${FILESDIR}"/${P}-link_gobject.patch )
 
 src_prepare() {
 	unset VALAC
-	use vala && vala_src
+	use vala && vala_src_prepare
+	autotools-utils_src_prepare
+}
+
+src_configure() {
+	local myeconfargs=(
+		$(use_enable debug)
+		$(use_enable doc gtk-doc)
+		$(use_enable introspection)
+		$(use_enable vala)
+	)
+	CFLAGS="${CFLAGS}" \
+		autotools-utils_src_configure
+}

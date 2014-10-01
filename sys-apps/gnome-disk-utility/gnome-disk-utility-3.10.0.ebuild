@@ -41,10 +41,16 @@ DEPEND="${COMMON_DEPEND}
 "
 
 src_prepare() {
-	# Fix USE=-gnome, bug #478820# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/gnome-disk-utility-3.10.0.ebuild,v 1.5 2014/03/29 21:53:43 tetromino Exp $
+	# Fix USE=-gnome, bug #478820
+	epatch "${FILESDIR}"/${PN}-3.10.0-kill-gsd-automagic.patch
+	epatch "${FILESDIR}"/${PN}-3.10.0-raise-gsd-dependency.patch
 
-EAPI="5"
-GCONF_DEBUG="no"
-GNOME2_L
+	eautoreconf
+	gnome2_src_prepare
+}
+
+src_configure() {
+	gnome2_src_configure \
+		$(use_enable gnome gsd-plugin) \
+		$(use_enable systemd libsystemd-login)
+}

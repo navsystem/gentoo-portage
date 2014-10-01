@@ -47,5 +47,9 @@ multilib_src_configure() {
 }
 
 multilib_src_compile() {
-	emake # Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Pu
+	emake libpng15.la
+}
+
+multilib_src_install() {
+	newlib.so .libs/libpng15.so.15.* libpng15.so.15
+}

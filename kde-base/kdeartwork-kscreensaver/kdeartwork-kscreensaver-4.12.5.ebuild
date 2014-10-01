@@ -31,10 +31,16 @@ DEPEND="${RDEPEND}
 "
 
 PATCHES=( "${FILESDIR}/${PN}-xscreensaver.patch"
-	"${FILESDI# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kscreensaver/kdeartwork-kscreensaver-4.12.5.ebuild,v 1.5 2014/05/08 07:32:54 ago Exp $
+	"${FILESDIR}/${PN}-4.5.95-webcollage.patch" )
 
-EAPI=5
+src_configure() {
+	mycmakeargs=(
+		-DKSCREENSAVER_SOUND_SUPPORT=ON
+		-DOPENGL=ON
+		$(cmake-utils_use_with eigen Eigen2)
+		$(cmake-utils_use_with kexiv2)
+		$(cmake-utils_use_with xscreensaver)
+	)
 
-KM
+	kde4-meta_src_configure
+}

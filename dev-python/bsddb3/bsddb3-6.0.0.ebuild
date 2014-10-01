@@ -8,16 +8,6 @@ PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
 inherit db-use distutils-r1 multilib
 
 DESCRIPTION="Python bindings for Berkeley DB"
-HOMEPAGE="http://www.jcea.es/programacion/pybsddb.htm http://pypi# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/bsddb3-6.0.0.ebuild,v 1.9 2014/01/15 12:41:37 ago Exp $
-
-EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
-
-inherit db-use distutils-r1 multilib
-
-DESCRIPTION="Python bindings for Berkeley DB"
 HOMEPAGE="http://www.jcea.es/programacion/pybsddb.htm http://pypi.python.org/pypi/bsddb3"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
@@ -63,4 +53,23 @@ python_test() {
 		if [[ "${EPYTHON}" == 'python3.3' ]]; then
 			einfo "py3.3 has an internal problem within this ebuild but is known to pass tests"
 		else
-			"${PYT
+			"${PYTHON}" setup.py build
+			einfo "all 500 tests are run silently and may take a number of minutes to complete"
+			"${PYTHON}" -v test3.py || die
+		fi
+	fi
+}
+
+python_install() {
+	rm -fr "${ED}$(python_get_sitedir)/bsddb3/tests"
+
+	if use doc; then
+		dohtml -r docs/html/* || die "dohtml failed"
+	fi
+	distutils-r1_python_install
+}
+
+python_install_all() {
+	local HTML_DOCS=( docs/html/. )
+	distutils-r1_python_install_all
+}

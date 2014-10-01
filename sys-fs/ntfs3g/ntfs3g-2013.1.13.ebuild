@@ -25,33 +25,6 @@ RDEPEND="!<sys-apps/util-linux-2.20.1-r2
 		>=net-libs/gnutls-1.4.4
 		)
 	external-fuse? ( >=sys-fs/fuse-2.8.0 )"
-# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2013.1.13.ebuild,v 1.13 2014/03/01 22:11:24 mgorny Exp $
-
-EAPI=5
-inherit eutils linux-info udev
-
-MY_PN=${PN/3g/-3g}
-MY_P=${MY_PN}_ntfsprogs-${PV}
-
-DESCRIPTION="Open source read-write NTFS driver that runs under FUSE"
-HOMEPAGE="http://www.tuxera.com/community/ntfs-3g-download/"
-SRC_URI="http://tuxera.com/opensource/${MY_P}.tgz"
-
-LICENSE="GPL-2"
-SLOT="0"
-KEYWORDS="alpha amd64 ~arm ppc ppc64 sparc x86 ~amd64-linux ~arm-linux ~x86-linux"
-IUSE="acl debug +external-fuse ntfsdecrypt +ntfsprogs static-libs suid xattr"
-
-RDEPEND="!<sys-apps/util-linux-2.20.1-r2
-	!sys-fs/ntfsprogs
-	ntfsdecrypt? (
-		>=dev-libs/libgcrypt-1.2.2:0
-		<dev-libs/libgcrypt-1.6.0:0
-		>=net-libs/gnutls-1.4.4
-		)
-	external-fuse? ( >=sys-fs/fuse-2.8.0 )"
 DEPEND="${RDEPEND}
 	sys-apps/attr
 	virtual/pkgconfig"
@@ -81,4 +54,40 @@ src_configure() {
 	econf \
 		--prefix="${EPREFIX}"/usr \
 		--exec-prefix="${EPREFIX}"/usr \
-		--docdir="${EPREFIX}"/usr/share/doc/${PF} 
+		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
+		$(use_enable debug) \
+		--enable-ldscript \
+		--disable-ldconfig \
+		$(use_enable acl posix-acls) \
+		$(use_enable xattr xattr-mappings) \
+		$(use_enable ntfsdecrypt crypto) \
+		$(use_enable ntfsprogs) \
+		--without-uuid \
+		--enable-extras \
+		$(use_enable static-libs static) \
+		--with-fuse=$(usex external-fuse external internal)
+}
+
+src_install() {
+	default
+
+	use suid && fperms u+s /usr/bin/${MY_PN}
+	udev_dorules "${FILESDIR}"/99-ntfs3g.rules
+	prune_libtool_files
+
+	# http://bugs.gentoo.org/398069
+	rmdir "${D}"/sbin
+
+	dosym mount.ntfs-3g /usr/sbin/mount.ntfs #374197
+}
+
+pkg_pretend() {
+	if [[ ${MERGE_TYPE} != binary ]]; then
+		# Bug 450024
+		if $(tc-getLD) --version | grep -q "GNU gold"; then
+			eerror "ntfs-3g does not function correctly when built with the gold linker."
+			eerror "Please select the bfd linker with binutils-config."
+			die "GNU gold detected"
+		fi
+	fi
+}

@@ -59,11 +59,17 @@ src_compile() {
 
 src_install() {
 	if use static-libs; then
-		ne# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ntl/ntl-6.1.0.ebuild,v 1.1 2014/06/16 21:54:20 jauhien Exp $
+		newlib.a ntl.a libntl.a || die "installation of static library failed"
+	fi
+	dolib.so lib*$(get_libname) || die "installation of shared library failed"
 
-EAPI=5
-inherit toolchain-funcs eutils multilib flag-o-matic
+	cd ..
+	insinto /usr/include
+	doins -r include/NTL || die "installation of the headers failed"
 
-DESCRIPTION="High-performance and portable Number Theory C
+	dodoc README
+	if use doc ; then
+		dodoc doc/*.txt || die
+		dohtml doc/* || die
+	fi
+}

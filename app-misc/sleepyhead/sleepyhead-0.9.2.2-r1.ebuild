@@ -38,9 +38,16 @@ src_prepare() {
 	epatch "${FILESDIR}/gitfix.patch"
 	epatch "${FILESDIR}/prs1-64fix.patch"
 	epatch "${FILESDIR}/prs1-code8fix.patch"
-	epatch "${FILESDIR}/common_gui# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sleepyhead/sleepyhead-0.9.2.2-r1.ebuild,v 1.5 2014/08/10 18:08:51 slyfox Exp $
+	epatch "${FILESDIR}/common_gui.patch"
 
-EAPI=4
-inherit eutils 
+	sed -i '1i#define OF(x) x' quazip/ioapi.h quazip/unzip.c quazip/unzip.h \
+	   quazip/zip.c quazip/zip.h quazip/zlib.h
+	eqmake4 SleepyHeadQT.pro
+}
+
+src_install() {
+	cd "{$S}"
+	dobin SleepyHead || die
+	dodoc README || die
+	dodoc docs/* || die
+}

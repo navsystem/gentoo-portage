@@ -58,6 +58,7 @@ pkg_postinst() {
 	elog "To use Resource Agents installed in /usr/$(get_libdir)/ocf/resource.d"
 	elog "you have to emerge required runtime dependencies manually."
 	elog ""
-	elog "Description and dependencies of al# Copyright 1999-2013 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot
+	elog "Description and dependencies of all Agents can be found on"
+	elog "http://www.linux-ha.org/wiki/Resource_Agents"
+	elog "or in the documentation of this package."
+}

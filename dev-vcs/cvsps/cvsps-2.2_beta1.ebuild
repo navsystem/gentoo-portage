@@ -21,13 +21,18 @@ DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
-src_pre# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsps/cvsps-2.2_beta1.ebuild,v 1.3 2014/09/03 17:20:45 ottxor Exp $
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-2.1-build.patch
+	epatch "${FILESDIR}"/${P}-solaris.patch
+	# no configure around
+	if [[ ${CHOST} == *-solaris* ]] ; then
+		sed -i -e '/^LDLIBS+=/s/$/ -lsocket/' Makefile || die
+	fi
+	tc-export CC
+}
 
-EAPI="4"
-
-inherit eutils toolchain-funcs
-
-MY_P="${P/_beta/b}"
-DESCRIPTION="Generates patchse
+src_install() {
+	dobin cvsps || die
+	doman cvsps.1
+	dodoc README CHANGELOG
+}

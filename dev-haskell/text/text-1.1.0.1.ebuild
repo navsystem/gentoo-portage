@@ -27,6 +27,11 @@ DEPEND="${RDEPEND}
 		>=dev-haskell/quickcheck-2.4
 		dev-haskell/random
 		>=dev-haskell/test-framework-0.4
-		>=dev# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/text/text-1.1.0.1.e
+		>=dev-haskell/test-framework-hunit-0.2
+		>=dev-haskell/test-framework-quickcheck2-0.2 )
+"
+
+src_configure() {
+	haskell-cabal_src_configure \
+		$(cabal_flag developer developer)
+}

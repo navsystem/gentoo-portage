@@ -58,6 +58,8 @@ src_install() {
 	cmake-utils_src_install
 
 	if use examples ; then
-		f# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: 
+		find examples -name .gitignore -delete || die
+		dodoc -r examples
+		docompress -x /usr/share/doc/${PF}/examples
+	fi
+}

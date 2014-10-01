@@ -17,25 +17,6 @@
   <affected>
     <package name="net-im/gaim" auto="yes" arch="*">
       <unaffected range="ge">0.81-r5</unaffected>
-      <vulnerable range="lt">0.81-r5</vulnera<?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet href="/xsl/glsa.xsl" type="text/xsl"?>
-<?xml-stylesheet href="/xsl/guide.xsl" type="text/xsl"?>
-<!DOCTYPE glsa SYSTEM "http://www.gentoo.org/dtd/glsa.dtd">
-
-<glsa id="200408-27">
-  <title>Gaim: New vulnerabilities</title>
-  <synopsis>
-    Gaim contains several security issues that might allow an attacker to
-    execute arbitrary code or commands.
-  </synopsis>
-  <product type="ebuild">Gaim</product>
-  <announced>August 27, 2004</announced>
-  <revised>May 22, 2006: 02</revised>
-  <bug>61457</bug>
-  <access>remote</access>
-  <affected>
-    <package name="net-im/gaim" auto="yes" arch="*">
-      <unaffected range="ge">0.81-r5</unaffected>
       <vulnerable range="lt">0.81-r5</vulnerable>
     </package>
   </affected>
@@ -84,4 +65,19 @@
     # emerge sync
     
     # emerge -pv &quot;&gt;=net-im/gaim-0.81-r5&quot;
-    # emerge &quot;&gt;=net-im/gaim-0.81-r
+    # emerge &quot;&gt;=net-im/gaim-0.81-r5&quot;</code>
+  </resolution>
+  <references>
+    <uri link="http://gaim.sourceforge.net/security/index.php">Gaim security issues</uri>
+    <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-0500">CVE-2004-0500</uri>
+    <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-0754">CVE-2004-0754</uri>
+    <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-0784">CVE-2004-0784</uri>
+    <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-0785">CVE-2004-0785</uri>
+  </references>
+  <metadata tag="requester" timestamp="Thu, 26 Aug 2004 15:30:26 +0000">
+    jaervosz
+  </metadata>
+  <metadata tag="submitter" timestamp="Thu, 26 Aug 2004 19:01:27 +0000">
+    jaervosz
+  </metadata>
+</glsa>

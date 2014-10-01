@@ -1,7 +1,5 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /v# Copyright 1999-2013 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/porthole-0.6.1-r2.ebuild,v 1.5 2013/01/11 19:21:12 zerochaos Exp $
 
 EAPI="2"
@@ -72,4 +70,7 @@ pkg_postinst() {
 	einfo "In this new way the user needs to set any 'Settings' menu emerge options"
 	einfo "Porthole automatically adds '--oneshot' for all upgrades selections"
 	einfo "Other options recommended are '--noreplace'  along with '--update'"
-	einfo "They allow for portage to skip any p
+	einfo "They allow for portage to skip any packages that might have already"
+	einfo "been upgraded as a dependency of another previously upgraded package"
+	einfo
+}

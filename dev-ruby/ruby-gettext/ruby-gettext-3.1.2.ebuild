@@ -46,13 +46,18 @@ all_ruby_prepare() {
 		-e 's/helper.gemspec/Gem::Specification.new/' Rakefile || die
 
 	# Avoid dependency on developer-specific tools.
-	sed -i -e '/notif# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ruby-gettext-3.1.2.ebuild,v 1.6 2014/08/25 16:01:34 mrueg Exp $
+	sed -i -e '/notify/ s:^:#:' test/run-test.rb || die
+}
 
-EAPI=5
+each_ruby_test() {
+	# Upstream tries to daisy-chain rake calls but they fail badly
+	# with our setup, so run it manually.
+	${RUBY} test/run-test.rb || die "tests failed"
+}
 
-USE_RUBY="ruby19 ruby20"
+all_ruby_install() {
+	all_fakegem_install
 
-RUBY_FAKEGEM_NAME="${PN/ruby-/}"
-RUBY_FAK
+	insinto /usr/share/doc/${PF}
+	doins -r samples
+}

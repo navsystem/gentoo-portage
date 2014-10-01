@@ -51,5 +51,6 @@ index e3711cd..d5b00cb 100644
  		install    -m 0644 -o root -g root $(MAN_DUMP) $(INSTALLDIR_MAN_DUMP)
 -		install -s -m 0755 -o root -g root $(PRG_UNDUMP) $(INSTALLDIR_BIN_UNDUMP)
 +		install -m 0755 -o root -g root $(PRG_UNDUMP) $(INSTALLDIR_BIN_UNDUMP)
- 		install     Makefile.Linux |   23 +++++++++++++++--------
- 1 files changed, 15 inser
+ 		install    -m 0644 -o root -g root $(MAN_UNDUMP) $(INSTALLDIR_MAN_UNDUMP)
+ 
+ clean:
