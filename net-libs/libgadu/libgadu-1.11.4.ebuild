@@ -10,6 +10,18 @@ inherit autotools-utils
 
 DESCRIPTION="This library implements the client side of the Gadu-Gadu protocol"
 HOMEPAGE="http://toxygen.net/libgadu/"
+SRC_URI="https://github.com/wojtekka/${PN}/archive/${PV}.tar.gz -># Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/libgadu-1.11.4.ebuild,v 1.13 2014/09/21 20:08:30 maekke Exp $
+
+EAPI=5
+
+AUTOTOOLS_AUTORECONF=1
+
+inherit autotools-utils
+
+DESCRIPTION="This library implements the client side of the Gadu-Gadu protocol"
+HOMEPAGE="http://toxygen.net/libgadu/"
 SRC_URI="https://github.com/wojtekka/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 # Bug 373215, last checked 2012.01.28
@@ -34,35 +46,4 @@ DEPEND="${COMMON_DEPEND}
 	doc? ( app-doc/doxygen )
 "
 RDEPEND="${COMMON_DEPEND}
-	!=net-im/kadu-0.6.0.2
-	!=net-im/kadu-0.6.0.1
-"
-
-AUTOTOOLS_IN_SOURCE_BUILD=1
-
-DOCS=(AUTHORS ChangeLog NEWS README)
-
-src_configure() {
-	local myeconfargs=(
-		$(use_with threads pthread)
-	)
-
-	if use ssl; then
-		myeconfargs+=(
-			$(use_with gnutls gnutls)
-			$(use_with !gnutls openssl)
-		)
-	else
-		myeconfargs+=(
-			--without-gnutls
-			--without-openssl
-		)
-	fi
-
-	autotools-utils_src_configure
-}
-
-src_install() {
-	use doc && HTML_DOCS=(docs/html/)
-	autotools-utils_src_install
-}
+	!=net-im/kad

@@ -12,6 +12,20 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3+ FDL-1.3+"
 SLOT="0"
+KEYWOR# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-11.87-r1.ebuild,v 1.6 2014/09/13 11:43:24 maekke Exp $
+
+EAPI=5
+
+inherit elisp latex-package
+
+DESCRIPTION="Extended support for writing, formatting and using (La)TeX, Texinfo and BibTeX files"
+HOMEPAGE="http://www.gnu.org/software/auctex/"
+SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
+
+LICENSE="GPL-3+ FDL-1.3+"
+SLOT="0"
 KEYWORDS="amd64 ~arm ppc ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris"
 IUSE="preview-latex"
 
@@ -41,26 +55,4 @@ src_configure() {
 }
 
 src_compile() {
-	export VARTEXFONTS="${T}"/fonts
-	emake
-}
-
-src_install() {
-	emake -j1 DESTDIR="${D}" install
-	elisp-site-file-install "${FILESDIR}/50${PN}-gentoo.el" || die
-	if use preview-latex; then
-		elisp-site-file-install "${FILESDIR}/60${PN}-gentoo.el" || die
-	fi
-	dodoc ChangeLog CHANGES FAQ INSTALL README RELEASE TODO
-}
-
-pkg_postinst() {
-	# rebuild TeX-inputfiles-database
-	use preview-latex && latex-package_pkg_postinst
-	elisp-site-regen
-}
-
-pkg_postrm(){
-	use preview-latex && latex-package_pkg_postrm
-	elisp-site-regen
-}
+	export VARTEXFONTS="${T}"/fo

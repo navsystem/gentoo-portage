@@ -2,6 +2,10 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/app-text/catdoc/catdoc-0.94.4.ebuild,v 1.3 2014/09/13 17:07:11 ago Exp $
 
+# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/catdoc/catdoc-0.94.4.ebuild,v 1.3 2014/09/13 17:07:11 ago Exp $
+
 EAPI=5
 WANT_AUTOMAKE=none
 
@@ -43,12 +47,4 @@ src_compile() {
 }
 
 src_install() {
-	emake -j1 mandir="${EPREFIX}"/usr/share/man/man1 install
-
-	if [[ -e ${ED}/usr/bin/xls2csv ]]; then
-		einfo "Renaming xls2csv to xls2csv-${PN} because of bug 314657."
-		mv -vf "${ED}"/usr/bin/xls2csv "${ED}"/usr/bin/xls2csv-${PN} || die
-	fi
-
-	dodoc ${DOCS}
-}
+	emake -j1 mandir="${EPREFIX}"/usr/share/ma
