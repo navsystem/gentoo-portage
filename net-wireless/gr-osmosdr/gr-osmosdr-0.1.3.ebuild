@@ -33,38 +33,25 @@ RDEPEND="${PYTHON_DEPS}
 	bladerf? ( net-wireless/bladerf:= )
 	hackrf? ( net-libs/libhackrf:= )
 	iqbalance? ( net-wireless/gr-iqbal:=[${PYTHON_USEDEP}] )
-	mirisdr? ( net-libs/libmirisdr:= )
-	rtlsdr? ( >=net-wireless/rtl-sdr-0.5.3:= )
-	uhd? ( net-wireless/uhd:=[${PYTHON_USEDEP}] )"
-DEPEND="${RDEPEND}
-	dev-python/cheetah"
+	mirisdr? ( net-libs/libmirisdr:= )# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gr-osmosdr/gr-osmosdr-0.1.3.ebuild,v 1.1 2014/08/28 19:58:13 zerochaos Exp $
 
-REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+EAPI=5
+PYTHON_COMPAT=( python2_7 )
 
-src_prepare() {
-	epatch_user
-}
+inherit cmake-utils python-single-r1
 
-src_configure() {
-	local mycmakeargs=(
-		-DENABLE_DEFAULT=OFF
-		-DPYTHON_EXECUTABLE="${PYTHON}"
-		-DENABLE_FILE=ON
-		$(cmake-utils_use_enable bladerf)
-		$(cmake-utils_use_enable fcd)
-		$(cmake-utils_use_enable hackrf)
-		$(cmake-utils_use_enable iqbalance)
-		$(cmake-utils_use_enable mirisdr MIRI)
-		$(cmake-utils_use_enable python)
-		$(cmake-utils_use_enable rtlsdr RTL)
-		$(cmake-utils_use_enable rtlsdr RTL_TCP)
-		$(cmake-utils_use_enable uhd)
-	)
+DESCRIPTION="GNU Radio source block for OsmoSDR and rtlsdr and hackrf"
+HOMEPAGE="http://sdr.osmocom.org/trac/wiki/GrOsmoSDR"
 
-	cmake-utils_src_configure
-}
-
-src_install() {
-	cmake-utils_src_install
-	python_fix_shebang "${ED}"/usr/bin
-}
+if [[ ${PV} == 9999* ]]; then
+	inherit git-r3
+	SRC_URI=""
+	EGIT_REPO_URI="git://git.osmocom.org/${PN}.git"
+	KEYWORDS=""
+else
+	#git clone git://git.osmocom.org/gr-osmosdr.git
+	#cd gr-osmosdr
+	#git archive --format=tar --prefix=gr-osmosdr-${PV}/ v${PV} | xz > ../gr-osmosdr-${PV}.tar.xz
+	SRC_URI="https://dev.gentoo.org/~zerochaos/di

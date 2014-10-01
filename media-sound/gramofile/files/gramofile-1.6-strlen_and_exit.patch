@@ -54,7 +54,4 @@ diff -ur gramofile-1.6.orig/signpr_cmf3.c gramofile-1.6/signpr_cmf3.c
  #include <stdlib.h>
  #include <stdio.h>
  #include <math.h>
-+#include <string.h>
- #ifndef OLD_CURSES
- #include <ncurses.h>
- #else
+diff -ur gramofile-1.6.orig/bplaysrc/Makefile gramofile-1.6/bplaysrc/M

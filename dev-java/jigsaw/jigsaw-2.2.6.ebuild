@@ -43,20 +43,12 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-build.xml.patch"
 
 	java-pkg_jar-from --into jars/ jakarta-oro-2.0
-	java-pkg_jar-from --into jars/ servlet-api-2.3
-	java-pkg_jar-from --into jars/ xerces-2
-	java-pkg_jar-from --into jars/ jtidy
+	java-pkg_jar-from --into jars/ servl# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jigsaw/jigsaw-2.2.6.ebuild,v 1.1 2012/02/23 20:28:22 nelchael Exp $
 
-	cd jars/
-	ln -s $(java-config --tools)
-}
+EAPI=4
 
-src_install() {
-	java-pkg_dojar classes/jigsaw.jar
-	java-pkg_dojar classes/jigadmin.jar
-	java-pkg_dojar classes/jigedit.jar
+JAVA_PKG_IUSE="doc source"
 
-	use doc && java-pkg_dojavadoc ant.build/javadocs
-
-	dodoc ANNOUNCE README
-}
+# Jigsaw is actually a WWW server, it would be nice to package it as such, not

@@ -36,9 +36,6 @@ src_prepare() {
 	fi
 }
 
-pkg_postinst() {
-	vdr-plugin-2_pkg_postinst
-
-	einfo "See http://projects.vdr-developer.org/projects/skin-nopacity/wiki"
-	einfo "for more information about how to use channel logos"
-}
+pk# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinnopacity/vdr-skin

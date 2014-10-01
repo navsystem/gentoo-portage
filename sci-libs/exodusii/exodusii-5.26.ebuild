@@ -36,7 +36,5 @@ src_configure() {
 }
 
 src_test() {
-	cd "${BUILD_DIR}"/forbind/test || die
-	csh testall || die
-	./f_test_nem || die
-}
+	cd "${BUILD_DIR}"/forbind/test ||# Copyright 1999-2014 Gentoo Foundation
+# Distri

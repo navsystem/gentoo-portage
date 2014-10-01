@@ -70,24 +70,15 @@ src_compile() {
 		building() {
 			cd "${BUILD_DIR}"/python || die
 			emake \
-				PYTHON_INCLUDES="-I$(python_get_includedir)" \
-				pyexecdir="$(python_get_sitedir)"
-		}
-		python_foreach_impl building
-	fi
-}
+				PYTHON_INCLUDES="-I$(python# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/gupnp-igd-0.2.2-r1.ebuild,v 1.11 2014/04/26 06:35:33 pacho Exp $
 
-src_install() {
-	autotools-utils_src_install
+EAPI=5
 
-	if use python; then
-		installation() {
-			cd "${BUILD_DIR}"/python || die
-			emake \
-				DESTDIR="${D}" \
-				pyexecdir="$(python_get_sitedir)" \
-				install
-		}
-		python_foreach_impl installation
-	fi
-}
+PYTHON_COMPAT=( python2_7 )
+AUTOTOOLS_AUTORECONF=true
+
+inherit autotools-utils gnome.org python-r1
+
+DESCRIPTION="Li

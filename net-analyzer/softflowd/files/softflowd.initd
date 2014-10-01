@@ -8,6 +8,16 @@ depend() {
 }
 
 softflowd_checkconfig() {
+	SOFTFLOWD_INTER#!/sbin/runscript
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/softflowd/files/softflowd.initd,v 1.2 2012/03/21 07:52:49 robbat2 Exp $
+
+depend() {
+	need net
+}
+
+softflowd_checkconfig() {
 	SOFTFLOWD_INTERFACE=${SVCNAME#*.}
 	if [ ${SOFTFLOWD_INTERFACE} = ${SVCNAME} ]; then
 		eerror "You have to create an init script for each interface:"
@@ -38,17 +48,4 @@ start() {
 			-n "${SOFTFLOWD_COLLECTOR}" \
 			-p "${SOFTFLOWD_PIDFILE}" \
 			-c "${SOFTFLOWD_CTLFILE}" \
-			-t "${SOFTFLOWD_TIMEOUTS-maxlife=600}" \
-			-m "${SOFTFLOWD_MAXFLOWS-17000}" \
-			${SOFTFLOWD_EXTRA}
-	eend $?
-}
-
-stop() {
-	softflowd_checkconfig || return 1
-
-	ebegin "Stopping softflowd on interface ${SOFTFLOWD_INTERFACE}"
-	# use softflowd's own way to shut it down
-	/usr/sbin/softflowctl -c ${SOFTFLOWD_CTLFILE} shutdown
-	eend $?
-}
+			-t "${SOFTFLOWD_TIMEO

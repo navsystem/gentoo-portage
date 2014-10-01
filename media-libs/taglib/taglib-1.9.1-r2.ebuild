@@ -51,16 +51,14 @@ multilib_src_configure() {
 
 multilib_src_test() {
 	# ctest does not work
-	emake -C "${BUILD_DIR}" check
-}
+	emake# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/taglib-1.9.1-r2.ebuild,v 1.11 2014/08/27 09:05:26 ssuominen Exp $
 
-pkg_postinst() {
-	if ! use asf; then
-		elog "You've chosen to disable the asf use flag, thus taglib won't include"
-		elog "support for Microsoft's 'advanced systems format' media container"
-	fi
-	if ! use mp4; then
-		elog "You've chosen to disable the mp4 use flag, thus taglib won't include"
-		elog "support for the MPEG-4 part 14 / MP4 media container"
-	fi
-}
+EAPI=5
+
+inherit cmake-multilib
+
+DESCRIPTION="A library for reading and editing audio meta data"
+HOMEPAGE="http://developer.kde.org/~wheeler/taglib.html"
+SRC_URI=

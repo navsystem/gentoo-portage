@@ -16,9 +16,6 @@ index 6737256..978ef0d 100644
  AC_CONFIG_MACRO_DIR([m4])
  AC_CONFIG_SRCDIR([libfprint/core.c])
 -AM_CONFIG_HEADER([config.h])
-+AC_CONFIG_HEADERS([config.h])
- 
- # Enable silent build when available (Automake 1.11)
- m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])
---
-cgit v0.9.0.2-2-gbebe
++AC_CONFIG_HEADERS([confiFrom 43eca622cd49b58c87157e1ff1a2fcfdfba0934e Mon Sep 17 00:00:00 2001
+From: Vasily Khoruzhick <anarsoul@gmail.com>
+Date: Sun, 13 Jan 2013 13

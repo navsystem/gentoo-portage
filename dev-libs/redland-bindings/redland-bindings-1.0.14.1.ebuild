@@ -80,24 +80,15 @@ src_install() {
 		find "${ED}" -depth -mindepth 1 -type d -empty -delete
 	fi
 
-	if use python; then
-		installation() {
-			emake \
-				DESTDIR="${D}" \
-				pythondir="$(python_get_sitedir)" \
-				install
-		}
-		python_execute_function -s --source-dir python installation
-	fi
+	i# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland-bindings/redland-bindings-1.0.14.1.ebuild,v 1.15 2014/01/15 12:37:38 ago Exp $
 
-	dodoc AUTHORS ChangeLog NEWS README TODO
-	dohtml {NEWS,README,RELEASE,TODO}.html
-}
+EAPI=4
+PYTHON_DEPEND="python? 2:2.7"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 
-pkg_postinst() {
-	use python && python_mod_optimize RDF.py
-}
+inherit multilib python
 
-pkg_postrm() {
-	use python && python_mod_cleanup RDF.py
-}
+DESCRIPTION="Language bindings for R

@@ -48,12 +48,8 @@ Index: client/main.cpp
 +
 +			job.setFlags(args);
 +
-+			free(pch);
-+		}
-+
-+		free(envar);
-+	}
-+
-     /* if ICECC is set to no, then run job locally */
-     char* icecc = getenv("ICECC");
-     if ( icecc && !strcasecmp(icecc, "no") )
++	Index: services/job.h
+===================================================================
+--- services/job.h	(revision 843731)
++++ services/job.h	(working copy)
+@@ -57,6 +57,10 @@

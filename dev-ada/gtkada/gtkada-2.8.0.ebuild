@@ -13,6 +13,21 @@ SRC_URI="mirror://gentoo/${Name}-${PV}.tgz"
 LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="~amd64 ~x86 ~ppc"
+IUSE="# Copyright 1999-2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/gtkada-2.8.0.ebuild,v 1.10 2009/08/01 22:56:55 flameeyes Exp $
+
+inherit eutils gnat versionator
+
+Name="GtkAda-gpl"
+MajorPV=$(get_version_component_range 1-2)
+DESCRIPTION="Gtk+ bindings to the Ada language"
+HOMEPAGE="https://libre.adacore.com/GtkAda/"
+SRC_URI="mirror://gentoo/${Name}-${PV}.tgz"
+
+LICENSE="GPL-2"
+SLOT="2"
+KEYWORDS="~amd64 ~x86 ~ppc"
 IUSE="nls opengl"
 
 DEPEND="virtual/ada
@@ -92,19 +107,3 @@ src_install() {
 	ps2pdf gtkada_rm/gtkada_rm.ps
 	cp gtkada_ug.pdf gtkada_rm.pdf "${D}/usr/share/doc/${PF}"
 	dohtml -r gtkada_ug/{gtkada_ug.html,boxes.gif,hierarchy.jpg}
-	cp -dPr gtkada_rm/gtkada_rm/ "${D}/usr/share/doc/${PF}/html"
-
-	# utility stuff
-	cd "${S}"
-	dodir "${AdalibDataDir}/${PN}"
-	insinto "${AdalibDataDir}/${PN}"
-	doins -r xml/gtkada.xml projects/
-}
-
-pkg_postinst() {
-	eselect gnat update
-	einfo "The environment has been set up to make gnat automatically find files for"
-	einfo "GtkAda. In order to immediately activate these settings please do:"
-	einfo "   env-update && source /etc/profile"
-	einfo "Otherwise the settings will become active next time you login"
-}

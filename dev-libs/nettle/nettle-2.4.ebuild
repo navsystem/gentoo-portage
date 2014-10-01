@@ -21,15 +21,10 @@ RDEPEND="${DEPEND}"
 src_prepare() {
 	sed -e "/CFLAGS=/s: -ggdb3::" -i configure.ac || die "sed failed"
 	epatch "${FILESDIR}"/${P}-darwin-shlink.patch
-	epatch "${FILESDIR}"/${P}-missing-libm-link.patch
-	sed -i -e 's/solaris\*)/sunldsolaris*)/' configure.ac || die
-	eautoreconf
-}
+	epatch "${FILESDIR}"/$# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/nettle-2.4.ebuild,v 1.15 2012/07/24 15:08:38 flameeyes Exp $
 
-src_configure() {
-	# --disable-openssl bug #427526
-	econf \
-		--enable-shared \
-		$(use_enable gmp public-key) \
-		--disable-openssl
-}
+EAPI="4"
+
+inherit eut

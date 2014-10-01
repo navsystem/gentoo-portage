@@ -17,6 +17,25 @@
  ;; gtk_file_selection_get_filename returns mbstr encoded by the current
  ;; locale.  We canonicalize it to utf8.  The Scheme glue code converts
  ;; it to Gauche's internal encoding.
+-(define-cproc gtk-file-selection-get-filename (sel::<gtk---- a/src/gtk-lib.hints
++++ b/src/gtk-lib.hints
+@@ -527,8 +527,10 @@ SCM_RETURN(Scm_Values2(Scm_MakeInteger(n_properties), h));"
+   (add-mixin! "Scm_GtkEditableClass" "Scm_GtkCellEditableClass"))
+ 
+ ;; we can't free the return value of gtk_entry_get_text.
+-(define-cproc gtk-entry-get-text (entry::<gtk-entry>)
+-  "SCM_RETURN(SCM_MAKE_STR_COPYING(gtk_entry_get_text(entry)));")
++(define-cproc-fix gtk-entry-get-text
++  (fix-arguments! '(entry::<gtk-entry>))
++  (fix-body!
++   "SCM_RETURN(SCM_MAKE_STR_COPYING(gtk_entry_get_text(entry)));"))
+ 
+ ;;==================================================================
+ ;; gtkfilesel.h
+@@ -539,8 +541,10 @@ SCM_RETURN(Scm_Values2(Scm_MakeInteger(n_properties), h));"
+ ;; gtk_file_selection_get_filename returns mbstr encoded by the current
+ ;; locale.  We canonicalize it to utf8.  The Scheme glue code converts
+ ;; it to Gauche's internal encoding.
 -(define-cproc gtk-file-selection-get-filename (sel::<gtk-file-selection>)
 -  "const gchar *fn_mb = gtk_file_selection_get_filename(sel);
 +(define-cproc-fix gtk-file-selection-get-filename
@@ -44,28 +63,4 @@
 -(define-cproc gtk-label-get-label (label::<gtk-label>)
 -  "SCM_RETURN(SCM_MAKE_STR_COPYING(gtk_label_get_label(label)));")
 +(define-cproc-fix gtk-label-get-text
-+  (fix-arguments! '(label::<gtk-label>))
-+  (fix-body!
-+   "SCM_RETURN(SCM_MAKE_STR_COPYING(gtk_label_get_text(label)));"))
-+(define-cproc-fix gtk-label-get-label
-+  (fix-arguments! '(label::<gtk-label>))
-+  (fix-body!
-+   "SCM_RETURN(SCM_MAKE_STR_COPYING(gtk_label_get_label(label)));"))
- 
- (define-cproc-fix gtk-label-get-seleciton-bounds
-   (fix-arguments! '(label::<gtk-label>))
-@@ -1121,9 +1129,11 @@ return SCM_MAKE_STR_COPYING((char*)string);"))
- 
- (input-file "gtkprogressbar.h")
- 
--(define-cproc gtk-progress-bar-get-text (pbar::<gtk-progress-bar>)
--  "gchar *g = gtk_progress_bar_get_text(pbar);
--  SCM_RETURN(SCM_MAKE_STR_COPYING_SAFELY(g));")
-+(define-cproc-fix gtk-progress-bar-get-text
-+  (fix-arguments! '(pbar::<gtk-progress-bar>))
-+  (fix-body!
-+   "gchar *g = gtk_progress_bar_get_text(pbar);
-+  SCM_RETURN(SCM_MAKE_STR_COPYING_SAFELY(g));"))
- 
- ;;==================================================================
- ;; gtkradiobutton
++

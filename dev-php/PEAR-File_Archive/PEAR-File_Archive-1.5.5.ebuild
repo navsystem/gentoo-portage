@@ -14,5 +14,5 @@ IUSE="minimal"
 RDEPEND="dev-lang/php[bzip2,zlib]
 	dev-php/PEAR-MIME_Type
 	!minimal? ( dev-php/PEAR-Mail_Mime
-		dev-php/PEAR-Mail
-		>=dev-php/PEAR-Cache_Lite-1.5.0 )"
+		dev-ph# Copyright 1999-2014 Gentoo Foundation
+# Distrib

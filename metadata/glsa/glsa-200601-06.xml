@@ -9,6 +9,17 @@
     xine-lib and FFmpeg are vulnerable to a buffer overflow that may be
     exploited by attackers to execute arbitrary code.
   </synopsis>
+  <product type="ebuild">xine-lib ffmp<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="/xsl/glsa.xsl" type="text/xsl"?>
+<?xml-stylesheet href="/xsl/guide.xsl" type="text/xsl"?>
+<!DOCTYPE glsa SYSTEM "http://www.gentoo.org/dtd/glsa.dtd">
+
+<glsa id="200601-06">
+  <title>xine-lib, FFmpeg: Heap-based buffer overflow</title>
+  <synopsis>
+    xine-lib and FFmpeg are vulnerable to a buffer overflow that may be
+    exploited by attackers to execute arbitrary code.
+  </synopsis>
   <product type="ebuild">xine-lib ffmpeg</product>
   <announced>January 10, 2006</announced>
   <revised>January 10, 2006: 01</revised>
@@ -68,16 +79,4 @@
     # emerge --ask --oneshot --verbose &quot;&gt;=media-video/ffmpeg-0.4.9_p20051216&quot;</code>
   </resolution>
   <references>
-    <uri link="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-4048">CVE-2005-4048</uri>
-    <uri link="http://article.gmane.org/gmane.comp.video.ffmpeg.devel/26558">Original advisory</uri>
-  </references>
-  <metadata tag="requester" timestamp="Tue, 03 Jan 2006 10:30:55 +0000">
-    koon
-  </metadata>
-  <metadata tag="submitter" timestamp="Fri, 06 Jan 2006 00:22:43 +0000">
-    adir
-  </metadata>
-  <metadata tag="bugReady" timestamp="Mon, 09 Jan 2006 22:59:16 +0000">
-    DerCorny
-  </metadata>
-</glsa>
+    <uri link="http://www.cv

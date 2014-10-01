@@ -32,20 +32,13 @@ src_prepare() {
 }
 
 src_compile() {
-	sed -i "s/MOD_VHOST_LDAP_VERSION/\"$(cat VERSION)\"/g" mod_vhost_ldap.c
-	apache-module_src_compile
-}
+	sed -i "s/MOD_VHOST_LDAP_VERSION/\"$(cat VERSION)\"/g" m# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_vhost_ldap/mod_vhost_ldap-1.0.0-r1.ebuild,v 1.5 2014/08/10 20:18:29 slyfox Exp $
 
-src_install() {
-	mkdir -p "${D}"/etc/openldap/schema
-	cp -f mod_vhost_ldap.schema "${D}"/etc/openldap/schema/
-	apache-module_src_install
-}
+EAPI="2"
 
-pkg_postinst() {
-	apache-module_pkg_postinst
-	einfo
-	einfo "Your LDAP server needs to include mod_vhost_ldap.schema and should"
-	einfo "also maintain indices on apacheServerName and apacheServerAlias."
-	einfo
-}
+inherit eutils apache-module
+
+DESCRIPTION="An Apache2 module for storing and configuring virtual hosts from LDAP"
+HOMEPAGE="http://modvhostldap.alio

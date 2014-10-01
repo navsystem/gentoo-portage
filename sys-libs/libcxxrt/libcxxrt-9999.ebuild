@@ -54,18 +54,12 @@ multilib_src_test() {
 	cd "${BUILD_DIR}/test"
 	LD_LIBRARY_PATH="${BUILD_DIR}/src:${LD_LIBRARY_PATH}" \
 		LIBS="-L${BUILD_DIR}/src -lcxxrt -l$(usex libunwind unwind gcc_s) -lc" \
-		emake check
-}
+	# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxxrt/libcxxrt-9999.ebuild,v 1.12 2014/08/10 20:12:23 slyfox Exp $
 
-multilib_src_install() {
-	# TODO: See README. Maybe hide it in a subdir and let only libcxx know about
-	# it. FreeBSD head installs it in /lib
-	dolib.so src/${PN}.so*
-	use static-libs && dolib.a src/${PN}.a
-}
+EAPI=5
 
-multilib_src_install_all() {
-	einstalldocs
-	insinto /usr/include/libcxxrt/
-	doins src/cxxabi.h src/unwind*.h
-}
+EGIT_REPO_URI="git://github.com/pathscale/libcxxrt.git"
+
+[ "${PV%9999}" != "${PV}" ] && SCM="git-2" || SCM=

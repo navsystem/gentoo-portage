@@ -37,16 +37,6 @@ all_ruby_prepare() {
 each_ruby_prepare() {
 	case ${RUBY} in
 		*jruby)
-			# Ignore failing tests: upstream is aware and doing the same
-			# on Travis.
-			rm test/fakefs_test.rb test/file/stat_test.rb || die
-			;;
-		*)
-			;;
-	esac
-}
-
-each_ruby_test() {
-	ruby-ng_rspec
-	ruby-ng_testrb-2 -Ilib:test test/**/*_test.rb
-}
+			# Ignore failing tests: upstream is aware and # Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakefs/fakefs-0.5.2-r1.ebuild,v 1.3 2014/08/1

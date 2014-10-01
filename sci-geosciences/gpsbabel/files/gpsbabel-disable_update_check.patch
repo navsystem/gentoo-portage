@@ -4,6 +4,12 @@ Disable check for newer versions on start.
 +++ b/gui/preferences.ui
 @@ -40,13 +40,6 @@
         </property>
+        <layout class="QVBoxLayout" name="vDisable check for newer versions on start.
+
+--- a/gui/preferences.ui
++++ b/gui/preferences.ui
+@@ -40,13 +40,6 @@
+        </property>
         <layout class="QVBoxLayout" name="verticalLayout_4">
          <item>
 -         <widget class="QCheckBox" name="startupCheck">
@@ -101,10 +107,4 @@ Disable check for newer versions on start.
  //------------------------------------------------------------------------
  void MainWindow::closeActionX()
  {
--  QDateTime wt= upgrade->getUpgradeWarningTime();
--  if (wt.isValid()) {
--    bd.upgradeCheckTime = wt;
--  }
-   bd.runCount++;
- 
-   QDateTime now = QDateTime::currentDateTime();
+-  

@@ -20,6 +20,5 @@ IUSE=""
 
 DEPEND=">=dev-python/pyspf-2.0.3"
 RDEPEND="${DEPEND}
-	dev-python/authres"
-
-PYTHON_MODNAME="policydspfsupp.py policydspfuser.py"
+	dev-python/authr# Copyright 1999-2013 Gentoo Foundation
+# Distributed unde

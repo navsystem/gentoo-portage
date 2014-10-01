@@ -56,25 +56,17 @@ src_compile() {
 		--enable-schema-mapping \
 		--enable-paged-results \
 		--enable-rfc2307bis \
-		${myconf} || die "configure failed"
+		${myconf} || die "configure fai# Copyright 1999-2007 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/nss_ldap-258.ebuild,v 1.8 2007/11/14 03:56:40 beandog Exp $
 
-	emake || die "make failed"
-}
+inherit fixheadtails eutils multilib autotools
 
-src_install() {
-	dodir /$(get_libdir)
+IUSE="debug sasl kerberos"
 
-	emake -j1 DESTDIR="${D}" install || die "make install failed"
+DESCRIPTION="NSS LDAP Module"
+HOMEPAGE="http://www.padl.com/OSS/nss_ldap.html"
+SRC_URI="http://www.padl.com/download/${P}.tar.gz"
 
-	insinto /etc
-	doins ldap.conf
-
-	dodoc ldap.conf ANNOUNCE NEWS ChangeLog AUTHORS \
-		COPYING CVSVersionInfo.txt README nsswitch.ldap certutil
-	docinto docs; dodoc doc/*
-}
-
-pkg_postinst() {
-	elog "If you use a ldaps:// string in the 'uri' setting of"
-	elog "your /etc/ldap.conf, you must set 'ssl on'!"
-}
+SLOT="0"
+LICENSE

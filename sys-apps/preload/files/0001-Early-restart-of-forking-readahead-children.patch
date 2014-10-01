@@ -46,19 +46,9 @@ index c169e81..7617449 100644
  
    if (procs >= maxprocs)
 -    wait_for_children ();
-+    wait_for_children (maxprocs);
- 
-   if (maxprocs > 0)
-     {
-@@ -257,7 +257,7 @@ preload_readahead (preload_map_t **files, int file_count)
-       path = NULL;
-     }
- 
--  wait_for_children ();
-+  wait_for_children (0);
- 
-   return processed;
- }
--- 
-1.5.4.5
++ From 63cbd8862714a97c8ef752041dc8c351ba4fae1d Mon Sep 17 00:00:00 2001
+From: Kai Krakow <kai@kaishome.de>
+Date: Mon, 28 Jul 2008 19:50:22 +0200
+Subject: [PATCH] Early restart of forking readahead children
 
+This patch adds ability to wait_for_children() to rest

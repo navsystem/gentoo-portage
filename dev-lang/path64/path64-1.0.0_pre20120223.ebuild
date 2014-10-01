@@ -13,6 +13,21 @@ HOMEPAGE="http://www.pathscale.com/ekopath-compiler-suite"
 SRC_URI="${MY_MIRROR}/${PN}-suite-${PV}.tbz2
 	${MY_MIRROR}/${PN}-compiler-${PV}.tbz2
 	assembler? ( ${MY_MIRROR}/${PN}-assembler-${PV}.tbz2 )
+	debugger? ( ${MY_MI# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/path64/path64-1.0.0_pre20120223.ebuild,v 1.1 2012/02/23 12:57:51 xarthisius Exp $
+
+EAPI=4
+CMAKE_VERBOSE=1
+MY_MIRROR=http://dev.gentoo.org/~xarthisius/distfiles
+
+inherit cmake-utils multilib toolchain-funcs
+
+DESCRIPTION="Path64 Compiler Suite Community Edition"
+HOMEPAGE="http://www.pathscale.com/ekopath-compiler-suite"
+SRC_URI="${MY_MIRROR}/${PN}-suite-${PV}.tbz2
+	${MY_MIRROR}/${PN}-compiler-${PV}.tbz2
+	assembler? ( ${MY_MIRROR}/${PN}-assembler-${PV}.tbz2 )
 	debugger? ( ${MY_MIRROR}/${PN}-debugger-${PV}.tbz2 )"
 
 LICENSE="GPL-3"
@@ -71,24 +86,4 @@ src_configure() {
 		-DPATH64_ENABLE_TARGETS="x86_64"
 		-DPATH64_ENABLE_PROFILING=ON
 		-DPATH64_ENABLE_MATHLIBS=ON
-		-DPATH64_ENABLE_PATHOPT2=OFF
-		$(cmake-utils_use assembler PATH64_ENABLE_PATHAS)
-		$(cmake-utils_use assembler PATH64_ENABLE_DEFAULT_PATHAS)
-		$(cmake-utils_use fortran PATH64_ENABLE_FORTRAN)
-		$(cmake-utils_use openmp PATH64_ENABLE_OPENMP)
-		$(cmake-utils_use debugger PATH64_ENABLE_PATHDB)
-		$(cmake-utils_use valgrind PATH64_ENABLE_VALGRIND)
-		-DPSC_CRT_PATH_x86_64=/usr/$(get_libdir)
-		-DPSC_CRTBEGIN_PATH=$(dirname ${libgcc})
-		-DPSC_DYNAMIC_LINKER_x86_64=${linker}
-		-DCMAKE_C_COMPILER="$(tc-getCC)"
-		-DCMAKE_CXX_COMPILER="$(tc-getCXX)"
-		"${flags[@]}"
-	)
-	cmake-utils_src_configure
-}
-
-src_install() {
-	cmake-utils_src_install
-	doenvd "98${PN}"
-}
+		-DPATH64_ENABLE_PATHOP

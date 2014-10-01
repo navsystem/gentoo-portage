@@ -7,6 +7,15 @@ EAPI=5
 inherit perl-module user versionator
 
 DESCRIPTION="Highly flexible server for git directory version tracker"
+HOMEPAGE="http://github.com/s# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite/gitolite-3.5.3.1.ebuild,v 1.4 2014/01/19 16:48:26 idl0r Exp $
+
+EAPI=5
+
+inherit perl-module user versionator
+
+DESCRIPTION="Highly flexible server for git directory version tracker"
 HOMEPAGE="http://github.com/sitaramc/gitolite"
 SRC_URI="https://github.com/sitaramc/gitolite/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
@@ -69,14 +78,4 @@ src_install() {
 
 pkg_postinst() {
 	if [ "$(get_major_version $REPLACING_VERSIONS)" = "2" ]; then
-		ewarn
-		elog "***NOTE*** This is a major upgrade and will likely break your existing gitolite-2.x setup!"
-		elog "Please read http://sitaramc.github.com/gitolite/install.html#migr first!"
-	fi
-
-	# bug 352291
-	ewarn
-	elog "Please make sure that your 'git' user has the correct homedir (/var/lib/gitolite)."
-	elog "Especially if you're migrating from gitosis."
-	ewarn
-}
+	

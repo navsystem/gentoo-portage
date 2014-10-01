@@ -43,6 +43,5 @@ pkg_postinst() {
 	echo
 	einfo "Also, be sure to run ipkungfu prior to rebooting,"
 	einfo "especially if you you're updating from <0.6.0 to >=0.6.0."
-	einfo "There are some significant configuration changes on this"
-	einfo "release covered by the ipkungfu script."
-}
+	einfo "There are some signif# Copyright 1999-2009 Gentoo Foundation
+# Distributed under the terms of the GNU General

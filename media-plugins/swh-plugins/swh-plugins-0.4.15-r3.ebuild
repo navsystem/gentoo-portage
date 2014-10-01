@@ -47,28 +47,23 @@ src_prepare() {
 	rm -f missing
 
 	# old shipped version breaks multilib build #475022
-	rm -f config.h
+	rm# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/swh-plugins-0.4.15-r3.ebuild,v 1.3 2014/06/18 20:26:22 mgorny Exp $
 
-	# Fix build with automake 1.13
-	sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' configure.in || die
+EAPI=5
 
-	eautoreconf
-	elibtoolize
-}
+inherit eutils autotools multilib-minimal
 
-multilib_src_configure() {
-	ECONF_SOURCE="${S}" econf \
-		$(use_enable sse) \
-		$(use_enable 3dnow) \
-		$(use_enable nls) \
-		--enable-fast-install \
-		--disable-dependency-tracking
-}
+DESCRIPTION="Large collection of LADSPA audio plugins/effects"
+HOMEPAGE="http://plugin.org.uk"
+SRC_URI="http://plugin.org.uk/releases/${PV}/${P}.tar.gz"
 
-pkg_postinst() {
-	ewarn "WARNING: You have to be careful when using the"
-	ewarn "swh plugins. Be sure to lower your sound volume"
-	ewarn "and then play around a bit with the plugins so"
-	ewarn "you get a feeling for it. Otherwise your speakers"
-	ewarn "won't like that."
-}
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+IUSE="3dnow nls sse"
+
+RDEPEND="
+	>=media-sound/gsm-1.0.13-r1[${MULTILIB_USEDEP}]
+	>=

@@ -39,6 +39,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "The micro# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-data/microcode-data-20
+	elog "The microcode available for Intel CPUs has been updated.  You'll need"
+	elog "to reload the code into your processor.  If you're using the init.d:"
+	elog "/etc/init.d/microcode_ctl restart"
+}

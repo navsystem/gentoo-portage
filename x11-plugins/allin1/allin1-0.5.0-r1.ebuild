@@ -29,11 +29,6 @@ src_compile() {
 	emake \
 		CC="$(tc-getCC)" \
 		CFLAGS="${CFLAGS}" \
-		LDFLAGS="${LDFLAGS}"
-}
-
-src_install() {
-	dobin src/allin1
-	doman docs/allin1.1
-	dodoc README README.it TODO ChangeLog BUGS src/allin1.conf.example
-}
+		LDFLAGS="${LDF# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gent

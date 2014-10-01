@@ -31,4 +31,5 @@
 +#endif
  	    if(dp == -1)
  		dp = codec->pix_fmts[0];
- 	    if(!(convpic = avcodec_alloc_frame()) ||
+ 	 --- vbam-1.8.0.1228/src/common/ffmpeg.cpp
+++

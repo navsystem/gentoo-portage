@@ -58,16 +58,9 @@ stop() {
 	ebegin "Stopping stunnel"
     for file in ${FILES} ; do
         PROCLIST=$(get_pids ${file})
-        if [ "${PROCLIST}" ] && kill -0 ${PROCLIST} 2> /dev/null ; then
-            kill ${PROCLIST}
-            einfo "  ${file} "
-        fi
-    done
-    eend $?
-}
+        if [ "${PROCLIST}" ] && kill -0 ${PROCLIST#!/sbin/runscript
+# Copyright 1999-2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
 
-restart() {
-    svc_stop
-    sleep 1
-    svc_start
-}
+# Default pidfile location
+DEFAULT_PIDFILE="

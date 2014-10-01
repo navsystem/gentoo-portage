@@ -29,12 +29,9 @@ Compiler warning fixes.
  
  static int
  authenticate_user_gss(request_rec *r, kerb_auth_config *conf,
-@@ -1722,7 +1725,7 @@ kerb_authenticate_user(request_rec *r)
-    return ret;
- }
- 
--int
-+static int
- have_rcache_type(const char *type)
- {
-    krb5_error_code ret;
+@@ -1722,7 +1725,7 @@ ker
+Compiler warning fixes.
+
+--- mod_auth_kerb-5.4/src/mod_auth_kerb.c.fixes
++++ mod_auth_kerb-5.4/src/mod_auth_kerb.c
+@@ -677,7 +677,8 @@ en

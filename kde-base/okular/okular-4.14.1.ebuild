@@ -41,17 +41,19 @@ src_configure() {
 	local mycmakeargs=(
 		$(cmake-utils_use_with chm)
 		$(cmake-utils_use_with crypt QCA2)
-		$(cmake-utils_use_with djvu DjVuLibre)
-		$(cmake-utils_use_with dpi LibKScreen)
-		$(cmake-utils_use_with ebook EPub)
-		$(cmake-utils_use_with jpeg)
-		$(cmake-utils_use_with jpeg Kexiv2)
-		$(cmake-utils_use_with mobi QMobiPocket)
-		$(cmake-utils_use_with postscript LibSpectre)
-		$(cmake-utils_use_with pdf PopplerQt4)
-		$(cmake-utils_use_with pdf Poppler)
-		$(cmake-utils_use_with tiff)
-	)
+# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/okular-4.14.1.ebuild,v 1.1 2014/09/16 18:17:30 johu Exp $
 
-	kde4-base_src_configure
-}
+EAPI=5
+
+KDE_HANDBOOK="optional"
+
+#VIRTUALX_REQUIRED=test
+RESTRICT=test
+# test 2: parttest hangs
+
+inherit kde4-base
+
+DESCRIPTION="Okular is a universal document viewer based on KPDF for KDE 4"
+HOMEPAGE="h

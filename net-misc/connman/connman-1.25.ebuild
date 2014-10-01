@@ -60,6 +60,5 @@ src_install() {
 	fi
 	keepdir /var/lib/${PN}
 	newinitd "${FILESDIR}"/${PN}.initd2 ${PN}
-	newconfd "${FILESDIR}"/${PN}.confd ${PN}
-	systemd_dounit "${FILESDIR}"/connman.service
-}
+	newconfd "${FILESDIR}"/${# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the 

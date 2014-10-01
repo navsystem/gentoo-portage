@@ -24,10 +24,7 @@ index 8f6e3a8..5ac386d 100644
  
      def __init__(self):
 -        serviceHTMLExportDefaultSettings = {"enabled": False, "path": config.pyfaPath + os.sep + 'pyfaFits.html' }
-+        serviceHTMLExportDefaultSettings = {"enabled": False, "path": unicode(os.path.expanduser(os.path.join('~', 'pyfaFits.html')), sys.getfilesystemencoding()) }
-         self.serviceHTMLExportSettings = SettingsProvider.getInstance().getSettings("pyfaServiceHTMLExportSettings", serviceHTMLExportDefaultSettings)
-     
-     def getEnabled(self):
--- 
-1.7.8.6
-
++        serviceHTMLExportDefaultSettings = {"enabled": False, "path": unicode(os.path.expanduser(os.path.join('~', 'pyfaFits.html')), sys.getfilesystemeFrom 017938391c5b67327c489a5c3a6fc720d4204609 Mon Sep 17 00:00:00 2001
+From: Alexandre Rostovtsev <tetromino@gentoo.org>
+Date: Mon, 16 Jul 2012 05:43:38 -0400
+Subject: [PATCH] Export fits to home directory, not 

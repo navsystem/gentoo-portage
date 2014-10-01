@@ -28,43 +28,23 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	${NLS_DEPEND}
-	test? ( dev-perl/Test-Pod )
-"
+	test? ( dev-perl/Test-Pod # Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/debhelper-9.20140613.ebuild,v 1.1 2014/06/14 00:06:46 jer Exp $
 
-S=${WORKDIR}/${PN}
+EAPI=5
+inherit eutils toolchain-funcs
 
-src_compile() {
-	tc-export CC
+DESCRIPTION="Collection of programs that can be used to automate common tasks in debian/rules"
+HOMEPAGE="http://packages.qa.debian.org/d/debhelper.html http://joeyh.name/code/debhelper/"
+SRC_URI="mirror://debian/pool/main/d/${PN}/${P/-/_}.tar.gz"
 
-	local LANGS="" USE_NLS=no lingua
-	for lingua in ${DH_LINGUAS[@]}; do
-		if use linguas_${lingua}; then
-			LANGS+=" ${lingua}"
-			USE_NLS=yes
-		fi
-	done
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux"
+IUSE="test"
+DH_LINGUAS=( de es fr )
+IUSE+=" ${DH_LINGUAS[@]/#/linguas_}"
 
-	emake USE_NLS="${USE_NLS}" LANGS="${LANGS}" build
-}
-
-src_install() {
-	emake DESTDIR="${D}" PREFIX="${EPREFIX}/usr" install
-	dodoc doc/* debian/changelog
-	docinto examples
-	dodoc examples/*
-	local lingua
-	for manfile in *.1 *.7 ; do
-		for lingua in ${DH_LINGUAS[@]}; do
-			case ${manfile} in
-				*.${lingua}.?)
-					use linguas_${lingua} \
-						&& cp ${manfile} "${T}"/${manfile/.${lingua}/} \
-						&& doman -i18n=${lingua} "${T}"/${manfile/.${lingua}/}
-					;;
-				*)
-					doman ${manfile}
-					;;
-			esac
-		done
-	done
-}
+NLS_DEPEND=$(
+	printf "lin

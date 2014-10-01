@@ -38,37 +38,25 @@ RDEPEND="
 	mpfi? ( sci-libs/mpfi )"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
-	virtual/pkgconfig"
+# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cgal/cgal-4.3.ebuild,v 1.3 2014/01/06 14:11:39 jlec Exp $
 
-S="${WORKDIR}/${MY_P}"
+EAPI=5
 
-DOCS="AUTHORS CHANGES* README"
+CMAKE_BUILD_TYPE=Release
 
-src_prepare() {
-	cmake-utils_src_prepare
-	sed \
-		-e '/install(FILES AUTHORS/d' \
-		-i CMakeLists.txt || die
-}
+inherit multilib cmake-utils
 
-src_configure() {
-	local mycmakeargs+=(
-		-DCGAL_INSTALL_LIB_DIR=$(get_libdir)
-		-DWITH_CGAL_Qt3=OFF
-		-DWITH_LEDA=OFF
-		$(cmake-utils_use_with gmp)
-		$(cmake-utils_use_with gmp GMPXX)
-		$(cmake-utils_use_with qt4 CGAL_Qt4)
-		$(cmake-utils_use_with mpfi)
-	)
-	cmake-utils_src_configure
-}
+MY_P=CGAL-${PV}
+PID=32995
+DPID=33000
 
-src_install() {
-	use doc && HTML_DOCS=( "${WORKDIR}"/doc_html/. )
-	cmake-utils_src_install
-	if use examples; then
-		insinto /usr/share/doc/${PF}
-		doins -r examples demo
-	fi
-}
+DESCRIPTION="C++ library for geometric algorithms and data structures"
+HOMEPAGE="http://www.cgal.org/ https://gforge.inria.fr/projects/cgal/"
+SRC_URI="
+	http://gforge.inria.fr/frs/download.php/${PID}/${MY_P}.tar.xz
+	doc? ( http://gforge.inria.fr/frs/download.php/${DPID}/${MY_P}-doc_html.tar.xz )"
+
+LICENSE="LGPL-3 GPL-3 Boost-1.0"
+SL

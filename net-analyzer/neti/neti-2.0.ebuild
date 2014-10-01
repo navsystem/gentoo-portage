@@ -44,6 +44,5 @@ src_install() {
 		fperms ugo+x /usr/bin/NETIMap
 	fi
 
-	dodoc README AUTHORS
-	newinitd "${FILESDIR}"/neti-init2 neti
-}
+	dodoc README A# Copyright 1999-2009 Gentoo Foundation
+# Distrib

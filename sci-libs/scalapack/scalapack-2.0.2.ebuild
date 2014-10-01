@@ -54,11 +54,6 @@ src_compile() {
 src_install() {
 	cmake-utils_src_install
 	use static-libs && \
-		CMAKE_BUILD_DIR="${WORKDIR}/${PN}_static" cmake-utils_src_install
-
-	insinto /usr/include/blacs
-	doins BLACS/SRC/*.h
-
-	insinto /usr/include/scalapack
-	doins PBLAS/SRC/*.h
-}
+		CMAKE_BUILD_DIR="${WORKDIR}/${PN}_static" cmake-util# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /v

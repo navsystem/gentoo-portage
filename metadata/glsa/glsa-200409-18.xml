@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet href="/xsl/glsa.xsl" type="text/xsl"?>
+<?xml-stylesheet href="/xsl/guide.xsl" type="text<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="/xsl/glsa.xsl" type="text/xsl"?>
 <?xml-stylesheet href="/xsl/guide.xsl" type="text/xsl"?>
 <!DOCTYPE glsa SYSTEM "http://www.gentoo.org/dtd/glsa.dtd">
 
@@ -67,10 +69,4 @@
   <metadata tag="requester" timestamp="Tue, 14 Sep 2004 07:01:02 +0000">
     jaervosz
   </metadata>
-  <metadata tag="submitter" timestamp="Tue, 14 Sep 2004 15:13:17 +0000">
-    koon
-  </metadata>
-  <metadata tag="bugReady" timestamp="Tue, 14 Sep 2004 20:25:30 +0000">
-    jaervosz
-  </metadata>
-</glsa>
+  <metadata tag="submitter" timestamp="Tue, 14 Sep 2004 15:

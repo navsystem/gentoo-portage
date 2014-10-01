@@ -6,6 +6,14 @@ EAPI=5
 
 inherit qt4-r2 versionator
 
+# The up# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-4.2.ebuild,v 1.1 2014/05/22 13:08:13 jlec Exp $
+
+EAPI=5
+
+inherit qt4-r2 versionator
+
 # The upstream version numbering is bad, so we have to remove a dot in the
 # minor version number
 MAJOR="$(get_major_version)"
@@ -75,13 +83,4 @@ src_prepare() {
 
 src_configure() {
 	eqmake4 \
-		${PN}.pro \
-		PREFIX="${EPREFIX}/usr" \
-		DESKTOPDIR="${EPREFIX}/usr/share/applications" \
-		ICONDIR="${EPREFIX}/usr/share/pixmaps"
-}
-
-pkg_postinst() {
-	elog "A user manual with many screenshots is available at:"
-	elog "${EPREFIX}/usr/share/${PN}/usermanual_en.html"
-}
+		${PN}

@@ -10,6 +10,18 @@ MY_P=${MY_PN}-${PV}
 
 DESCRIPTION="An alternative theme manager for The Xfce Desktop Environment"
 HOMEPAGE="http://keithhedger.hostingsiteforfree.com/pages/apps.html#themeed"
+SRC_URI="http://keithhedger.hostingsiteforfree.com/zips/xfc# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce-theme-manager/xfce-theme-manager-0.3.5.ebuild,v 1.1 2014/03/21 07:37:00 ssuominen Exp $
+
+EAPI=5
+inherit xfconf
+
+MY_PN=Xfce-Theme-Manager
+MY_P=${MY_PN}-${PV}
+
+DESCRIPTION="An alternative theme manager for The Xfce Desktop Environment"
+HOMEPAGE="http://keithhedger.hostingsiteforfree.com/pages/apps.html#themeed"
 SRC_URI="http://keithhedger.hostingsiteforfree.com/zips/xfcethememanager/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
@@ -34,24 +46,4 @@ pkg_setup() {
 
 src_prepare() {
 	sed -i \
-		-e '/^Cat/s:;;Settings::' \
-		-e '/^Cat/s:Gnome:GNOME:' \
-		${MY_PN}/resources/pixmaps/${MY_PN}.desktop || die
-
-	local configext desktopversion=10
-	has_version '>=xfce-base/xfdesktop-4.11' && desktopversion=11
-	[[ -x configure ]] || configext=.ac
-
-	sed -i \
-		-e '/^CFLAGS/s:=-Wall:"& $CFLAGS":' \
-		-e '/^CXXFLAGS/s:=-Wall:"& $CXXFLAGS":' \
-		-e "/^desktopversion/s:=.*:=$desktopversion:" \
-		configure${configext} || die
-
-	xfconf_src_prepare
-}
-
-src_install() {
-	xfconf_src_install
-	rm -f "${ED}"/usr/share/${MY_PN}/docs/gpl-3.0.txt
-}
+		-e '/^Ca

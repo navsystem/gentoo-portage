@@ -43,12 +43,10 @@
 @@ -4,7 +4,9 @@
  AM_CFLAGS = @GTK_CFLAGS@ 
  bin_PROGRAMS=gwave-exec gwaverepl
- gwave_exec_SOURCES=gwave-exec.c xgclient.c xgexec.h
--gwave_exec_LDADD= @GTK_LIBS@
-+gwave_exec_CFLAGS= @X11_CFLAGS@
-+gwave_exec_LDADD= @GTK_LIBS@ @X11_LIBS@
+ gwave_exec_SOURCES=gwave-exec.c xgclient.c xgex--- gwave2-20090213.orig/src/Makefile.am	2008-01-22 05:36:59.000000000 +0100
++++ gwave2-20090213/src/Makefile.am	2010-02-06 18:10:38.011218381 +0100
+@@ -15,8 +15,7 @@
+ 	rgeval.c xgserver.c measurebtn.c measurebtn.h \
+ 	GtkTable_indel.c GtkTable_indel.h  xsnarf.h
  
- gwaverepl_SOURCES=gwaverepl.c xgclient.c xgexec.h repllib.c
--gwaverepl_LDADD= @GTK_LIBS@ @READLINE_LIB@
-+gwaverepl_CFLAGS= @X11_CFLAGS@ @GLIB_CFLAGS@
-+gwaverepl_LDADD= @GTK_LIBS@ @READLINE_LIB@ @X11_LIBS@ @GLIB_LIBS@
+-gwave_LDADD = ../spicefile/libspicefile.a  @GTK_LIBS@ @GUILE_GN

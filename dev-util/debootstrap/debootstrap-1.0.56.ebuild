@@ -39,7 +39,5 @@ src_install() {
 
 pkg_postinst() {
 	if ! has_version ${CATEGORY}/${PN} && ! has_version app-crypt/gnupg; then
-		elog "To check Release files against a keyring"
-		elog " (--keyring=K), please install app-crypt/gnupg."
-	fi
-}
+		elog "To check Release files again# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the 

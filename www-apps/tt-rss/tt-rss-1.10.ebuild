@@ -66,14 +66,12 @@ src_install() {
 
 	webapp_configfile "${MY_HTDOCSDIR}"/config.php
 	if use daemon; then
-			webapp_postinst_txt en "${FILESDIR}"/postinstall-en-with-daemon.txt
-			newinitd "${FILESDIR}"/ttrssd.initd-r2 ttrssd
-			newconfd "${FILESDIR}"/ttrssd.confd-r1 ttrssd
-			insinto /etc/logrotate.d/
-			newins "${FILESDIR}"/ttrssd.logrotated ttrssd
-	else
-			webapp_postinst_txt en "${FILESDIR}"/postinstall-en.txt
-	fi
+			webapp_pos# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/tt-rss-1.10.ebuild,v 1.1 2013/09/24 09:07:05 tomka Exp $
 
-	webapp_src_install
-}
+EAPI=5
+
+inherit user eutils webapp depend.php depend.apache vcs-snapshot
+
+DESCRIPTION="Tiny Tiny RSS - A web-b

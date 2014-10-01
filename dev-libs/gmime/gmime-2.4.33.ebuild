@@ -47,10 +47,5 @@ src_compile() {
 
 src_install() {
 	GACUTIL_FLAGS="/root '${ED}/usr/$(get_libdir)' /gacdir '${EPREFIX}/usr/$(get_libdir)' /package ${PN}" \
-		gnome2_src_install
-
-	if use doc ; then
-		docinto tutorial
-		dodoc docs/tutorial/html/*
-	fi
-}
+		gnome2# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU Genera

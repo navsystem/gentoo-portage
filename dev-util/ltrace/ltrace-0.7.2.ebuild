@@ -24,15 +24,12 @@ DEPEND="${RDEPEND}
 	test? ( dev-util/dejagnu )"
 
 src_prepare() {
-	sed -i '/^dist_doc_DATA/d' Makefile.am || die
-	eautoreconf
-}
+	sed -i '/^dist_doc_DATA/d' Makef# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ltrace-0.7.2.ebuild,v 1.5 2014/08/27 12:39:46 ago Exp $
 
-src_configure() {
-	ac_cv_header_selinux_selinux_h=$(usex selinux) \
-	ac_cv_lib_selinux_security_get_boolean_active=$(usex selinux) \
-	econf \
-		--disable-werror \
-		$(use_enable debug) \
-		$(use_with unwind libunwind)
-}
+EAPI=5
+
+inherit eutils autotools
+
+N

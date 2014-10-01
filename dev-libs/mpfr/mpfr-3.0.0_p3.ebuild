@@ -38,22 +38,14 @@ src_unpack() {
 		fi
 	done
 	sed -i '/if test/s:==:=:' configure #261016
-	find . -type f -print0 | xargs -0 touch -r configure
-}
+	find . -type f -print0 | xargs -0 t# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/mpfr-3.0.0_p3.ebuild,v 1.13 2012/06/06 03:41:44 zmedico Exp $
 
-src_install() {
-	emake install DESTDIR="${D}" || die
-	rm "${D}"/usr/share/doc/${PN}/*.html || die
-	mv "${D}"/usr/share/doc/{${PN},${PF}} || die
-	dodoc AUTHORS BUGS ChangeLog NEWS README TODO
-	dohtml *.html
-	prepalldocs
-}
+# NOTE: we cannot depend on autotools here starting with gcc-4.3.x
+inherit eutils multilib
 
-pkg_preinst() {
-	preserve_old_lib /usr/$(get_libdir)/libmpfr.so.1
-}
-
-pkg_postinst() {
-	preserve_old_lib_notify /usr/$(get_libdir)/libmpfr.so.1
-}
+MY_PV=${PV/_p*}
+MY_P=${PN}-${MY_PV}
+PLEVEL=${PV/*p}
+DESCRIPTION="library for 

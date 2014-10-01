@@ -50,58 +50,45 @@ src_configure() {
 	export XERCESCROOT="/usr"
 
 	local target="linux"
-	# add more if needed, see xerces-c-2.8.0-r1 ebuild
+	## Copyright 1999-2011 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xalan-c/xalan-c-1.11.0_pre797991.ebuild,v 1.7 2011/12/18 17:26:24 armin76 Exp $
 
-	local mloader="inmemory"
-	use nls && mloader="nls"
-#	use icu && mloader="icu"
+EAPI="2"
 
-	local transcoder="default"
-#	use icu && transcoder="icu"
+inherit toolchain-funcs eutils flag-o-matic multilib
 
-	local thread="none"
-	use threads && thread="pthread"
+DESCRIPTION="XSLT processor for transforming XML into HTML, text, or other XML types"
+HOMEPAGE="http://xml.apache.org/xalan-c/"
+SRC_URI="mirror://gentoo/Xalan-C_r${PV#*_pre}-src.tar.gz"
 
-	local bitstobuild="32"
-	$(has_m64) && bitstobuild="64"
+LICENSE="Apache-2.0"
+SLOT="0"
+KEYWORDS="amd64 ~ppc x86"
+IUSE="doc examples nls threads"
 
-	./runConfigure -p ${target} -c "$(tc-getCC)" -x "$(tc-getCXX)" \
-		-m ${mloader} -t ${transcoder} \
-		-r ${thread} -b ${bitstobuild} > configure.vars || die "runConfigure failed"
+RDEPEND=">=dev-libs/xerces-c-2.8.0"
+#	icu? ( dev-libs/icu )"
+DEPEND="${RDEPEND}
+	doc? ( app-doc/doxygen )"
 
-	eval $(grep export configure.vars)
+S="${WORKDIR}/xml-xalan/c"
 
-	default
+pkg_setup() {
+#	export ICUROOT="/usr"
+	export XALANCROOT="${S}"
 }
 
-src_compile() {
-	emake || die
+src_prepare() {
+	epatch \
+		"${FILESDIR}/${PV}-as-needed.patch" \
+		"${FILESDIR}/${PV}-bugfixes.patch" \
+		"${FILESDIR}/${PV}-parallel-build.patch"
 
-	if use doc ; then
-		mkdir build
-		cd "${S}/xdocs"
-		doxygen DoxyfileXalan
-	fi
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-
-	if use doc ; then
-		dodir /usr/share/doc/${PF}
-		dohtml -r build/docs/apiDocs/*
-	fi
-
-	if use examples ; then
-		insinto /usr/share/doc/${PF}/examples
-		doins -r samples/*
-	fi
-}
-
-pkg_postinst() {
-	ewarn "If you are upgrading you should run"
-	ewarn "    revdep-rebuild --library=libxalan-c.so.110"
-	ewarn "if using portage or"
-	ewarn "    reconcilio --library libxalan-c.so.110"
-	ewarn "if using paludis as your package manager."
-}
+	# - do not run configure in runConfigure
+	# - echo the export commands instead exporting the vars
+	# - remove -O3
+	# - make sure our {C,CXX}FLAGS get respected
+	sed -i \
+		-e '/\/configure/d' \
+		-e 's/^export \([a-zA-Z_]*\)/ec

@@ -4,6 +4,12 @@
 
 EAPI=2
 JAVA_PKG_IUSE="doc examples source"
+JAVA_PKG_WANT_BOOTCL# Copyright 1999-2010 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-jstl/jakarta-jstl-1.1.2-r2.ebuild,v 1.4 2010/02/09 19:04:10 josejx Exp $
+
+EAPI=2
+JAVA_PKG_IUSE="doc examples source"
 JAVA_PKG_WANT_BOOTCLASSPATH="1.5"
 
 inherit java-pkg-2 java-ant-2 eutils
@@ -52,13 +58,4 @@ java_prepare() {
 }
 
 EANT_BUILD_TARGET="build"
-EANT_DOC_TARGET="javadoc-dist"
-EANT_TEST_TARGET="run.junit"
-
-src_install() {
-	java-pkg_dojar "${S}"/../build/standard/standard/lib/*.jar
-
-	use doc && java-pkg_dohtml -r "${S}"/doc/web/* "${S}"/../dist/standard/javadoc/
-	use examples && java-pkg_doexamples examples
-	use source && java-pkg_dosrc "${S}"/src/*
-}
+EANT_DOC_TARGE

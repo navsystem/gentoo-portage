@@ -38,37 +38,25 @@ src_prepare() {
 		"${FILESDIR}/"${P}-gtk.patch \
 		"${FILESDIR}/"${P}-libgif.patch \
 		"${FILESDIR}/"${P}-missing-prototypes.patch
-	sed -i -e 's/ioctld.c -o/$(LDFLAGS) ioctld.c -o/' \
-		src/Makefile.in || die #333797
-	eautoreconf
-}
+	sed -i -e 's/ioctld.c -o/$(LDFLAGS) # Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ekg-1.8_rc1-r1.ebuild,v 1.3 2014/09/19 16:50:54 jer Exp $
 
-src_configure() {
-	local myconf="--enable-ioctld" # --disable-static --enable-dynamic"
-	if use ncurses; then
-		myconf="$myconf --enable-force-ncurses"
-	else
-		myconf="$myconf --disable-ui-ncurses"
-	fi
-	use readline && myconf="$myconf --enable-ui-readline"
+EAPI=2
+inherit autotools eutils
 
-	econf ${myconf} \
-		`use_with python` \
-		`use_with jpeg libjpeg` \
-		`use_with zlib` \
-		`use_with gif libgif` \
-		`use_enable spell aspell` \
-		`use_with ssl openssl` \
-		`use_enable ssl openssl` \
-		`use_enable gtk ui-gtk` \
-	|| die
-}
+IUSE="gif gtk jpeg ncurses python readline spell ssl zlib"
 
-src_compile() {
-	emake || die
-}
+DESCRIPTION="EKG (Eksperymentalny Klient Gadu-Gadu) - a text client for Polish instant messaging system Gadu-Gadu"
+HOMEPAGE="http://ekg.chmurka.net/"
+SRC_URI="http://ekg.chmurka.net/${P/_/}.tar.gz"
 
-src_install() {
-	make DESTDIR="${D}" install || die
-	dodoc docs/{*.txt,ULOTKA,TODO,README,FAQ}
-}
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~sparc ~x86"
+
+S="${WORKDIR}/${P/_/}"
+
+RDEPEND="net-libs/libgadu
+	ssl? ( >=dev-libs/openssl-0.9.6 )
+	ncurses? ( sys-libs/nc

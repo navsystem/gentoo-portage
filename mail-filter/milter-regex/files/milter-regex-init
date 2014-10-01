@@ -36,7 +36,6 @@ start() {
 }
 
 stop() {
-	ebegin "Stopping milter-regex"
-	start-stop-daemon --stop --exec /usr/bin/milter-regex
-	eend $?
-}
+	ebegin "Stopping milt#!/sbin/runscript
+# Copyright 1999-2008 Gentoo Foundation
+# Distributed unde

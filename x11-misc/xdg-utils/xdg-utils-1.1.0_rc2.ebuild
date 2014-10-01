@@ -36,21 +36,19 @@ src_configure() {
 }
 
 src_install() {
-	default
+	default# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/xdg-utils-1.1.0_rc2.ebuild,v 1.11 2014/03/24 15:11:02 ago Exp $
 
-	newdoc scripts/xsl/README README.xsl
-	use doc && dohtml -r scripts/html
+EAPI=5
 
-	# Install default XDG_DATA_DIRS, bug #264647
-	echo XDG_DATA_DIRS=\"${EPREFIX}/usr/local/share\" > 30xdg-data-local
-	echo 'COLON_SEPARATED="XDG_DATA_DIRS XDG_CONFIG_DIRS"' >> 30xdg-data-local
-	doenvd 30xdg-data-local
+MY_P=${P/_/-}
 
-	echo XDG_DATA_DIRS=\"${EPREFIX}/usr/share\" > 90xdg-data-base
-	echo XDG_CONFIG_DIRS=\"${EPREFIX}/etc/xdg\" >> 90xdg-data-base
-	doenvd 90xdg-data-base
-}
+DESCRIPTION="Portland utils for cross-platform/cross-toolkit/cross-desktop interoperability"
+HOMEPAGE="http://portland.freedesktop.org/"
+SRC_URI="http://people.freedesktop.org/~rdieter/${PN}/${MY_P}.tar.gz"
+#SRC_URI="http://portland.freedesktop.org/download/${MY_P}.tar.gz"
 
-pkg_postinst() {
-	[[ -x $(type -P gtk-update-icon-cache) ]] || elog "Install x11-libs/gtk+:2 for the gtk-update-icon-cache command."
-}
+LICENSE="MIT"
+SLOT="0"
+KEYWORDS="alpha amd64 arm hppa ia64 

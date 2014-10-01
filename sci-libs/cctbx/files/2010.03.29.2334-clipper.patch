@@ -64,14 +64,12 @@ index 9cce49e..1046ed0 100644
 @@ -76,12 +33,10 @@ if (hasattr(env_etc, "cctbx_include")):
      env_etc.include_registry.append(
        env=env_clipper_boost_python_ext,
-       paths=[
--        env_etc.clipper_include,
-         env_etc.libtbx_include,
-         env_etc.cctbx_include,
-         env_etc.scitbx_include,
-         env_etc.boost_adaptbx_include,
--        env_etc.boost_include,
-         env_etc.python_include])
-     Export("env_clipper_boost_python_ext")
--    SConscript("clipper/SConscript")
-+
+diff --git a/cctbx_sources/clipper_adaptbx/SConscript b/cctbx_sources/clipper_adaptbx/SConscript
+index 9cce49e..1046ed0 100644
+--- a/cctbx_sources/clipper_adaptbx/SConscript
++++ b/cctbx_sources/clipper_adaptbx/SConscript
+@@ -1,56 +1,13 @@
+ import libtbx.load_env
+ Import("env_base", "env_etc")
+ 
+-env_etc.clipper_dist = libtbx.env.dist_p

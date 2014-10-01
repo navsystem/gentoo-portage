@@ -26,13 +26,6 @@ DEPEND="${RDEPEND}
 	>=dev-haskell/cabal-1.8
 	test? ( dev-haskell/chasingbottoms
 		dev-haskell/hunit
-		>=dev-haskell/quickcheck-2.4.0.1
-		>=dev-haskell/test-framework-0.3.3
-		dev-haskell/test-framework-hunit
-		>=dev-haskell/test-framework-quickcheck2-0.2.9 )
-"
-
-src_configure() {
-	haskell-cabal_src_configure \
-		$(cabal_flag debug debug)
-}
+		>=dev-haskell/quickcheck-# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/unordered-containers/unordered-containers-0.2.3.2.ebuild,v 

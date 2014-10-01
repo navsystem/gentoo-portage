@@ -36,8 +36,5 @@ each_ruby_test() {
 		*)
 			# Ignore tests since they hang, mostl likely due to bad
 			# interaction with net-ssh:
-			# https://github.com/net-ssh/net-sftp/issues/16 This seems
-			# fixed in newer net-ssh versions but these are ruby19 only.
-			;;
-	esac
-}
+			# https://github.com/net-ssh/net-sftp# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public Lice

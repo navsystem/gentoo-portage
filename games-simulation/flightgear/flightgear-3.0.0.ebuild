@@ -1,5 +1,7 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/f# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-3.0.0.ebuild,v 1.3 2014/06/07 19:24:28 ago Exp $
 
 EAPI=5
@@ -84,10 +86,4 @@ src_install() {
 		doicon -s ${s} icons/${s}x${s}/apps/${PN}.png
 		use utils && doicon -s ${s} icons/${s}x${s}/apps/fgcom.png
 	done
-	doicon -s scalable icons/scalable/${PN}.svg
-	use utils && doicon -s scalable icons/scalable/fgcom.svg
-
-	newmenu package/${PN}.desktop ${PN}.desktop
-
-	prepgamesdirs
-}
+	doicon

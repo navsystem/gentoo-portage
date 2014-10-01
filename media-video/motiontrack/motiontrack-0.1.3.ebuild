@@ -73,6 +73,5 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "install failed"
-	dodoc README src/TheCode.txt
-}
+	m# Copyright 1999-2007 Gentoo Foundation
+# Distributed under the terms of the GNU Ge

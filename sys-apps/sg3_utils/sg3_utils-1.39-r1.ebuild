@@ -32,6 +32,13 @@ src_install() {
 	dodoc COVERAGE doc/README examples/*.txt
 	newdoc scripts/README README.scripts
 
-	# Better fix for bug 231089; some packages look for sgut# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/sg3_utils-1.39-r1.ebuild,v 1.1 2014/
+	# Better fix for bug 231089; some packages look for sgutils2
+	local path lib
+	path="/usr/$(get_libdir)"
+	for lib in "${ED}"${path}/libsgutils2.*; do
+		lib=${lib##*/}
+		dosym "${lib}" "${path}/${lib/libsgutils2/libsgutils}"
+	done
+
+	prune_libtool_files
+}

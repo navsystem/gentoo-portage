@@ -3,6 +3,11 @@
 <?xml-stylesheet href="/xsl/guide.xsl" type="text/xsl"?>
 <!DOCTYPE glsa SYSTEM "http://www.gentoo.org/dtd/glsa.dtd">
 
+<glsa id="200501-23<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="/xsl/glsa.xsl" type="text/xsl"?>
+<?xml-stylesheet href="/xsl/guide.xsl" type="text/xsl"?>
+<!DOCTYPE glsa SYSTEM "http://www.gentoo.org/dtd/glsa.dtd">
+
 <glsa id="200501-23">
   <title>Exim: Two buffer overflows</title>
   <synopsis>
@@ -62,13 +67,4 @@
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-0021">CAN-2005-0021</uri>
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-0022">CAN-2005-0022</uri>
   </references>
-  <metadata tag="requester" timestamp="Mon, 10 Jan 2005 09:24:16 +0000">
-    koon
-  </metadata>
-  <metadata tag="submitter" timestamp="Mon, 10 Jan 2005 10:01:20 +0000">
-    vorlon078
-  </metadata>
-  <metadata tag="bugReady" timestamp="Wed, 12 Jan 2005 21:52:22 +0000">
-    koon
-  </metadata>
-</glsa>
+  <metadata tag="requester" timestamp="Mon, 10 Jan 2005 09:24:16 +00

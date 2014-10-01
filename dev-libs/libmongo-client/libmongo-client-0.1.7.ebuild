@@ -27,13 +27,6 @@ src_prepare() {
 	eautoreconf
 }
 
-src_compile() {
-	default
-	use doc && emake DESTDIR="${D}" doxygen
-}
-
-src_install() {
-	default
-	find "${ED}" -name '*.la' -delete
-	use doc && dohtml -r docs/html/*
-}
+src_co# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmongo

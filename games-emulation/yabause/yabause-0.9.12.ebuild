@@ -59,6 +59,5 @@ src_compile() {
 
 src_install() {
 	cmake-utils_src_install
-	dodoc AUTHORS ChangeLog GOALS README README.LIN
-	prepgamesdirs
-}
+	dodoc AUTHORS Chang# Copyright 1999-2013 Gentoo Foundation
+# Dist

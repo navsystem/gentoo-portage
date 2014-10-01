@@ -48,5 +48,4 @@ src_install() {
 	dodoc AUTHORS *ChangeLog* NEWS README THANKS TODO
 
 	rm -f "${ED}"/usr/share/doc/${PF}/COPYING* || die
-	find "${ED}" -name '*.la' -exec rm -f {} + || die
-}
+	find "${ED}" -nam# Copyright 1999-2014 Gentoo Founda

@@ -38,7 +38,6 @@ src_install() {
 
 pkg_preinst() {
 	# ask RigoDaemon to shutdown, if running
-	# TODO: this will be removed in future
-	local shutdown_exec=${EROOT}/usr/lib/rigo/${MY_PN}/shutdown.py
-	[[ -x "${shutdown_exec}" ]] && "${shutdown_exec}"
-}
+	# TOD# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/

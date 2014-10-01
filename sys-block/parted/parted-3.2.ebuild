@@ -48,35 +48,19 @@ src_prepare() {
 	# There is no configure flag for controlling the dev-libs/check test
 	sed -i \
 		-e "s:have_check=[a-z]*:have_check=$(usex test):g" \
-		configure.ac || die
+		conf# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/parted/parted-3.2.ebuild,v 1.2 2014/07/29 18:16:15 jer Exp $
 
-	epatch "${FILESDIR}"/${PN}-3.2-devmapper.patch
+EAPI=5
 
-	eautoreconf
-}
+inherit autotools eutils
 
-src_configure() {
-	econf \
-		$(use_enable debug) \
-		$(use_enable device-mapper) \
-		$(use_enable nls) \
-		$(use_enable selinux) \
-		$(use_enable static-libs static) \
-		$(use_with readline) \
-		--disable-rpath \
-		--disable-silent-rules
-}
+DESCRIPTION="Create, destroy, resize, check, copy partitions and file systems"
+HOMEPAGE="http://www.gnu.org/software/parted"
+SRC_URI="mirror://gnu/${PN}/${P}.tar.xz"
 
-src_test() {
-	if use debug; then
-		emake check
-	else
-		ewarn "Skipping tests because USE=-debug is set"
-	fi
-}
-DOCS=( AUTHORS BUGS ChangeLog NEWS README THANKS TODO doc/{API,FAT,USER.jp} )
-
-src_install() {
-	default
-	prune_libtool_files
-}
+LICENSE="GPL-3"
+SLOT="0"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+IUSE="+debug device-mapper nls readlin

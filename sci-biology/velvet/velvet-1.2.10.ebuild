@@ -53,21 +53,14 @@ src_prepare() {
 		OPT="${CFLAGS}"
 	)
 	if [[ ${VELVET_MAXKMERLENGTH} != "" ]]; then MAKE_XOPTS+=( MAXKMERLENGTH=${VELVET_MAXKMERLENGTH} ); fi
-	if [[ ${VELVET_CATEGORIES} != "" ]]; then MAKE_XOPTS+=( CATEGORIES=${VELVET_CATEGORIES} ); fi
-}
+	if [[# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/velvet/velvet-1.2.10.ebuild,v 1.1 2013/12/28 23:19:35 jlec Exp $
 
-src_compile() {
-	emake "${MAKE_XOPTS[@]}"
-	emake "${MAKE_XOPTS[@]}" color
-}
+EAPI=5
 
-src_test() {
-	emake "${MAKE_XOPTS[@]}" test
-}
+inherit eutils flag-o-matic toolchain-funcs
 
-src_install() {
-	dobin velvet{g,h,g_de,h_de}
-	insinto /usr/share/${PN}
-	doins -r contrib
-	dodoc Manual.pdf CREDITS.txt ChangeLog
-}
+MY_P=${PN}_${PV}
+
+DESCRIPTION="A sequence assembler for very short reads"

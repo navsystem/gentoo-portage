@@ -88,15 +88,19 @@ make_ext4fs: libext4_utils.a $(make_ext4fs_obj_files)
 
 ext2simg: libext4_utils.a $(ext2simg_obj_files)
 	$(CC) $(LDFLAGS) $(ext2simg_obj_files) -o $@ $(libraries)
+AR ?= ar
+CC ?= gcc
+CFLAGS := $(CFLAGS) -I. -Iinclude -DHOST -DANDROID -fPIC
+LDFLAGS := $(LDFLAGS) -L.
 
-ext4fixup: libext4_utils.a $(ext4fixup_obj_files)
-	$(CC) $(LDFLAGS) $(ext4fixup_obj_files) -o $@ $(libraries)
+PREFIX ?= /usr/
+BINDIR ?= $(PREFIX)/bin
+INCLUDEDIR ?= $(PREFIX)/include
+LIBDIR ?= $(PREFIX)/lib
 
-.PHONY: clean install
-
-clean:
-	rm -rf *.o *.so $(executables) src/*.o
-
-install: all
-	install -d $(DESTDIR)/$(BINDIR) $(DESTDIR)/$(LIBDIR) $(DESTDIR)/$(INCLUDEDIR)/sparse
-	install mkuserimg.sh $(executables) $(DESTDIR)/$(BINDIR)
+libext4_utils_src_files := make_ext4fs.c \
+        ext4fixup.c \
+        ext4_utils.c \
+        allocate.c \
+        contents.c \
+        ex

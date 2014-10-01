@@ -12,6 +12,20 @@ inherit gnome2 versionator
 
 MATE_BRANCH="$(get_version_component_range 1-2)"
 
+SRC_URI="http://pub.mate-desktop.org/releases/${MATE_B# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/mate-window-manager/mate-window-manager-1.6.2.ebuild,v 1.4 2014/05/04 14:55:59 ago Exp $
+
+EAPI="5"
+
+# Debug only changes CFLAGS
+GCONF_DEBUG="no"
+GNOME2_LA_PUNT="yes"
+
+inherit gnome2 versionator
+
+MATE_BRANCH="$(get_version_component_range 1-2)"
+
 SRC_URI="http://pub.mate-desktop.org/releases/${MATE_BRANCH}/${P}.tar.xz"
 DESCRIPTION="MATE default window manager"
 HOMEPAGE="http://mate-desktop.org"
@@ -48,23 +62,4 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	>=app-text/mate-doc-utils-1.6:0
 	>=dev-util/intltool-0.34.90:*
-	sys-devel/gettext:*
-	virtual/pkgconfig:*
-	x11-proto/xextproto:0
-	x11-proto/xproto:0
-	test? ( app-text/docbook-xml-dtd:4.5 )
-	xinerama? ( x11-proto/xineramaproto:0 )"
-
-src_configure() {
-	gnome2_src_configure \
-		--enable-compositor \
-		--enable-render \
-		--enable-shape \
-		--enable-sm \
-		--enable-xsync \
-		--with-gtk=2.0 \
-		$(use_enable startup-notification) \
-		$(use_enable xinerama)
-}
-
-DOCS="AUTHORS ChangeLog HACKING NEWS README *.txt doc/*.txt"
+	sys-de

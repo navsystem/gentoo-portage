@@ -55,18 +55,12 @@ src_install() {
 		doins -r www
 	fi
 
-	dodoc README TODO
+	dodoc RE# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpg-streamer/mjpg-streamer-0_pre20120421.ebuild,v 1.2 2012/06/28 07:31:28 aidecoe Exp $
 
-	newinitd "${FILESDIR}"/${PN}.initd ${PN}
-	newconfd "${FILESDIR}"/${PN}.confd ${PN}
-}
+EAPI=4
 
-pkg_postinst() {
-	elog "Remember to set an input and output plugin for mjpg-streamer."
+inherit eutils
 
-	if use www ; then
-		echo
-		elog "An example webinterface has been installed into"
-		elog "/usr/share/mjpg-streamer/www for your usage."
-	fi
-}
+DESCRIPTION="MJPG-streamer takes JPGs from Linux-UVC compatib

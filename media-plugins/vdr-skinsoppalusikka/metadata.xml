@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetada<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>media-tv</herd>
 	<maintainer>
@@ -7,6 +9,3 @@
 	  <name>Gentoo VDR Project</name>
 	</maintainer>
 	  <longdescription>
-	  The "Soppalusikka" is a standalone skin is based on "enElchi" text2skin addon.
-	  </longdescription>
-</pkgmetadata>

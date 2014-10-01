@@ -42,7 +42,5 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" \
-		docdir="${D}/usr/share/doc/${PF}" install || die
-	dodoc AUTHORS ChangeLog README
-}
+	emake D# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public Licen

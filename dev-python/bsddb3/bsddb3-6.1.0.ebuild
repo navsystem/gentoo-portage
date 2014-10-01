@@ -8,6 +8,16 @@ PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
 inherit db-use distutils-r1 multilib
 
 DESCRIPTION="Python bindings for Berkeley DB"
+HOMEPAGE="http://www.jcea.es/programa# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/bsddb3-6.1.0.ebuild,v 1.7 2014/08/04 23:46:36 floppym Exp $
+
+EAPI=5
+PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
+
+inherit db-use distutils-r1 multilib
+
+DESCRIPTION="Python bindings for Berkeley DB"
 HOMEPAGE="http://www.jcea.es/programacion/pybsddb.htm http://pypi.python.org/pypi/bsddb3"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
@@ -55,20 +65,4 @@ src_configure() {
 
 python_compile() {
 	if ! python_is_python3; then
-		local -x CFLAGS="${CFLAGS} -fno-strict-aliasing"
-	fi
-	distutils-r1_python_compile
-}
-
-python_test() {
-	if python_is_python3; then
-		PYTHONPATH=Lib3 "${PYTHON}" test3.py -v || die "Testing failed with ${EPYTHON}"
-	else
-		PYTHONPATH=Lib "${PYTHON}" test.py -v || die "Testing failed with ${EPYTHON}"
-	fi
-}
-
-python_install_all() {
-	use doc && local HTML_DOCS=( docs/html/. )
-	distutils-r1_python_install_all
-}
+		local -x CFLAG

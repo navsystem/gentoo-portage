@@ -57,24 +57,24 @@ src_install() {
 
 	into /opt
 	newbin "${FILESDIR}"/${PN}-wrapper ${PN}
-	dosym ${PN} /opt/bin/MegaCli
+	dosym ${PN} /opt/# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/megacli/megacli-8.07.10.ebuild,v 1.4 2014/03/21 11:53:47 xarthisius Exp $
 
-	# Remove DT_RPATH
-	chrpath -d "${D}"/opt/${PN}/${PN}
-}
+EAPI=5
 
-pkg_postinst() {
-	einfo
-	einfo "See /usr/share/doc/${PF}/RELEASE.txt for a list of supported controllers"
-	einfo "(contains LSI model names only, not those sold by 3rd parties"
-	einfo "under custom names like Dell PERC etc)."
-	einfo
-	einfo "As there's no dedicated manual, you might want to have"
-	einfo "a look at the following cheat sheet (originally written"
-	einfo "for Dell PowerEdge Expandable RAID Controllers):"
-	einfo "http://tools.rapidsoft.de/perc/perc-cheat-sheet.html"
-	einfo
-	einfo "For more information about working with Dell PERCs see:"
-	einfo "http://tools.rapidsoft.de/perc/"
-	einfo
-}
+inherit rpm
+MY_P=${PV}_MegaCLI_Linux
+
+DESCRIPTION="LSI Logic MegaRAID Command Line Interface management tool"
+HOMEPAGE="http://www.lsi.com/"
+SRC_URI="http://www.lsi.com/downloads/Public/RAID%20Controllers/RAID%20Controllers%20Common%20Files/${MY_P}.zip"
+
+LICENSE="LSI"
+SLOT="0"
+# This package can never enter stable, it can't be mirrored and upstream
+# can remove the distfiles from their mirror anytime.
+KEYWORDS="amd64 x86"
+IUSE=""
+
+DEPE

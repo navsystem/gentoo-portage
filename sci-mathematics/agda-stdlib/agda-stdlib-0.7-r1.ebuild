@@ -59,24 +59,20 @@ src_compile() {
 	# datadir    = "/usr/share/agda-9999/ghc-7.6.1"
 	# it fails without the --css option like:
 	# /usr/share/agda-9999/ghc-7.4.1/Agda.css: copyFile: does not exist
-	local cssdir=$(egrep 'datadir *=' "${S}/dist/build/autogen/Paths_lib.hs" | sed -e 's@datadir    = \(.*\)@\1@')
-	agda --html -i "${S}" -i "${S}"/src --css="${cssdir}/Agda.css" "${S}"/README.agda || die
-	pushd "${S}/ffi"
-	cabal_src_compile
-	popd
-}
+	local cssdir=$(egrep 'datadir *=' # Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda-stdlib/agda-stdlib-0.7-r1.ebuild,v 1.1 2013/12/10 11:46:28 gienah Exp $
 
-src_test() {
-	agda -i "${S}" -i "${S}"/src README.agda || die
-}
+EAPI=5
 
-src_install() {
-	insinto usr/share/agda-stdlib
-	export INSOPTIONS=--preserve-timestamps
-	doins -r src/*
-	dodoc -r html/*
-	elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die
-	pushd "${S}/ffi"
-	cabal_src_install
-	popd
-}
+CABAL_FEATURES="bin"
+inherit haskell-cabal elisp-common
+
+DESCRIPTION="Agda standard library"
+HOMEPAGE="http://wiki.portal.chalmers.se/agda/"
+SRC_URI="http://www.cse.chalmers.se/~nad/software/lib-${PV}.tar.gz"
+
+LICENSE="MIT"
+SLOT="0"
+KEYWORDS="~amd64 ~x86"
+IU

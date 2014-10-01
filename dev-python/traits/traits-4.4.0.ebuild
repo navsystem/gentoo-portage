@@ -18,20 +18,14 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="test"
 
 RDEPEND="dev-python/numpy[${PYTHON_USEDEP}]"
-DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
-	test? ( dev-python/numpy[${PYTHON_USEDEP}] )"
+DEPEND="dev-py# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/traits/traits-4.4.0.ebuild,v 1.1 2014/01/29 16:58:57 bicatali Exp $
 
-python_prepare_all() {
-	sed -i -e "s/'-O3'//g" setup.py || die
-	distutils-r1_python_prepare_all
-}
+EAPI=5
 
-python_compile() {
-	python_is_python3 || local -x CFLAGS="${CFLAGS} -fno-strict-aliasing"
-	distutils-r1_python_compile
-}
+PYTHON_COMPAT=( python{2_6,2_7} )
 
-python_test() {
-	cd "${BUILD_DIR}"/lib || die
-	nosetests || die
-}
+inherit distutils-r1 virtualx
+
+DESCRIPTION="Enthought Tool Suite: Explicitly typed attributes for Python"

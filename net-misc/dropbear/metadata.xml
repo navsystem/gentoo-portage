@@ -5,6 +5,13 @@
   <longdescription>
 I was looking for a small and secure SSH server to fit on a laptop with 4 megs ram and no hard 
 disk, and couldn't find one which was satisfactory. I decided to write my own, and Dropbear is 
+the result. It implements most required features of the SSH 2 protocol, <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <herd>embedded</herd>
+  <longdescription>
+I was looking for a small and secure SSH server to fit on a laptop with 4 megs ram and no hard 
+disk, and couldn't find one which was satisfactory. I decided to write my own, and Dropbear is 
 the result. It implements most required features of the SSH 2 protocol, and other features such 
 as X11, TCP and Authentication Agent forwarding. Dropbear is Open Source software, distributed 
 under a MIT-style license.
@@ -14,12 +21,4 @@ under a MIT-style license.
 くて安全な SSH サーバを探していました。しかし満足するものは見つけられません
 でした。私は自身で作ろうと決意しました。その結果が Dropbear です。SSH 2 プ
 ロトコルに必要な機能の大半、他にも X11 や TCP、認証エージェント・フォワーデ
-ィングといった機能が実装してあります。Dropbear はオープンソースで、MIT スタ
-イルのライセンス下で配布されます。
-</longdescription>
-  <use>
-    <flag name="bsdpty">Add support for legacy BSD pty's rather than dynamic UNIX pty's -- do not use this flag unless you are absolutely sure you actually want it</flag>
-    <flag name="multicall">Build all the programs as one little binary (to save space)</flag>
-    <flag name="shadow">Enable shadow password support</flag>
-  </use>
-</pkgmetadata>
+ィングといった機能が実装してあります。Dropbear はオープンソースで、MIT ス�

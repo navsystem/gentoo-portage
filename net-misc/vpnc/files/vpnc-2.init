@@ -67,37 +67,24 @@ start() {
 		"${PREUPSCRIPT}" > ${SCREEN_OUTPUT}
 	fi
 
-	start-stop-daemon --start --pidfile "${VPNPID}" --exec /usr/sbin/vpnc \
-		-- --pid-file "${VPNPID}" "${VPNCONF}" > ${SCREEN_OUTPUT}
- 	local retval=$?
- 	if [ ! ${retval} -eq 0 ]; then
-	eend ${retval}
- 		return ${retval}
- 	fi
+	start-stop-daem#!/sbin/runscript
 
-	if [ -x "${POSTUPSCRIPT}" ] ; then 
-		"${POSTUPSCRIPT}" > ${SCREEN_OUTPUT}
-	fi
-	eend $?
-}
+# Copyright 1999-2010 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/files/vpnc-2.init,v 1.5 2010/08/13 08:39:48 fauli Exp $
 
-stop() {
-	ebegin "Stopping VPNC: ${VPN}"
-	screenoutput
-	if [ -x "${PREDOWNSCRIPT}" ] ; then 
-		"${PREDOWNSCRIPT}" > ${SCREEN_OUTPUT}
-	fi
-
-	start-stop-daemon --stop --exec /usr/sbin/vpnc --pidfile "${VPNPID}"
- 	local retval=$?
- 	if [ ! ${retval} -eq 0 ]; then
-	eend ${retval}
- 		return ${retval}
- 	fi
-
-
-	if [ -x "${POSTDOWNSCRIPT}" ] ; then 
-		"${POSTDOWNSCRIPT}" > ${SCREEN_OUTPUT}
-	fi
-	eend $?
-}
+VPNDIR="/etc/vpnc"
+VPN="${SVCNAME#*.}"
+if [ -n ${VPN} ] && [ ${SVCNAME} != "vpnc" ]; then
+	mkdir -p /var/run/vpnc
+	VPNPID="/var/run/vpnc/${VPN}.pid"
+else
+	VPNPID="/var/run/vpnc.pid"
+fi
+VPNCONF="${VPNDIR}/${VPN}.conf"
+VPNSCRIPTDIR="${VPNDIR}/scripts.d"
+PREUPSCRIPT="${VPNSCRIPTDIR}/${VPN}-preup.sh"
+PREDOWNSCRIPT="${VPNSCRIPTDIR}/${VPN}-predown.sh"
+POSTUPSCRIPT="${VPNSCRIPTDIR}/${VPN}-postup.sh"
+POSTDOWNSCRIPT="${VPNSCRIPTDIR}/${VPN}-postdown.sh"
+# We should source 

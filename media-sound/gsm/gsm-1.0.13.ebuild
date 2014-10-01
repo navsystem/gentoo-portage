@@ -39,11 +39,6 @@ src_install() {
 		GSM_INSTALL_INC="${D}"/usr/include/gsm \
 		GSM_INSTALL_MAN="${D}"/usr/share/man/man3 \
 		TOAST_INSTALL_MAN="${D}"/usr/share/man/man1 \
-		install || die "emake install failed."
-
-	dolib lib/libgsm.so*
-
-	dosym ../gsm/gsm.h /usr/include/libgsm/gsm.h
-
-	dodoc ChangeLog* MACHINES MANIFEST README
-}
+		install || d# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/m

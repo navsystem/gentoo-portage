@@ -11,6 +11,19 @@ SRC_URI="mirror://sourceforge/${PN}/${P/-/_}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="~amd64 ~# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/wmakerconf-2.12-r1.ebuild,v 1.5 2014/08/10 20:04:39 slyfox Exp $
+
+EAPI=4
+inherit eutils
+
+DESCRIPTION="X based config tool for the windowmaker X windowmanager"
+HOMEPAGE="http://wmakerconf.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN}/${P/-/_}.tar.gz"
+
+LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="imlib nls perl"
 
@@ -35,20 +48,4 @@ src_configure() {
 	use imlib || myconf="--disable-imlibtest"
 
 	econf \
-		$(use_enable perl upgrade) \
-		$(use_enable nls) \
-		${myconf}
-}
-
-src_install() {
-	emake DESTDIR="${D}" gnulocaledir="${ED}/usr/share/locale" install
-	dodoc AUTHORS ChangeLog MANUAL NEWS README TODO
-	doman man/*.1
-
-	rm -f "${ED}"/usr/share/${PN}/{AUTHORS,README,COPYING,NEWS,MANUAL,ABOUT-NLS,NLS-TEAM1,ChangeLog}
-}
-
-pkg_postinst() {
-	elog "New features added with WindowMaker >= 0.95 will not be available in wmakerconf"
-	elog "WPrefs is the recommended configuration tool"
-}
+		$(use_enable

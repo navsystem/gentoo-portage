@@ -19,10 +19,6 @@ DEPEND="${RDEPEND}
 
 src_compile() {
 	econf --disable-dependency-tracking $(use_enable debug)
-	emake || die "emake failed."
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
-	dodoc AUTHORS BUGS ChangeLog NEWS README TODO
-}
+	emake || die "emake# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x

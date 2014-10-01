@@ -52,4 +52,5 @@ src_install() {
 	# install docs
 	dodoc ChangeLog* CONTRIBUTORS
 	# install rc script
-	newinitd "${FILESDIR}"/freewnn.initd f# Copyrig
+	newinitd "${FILESDIR}"/freewnn.initd freewnn
+}

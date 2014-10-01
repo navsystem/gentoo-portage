@@ -32,13 +32,8 @@ ruby_add_rdepend ">=dev-ruby/sinatra-1.3.2
 	>=dev-ruby/rack-1.4.1"
 
 all_ruby_prepare() {
-	# Remove development dependencies that we don't have from the gemspec
-	sed -i -e '/\(hoe\|rdoc\|rubyforge\)/d' async_sinatra.gemspec || die
-}
+	# Remove development dependencies tha# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/async_sinatra/async_sinatra-1.1.0.ebuild,v 1.2 2014/05/15 01:22:48 mrueg Exp $
 
-all_ruby_install() {
-	all_fakegem_install
-
-	insinto /usr/share/doc/${PF}/
-	doins -r examples || die "Failed to install examples"
-}
+EAPI=5

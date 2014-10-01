@@ -4,6 +4,12 @@
 
 EAPI="4"
 WANT_ANT_TASKS="ant-nodeps"
+inherit e# Copyright 1999-2011 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-websvccommon/netbeans-websvccommon-7.0.1.ebuild,v 1.3 2011/10/25 00:41:27 fordfrog Exp $
+
+EAPI="4"
+WANT_ANT_TASKS="ant-nodeps"
 inherit eutils java-pkg-2 java-ant-2
 
 DESCRIPTION="Netbeans Web Services Common Cluster"
@@ -83,13 +89,3 @@ src_prepare() {
 }
 
 src_install() {
-	pushd nbbuild/netbeans/websvccommon >/dev/null || die
-
-	insinto ${INSTALL_DIR}
-	grep -E "/websvccommon$" ../moduleCluster.properties > "${D}"/${INSTALL_DIR}/moduleCluster.properties || die
-	doins -r *
-
-	popd >/dev/null || die
-
-	dosym ${INSTALL_DIR} /usr/share/netbeans-nb-${SLOT}/websvccommon
-}

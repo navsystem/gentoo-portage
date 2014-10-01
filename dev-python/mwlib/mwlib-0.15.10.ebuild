@@ -29,6 +29,37 @@ RDEPEND="dev-python/lxml[${PYTHON_USEDEP}]
 	dev-python/gevent[${PYTHON_USEDEP}]
 	>=dev-python/bottle-0.10[${PYTHON_USEDEP}]
 	>=dev-python/apipkg-1.2[${PYTHON_USEDEP}]
+	>=dev-python/qserve-0.2.7[${# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib/mwlib-0.15.10.ebuild,v 1.1 2013/07/26 14:25:40 idella4 Exp $
+
+EAPI=5
+
+PYTHON_COMPAT=( python{2_6,2_7} )
+
+inherit distutils-r1 user
+
+DESCRIPTION="Tools for parsing Mediawiki content to other formats"
+HOMEPAGE="http://code.pediapress.com/wiki/wiki http://pypi.python.org/pypi/mwlib"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.zip"
+
+LICENSE="BSD"
+SLOT="0"
+KEYWORDS="~amd64 ~x86"
+IUSE="doc server"
+
+RDEPEND="dev-python/lxml[${PYTHON_USEDEP}]
+	>=dev-python/odfpy-0.9[${PYTHON_USEDEP}]
+	<dev-python/odfpy-0.10[${PYTHON_USEDEP}]
+	>=dev-python/pyPdf-1.12[${PYTHON_USEDEP}]
+	>=dev-python/pyparsing-1.5.5
+	<dev-python/pyparsing-1.6[${PYTHON_USEDEP}]
+	>=dev-python/timelib-0.2[${PYTHON_USEDEP}]
+	virtual/latex-base
+	>=dev-python/simplejson-2.3[${PYTHON_USEDEP}]
+	dev-python/gevent[${PYTHON_USEDEP}]
+	>=dev-python/bottle-0.10[${PYTHON_USEDEP}]
+	>=dev-python/apipkg-1.2[${PYTHON_USEDEP}]
 	>=dev-python/qserve-0.2.7[${PYTHON_USEDEP}]
 	dev-python/roman[${PYTHON_USEDEP}]
 	>=dev-python/py-1.4[${PYTHON_USEDEP}]
@@ -97,36 +128,4 @@ python_install_all() {
 		keepdir /var/log/mwlib
 		keepdir /var/cache/mwlib
 
-		fowners mwlib:mwlib /var/log/mwlib /var/cache/mwlib
-		fperms 0750 /var/log/mwlib /var/cache/mwlib
-
-		insinto /etc/logrotate.d
-		for d in mw-qserve nserve ; do
-			newins "${FILESDIR}/${d}.logrotate" "${d}"
-			newinitd "${FILESDIR}/${d}.initd" "${d}"
-			newconfd "${FILESDIR}/${d}.confd" "${d}"
-		done
-
-		newins "${FILESDIR}/nslave.logrotate" "nslave"
-		newinitd "${FILESDIR}/nslave.initd-r1" "nslave"
-		newconfd "${FILESDIR}/nslave.confd-r1" "nslave"
-
-		newins "${FILESDIR}/postman.logrotate" "postman"
-		newinitd "${FILESDIR}/postman.initd-r1" "postman"
-		newconfd "${FILESDIR}/postman.confd" "postman"
-
-		insinto /etc/cron.d
-		newins "${FILESDIR}/mwlib-purge-cache.cron-r1" "mwlib-purge-cache"
-	else
-		rm "${D}"/usr/bin/{mw-qserve,nserve,nslave,postman}* || die "removing binaries failed"
-	fi
-}
-
-pkg_postinst() {
-	elog "Please enable required image formats for dev-python/pillow"
-	if use server ; then
-		elog "A cronjob to cleanup the cache files got installed to"
-		elog "  /etc/cron.d/mwlib-purge-cache"
-		elog "Default parameters are to clean every 24h, adjust it to your needs."
-	fi
-}
+		fowners mwlib:mwlib /var/l

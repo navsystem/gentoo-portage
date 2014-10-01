@@ -84,16 +84,9 @@ multilib_src_install() {
 multilib_src_install_all() {
 	einstalldocs
 	if use doc; then
-		docinto doc
-		dodoc doc/{actions,protocol.txt,README}
-		docinto pdf
-		dodoc doc/pdf/*.pdf
-	fi
+		docin# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.9.4.ebuild,v 1.11 2014/06/18 19:52:13 mgorny Exp $
 
-	mv -vf "${D}"/etc/nas/nasd.conf{.eg,} || die
-
-	newconfd "${FILESDIR}"/nas.conf.d nas
-	newinitd "${FILESDIR}"/nas.init.d nas
-
-	use static-libs || rm -f "${D}"/usr/lib*/libaudio.a
-}
+EAPI=5
+inherit eutils multilib toolchain-funcs multilib-

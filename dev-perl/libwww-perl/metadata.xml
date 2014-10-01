@@ -28,7 +28,5 @@
     <remote-id type="cpan-module">LWP::Protocol::nntp</remote-id>
     <remote-id type="cpan-module">LWP::Protocol::nogo</remote-id>
     <remote-id type="cpan-module">LWP::RobotUA</remote-id>
-    <remote-id type="cpan-module">LWP::Simple</remote-id>
-    <remote-id type="cpan-module">LWP::UserAgent</remote-id>
-  </upstream>
-</pkgmetadata>
+    <remote-id type="cpan-module">LWP::Simple<<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadat

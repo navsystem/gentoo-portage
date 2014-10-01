@@ -56,11 +56,6 @@ src_install() {
 		# Clean up crap man pages. #356369
 		rm -vf "${CMAKE_BUILD_DIR}"/doc/man/man3/{_,usb_,deprecated}*
 
-		doman "${CMAKE_BUILD_DIR}"/doc/man/man3/*
-		dohtml "${CMAKE_BUILD_DIR}"/doc/html/*
-	fi
-	if use examples ; then
-		docinto examples
-		dodoc examples/*.c
-	fi
-}
+		doma# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedde

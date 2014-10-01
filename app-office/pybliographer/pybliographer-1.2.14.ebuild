@@ -43,32 +43,27 @@ src_prepare() {
 		Makefile.am || die "sed failed"
 
 	# Install Python modules into site-packages directories.
-	find -name Makefile.am | xargs sed -i \
-		-e "/^pybdir[[:space:]]*=[[:space:]]*/s:\$(datadir):$(python_get_sitedir):" || die "sed failed"
-	sed -i \
-		-e "s:\${datadir}/@PACKAGE@:$(python_get_sitedir)/@PACKAGE@:" \
-		etc/installer.in || die "sed failed"
-	sed -i \
-		-e "s:gladedir = \$(datadir):gladedir = $(python_get_sitedir):" \
-		Pyblio/GnomeUI/glade/Makefile.am || die "sed failed"
-	eautoreconf
-}
+	find -name Makefile.am # Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/pybliographer/pybliographer-1.2.14.ebuild,v 1.3 2012/04/17 16:06:21 ranger Exp $
 
-src_configure() {
-	gnome2_src_configure --disable-depchecks
-}
+EAPI="3"
+PYTHON_DEPEND="2:2.6"
 
-src_install() {
-	gnome2_src_install
-	python_convert_shebangs -r 2 "${ED}usr/bin"
-}
+inherit autotools gnome2 python
 
-pkg_postinst() {
-	gnome2_pkg_postinst
-	python_mod_optimize pybliographer
-}
+DESCRIPTION="Pybliographer is a tool for working with bibliographic databases"
+HOMEPAGE="http://pybliographer.org/"
+SRC_URI="mirror://sourceforge/pybliographer/${P}.tar.gz"
 
-pkg_postrm() {
-	gnome2_pkg_postrm
-	python_mod_cleanup pybliographer
-}
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~amd64 ppc x86"
+IUSE=""
+
+DOCS="AUTHORS ChangeLog* NEWS TODO README"
+
+DEPEND=">=app-text/recode-3.6-r1
+	app-text/scrollkeeper
+	dev-libs/glib:2
+	dev-python/gconf-pyt

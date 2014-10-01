@@ -45,12 +45,15 @@ make the code work with all gcc targets
    void *pc = non_inline_func();
    const char *symbol = TrySymbolize(pc);
    CHECK(symbol != NULL);
-@@ -314,7 +314,7 @@ void ATTRIBUTE_NOINLINE TestWithPCInsideNonInlineFunction() {
- }
- 
- void ATTRIBUTE_NOINLINE TestWithPCInsideInlineFunction() {
--#if defined(TEST_X86_32_AND_64) && defined(HAVE_ALWAYS_INLINE)
-+#if defined(TEST_WITH_LABEL_ADDRESSES) && defined(HAVE_ALWAYS_INLINE)
-   void *pc = inline_func();  // Must be inlined.
-   const char *symbol = TrySymbolize(pc);
-   CHECK(symbol != NULL);
+@@ -314,7 +314,7 @@ void ATTRIBUTE_NOINLINEhttp://code.google.com/p/google-glog/issues/detail?id=130
+
+make the code work with all gcc targets
+
+--- a/src/symbolize_unittest.cc
++++ b/src/symbolize_unittest.cc
+@@ -60,9 +60,7 @@ using namespace GOOGLE_NAMESPACE;
+ #    endif  // __i386__
+ #  else
+ #  endif  // __GNUC__ >= 4
+-#  if defined(__i386__) || defined(__x86_64__)
+-#    define TEST_X86_32_AND_64

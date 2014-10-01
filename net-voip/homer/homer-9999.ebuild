@@ -57,17 +57,12 @@ src_compile() {
 	tc-export CXX
 	emake -C HomerBuild default \
 		INSTALL_PREFIX=/usr/bin \
-		INSTALL_LIBDIR=/usr/$(get_libdir) \
-		INSTALL_DATADIR=/usr/share/${PN} \
-		VERBOSE=1
-}
+		INSTALL_L# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-voip/homer/homer-9999.ebuild,v 1.9 2014/08/10 20:34:30 slyfox Exp $
 
-src_install() {
-	emake -C HomerBuild install \
-		DESTDIR="${D}" \
-		VERBOSE=1
+EAPI=5
 
-	# Create .desktop entry
-	doicon ${MY_BIN}/${MY_BIN}.png
-	make_desktop_entry "${MY_BIN}" "${MY_PN}" "${MY_BIN}" "Network;InstantMessaging;Telephony;VideoConference"
-}
+inherit eutils multilib toolchain-funcs
+
+DESCRIPTION="Homer Conferencing (short: Homer) is a free SIP 

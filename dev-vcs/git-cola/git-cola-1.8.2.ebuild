@@ -84,7 +84,10 @@ python_test() {
 }
 
 pkg_postinst() {
-	elog "Please make sure you have either a SSH key management installed and activated or"
-	elog "installed a SSH askpass app like net-misc/x11-ssh-askpass."
-	elog "Otherwise ${PN} may hang when pushing/pulling from remote git repositories via SSH. "
-}
+	elog# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-cola/git-cola-1.8.2.ebuild,v 1.6 2013/06/25 15:03:45 ago Exp $
+
+EAPI=5
+
+PYTHON_COMPAT=( pyth

@@ -61,46 +61,35 @@ src_compile() {
 
 	if use python; then
 		pushd swig/python/
-		distutils-r1_src_compile
-		popd
-	fi
-}
+		distutils# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.23-r2.ebuild,v 1.5 2014/06/14 10:50:36 phajdan.jr Exp $
 
-src_install() {
-	# -j1 because "make -fMakefile.ruby install" fails
-	# upstream added -j1 to that command so it should be removed
-	# from here in the next version bump
-	emake -j1 DESTDIR="${D}" INSTALLDIRS=vendor install
+EAPI="5"
 
-	if use python; then
-		pushd swig/python/
-		distutils-r1_src_install
-		popd
-	fi
+PYTHON_COMPAT=( python{2_6,2_7} )
+GENTOO_DEPEND_ON_PERL=no
 
-	dodoc AUTHORS ChangeLog NEWS README* THANKS TODO
-	dohtml doc/*.html
+inherit distutils-r1 eutils perl-module flag-o-matic autotools
 
-	# Install examples
-	insinto /usr/share/doc/${PF}/examples
-	doins examples/*.c
-	use perl && doins examples/*.pl
-	use python && doins examples/*.py
-	use ruby && doins examples/*.rb
-	use tcl && doins examples/*.tcl
+DESCRIPTION="File transfer over OBEX for mobile phones"
+HOMEPAGE="http://dev.zuckschwerdt.org/openobex/wiki/ObexFtp"
+SRC_URI="mirror://sourceforge/openobex/${P}.tar.bz2"
+SLOT="0"
 
-	if use perl ; then
-		perl_delete_localpod
-		perl_delete_packlist
-	fi
-}
+LICENSE="GPL-2"
+KEYWORDS="amd64 hppa ppc ~sparc x86"
+IUSE="bluetooth debug perl python ruby tcl"
 
-pkg_postinst() {
-	use perl && perl-module_pkg_postinst
-	use python && distutils-r1_pkg_postinst
-}
+RDEPEND="dev-libs/openobex
+	bluetooth? ( net-wireless/bluez )
+	perl? ( dev-lang/perl )
+	ruby? ( dev-lang/ruby:1.9 )
+	tcl? ( dev-lang/tcl )
+"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig
+"
 
-pkg_postrm() {
-	use perl && perl-module_pkg_postrm
-	use python && distutils-r1_pkg_postrm
-}
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-fixruby.pat

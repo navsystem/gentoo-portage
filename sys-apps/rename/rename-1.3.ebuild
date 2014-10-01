@@ -22,17 +22,10 @@ src_unpack() {
 		Makefile.in
 	epatch "${FILESDIR}"/${P}-rename.patch
 	epatch "${FILESDIR}"/${P}-build.patch
-	epatch "${FILESDIR}"/${P}-gcc44.patch
-	tc-export CC
-}
+	epatch "${F# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rename/rename-1.3.ebuild,v 1.25 2013/10/21 13:30:22 grobian Exp $
 
-src_install() {
-	newbin rename renamexm || die
-	newman rename.1 renamexm.1
-	dodoc README ChangeLog
-}
+inherit toolchain-funcs eutils
 
-pkg_postinst() {
-	ewarn "This has been renamed to 'renamexm' to avoid"
-	ewarn "a naming conflict with sys-apps/util-linux."
-}
+DESCRIPTION="tool for 

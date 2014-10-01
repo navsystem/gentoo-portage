@@ -32,9 +32,6 @@ src_prepare() {
 }
 
 src_configure() {
-	local mycmakeargs=( "-DVERSION=${PV}" )
-	cmake-utils_src_configure
-}
-
-pkg_postinst() { fdo-mime_desktop_database_update; }
-pkg_postrm() { fdo-mime_desktop_database_update; }
+# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/qmpdclient

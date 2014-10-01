@@ -27,6 +27,35 @@ want_apache2
 
 pkg_setup() {
 	confutils_require_built_with_all dev-lang/php gd nls json session pdo sqlite3 sockets mysql unicode xml
+	depe# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagvis/nagvis-1.6.6.ebuild,v 1.4 2014/08/10 20:58:48 slyfox Exp $
+
+EAPI=4
+
+inherit eutils confutils depend.php depend.apache
+
+DESCRIPTION="NagVis is a visualization addon for the well known network managment system Nagios"
+HOMEPAGE="http://www.nagvis.org/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~amd64 ~ppc ~x86"
+IUSE="apache2 automap"
+
+DEPEND=""
+RDEPEND="|| ( net-analyzer/nagios net-analyzer/icinga )
+	automap? ( >=media-gfx/graphviz-2.14 )
+	apache2? ( dev-lang/php[apache2] )
+	net-analyzer/mk-livestatus
+	dev-lang/php[gd,nls,json,session,pdo,sqlite,sockets,mysql,unicode,xml]"
+
+need_php_httpd
+want_apache2
+
+pkg_setup() {
+	confutils_require_built_with_all dev-lang/php gd nls json session pdo sqlite3 sockets mysql unicode xml
 	depend.apache_pkg_setup
 }
 
@@ -63,30 +92,4 @@ src_install() {
 	dosym /etc/nagvis /usr/share/nagvis/etc
 
 	diropts -o apache -g root -m0775
-	insopts -o apache -g root -m0664
-	doins -r etc/maps
-	diropts
-	insopts
-
-	# move image maps dir from usr to var and symlink it back
-	dodir /var/nagvis/userfiles/images
-	mv "${D}"/usr/share/nagvis/userfiles/images/maps "${D}"/var/nagvis/userfiles/images/ ||die
-	fowners apache:root /var/nagvis/userfiles/images/maps
-	dosym /var/nagvis/userfiles/images/maps /usr/share/nagvis/userfiles/images/maps
-}
-
-pkg_postinst() {
-	elog "Before running NagVis for the first time, you will need to set up"
-	elog "/etc/nagvis/nagvis.ini.php"
-	elog "A sample is in"
-	elog "/etc/nagvis/nagvis.ini.php-sample"
-	if use apache2 ; then
-		elog
-		elog "For web interface make sure to add -D NAGVIS to APACHE2_OPTS in"
-		elog "/etc/conf.d/apache2 and to restart apache2. A default configuration"
-		elog "has been placed at /etc/apache2/modules.d/98_${PN}.conf"
-	fi
-	elog ""
-	elog "Default user/password are: nagiosadmin/nagiosadmin"
-	elog "                                 guest/guest"
-}
+	insopts -o apache -g roo

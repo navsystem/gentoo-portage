@@ -80,13 +80,6 @@ src_install() {
 	rm -rf "${D}"/var/run "${D}"/etc/init.d
 	newinitd "${FILESDIR}/${PN}.initd" ${PN} || die
 	if has_version "<sys-cluster/corosync-2.0"; then
-		insinto /etc/corosync/service.d
-		newins "${FILESDIR}/${PN}.service" ${PN} || die
-	fi
-}
-
-pkg_postinst() {
-	elog " "
-	elog "Looking for the crm CLI ? emerge sys-cluster/crmsh !"
-	elog " "
-}
+		insinto /et# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/pacemaker-1.1.

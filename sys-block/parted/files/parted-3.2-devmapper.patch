@@ -57,4 +57,4 @@
 +#endif /* ENABLE_DEVICE_MAPPER */
  
          /* lpn = largest partition number.
-          * for remove pass, use greater of device or label limit */
+          * for remove pass, use greater --- a/libparted/arch/linux.c

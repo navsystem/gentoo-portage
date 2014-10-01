@@ -18,6 +18,26 @@ $ psql -U liquid_feedback liquid_feedback
 liquid_feedback=# \i ${MY_INSTALLDIR}/liquid_feedback_core/core.sql
 liquid_feedback=# \i ${MY_INSTALLDIR}/liquid_feedback_core/init.sql
 INSERT INTO system_setting (member_ttl) VALUES ('1 year');
+INSERT INTO contingent (polling, time_frame, text_entry_0. DATABASE SETUP
+
+To use Liquid Feedback you have to follow these
+simple steps, which have to be done as the postgres system user (or
+which ever is the database superuser):
+
+$ createuser liquid_feedback
+and answer the following
+Shall the new role be a superuser? (y/n) n
+Shall the new role be allowed to create databases? (y/n) y
+Shall the new role be allowed to create more new roles? (y/n) n
+
+$ psql 
+postgres=# ALTER USER liquid_feedback WITH PASSWORD 'the_new_password';
+
+$ createdb -U liquid_feedback liquid_feedback
+$ psql -U liquid_feedback liquid_feedback
+liquid_feedback=# \i ${MY_INSTALLDIR}/liquid_feedback_core/core.sql
+liquid_feedback=# \i ${MY_INSTALLDIR}/liquid_feedback_core/init.sql
+INSERT INTO system_setting (member_ttl) VALUES ('1 year');
 INSERT INTO contingent (polling, time_frame, text_entry_limit, initiative_limit) VALUES (false, '1 hour', 20, 6);
 INSERT INTO contingent (polling, time_frame, text_entry_limit, initiative_limit) VALUES (false, '1 day', 80, 12);
 INSERT INTO contingent (polling, time_frame, text_entry_limit, initiative_limit) VALUES (true, '1 hour', 200, 60);
@@ -32,21 +52,4 @@ Lua 5.1.5  Copyright (C) 1994-2012 Lua.org, PUC-Rio
 > member:save()
 > os.exit()
 
-Ensure that "lf_update dbname=liquid_feedback" and
-"lf_update_suggestion_order dbname=liquid_feedback" are called
-regularly! It is required to run these commands regularly
-(i.e. every 5 minutes via cron) to update cached supporter counts,
-to change the state of issues when neccessary, to calculate the
-result of votings, etc.  If you wish, copy the created lf_update
-and lf_update_suggestion_order files to /usr/local/bin or a
-similar directory.
-
-It is possible to run these two commands in parallel, if a setup
-requires splitting the load to multiple processor cores. In other
-cases it is recommended to run "lf_update" first, and then
-"lf_update_suggestion_order".
-
-To create an export file, which is containing all but private data,
-you may use the lf_export shell-script:
-$ lf_export liquid_feedback export.sql.gz
-
+Ensu

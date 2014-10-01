@@ -12,6 +12,20 @@ SRC_URI="ftp://atrey.karlin.mff.cuni.cz/pub/linux/pci/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="alpha am# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-3.2.0.ebuild,v 1.14 2014/01/18 04:55:35 vapier Exp $
+
+EAPI="5"
+
+inherit eutils multilib toolchain-funcs
+
+DESCRIPTION="Various utilities dealing with the PCI bus"
+HOMEPAGE="http://mj.ucw.cz/sw/pciutils/ http://git.kernel.org/?p=utils/pciutils/pciutils.git"
+SRC_URI="ftp://atrey.karlin.mff.cuni.cz/pub/linux/pci/${P}.tar.gz"
+
+LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~amd64-linux ~arm-linux ~x86-linux"
 IUSE="+kmod static-libs zlib"
 
@@ -66,19 +80,4 @@ src_compile() {
 
 src_install() {
 	pemake DESTDIR="${D}" install install-lib
-	use static-libs && dolib.a "${S}.static/lib/libpci.a"
-	dodoc ChangeLog README TODO
-
-	rm "${ED}"/usr/sbin/update-pciids "${ED}"/usr/share/misc/pci.ids \
-		"${ED}"/usr/share/man/man8/update-pciids.8*
-
-	newinitd "${FILESDIR}"/init.d-pciparm pciparm
-	newconfd "${FILESDIR}"/conf.d-pciparm pciparm
-}
-
-pkg_postinst() {
-	if [[ ${REPLACING_VERSIONS} ]] && [[ ${REPLACING_VERSIONS} < 3.2.0 ]]; then
-		elog "The 'network-cron' USE flag is gone; if you want a more up-to-date"
-		elog "pci.ids file, you should use sys-apps/hwids-99999999 (live ebuild)."
-	fi
-}
+	use static-li

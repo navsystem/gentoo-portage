@@ -30,5 +30,5 @@ src_compile() {
 
 src_install() {
 	default
-	find "${ED}" '(' -name COPYING -o -name LICENSING.txt ')' -delete
-}
+	find "${ED}" '(' -name COPY# Copyright 1999-2013 Gentoo Foundation
+#

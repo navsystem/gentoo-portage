@@ -38,10 +38,6 @@ src_install() {
 	mv "${ED}"/{,usr/}$(get_libdir)/pkgconfig/${PN}.pc || die
 
 	if use examples; then
-		find examples/ -name "Makefile*" -exec rm -f '{}' + || die 'find failed'
-		dodoc -r examples/
-		docompress -x /usr/share/doc/${P}/examples
-	fi
-
-	prune_libtool_files
-}
+		find examples/ -name "Makefile*" -exec rm -f '{}' + || d# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $H

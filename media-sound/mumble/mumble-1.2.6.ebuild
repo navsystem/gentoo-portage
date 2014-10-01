@@ -122,6 +122,5 @@ src_install() {
 pkg_postinst() {
 	echo
 	elog "Visit http://mumble.sourceforge.net/ for futher configuration instructions."
-	elog "Run mumble-overlay to start the OpenGL overlay (after starting mumble)."
-	echo
-}
+	elog "Run mumble-overlay to start the# Copyright 1999-2014 Gentoo Foundation
+# Distribu

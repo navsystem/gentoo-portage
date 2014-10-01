@@ -24,8 +24,5 @@ RDEPEND=">=dev-haskell/attoparsec-0.10:=[profile?]
 		>=dev-haskell/transformers-0.2.2:=[profile?]
 		<dev-haskell/transformers-0.4:=[profile?]
 		>=dev-lang/ghc-6.10.4:="
-DEPEND="${RDEPEND}
-		>=dev-haskell/cabal-1.8
-		test? ( >=dev-haskell/hspec-1.3
-			dev-haskell/resourcet
-		)"
+DEP# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2

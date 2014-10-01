@@ -4,6 +4,12 @@
 
 EAPI="3"
 GCONF_DEBUG="no"
+GNOME2_LA_PU# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-2.6.4.ebuild,v 1.17 2013/02/23 02:19:26 zmedico Exp $
+
+EAPI="3"
+GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 PYTHON_DEPEND="2"
 
@@ -70,13 +76,4 @@ pkg_postinst() {
 	echo ">>> Updating XML catalog"
 	"${EPREFIX}"/usr/bin/xmlcatalog --noout --add "system" \
 		"http://glade.gnome.org/glade-2.0.dtd" \
-		"${EPREFIX}"/usr/share/xml/libglade/glade-2.0.dtd /etc/xml/catalog
-	gnome2_pkg_postinst
-}
-
-pkg_postrm() {
-	gnome2_pkg_postrm
-	echo ">>> removing entries from the XML catalog"
-	"${EPREFIX}"/usr/bin/xmlcatalog --noout --del \
-		"${EPREFIX}"/usr/share/xml/libglade/glade-2.0.dtd /etc/xml/catalog
-}
+		"${EPREFIX}"/usr/share/xml/libg

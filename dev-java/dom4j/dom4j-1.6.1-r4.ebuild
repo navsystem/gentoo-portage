@@ -57,15 +57,12 @@ src_test() {
 	# Needs X11
 	rm -v src/test/org/dom4j/bean/BeansTest.java || die
 	# Fails with a 1.6 JDK for some reason
-	rm -v src/test/org/dom4j/io/StaxTest.java || die
-	# Fails with a 1.7 JDK for some reason
-	rm -v src/test/org/dom4j/rule/RuleTest.java || die
+	rm -v src/test/or# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/dom4j-1.6.1-r4.ebuild,v 1.8 2013/06/27 21:54:01 aballier Exp $
 
-	java-pkg-2_src_test
-}
+EAPI=4
 
-src_install() {
-	java-pkg_dojar build/${PN}.jar
-	use doc && java-pkg_dojavadoc build/doc/api
-	use source && java-pkg_dosrc src/java/*
-}
+JAVA_PKG_IUSE="doc source test"
+
+inherit java-pkg-2 java

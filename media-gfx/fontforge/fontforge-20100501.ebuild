@@ -78,39 +78,15 @@ src_configure() {
 		$(use_enable pasteafter) \
 		$(use_with X x) \
 		$(use_enable cjk gb12345) \
-		$(use_enable tilepath) \
-		$(use_enable debug debug-raw-points) \
-		$(use_with pango) \
-		$(use_with cairo)
-}
+		$(# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20100501.ebuild,v 1.12 2014/03/23 17:26:35 kensington Exp $
 
-src_install() {
-	emake install DESTDIR="${D}" || die
-	dodoc AUTHORS README*
-
-	if use cjk; then #129518
-		insinto /usr/share/fontforge
-		doins "${WORKDIR}"/*.cidmap
-	fi
-
-	doicon Packaging/fontforge.png
-	domenu Packaging/fontforge.desktop
-	insinto /usr/share/mime/application
-	doins Packaging/fontforge.xml
-
-	if use doc; then
-		insinto /usr/share/doc/${PN}
-		cd "${WORKDIR}/html/"
-		doins -r *
-	fi
-}
-
-pkg_postrm() {
-	fdo-mime_desktop_database_update
-	fdo-mime_mime_database_update
-}
-
-pkg_postinst() {
-	fdo-mime_desktop_database_update
-	fdo-mime_mime_database_update
-}
+# Some notes for maintainers this package:
+# 1. README-unix: freetype headers are required to make use of truetype debugger
+# in fontforge.
+# 2. --enable-{double,longdouble} these just make ff use more storage space. In
+# normal fonts neither is useful. Leave off.
+# 3. FontForge autodetects libraries but does not link with them. They are
+# dynamically loaded at run time if fontforge found them at build time.
+# --with-regular-link disables

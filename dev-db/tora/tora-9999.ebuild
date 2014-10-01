@@ -65,24 +65,20 @@ src_configure() {
 	if use oracle || use oci8-instant-client ; then
 		mycmakeargs=(-DENABLE_ORACLE=ON)
 	else
-		mycmakeargs=(-DENABLE_ORACLE=OFF)
-	fi
-	mycmakeargs+=(
-		-DWANT_RPM=OFF
-		-DWANT_BUNDLE=OFF
-		-DWANT_BUNDLE_STANDALONE=OFF
-		-DWANT_INTERNAL_QSCINTILLA=OFF
-		-DWANT_INTERNAL_LOKI=OFF
-		$(cmake-utils_use_enable postgres PGSQL)
-		$(cmake-utils_use_want debug)
-		# path variables
-		-DTORA_DOC_DIR=share/doc/${PF}
-	)
-	cmake-utils_src_configure
-}
+		mycmakeargs=(-D# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-9999.ebuild,v 1.3 2013/03/08 16:40:24 haubi Exp $
 
-src_install() {
-	cmake-utils_src_install
-	doicon src/icons/${PN}.xpm || die
-	domenu debian/${PN}.desktop || die
-}
+EAPI=2
+
+inherit cmake-utils eutils
+
+if [[ ${PV} == 9999 ]]; then
+	ESVN_REPO_URI="https://tora.svn.sourceforge.net/svnroot/tora/trunk/tora"
+	inherit subversion
+	SRC_URI=""
+else
+	SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+fi
+
+D

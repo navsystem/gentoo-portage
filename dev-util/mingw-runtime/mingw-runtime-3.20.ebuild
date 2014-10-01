@@ -64,14 +64,13 @@ src_install() {
 		doins -r include/* || die
 	else
 		local insdir
-		is_crosscompile \
-			&& insdir="${D}/usr/${CTARGET}" \
-			|| insdir="${D}"
-		emake install DESTDIR="${insdir}" || die
-		env -uRESTRICT CHOST=${CTARGET} prepallstrip
-		rm -rf "${insdir}"/usr/doc
-		docinto ${CTARGET} # Avoid collisions with other cross-compilers.
-		dodoc CONTRIBUTORS ChangeLog README TODO readme.txt
-	fi
-	is_crosscompile && dosym usr /usr/${CTARGET}/mingw
-}
+		is_# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw-runtime/mingw-runtime-3.20.ebuild,v 1.5 2013/05/10 09:38:39 patrick Exp $
+
+EAPI="4"
+
+export CBUILD=${CBUILD:-${CHOST}}
+export CTARGET=${CTARGET:-${CHOST}}
+if [[ ${CTARGET} == ${CHOST} ]] ; then
+	if [[ ${CATEGORY/cr

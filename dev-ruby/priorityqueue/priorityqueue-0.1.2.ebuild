@@ -34,5 +34,4 @@ each_ruby_compile() {
 }
 
 each_ruby_test() {
-	${RUBY} -Ilib test/priority_queue_test.rb || die
-}
+	${RUBY} -Ilib test/priority_queue_test.rb || die# C

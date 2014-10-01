@@ -16,6 +16,24 @@
   <access>local and remote</access>
   <affected>
     <package name="x11-libs/libXfont" auto="yes" arch="*">
+      <unaffected range="ge">1.2.1</unaffecte<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="/xsl/glsa.xsl" type="text/xsl"?>
+<?xml-stylesheet href="/xsl/guide.xsl" type="text/xsl"?>
+<!DOCTYPE glsa SYSTEM "http://www.gentoo.org/dtd/glsa.dtd">
+
+<glsa id="200609-07">
+  <title>LibXfont, monolithic X.org: Multiple integer overflows</title>
+  <synopsis>
+    Some buffer overflows were discovered in the CID font parser, potentially
+    resulting in the execution of arbitrary code with elevated privileges.
+  </synopsis>
+  <product type="ebuild">libxfont</product>
+  <announced>September 13, 2006</announced>
+  <revised>September 13, 2006: 01</revised>
+  <bug>145513</bug>
+  <access>local and remote</access>
+  <affected>
+    <package name="x11-libs/libXfont" auto="yes" arch="*">
       <unaffected range="ge">1.2.1</unaffected>
       <vulnerable range="lt">1.2.1</vulnerable>
     </package>
@@ -52,26 +70,4 @@
   </workaround>
   <resolution>
     <p>
-    All libXfont users should upgrade to the latest version:
-    </p>
-    <code>
-    # emerge --sync
-    # emerge --ask --oneshot --verbose &quot;&gt;=x11-libs/libXfont-1.2.1&quot;</code>
-    <p>
-    All monolithic X.org users are advised to migrate to modular X.org.
-    </p>
-  </resolution>
-  <references>
-    <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=2006-3739">CVE-2006-3739</uri>
-    <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=2006-3740">CVE-2006-3740</uri>
-  </references>
-  <metadata tag="requester" timestamp="Tue, 12 Sep 2006 16:30:32 +0000">
-    frilled
-  </metadata>
-  <metadata tag="submitter" timestamp="Tue, 12 Sep 2006 18:16:51 +0000">
-    jaervosz
-  </metadata>
-  <metadata tag="bugReady" timestamp="Wed, 13 Sep 2006 08:07:36 +0000">
-    jaervosz
-  </metadata>
-</glsa>
+    All libXfont users

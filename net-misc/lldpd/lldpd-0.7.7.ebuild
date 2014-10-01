@@ -6,6 +6,14 @@ EAPI=5
 
 inherit eutils user
 
+DESCRIPTION="Impl# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lldpd/lldpd-0.7.7.ebuild,v 1.1 2014/02/21 18:47:03 chutzpah Exp $
+
+EAPI=5
+
+inherit eutils user
+
 DESCRIPTION="Implementation of IEEE 802.1ab (LLDP)"
 HOMEPAGE="http://vincentbernat.github.com/lldpd/"
 SRC_URI="http://media.luffy.cx/files/${PN}/${P}.tar.gz"
@@ -69,19 +77,4 @@ src_configure() {
 		$(use_with xml)
 }
 
-src_compile() {
-	emake
-	use doc && emake doxygen-doc
-}
-
-src_install() {
-	emake DESTDIR="${D}" install
-	prune_libtool_files
-
-	newinitd "${FILESDIR}"/${PN}-initd-1 ${PN}
-	newconfd "${FILESDIR}"/${PN}-confd-1 ${PN}
-
-	use doc && dohtml -r doxygen/html/*
-
-	keepdir /var/lib/${PN}
-}
+src_compile()

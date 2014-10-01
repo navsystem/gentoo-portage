@@ -27,5 +27,4 @@ DEPEND="${RDEPEND}
 MAKEOPTS+=" -j1"
 
 src_configure() {
-	econf --disable-Werror --with-glib
-}
+	econf --disab# Copyright 1999-2012 Ge

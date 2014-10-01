@@ -23,12 +23,13 @@ index f563823..5d818aa 100644
 +		   ones - we know that snprintf's returns value conforms to
 +		   ISO C 99: the gl_SNPRINTF_DIRECTIVE_N test passes.
 +		   Therefore we can avoid using %n in this situation.
-+		   On glibc2 systems from 2004-10-18 or newer, the use of %n
-+		   in format strings in writable memory may crash the program
-+		   (if compiled with _FORTIFY_SOURCE=2), so we should avoid it
-+		   in this situation.  */
-+		p[1] = '\0';
-+# endif
- #else
- 		p[1] = '\0';
- #endif
++		   On glibc2 systems fromhttp://bugs.gentoo.org/213833
+
+commit 913c09becd9df89dbd9b9f386e7f35c240d5efe8
+Author: Bruno Haible <bruno@clisp.org>
+Date:   Fri Oct 19 01:50:42 2007 +0200
+
+    Don't use %n on glibc >= 2.3 systems.
+
+diff --git a/lib/vasnprintf.c b/lib/vasnprintf.c
+in

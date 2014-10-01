@@ -15,6 +15,23 @@ index b388455..52d3bc3 100644
  
 @@ -120,10 +120,6 @@ install :
  	cp -Rf $(LIBRARYFILES) $(DESTDIR)$(LIBDIR)
+ 	mkdir -p $diff --git a/Makefile.in b/Makefile.in
+index b388455..52d3bc3 100644
+--- a/Makefile.in
++++ b/Makefile.in
+@@ -58,8 +58,8 @@ CFLAGS = @MYCFLAGS@
+ LDFLAGS = @MYLDFLAGS@
+ CMDLDFLAGS = @MYCMDLDFLAGS@
+ LIBS = @LIBS@
+-LDENV = LD_RUN_PATH=/lib:/usr/lib:$(LIBDIR):$(HOME)/lib:/usr/local/lib:@MYRUNPATH@:.
+-RUNENV = @MYLDLIBPATHENV@=.:/lib:/usr/lib:$(LIBDIR):$(HOME)/lib:/usr/local/lib:@MYRUNPATH@
++LDENV = 
++RUNENV = @MYLDLIBPATHENV@=.:$(LIBDIR)
+ POSTCMD = @MYPOSTCMD@
+ 
+ 
+@@ -120,10 +120,6 @@ install :
+ 	cp -Rf $(LIBRARYFILES) $(DESTDIR)$(LIBDIR)
  	mkdir -p $(DESTDIR)$(BINDIR)
  	cp -Rf $(COMMANDFILES) $(DESTDIR)$(BINDIR)
 -	mkdir -p $(DESTDIR)$(SBINDIR)
@@ -64,22 +81,4 @@ index fbe0c71..809a839 100644
 -  PATH="$PATH:`pkg-config --variable=bindir tokyocabinet`"
 -  CPATH="$CPATH:`pkg-config --variable=includedir tokyocabinet`"
 -  LIBRARY_PATH="$LIBRARY_PATH:`pkg-config --variable=libdir tokyocabinet`"
--  LD_LIBRARY_PATH="$LD_LIBRARY_PATH:`pkg-config --variable=libdir tokyocabinet`"
--fi
--
--
--
- #================================================================
- # Options
- #================================================================
-diff --git a/tokyotyrant.pc.in b/tokyotyrant.pc.in
-index efb3749..efec1f6 100644
---- a/tokyotyrant.pc.in
-+++ b/tokyotyrant.pc.in
-@@ -10,5 +10,5 @@ datadir=@datadir@
- Name: Tokyo Tyrant
- Description: network interface of Tokyo Cabinet
- Version: @PACKAGE_VERSION@
--Libs: -L${libdir} -ltokyotyrant @LIBS@
-+Libs: -L${libdir} -ltokyotyrant
- Cflags: -I${includedir}
+-  LD_LIBRARY_PATH="$LD_LIBRARY_PATH:`pkg-con

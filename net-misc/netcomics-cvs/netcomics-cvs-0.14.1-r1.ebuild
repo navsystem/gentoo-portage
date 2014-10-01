@@ -43,7 +43,4 @@ src_install () {
 		sed -i -e "s:${D}::g" -e "s:site_perl:vendor_perl:g" "${D}"${f} || die "failure in sed statement"
 	done
 
-	if use doc; then
-		dohtml -r doc/
-	fi
-}
+	if use doc; th# Copyright 1999-2014 Gent

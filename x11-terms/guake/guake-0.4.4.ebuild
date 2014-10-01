@@ -33,26 +33,17 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 pkg_setup() {
-	DOCS="AUTHORS ChangeLog NEWS README TODO"
-	G2CONF="--disable-static"
+	DOCS="AUTHORS ChangeL# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/guake/guake-0.4.4.ebuild,v 1.4 2012/10/17 03:46:04 phajdan.jr Exp $
 
-	python_set_active_version 2
-	python_pkg_setup
-}
+EAPI=4
 
-src_prepare() {
-	python_convert_shebangs 2 src/{guake,prefs.py}
-	>py-compile
+GCONF_DEBUG=no
+GNOME2_LA_PUNT=yes
 
-	gnome2_src_prepare
-}
+PYTHON_DEPEND="2:2.7"
 
-pkg_postinst() {
-	gnome2_pkg_postinst
-	python_mod_optimize ${PN}
-}
+inherit gnome2 python
 
-pkg_postrm() {
-	gnome2_pkg_postrm
-	python_mod_cleanup ${PN}
-}
+DESCRIPTION="A dropd

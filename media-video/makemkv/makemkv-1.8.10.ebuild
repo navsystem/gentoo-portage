@@ -100,9 +100,6 @@ pkg_postinst() {
 	elog "Note that beta license may have an expiration date and you will"
 	elog "need to check for newer licenses/releases. "
 	elog ""
-	elog "If this is a new install, remember to copy the default profile"
-	elog "to the config directory:"
-	elog "cp /usr/share/MakeMKV/default.mmcp.xml ~/.MakeMKV/"
-}
-
-pkg_postrm() { gnome2_icon_cache_update; }
+	elog "If this is a new install, remember to copy the default pr# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/med

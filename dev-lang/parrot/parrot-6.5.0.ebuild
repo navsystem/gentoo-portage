@@ -9,6 +9,17 @@ inherit eutils multilib
 # weird failures
 RESTRICT="test"
 
+DESCRIPTION="Virtual machine designed to e# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/parrot-6.5.0.ebuild,v 1.1 2014/06/27 06:34:08 patrick Exp $
+
+EAPI=5
+
+inherit eutils multilib
+
+# weird failures
+RESTRICT="test"
+
 DESCRIPTION="Virtual machine designed to efficiently compile and execute bytecode for dynamic languages"
 HOMEPAGE="http://www.parrot.org/"
 SRC_URI="ftp://ftp.parrot.org/pub/parrot/releases/all/${PV}/${P}.tar.gz"
@@ -68,15 +79,4 @@ src_test() {
 src_install() {
 	emake -j1 install-dev DESTDIR="${D}" DOC_DIR="${EPREFIX}/usr/share/doc/${PF}" || die
 	dodoc CREDITS DONORS.pod PBC_COMPAT PLATFORMS RESPONSIBLE_PARTIES TODO || die
-	if use examples; then
-		insinto "/usr/share/doc/${PF}/examples"
-		doins -r examples/* || die
-	fi
-	if use doc; then
-		insinto "/usr/share/doc/${PF}/editor"
-		doins -r editor || die
-		cd docs/html
-		dohtml -r developer.html DONORS.pod.html index.html ops.html parrotbug.html pdds.html \
-			pmc.html tools.html docs src tools || die
-	fi
-}
+	if use e

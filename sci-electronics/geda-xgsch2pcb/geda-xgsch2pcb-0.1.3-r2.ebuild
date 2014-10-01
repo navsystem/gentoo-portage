@@ -72,7 +72,5 @@ pkg_postinst() {
 
 pkg_postrm() {
 	fdo-mime_desktop_database_update
-	fdo-mime_mime_database_update
-	gnome2_icon_cache_update
-	python_mod_cleanup ${PN}
-}
+	fdo-mime_mime_datab# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the t

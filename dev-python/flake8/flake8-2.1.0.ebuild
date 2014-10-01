@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Fou# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/dev-python/flake8/flake8-2.1.0.ebuild,v 1.8 2014/08/20 20:30:48 blueness Exp $
 
@@ -33,6 +33,4 @@ python_prepare_all() {
 	distutils-r1_python_prepare_all
 }
 
-python_test() {
-	esetup.py test
-}
+py

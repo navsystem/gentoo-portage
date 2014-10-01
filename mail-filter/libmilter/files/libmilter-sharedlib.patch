@@ -46,10 +46,6 @@ diff -Nru sendmail-8.14.3.orig/libmilter/Makefile.m4 sendmail-8.14.3/libmilter/M
 +++ sendmail-8.14.3/libmilter/Makefile.m4	2009-08-22 21:53:35.000000000 +0200
 @@ -9,7 +9,7 @@
  SMSRCDIR=ifdef(`confSMSRCDIR', `confSMSRCDIR', `${SRCDIR}/sendmail')
- PREPENDDEF(`confINCDIRS', `-I${SMSRCDIR} ')
- 
--bldPRODUCT_START(`library', `libmilter')
-+bldPRODUCT_START(`milterlibrary', `libmilter')
- define(`bldINSTALLABLE', `true')
- define(`LIBMILTER_EXTRAS', `errstring.c strl.c')
- APPENDDEF(`confENVDEF', `-DNOT_SENDMAIL -Dsm_snprintf=snprintf')
+ PREPENDDEF(`confINCdiff -Nru sendmail-8.14.3.orig/devtools/M4/UNIX/milterlibrary.m4 sendmail-8.14.3/devtools/M4/UNIX/milterlibrary.m4
+--- sendmail-8.14.3.orig/devtools/M4/UNIX/milterlibrary.m4	1970-01-01 01:00:00.000000000 +0100
++++ sendmail-8.14.3/devtools/M4/UNIX/milterlibrary.m4	200

@@ -49,16 +49,10 @@ all_ruby_prepare() {
 	chmod 0755 "${HOME}" || die "Failed to fix permissions on home"
 
 	# Set test environment to our hand.
-#	rm "${S# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/activesupport-4.0.10.ebuild,v 1.1 2014/09/12 05:55:04 graaff Exp $
+#	rm "${S}/../Gemfile" || die "Unable to remove Gemfile"
+	sed -i -e '/load_paths/d' test/abstract_unit.rb || die "Unable to remove load paths"
 
-EAPI=5
-
-USE_RUBY="ruby19 ruby20 ruby21"
-
-RUBY_FAKEGEM_TASK_DOC=""
-
-RUBY_FAKEGEM_EXTRADOC="CHANGELOG.md README.rdoc"
-
-RUBY_FAKEGEM_GEMS
+	# Make sure a compatible version of minitest is used everywhere.
+	sed -i -e "s/gem 'minitest'/gem 'minitest', '~> 4.2'/" lib/active_support/test_case.rb || die
+	sed -i -e "1igem 'minitest', '~> 4.2'" test/abstract_unit.rb || die
+}

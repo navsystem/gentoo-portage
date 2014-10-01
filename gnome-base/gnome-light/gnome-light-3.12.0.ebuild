@@ -39,13 +39,10 @@ RDEPEND="!gnome-base/gnome
 	>=x11-terms/gnome-terminal-${PV}
 "
 DEPEND=""
-PDEPEND=">=gnome-base/gvfs-1.20.0"
-S="${WORKDIR}"
+# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/gnome-light-3.12.0.ebuild,v 1.3 2014/07/23 15:16:59 ago Exp $
 
-pkg_pretend() {
-	if ! use gnome-shell; then
-		# Users probably want to use e16, sawfish, etc
-		ewarn "You're installing neither GNOME Shell"
-		ewarn "You will have to install and manage a window manager by yourself"
-	fi
-}
+EAPI="5"
+
+DESCRIPTION="Meta package for GNOME

@@ -33,18 +33,13 @@ REQUIRED_USE="doc? ( || ( $(python_gen_useflags 'python2*') ) )"
 python_compile_all() {
 	if use doc; then
 		# we can't use Makefile since it relies on hardcoded paths
-		epydoc -o html --html cups || die "doc build failed"
-	fi
-}
+		epydoc -o html --html c# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/pycups-1.9.63.ebuild,v 1.14 2014/03/31 21:06:08 mgorny Exp $
 
-python_compile() {
-	python_is_python3 || local -x CFLAGS="${CFLAGS} -fno-strict-aliasing"
-	distutils-r1_python_compile
-}
+EAPI=5
 
-python_install_all() {
-	use doc && local HTML_DOCS=( html/ )
-	use examples && local EXAMPLES=( examples/ )
+PYTHON_COMPAT=( python{2_6,2_7} pypy pypy2_0 )
+inherit distutils-r1
 
-	distutils-r1_python_install_all
-}
+DES

@@ -68,7 +68,5 @@ src_install() {
 	dosym /usr/share/fonts/wqy-zenhei/wqy-zenhei.ttc \
 		"${GAMES_DATADIR}"/hedgewars/Data/Fonts/wqy-zenhei.ttc
 	doicon misc/hedgewars.png
-	make_desktop_entry ${PN} Hedgewars
-	doman man/${PN}.6
-	prepgamesdirs
-}
+	make_desktop_e# Copyright 1999-2014 Gentoo Foundation
+# Distributed und

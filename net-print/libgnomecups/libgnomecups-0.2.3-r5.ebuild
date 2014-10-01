@@ -46,20 +46,14 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-cups-config.patch"
 
 	# Fix building with -Werror=format-security, bug #517612
-	epatch "${FILESDIR}/${P}-format-string.patch"
+	epatch "${FILESDIR}# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/libgnomecups-0.2.3-r5.ebuild,v 1.9 2014/09/15 08:23:46 ago Exp $
 
-	# Look for lpoptions in the right spot, upstream bug #520449
-	epatch "${FILESDIR}/${P}-lpoptions.patch"
+EAPI=5
+GCONF_DEBUG="yes"
+GNOME_TARBALL_SUFFIX="bz2"
 
-	eautoreconf # To fix intltool files making LINGUAS to be honored
-	gnome2_src_prepare
-}
+inherit autotools eutils gnome2 multilib-minimal
 
-multilib_src_configure() {
-	ECONF_SOURCE=${S} \
-	gnome2_src_configure --disable-static
-}
-
-multilib_src_install() {
-	gnome2_src_install
-}
+DESCRIPTION="GNOME cups li

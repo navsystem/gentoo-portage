@@ -50,16 +50,19 @@ diff -Nru orig-DFBSee-0.7.4/src/rotate.c DFBSee-0.7.4/src/rotate.c
 -      (__u8*)src += src_pitch;\
 -      (__u8*)dest -= dest_pitch;\
 +      src  = ((void*) src)  - src_pitch;\
-+      dest = ((void*) dest) + dest_pitch;\
++diff -Nru orig-DFBSee-0.7.4/src/rotate.c DFBSee-0.7.4/src/rotate.c
+--- orig-DFBSee-0.7.4/src/rotate.c	2005-12-05 15:37:52.000000000 +0800
++++ DFBSee-0.7.4/src/rotate.c	2005-12-05 15:38:10.000000000 +0800
+@@ -43,9 +43,9 @@
+         {\
+           *d = *s;\
+           s++;\
+-          (__u8*)d += dest_pitch;\
++          d = ((void*) d) + dest_pitch;\
+         }\
+-      (__u8*)src += src_pitch;\
++      src = ((void*) src) + src_pitch;\
      }\
  }\
  
-@@ -172,7 +172,7 @@
-   source->Lock (source, DSLF_READ, &src, &src_pitch);
-   destination->Lock (destination, DSLF_READ, &dest, &dest_pitch);
- 
--  (__u8 *) dest += dest_pitch * y + DFB_BYTES_PER_PIXEL (pixelformat) * x;
-+  dest += dest_pitch * y + DFB_BYTES_PER_PIXEL (pixelformat) * x;
- 
-   rotate (dest, dest_pitch,
-           src, src_pitch, width, height, DFB_BYTES_PER_PIXEL (pixelformat),
+@@

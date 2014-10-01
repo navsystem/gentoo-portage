@@ -69,6 +69,5 @@ python_install_all() {
 		}
 		python_foreach_impl delete_gui
 	fi
-	dohtml doc/html/*
-	use bash-completion && dobashcomp config/linkchecker-completion
-}
+	# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU Gene

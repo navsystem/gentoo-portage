@@ -55,9 +55,6 @@ src_install () {
 	newinitd "${FILESDIR}"/${PN}-2.2-init netperf
 	newconfd "${FILESDIR}"/${PN}-2.2-conf netperf
 
-	# documentation and example scripts
-	dodoc AUTHORS ChangeLog NEWS README Release_Notes
-	dodir /usr/share/doc/${PF}/examples
-	#Scripts no longer get installed by einstall
-	cp doc/examples/*_script "${D}"/usr/share/doc/${PF}/examples || die
-}
+	# documentation and example scr# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/netperf-2.6.0-r1.ebuild,v 1.10 2014/09/14 07:28

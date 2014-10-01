@@ -29,24 +29,13 @@ ruby_add_bdepend "
 ruby_add_rdepend "dev-ruby/metaclass" #metaclass ~> 0.0.1
 
 all_ruby_prepare() {
-	sed -i -e '/[Bb]undler/ s:^:#:' -e '1iload "lib/mocha/version.rb"' Rakefile || die
-}
+	sed -i -e '/[Bb]undler/ s:# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/mocha-0.11.4.ebuild,v 1.17 2014/04/22 03:29:30 mrueg Exp $
 
-all_ruby_compile() {
-	all_fakegem_compile
+EAPI=4
+USE_RUBY="ruby19 jruby"
 
-	if use doc; then
-		rake examples || die
-	fi
-}
+RUBY_FAKEGEM_TASK_TEST="test:units"
 
-each_ruby_test() {
-	${RUBY} -Ilib -S testrb test/unit/* || die
-}
-
-all_ruby_install() {
-	all_fakegem_install
-
-	docinto examples
-	dodoc examples/*.rb || die
-}
+RUBY_FAKEGEM_TASK_DOC=
