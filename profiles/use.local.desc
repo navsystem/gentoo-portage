@@ -2125,6 +2125,8 @@ dev-python/py-amqp:extras - Install extra tools to generate initial Python mod f
 dev-python/pylons:genshi - Add optional genshi support
 dev-python/pylons:jinja - Add optional jinja support
 dev-python/pymongo:mod_wsgi - Disable the C extension to work with mod_wsgi.
+dev-python/pyocr:cuneiform - Enable support for the app-text/cuneiform OCR engine
+dev-python/pyocr:tesseract - Enable support for the app-text/tesseract OCR engine
 dev-python/pypax:ptpax - Enable PT_PAX_FLAGS support.
 dev-python/pypax:xtpax - Enable XATTR_PAX_FLAGS support.
 dev-python/pyplusplus:indexing - Install indexing_suite_v2 to enhance boost python
@@ -2219,7 +2221,6 @@ dev-qt/qt-creator:python - Enable Python source code editor
 dev-qt/qt-creator:qnx - Build plugin for QNX/Blackberry devices
 dev-qt/qt-creator:valgrind - Add support for memory debugging using dev-util/valgrind
 dev-qt/qt-meta:kde - Select media-libs/phonon as Phonon variant (needed for KDE)
-dev-qt/qt-meta:opengl - Enable the QtOpenGL module
 dev-qt/qt-meta:openvg - Enable the QtOpenVG module
 dev-qt/qt-meta:qt3support - Enable the Qt3Support library for Qt4
 dev-qt/qt-mobility:bearer - Build the QtBearer module
@@ -2305,6 +2306,7 @@ dev-qt/qtsvg:exceptions - Add support for exceptions - like catching them inside
 dev-qt/qttest:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
 dev-qt/qtwebkit:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
 dev-qt/qtwebkit:gstreamer - Enable HTML5 audio/video support via media-libs/gstreamer
+dev-qt/qtwebkit:gstreamer010 - Enable HTML5 audio/video support via media-libs/gstreamer:0.10 instead of :1.0
 dev-qt/qtwebkit:libxml2 - Use dev-libs/libxml2 for XML parsing
 dev-qt/qtwebkit:multimedia - Enable HTML5 audio/video support via dev-qt/qtmultimedia
 dev-qt/qtwebkit:printsupport - Enable printing via dev-qt/qtprintsupport
