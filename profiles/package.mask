@@ -49,7 +49,6 @@
 # Ben de Groot <yngwin@gentoo.org> (30 Sep 2014)
 # WIP, needs version bumps of several dependencies
 >=www-apps/nikola-7.1.0
->>>>>>> 9748c175cd56d4a9fe5ac8bb5c7015c96afdc29b
 
 # Pacho Ramos <pacho@gentoo.org> (27 Sep 2014)
 # >=0.5 broke API, bug #523838, wait for next major tracker
