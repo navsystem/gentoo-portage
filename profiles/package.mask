@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16066 2014/10/01 11:47:59 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16069 2014/10/02 10:29:30 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,11 +30,6 @@
 
 #--- END OF EXAMPLES ---
 
-# Ulrich Müller <ulm@gentoo.org> (30 Sep 2014)
-# Obsolete, superseded by multilib x11-libs/motif.
-# Masked for removal in 30 days, bug #461916.
-app-emulation/emul-linux-x86-motif
-
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (30 Sep 2014)
 # Reverse dependencies need to be tested and fixed, bug #521406.
 >=dev-libs/protobuf-2.6.0
@@ -51,7 +46,7 @@ app-emulation/emul-linux-x86-motif
 
 # Michael Sterrett <mr_bones_@gentoo.org> (24 Sep 2014)
 # No updates since 2007 and games-board/scid is actively maintained.
-# masked for removal on 2014102
+# masked for removal on 20141024
 games-board/chessdb
 
 # Michael Orlitzky <mjo@gentoo.org> (16 Sep 2014)
