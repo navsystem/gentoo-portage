@@ -5030,6 +5030,7 @@ net-im/qutim:sdl - Add sound support via media-libs/sdl-mixer
 net-im/qutim:vkontakte - Enable vkontakte protocol support
 net-im/qutim:webkit - Enable Adium-like WebView plugin
 net-im/qutim:xscreensaver - Use X screensaver protocol extension to monitor idle/active status based on mouse/keyboard events
+net-im/skype:apulse - Use media-sound/apulse for PulseAudio emulation
 net-im/skype:pax_kernel - Triggers a paxmarking of the main skype binary
 net-im/telepathy-connection-managers:irc - Enable Internet Relay Chat (IRC) support.
 net-im/telepathy-connection-managers:jabber - Enable XMPP protocol handler (this is also Google Talk).
@@ -6074,7 +6075,6 @@ razorqt-base/razorqt-panel:colorpicker - Add colorpicker panel applet
 razorqt-base/razorqt-panel:cpuload - Add CPU load panel applet; depends on sys-libs/libstatgrab
 razorqt-base/razorqt-panel:desktopswitch - Add desktop switch panel applet
 razorqt-base/razorqt-panel:mainmenu - Add main menu panel applet
-razorqt-base/razorqt-panel:mount - Add external storage mounting panel applet; depends on sys-fs/udisks
 razorqt-base/razorqt-panel:networkmonitor - Add network monitor panel applet; depends on sys-libs/libstatgrab
 razorqt-base/razorqt-panel:quicklaunch - Add quicklaunch panel applet
 razorqt-base/razorqt-panel:screensaver - Add screensaver panel applet
