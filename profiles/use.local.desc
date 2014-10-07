@@ -2330,6 +2330,7 @@ dev-ruby/facter:pciutils - Use sys-apps/pciutils to determine hardware system pr
 dev-ruby/facter:virt - Use app-emulation/virt-what for virtual machine detection
 dev-ruby/maruku:highlight - Enable source code highlighting via dev-ruby/syntax
 dev-ruby/rails:asset-pipeline - Also install the default components for the asset pipeline. These are not required but they are activated automatically in new Rails projects by default.
+dev-ruby/rrdtool-bindings:graph - Enable support for graphing functions
 dev-ruby/ruby-sdl:image - Enable media-libs/sdl-image support
 dev-ruby/ruby-sdl:mixer - Enable media-libs/sdl-mixer support
 dev-ruby/ruby-sdl:sge - Enable sdl-sge support
@@ -4423,6 +4424,7 @@ media-video/plasma-mediacenter:nepomuk - Enable Nepomuk based semantic desktop s
 media-video/qgifer:imagemagick - Use imagemagick for image operations
 media-video/rtmpdump:gnutls - Use GnuTLS library instead of the default OpenSSL
 media-video/rtmpdump:polarssl - Use PolarSSL library instead of the default OpenSSL
+media-video/smplayer:autoshutdown - Enable the option to shutdown your computer after finishing the playlist. This requires dev-qt/qtdbus as dependency.
 media-video/smplayer2:download-subs - Enable subtitle downloader (requires QuaZip)
 media-video/totem:bluetooth - Enable support for user-presence detection via the user's bluetooth handset using net-wireless/bluez
 media-video/totem:flash - Install browser plugin for playing embedded Adobe Flash videos. Warning: breaks non-video Flash objects on many websites.
@@ -5028,6 +5030,7 @@ net-im/qutim:sdl - Add sound support via media-libs/sdl-mixer
 net-im/qutim:vkontakte - Enable vkontakte protocol support
 net-im/qutim:webkit - Enable Adium-like WebView plugin
 net-im/qutim:xscreensaver - Use X screensaver protocol extension to monitor idle/active status based on mouse/keyboard events
+net-im/skype:apulse - Use media-sound/apulse for PulseAudio emulation
 net-im/skype:pax_kernel - Triggers a paxmarking of the main skype binary
 net-im/telepathy-connection-managers:irc - Enable Internet Relay Chat (IRC) support.
 net-im/telepathy-connection-managers:jabber - Enable XMPP protocol handler (this is also Google Talk).
@@ -6072,7 +6075,6 @@ razorqt-base/razorqt-panel:colorpicker - Add colorpicker panel applet
 razorqt-base/razorqt-panel:cpuload - Add CPU load panel applet; depends on sys-libs/libstatgrab
 razorqt-base/razorqt-panel:desktopswitch - Add desktop switch panel applet
 razorqt-base/razorqt-panel:mainmenu - Add main menu panel applet
-razorqt-base/razorqt-panel:mount - Add external storage mounting panel applet; depends on sys-fs/udisks
 razorqt-base/razorqt-panel:networkmonitor - Add network monitor panel applet; depends on sys-libs/libstatgrab
 razorqt-base/razorqt-panel:quicklaunch - Add quicklaunch panel applet
 razorqt-base/razorqt-panel:screensaver - Add screensaver panel applet
@@ -7508,6 +7510,7 @@ x11-misc/rednotebook:spell - enable gtk-spell support
 x11-misc/redshift:geoclue - Control dependency on app-misc/geoclue
 x11-misc/revelation:applet - Enable applet for gnome-base/gnome-panel
 x11-misc/rodent:experimental - Build experimental plugins (obexfs, curlftpfs, ecryptfs, cifs and samba)
+x11-misc/rofi:i3 - Compile in support for the x11-wm/i3 window manager
 x11-misc/rss-glx:quesoglc - Enable support for OpenGL Character Renderer
 x11-misc/sddm:consolekit - Use ck-launch-session from sys-auth/consolekit by default in Xsession (no native support)
 x11-misc/shutter:drawing - Enables drawing tool
