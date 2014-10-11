@@ -5,6 +5,7 @@ gif flac mpeg mikmod spell libnotify acpi mng png mmx -pulseaudio spice sse sse2
 networkmanager private-headers declarative bash-completion pm-utils vnc rdesktop system-sqlite lxde udisks libkms
 oscar phonon qml valgrind ebook djvu idn lame mod vdpau g3dvl encode
 dri cups infinality natspec odbc pdf aac ffmpeg gpm opus winbind ads ldap right_timezone
+soprano
 
 input_devices_evdev video_cards_intel video_cards_nouveau video_cards_radeon video_cards_vesa
 video_cards_i915 video_cards_i965 video_cards_r100 video_cards_r200 video_cards_r300 video_cards_r600
