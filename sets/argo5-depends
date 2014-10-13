@@ -11,4 +11,5 @@ sys-apps/hasp
 dev-python/xlwt
 dev-python/xlrd
 app-misc/pip
+x11-libs/libqxt
 

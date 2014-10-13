@@ -115,7 +115,7 @@ kde-base/solid-runtime amd64
 kde-base/svgpart amd64
 kde-base/systemsettings amd64
 kde-misc/customizable-weather amd64
-kde-misc/kcm_touchpad amd64
+kde-misc/kcm-touchpad amd64
 kde-misc/networkmanagement amd64
 kde-misc/polkit-kde-kcmodules amd64
 kde-misc/yakuake amd64
