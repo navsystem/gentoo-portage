@@ -1,0 +1,5 @@
+USE="${USE} -X -kde -gtk -cups -cairo -webkit -ldap
+-networkmanager -modemmanager -bluetooth
+-ffmpeg
+-consolekit -policykit
+"
