@@ -1,15 +1,2 @@
-dev-python/PythonQt
-app-text/poppler
-x11-libs/qwt:5
-dev-libs/qextserialport
-dev-python/mailer
-media-libs/glc-lib
-dev-python/psycopg
-virtual/ooo
-media-libs/phonon
-sys-apps/hasp
-dev-python/xlwt
-dev-python/xlrd
-app-misc/pip
-x11-libs/libqxt
-
+@argo5-client-depends
+@argo5-server-depends

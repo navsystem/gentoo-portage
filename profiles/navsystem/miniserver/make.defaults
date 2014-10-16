@@ -1,5 +1,7 @@
-USE="${USE} -X -kde -gtk -cups -cairo -webkit -ldap
+USE="${USE} -X -kde -gtk -cups -cairo -webkit -ldap -ads -acl -kerberos
 -networkmanager -modemmanager -bluetooth
--ffmpeg
+-ffmpeg -opengl
 -consolekit -policykit
+-infinality
+-mysql
 "
