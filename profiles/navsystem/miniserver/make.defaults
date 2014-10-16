@@ -1,5 +1,5 @@
 USE="${USE} -X -kde -gtk -cups -cairo -webkit -ldap -ads -acl -kerberos
--networkmanager -modemmanager -bluetooth
+-networkmanager -modemmanager -bluetooth -subversion
 -ffmpeg -opengl
 -consolekit -policykit
 -infinality
