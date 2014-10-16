@@ -1,6 +1,7 @@
 <net-misc/networkmanager-pptp-9999  amd64
 <net-misc/networkmanager-9999  amd64
 <kde-misc/networkmanagement-9999 amd64
+=net-misc/iputils-20121221-r1 amd64
 =net-libs/libqmi-1.0.0 amd64
 ~net-misc/modemmanager-1.0.0 amd64
 ~net-libs/libqmi-1.4.0 amd64
