@@ -2,6 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.19-r1.ebuild,v 1.10 2014/09/10 05:43:00 vapier Exp $
 
+EAPI="4"
 inherit eutils versionator toolchain-funcs flag-o-matic gnuconfig multilib systemd unpacker multiprocessing
 
 DESCRIPTION="GNU libc6 (also called glibc2) C library"
@@ -139,6 +140,8 @@ eblit-run() {
 }
 
 src_unpack()  { eblit-run src_unpack  ; }
+src_prepare()   { eblit-run src_prepare   ; }
+src_configure() { eblit-run src_configure ; }
 src_compile() { eblit-run src_compile ; }
 src_test()    { eblit-run src_test    ; }
 src_install() { eblit-run src_install ; }
