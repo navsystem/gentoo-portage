@@ -1,5 +1,4 @@
 app-admin/testdisk ntfs reiserfs
-dev-vcs/git -gtk perl
 media-gfx/splashutils fbcondecor
 net-fs/samba quota
 sys-fs/aufs2 inotify kernel-patch
@@ -44,7 +43,7 @@ media-libs/elementary weather
 app-arch/p7zip rar wxwidgets
 dev-db/sqlite secure-delete unlock-notify
 
-dev-vcs/git -perl -subversion
+dev-vcs/git -perl -subversion -gtk
 
 #required by app-emulation/virt-manager
 app-emulation/libvirt python
