@@ -100,3 +100,4 @@ dev-libs/elfutils static-libs
 
 media-libs/mlt kdenlive
 
+x11-plugins/qutim-plugins -kde

@@ -4,7 +4,7 @@ dev-util/bdelta amd64 x86
 ~dev-util/codeblocks-10.05 amd64 x86
 =dev-vcs/hgview-1.8.2 x86 amd64
 =dev-python/urwid-1.2.2 x86 amd64
-=kde-misc/kio-mtp-0.75_p20130912 amd64 x86
+=kde-misc/kio-mtp-0.75_p20131020 amd64 x86
 =x11-libs/libqxt-0.6.2_p20141013 amd64 x86
 
 ~app-emulation/hasp-3.2_p7 x86 amd64
@@ -19,10 +19,11 @@ sys-block/megacli amd64
 =dev-qt/qxbsql-0.2 x86 amd64
 <www-plugins/chrome-binary-plugins-39 x86 amd64
 ~sci-electronics/kicad-20130518 x86 amd64
-~sci-geosciences/qgis-2.2.0 x86 amd64
+~sci-geosciences/qgis-2.4.0 x86 amd64
 =media-libs/freetype-2.5.3 x86 amd64
 =sys-libs/zlib-1.2.8-r1 x86 amd64
 ~kde-misc/customizable-weather-1.8.3 x86 amd64
+~sys-block/zram-init-3.0 x86 amd64
 
 ~media-fonts/paratype-1 x86 amd64
 ~dev-python/mailer-0.7 x86 amd64

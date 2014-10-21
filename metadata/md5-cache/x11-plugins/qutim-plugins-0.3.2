@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=net-im/qutim:0 aescrypto? ( app-crypt/qca ) aspeller? ( app-text/aspell ) adiumwebview? ( dev-qt/qtwebkit ) awn? ( dev-qt/qtdbus gnome-extra/avant-window-navigator ) dbus? ( >=dev-qt/qtdbus-4.6.0 ) dbusnotify? ( >=dev-qt/qtdbus-4.6.0 ) histman? ( dev-qt/qtsql ) hunspeller? ( app-text/hunspell ) indicator? ( dev-libs/libindicate-qt ) kineticpopups? ( >=dev-qt/qtdeclarative-4.7.2 ) multimediabackend? ( >=dev-qt/qtmultimedia-4.7.2 ) qmlchat? ( >=dev-qt/qtdeclarative-4.7.2 ) sdl? ( media-libs/sdl-mixer ) phonon? ( media-libs/phonon ) >=dev-util/cmake-2.6 virtual/pkgconfig sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DESCRIPTION=Plugins for net-im/qutim
+EAPI=4
+HOMEPAGE=http://www.qutim.org
+IUSE=-adiumwebview aescrypto -antiboss antispam aspeller -awn bearermanager -birthdayreminder blogimprover clconf +dbus dbusnotify emoedit floaties highlighter histman hunspeller -indicator kde +kineticpopups massmessaging multimediabackend nowplaying phonon -qmlchat scriptapi sdl +unreadmessageskeeper urlpreview weather -yandexnarod debug
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+PDEPEND=kde? ( kde-misc/qutim-kdeintegration:0[debug?] )
+RDEPEND=net-im/qutim:0 aescrypto? ( app-crypt/qca ) aspeller? ( app-text/aspell ) adiumwebview? ( dev-qt/qtwebkit ) awn? ( dev-qt/qtdbus gnome-extra/avant-window-navigator ) dbus? ( >=dev-qt/qtdbus-4.6.0 ) dbusnotify? ( >=dev-qt/qtdbus-4.6.0 ) histman? ( dev-qt/qtsql ) hunspeller? ( app-text/hunspell ) indicator? ( dev-libs/libindicate-qt ) kineticpopups? ( >=dev-qt/qtdeclarative-4.7.2 ) multimediabackend? ( >=dev-qt/qtmultimedia-4.7.2 ) qmlchat? ( >=dev-qt/qtdeclarative-4.7.2 ) sdl? ( media-libs/sdl-mixer ) phonon? ( media-libs/phonon )
+RESTRICT=debug? ( strip )
+SLOT=0
+SRC_URI=http://www.qutim.org/dwnl/68/qutim-0.3.2.tar.xz
+_eclasses_=cmake-utils	9b9240b47b8dd08ad95a619ec16c39bd	eutils	32548a82e42dc26e3312581476d2f20c	flag-o-matic	75e24bac8423c515dd9c5717f08feb83	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	6ce35cb0d56d962486c858d41604c820
+_md5_=7a52c486ddda9d5b5ce1b1d2702d816d
