@@ -19,8 +19,8 @@ SLOT="2"
 KEYWORDS=""
 IUSE="opengl curl debug"
 
-RDEPEND="media-libs/libsdl[joystick]
-	media-libs/sdl-image[png,jpeg]
+RDEPEND="media-libs/libsdl2[joystick]
+	media-libs/sdl2-image[png,jpeg]
 	media-libs/libvorbis
 	dev-games/physfs
 	media-libs/openal
@@ -31,7 +31,7 @@ RDEPEND="media-libs/libsdl[joystick]
 	curl? ( net-misc/curl )"
 DEPEND="${RDEPEND}"
 
-DOCS="TODO WHATSNEW.txt data/credits.txt"
+DOCS="WHATSNEW.txt data/credits.txt"
 
 src_unpack() {
        git-r3_src_unpack
