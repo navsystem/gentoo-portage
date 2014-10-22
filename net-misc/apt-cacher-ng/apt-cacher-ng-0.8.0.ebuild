@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/apt-cacher-ng/apt-cacher-ng-0.8.0.ebuild,v 1.1 2014/10/21 07:55:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/apt-cacher-ng/apt-cacher-ng-0.8.0.ebuild,v 1.3 2014/10/22 07:53:20 jer Exp $
 
 EAPI=5
 inherit cmake-utils eutils toolchain-funcs user
@@ -28,6 +28,7 @@ COMMON_DEPEND="
 DEPEND="
 	${COMMON_DEPEND}
 	dev-util/cmake
+	>sys-devel/gcc-4.8
 	virtual/pkgconfig
 "
 RDEPEND="
@@ -109,7 +110,6 @@ src_install() {
 	newins conf/acng.conf ${PN}.conf
 	doins $( echo conf/* | sed 's|conf/acng.conf||g' )
 
-	dodir /var/cache/${PN}
 	dodir /var/log/${PN}
 	# Some directories must exists
 	keepdir /var/log/${PN}
