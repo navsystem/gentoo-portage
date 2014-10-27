@@ -101,3 +101,6 @@ media-gfx/exiv2 xmp
 net-im/skype pulseaudio
 media-plugins/alsa-plugins pulseaudio
 x11-plugins/qutim-plugins -kde
+
+net-voip/linphone gtk video
+media-libs/mediastreamer video
