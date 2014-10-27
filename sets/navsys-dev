@@ -23,7 +23,7 @@ dev-vcs/hgview
 dev-util/cmake
 kde-base/ksnapshot
 net-libs/gsoap
-net-print/foomatic-filters-ppds
+net-print/foomatic-db
 net-print/foomatic-db-ppds
 net-im/skype
 

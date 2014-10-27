@@ -4,4 +4,5 @@ USE="${USE} -X -kde -gtk -cups -cairo -webkit -ldap -ads -acl -kerberos
 -consolekit -policykit
 -infinality
 -mysql
+uuid
 "

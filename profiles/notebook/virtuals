@@ -1,7 +1,1 @@
-virtual/man		sys-apps/man-db
-virtual/ooo		app-office/libreoffice
-virtual/mozilla-browser	www-client/firefox
-virtual/ffmpeg		media-video/ffmpeg
-virtual/notification-daemon kde-base/knotify
-virtual/mta		mail-mta/ssmtp
-
+../navsystem/virtuals
