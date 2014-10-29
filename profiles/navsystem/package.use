@@ -55,6 +55,7 @@ net-libs/gtk-vnc python
 net-misc/spice-gtk python
 sys-devel/gdb python
 dev-libs/boost python
+net-dns/dnsmasq script
 
 x11-libs/vte python
 dev-libs/libxml2 python
