@@ -34,3 +34,4 @@ net-misc/dropbox-cli x86 amd64
 
 kde-misc/plasma-nm x86 amd64
 dev-util/pycharm-community x86 amd64
+net-im/jitsi-bin x86 amd64
