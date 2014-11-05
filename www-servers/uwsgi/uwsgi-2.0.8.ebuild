@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-2.0.8.ebuild,v 1.2 2014/10/28 13:43:14 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-2.0.8.ebuild,v 1.4 2014/11/03 14:05:57 titanofold Exp $
 
 EAPI="5"
 
@@ -20,7 +20,7 @@ inherit apache-module distutils-r1 eutils multilib pax-utils php-ext-source-r2 p
 
 DESCRIPTION="uWSGI server for Python web applications"
 HOMEPAGE="http://projects.unbit.it/uwsgi/"
-SRC_URI="https://github.com/unbit/uwsgi/archive/${MY_P}.tar.gz"
+SRC_URI="https://github.com/unbit/uwsgi/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -92,7 +92,7 @@ CDEPEND="sys-libs/zlib
 	uwsgi_plugins_alarm_curl? ( net-misc/curl )
 	uwsgi_plugins_alarm_xmpp? ( net-libs/gloox )
 	uwsgi_plugins_curl_cron? ( net-misc/curl )
-	uwsgi_plugins_emperor_pg? ( dev-db/postgresql-base:= )
+	uwsgi_plugins_emperor_pg? ( virtual/postgresql:= )
 	uwsgi_plugins_geoip? ( dev-libs/geoip )
 	uwsgi_plugins_ldap? ( net-nds/openldap )
 	uwsgi_plugins_pam? ( virtual/pam )
@@ -210,8 +210,8 @@ src_configure() {
 	use zeromq || sed -i -e 's|uuid/uuid.h|DISABLED|' uwsgiconfig.py || die "sed failed"
 
 	if use uwsgi_plugins_emperor_pg ; then
-		PGPV="$(best_version dev-db/postgresql-base)"
-		PGSLOT="$(get_version_component_range 1-2 ${PGPV##dev-db/postgresql-base-})"
+		PGPV="$(best_version virtual/postgresql)"
+		PGSLOT="$(get_version_component_range 1-2 ${PGPV##virtual/postgresql-})"
 		sed -i \
 			-e "s|pg_config|pg_config${PGSLOT/.}|" \
 			plugins/emperor_pg/uwsgiplugin.py || die "sed failed"

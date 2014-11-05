@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.40.ebuild,v 1.4 2014/10/13 21:03:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.40.ebuild,v 1.6 2014/11/02 09:23:40 swift Exp $
 
 EAPI="5"
 
@@ -32,13 +32,13 @@ IUSE="${IUSE_DAEMON} ${IUSE_BACKEND} ${IUSE_OVERLAY} ${IUSE_OPTIONAL} ${IUSE_CON
 REQUIRED_USE="cxx? ( sasl )"
 
 # openssl is needed to generate lanman-passwords required by samba
-RDEPEND="icu? ( dev-libs/icu:= )
+CDEPEND="icu? ( dev-libs/icu:= )
 	ssl? ( !gnutls? ( >=dev-libs/openssl-1.0.1h-r2[${MULTILIB_USEDEP}] )
 		gnutls? ( >=net-libs/gnutls-2.12.23-r6[${MULTILIB_USEDEP}] >=dev-libs/libgcrypt-1.5.3:0[${MULTILIB_USEDEP}] ) )
 	sasl? ( dev-libs/cyrus-sasl:= )
 	!minimal? (
 		sys-devel/libtool
-		sys-libs/e2fsprogs-libs 
+		sys-libs/e2fsprogs-libs
 		tcpd? ( sys-apps/tcp-wrappers )
 		odbc? ( !iodbc? ( dev-db/unixODBC )
 			iodbc? ( dev-db/libiodbc ) )
@@ -53,14 +53,15 @@ RDEPEND="icu? ( dev-libs/icu:= )
 		kerberos? ( virtual/krb5 )
 		cxx? ( dev-libs/cyrus-sasl:= )
 	)
-	selinux? ( sec-policy/selinux-ldap )
 	abi_x86_32? (
 		!<=app-emulation/emul-linux-x86-baselibs-20140508-r3
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
 	)"
-DEPEND="${RDEPEND}
+DEPEND="${CDEPEND}
 	sys-apps/groff"
-
+RDEPEND="${CDEPEND}
+	selinux? ( sec-policy/selinux-ldap )
+"
 # for tracking versions
 OPENLDAP_VERSIONTAG=".version-tag"
 OPENLDAP_DEFAULTDIR_VERSIONTAG="/var/lib/openldap-data"
@@ -757,14 +758,14 @@ multilib_src_install() {
 }
 
 multilib_src_install_all() {
-	dodoc ANNOUNCEMENT CHANGES COPYRIGHT README 
+	dodoc ANNOUNCEMENT CHANGES COPYRIGHT README
 	docinto rfc ; dodoc doc/rfc/*.txt
 }
 
 pkg_preinst() {
 	# keep old libs if any
 	preserve_old_lib /usr/$(get_libdir)/{liblber,libldap_r,liblber}-2.3$(get_libname 0)
-	# bug 440470, only display the getting started help there was no openldap before, 
+	# bug 440470, only display the getting started help there was no openldap before,
 	# or we are going to a non-minimal build
 	! has_version net-nds/openldap || has_version 'net-nds/openldap[minimal]'
 	OPENLDAP_PRINT_MESSAGES=$((! $?))

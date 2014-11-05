@@ -3,12 +3,13 @@
 <pkgmetadata>
   <herd>virtualization</herd>
   <maintainer>
-    <email>cardoe@gentoo.org</email>
-    <name>Doug Goldstein</name>
+    <email>tamiko@gentoo.org</email>
+    <name>Matthias Maier</name>
+	<description>Substitute, please assign bugs to me</description>
   </maintainer>
   <maintainer>
-    <email>idella4@gentoo.org</email>
-    <name>Ian Delaney</name>
+    <email>cardoe@gentoo.org</email>
+    <name>Doug Goldstein</name>
   </maintainer>
   <use>
     <!-- Pool backend flags -->
@@ -86,5 +87,8 @@
 	</flag>
     <flag name="firewalld">DBus interface to iptables/ebtables allowing
 		for better runtime management of your firewall.</flag>
+	<flag name="wireshark-plugins">
+		Build the <pkg>net-analyzer/wireshark</pkg> plugin for the Libvirt RPC protocol
+	</flag>
   </use>
 </pkgmetadata>
