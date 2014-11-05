@@ -78,6 +78,7 @@ sys-libs/glibc -gd # bug #204525
 
 net-im/ejabberd captcha ldap mod_irc mod_muc mod_proxy65 mod_pubsub mod_statsdx odbc pam ssl web zlib
 dev-db/postgresql-base kerberos
+virtual/postgresql kerberos server
 net-misc/tigervnc server
 
 sci-geosciences/gpsd python
