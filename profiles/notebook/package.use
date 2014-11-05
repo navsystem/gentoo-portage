@@ -81,6 +81,10 @@ sys-libs/zlib minizip static-libs
 sys-libs/glibc -gd # bug #204525
 
 dev-db/postgresql-base kerberos
+virtual/postgresql kerberos server
+
+net-dns/avahi autoipd
+
 sci-libs/hdf5 -cxx -fortran
 dev-qt/qtsql mysql
 dev-libs/protobuf python
