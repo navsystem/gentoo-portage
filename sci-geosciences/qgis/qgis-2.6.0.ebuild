@@ -4,7 +4,7 @@
 
 EAPI=5
 
-PYTHON_COMPAT=( python2_6 python2_7 )
+PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="sqlite"
 
 inherit eutils multilib gnome2-utils cmake-utils python-single-r1
@@ -18,7 +18,7 @@ SRC_URI="
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="examples gps grass gsl mapserver postgres python spatialite test"
+IUSE="examples grass gsl mapserver postgres python spatialite test"
 
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
@@ -37,14 +37,14 @@ RDEPEND="
 	dev-qt/qtsql:4
 	dev-qt/qtwebkit:4
 	|| (
-		( =x11-libs/qwt-6.0*[svg] >=x11-libs/qwtpolar-1 )
+		( x11-libs/qwt:6[svg] >=x11-libs/qwtpolar-1 )
 		( x11-libs/qwt:5[svg] <x11-libs/qwtpolar-1 )
 	)
 	grass? ( >=sci-geosciences/grass-6.4.0_rc6[python?] )
 	mapserver? ( dev-libs/fcgi )
-	postgres? ( >=dev-db/postgresql-base-8.4 )
+	postgres? ( virtual/postgresql )
 	python? (
-		dev-python/PyQt4[X,sql,svg,${PYTHON_USEDEP}]
+		dev-python/PyQt4[X,sql,svg,webkit,${PYTHON_USEDEP}]
 		dev-python/sip[${PYTHON_USEDEP}]
 		dev-python/qscintilla-python[${PYTHON_USEDEP}]
 		postgres? ( dev-python/psycopg:2[${PYTHON_USEDEP}] )
@@ -61,10 +61,6 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	python-single-r1_pkg_setup
-}
-
-src_prepare() {
-	epatch "${FILESDIR}"/qgis-2.0.1-no-python-pyc.patch
 }
 
 src_configure() {
@@ -134,7 +130,7 @@ pkg_postinst() {
 		elog "   dev-db/postgis"
 	else
 		if use python ; then
-			elog "Support of dev-db/postgresql-base is disabled."
+			elog "Support of PostgreSQL is disabled."
 			elog "But some installed python-plugins needs import psycopg2 module."
 			elog "If you do not need this modules just disable them in main menu."
 			elog "Or you need to set USE=postgres"
