@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.4.0.ebuild,v 1.8 2014/11/05 22:58:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.4.0.ebuild,v 1.10 2014/11/09 22:47:27 mgorny Exp $
 
 EAPI=5
 
@@ -14,11 +14,7 @@ SRC_URI="https://bitbucket.org/pypy/pypy/downloads/${P}-src.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0/$(get_version_component_range 1-2 ${PV})"
-
-# Wait for pypy-bin to appear
-#KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-KEYWORDS=""
-
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="bzip2 doc gdbm +jit low-memory ncurses sandbox shadowstack sqlite sse2 tk"
 
 RDEPEND=">=sys-libs/zlib-1.1.3:0=
@@ -44,8 +40,7 @@ S="${WORKDIR}/${P}-src"
 
 pkg_pretend() {
 	if use low-memory; then
-		if ! has_version dev-python/pypy && ! has_version dev-python/pypy-bin
-		then
+		if ! python_is_installed pypy; then
 			eerror "USE=low-memory requires a (possibly old) version of dev-python/pypy"
 			eerror "or dev-python/pypy-bin being installed. Please install it using e.g.:"
 			eerror
@@ -66,15 +61,12 @@ pkg_pretend() {
 }
 
 pkg_setup() {
-	local force_pypy
-
 	pkg_pretend
 
-	if has_version dev-python/pypy || has_version dev-python/pypy-bin
-	then
-		if [[ ! ${EPYTHON} ]] || use low-memory; then
+	if python_is_installed pypy; then
+		if [[ ! ${EPYTHON} || ${EPYTHON} == pypy ]] || use low-memory; then
 			einfo "Using already-installed PyPy to perform the translation."
-			force_pypy=1
+			local EPYTHON=pypy
 		else
 			einfo "Using ${EPYTHON} to perform the translation. Please note that upstream"
 			einfo "recommends using PyPy for that. If you wish to do so, please unset"
@@ -82,14 +74,7 @@ pkg_setup() {
 		fi
 	fi
 
-	if [[ ${force_pypy} ]]; then
-		# set manually since python_setup needs virtual/pypy
-		# and we don't force the dep
-		python_export pypy EPYTHON PYTHON
-		python_wrapper_setup
-	else
-		python-any-r1_pkg_setup
-	fi
+	python-any-r1_pkg_setup
 }
 
 src_prepare() {
