@@ -19,7 +19,7 @@ sys-block/megacli amd64
 =dev-qt/qxbsql-0.2 x86 amd64
 <www-plugins/chrome-binary-plugins-39 x86 amd64
 ~sci-electronics/kicad-20130518 x86 amd64
-~sci-geosciences/qgis-2.4.0 x86 amd64
+~sci-geosciences/qgis-2.6.0 x86 amd64
 =media-libs/freetype-2.5.3 x86 amd64
 =sys-libs/zlib-1.2.8-r1 x86 amd64
 ~kde-misc/customizable-weather-1.8.3 x86 amd64
