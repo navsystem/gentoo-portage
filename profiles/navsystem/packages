@@ -22,3 +22,4 @@
 *sys-process/vixie-cron
 *app-admin/logrotate
 *app-shells/gentoo-bashcomp
+*sys-apps/pciutils
