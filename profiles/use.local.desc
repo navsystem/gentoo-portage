@@ -295,11 +295,15 @@ app-backup/bacula:bacula-clientonly - Disable DB support, and just build a clien
 app-backup/bacula:bacula-nodir - Disable building of director
 app-backup/bacula:bacula-nosd - Disable building of storage daemon
 app-backup/bacula:logwatch - Install support files for logwatch
+app-backup/bareos:cephfs - Enable cephfs storage backend
 app-backup/bareos:clientonly - Only install file-daemon (client)
 app-backup/bareos:director - Install director
 app-backup/bareos:fastlz - Enable support vor lz4, lz4hc and lzfast using dev-libs/bareos-fastlzlib
+app-backup/bareos:glusterfs - Enable glusterfs storage backend
+app-backup/bareos:lmdb - enable build of LMDB support for faster accurate backup
 app-backup/bareos:logwatch - Install support files for logwatch
 app-backup/bareos:ndmp - Enable support for NDMP (Network Data Management Protocol)
+app-backup/bareos:rados - Enable rados storage backend
 app-backup/bareos:scsi-crypto - Enable low level SCSI crypto support
 app-backup/bareos:sql-pooling - Enable SQL pooling support
 app-backup/bareos:storage-daemon - Install storage daemon (bareos-sd)
@@ -4670,7 +4674,7 @@ net-analyzer/nmap:ndiff - Install the ndiff utility
 net-analyzer/nmap:nmap-update - Install nmap-update, which uses dev-vcs/subversion to update nmap scripts in your home directory
 net-analyzer/nmap:nping - Install the nping utility
 net-analyzer/nmap:system-lua - Use dev-lang/lua instead of the bundled liblua
-net-analyzer/nmap:zenmap - Install the GTK+ based zenmap utility
+net-analyzer/nmap:zenmap - Install the GTK+ based nmap GUI, zenmap
 net-analyzer/nrpe:command-args - Build support for specifying the command-line arguments from the Nagios/Icinga master. Make sure you understand the implications of this flag as it can be a security risk.
 net-analyzer/nrpe:minimal - Only build the check plugins for Nagios/Icinga, and not the daemon.
 net-analyzer/nsca:crypt - Build support for crypted communication with nsca, through dev-libs/mcrypt. It's recommended not to disable this flag unless all the communication will be handled in an absolutely safe environment.
@@ -4859,6 +4863,11 @@ net-firewall/nufw:plaintext - Add support for authentication with plaintext file
 net-firewall/pftop:altq - Enable altq(4) support — alternate queuing of network packets.
 net-firewall/pglinux:cron - Install cron script
 net-firewall/pglinux:logrotate - Install logrotate.d file
+net-firewall/shorewall:init - Adds the capability to place the firewall in a safe state prior to bringing up the network interfaces
+net-firewall/shorewall:ipv4 - Installs everything needed to create a full IPv4 firewall
+net-firewall/shorewall:ipv6 - Adds the capability to create a full IPv6 firewall (requires net-firewall/shorewall[ipv4])
+net-firewall/shorewall:lite4 - Installs everything needed to just *run* an IPv4 compiled firewall script created with net-firewall/shorewall[ipv4]
+net-firewall/shorewall:lite6 - Installs everything needed to just *run* an IPv6 compiled firewall script created with net-firewall/shorewall[ipv6]
 net-firewall/ufw-frontends:kde - Use kdesu to gain root privileges (note: the flag has lower priority than "policykit")
 net-firewall/ufw-frontends:policykit - Use pkexec to gain root privileges
 net-fs/autofs:dmalloc - Enable debugging with the dmalloc library
@@ -4884,10 +4893,8 @@ net-fs/netatalk:utils - Install afpstats script
 net-fs/nfs-utils:libmount - Link mount.nfs with libmount
 net-fs/nfs-utils:nfsdcld - Enable nfsdcld NFSv4 clientid tracking daemon
 net-fs/nfs-utils:nfsidmap - Enable support for newer nfsidmap helper
-net-fs/nfs-utils:nfsv3 - Enable support for NFSv3
 net-fs/nfs-utils:nfsv4 - Enable support for NFSv4
 net-fs/nfs-utils:nfsv41 - Enable support for NFSv4.1
-net-fs/nfs-utils:nonfsv4 - Disable support for NFSv4
 net-fs/nfs-utils:uuid - Support UUID lookups in rpc.mountd
 net-fs/samba:addns - Enable AD DNS integration
 net-fs/samba:ads - Enable Active Directory support
