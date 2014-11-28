@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16180 2014/11/24 05:10:35 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16182 2014/11/27 09:32:22 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Aaron W. Swenson <titanofold@gentoo.org> (26 Nov 2014)
+# Masked for removal in 30 days. dev-perl/pgperl hasn't been updated
+# in 10 years. Use dev-perl/DBD-Pg or any modern module based on
+# DBD::Pg.
+dev-perl/pgperl
 
 # Patrick Lauer <patrick@gentoo.org> (24 Nov 2014)
 # Missing deps, uninstallable
@@ -832,11 +838,6 @@ net-wireless/madwifi-ng
 # As a result of which, the package is not fully working at the moment
 # but it can still be used to track userland regressions.
 =app-benchmarks/ltp-ltp-2014082
-
-# Alexis Ballier <aballier@gentoo.org> (1 Nov 2012)
-# Still requires ocaml-3, mask it until it is ported. If this does not happen in
-# the near future, we should consider removing it.
-dev-ml/ocamlduce
 
 # Pacho Ramos <pacho@gentoo.org> (25 Oct 2012)
 # obexd changed its API without any warning, it's recommended to ship

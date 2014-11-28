@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.10.1_pre20141101.ebuild,v 1.1 2014/11/01 15:50:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.10.1_pre20141101.ebuild,v 1.3 2014/11/27 10:09:39 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -265,7 +265,8 @@ pkg_postinst() {
 			ewarn "(like bug #485658)."
 			ewarn "Because of this, you will likely need to reconfigure some of"
 			ewarn "your networks. To do this you can rely on Gnome control center,"
-			ewarn "nm-connection-editor or nmtui tools for example."
+			ewarn "nm-connection-editor or nmtui tools for example once updated"
+			ewarn "NetworkManager version is installed."
 		fi
 	else
 		if ! version_is_at_least 0.9.10.0-r1 ${REPLACING_VERSIONS}; then
@@ -275,7 +276,8 @@ pkg_postinst() {
 			ewarn "plugin."
 			ewarn "Because of this, you will likely need to reconfigure some of"
 			ewarn "your networks. To do this you can rely on Gnome control center,"
-			ewarn "nm-connection-editor or nmtui tools for example."
+			ewarn "nm-connection-editor or nmtui tools for example once updated"
+			ewarn "NetworkManager version is installed."
 		fi
 	fi
 
@@ -285,8 +287,7 @@ pkg_postinst() {
 		if grep plugins "${EROOT}etc/NetworkManager/NetworkManager.conf" | grep -q ifnet; then
 			ewarn
 			ewarn "You seem to use 'ifnet' plugin in ${EROOT}etc/NetworkManager/NetworkManager.conf"
-			ewarn "Since it won't be used when running under Systemd, you will need to stop setting"
-			ewarn "ifnet plugin there to allow NetworkManager to work."
+			ewarn "Since it won't be used, you will need to stop setting ifnet plugin there."
 			ewarn
 		fi
 	fi
