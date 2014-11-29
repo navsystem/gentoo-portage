@@ -36,8 +36,8 @@ sys-block/parted device-mapper
 kde-base/kopete oscar
 media-libs/libpng apng
 app-office/openoffice -bash-completion
-net-im/psi extras
-
+net-im/psimedia extras
+net-im/psi iconsets jingle plugins extras
 dev-libs/ecore curl
 dev-libs/e_dbus connman ofono
 dev-libs/ecore -directfb
