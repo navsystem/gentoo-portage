@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-2.3.0.ebuild,v 1.1 2014/11/10 08:36:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-2.3.0.ebuild,v 1.3 2014/12/03 01:59:27 idella4 Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 
 IUSE="doc examples matplotlib mongodb notebook nbconvert octave qt4 +smp test wxwidgets"
 
@@ -52,6 +52,7 @@ DEPEND="${CDEPEND}
 	test? (
 		dev-python/nose[${PYTHON_USEDEP}]
 		dev-python/mock[${PY2_USEDEP}]
+		>=www-servers/tornado-3.1[${PYTHON_USEDEP}]
 	)
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}]
 		dev-python/numpydoc[${PYTHON_USEDEP}]

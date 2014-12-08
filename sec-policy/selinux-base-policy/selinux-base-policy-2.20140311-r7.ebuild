@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-2.20140311-r7.ebuild,v 1.1 2014/11/01 17:26:13 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-2.20140311-r7.ebuild,v 1.3 2014/12/07 13:21:06 perfinion Exp $
 EAPI="5"
 
 inherit eutils
@@ -12,15 +12,11 @@ if [[ ${PV} == 9999* ]]; then
 
 	inherit git-2
 
-	if [[ $PV == 9999* ]] ; then
 	KEYWORDS=""
-else
-	KEYWORDS="~amd64 ~x86"
-fi
 else
 	SRC_URI="http://oss.tresys.com/files/refpolicy/refpolicy-${PV}.tar.bz2
 			http://dev.gentoo.org/~swift/patches/${PN}/patchbundle-${PN}-${PVR}.tar.bz2"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="amd64 x86"
 fi
 
 HOMEPAGE="http://www.gentoo.org/proj/en/hardened/selinux/"
@@ -31,11 +27,6 @@ IUSE="+unconfined"
 RDEPEND="=sec-policy/selinux-base-${PVR}"
 PDEPEND="unconfined? ( sec-policy/selinux-unconfined )"
 DEPEND=""
-if [[ $PV == 9999* ]] ; then
-	KEYWORDS=""
-else
-	KEYWORDS="~amd64 ~x86"
-fi
 
 MODS="application authlogin bootloader clock consoletype cron dmesg fstools getty hostname hotplug init iptables libraries locallogin logging lvm miscfiles modutils mount mta netutils nscd portage raid rsync selinuxutil setrans ssh staff storage su sysadm sysnetwork tmpfiles udev userdomain usermanage unprivuser xdg"
 LICENSE="GPL-2"
@@ -141,9 +132,9 @@ pkg_postinst() {
 	done
 
 	# Relabel depending packages
-	PKGSET="";
+	local PKGSET="";
 	if [ -x /usr/bin/qdepends ] ; then
-		PKGSET=$(/usr/bin/qdepends -Cq -Q ${CATEGORY}/${PN} | grep -v 'sec-policy/selinux-');
+		PKGSET=$(/usr/bin/qdepends -Cq -r -Q ${CATEGORY}/${PN} | grep -v 'sec-policy/selinux-');
 	elif [ -x /usr/bin/equery ] ; then
 		PKGSET=$(/usr/bin/equery -Cq depends ${CATEGORY}/${PN} | grep -v 'sec-policy/selinux-');
 	fi

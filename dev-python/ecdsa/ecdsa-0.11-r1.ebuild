@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ecdsa/ecdsa-0.11-r1.ebuild,v 1.1 2014/11/19 08:57:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ecdsa/ecdsa-0.11-r1.ebuild,v 1.3 2014/12/07 20:20:24 maekke Exp $
 
 EAPI=5
 
 # pypy has test failures with some BadSignatureErrors
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 
 inherit distutils-r1
 
@@ -15,5 +15,5 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz -> ${P}-r1.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~s390 ~sparc ~x86 ~x86-fbsd ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint"
+KEYWORDS="~alpha ~amd64 arm ~hppa ~ia64 ~s390 ~sparc ~x86 ~x86-fbsd ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint"
 IUSE=""

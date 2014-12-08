@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX-Expat/XML-SAX-Expat-0.400.0.ebuild,v 1.3 2014/11/22 18:41:29 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX-Expat/XML-SAX-Expat-0.400.0.ebuild,v 1.5 2014/12/07 13:08:18 zlogene Exp $
 
 EAPI=5
 
@@ -16,8 +16,7 @@ IUSE="test"
 
 RDEPEND=">=dev-perl/XML-SAX-0.15-r1
 	>=dev-perl/XML-NamespaceSupport-1.09
-	dev-perl/XML-Parser
-	dev-lang/perl"
+	dev-perl/XML-Parser"
 DEPEND="${RDEPEND}
 	test? ( dev-perl/Test-Pod
 		dev-perl/Test-Pod-Coverage )"
@@ -30,7 +29,6 @@ src_compile() {
 }
 
 pkg_postinst() {
-	perl-module_pkg_postinst
 	pkg_update_parser add XML::SAX::Expat
 }
 
