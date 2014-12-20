@@ -445,6 +445,7 @@ app-editors/gedit:zeitgeist - Build the plugin to inject events to gnome-extra/z
 app-editors/gedit-plugins:charmap - Insert special characters just by clicking on them
 app-editors/gedit-plugins:git - Shows document changes related to git's HEAD
 app-editors/gedit-plugins:terminal - Embed a terminal in the bottom pane
+app-editors/gedit-plugins:zeitgeist - Build the plugin to inject events to gnome-extra/zeitgeist
 app-editors/gvim:luajit - Use dev-lang/luajit instead of dev-lang/lua
 app-editors/gvim:netbeans - Include netbeans external editor integration support
 app-editors/gvim:racket - Enable support for Scheme using dev-lang/racket
@@ -548,6 +549,7 @@ app-emulation/libspectrum:gcrypt - Use dev-libs/libgcrypt for low-level crypto o
 app-emulation/libvirt:audit - support sys-process/audit
 app-emulation/libvirt:firewalld - DBus interface to iptables/ebtables allowing for better runtime management of your firewall.
 app-emulation/libvirt:fuse - Allow LXC to use sys-fs/fuse for mount points
+app-emulation/libvirt:glusterfs - Enable GlusterFS support via sys-cluster/glusterfs
 app-emulation/libvirt:iscsi - Allow using an iSCSI remote storage server as pool for disk image storage
 app-emulation/libvirt:libvirtd - Builds the libvirtd daemon as well as the client utilities instead of just the client utilities
 app-emulation/libvirt:lvm - Allow using the Logical Volume Manager (sys-apps/lvm2) as pool for disk image storage
@@ -1143,6 +1145,10 @@ app-text/mathtex:png - Generate png images by default instead of gif
 app-text/mupdf:openssl - Use dev-libs/openssl crypto backend
 app-text/pandoc:embed_data_files - Embed data files in binary for relocatable executable.
 app-text/pandoc:http-conduit - Enable downloading of resources over https.
+app-text/pandoc:https - Enable support for downloading of resources over https.
+app-text/pandoc:make-pandoc-man-pages - Build program to regenerate pandoc man pages from README.
+app-text/pandoc:network-uri - Get Network.URI from the network-uri package.
+app-text/pandoc:trypandoc - Build trypandoc cgi executable.
 app-text/pastebinit:crypt - Install pbputs for gpg-encrypted pastes
 app-text/pdf2djvu:graphicsmagick - Enable media-gfx/graphicsmagick support
 app-text/pdfgrep:unac - Removing accents and ligatures before search
@@ -1403,10 +1409,13 @@ dev-haskell/aeson:developer - Operate in developer mode.'
 dev-haskell/aeson-pretty:lib-only - don't build 'aeson-pretty' executable.
 dev-haskell/ansi-terminal:example - Build the example application.
 dev-haskell/ansi-wl-pprint:example - Build the example application.
+dev-haskell/authenticate:network-uri - Get Network.URI from the network-uri package
 dev-haskell/cabal-install:noprefs - Ignore 'preferred-versions' file from hackage's tarball.
 dev-haskell/certificate:executable - Build the executable
 dev-haskell/cgi:extensible-exceptions-in-base - Required to be enabled for >=dev-lang/ghc-7.
+dev-haskell/cgi:network-uri - Get Network.URI from the network-uri package.
 dev-haskell/chell:color-output - use colors in program output
+dev-haskell/cipher-aes:support_aesni - allow compilation with AESNI on system and architecture that supports it.
 dev-haskell/citeproc-hs:bibutils - use Chris Putnam's app-text/bibutils
 dev-haskell/citeproc-hs:embed_data_files - Embed locale files into the library (needed for windows packaging)
 dev-haskell/citeproc-hs:hexpat - use dev-haskell/hexpat instead of dev-haskell/xml for XML parsing
@@ -1415,6 +1424,9 @@ dev-haskell/citeproc-hs:small_base - Choose the new smaller, split-up base packa
 dev-haskell/citeproc-hs:unicode_collation - Use Haskell bindings to the dev-libs/icu
 dev-haskell/cmdargs:quotation - Build quote module
 dev-haskell/cmdargs:testprog - Build the test program
+dev-haskell/comonad:containers - You can disable the use of the `containers` package using `-f-containers`. Disabing this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
+dev-haskell/comonad:contravariant - You can disable the use of the `contravariant` package using `-f-contravariant`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users. If disabled we will not supply instances of `Contravariant`
+dev-haskell/comonad:distributive - You can disable the use of the `distributive` package using `-f-distributive`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users. If disabled we will not supply instances of `Distributive`
 dev-haskell/comonad:test-doctests - Run the doctests test suite
 dev-haskell/conduit:nohandles - experimental code to use raw system calls in place of handles. Not recommended for general use
 dev-haskell/configfile:buildtests - Build the executable to run unit tests.
@@ -1424,6 +1436,7 @@ dev-haskell/crypto-conduit:conduit11 - Use conduit >= 1.1.
 dev-haskell/crypto-pubkey:benchmark - Build benchmarks.
 dev-haskell/cryptohash:cryptoapi - Defines crypto-api instances
 dev-haskell/dataenc:tests - Build unit and quickcheck tests.
+dev-haskell/dav:network-uri - Get Network.URI from the network-uri package.
 dev-haskell/distributive:lib-werror - Compile with the ghc -Werror option
 dev-haskell/encoding:systemencoding - Provide the getSystemEncoding action to query the locale.
 dev-haskell/entropy:halvm - Build for the HaLVM.
@@ -1433,6 +1446,7 @@ dev-haskell/glut:usenativewindowslibraries - When compiling under Windows, use t
 dev-haskell/gtk:fmode-binary - Set the default file translation mode for file I/O operations to _O_BINARY. Some GTK libraries open image files without specifing binary mode. If you have trouble loading gtk in ghci, then it may help to turn this option off.
 dev-haskell/gtk:gio - Depend on GIO package, thereby enabling certain features.
 dev-haskell/gtk2hs-buildtools:closuresignals - Use the the GClosure-based signals implementation.
+dev-haskell/happstack-server:network-uri - Get Network.URI from the network-uri package
 dev-haskell/happstack-server:template_haskell - Description: Template Haskell is available on this system
 dev-haskell/hashable:sse4_1 - Enable optimization for SSE4_1 capable processors (Intel Core 2 Penryn and later chips)
 dev-haskell/hashed-storage:diff - Provide the Storage.Hashed.Diff module.
@@ -1440,17 +1454,28 @@ dev-haskell/hashed-storage:hpc - Compile with the profiling ghc flag -fhpc.
 dev-haskell/hashtables:bounds-checking - if on, use bounds-checking array accesses
 dev-haskell/hashtables:portable - if on, use only pure Haskell code and no GHC extensions.
 dev-haskell/hashtables:sse4_1 - Enable optimization for SSE4_1 capable processors (Intel Core 2 Penryn and later chips)
+dev-haskell/hashtables:sse4_2 - Enables SSE4.2 optimizations: Nehalem-based Intel Core i7 or later.
 dev-haskell/hashtables:unsafe-tricks - turn on unsafe GHC tricks
 dev-haskell/haskeline:legacy-encoding - Use legacy iconv encoding for POSIX. This is only intended for testing.
 dev-haskell/haskeline:libiconv - Explicitly link against the libiconv library.
 dev-haskell/haskeline:terminfo - Use the terminfo package for POSIX consoles.
 dev-haskell/highlighting-kate:executable - Build the Highlight executable.
 dev-haskell/highlighting-kate:pcre-light - Use the pcre-light library instead of regex-pcre-builtin.
+dev-haskell/hlint:gpl - Use GPL libraries, specifically hscolour.
+dev-haskell/hs3:network-uri - Get Network.URI from the network-uri package.
 dev-haskell/hslogger:buildtests - Build the executable to run unit tests.
+dev-haskell/hslua:apicheck - Compile Lua with -DLUA_USE_APICHECK..
+dev-haskell/hslua:system-lua - Use the system-wide lua instead of the bundled copy.
 dev-haskell/hsopenssl:fast-bignum - Enable fast moving of bignums between OpenSSL and GMP (GHC Only)
 dev-haskell/hstringtemplate:quasi-quotation - Build module providing a quasi-quoter
 dev-haskell/hstringtemplate:syb-with-class - Generic instances for TOSElem
+dev-haskell/http:conduit10 - Use version 1.0.x or below of the conduit package (for the test suite).
+dev-haskell/http:network-uri - Get Network.URI from the network-uri package.
+dev-haskell/http-client:network-uri - Get Network.URI from the network-uri package.
 dev-haskell/httpd-shed:buildexamples - Build example executables.
+dev-haskell/httpd-shed:network-uri - Get Network.URI from the network-uri package.
+dev-haskell/hxt:network-uri - Get Network.URI from the network-uri package.
+dev-haskell/ieee754:big_endian - Build for a big endian machine. Beware that only little endian machines have been tested.
 dev-haskell/json:generic - Add support for generic encoder (dev-haskell/syb)
 dev-haskell/json:parsec - Add support for parsing with Parsec
 dev-haskell/json:pretty - Add support for using pretty printing combinators
@@ -1481,10 +1506,17 @@ dev-haskell/persistent:nooverlap - Use OverlappingInstances only for String. Onl
 dev-haskell/persistent-sqlite:build-sanity-exe - Build a sanity check test executable.
 dev-haskell/persistent-sqlite:systemlib - Use the system-wide sqlite library.
 dev-haskell/quickcheck:template_haskell - Enable additional test modules requiring Template Haskell support.
+dev-haskell/recaptcha:network-uri - Get Network.URI from the network-uri package.
+dev-haskell/reflection:th - Enable template haskell.
 dev-haskell/rfc5051:mkunicodedata - build codes generator itself
 dev-haskell/scientific:bytestring-builder - Provide the Data.ByteString.Builder.Scientific module (requires bytestring >= 0.10).
+dev-haskell/semigroupoids:comonad - You can disable the use of the `comonad` package using `-f-comonad`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users. If disabled we will not supply instances of `Comonad`
+dev-haskell/semigroupoids:containers - You can disable the use of the `containers` package using `-f-containers`. Disabing this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
+dev-haskell/semigroupoids:contravariant - You can disable the use of the `contravariant` package using `-f-contravariant`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users. If disabled we will not supply instances of `Contravariant`
+dev-haskell/semigroupoids:distributive - You can disable the use of the `distributive` package using `-f-distributive`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users. If disabled we will not supply instances of `Distributive`
 dev-haskell/semigroups:bytestring - You can disable the use of the `bytestring` package using USE=-bytestring. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
 dev-haskell/semigroups:containers - You can disable the use of the `containers` package using USE=-containers. Disabing this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
+dev-haskell/semigroups:deepseq - You can disable the use of the `deepseq` package using `-f-deepseq`. Disabing this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
 dev-haskell/semigroups:hashable - You can disable the use of the `hashable` package using USE=-hashable. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users. If set we will not supply an instance of `Hashable`.
 dev-haskell/semigroups:text - You can disable the use of the `text` package using USE=-text. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
 dev-haskell/semigroups:unordered-containers - You can disable the use of the `unordered-containers` package using USE=-unordered-containers. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
@@ -1504,8 +1536,10 @@ dev-haskell/snap-core:portable - No non-haskell unportable code.
 dev-haskell/snap-server:openssl - enable https support using dev-haskell/hsopenssl
 dev-haskell/snap-server:portable - no non-haskell unportable code.
 dev-haskell/tagsoup:download - Build with Download module.
+dev-haskell/tagsoup:testprog - Build the test program.
 dev-haskell/tasty:colors - Enable colorful output
-dev-haskell/texmath:cgi - Build texmath-cgi executable.
+dev-haskell/tasty-quickcheck:old-quickcheck - Use Quick-Check < 2.7.
+dev-haskell/texmath:executable - Compile test executable.
 dev-haskell/text:developer - operate in developer mode
 dev-haskell/tls:compat - Accept SSLv2 compatible handshake
 dev-haskell/transformers-base:orphaninstances - Build instances for orphan datatypes.
@@ -1525,8 +1559,11 @@ dev-haskell/warp:allow-sendfilefd - Allow use of sendfileFd (not available on GN
 dev-haskell/warp:warp-debug - Add additional debuging information
 dev-haskell/x11:screensaver - whether to build XScreenSaver.
 dev-haskell/x509-store:executable - Build the executable
+dev-haskell/xss-sanitize:network-uri - Get Network.URI from the network-uri package.
 dev-haskell/yaml:no-exe - don't install the yaml2json executable
 dev-haskell/yaml:system-libyaml - Use system libyaml instead on generic one
+dev-haskell/yesod-auth:network-uri - Get Network.URI from the network-uri package
+dev-haskell/yesod-form:network-uri - Get Network.URI from the network-uri package
 dev-haskell/zip-archive:executable - Build the Zip executable.
 dev-java/ant:antlr - Enable ANTLR Ant tasks
 dev-java/ant:bcel - Enable bcel (bytecode manipulation) Ant tasks
@@ -2372,6 +2409,9 @@ dev-qt/qtsql:exceptions - Add support for exceptions - like catching them inside
 dev-qt/qtsql:qt3support - Enable the Qt3Support libraries for Qt4
 dev-qt/qtsvg:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
 dev-qt/qttest:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
+dev-qt/qtwayland:egl - Use EGL instead of GLX to manage OpenGL contexts
+dev-qt/qtwayland:qml - Build QML/QtQuick bindings
+dev-qt/qtwayland:wayland-compositor - Build Qt compositor for wayland
 dev-qt/qtwebkit:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
 dev-qt/qtwebkit:gstreamer - Enable HTML5 audio/video support via media-libs/gstreamer:1.0
 dev-qt/qtwebkit:gstreamer010 - Enable HTML5 audio/video support via media-libs/gstreamer:0.10
@@ -2556,6 +2596,13 @@ dev-vcs/bzr-gtk:nautilus - Integrate with Nautilus file manager
 dev-vcs/cssc:valgrind - Enable usage of dev-util/valgrind in tests
 dev-vcs/cvs:server - Enable server support
 dev-vcs/cvs2svn:bazaar - Support for dev-vcs/bzr
+dev-vcs/darcs:color - Use ansi color escapes.
+dev-vcs/darcs:http - Use the pure Haskell HTTP package for HTTP support.
+dev-vcs/darcs:libiconv - Explicitly link against the libiconv library.
+dev-vcs/darcs:network-uri - Get Network.URI from the network-uri package.
+dev-vcs/darcs:optimize - Build with optimizations (-O2).
+dev-vcs/darcs:terminfo - Use the terminfo package for enhanced console support.
+dev-vcs/darcs:threaded - Use threading and SMP support.
 dev-vcs/fossil:json - Enable the JSON API of Fossil's wiki
 dev-vcs/fossil:lineedit - Enable line-editing with libedit or readline
 dev-vcs/fossil:sqlite - Use the system SQLite instead of the bundled one
@@ -2878,6 +2925,7 @@ games-strategy/warzone2100:qt4 - Use qt-gui/qt-opengl for backend rendering inst
 games-strategy/wesnoth:server - Enable compilation of server
 games-util/gslist:web - Enable the web interface
 games-util/pyfa:graph - Enable support for graphs
+games-util/wit:fuse - Enable image mount support via fuse
 gnome-base/gconf:ldap - Build backend which enables default mail accounts, addressbooks and calendars for Evolution to be configured using each user's LDAP entry."
 gnome-base/gdm:audit - Enable support for sys-process/audit
 gnome-base/gdm:fprint - Enables experimental fingerprint authentication using sys-auth/fprintd
@@ -3499,8 +3547,11 @@ media-gfx/imagemagick:q64 - Set quantum depth value to 64
 media-gfx/imagemagick:q8 - Set quantum depth value to 8
 media-gfx/imagemagick:webp - Enable webp image format support using media-libs/libwebp
 media-gfx/imageworsener:webp - enable webp image format support
+media-gfx/inkscape:cdr - Enable support for CorelDRAW Diagrams
 media-gfx/inkscape:dia - pull in app-office/dia for dia import extension
-media-gfx/inkscape:inkjar - enables support for OpenOffice.org SVG jar files
+media-gfx/inkscape:inkjar - Enable support for OpenOffice.org SVG jar files
+media-gfx/inkscape:visio - Enable support for Microsoft Visio Diagrams
+media-gfx/inkscape:wpg - Enable support for WordPerfect Graphics
 media-gfx/iscan-plugin-gt-f500:minimal - Install the firmware only, and not the plugin.
 media-gfx/jpeg2ps:metric - Default to A4 paper size
 media-gfx/k3d:3ds - Enable support for 3D Studio models
@@ -3516,6 +3567,8 @@ media-gfx/nvidia-texture-tools:cuda - Enable NVIDIA CUDA toolkit support
 media-gfx/nvidia-texture-tools:glew - Enable support for The OpenGL Extension Wrangler Library (media-libs/glew)
 media-gfx/openclipart:gzip - Compresses clip art using gzip
 media-gfx/openexr_viewers:cg - Add support for nvidia's cg shaders
+media-gfx/photoqt:exiv2 - Use media-gfx/exiv2 as optional dependency
+media-gfx/photoqt:graphicsmagick - Use media-gfx/graphicsmagick as optional dependency
 media-gfx/pngcrush:system-libs - Use libpng and libz provided by system
 media-gfx/potrace:metric - default to a4 paper size and metric measurement
 media-gfx/povray:io-restrictions - POV-Ray's mechanism for control of I/O operations
@@ -3543,7 +3596,6 @@ media-libs/aubio:double-precision - Compile in double precision mode.
 media-libs/avidemux-core:aften - Enable A/52 (AC-3) audio encoder support.
 media-libs/avidemux-core:amr - Enable Adaptive Multi-Rate format support via media-libs/opencore-amr.
 media-libs/avidemux-core:system-ffmpeg - Use the ffmpeg provided by the system.
-media-libs/avidemux-core:vaapi - Enable VAAPI (Video Acceleration API) for hardware decoding.
 media-libs/avidemux-plugins:aften - Enable A/52 (AC-3) audio encoder support.
 media-libs/avidemux-plugins:amr - Enable Adaptive Multi-Rate format support via media-libs/opencore-amr.
 media-libs/avidemux-plugins:faac - Enable free MPEG-4 audio codecs support via media-libs/faac.
@@ -3780,7 +3832,6 @@ media-libs/xine-lib:imagemagick - Build the ImageMagick-based image decoder plug
 media-libs/xine-lib:mad - Build the media-libs/libmad based mp3 decoder. This mp3 decoder has superior support compared to the one coming from FFmpeg that is used as a fallback. If you experience any bad behaviour with mp3 files (skipping, distorted sound) make sure you enabled this USE flag.
 media-libs/xine-lib:mmap - Use mmap() function while reading file from local disks. Using mmap() will use more virtual memory space, but leaves to the Kernel the task of caching the file's data. mmap() access should be faster, but might misbehave if the device where the file resides in is removed during playback.
 media-libs/xine-lib:truetype - Use media-libs/freetype for font rendering and media-libs/fontconfig for font discovery. Enabling this USE flag will allow OSD (such as subtitles) to use more advanced font and to more easily select which font to use. The support for TrueType fonts in xine-lib is still experimental, and might not be as good looking as the bitmap fonts used with this USE flag disabled.
-media-libs/xine-lib:vaapi - Enables VAAPI (Video Acceleration API) for hardware decoding
 media-libs/xine-lib:vdr - Build the VDR plugin
 media-libs/xine-lib:vidix - Enable support for vidix video output.
 media-libs/xine-lib:vis - Adds support for SIMD optimizations for UltraSPARC processors.
@@ -4011,7 +4062,9 @@ media-sound/lyvi:mpris - Enable MPRIS support
 media-sound/mangler:espeak - Text to speech engine
 media-sound/mangler:g15 - Logitech g15 lcd support
 media-sound/mangler:opus - Codec specialized for speech over the internet
+media-sound/mixxx:hid - Enable HID controller support
 media-sound/mixxx:shout - Enable broadcasting support via media-libs/libshout
+media-sound/mixxx:vamp - Enable vamp analyzing plugins support
 media-sound/moc:cache - Enable tags caching support
 media-sound/moc:magic - Use libmagic to determine mimetypes
 media-sound/moc:sid - Build with SID (Commodore 64 Audio) support
@@ -4178,6 +4231,7 @@ media-sound/xwax:fallback - Sets runtime dependencies to support decoding "other
 media-sound/xwax:jack - Adds support for audio input/output via the JACK Audio Connection Kit.
 media-sound/xwax:mp3 - Sets runtime dependencies to support decoding MP3 audio.
 media-sound/xwax:oss - Adds support for OSS (open sound system) audio input/output.
+media-sound/yoshimi:lv2 - Add support for Ladspa V2
 media-tv/freevo:mixer - Enable support for adjusting volume via media-sound/aumix
 media-tv/freevo:tv - Enable support for the tv guide plugin
 media-tv/gentoo-vdr-scripts:nvram - Add support for using nvram-wakeup to set wakeup time in bios
@@ -4200,7 +4254,6 @@ media-tv/mythtv:lcd - Tells MythTV that you have an instance of app-misc/lcdproc
 media-tv/mythtv:lirc - Adds LIRC support directly to MythTV allowing for built in control via a LIRC device.
 media-tv/mythtv:perl - Builds the perl bindings for MythTV. Allows you to write scripts in Perl to control your MythTV setup or communicate with it.
 media-tv/mythtv:raop - Remote Audio Output Protocol (aka AirTunes/AirPlay)
-media-tv/mythtv:vaapi - Enables VAAPI (Video Acceleration API) for hardware decoding
 media-tv/mythtv:xmltv - Pulls in the media-tv/xmltv TV listing grabbers for users not using Schedules Direct.
 media-tv/tvbrowser:themes - Install extra theme packs
 media-tv/tvheadend:ccache - Use dev-util/ccache
@@ -4224,7 +4277,6 @@ media-tv/xbmc:pvr - Enable MythTV support
 media-tv/xbmc:rsxs - Enable really slick X screensavers
 media-tv/xbmc:rtmp - Enable Real Time Messaging Protocol using librtmp
 media-tv/xbmc:sftp - Support browsing files over SFTP
-media-tv/xbmc:vaapi - Enables VAAPI (Video Acceleration API) for hardware decoding
 media-tv/xbmc:webserver - Enable internal webserver
 media-tv/xbmc:xrandr - Support X randr extension
 media-tv/xmltv:ar - Argentina tv listing grabber
@@ -4263,7 +4315,6 @@ media-video/arista:faac - Use external faac library for AAC encoding
 media-video/arista:nautilus - Add an entry in the Nautilus context menu to transcode media files for a specified device.
 media-video/avidemux:aften - Enable A/52 (AC-3) audio encoder support.
 media-video/avidemux:amr - Enable Adaptive Multi-Rate format support via media-libs/opencore-amr.
-media-video/avidemux:vaapi - Enable VAAPI (Video Acceleration API) for hardware decoding.
 media-video/avidemux:vpx - Enable VP8 codec support via media-libs/libvpx.
 media-video/bombono-dvd:gnome - Use GVFS for desktop integration
 media-video/chaplin:transcode - Enable DVD ripping and transcoding
@@ -4324,7 +4375,6 @@ media-video/ffmpeg:sse4_2 - Enables SSE4.2 optimizations: Nehalem-based Intel Co
 media-video/ffmpeg:ssh - Enable SSH/sftp support via net-libs/libssh.
 media-video/ffmpeg:ssse3 - Faster floating point optimization for SSSE3 capable chips (Intel Core 2 and later chips)
 media-video/ffmpeg:twolame - Enables MP2 encoding via media-sound/twolame as an alternative to the internal encoder.
-media-video/ffmpeg:vaapi - Enables VAAPI (Video Acceleration API) for hardware decoding
 media-video/ffmpeg:vis - Adds support for SIMD optimizations for UltraSPARC processors.
 media-video/ffmpeg:vpx - Enables vp8 codec support using libvpx: Decoding vp8 does not require this to be enabled but libvpx can also be used for decoding; encoding vp8 requires this useflag to be enabled though.
 media-video/ffmpeg:webp - Enables WebP encoding with media-libs/libwebp.
@@ -4340,7 +4390,7 @@ media-video/handbrake:fdk - Support for encoding AAC using media-libs/fdk-aac.
 media-video/handbrake:ffmpeg - Use FFmpeg from media-video/ffmpeg to decode MPEG-2 instead of media-plugins/gst-plugins-mpeg2dec.
 media-video/handbrake:gstreamer - Support for the streaming media framework from media-libs/gstreamer.
 media-video/handbrake:gtk - Support for Gimp ToolKit + from x11-libs/gtk+, requirement for a GUI-based HandBrake.
-media-video/hwdecode-demos:vaapi - Enables VAAPI (Video Acceleration API) for hardware decoding
+media-video/handbrake:libav-aac - Support for encoding AAC using media-libs/libav's internal encoder.
 media-video/kdenlive:nepomuk - Enable Nepomuk based semantic desktop support (deprecated)
 media-video/kino:gpac - Enable GPAC support when exporting to 3GPP format
 media-video/kmplayer:npp - Compile the npp backend that plays xembed style browser plugins.
@@ -4367,7 +4417,6 @@ media-video/libav:schroedinger - Enable Dirac video support (an advanced royalty
 media-video/libav:ssl - Enable SSL/TLS support using dev-libs/openssl or dev-libs/gnutls.
 media-video/libav:ssse3 - faster floating point optimization for SSSE3 capable chips (Intel Core 2 and later chips).
 media-video/libav:tools - Build and install small tools like aviocat, cws2fws, graph2dot, ismindex, qt-faststart.
-media-video/libav:vaapi - Enable VAAPI (Video Acceleration API) for hardware decoding.
 media-video/libav:vis - Adds support for SIMD optimizations for UltraSPARC processors.
 media-video/libav:vpx - Enable vp8 encoding support using libvpx.
 media-video/libav:webp - Enable WebP encoding with media-libs/libwebp.
@@ -4469,7 +4518,6 @@ media-video/mpv:quvi - Enable support for streaming sites using media-libs/libqu
 media-video/mpv:radio - Enable V4L2 radio interface and support
 media-video/mpv:sdl - Enable media-libs/libsdl2 based video and audio outputs
 media-video/mpv:shm - Enable support for shm
-media-video/mpv:vaapi - Enable VAAPI (Video Acceleration API) for hardware decoding
 media-video/mpv:vf-dlopen - Install additional video filters for using with -vf dlopen
 media-video/noad:libmpeg2 - Support for libmpeg2 library
 media-video/ogmrip:ogm - Support for OGM container format
@@ -4571,7 +4619,6 @@ media-video/vlc:swscale - Enables image scaling and conversion via libswscale (p
 media-video/vlc:tremor - Enables tremor, a fixed-point version of the Ogg Vorbis decoder.
 media-video/vlc:twolame - Enables twolame support (MPEG Audio Layer 2 encoder).
 media-video/vlc:upnp - Enables support for the Intel SDK stack based UPnP discovery module instead of CyberLink.
-media-video/vlc:vaapi - Enables VAAPI (Video Acceleration API) for hardware decoding
 media-video/vlc:vcdx - Enables VCD with navigation via libvcdinfo (depends on cdio)
 media-video/vlc:vlm - New videolan (media) manager (vlm), a little manager designed to launch and manage multiple streams from within one instance of VLC.
 media-video/vlc:vpx - Enables the decoder(s) from the WebM VP8 / VP9 Codec SDK.
@@ -4758,6 +4805,7 @@ net-analyzer/wireshark:gtk3 - Build the wireshark executable with a GTK+ UI vers
 net-analyzer/wireshark:netlink - Use dev-libs/libnl
 net-analyzer/wireshark:pcap - Use net-libs/libpcap for network packet capturing (build dumpcap, rawshark)
 net-analyzer/wireshark:qt4 - Build the wireshark executable with an experimental Qt UI instead of GTK+.
+net-analyzer/wireshark:sbc - Use media-libs/sbc for playing back SBC encoded packets
 net-analyzer/wireshark:smi - Use net-libs/libsmi to resolve numeric OIDs into human readable format
 net-analyzer/wireshark:sse4_2 - Support SSE4.2 (Streaming SIMD Extensions 4.2) instructions
 net-analyzer/zabbix:agent - Enable zabbix agent (for to-be-monitored machines)
@@ -5554,11 +5602,13 @@ net-misc/cgminer:ants1 - Enable support for Antminer S1 Bitmain
 net-misc/cgminer:ants2 - Enable support for Antminer S2 Bitmain
 net-misc/cgminer:avalon - Enable support for Avalon ASICs
 net-misc/cgminer:avalon2 - Enable support for Avalon2 ASICs
+net-misc/cgminer:avalon4 - Enable support for Avalon4 ASICs
 net-misc/cgminer:bab - Enable support for BlackArrow Bitfury
 net-misc/cgminer:bflsc - Enable support for BFL ASICs
 net-misc/cgminer:bitforce - Enable support for mining with ButterFly Labs BitFORCE FPGAs
 net-misc/cgminer:bitfury - Enable support for mining with BitFury ASICs
 net-misc/cgminer:bitmine_A1 - Enable support for mining with Bitmine.ch A1 ASICs
+net-misc/cgminer:blockerupter - Enable support for mining with BlockRupter ASICs
 net-misc/cgminer:cointerra - Enable support for mining with Cointerra ASICs
 net-misc/cgminer:drillbit - Enable support for mining with Drillbit BitFury ASICs
 net-misc/cgminer:hashfast - Enable support for mining with Hashfast
@@ -6398,6 +6448,8 @@ sci-libs/openmm:opencl - enable opencl back-end
 sci-libs/openmm:wrappers - build wrappers for Python, C and Fortran
 sci-libs/orocos_kdl:models - Build models for some well known robots.
 sci-libs/pcl:cuda - Adds support for NVIDIA CUDA.
+sci-libs/pcl:openni - Adds support for Kinect-like 3D sensors devices with dev-libs/OpenNI.
+sci-libs/pcl:openni2 - Adds support for Kinect-like 3D sensors devices with dev-libs/OpenNI2 (should be preferred over openni).
 sci-libs/pcl:pcap - Adds pcap file capabilities in some drivers.
 sci-libs/pcl:qhull - Adds convex-hull operation support via media-libs/qhull.
 sci-libs/pcl:tutorials - Builds and installs tutorials.
@@ -6408,6 +6460,7 @@ sci-libs/plplot:octave - Add bindings for sci-mathematics/octave
 sci-libs/plplot:pdl - Add bindings for dev-perl/PDL
 sci-libs/plplot:qhull - Add bindings for media-libs/qhull
 sci-libs/plplot:shapefile - Enable support for ESRI shapefiles
+sci-libs/rtabmap:openni2 - Adds support for Kinect-like 3D sensors devices with dev-libs/OpenNI2.
 sci-libs/scikits_image:freeimage - Enable support for image i/o via media-libs/freeimage
 sci-libs/scikits_image:pyamg - Enable support for algebraic solvers via dev-python/pyamg
 sci-libs/scipy:sparse - Adds support for sparse solving with sci-libs/umfpack
@@ -6446,6 +6499,7 @@ sci-libs/vtk:views - Building Views modules
 sci-libs/xkaapi:blas - Kaapi BLAS tasks for PLASMA
 sci-libs/xkaapi:gpu - Build library for gpu threading
 sci-mathematics/Macaulay2:optimization - Accept upstream's choices for -O option, i.e. -O3 almost everywhere.
+sci-mathematics/agda:cpphs - Use cpphs instead of cpp.
 sci-mathematics/agda:epic - Add support for the epic compiler.
 sci-mathematics/agda:stdlib - Install the standard library.
 sci-mathematics/agda-stdlib:ffi - Install agda-lib-ffi for compilation using the MAlonzo backend
@@ -6539,7 +6593,6 @@ sci-physics/geant:vrml - Enable output of geant4 in vrml formats
 sci-physics/hepmc:cm - Build with cm instead of default mm for length units
 sci-physics/hepmc:gev - Build with GeV instead of default MeV for momentum units
 sci-physics/lammps:lammps-memalign - Enables the use of the posix_memalign() call instead of malloc() when large chunks or memory are allocated by LAMMPS
-sci-physics/lammps:lammps-package-voronoi - Voronoi tesselations
 sci-physics/lammps:package-dipole - point dipole particles
 sci-physics/lammps:package-meam - modified EAM potential
 sci-physics/lammps:package-rigid - rigid bodies
@@ -6712,8 +6765,10 @@ sys-apps/systemd:kmod - Enable kernel module loading via sys-apps/kmod
 sys-apps/systemd:lz4 - Enable lz4 compression for the journal
 sys-apps/systemd:qrcode - Enable qrcode output support in journal
 sys-apps/systemd:seccomp - Enable system call filtering via seccomp
+sys-apps/systemd:sysv-utils - Install sysvinit compatibility symlinks and manpages
 sys-apps/systemd:terminal - Enable experimental userspace virtual terminal support
 sys-apps/systemd:vanilla - Disable Gentoo-specific behavior and compatibility quirks
+sys-apps/systemd:xkb - Validate XKB keymap in logind
 sys-apps/tcp-wrappers:netgroups - Support matching NIS (host) netgroup names via the @netgroup syntax (if you don't know what this means, you most likely do not need it)
 sys-apps/timer_entropyd:debug - Enable printf debugging and logging to the syslog at DEBUG level
 sys-apps/tuxonice-userui:fbsplash - Add support for framebuffer splash
@@ -7227,7 +7282,6 @@ sys-process/lsof:rpc - support looking up RPC service info
 sys-process/procps:modern-top - Enables new startup defaults of top. Keeps old defaults if disabled
 sys-process/procps:ncurses - Build programs that use ncurses: top, slabtop, watch
 virtual/ffmpeg:opus - Use the external opus library for encoding and decoding.
-virtual/ffmpeg:vaapi - Enables VAAPI (Video Acceleration API) for hardware decoding
 virtual/linux-sources:firmware - Install linux kernel firmware
 virtual/mpi:romio - Enable romio, a high-performance portable MPI-IO
 virtual/mysql:embedded - Build embedded server (libmysqld)
@@ -7316,6 +7370,7 @@ www-client/google-chrome:plugins - Add system plugins path to launcher
 www-client/google-chrome-beta:plugins - Add system plugins path to launcher
 www-client/google-chrome-unstable:plugins - Add system plugins path to launcher
 www-client/luakit:luajit - Use the lua just-in-time compiler dev-lang/luajit instead of dev-lang/lua, which should make luakit faster.
+www-client/luakit:pax_kernel - Use paxctl to mark the luakit binary.
 www-client/lynx:gnutls - Use gnutls library for HTTPS support (openssl is the default library for HTTPS support).
 www-client/lynx:ssl - Enable HTTPS support.
 www-client/midori:deprecated - Enable GTK+-2 instead of GTK+-3 because of external plugins like adobe-flash
@@ -7391,7 +7446,6 @@ www-plugins/gnash:openvg - Rendering based on the OpenVG graphics acceleration A
 www-plugins/gnash:sdl-sound - Enable SDL audio output for the standalone player
 www-plugins/gnash:ssh - Enable using SSH for network authentication in libnet
 www-plugins/gnash:ssl - Enable directly using OpenSSL in libnet (not needed for nsplugin ssl support)
-www-plugins/gnash:vaapi - Enables VAAPI (Video Acceleration API) for hardware decoding
 www-plugins/lightspark:gles - Replace default OpenGL renderer with GLESv2
 www-plugins/lightspark:rtmp - Enable Real Time Messaging Protocol using librtmp
 www-servers/apache:apache2_modules_access_compat - Group authorizations based on host (name or IP address). Available as a compatibility module with previous versions.
