@@ -1,13 +1,15 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/harfbuzz-0.9.23.ebuild,v 1.17 2014/04/21 10:29:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/harfbuzz-0.9.37.ebuild,v 1.1 2014/12/27 20:47:26 dilfridge Exp $
 
 EAPI=5
 
 EGIT_REPO_URI="git://anongit.freedesktop.org/harfbuzz"
-[[ ${PV} == 9999 ]] && inherit git-2 autotools
+[[ ${PV} == 9999 ]] && inherit git-r3 autotools
 
-inherit eutils libtool autotools
+PYTHON_COMPAT=( python{2_6,2_7} )
+
+inherit eutils libtool multilib-minimal python-any-r1
 
 DESCRIPTION="An OpenType text shaping engine"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/HarfBuzz"
@@ -16,22 +18,22 @@ HOMEPAGE="http://www.freedesktop.org/wiki/Software/HarfBuzz"
 LICENSE="Old-MIT ISC icu"
 SLOT="0/0.9.18" # 0.9.18 introduced the harfbuzz-icu split; bug #472416
 [[ ${PV} == 9999 ]] || \
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~x64-macos ~x86-macos ~x64-solaris"
-# TODO: +introspection when it's closer to finished and useful (0.9.21 hopefully)
-IUSE="+cairo +glib +graphite icu introspection static-libs +truetype"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~x64-macos ~x86-macos ~x64-solaris"
+IUSE="+cairo +glib +graphite icu +introspection static-libs test +truetype"
 REQUIRED_USE="introspection? ( glib )"
 
 RDEPEND="
 	cairo? ( x11-libs/cairo:= )
-	glib? ( dev-libs/glib:2 )
-	graphite? ( media-gfx/graphite2:= )
-	icu? ( dev-libs/icu:= )
+	glib? ( >=dev-libs/glib-2.34.3:2[${MULTILIB_USEDEP}] )
+	graphite? ( >=media-gfx/graphite2-1.2.1:=[${MULTILIB_USEDEP}] )
+	icu? ( >=dev-libs/icu-51.2-r1:=[${MULTILIB_USEDEP}] )
 	introspection? ( >=dev-libs/gobject-introspection-1.34 )
-	truetype? ( media-libs/freetype:2= )
+	truetype? ( >=media-libs/freetype-2.5.0.1:2=[${MULTILIB_USEDEP}] )
 "
 DEPEND="${RDEPEND}
 	dev-util/gtk-doc-am
 	virtual/pkgconfig
+	test? ( ${PYTHON_DEPS} )
 "
 # eautoreconf requires gobject-introspection-common
 # ragel needed if regenerating *.hh files from *.rl
@@ -39,6 +41,10 @@ DEPEND="${RDEPEND}
 	>=dev-libs/gobject-introspection-common-1.34
 	dev-util/ragel
 "
+
+pkg_setup() {
+	use test && python-any-r1_pkg_setup
+}
 
 src_prepare() {
 	if [[ ${CHOST} == *-darwin* || ${CHOST} == *-solaris* ]] ; then
@@ -60,21 +66,26 @@ src_prepare() {
 	elibtoolize # for Solaris
 }
 
-src_configure() {
+multilib_src_configure() {
+	ECONF_SOURCE="${S}" \
 	econf \
 		--without-coretext \
 		--without-uniscribe \
 		$(use_enable static-libs static) \
-		$(use_with cairo) \
+		$(multilib_native_use_with cairo) \
 		$(use_with glib) \
 		$(use_with glib gobject) \
 		$(use_with graphite graphite2) \
 		$(use_with icu) \
-		$(use_enable introspection) \
+		$(multilib_native_use_enable introspection) \
 		$(use_with truetype freetype)
+
+	if multilib_is_native_abi; then
+		ln -s "${S}"/docs/reference/html docs/reference/html || die
+	fi
 }
 
-src_install() {
-	default
+multilib_src_install_all() {
+	einstalldocs
 	prune_libtool_files --modules
 }
