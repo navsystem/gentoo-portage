@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16246 2014/12/26 11:03:07 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16248 2014/12/28 21:00:04 titanofold Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,16 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Aaron W. Swenson <titanofold@gentoo.org> (28 Dec 2014)
+# Split ebuilds are no longer maintained. Migrate to the unified
+# ebuilds invoking the following, substituting SLOT for the desired
+# slot and optionally enabling the server and/or docs USE flags:
+#   emerge dev-db/postgresql:SLOT
+# No further action is required.
+dev-db/postgresql-docs
+dev-db/postgresql-base
+dev-db/postgresql-server
 
 # Mike Gilbert <floppym@gentoo.org> (25 Dec 2014)
 # Deprecated PIL imports, bug 471552.
@@ -305,27 +315,6 @@ www-apps/trac-downloads
 # Eray Aslan <eras@gentoo.org> (11 Nov 2014)
 # Mask beta releases
 =net-proxy/squid-3.5*
-
-# Ben de Groot <yngwin@gentoo.org> (7 Nov 2014)
-# Unmaintained, no longer supported, and starting to throw compilation
-# errors (bug #513906, bug #528372). Masked for removal in 30 days.
-# Update to lxqt-base/* packages.
-razorqt-base/razorqt-appswitcher
-razorqt-base/razorqt-autosuspend
-razorqt-base/razorqt-config
-razorqt-base/razorqt-data
-razorqt-base/razorqt-desktop
-razorqt-base/razorqt-kbshortcuts
-razorqt-base/razorqt-libs
-razorqt-base/razorqt-lightdm-greeter
-razorqt-base/razorqt-meta
-razorqt-base/razorqt-notifications
-razorqt-base/razorqt-openssh-askpass
-razorqt-base/razorqt-panel
-razorqt-base/razorqt-policykit
-razorqt-base/razorqt-power
-razorqt-base/razorqt-runner
-razorqt-base/razorqt-session
 
 # Samuli Suominen <ssuominen@gentoo.org> (05 Nov 2014)
 # ConsoleKit2 from github by Eric Koegel, auth of xfce4-power-manager
