@@ -24,7 +24,7 @@ DEPEND="
 	sci-libs/geos
 	sci-libs/proj
 	sys-libs/zlib
-	dev-db/postgresql-base
+	virtual/postgresql
 	pbf? ( dev-libs/protobuf-c )
 "
 RDEPEND="${DEPEND}"
