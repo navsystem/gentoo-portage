@@ -634,6 +634,7 @@ app-emulation/virtualbox:additions - Install Guest System Tools ISO
 app-emulation/virtualbox:extensions - Install extension module packages
 app-emulation/virtualbox:headless - Build without any graphic frontend
 app-emulation/virtualbox:sdk - Enable building of SDK
+app-emulation/virtualbox:udev - Controls installation of special USB udev rules.
 app-emulation/virtualbox:vboxwebsrv - Build and install the VirtualBox webservice
 app-emulation/virtualbox-bin:additions - Install Guest System Tools ISO
 app-emulation/virtualbox-bin:chm - Install kchmviewer binary to enable online help (in MS CHM format)
@@ -659,6 +660,7 @@ app-emulation/wine:mono - Add support for .NET using Wine's Mono add-on
 app-emulation/wine:netapi - Use libnetapi from net-fs/samba to support Windows networks in netapi32.dll
 app-emulation/wine:opencl - Enable OpenCL support
 app-emulation/wine:osmesa - Add support for OpenGL in bitmaps using libOSMesa
+app-emulation/wine:pcap - Support packet capture software (e.g. wireshark)
 app-emulation/wine:perl - Install helpers written in perl (winedump/winemaker)
 app-emulation/wine:pipelight - Apply unofficial Compholio patches for Pipelight/Silverlight support; use at your own peril
 app-emulation/wine:prelink - Run prelink on DLLs during build -- do not disable if you do not know what this means as it can break things at runtime
@@ -1134,7 +1136,6 @@ app-text/gtkspell:vala - Enable bindings for dev-lang/vala
 app-text/hyperestraier:mecab - Enable app-text/mecab support for Estraier
 app-text/jmupdf:system-mupdf - Link against system version of app-text/mupdf
 app-text/lcdf-typetools:kpathsea - Enable integration with kpathsea search library (TeX related)
-app-text/libgxps:introspection - Use dev-libs/gobject-introspection for introspection
 app-text/liblangtag:introspection - Use dev-libs/gobject-introspection for introspection
 app-text/libwpd:tools - Build miscellaneous tools
 app-text/lodgeit:vim - Install a vim plugin allowing to paste and download from within vim
@@ -1274,7 +1275,6 @@ dev-db/mariadb-galera:tokudb - Add support for TokuDB storage engine
 dev-db/mongodb:mms-agent - Install the MongoDB Monitoring Service agent
 dev-db/mongodb:sharedclient - build client shared library libmongoclient.so
 dev-db/mongodb:spidermonkey - Use embedded SpiderMonkey engine (dev-lang/spidermonkey) instead of v8
-dev-db/mysql:big-tables - Make tables contain up to 1.844E+19 rows
 dev-db/mysql:cluster - Add support for NDB clustering (deprecated)
 dev-db/mysql:community - Enables the community features from upstream.
 dev-db/mysql:embedded - Build embedded server (libmysqld)
@@ -1283,11 +1283,9 @@ dev-db/mysql:jemalloc - Use dev-libs/jemalloc for allocations.
 dev-db/mysql:latin1 - Use LATIN1 encoding instead of UTF8
 dev-db/mysql:max-idx-128 - Raise the max index per table limit from 64 to 128
 dev-db/mysql:minimal - Install client programs only, no server
-dev-db/mysql:pbxt - Add experimental support for PBXT storage engine
 dev-db/mysql:profiling - Add support for statement profiling (requires USE=community).
 dev-db/mysql:systemtap - Build support for profiling and tracing using dev-util/systemtap
 dev-db/mysql:test - Install upstream testsuites for end use.
-dev-db/mysql:xtradb - Add experimental support for Percona's InnoDB replacement: XtraDB
 dev-db/mysql-cluster:cluster - Add support for NDB clustering
 dev-db/mysql-cluster:community - Enables the community features from upstream.
 dev-db/mysql-cluster:embedded - Build embedded server (libmysqld)
@@ -1429,12 +1427,12 @@ dev-haskell/comonad:distributive - You can disable the use of the `distributive`
 dev-haskell/comonad:test-doctests - Run the doctests test suite
 dev-haskell/conduit:nohandles - experimental code to use raw system calls in place of handles. Not recommended for general use
 dev-haskell/configfile:buildtests - Build the executable to run unit tests.
+dev-haskell/contravariant:tagged - You can disable the use of the `tagged` package on older versons of GHC using `-f-tagged`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
 dev-haskell/cpu:executable - build 'cpuid' tool
 dev-haskell/crypto-api:all_cpolys - Build all the CMAC polynomes up to 10000 bits instead of just the usual ones
 dev-haskell/crypto-conduit:conduit11 - Use conduit >= 1.1.
 dev-haskell/crypto-pubkey:benchmark - Build benchmarks.
 dev-haskell/cryptohash:cryptoapi - Defines crypto-api instances
-dev-haskell/dataenc:tests - Build unit and quickcheck tests.
 dev-haskell/dav:network-uri - Get Network.URI from the network-uri package.
 dev-haskell/distributive:lib-werror - Compile with the ghc -Werror option
 dev-haskell/encoding:systemencoding - Provide the getSystemEncoding action to query the locale.
@@ -2426,6 +2424,8 @@ dev-qt/qtwebkit:webp - Add support for WebP image format
 dev-qt/qtwebsockets:qml - Build QML bindings
 dev-qt/qtwidgets:gles2 - Use OpenGL ES 2.0 instead of desktop OpenGL
 dev-ruby/barby:cairo - Add support for writing images (PNG, PS, EPS and, if supported, PDF and SVG) using dev-ruby/rcairo. Not available on JRuby.
+dev-ruby/barby:datamatrix - Add support for datamatrix using dev-ruby/semacode.
+dev-ruby/barby:pdf-writer - Add support for writing PDFs using dev-ruby/pdf-writer.
 dev-ruby/barby:png - Add support for writing PNG images using dev-ruby/chunky_png.
 dev-ruby/barby:prawn - Add support for writing PDF documents using dev-ruby/prawn.
 dev-ruby/barby:qrcode - Add support for QRCode 2D codes using dev-ruby/rqrcode.
@@ -2638,6 +2638,7 @@ dev-vcs/git-annex:s3 - Enable Amazon S3 remote
 dev-vcs/git-annex:tahoe - Enable the tahoe special remote
 dev-vcs/git-annex:tdfa - Use regex-tdfa for wildcards
 dev-vcs/git-annex:testsuite - Embed the test suite into git-annex
+dev-vcs/git-annex:torrentparser - Use haskell torrent library to parse torrent files
 dev-vcs/git-annex:webapp - Enable git-annex webapp
 dev-vcs/git-annex:webapp-secure - Secure webapp
 dev-vcs/git-annex:webdav - Enable webdav remote
@@ -2760,6 +2761,7 @@ games-engines/openmw:launcher - Install the launcher for configuring OpenMW.
 games-engines/renpy:development - Install IDE for game developers and an empty game template
 games-engines/scummvm:fluidsynth - compile with support for fluidsynth
 games-engines/scummvm:mpeg2 - enable mpeg2 codec for cutscenes
+games-engines/scummvm:unsupported - enable unsupported and/or broken game engines (you're on your own)
 games-engines/solarus:doc - Install doxygen developer documentation.
 games-engines/solarus:luajit - Use LuaJIT instead of default Lua.
 games-fps/alienarena:vidmode - Link against x11-libs/libXxf86vm. Required for full-screen support.
@@ -2853,6 +2855,7 @@ games-rpg/arx-libertatis:unity-build - Build everything in one big source file, 
 games-rpg/bastion:bundled-libs - Use the upstream provided bundled libraries.
 games-rpg/daimonin-client:music - Install extra music
 games-rpg/drascula:sound - Install optional audio files
+games-rpg/dreamweb:doc - High-resolution scans of the written material in the original UK game box
 games-rpg/dungeon-defenders:bundled-libs - Use the upstream provided bundled libraries.
 games-rpg/eternal-lands-data:bloodsuckermaps - Will install Bloodsucker's Maps in place of the official map files.
 games-rpg/eternal-lands-data:music - Adds in-game music.
@@ -2894,7 +2897,6 @@ games-strategy/dark-oberon:fmod - Add sound support (fmod)
 games-strategy/defcon-demo:system-libs - Use system libraries instead of the ones included in the upstream distribution.
 games-strategy/freeciv:aimodules - Support for dynamically loadable AI modules (server-side)
 games-strategy/freeciv:auth - Add authentication capability via mysql, postgres or sqlite3
-games-strategy/freeciv:ggz - Add support for GGZ Gaming Zone
 games-strategy/freeciv:mapimg - Additional mag image toolkit via media-gfx/imagemagick
 games-strategy/freeciv:modpack - Build the freeciv-modpack-program to download/install mods
 games-strategy/freeciv:server - Enable server support. Disabling this will also make it impossible to start local games.
@@ -3382,6 +3384,7 @@ mail-mta/exim:redis - Adds support for querying dev-db/redis
 mail-mta/exim:spf - Adds support for Sender Policy Framework
 mail-mta/exim:srs - Adds support for Sender Rewriting Scheme
 mail-mta/exim:tpda - Adds support for Transport Post-Delivery Actions
+mail-mta/msmtp:libsecret - Enable libsecret support to store login credentials
 mail-mta/msmtp:mta - Enable this to install as system-wide MTA
 mail-mta/netqmail:authcram - Enable AUTHCRAM support
 mail-mta/netqmail:gencertdaily - Generate SSL certificates daily instead of hourly
@@ -3500,7 +3503,6 @@ media-gfx/eog-plugins:map - Enable world map display using media-libs/libchampla
 media-gfx/eog-plugins:picasa - Enable uploading to Google's Picasa Web Albums
 media-gfx/exact-image:swig - Adds Swig support dev-lang/swig
 media-gfx/exiv2:contrib - Build additional contrib components
-media-gfx/f-spot:flickr - Enable building of the Flickr exported.
 media-gfx/fbida:X - Install the Motif based image viewer "ida"
 media-gfx/fbida:fbcon - Install the framebuffer image viewer "fbi"
 media-gfx/fbida:webp - Enable support for the WebP image format
@@ -5296,6 +5298,7 @@ net-irc/weechat:trigger - Enable trigger plugin.
 net-irc/weechat:xfer - Enable xfer plugin support.
 net-irc/znc:daemon - Allow znc to run as a system-wide service. Installs an init script and creates a znc user:group.
 net-libs/aqbanking:chipcard - Enable support for DDV/RSA-chipcards
+net-libs/aqbanking:ebics - Enable support for Electronic Banking Internet Communication Standard (EBICS)
 net-libs/axtls:cgi-lua - Enables lua backed cgi for axhttpd server
 net-libs/axtls:cgi-php - Enables php backed cgi for axhttpd server
 net-libs/axtls:httpd - Enables axhttpd web server component
@@ -5481,6 +5484,7 @@ net-mail/mailutils:clients - Build client programs - frm maidag mail sieve messa
 net-mail/mailutils:servers - Build server programs - imap4d pop3d comsatd
 net-mail/mailutils:tokyocabinet - Enable Tokyo Cabinet database support
 net-mail/mairix:gnus - Add support for the marks propagation feature in app-emacs/gnus
+net-mail/mpop:libsecret - Enable libsecret support to store login credentials
 net-mail/mu:emacs - Install the mu4e mail client.
 net-mail/mu:gui - Build and install the experimental gui 'mug'.
 net-mail/notmuch:crypt - Support decryption and verification of PGP/MIME messages and in Emacs UI - encryption
@@ -5673,6 +5677,9 @@ net-misc/hylafaxplus:html - Convert faxes into html email
 net-misc/hylafaxplus:jbig - JBIG Fax Compression Support
 net-misc/hylafaxplus:mgetty - Receive faxes via serial port connections
 net-misc/hylafaxplus:pam - hfaxd authentication via PAM
+net-misc/i2pd:aesni - Enable support for the AES-NI instruction set
+net-misc/i2pd:i2p-hardening - Compile with hardening on vanilla compilers/linkers
+net-misc/i2pd:library - Build the libi2pd library
 net-misc/icecast:kate - Add karaoke and text encapsulation support for Ogg files
 net-misc/icecast:logrotate - Install support files for app-admin/logrotate?
 net-misc/icecast:yp - Build support for yp public directory listings
@@ -6060,7 +6067,20 @@ net-proxy/dansguardian:orig-ip - Enable support for checking the client's origin
 net-proxy/dansguardian:trickledm - Enable support for the trickle download manager.
 net-proxy/haproxy:pcre-jit - Use JIT support for PCRE
 net-proxy/haproxy:tools - Install additional tools (halog, iprange)
+net-proxy/privoxy:editor - Enable the web-based actions file editor
+net-proxy/privoxy:external-filters - Allow to filter content with scripts and programs. Experimental
+net-proxy/privoxy:fast-redirects - Support fast redirects
+net-proxy/privoxy:force - Allow single-page disable (force load)
+net-proxy/privoxy:graceful-termination - Allow to shutdown Privoxy through the webinterface
+net-proxy/privoxy:image-blocking - Allows the +handle-as-image action, to send "blocked" images instead of HTML
+net-proxy/privoxy:lfs - Support large files (>2GB) on 32-bit systems
+net-proxy/privoxy:png-images - Use PNG format instead of GIF for built-in images
+net-proxy/privoxy:stats - Keep statistics
+net-proxy/privoxy:toggle - Support temporary disable toggle via web interface
+net-proxy/privoxy:whitelists - Support trust files (white lists)
 net-proxy/rejik:banlists - Install upstream provided simple banlists
+net-proxy/shadowsocks-libev:openssl - Use dev-libs/openssl as crypto backend
+net-proxy/shadowsocks-libev:polarssl - Use net-libs/polarssl as crypto backend
 net-proxy/squid:ecap - Adds support for loadable content adaptation modules (http://www.e-cap.org)
 net-proxy/squid:esi - Enable ESI for accelerators, will cause squid reverse proxies to be capable of the Edge Acceleration Specification (www.esi.org)
 net-proxy/squid:htcp - Enable HTCP protocol
@@ -6121,8 +6141,10 @@ net-wireless/bladerf:tecla - use libtecla for command line editing, tab completi
 net-wireless/bladerf-fpga:x115 - bitstream for the x115KLE Cyclone IV FPGA bladerf model"
 net-wireless/bladerf-fpga:x40 - bitstream for the x40KLE Cyclone IV FPGA bladerf model"
 net-wireless/blueman:gconf - Enable the GConf configuration backend
+net-wireless/blueman:gnome - Install the sendto-plugin for gnome-base/nautilus
 net-wireless/blueman:network - Add functionality to setup (host) PAN connections using either net-dns/dnsmasq or net-misc/dhcp
 net-wireless/blueman:sendto - Install the sendto-plugin for gnome-base/nautilus
+net-wireless/blueman:thunar - Install the sendto-plugin for xfce-base/thunar
 net-wireless/bluez:hid2hci - The HID proxying makes the keyboard / mouse show up as regular USB HID devices, but needs them to be paired before enabling this, otherwise they won't be detected
 net-wireless/bluez:obex - Enable OBEX transfer support.
 net-wireless/bluez:test-programs - Install tools for testing of various Bluetooth functions
@@ -6353,6 +6375,7 @@ sci-geosciences/qlandkartegt:gpsbabel - Enable support for wide range of geodata
 sci-geosciences/qlandkartegt:gpx-extensions - Enable support for GPX extensions
 sci-geosciences/qlandkartegt:mikrokopter - Enable telemtry with a mikrokopter
 sci-geosciences/qlandkartegt:rmap - Enable support for TwoNav RMAP file format
+sci-geosciences/viking:magic - Use libmagic to determine mimetypes
 sci-geosciences/xtide:gps - Use sci-geosciences/gpsd
 sci-libs/acml:gfortran - Fetch and install acml compiled with GNU gfortran
 sci-libs/acml:ifc - Fetch and install acml compiled with Intel Fortran Compiler (dev-lang/ifc)
@@ -6390,7 +6413,6 @@ sci-libs/flann:cuda - Enable support for nVidia CUDA
 sci-libs/flann:octave - Add bindings for sci-mathematics/octave
 sci-libs/gdal:armadillo - Use sci-libs/armadillo for faster TPS transform computation
 sci-libs/gdal:aux_xml - Enable Portable Auxilliary Metadata generation
-sci-libs/gdal:ecwj2k - Enable support for alternate jpeg2k library sci-libs/libecwj2
 sci-libs/gdal:fits - Enable support for NASA's sci-libs/cfitsio library
 sci-libs/gdal:geos - Add support for geometry engine (sci-libs/geos)
 sci-libs/gdal:gml - Enable support for dev-libs/xerces-c C++ API
@@ -7575,7 +7597,6 @@ x11-libs/fltk:games - Builds and installs some extra games
 x11-libs/glamor:gles - Build glamor based on gles2
 x11-libs/gtk+:cloudprint - Enable printing via Google Cloud Print.
 x11-libs/gtk+:colord - Use x11-misc/colord for color management in printing
-x11-libs/gtk+:packagekit - Enable support for the distro-neutral package manager GUI app-admin/packagekit in application chooser
 x11-libs/gtk+extra:introspection - Use dev-libs/gobject-introspection for introspection
 x11-libs/gtkdatabox:glade - Build with libglade and glade-3 supports, which includes a glade's module for GtkDataBox widget
 x11-libs/gtkmathview:mathml - Install additional fonts for proper mathml support.
@@ -7822,7 +7843,9 @@ x11-wm/pekwm:themes - Install additional themes
 x11-wm/ratpoison:history - Use sys-libs/readline for history handling
 x11-wm/ratpoison:sloppy - Install sloppy, a focus-follows-mouse implementation for ratpoison
 x11-wm/stumpwm:clisp - Use CLISP for the runtime
+x11-wm/stumpwm:doc - Include documentation
 x11-wm/stumpwm:ecl - Use SCL for the runtime
+x11-wm/stumpwm:emacs - Add support for GNU Emacs
 x11-wm/stumpwm:sbcl - Use SBCL for the runtime
 x11-wm/subtle:xrandr - Enable support for the X RandR extension
 x11-wm/subtle:xtest - Enable support for the XTest extension

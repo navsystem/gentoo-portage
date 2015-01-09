@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.3.9999.ebuild,v 1.9 2014/12/28 17:12:34 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.3.9999.ebuild,v 1.11 2015/01/04 14:41:22 dilfridge Exp $
 
 EAPI=5
 
@@ -254,6 +254,9 @@ PATCHES=(
 	"${FILESDIR}/${PN}-4.3.5.2-detect-KDE5-fallback-to-KDE4UI.patch"
 
 	# from master branch
+
+	# submitted
+	"${FILESDIR}/${PN}-4.3.5.2-remove-bashisms.patch" # bug 525454
 )
 
 REQUIRED_USE="
@@ -575,6 +578,7 @@ src_install() {
 	if use branding; then
 		insinto /usr/$(get_libdir)/${PN}/program
 		newins "${WORKDIR}/branding-sofficerc" sofficerc
+		dodir /etc/env.d
 		echo "CONFIG_PROTECT=/usr/$(get_libdir)/${PN}/program/sofficerc" > "${ED}"/etc/env.d/99${PN}
 	fi
 
