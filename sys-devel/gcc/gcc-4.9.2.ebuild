@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.9.2.ebuild,v 1.2 2015/01/05 23:25:09 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.9.2.ebuild,v 1.4 2015/01/18 12:01:18 ago Exp $
 
 EAPI="4"
 
@@ -22,7 +22,7 @@ SSP_UCLIBC_STABLE="x86 amd64 mips ppc ppc64 arm"
 
 inherit eutils toolchain
 
-KEYWORDS=""
+KEYWORDS="~amd64 ~hppa"
 
 RDEPEND=""
 DEPEND="${RDEPEND}

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16288 2015/01/15 16:39:27 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16292 2015/01/18 05:57:28 eras Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,56 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Manuel Rüger <mrueg@gentoo.org> (17 Jan 2015)
+# Unmaintained. Old eclasses, EAPIs and various bugs.
+# See bug #533642
+# Removal in 30 days.
+rox-base/mime-editor
+rox-base/oroborox
+rox-base/pager
+rox-base/rox
+rox-base/rox-autostart
+rox-base/rox-clib
+rox-base/rox-launch
+rox-base/rox-lib
+rox-base/rox-session
+rox-base/systemtrayn
+rox-base/tasklist
+rox-base/tasktray
+rox-base/thumbs
+rox-base/traylib
+rox-base/volume
+rox-base/xdg-menu
+rox-base/zeroinstall-injector
+rox-extra/archive
+rox-extra/clock
+rox-extra/contacts
+rox-extra/diff
+rox-extra/edit
+rox-extra/fetch
+rox-extra/find
+rox-extra/gnome-thumbnailer
+rox-extra/lithium
+rox-extra/magickthumbnail
+rox-extra/memo
+rox-extra/mp3ogg2wav
+rox-extra/musicbox
+rox-extra/picky
+rox-extra/resolution
+rox-extra/reticker
+rox-extra/ripper
+rox-extra/rox-tail
+rox-extra/rox-wifi
+rox-extra/rox-xplanet
+rox-extra/roxcd
+rox-extra/roxdao
+rox-extra/roxget
+rox-extra/roxiso
+rox-extra/songer
+rox-extra/videothumbnail
+rox-extra/wallpaper
+rox-extra/weather
 
 # Michael Sterrett <mr_bones_@gentoo.org> (14 Jan 2015)
 # No upstream anymore, segfaults on amd64
@@ -370,10 +420,6 @@ www-apps/trac-downloads
 # Mask latest development version for testing
 =x11-misc/lightdm-1.13*
 
-# Eray Aslan <eras@gentoo.org> (11 Nov 2014)
-# Mask beta releases
-=net-proxy/squid-3.5*
-
 # Samuli Suominen <ssuominen@gentoo.org> (05 Nov 2014)
 # ConsoleKit2 from github by Eric Koegel, auth of xfce4-power-manager
 # The ConsoleKit in freedesktop.org git won't be continued anymore,
@@ -539,6 +585,7 @@ dev-php/suhosin
 =dev-qt/qtx11extras-5.4.0*
 =dev-qt/qtxml-5.4.0*
 =dev-qt/qtxmlpatterns-5.4.0*
+>=dev-qt/qt-creator-3.3.0
 dev-python/PyQt5
 kde-frameworks/attica
 kde-frameworks/frameworkintegration
@@ -602,15 +649,15 @@ kde-frameworks/solid
 kde-frameworks/sonnet
 kde-frameworks/threadweaver
 >=kde-misc/about-distro-2.0.0
-www-client/otter
-=app-text/calibre-2*
 app-i18n/fcitx-qt5
+=app-text/calibre-2*
 dev-libs/grantlee:5
 >=media-gfx/photoqt-1.1
 media-gfx/phototonic
 >=media-sound/drumstick-1.0.0
 >=media-sound/kmetronome-1.0.0
 >=media-sound/teamspeak-client-bin-3.0.16
+www-client/otter
 x11-misc/kaqaz
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (03 Sep 2014)
