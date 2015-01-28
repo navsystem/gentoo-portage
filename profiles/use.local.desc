@@ -1061,7 +1061,6 @@ app-pda/libsyncml:http - Enable http transports
 app-pda/libsyncml:obex - Enable obex transports
 app-pda/synce-sync-engine:opensync - Enable OpenSync (app-pda/libopensync) python plug-in
 app-portage/conf-update:colordiff - Use colors when displaying diffs (app-misc/colordiff)
-app-portage/eix:clang - Use sys-devel/clang for building
 app-portage/eix:debug - Build with upstream's CXXFLAGS/LDFLAGS for debugging support; not recommended for normal use.
 app-portage/eix:dep - Make DEP=true the default which enables support for {,R,P}DEPEND but requires roughly double disk and memory.
 app-portage/eix:doc - Create description of the eix cache file additionally in html format
@@ -1875,7 +1874,6 @@ dev-libs/jemalloc:stats - Enable statistics calculation/reporting
 dev-libs/keybinder:introspection - Use dev-libs/gobject-introspection for introspection
 dev-libs/leveldb:snappy - support the snappy compression library
 dev-libs/libRocket:samples - Build samples
-dev-libs/libappindicator:introspection - Use dev-libs/gobject-introspection for introspection
 dev-libs/libbase58:tools - Build command line base58 tool
 dev-libs/libburn:cdio - Enable EXPERIMENTAL use of libcdio as system adapter
 dev-libs/libburn:track-src-odirect - Read track input with O_DIRECT (see man 2 open), this may deliver a better write performance in some situations
@@ -2602,6 +2600,7 @@ dev-util/squashmerge:lz4 - Enable support for LZ4 compression using app-arch/lz4
 dev-util/strace:aio - Enable dev-libs/libaio support for tracing Asynchronous I/O operations
 dev-util/suse-build:symlink - Provide compatibility symlinks with original openSUSE package (might clash with other packages)
 dev-util/sysdig:modules - Build kernel modules needed for tracing local events. Disable this only if you intend to use sysdig purely to work with dumpfiles.
+dev-util/trace-cmd:udis86 - Enable support for dev-libs/udis86 disassembler library
 dev-util/universalindentgui:html - Add support for HTML files
 dev-vcs/bzr:sftp - Enable sftp support
 dev-vcs/bzr-gtk:gpg - Support signing with GnuPG.
@@ -5064,6 +5063,7 @@ net-im/centerim:gadu - Enable support for the Gadu-Gadu protocol
 net-im/centerim:irc - Enable support for the IRC protocol
 net-im/centerim:lj - Enable support for the LiveJournal weblog system
 net-im/centerim:otr - Enable encrypted conversations
+net-im/choqok:telepathy - Enable support for the real-time communication framework telepathy
 net-im/climm:otr - Enable encrypted conversations
 net-im/corebird:glade - Install glade catalogs for corebird
 net-im/ejabberd:captcha - Support for CAPTCHA Forms (XEP-158)
@@ -5334,6 +5334,8 @@ net-libs/h323plus:aec - Enable acoustic echo cancellation
 net-libs/h323plus:sound - Enable audio codecs
 net-libs/h323plus:video - Enable video codecs
 net-libs/iax:snomhack - Use slower memset for SNOM phoneem
+net-libs/iojs:npm - Enable NPM package manager
+net-libs/iojs:snapshot - Enable snapshot creation for faster startup
 net-libs/ldns:dane - Enable DNS-based Authentication of Named Entities (DANE) support
 net-libs/ldns:ecdsa - Enable ECDSA support
 net-libs/ldns:gost - Enable GOST support
