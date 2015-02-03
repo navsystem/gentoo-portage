@@ -728,6 +728,7 @@ app-i18n/fcitx:qt4 - Install Qt4 IM module
 app-i18n/fcitx:snooper - Enable Key Snooper for GTK app
 app-i18n/fcitx:table - Enable Table IM
 app-i18n/fcitx-configtool:gtk3 - Use GTK+3 instead of 2
+app-i18n/fcitx-libpinyin:dictmanager - Enable dictionary manager. Requires dev-qt/qtwebkit.
 app-i18n/ibus:deprecated - install the deprecated ibus python library
 app-i18n/ibus:gconf - Enable support for gnome-base/gconf
 app-i18n/ibus:gtk3 - Enable support for gtk+3
@@ -5654,7 +5655,6 @@ net-misc/hylafaxplus:html - Convert faxes into html email
 net-misc/hylafaxplus:jbig - JBIG Fax Compression Support
 net-misc/hylafaxplus:mgetty - Receive faxes via serial port connections
 net-misc/hylafaxplus:pam - hfaxd authentication via PAM
-net-misc/i2pd:aesni - Enable support for the AES-NI instruction set
 net-misc/i2pd:i2p-hardening - Compile with hardening on vanilla compilers/linkers
 net-misc/i2pd:library - Build the libi2pd library
 net-misc/icecast:kate - Add karaoke and text encapsulation support for Ogg files
