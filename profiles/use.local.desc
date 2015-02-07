@@ -1658,6 +1658,7 @@ dev-lang/erlang:hipe - HIgh Performance Erlang extension
 dev-lang/erlang:kpoll - Enable kernel polling support
 dev-lang/erlang:sctp - Support for Stream Control Transmission Protocol
 dev-lang/fpc:ide - Build and install the Free Pascal Compiler IDE
+dev-lang/gdl:eigen - Build matrix manipulation with dev-cpp/eigen
 dev-lang/gdl:grib - Add support for the meteorological GRIB format with sci-libs/grib_api
 dev-lang/gdl:gshhs - Add support for projection adn continent maps with sci-geosciences/gshhs-data
 dev-lang/gdl:hdf - Add support for the Hierarchical Data Format v.4
@@ -3000,7 +3001,6 @@ gnome-extra/libgda:mdb - Enable support for Microsoft Access database using app-
 gnome-extra/libgda:reports - Install tools for generating graphical reports
 gnome-extra/libgda:sourceview - Enable support for x11-libs/gtksourceview
 gnome-extra/libgsf:gtk - Enable use of gdk in thumbnailer
-gnome-extra/libgsf:introspection - Use dev-libs/gobject-introspection for introspection
 gnome-extra/nemo:l10n - Pull in gnome-extra/cinnamon-translations for localization support
 gnome-extra/nemo:packagekit - Use packagekit to search for programs to open unknown file types
 gnome-extra/nemo:tracker - Add support for app-misc/tracker search
@@ -6797,6 +6797,7 @@ sys-block/tgt:fcp - Add support for new FC protocol
 sys-block/tgt:ibmvio - Add support for IBM Virtual I/O
 sys-boot/grub:device-mapper - Enable support for device-mapper from sys-fs/lvm2
 sys-boot/grub:efiemu - Build and install the efiemu runtimes
+sys-boot/grub:fonts - Build and install fonts for the gfxterm module
 sys-boot/grub:libzfs - Enable support for sys-fs/zfs
 sys-boot/grub:mount - Build and install the grub-mount utility
 sys-boot/grub:multislot - Allow concurrent installation of sys-boot/grub:0 and sys-boot/grub:2 by renaming all programs.
