@@ -571,6 +571,7 @@ app-emulation/libvirt:wireshark-plugins - Build the net-analyzer/wireshark plugi
 app-emulation/libvirt:xen - Support management of Xen virtualisation (app-emulation/xen)
 app-emulation/libvirt-glib:introspection - Use dev-libs/gobject-introspection for introspection
 app-emulation/libvirt-glib:vala - Enable bindings for dev-lang/vala
+app-emulation/lxc:cgmanager - Enable support for cgroup management using app-admin/cgmanager
 app-emulation/lxc:seccomp - Use seccomp syscall filters using sys-libs/libseccomp
 app-emulation/open-vm-tools:doc - Generate API documentation
 app-emulation/open-vm-tools:fuse - Build vmblock-fuse in favor of FUSE based blocking mechanism for DnD
@@ -2713,6 +2714,10 @@ games-board/pioneers:help - Enable gnome ingame help via scrollkeeper
 games-board/pysolfc:extra-cardsets - Install extra cardsets
 games-board/pysolfc:sound - Enable sound support using dev-python/pygame
 games-board/spider:athena - Enable athena widgets
+games-board/stockfish:armv7 - Build for armv7; enables PIE
+games-board/stockfish:general-32 - Generic unoptimized 32-bits build
+games-board/stockfish:general-64 - Generic unoptimized 64-bits build
+games-board/stockfish:optimize - Enable upstream -O3 optimizations (default enabled)
 games-board/xboard:default-font - Install the default font that xboard uses
 games-board/xboard:zippy - Enable experimental zippy client
 games-emulation/generator:sdlaudio - Enable SDL Audio
@@ -4646,7 +4651,7 @@ net-analyzer/linkchecker:login - login form submission
 net-analyzer/linkchecker:nagios - Install nagios cli plugin
 net-analyzer/linkchecker:sqlite - Mozilla Bookmark parsing
 net-analyzer/linkchecker:syntax-check - HTML/CSS syntax checks
-net-analyzer/metasploit:development - Install dependancies needed for metasploit and exploit development
+net-analyzer/metasploit:development - Install dependencies needed for metasploit and exploit development
 net-analyzer/metasploit:lorcon - Enable lorcon for raw packet injection
 net-analyzer/metasploit:oracle - Enable restricted oracle modules which have additional deps
 net-analyzer/metasploit:pcap - Enable libpcap for packet sniffing
@@ -4819,6 +4824,7 @@ net-dns/bind:filter-aaaa - Enable filtering of AAAA records over IPv4
 net-dns/bind:fixed-rrset - Enables fixed rrset-order option
 net-dns/bind:gost - Enables gost OpenSSL engine support
 net-dns/bind:gssapi - Enable gssapi support
+net-dns/bind:json - Enable JSON statistics channel
 net-dns/bind:nslint - Build and install the nslint util
 net-dns/bind:rpz - Enable response policy rewriting (rpz)
 net-dns/bind:rrl - Response Rate Limiting (RRL) - Experimental
@@ -6802,6 +6808,7 @@ sys-boot/grub:libzfs - Enable support for sys-fs/zfs
 sys-boot/grub:mount - Build and install the grub-mount utility
 sys-boot/grub:multislot - Allow concurrent installation of sys-boot/grub:0 and sys-boot/grub:2 by renaming all programs.
 sys-boot/grub:themes - Build and install GRUB themes (starfield)
+sys-boot/grub:truetype - Build and install grub-mkfont conversion utility
 sys-boot/lilo:device-mapper - Enable support for device-mapper from sys-fs/lvm2
 sys-boot/lilo:minimal - Do not install the dolilo helper script
 sys-boot/lilo:pxeserial - Avoid character echo on PXE serial console
@@ -6874,6 +6881,7 @@ sys-cluster/nova:compute - Installs the initscripts for the nova volume service
 sys-cluster/nova:kvm - qemu-kvm hypervisor support
 sys-cluster/nova:network - Installs the initscripts for the nova network service
 sys-cluster/nova:novncproxy - Installs the initscripts for the nova novncproxy service
+sys-cluster/nova:openvswitch - Installs openvswitch for the neutron openvswitch support
 sys-cluster/nova:xen - xen hypervisor support
 sys-cluster/ocfs:aio - Add aio support
 sys-cluster/openmpi:cma - Enable the CMA (Cross Memory Attach) MCA
@@ -6885,7 +6893,6 @@ sys-cluster/openmpi:romio - Build the ROMIO MPI-IO component
 sys-cluster/openmpi:vt - Enable bundled VampirTrace support
 sys-cluster/openstack-meta:cinder - Installs Openstack Cinder
 sys-cluster/openstack-meta:glance - Installs Openstack Glance
-sys-cluster/openstack-meta:horizon - Installs Openstack Horizon
 sys-cluster/openstack-meta:keystone - Installs Openstack Keystone
 sys-cluster/openstack-meta:neutron - Installs Openstack Neutron
 sys-cluster/openstack-meta:nova - Installs Openstack Nova
@@ -6951,6 +6958,7 @@ sys-devel/gcc:sanitize - Build support various sanitizer functions (ASAN/TSAN/et
 sys-devel/gcc-apple:multislot - Allow for SLOTs to include minor version (3.3.4 instead of just 3.3)
 sys-devel/gcc-apple:objc - Build support for the Objective C code language
 sys-devel/gcc-apple:objc++ - Build support for the Objective C++ language
+sys-devel/gcc-apple:regression-test - Run the testsuite and install the results (requires FEATURES=test)
 sys-devel/gdb:client - Install the main "gdb" program (most people want this)
 sys-devel/gdb:lzma - Support lzma compression in ELF debug info
 sys-devel/gdb:multitarget - Support all known targets in one gdb binary
@@ -7288,7 +7296,9 @@ www-apps/redmine:passenger - Enable support for www-apache/passenger
 www-apps/rt:lighttpd - Add www-servers/lighttpd support
 www-apps/sitebar:plugins - Install optional plugins
 www-apps/sugarcrm:json - Add JSON (JavaScript Object Notation) support
+www-apps/trac:highlight - Enable syntax highlighting
 www-apps/trac:i18n - Enable support for i18n with dev-python/Babel
+www-apps/trac:restructuredtext - Enable support for reStructuredText for wiki formatting
 www-apps/tt-rss:daemon - Install additional init scripts for automated RSS updates
 www-apps/venus:django - Support for django template style to config files
 www-apps/venus:genshi - Support for genshi style to config files
@@ -7389,6 +7399,7 @@ www-misc/zoneminder:openssl - ...
 www-misc/zoneminder:vlc - Enable using media-libs/vlc for streaming from cameras
 www-plugins/adobe-flash:kde - Enables a KCM plugin for configuring flash player preferences
 www-plugins/chrome-binary-plugins:flash - Install Chrome's native Pepper Flash
+www-plugins/chrome-binary-plugins:widevine - Install the Widevine DRM library
 www-plugins/gnash:agg - Rendering based on the Anti-Grain Geometry Rendering Engine library
 www-plugins/gnash:cygnal - Enable building of the cygnal server
 www-plugins/gnash:dump - Enable dump output module for creating video from SWF
