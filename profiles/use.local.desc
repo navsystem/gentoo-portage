@@ -1080,6 +1080,7 @@ app-portage/layman:gpg - Support app-crypt/gnupg signed overlays lists and manif
 app-portage/layman:mercurial - Support dev-vcs/mercurial based overlays
 app-portage/layman:squashfs - Support mounting squashfs image overlays locally read-only
 app-portage/layman:subversion - Support dev-vcs/subversion based overlays
+app-portage/layman:sync-plugin-portage - Install the sys-apps/portage sync module
 app-portage/pfl:network-cron - Adds a cron job which does a weekly submit of the package database
 app-portage/tatt:templates - Install template scripts to be used with tatt
 app-shells/bash:bashlogger - Log ALL commands typed into bash; should ONLY be used in restricted environments such as honeypots
@@ -1978,7 +1979,6 @@ dev-libs/totem-pl-parser:introspection - Use dev-libs/gobject-introspection for 
 dev-libs/totem-pl-parser:quvi - Use media-libs/quvi for parsing video links
 dev-libs/ucommon:socks - Build with socks proxy support
 dev-libs/udis86:pic - Force shared libraries to be built as PIC
-dev-libs/weston:clients - Enable support for clients
 dev-libs/weston:colord - Allow setting color managment
 dev-libs/weston:drm - Enable drm compositor support
 dev-libs/weston:editor - Install wayland-editor example application
@@ -1991,12 +1991,10 @@ dev-libs/weston:rdp - Enable Remote Desktop Protocol compositor support
 dev-libs/weston:resize-optimization - Increase performance, allocate more RAM. Recommended to disable on Raspberry Pi
 dev-libs/weston:rpi - Raspberry Pi GPU support
 dev-libs/weston:screen-sharing - Enable screen-sharing through RDP
-dev-libs/weston:simple-clients - Enable simple-clients
 dev-libs/weston:tablet - Enable interface for tablets
 dev-libs/weston:unwind - Enable libunwind usage for backtraces
 dev-libs/weston:view - Install wayland-view example application
 dev-libs/weston:wayland-compositor - Enable Wayland compositor support
-dev-libs/weston:x11 - Enable X11 compositor support
 dev-libs/weston:xwayland - Enable ability support native X11 applications
 dev-libs/xapian:brass - Enabled brass backend db support
 dev-libs/xapian:chert - Enabled chert backend db support
@@ -3724,6 +3722,7 @@ media-libs/memphis:introspection - Use dev-libs/gobject-introspection for intros
 media-libs/memphis:vala - Add support for Vala
 media-libs/mesa:bindist - Disable patent-encumbered ARB_texture_float, EXT_texture_shared_exponent, and EXT_packed_float extensions.
 media-libs/mesa:classic - Build drivers based on the classic architecture.
+media-libs/mesa:d3d9 - Enable Direct 3D9 API through Nine state tracker. Can be used together with patched wine.
 media-libs/mesa:dri3 - Enable DRI3 support.
 media-libs/mesa:egl - Enable EGL support.
 media-libs/mesa:g3dvl - Enable video decode acceleration support for Gallium3D.
@@ -7501,6 +7500,7 @@ x11-base/xorg-server:glamor - Enable Glamor OpenGL 2D acceleration
 x11-base/xorg-server:kdrive - Build the kdrive X servers
 x11-base/xorg-server:tslib - Build with tslib support for touchscreen devices
 x11-base/xorg-server:unwind - Enable libunwind usage for backtraces
+x11-base/xorg-server:xephyr - Build the Xephyr server
 x11-base/xorg-server:xnest - Build the Xnest server
 x11-base/xorg-server:xorg - Build the Xorg X server (HIGHLY RECOMMENDED)
 x11-base/xorg-server:xvfb - Build the Xvfb server
