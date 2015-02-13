@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-2.3-r2.ebuild,v 1.1 2015/02/04 20:56:56 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-2.3-r2.ebuild,v 1.3 2015/02/11 10:11:17 gurligebis Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://hostap.epitest.fi/releases/${P}.tar.gz"
 LICENSE="|| ( GPL-2 BSD )"
 
 SLOT="0"
-#KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="ap dbus gnutls eap-sim fasteap +hs2.0 p2p ps3 qt4 readline selinux smartcard ssl tdls uncommon-eap-types wimax wps kernel_linux kernel_FreeBSD"
 REQUIRED_USE="fasteap? ( !gnutls !ssl ) smartcard? ( ssl )"
 
@@ -30,9 +30,9 @@ CDEPEND="dbus? ( sys-apps/dbus )
 	)
 	readline? (
 		sys-libs/ncurses
-		sys-libs/readline
+		sys-libs/readline:0
 	)
-	ssl? ( dev-libs/openssl )
+	ssl? ( dev-libs/openssl:0 )
 	!ssl? ( gnutls? ( net-libs/gnutls ) )
 	!ssl? ( !gnutls? ( dev-libs/libtommath ) )
 "
@@ -53,7 +53,7 @@ Kconfig_style_config() {
 
 		if [ ! $setting = n ]; then
 			#first remove any leading "# " if $2 is not n
-			sed -i "/^# *$CONFIG_PARAM/s/^# *//" .config || echo "Kconfig_style_config error uncommenting $CONFIG_PARAM"
+			sed -i "/^# *$CONFIG_PARAM=/s/^# *//" .config || echo "Kconfig_style_config error uncommenting $CONFIG_PARAM"
 			#set item = $setting (defaulting to y)
 			sed -i "/^$CONFIG_PARAM/s/=.*/=$setting/" .config || echo "Kconfig_style_config error setting $CONFIG_PARAM=$setting"
 		else
