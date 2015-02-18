@@ -3185,7 +3185,6 @@ kde-base/powerdevil:pm-utils - Adds support for suspend/resume the system throug
 kde-base/poxml:extras - Build po2xml and swappo tools
 kde-base/pykde4:akonadi - Compile bindings for Akonadi
 kde-base/pykde4:nepomuk - Compile bindings for Nepomuk
-kde-base/pykde4:semantic-desktop - Enables Nepomuk and Soprano python language bindings
 kde-base/qtruby:declarative - Compile bindings for dev-qt/qtdeclarative.
 kde-base/qtruby:phonon - Compile bindings for Phonon.
 kde-base/qtruby:qscintilla - Compile bindings for x11-libs/qscintilla.
@@ -5990,6 +5989,7 @@ net-p2p/ppcoin-qt:qrcode - Enable generation of QR Codes for receiving payments
 net-p2p/ppcoind:logrotate - Use app-admin/logrotate for rotating logs
 net-p2p/primecoin-qt:qrcode - Enable generation of QR Codes for receiving payments
 net-p2p/primecoind:logrotate - Use app-admin/logrotate for rotating logs
+net-p2p/qbittorrent:webui - Enable the Web UI
 net-p2p/retroshare:cli - Enables the CLI version of RetroShare
 net-p2p/retroshare:feedreader - Enables the Feedreader plugin
 net-p2p/retroshare:links-cloud - Enables LinkClouds plugin
