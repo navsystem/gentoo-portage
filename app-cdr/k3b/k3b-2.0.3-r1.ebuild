@@ -62,6 +62,7 @@ DOCS+=( ChangeLog )
 
 PATCHES=(
 	"${FILESDIR}/${PN}-2.0.3-libav-10.patch" #509332
+	"${FILESDIR}/0001-Fixed-compilation-with-newer-ffmpeg-libav.patch" #509332
 )
 
 REQUIRED_USE="
