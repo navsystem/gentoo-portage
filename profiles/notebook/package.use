@@ -108,3 +108,6 @@ x11-plugins/qutim-plugins -kde
 net-voip/linphone gtk video
 media-libs/mediastreamer video
 dev-db/mariadb extraengine
+media-sound/sox -ffmpeg
+media-plugins/alsa-plugins -ffmpeg
+app-misc/strigi -ffmpeg
