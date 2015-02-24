@@ -108,4 +108,4 @@ net-voip/linphone gtk video
 media-libs/mediastreamer video
 
 dev-db/mariadb extraengine
-
+app-crypt/qca gpg openssl
