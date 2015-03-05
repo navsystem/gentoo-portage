@@ -2186,6 +2186,7 @@ dev-python/django-two-factor-auth:yubikey - Adds support for Yubikeys via django
 dev-python/docutils:glep - Install support for GLEPs
 dev-python/falcon:cython - Build cython-based python modules
 dev-python/flask-restful:paging - Enable resource paging support
+dev-python/geopy:timezone - Enables localized date support
 dev-python/geopy:yahoo - Enables use of YahooPlaceFinder
 dev-python/gmpy:mpir - Use sci-libs/mpir as gmp implementation
 dev-python/icalendar:doc - Generate examples and other extra documentation
@@ -3563,7 +3564,9 @@ media-gfx/kphotoalbum:geolocation - Add support for kde-base/marble
 media-gfx/kphotoalbum:kipi - Support for the KDE Image Plugin Interface
 media-gfx/librecad:tools - Build additional tool programs
 media-gfx/nip2:goffice - use x11-libs/goffice to show plots
+media-gfx/nomacs:opencv - Build support for media-libs/opencv
 media-gfx/nomacs:webp - Build support for WEBP image format
+media-gfx/nomacs:zip - Build support for zip archives
 media-gfx/nvidia-texture-tools:cg - Enable NVIDIA C graphics compiler toolkit plug-in
 media-gfx/nvidia-texture-tools:cuda - Enable NVIDIA CUDA toolkit support
 media-gfx/nvidia-texture-tools:glew - Enable support for The OpenGL Extension Wrangler Library (media-libs/glew)
@@ -6163,6 +6166,7 @@ net-wireless/blueman:thunar - Install the sendto-plugin for xfce-base/thunar
 net-wireless/bluez:hid2hci - The HID proxying makes the keyboard / mouse show up as regular USB HID devices, but needs them to be paired before enabling this, otherwise they won't be detected
 net-wireless/bluez:obex - Enable OBEX transfer support.
 net-wireless/bluez:test-programs - Install tools for testing of various Bluetooth functions
+net-wireless/crda:gcrypt - Use libgcrypt instead of openssl for key checking
 net-wireless/gnuradio:analog - enable analog signal processing blocks
 net-wireless/gnuradio:atsc - enable ATSC (HDTV) transmitter and receiver blocks
 net-wireless/gnuradio:audio - enable blocks to connect to audio sources (mic-in) and sinks (speaker-out) ports on a computer
@@ -6657,6 +6661,7 @@ sci-visualization/paraview:nvcontrol - Add NVCONTROL support for OpenGL options
 sci-visualization/paraview:plugins - Build and install additional plugins
 sci-visualization/veusz:emf - Add FITS format via dev-python/pyemf
 sci-visualization/veusz:fits - Add FITS format via dev-python/astropy
+sci-visualization/veusz:minuit - Use Minuit during fitting viadev-python/pyminuit
 sci-visualization/veusz:vo - Add Virtual Observatory tools via dev-python/astropy
 sci-visualization/visit:cgns - Builds the reader for the CFD General Notation System file format.
 sci-visualization/visit:silo - Adds support for reading .silo files.
