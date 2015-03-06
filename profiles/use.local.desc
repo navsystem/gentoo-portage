@@ -548,7 +548,6 @@ app-emulation/ganeti:lxc - Enable Linux Countainers support
 app-emulation/ganeti:monitoring - Enable the ganeti monitoring daemon
 app-emulation/ganeti:multiple-users - Enable support for running VMs as different users.
 app-emulation/ganeti:rbd - Enable rados block device support via sys-cluster/ceph
-app-emulation/ganeti:sharedstorage - Enable Shared Storage support
 app-emulation/ganeti:xen - Enable Xen support
 app-emulation/libguestfs:erlang - Build Erlang bindings
 app-emulation/libguestfs:fuse - Enable image mount support via fuse
@@ -1474,6 +1473,7 @@ dev-haskell/httpd-shed:network-uri - Get Network.URI from the network-uri packag
 dev-haskell/hxt:network-uri - Get Network.URI from the network-uri package.
 dev-haskell/ieee754:big_endian - Build for a big endian machine. Beware that only little endian machines have been tested.
 dev-haskell/json:generic - Add support for generic encoder (dev-haskell/syb)
+dev-haskell/json:mapdict - Encode Haskell maps as JSON dicts
 dev-haskell/json:parsec - Add support for parsing with Parsec
 dev-haskell/json:pretty - Add support for using pretty printing combinators
 dev-haskell/lens:benchmark-uniplate - Enable benchmarking against Neil Mitchell's uniplate library for comparative performance analysis. Defaults to being turned off to avoid the extra dependency.
@@ -1986,7 +1986,6 @@ dev-libs/tntnet:server - Enable tntnet server daemon
 dev-libs/totem-pl-parser:archive - Enables support for accessing media files in archives transparently via app-arch/libarchive
 dev-libs/totem-pl-parser:quvi - Use media-libs/quvi for parsing video links
 dev-libs/ucommon:socks - Build with socks proxy support
-dev-libs/udis86:pic - Force shared libraries to be built as PIC
 dev-libs/weston:colord - Allow setting color managment
 dev-libs/weston:drm - Enable drm compositor support
 dev-libs/weston:editor - Install wayland-editor example application
@@ -2186,6 +2185,7 @@ dev-python/django-two-factor-auth:yubikey - Adds support for Yubikeys via django
 dev-python/docutils:glep - Install support for GLEPs
 dev-python/falcon:cython - Build cython-based python modules
 dev-python/flask-restful:paging - Enable resource paging support
+dev-python/geopy:timezone - Enables localized date support
 dev-python/geopy:yahoo - Enables use of YahooPlaceFinder
 dev-python/gmpy:mpir - Use sci-libs/mpir as gmp implementation
 dev-python/icalendar:doc - Generate examples and other extra documentation
@@ -3563,7 +3563,9 @@ media-gfx/kphotoalbum:geolocation - Add support for kde-base/marble
 media-gfx/kphotoalbum:kipi - Support for the KDE Image Plugin Interface
 media-gfx/librecad:tools - Build additional tool programs
 media-gfx/nip2:goffice - use x11-libs/goffice to show plots
+media-gfx/nomacs:opencv - Build support for media-libs/opencv
 media-gfx/nomacs:webp - Build support for WEBP image format
+media-gfx/nomacs:zip - Build support for zip archives
 media-gfx/nvidia-texture-tools:cg - Enable NVIDIA C graphics compiler toolkit plug-in
 media-gfx/nvidia-texture-tools:cuda - Enable NVIDIA CUDA toolkit support
 media-gfx/nvidia-texture-tools:glew - Enable support for The OpenGL Extension Wrangler Library (media-libs/glew)
@@ -4349,7 +4351,6 @@ media-video/ffmpeg:armv5te - Enables optimizations for armv5te processors.
 media-video/ffmpeg:armv6 - Enables optimizations for armv6 processors.
 media-video/ffmpeg:armv6t2 - Enables optimizations for armv6t2 processors.
 media-video/ffmpeg:armvfp - Enables VFP optimizations for ARM processors.
-media-video/ffmpeg:bindist - Enforces license compatibility constraints via REQUIRED_USE.
 media-video/ffmpeg:bluray - Enable playback of Blu-ray filesystems
 media-video/ffmpeg:bs2b - Enables media-libs/libbs2b based Bauer stereo-to-binaural filter.
 media-video/ffmpeg:cdio - Enables audio CD grabbing with dev-libs/libcdio.
@@ -6163,6 +6164,7 @@ net-wireless/blueman:thunar - Install the sendto-plugin for xfce-base/thunar
 net-wireless/bluez:hid2hci - The HID proxying makes the keyboard / mouse show up as regular USB HID devices, but needs them to be paired before enabling this, otherwise they won't be detected
 net-wireless/bluez:obex - Enable OBEX transfer support.
 net-wireless/bluez:test-programs - Install tools for testing of various Bluetooth functions
+net-wireless/crda:gcrypt - Use libgcrypt instead of openssl for key checking
 net-wireless/gnuradio:analog - enable analog signal processing blocks
 net-wireless/gnuradio:atsc - enable ATSC (HDTV) transmitter and receiver blocks
 net-wireless/gnuradio:audio - enable blocks to connect to audio sources (mic-in) and sinks (speaker-out) ports on a computer
@@ -6317,7 +6319,6 @@ sci-chemistry/pdb2pqr:pdb2pka - Install experimental pdb2pka interface
 sci-chemistry/pymol:apbs - Install the apbs plugin
 sci-chemistry/pymol:web - Install Pymodule needed for web app support
 sci-chemistry/raster3d:gd - libgd support for PNG and JPEG output
-sci-chemistry/shelx:dosformat - Use CR/LF to end lines; useful in mixed Linux/Windows environments
 sci-chemistry/vmd:cuda - Use nvidia cuda toolkit for speeding up computations
 sci-chemistry/vmd:msms - Add support for MSMS SAS calcualtion tool
 sci-chemistry/vmd:povray - Add support for povray raytracer for HQ images
@@ -6657,6 +6658,7 @@ sci-visualization/paraview:nvcontrol - Add NVCONTROL support for OpenGL options
 sci-visualization/paraview:plugins - Build and install additional plugins
 sci-visualization/veusz:emf - Add FITS format via dev-python/pyemf
 sci-visualization/veusz:fits - Add FITS format via dev-python/astropy
+sci-visualization/veusz:minuit - Use Minuit during fitting viadev-python/pyminuit
 sci-visualization/veusz:vo - Add Virtual Observatory tools via dev-python/astropy
 sci-visualization/visit:cgns - Builds the reader for the CFD General Notation System file format.
 sci-visualization/visit:silo - Adds support for reading .silo files.
@@ -7356,6 +7358,7 @@ www-apps/egroupware:jpgraph - Add dev-php/jpgraph support
 www-apps/gallery:netpbm - Add media-libs/netpbm support
 www-apps/gallery:unzip - Add app-arch/unzip support for the archive upload module
 www-apps/gallery:zip - Add app-arch/zip for the zip download module
+www-apps/gitit:network-uri - Get Network.URI from the network-uri package.
 www-apps/gitit:plugins - enables optional plugin runtime loader
 www-apps/horde-passwd:clearpasswd - Enables cleartext password storage in the vpopmail files
 www-apps/ikiwiki:extras - Installs additional modules used by ikiwiki plugins
