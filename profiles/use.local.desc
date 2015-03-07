@@ -3007,7 +3007,6 @@ gnome-extra/gnome-dvb-daemon:totem - Build a plugin for media-video/totem
 gnome-extra/gnome-dvb-daemon:vala - Add support for dev-lang/vala
 gnome-extra/gnome-system-monitor:systemd - Display sys-apps/systemd metadata, e.g. unit names, for running processes
 gnome-extra/gucharmap:vala - Enable bindings for dev-lang/vala
-gnome-extra/libgda:bindist - Disable support for dev-db/firebird database which is not GPL compatible.
 gnome-extra/libgda:canvas - Enable support for x11-libs/goocanvas
 gnome-extra/libgda:http - Enable embedded net-libs/libsoup based server
 gnome-extra/libgda:json - Enable support for JSON format
@@ -4248,6 +4247,7 @@ media-tv/kodi:midi - Support MIDI files
 media-tv/kodi:nfs - Enable NFS client support
 media-tv/kodi:projectm - Enable projectM visualization plugin
 media-tv/kodi:pvr - Enable MythTV support
+media-tv/kodi:raspberry-pi - Enable support for the Raspberry Pi
 media-tv/kodi:rsxs - Enable really slick X screensavers
 media-tv/kodi:rtmp - Enable Real Time Messaging Protocol using librtmp
 media-tv/kodi:sftp - Support browsing files over SFTP
@@ -5629,11 +5629,14 @@ net-misc/cgminer:modminer - Enable support for mining with ModMiner FPGAs
 net-misc/cgminer:spondoolies - Enable support for Spondoolies
 net-misc/chrony:rtc - Include support for the Linux Real Time Clock interface
 net-misc/connman:ethernet - Enable ethernet support.
+net-misc/connman:l2tp - Use net-dialup/xl2tpd for L2TP VPN support.
 net-misc/connman:ofono - Use net-misc/ofono for telephony support.
 net-misc/connman:openconnect - Use net-misc/openconnect for VPN support.
 net-misc/connman:openvpn - Use net-misc/openvpn for openvpn support.
+net-misc/connman:pptp - Use net-dialup/pptpclient for PPTP VPN support.
 net-misc/connman:tools - Enable testing tools.
 net-misc/connman:vpnc - Use net-misc/vpnc for cisco VPN support.
+net-misc/connman:wispr - Enable support for WISPr hotspot logins.
 net-misc/csync:sftp - Enable sftp transfer support via net-libs/libssh
 net-misc/curl:metalink - Enable metalink support
 net-misc/curl:rtmp - Enable RTMP Streaming Media support
@@ -6901,6 +6904,7 @@ sys-cluster/ceph:nss - Use dev-libs/nss for cryptography
 sys-cluster/ceph:radosgw - Add radosgw support
 sys-cluster/ceph:xfs - Add xfs support
 sys-cluster/ceph:zfs - Add zfs support
+sys-cluster/charm:ampi - Build implementation of MPI on top of Charm++
 sys-cluster/charm:charmdebug - Enable the charm debugger
 sys-cluster/charm:charmproduction - Optimize performance of Charm++ runtime
 sys-cluster/charm:charmtracing - Enable tracing support in Charm++
