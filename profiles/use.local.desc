@@ -674,11 +674,13 @@ app-emulation/wine:opencl - Enable OpenCL support
 app-emulation/wine:osmesa - Add support for OpenGL in bitmaps using libOSMesa
 app-emulation/wine:pcap - Support packet capture software (e.g. wireshark)
 app-emulation/wine:perl - Install helpers written in perl (winedump/winemaker)
-app-emulation/wine:pipelight - Apply unofficial Compholio patches for Pipelight/Silverlight support; use at your own peril
+app-emulation/wine:pipelight - Apply unofficial Wine-Staging patches for Pipelight/Silverlight support
 app-emulation/wine:prelink - Run prelink on DLLs during build -- do not disable if you do not know what this means as it can break things at runtime
 app-emulation/wine:realtime - Pull in sys-auth/rtkit for low-latency pulseaudio support
 app-emulation/wine:run-exes - Use Wine to open and run .EXE and .MSI files
+app-emulation/wine:s3tc - Pull in media-libs/libtxc_dxtn for DXTn texture compression, needed for many games
 app-emulation/wine:samba - Add support for NTLM auth. see http://wiki.winehq.org/NtlmAuthSetupGuide and http://wiki.winehq.org/NtlmSigningAndSealing
+app-emulation/wine:staging - Apply unofficial Wine-Staging patches for advanced feature support that haven't made it into upstream Wine yet
 app-emulation/wine:win32 - Build a 32bit version of Wine (won't run Win64 binaries)
 app-emulation/wine:win64 - Build a 64bit version of Wine (won't run Win32 binaries)
 app-emulation/winetricks:rar - Pull in app-arch/unrar for extraction of rar-compressed game files
@@ -3648,6 +3650,7 @@ media-libs/freetype:utils - Install utilities and examples from ft2demos
 media-libs/freeverb3:audacious - Build Audacious plugin
 media-libs/freeverb3:forcefpu - Disable assembly code
 media-libs/freeverb3:plugdouble - Build plugins in double precision mode (default is float)
+media-libs/gd:webp - Enable support for the webp format
 media-libs/gegl:introspection - Use dev-libs/gobject-introspection for introspection.
 media-libs/gegl:lensfun - Enable support for media-libs/lensfun.
 media-libs/gegl:umfpack - Enable sparse solving via sci-libs/umfpack.
@@ -6306,7 +6309,6 @@ sci-chemistry/gromacs:double-precision - More precise calculations at the expens
 sci-chemistry/gromacs:make-symlinks - Create symbolic links for pre-5.0 binary names
 sci-chemistry/gromacs:mkl - Use sci-libs/mkl for fft, blas, lapack routines
 sci-chemistry/gromacs:offensive - Enable gromacs partly offensive quotes
-sci-chemistry/gromacs:openmm - Add acceleration through sci-libs/openmm
 sci-chemistry/gromacs:single-precision - Single precision version of gromacs (default)
 sci-chemistry/gromacs:tng - Enable new trajectory format - tng
 sci-chemistry/gsim:emf - Support for .emf export
@@ -7517,7 +7519,6 @@ www-servers/apache:apache2_modules_unixd - Basic (required) security for Unix-fa
 www-servers/apache:static - Link in apache2 modules statically rather then plugins
 www-servers/apache:suexec - Install suexec with apache
 www-servers/cherokee:admin - Install web based cherokee conf tool
-www-servers/cherokee:coverpage - Installs the default cherokee coverpage
 www-servers/cherokee:rrdtool - Enable rrdtool support
 www-servers/fnord:auth - Enable HTTP authentication support
 www-servers/gatling:diet - Compile against dev-libs/dietlibc
