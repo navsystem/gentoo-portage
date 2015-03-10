@@ -1,9 +1,14 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.655 2015/03/05 10:57:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.657 2015/03/09 18:15:22 mr_bones_ Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Michael Sterrett <mr_bones_@gentoo.org> (09 Mar 2015)
+# Mask qt5 support until qt5 is stable so as to not
+# hold up making yabause stable.
+games-emulation/yabause qt5
 
 # Michał Górny <mgorny@gentoo.org> (01 Mar 2015)
 # pidgin-opensteamworks is only available for amd64, ppc32 and x86
@@ -254,10 +259,6 @@ dev-libs/boost context
 # Since this is new and unused yet, keep it masked for now and check
 # with upstream if there is something that can be done to fix the issue.
 media-libs/cogl gstreamer
-
-# Alexandre Rostovtsev <tetromino@gentoo.org> (15 Dec 2013)
-# pulseaudio patchset breaks too often on live wine ebuild
-=app-emulation/wine-9999 pulseaudio
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (13 Nov 2013)
 # Depends on masked dev-lang/v8
