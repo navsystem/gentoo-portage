@@ -109,3 +109,4 @@ media-libs/mediastreamer video
 
 dev-db/mariadb extraengine
 app-crypt/qca gpg openssl
+x11-libs/libfm gtk

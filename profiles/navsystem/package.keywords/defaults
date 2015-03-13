@@ -32,6 +32,8 @@ sys-block/megacli amd64
 net-im/skype x86 amd64
 net-misc/dropbox-cli x86 amd64
 
+~lxde-base/lxde-meta-0.5.5 x86 amd64
+
 kde-misc/plasma-nm x86 amd64
 dev-util/pycharm-community x86 amd64
 net-im/jitsi-bin x86 amd64
