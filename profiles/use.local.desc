@@ -3252,10 +3252,11 @@ lxde-base/lxdm:consolekit - Enables support for authorization using consolekit
 lxde-base/lxdm:gtk3 - Use GTK+3 instead of 2
 lxqt-base/lxqt-meta:admin - Install app-admin/lxqt-admin
 lxqt-base/lxqt-meta:filemanager - Install x11-misc/pcmanfm-qt file manager
-lxqt-base/lxqt-meta:icons - Install lxde-base/lxde-icon-theme icon theme (pulls in x11-libs/gtk+)
+lxqt-base/lxqt-meta:icons - Install an icon theme
 lxqt-base/lxqt-meta:lightdm - Install x11-misc/lightdm display manager
 lxqt-base/lxqt-meta:lximage - Install media-gfx/lximage-qt image viewer
 lxqt-base/lxqt-meta:minimal - Do not install x11-wm/openbox window manager
+lxqt-base/lxqt-meta:oxygen - Prefer kde-base/oxygen-icons (default)
 lxqt-base/lxqt-meta:powermanagement - Install lxqt-base/lxqt-powermanagement package
 lxqt-base/lxqt-meta:sddm - Install x11-misc/sddm display manager
 lxqt-base/lxqt-meta:ssh-askpass - Install net-misc/lxqt-openssh-askpass user password prompt tool
@@ -3689,6 +3690,7 @@ media-libs/libass:enca - Enables support for charset discovery and conversion.
 media-libs/libass:harfbuzz - Enables OpenType shaping via media-libs/harfbuzz.
 media-libs/libbdplus:aacs - Add support for decryption of AACS
 media-libs/libbluray:aacs - Add support for decryption of AACS
+media-libs/libbluray:bdplus - Use media-libs/libbdplus for BD+ decryption
 media-libs/libbluray:java - Add support for BD-J
 media-libs/libbluray:utils - Install command-line utilities and examples
 media-libs/libcanberra:alsa - Enables ALSA sound driver.
@@ -3755,14 +3757,12 @@ media-libs/mesa:classic - Build drivers based on the classic architecture.
 media-libs/mesa:d3d9 - Enable Direct 3D9 API through Nine state tracker. Can be used together with patched wine.
 media-libs/mesa:dri3 - Enable DRI3 support.
 media-libs/mesa:egl - Enable EGL support.
-media-libs/mesa:g3dvl - Enable video decode acceleration support for Gallium3D.
 media-libs/mesa:gallium - Build drivers based on Gallium3D, the new architecture for 3D graphics drivers.
 media-libs/mesa:gbm - Enable the Graphics Buffer Manager for EGL on KMS.
 media-libs/mesa:gles - Enable GLES (both v1 and v2) support.
 media-libs/mesa:gles1 - Enable GLESv1 support.
 media-libs/mesa:gles2 - Enable GLESv2 support.
 media-libs/mesa:llvm - Enable LLVM backend for Gallium3D.
-media-libs/mesa:llvm-shared-libs - Dynamically link Gallium3D drivers against LLVM.
 media-libs/mesa:opencl - Enable the Clover Gallium OpenCL state tracker.
 media-libs/mesa:openmax - Enable OpenMAX video decode/encode acceleration for Gallium3D.
 media-libs/mesa:openvg - Enable the OpenVG 2D acceleration API for Gallium3D.
@@ -3770,12 +3770,9 @@ media-libs/mesa:osmesa - Build the Mesa library for off-screen rendering.
 media-libs/mesa:pax_kernel - Enable if the user plans to run the package under a pax enabled hardened kernel
 media-libs/mesa:pic - disable optimized assembly code that is not PIC friendly
 media-libs/mesa:r600-llvm-compiler - Build the LLVM based r600 shader compiler.
-media-libs/mesa:shared-dricore - Enable sharing of common code for classic DRI drivers.
-media-libs/mesa:shared-glapi - Enable sharing of common code for the OpenGL API.
 media-libs/mesa:vdpau - Enable the VDPAU acceleration interface for the Gallium3D Video Layer.
 media-libs/mesa:wayland - Enable support for dev-libs/wayland
 media-libs/mesa:xa - Enable the XA (X Acceleration) API for Gallium3D.
-media-libs/mesa:xorg - Enable the Xorg state tracker for Gallium3D. This is not required for OpenGL acceleration in X.
 media-libs/mesa:xvmc - Enable the XvMC acceleration interface for the Gallium3D Video Layer.
 media-libs/mlt:compressed-lumas - Compress the luma files in png.
 media-libs/mlt:frei0r - Build the module for media-plugins/frei0r-plugins
@@ -6620,7 +6617,14 @@ sci-mathematics/octave:qhull - Add support for sci-libs/qhull, to allow `delauna
 sci-mathematics/octave:qrupdate - Add support for sci-libs/qrupdatefor QR and Cholesky update functions
 sci-mathematics/octave:sparse - Add enhanced support for sparse matrix algebra with SuiteSparse
 sci-mathematics/pari:data - Add additional data (elldata, galdata, seadata, nftables)
+sci-mathematics/polymake:bliss - Enable sci-libs/bliss interface for graph and face lattice isomorphism computations.
+sci-mathematics/polymake:cdd - Enable sci-libs/cddlib interface for convex hull computations (Should be kept enabled).
+sci-mathematics/polymake:group - Build extension for dealing with permutation groups and symmetric objects.
+sci-mathematics/polymake:libnormaliz - Build the bundled extension for lattice related computations.
 sci-mathematics/polymake:libpolymake - Build the polymake library to build applications using the C++ interface.
+sci-mathematics/polymake:lrs - Enable sci-libs/lrslib interface for convex hull computations.
+sci-mathematics/polymake:ppl - Enable dev-libs/ppl interface for convex hull computations.
+sci-mathematics/polymake:singular - Enable the interface to sci-mathematics/singular for ideal related computations.
 sci-mathematics/rstudio:server - Build and install the RStudio server
 sci-mathematics/singular:boost - Compile against external boost headers (dev-libs/boost)
 sci-mathematics/spass:isabelle - Add integration support for the Isabelle/HOL theorem prover.
