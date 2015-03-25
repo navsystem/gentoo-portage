@@ -1,2 +1,3 @@
 media-libs/phonon -vlc gstreamer
+dev-qt/designer -phonon
 
