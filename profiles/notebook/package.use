@@ -112,3 +112,4 @@ media-sound/sox -ffmpeg
 media-plugins/alsa-plugins -ffmpeg
 app-misc/strigi -ffmpeg
 x11-libs/libfm gtk
+dev-qt/designer -phonon

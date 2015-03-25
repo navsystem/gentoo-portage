@@ -3,4 +3,4 @@ sys-apps/hasp
 x11-libs/libqxt
 app-admin/sudo
 media-libs/phonon
-
+@argo5-libs-depends

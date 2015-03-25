@@ -98,6 +98,7 @@ src_prepare() {
 
 	epatch "${FILESDIR}/${P}-v4l-automagic.patch" \
 		"${FILESDIR}/${P}-libav9.patch" \
+		"${FILESDIR}/${P}-libav10.patch" \
 		"${FILESDIR}/${P}-underlinking.patch" \
 		"${FILESDIR}/${P}-tests.patch" \
 		"${FILESDIR}/${P}-xxd.patch"
