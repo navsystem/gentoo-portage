@@ -1,12 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4i/ccp4i-6.1.3-r4.ebuild,v 1.1 2015/03/09 13:30:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4i/ccp4i-6.1.3-r4.ebuild,v 1.4 2015/03/27 10:18:43 ago Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 )
-
-PYTHON_DEPEND="2"
 
 inherit eutils multilib python-single-r1 virtualx
 
@@ -28,14 +26,14 @@ SRC_URI="
 [[ -n ${PATCHDATE} ]] && SRC_URI="${SRC_URI} http://dev.gentoo.org/~jlec/science-dist/${PV}-${PATCHDATE}-updates.patch.bz2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
 LICENSE="ccp4"
 IUSE=""
 
 RDEPEND="
 	app-shells/tcsh
 	media-gfx/graphviz
-	>=dev-lang/tk-8.3
+	>=dev-lang/tk-8.3:0
 	>=dev-tcltk/blt-2.4
 	sci-libs/ccp4-libs"
 DEPEND="${RDEPEND}"
