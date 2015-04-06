@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/traceback2/traceback2-1.4.0.ebuild,v 1.2 2015/03/30 16:16:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/traceback2/traceback2-1.4.0.ebuild,v 1.4 2015/04/05 14:02:09 alunduil Exp $
 
 EAPI=5
 
@@ -14,11 +14,11 @@ SRC_URI="mirror://pypi/${P:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="PSF-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa"
+KEYWORDS="~amd64 ~arm ~hppa"
 IUSE=""
 
 DEPEND="
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	dev-python/pbr[${PYTHON_USEDEP}]
 "
-RDEPEND=""
+RDEPEND="dev-python/linecache2[${PYTHON_USEDEP}]"

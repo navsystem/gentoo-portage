@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/flint/flint-2.4.5.ebuild,v 1.1 2015/04/02 12:27:59 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/flint/flint-2.4.5.ebuild,v 1.4 2015/04/05 11:19:35 tomka Exp $
 
 EAPI="5"
 
@@ -31,7 +31,9 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.4.3-libdir.patch \
 		"${FILESDIR}"/${PN}-2.4.3-whitespaces.patch \
 		"${FILESDIR}"/${PN}-2.4.3-cflags-ldflags.patch \
-		"${FILESDIR}"/${PN}-2.4.4-test.patch
+		"${FILESDIR}"/${PN}-2.4.4-test.patch \
+		"${FILESDIR}"/${PN}-2.4.5-gmp6-compat.patch \
+		"${FILESDIR}"/${PN}-2.4.5-ntl62.patch
 }
 
 src_configure() {
