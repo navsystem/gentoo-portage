@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-9.38.1.ebuild,v 1.1 2015/04/07 08:44:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-9.38.1.ebuild,v 1.3 2015/04/08 12:31:38 jlec Exp $
 
 EAPI=5
 
@@ -30,6 +30,8 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${PN}_${PV}
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-osversion.patch
+
 	if ! use pch; then
 		sed "s:PRE_COMPILED_HEADER=StdAfx.h.gch:PRE_COMPILED_HEADER=:g" -i makefile.* || die
 	fi
@@ -42,7 +44,7 @@ src_prepare() {
 		-e "/^CXX=/s:g++:$(tc-getCXX):" \
 		-e "/^CC=/s:gcc:$(tc-getCC):" \
 		-e '/ALLFLAGS/s:-s ::' \
-		-e "/OPTFLAGS=/s:=.*:=${CFLAGS}:" \
+		-e "/OPTFLAGS=/s:=.*:=${CXXFLAGS}:" \
 		-i makefile* || die
 
 	# remove non-free RAR codec
@@ -113,11 +115,10 @@ src_install() {
 		make_wrapper 7zFM "/usr/$(get_libdir)/${PN}/7zFM"
 
 		make_desktop_entry 7zFM "${PN} FM" ${PN} "GTK;Utility;Archiving;Compression"
-		make_desktop_entry 7zG "${PN} GUI" ${PN} "GTK;Utility;Archiving;Compression"
 
 		dobin GUI/p7zipForFilemanager
 		exeinto /usr/$(get_libdir)/${PN}
-		doexe bin/7z{G,FM}
+		doexe bin/7zFM
 
 		insinto /usr/$(get_libdir)/${PN}
 		doins -r GUI/{Lang,help}
@@ -126,9 +127,8 @@ src_install() {
 		newins GUI/p7zip_16_ok.png p7zip.png
 
 		if use kde; then
-
-			rm GUI/kde4/p7zip_compress.desktop
-			insinto  /usr/share/kde4/services/ServiceMenus
+			rm GUI/kde4/p7zip_compress.desktop || die
+			insinto /usr/share/kde4/services/ServiceMenus
 			doins GUI/kde4/*.desktop
 		fi
 	fi
