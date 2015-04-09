@@ -96,7 +96,7 @@ sys-libs/talloc python
 
 sci-libs/gdal geos python
 sci-geosciences/qgis gps grass gsl mapserver postgres python spatialite
-sci-geosciences/grass python
+sci-geosciences/grass python -ffmpeg
 kde-base/kdelibs semantic-desktop
 games-fps/qudos qmax textures
 x11-themes/qtcurve gtk
@@ -211,3 +211,24 @@ media-libs/libtheora abi_x86_32
 x11-libs/pixman abi_x86_32
 x11-libs/pango abi_x86_32
 x11-libs/cairo abi_x86_32
+dev-libs/expat abi_x86_32
+virtual/libffi abi_x86_32
+media-libs/tiff abi_x86_32
+virtual/jpeg abi_x86_32
+media-libs/libjpeg-turbo abi_x86_32
+app-arch/bzip2 abi_x86_32
+media-libs/libpng abi_x86_32
+virtual/libiconv abi_x86_32
+dev-libs/openssl abi_x86_32
+app-arch/xz-utils abi_x86_32
+sys-apps/attr abi_x86_32
+media-libs/alsa-lib abi_x86_32
+dev-libs/libffi abi_x86_32
+media-libs/lcms abi_x86_32
+sys-devel/gettext abi_x86_32
+sys-libs/gdbm abi_x86_32
+dev-lang/orc abi_x86_32
+dev-libs/libgpg-error abi_x86_32
+virtual/libintl abi_x86_32
+dev-libs/libgcrypt abi_x86_32
+
