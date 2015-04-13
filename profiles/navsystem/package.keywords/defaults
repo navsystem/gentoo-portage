@@ -15,7 +15,7 @@ sys-block/megacli amd64
 
 ~dev-db/pgpool2-3.3.4 amd64
 
-~sci-libs/gdal-1.10.0 x86 amd64
+~sci-libs/gdal-1.11.1 x86 amd64
 =dev-qt/qxbsql-0.2 x86 amd64
 <www-plugins/chrome-binary-plugins-41 x86 amd64
 ~sci-electronics/kicad-20130518 x86 amd64
