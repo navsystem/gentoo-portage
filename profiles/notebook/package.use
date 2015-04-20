@@ -114,7 +114,7 @@ app-misc/strigi -ffmpeg
 x11-libs/libfm gtk
 dev-qt/designer -phonon
 
-
+app-crypt/gcr gtk
 
 ######### skype
 virtual/mysql abi_x86_32
