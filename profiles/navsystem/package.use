@@ -112,4 +112,5 @@ app-crypt/qca gpg openssl
 x11-libs/libfm gtk
 
 dev-qt/designer -phonon
-
+app-crypt/gcr gtk
+media-video/vlc -rdp
