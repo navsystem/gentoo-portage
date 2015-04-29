@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=3
+EAPI=5
 
 CMAKE_IN_SOURCE_BUILD=1
 
@@ -12,7 +12,7 @@ DESCRIPTION="Classic 2D jump'n run sidescroller game in a style similar to the o
 HOMEPAGE="http://super-tux.sourceforge.net"
 SRC_URI=""
 
-EGIT_REPO_URI="https://code.google.com/p/supertux/"
+EGIT_REPO_URI="https://github.com/SuperTux/supertux.git"
 
 LICENSE="GPL-2"
 SLOT="2"
@@ -31,10 +31,10 @@ RDEPEND="media-libs/libsdl2[joystick]
 	curl? ( net-misc/curl )"
 DEPEND="${RDEPEND}"
 
-DOCS="WHATSNEW.txt data/credits.txt"
+DOCS="LICENSE WHATSNEW.txt data/credits.txt"
 
 src_unpack() {
-       git-r3_src_unpack
+	git-r3_src_unpack
 }
 
 src_configure() {

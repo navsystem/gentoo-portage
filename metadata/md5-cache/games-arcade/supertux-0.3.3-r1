@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install postinst preinst prepare setup test unpack
-DEPEND=media-libs/libsdl[joystick] media-libs/sdl-image[png,jpeg] media-libs/libvorbis dev-games/physfs media-libs/openal x11-libs/libXt media-libs/glew opengl? ( virtual/opengl ) curl? ( >=net-misc/curl-7.21.7 ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DEPEND=media-libs/libsdl[joystick] media-libs/sdl-image[png,jpeg] media-libs/libvorbis dev-games/physfs media-libs/openal x11-libs/libXt media-libs/glew opengl? ( virtual/opengl ) curl? ( >=net-misc/curl-7.21.7 ) sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=A game similar to Super Mario Bros.
 EAPI=2
 HOMEPAGE=http://super-tux.sourceforge.net
 IUSE=opengl curl debug
 KEYWORDS=~amd64
 LICENSE=GPL-2
-RDEPEND=media-libs/libsdl[joystick] media-libs/sdl-image[png,jpeg] media-libs/libvorbis dev-games/physfs media-libs/openal x11-libs/libXt media-libs/glew opengl? ( virtual/opengl ) curl? ( >=net-misc/curl-7.21.7 )
+RDEPEND=media-libs/libsdl[joystick] media-libs/sdl-image[png,jpeg] media-libs/libvorbis dev-games/physfs media-libs/openal x11-libs/libXt media-libs/glew opengl? ( virtual/opengl ) curl? ( >=net-misc/curl-7.21.7 ) games-misc/games-envd
 SLOT=2
 SRC_URI=mirror://berlios/supertux/supertux-0.3.3.tar.bz2
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	bc8bbf26de246f74e2901a3696ad96d6	eutils	36e6377b0e31856b6d62af831661c4f3	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	games	0fb7637597e0869f6c8be79b11d0135a	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	cmake-utils	0430c386d85cec959d72640afd63ea91	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c263990f1b677b0f0be0a3299f179762	games	1ad3205dbf62a2c98249f2f59b0a2d39	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=dc5e95aa3fbbda9092780c97c9f89362
