@@ -121,6 +121,7 @@ virtual/mysql abi_x86_32
 x11-proto/xf86vidmodeproto abi_x86_32
 dev-libs/elfutils abi_x86_32
 dev-qt/qtcore abi_x86_32
+dev-qt/qtsvg abi_x86_32
 x11-proto/dri2proto abi_x86_32
 dev-util/pkgconfig abi_x86_32
 x11-proto/xcb-proto abi_x86_32 python_targets_python3_4
