@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build-multilib.eclass,v 1.10 2015/04/22 20:23:47 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build-multilib.eclass,v 1.15 2015/05/10 14:27:29 pesa Exp $
 
 # @ECLASS: qt4-build-multilib.eclass
 # @MAINTAINER:
@@ -187,12 +187,6 @@ qt4-build-multilib_src_prepare() {
 		append-flags -mminimal-toc
 	fi
 
-	# Bug 417105
-	# graphite on gcc 4.7 causes miscompilations
-	if [[ $(gcc-version) == "4.7" ]]; then
-		filter-flags -fgraphite-identity
-	fi
-
 	# Read also AR from the environment
 	sed -i -e 's/^SYSTEM_VARIABLES="/&AR /' \
 		configure || die "sed SYSTEM_VARIABLES failed"
@@ -208,12 +202,16 @@ qt4-build-multilib_src_prepare() {
 		QMakeVar set QMAKE_LFLAGS_DEBUG\n' \
 		configure || die "sed QMAKE_*FLAGS_{RELEASE,DEBUG} failed"
 
-	# Respect CC, CXX, LINK and *FLAGS in config.tests
+	# Drop -nocache from qmake invocation in all configure tests, to ensure that the
+	# correct toolchain and build flags are picked up from config.tests/.qmake.cache
 	find config.tests/unix -name '*.test' -type f -print0 | xargs -0 \
-		sed -i -e "/bin\/qmake/ s: \"\$SRCDIR/: \
-			'QMAKE_CC=$(tc-getCC)'    'QMAKE_CXX=$(tc-getCXX)'      'QMAKE_LINK=$(tc-getCXX)' \
-			'QMAKE_CFLAGS+=${CFLAGS}' 'QMAKE_CXXFLAGS+=${CXXFLAGS}' 'QMAKE_LFLAGS+=${LDFLAGS}'&:" \
-		|| die "sed config.tests failed"
+		sed -i -e '/bin\/qmake/s/ -nocache//' || die "sed -nocache failed"
+
+	# compile.test needs additional patching so that it doesn't create another cache file
+	# inside the test subdir, which would incorrectly override config.tests/.qmake.cache
+	sed -i -e '/echo.*QT_BUILD_TREE.*\.qmake\.cache/d' \
+		-e '/bin\/qmake/s/ "$SRCDIR/ "QT_BUILD_TREE=$OUTDIR"&/' \
+		config.tests/unix/compile.test || die "sed compile.test failed"
 
 	# Delete references to the obsolete /usr/X11R6 directory
 	# On prefix, this also prevents looking at non-prefix stuff
@@ -339,6 +337,21 @@ qt4_multilib_src_configure() {
 		-arch ${arch}
 		-platform $(qt4_get_mkspec)
 
+		# instruction set support
+		$(is-flagq -mno-mmx	&& echo -no-mmx)
+		$(is-flagq -mno-3dnow	&& echo -no-3dnow)
+		$(is-flagq -mno-sse	&& echo -no-sse)
+		$(is-flagq -mno-sse2	&& echo -no-sse2)
+		$(is-flagq -mno-sse3	&& echo -no-sse3)
+		$(is-flagq -mno-ssse3	&& echo -no-ssse3)
+		$(is-flagq -mno-sse4.1	&& echo -no-sse4.1)
+		$(is-flagq -mno-sse4.2	&& echo -no-sse4.2)
+		$(is-flagq -mno-avx	&& echo -no-avx)
+		$(is-flagq -mfpu=*	&& ! is-flagq -mfpu=*neon* && echo -no-neon)
+
+		# bug 367045
+		$([[ ${CHOST} == *86*-apple-darwin* ]] && echo -no-ssse3)
+
 		# prefer system libraries
 		-system-zlib
 
@@ -360,10 +373,6 @@ qt4_multilib_src_configure() {
 		# mostly to be seen as a core dump with the message:
 		# "QPixmap: Must construct a QApplication before a QPaintDevice"
 		$([[ ${CHOST} != *-solaris* ]] && echo -reduce-relocations)
-
-		# this one is needed for all systems with a separate -liconv, apart from
-		# Darwin, for which the sources already cater for -liconv
-		$(use !elibc_glibc && [[ ${CHOST} != *-darwin* ]] && echo -liconv)
 	)
 
 	if use_if_iuse aqua; then
@@ -529,6 +538,7 @@ qt_native_use() {
 # Prepares the environment for building Qt.
 qt4_prepare_env() {
 	# setup installation directories
+	# note: keep paths in sync with qmake-utils.eclass
 	QT4_PREFIX=${EPREFIX}/usr
 	QT4_HEADERDIR=${QT4_PREFIX}/include/qt4
 	QT4_LIBDIR=${QT4_PREFIX}/$(get_libdir)/qt4
