@@ -44,6 +44,7 @@ app-arch/p7zip rar wxwidgets
 dev-db/sqlite secure-delete unlock-notify
 
 dev-vcs/git -perl -subversion -gtk
+media-video/vlc -rdp
 
 #required by app-emulation/virt-manager
 app-emulation/libvirt python
@@ -247,4 +248,4 @@ media-libs/libogg abi_x86_32
 dev-libs/lzo abi_x86_32
 media-libs/libmng abi_x86_32
 dev-libs/json-c abi_x86_32
-
+media-plugins/alsa-plugins abi_x86_32
