@@ -114,3 +114,4 @@ x11-libs/libfm gtk
 dev-qt/designer -phonon
 app-crypt/gcr gtk
 media-video/vlc -rdp
+dev-qt/qtdemo -abi_x86_32
