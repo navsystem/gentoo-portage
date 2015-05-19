@@ -1,23 +1,22 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-9999.ebuild,v 1.6 2015/05/12 17:27:40 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-9999.ebuild,v 1.13 2015/05/15 04:36:08 jer Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="sqlite,xml"
-inherit eutils fcaps flag-o-matic python-single-r1 readme.gentoo toolchain-funcs user
+inherit eutils flag-o-matic python-single-r1 toolchain-funcs user
 
 MY_P=${P/_beta/BETA}
 
-DESCRIPTION="A utility for network exploration or security auditing"
+DESCRIPTION="A utility for network discovery and security auditing"
 HOMEPAGE="http://nmap.org/"
 
 if [[ ${PV} == "9999" ]] ; then
 	inherit subversion
 	ESVN_REPO_URI="https://svn.nmap.org/nmap"
 	SRC_URI="http://dev.gentoo.org/~jer/nmap-logo-64.png"
-	KEYWORDS=""
 	#FORCE_PRINT_ELOG="true"
 else
 	SRC_URI="
@@ -61,13 +60,6 @@ DEPEND="
 
 S="${WORKDIR}/${MY_P}"
 
-DOC_CONTENTS="To run nmap as normal user you have to add yourself to the \
-nmap group AND pass --privileged on the command line. This security \
-measure ensures that only trusted users are allowed to run nmap. \
-To avoid passing --privileged every time, add \
-'export NMAP_PRIVILEGED=\"\"' to your user environment (eg ~/.bashrc)."
-
-
 pkg_setup() {
 	if use ndiff || use zenmap; then
 		python-single-r1_pkg_setup
@@ -83,7 +75,8 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-6.25-liblua-ar.patch \
 		"${FILESDIR}"/${PN}-6.46-uninstaller.patch \
 		"${FILESDIR}"/${PN}-6.47-no-libnl.patch \
-		"${FILESDIR}"/${PN}-9999-no-FORTIFY_SOURCE.patch
+		"${FILESDIR}"/${PN}-no-FORTIFY_SOURCE.patch \
+		"${FILESDIR}"/${PN}-6.47-ncat-lua.patch
 
 	if use nls; then
 		local lingua=''
@@ -160,29 +153,5 @@ src_install() {
 	if use zenmap; then
 		doicon "${DISTDIR}/nmap-logo-64.png"
 		python_optimize
-	fi
-
-	readme.gentoo_create_doc
-}
-
-pkg_postinst() {
-	# Add group for users allowed to run nmap.
-	enewgroup nmap
-
-	fcaps -o 0 -g nmap -m 4755 -M 0755 \
-		cap_net_raw,cap_net_admin,cap_net_bind_service+eip \
-		"${EROOT}"/usr/bin/nmap
-
-	if [[ ${PV} == "9999" ]] ; then
-		einfo "To run nmap as normal user you have to add yourself to the nmap group"
-		einfo "AND pass --privileged on the command line. This security measure"
-		einfo "ensures that only trusted users are allowed to run nmap. To avoid"
-		einfo "passing --privileged every time, add 'export NMAP_PRIVILEGED=\"\"' to"
-		einfo "your user environment (eg ~/.bashrc)."
-	else
-		if [[ ${REPLACING_VERSIONS} < 6.48 ]]; then
-			FORCE_PRINT_ELOG="true"
-		fi
-		readme.gentoo_print_elog
 	fi
 }
