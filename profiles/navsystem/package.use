@@ -115,3 +115,7 @@ dev-qt/designer -phonon
 app-crypt/gcr gtk
 media-video/vlc -rdp
 dev-qt/qtdemo -abi_x86_32
+
+dev-libs/libpcre pcre16
+x11-libs/libxcb xkb
+

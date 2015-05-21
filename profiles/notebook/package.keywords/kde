@@ -135,6 +135,7 @@ kde-base/nepomuk-widgets amd64
 kde-base/kppp amd64
 kde-base/kwalletmanager amd64
 kde-base/zeroconf-ioslave amd64
+kde-base/libkgreeter amd64
 
 media-libs/libraw amd64
 kde-base/kfilemetadata amd64
