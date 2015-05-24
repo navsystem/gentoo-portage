@@ -150,6 +150,7 @@ app-admin/conky:thinkpad - enable support for IBM/Lenovo notebooks
 app-admin/conky:weather-metar - enable support for metar weather service
 app-admin/conky:weather-xoap - enable support for metar and xoap weather service
 app-admin/conky:xmms2 - enable monitoring of music played by media-sound/xmms2
+app-admin/consul:web - Build the web UI.
 app-admin/diamond:mongo - Enable MongoDB support
 app-admin/diamond:redis - Enable Redis support
 app-admin/diradm:automount - Support for automount data in LDAP
@@ -1057,6 +1058,8 @@ app-office/scribus:tk - Install tk based scripts e.g. FontSample.py
 app-office/texmacs:netpbm - Add support for media-libs/netpbm
 app-office/texmacs:pdf - Add the experimental native pdf export
 app-office/texstudio:video - Use phonon for video embedding
+app-office/wps-office:corefonts - Ensure media-fonts/corefonts is present
+app-office/wps-office:sharedfonts - Preserve fonts from WPS
 app-pda/barry:boost - Enable boost support
 app-pda/barry:desktop - Install the GUI desktop control panel
 app-pda/barry:gui - Install the GUI backup tool
@@ -2054,7 +2057,6 @@ dev-lisp/clisp:new-clx - Build CLISP with support for the NEW-CLX module which i
 dev-lisp/clisp:pari - Build CLISP with support for the PARI Computer Algebra System
 dev-lisp/clisp:svm - Build CLISP with support for the Support Vector Machine module
 dev-lisp/clx:doc - Builds documentation
-dev-lisp/cmucl:nosource - Don't include source code for CMUCL in installation
 dev-lisp/cmucl:source - Include source code for CMUCL in installation
 dev-lisp/ecls:gengc - Use generational garbage collection (experimental)
 dev-lisp/ecls:libatomic - Use dev-libs/libatomic_ops library
@@ -3773,7 +3775,6 @@ media-libs/mesa:openvg - Enable the OpenVG 2D acceleration API for Gallium3D.
 media-libs/mesa:osmesa - Build the Mesa library for off-screen rendering.
 media-libs/mesa:pax_kernel - Enable if the user plans to run the package under a pax enabled hardened kernel
 media-libs/mesa:pic - disable optimized assembly code that is not PIC friendly
-media-libs/mesa:r600-llvm-compiler - Build the LLVM based r600 shader compiler.
 media-libs/mesa:vdpau - Enable the VDPAU acceleration interface for the Gallium3D Video Layer.
 media-libs/mesa:wayland - Enable support for dev-libs/wayland
 media-libs/mesa:xa - Enable the XA (X Acceleration) API for Gallium3D.
@@ -6761,6 +6762,7 @@ sys-apps/iotools:make-symlinks - Generate sub-command symlinks to iotools -- not
 sys-apps/ipmitool:openipmi - Use the system OpenIPMI implementation.
 sys-apps/iproute2:berkdb - build programs that use berkdb (just arpd)
 sys-apps/iproute2:iptables - include support for iptables filtering
+sys-apps/iproute2:minimal - only install ip and tc programs
 sys-apps/irqbalance:numa - Support balancing IRQs across NUMA nodes
 sys-apps/kexec-tools:booke - Include support for Book-E memory management
 sys-apps/kexec-tools:lzma - Enables support for LZMA compressed kernel images
