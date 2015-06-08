@@ -28,7 +28,7 @@ app-misc/mc -X slang -ncurses
 dev-vcs/subversion -dso extras
 gnome-base/gvfs gdu
 sys-block/parted device-mapper
-kde-base/kopete oscar
+kde-apps/kopete oscar
 media-libs/libpng apng
 app-office/openoffice -bash-completion
 net-im/psi extras jingle
@@ -98,7 +98,7 @@ sys-libs/talloc python
 sci-libs/gdal geos python
 sci-geosciences/qgis gps grass gsl mapserver postgres python spatialite
 sci-geosciences/grass python -ffmpeg
-kde-base/kdelibs semantic-desktop
+kde-apps/kdelibs semantic-desktop
 games-fps/qudos qmax textures
 x11-themes/qtcurve gtk
 dev-libs/elfutils static-libs
@@ -114,6 +114,8 @@ media-plugins/alsa-plugins -ffmpeg
 app-misc/strigi -ffmpeg
 x11-libs/libfm gtk
 dev-qt/designer -phonon
+
+net-libs/ptlib wav
 
 app-crypt/gcr gtk
 

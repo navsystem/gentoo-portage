@@ -17,7 +17,7 @@
 
 ~dev-qt/qttranslations-4.8.6 amd64
 ~dev-qt/qtchooser-0_p20150102 amd64
-~kde-base/libkgreeter-4.11.17 amd64
+~kde-apps/libkgreeter-4.11.17 amd64
 
 ~dev-qt/linguist-tools-5.4.1 x86 amd64
 ~dev-qt/qdbus-5.4.1 x86 amd64

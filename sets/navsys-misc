@@ -5,9 +5,9 @@ media-sound/audacity
 app-admin/sudo
 media-video/smplayer
 app-cdr/k3b
-kde-base/kmix
-kde-base/okular
-kde-base/ark
-kde-base/gwenview
+kde-apps/kmix
+kde-apps/okular
+kde-apps/ark
+kde-apps/gwenview
 media-video/qt-recordmydesktop
 sys-fs/dosfstools
