@@ -28,6 +28,7 @@ src_prepare() {
 	sed -i \
 		-e 's:-O2::g' \
 		configure || die
+	chmod 755 configure || die
 }
 
 src_configure() {
