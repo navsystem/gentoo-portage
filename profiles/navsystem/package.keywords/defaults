@@ -43,3 +43,5 @@ net-im/jitsi-bin x86 amd64
 ~media-fonts/paratype-2.5 x86 amd64
 
 =net-libs/webkit-gtk-2.4.9-r200 amd64
+~net-misc/teamviewer-10.0.41499 x86 amd64
+
