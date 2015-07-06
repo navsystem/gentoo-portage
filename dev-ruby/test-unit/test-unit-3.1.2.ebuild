@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/test-unit-3.1.2.ebuild,v 1.1 2015/06/10 09:18:59 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/test-unit-3.1.2.ebuild,v 1.3 2015/06/30 05:07:22 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21 ruby22"
@@ -15,7 +15,8 @@ inherit ruby-fakegem
 # yard for the other ruby implementations. Without this assumption
 # bootstrapping ruby22 won't be possible due to the yard dependency
 # tree.
-USE_RUBY="${USE_RUBY/ruby22/}" ruby_add_bdepend "doc? ( dev-ruby/yard )"
+#USE_RUBY="${USE_RUBY/ruby22/}" ruby_add_bdepend "doc? ( dev-ruby/yard )"
+ruby_add_bdepend "doc? ( dev-ruby/yard )"
 
 DESCRIPTION="An xUnit family unit testing framework for Ruby"
 HOMEPAGE="https://rubygems.org/gems/test-unit"
