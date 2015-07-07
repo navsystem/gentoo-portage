@@ -118,4 +118,5 @@ dev-qt/qtdemo -abi_x86_32
 
 dev-libs/libpcre pcre16
 x11-libs/libxcb xkb
+media-libs/libvpx postproc
 

@@ -118,6 +118,8 @@ dev-qt/designer -phonon
 net-libs/ptlib wav
 
 app-crypt/gcr gtk
+media-libs/libvpx postproc
+
 
 ######### skype
 virtual/mysql abi_x86_32
