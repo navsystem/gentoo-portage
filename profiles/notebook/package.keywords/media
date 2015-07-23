@@ -11,3 +11,4 @@
 ~media-libs/mediastreamer-2.9.0-r1 amd64
 ~app-cdr/k3b-2.0.3 amd64
 ~x11-libs/libva-vdpau-driver-0.7.4 amd64
+~x11-drivers/xf86-video-intel-2.99.917 amd64

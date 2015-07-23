@@ -45,6 +45,8 @@ dev-db/sqlite secure-delete unlock-notify
 
 dev-vcs/git -perl -subversion -gtk
 media-video/vlc -rdp
+x11-libs/fltk xft
+
 
 #required by app-emulation/virt-manager
 app-emulation/libvirt python
