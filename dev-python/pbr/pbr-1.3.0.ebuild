@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pbr/pbr-1.3.0.ebuild,v 1.2 2015/07/26 15:30:18 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pbr/pbr-1.3.0.ebuild,v 1.4 2015/07/27 01:35:14 floppym Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python2_7 python3_{3,4} pypy )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
 
 inherit distutils-r1
 
