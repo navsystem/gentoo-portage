@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-multilib.eclass,v 1.23 2015/07/28 20:51:40 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-multilib.eclass,v 1.25 2015/07/30 04:22:47 grknight Exp $
 
 # @ECLASS: mysql-multilib.eclass
 # @MAINTAINER:
@@ -385,7 +385,8 @@ RDEPEND="${DEPEND}
 if [[ ${HAS_TOOLS_PATCH} ]] ; then
 	RDEPEND="${RDEPEND}
 		server? ( !prefix? ( dev-db/mysql-init-scripts ) )
-		!client-libs? ( virtual/libmysqlclient )"
+		!client-libs? ( virtual/libmysqlclient )
+		!<virtual/mysql-5.6-r4"
 else
 	RDEPEND="${RDEPEND} !minimal? ( !prefix? ( dev-db/mysql-init-scripts ) )"
 fi
@@ -588,7 +589,7 @@ multilib_src_configure() {
 	fi
 
 	# debug hack wrt #497532
-	mycmakeargs=(
+	mycmakeargs+=(
 		-DCMAKE_C_FLAGS_RELWITHDEBINFO="$(usex debug "" "-DNDEBUG")"
 		-DCMAKE_CXX_FLAGS_RELWITHDEBINFO="$(usex debug "" "-DNDEBUG")"
 		-DCMAKE_INSTALL_PREFIX=${EPREFIX}/usr
@@ -876,9 +877,14 @@ mysql-multilib_pkg_config() {
 	mysql_init_vars
 
 	[[ -z "${MY_DATADIR}" ]] && die "Sorry, unable to find MY_DATADIR"
-
-	if built_with_use ${CATEGORY}/${PN} minimal && ! built_with_use ${CATEGORY}/${PN} server ; then
-		die "Minimal builds do NOT include the MySQL server"
+	if [[ ${HAS_TOOLS_PATCH} ]] ; then
+		if ! built_with_use ${CATEGORY}/${PN} server ; then
+			die "Minimal builds do NOT include the MySQL server"
+		fi
+	else
+		if built_with_use ${CATEGORY}/${PN} minimal ; then
+			die "Minimal builds do NOT include the MySQL server"
+		fi
 	fi
 
 	if [[ ( -n "${MY_DATADIR}" ) && ( "${MY_DATADIR}" != "${old_MY_DATADIR}" ) ]]; then
