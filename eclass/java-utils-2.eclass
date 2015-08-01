@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.165 2015/06/28 13:33:48 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.168 2015/07/31 07:56:17 monsieurp Exp $
 
 # @ECLASS: java-utils-2.eclass
 # @MAINTAINER:
@@ -124,6 +124,20 @@ JAVA_PKG_ALLOW_VM_CHANGE=${JAVA_PKG_ALLOW_VM_CHANGE:="yes"}
 # emerge bar to be compatible with 1.3
 # @CODE
 #	JAVA_PKG_WANT_TARGET=1.3 emerge bar
+# @CODE
+
+# @ECLASS-VARIABLE: JAVA_RM_FILES
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# An array containing a list of files to remove. If defined, this array will be
+# automatically handed over to java-pkg_rm_files for processing during the
+# src_prepare phase.
+#
+# @CODE
+#	JAVA_RM_FILES=(
+#		path/to/File1.java
+#		DELETEME.txt
+#	)
 # @CODE
 
 # @VARIABLE: JAVA_PKG_COMPILER_DIR
@@ -246,6 +260,42 @@ java-pkg_addres() {
 	pushd "${dir}" > /dev/null || die "pushd ${dir} failed"
 	find -L -type f ! -path "./target/*" ! -path "./sources.lst" ! -name "MANIFEST.MF" ! -regex ".*\.\(class\|jar\|java\)" "${@}" -print0 | xargs -0 jar uf "${jar}" || die "jar failed"
 	popd > /dev/null || die "popd failed"
+}
+
+# @FUNCTION: java-pkg_rm_files 
+# @USAGE: java-pkg_rm_files File1.java File2.java ...
+# @DESCRIPTION:
+# Remove unneeded files in ${S}.
+#
+# Every now and then, you'll run into situations whereby a file needs removing,
+# be it a unit test or a regular java class.
+# 
+# You can use this function by either:
+# - calling it yourself in java_prepare() and feeding java-pkg_rm_files with
+# the list of files you wish to remove.
+# - defining an array in the ebuild named JAVA_RM_FILES with the list of files
+# you wish to remove.
+#
+# Both way work and it is left to the developer's preferences. If the
+# JAVA_RM_FILES array is defined, it will be automatically handed over to
+# java-pkg_rm_files during the src_prepare phase.
+#
+# See java-utils-2_src_prepare.
+#
+# @CODE
+#	java-pkg_rm_files File1.java File2.java
+# @CODE
+#
+# @param $* - list of files to remove.
+java-pkg_rm_files() {
+	debug-print-function ${FUNCNAME} $*
+	local IFS="\n"
+	for filename in "$@"; do
+		[[ ! -f "${filename}" ]] && die "${filename} is not a regular file. Aborting."
+		einfo "Removing unneeded file ${filename}"
+		rm -f "${S}/${filename}" || die "cannot remove ${filename}"
+		eend $?
+	done
 }
 
 # @FUNCTION: java-pkg_dojar
@@ -1779,18 +1829,21 @@ ejunit4() {
 # src_prepare Searches for bundled jars
 # Don't call directly, but via java-pkg-2_src_prepare!
 java-utils-2_src_prepare() {
-	[[ ${EBUILD_PHASE} == prepare ]] &&
-		java-pkg_func-exists java_prepare && java_prepare
+	java-pkg_func-exists java_prepare && java_prepare
 
-	# Remember that eant will call this unless called via Portage
-	if [[ ! -e "${T}/java-utils-2_src_prepare-run" ]] && is-java-strict; then
+	# Check for files in JAVA_RM_FILES array.
+	if [[ ${JAVA_RM_FILES[@]} ]]; then
+		debug-print "$FUNCNAME: removing unneeded files"
+		java-pkg_rm_files "${JAVA_RM_FILES[@]}"
+	fi
+
+	if is-java-strict; then
 		echo "Searching for bundled jars:"
 		java-pkg_find-normal-jars || echo "None found."
 		echo "Searching for bundled classes (no output if none found):"
 		find "${WORKDIR}" -name "*.class"
 		echo "Search done."
 	fi
-	touch "${T}/java-utils-2_src_prepare-run"
 }
 
 # @FUNCTION: java-utils-2_pkg_preinst
@@ -1833,7 +1886,6 @@ eant() {
 
 	if [[ ${EBUILD_PHASE} = compile ]]; then
 		java-ant-2_src_configure
-		java-utils-2_src_prepare
 	fi
 
 	if ! has java-ant-2 ${INHERITED}; then
