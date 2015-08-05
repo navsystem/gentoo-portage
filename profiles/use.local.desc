@@ -3983,6 +3983,7 @@ media-plugins/audacious-plugins:bs2b - Enable Bauer Bauer stereophonic-to-binaur
 media-plugins/audacious-plugins:cue - Support CUE sheets using the libcue library
 media-plugins/audacious-plugins:fluidsynth - Support FluidSynth as MIDI synth backend
 media-plugins/audacious-plugins:gtk3 - Link against version 3 of the GIMP Toolkit instead of version 2 (x11-libs/gtk+)
+media-plugins/audacious-plugins:http - Support HTTP streams through neon
 media-plugins/audacious-plugins:midi - Build with amidi-plug (MIDI synth) support
 media-plugins/audacious-plugins:scrobbler - Build with scrobbler/LastFM submission support
 media-plugins/audacious-plugins:sid - Build with SID (Commodore 64 Audio) support
@@ -4522,7 +4523,6 @@ media-video/ffmpeg:hardcoded-tables - Use pre-calculated tables rather than calc
 media-video/ffmpeg:iec61883 - Support for FireWire DV/HDV input device using media-libs/libiec61883.
 media-video/ffmpeg:libsoxr - Enables audio resampling through media-libs/soxr.
 media-video/ffmpeg:libv4l - Uses media-libs/libv4l for video4linux instead of direct calls. Adds support for more devices via the userspace library.
-media-video/ffmpeg:mips32r2 - Enables MIPS32R2 optimizations.
 media-video/ffmpeg:mipsdspr1 - Enables MIPS DSP ASE R1 optimizations.
 media-video/ffmpeg:mipsdspr2 - Enables MIPS DSP ASE R2 optimizations.
 media-video/ffmpeg:mipsfpu - Enables floating point MIPS optimizations.
@@ -7142,7 +7142,6 @@ sys-cluster/nova:compute-only - only install stuff needed for a compute host
 sys-cluster/nova:iscsi - Installs iscsi helper udev scripts
 sys-cluster/nova:kvm - qemu-kvm hypervisor support
 sys-cluster/nova:memcached - Installs the memcached server
-sys-cluster/nova:network - Installs the initscripts for the nova network service
 sys-cluster/nova:novncproxy - Installs the initscripts for the nova novncproxy service
 sys-cluster/nova:openvswitch - Installs openvswitch for the neutron openvswitch support
 sys-cluster/nova:rabbitmq - Installs the rabbitmq server
