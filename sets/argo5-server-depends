@@ -1,0 +1,7 @@
+dev-libs/qextserialport
+sys-apps/hasp
+x11-libs/libqxt
+app-admin/sudo
+media-libs/phonon
+dev-cpp/muParser
+@argo5-libs-depends

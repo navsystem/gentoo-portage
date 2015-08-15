@@ -16,6 +16,15 @@ alpha           default/linux/alpha/13.0/desktop/kde/systemd    stable
 alpha           default/linux/alpha/13.0/developer              stable
 
 # AMD64 Profiles
+amd64           notebook/general/amd64                          stable
+amd64           notebook/developer/amd64                        dev
+amd64           navsystem/general/amd64                         stable
+amd64           navsystem/developer/amd64                       dev
+amd64           navsystem/general/amd64/systemd                 stable
+amd64           navsystem/developer/amd64/systemd               dev
+amd64           navsystem/general/amd64/miniserver              stable
+amd64           navsystem/developer/amd64/miniserver            dev
+
 amd64           default/linux/amd64/13.0                           stable
 amd64           default/linux/amd64/13.0/selinux                   dev
 amd64           default/linux/amd64/13.0/desktop                   stable
@@ -153,6 +162,9 @@ sparc           default/linux/sparc/13.0/desktop/kde/systemd    stable
 sparc           default/linux/sparc/13.0/developer              stable
 
 # x86 Profiles
+x86             navsystem/general/x86                           stable
+x86             navsystem/developer/x86                         dev
+
 x86             default/linux/x86/13.0                          stable
 x86             default/linux/x86/13.0/selinux                  dev
 x86             default/linux/x86/13.0/desktop                  stable

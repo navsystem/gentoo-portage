@@ -1,0 +1,14 @@
+~media-sound/deadbeef-0.6.2 amd64
+~media-video/vlc-2.1.5 amd64
+~media-libs/libtheora-1.1.1 amd64
+~media-gfx/hugin-2014.0.0-r1 amd64
+~media-libs/libpano13-2.9.19 amd64
+~x11-libs/wxGTK-3.0.1.1 amd64
+~media-video/smplayer-14.9.0.6690 amd64
+~media-video/mpv-0.8.3 amd64
+=media-video/ffmpeg-2.2.12 amd64
+~media-video/libav-11.3 amd64
+~media-libs/mediastreamer-2.9.0-r1 amd64
+~app-cdr/k3b-2.0.3 amd64
+~x11-libs/libva-vdpau-driver-0.7.4 amd64
+~x11-drivers/xf86-video-intel-2.99.917 amd64

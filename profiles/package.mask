@@ -911,3 +911,14 @@ games-fps/unreal-tournament-goty
 games-fps/unreal-tournament-strikeforce
 games-fps/unreal-tournament-bonuspacks
 games-fps/aaut
+
+
+
+
+
+# Egor Y. Egorov
+# Masked live-ebuild.
+>=games-arcade/supertux-9999
+
+
+

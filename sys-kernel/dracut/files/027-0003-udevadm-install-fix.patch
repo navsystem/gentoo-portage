@@ -1,0 +1,17 @@
+diff -ur dracut-027_orig/modules.d/95udev-rules/module-setup.sh dracut-027/modules.d/95udev-rules/module-setup.sh
+--- dracut-027_orig/modules.d/95udev-rules/module-setup.sh	2013-03-26 22:55:03.000000000 +0700
++++ dracut-027/modules.d/95udev-rules/module-setup.sh	2013-04-01 13:31:43.656044613 +0700
+@@ -8,8 +8,12 @@
+     # Fixme: would be nice if we didn't have to know which rules to grab....
+     # ultimately, /lib/initramfs/rules.d or somesuch which includes links/copies
+     # of the rules we want so that we just copy those in would be best
+-    dracut_install udevadm cat uname blkid \
++    dracut_install cat uname blkid \
+         /etc/udev/udev.conf
++    
++    dracut_install /usr/bin/udevadm \
++        /bin/udevadm \
++        /sbin/udevadm
+ 
+     [ -d ${initdir}/$systemdutildir ] || mkdir -p ${initdir}/$systemdutildir
+     for _i in ${systemdutildir}/systemd-udevd ${udevdir}/udevd /sbin/udevd; do

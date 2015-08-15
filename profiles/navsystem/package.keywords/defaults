@@ -1,0 +1,51 @@
+app-portage/deltup amd64 x86
+app-portage/getdelta amd64 x86
+dev-util/bdelta amd64 x86
+~dev-util/codeblocks-10.05 amd64 x86
+=dev-vcs/hgview-1.8.2 x86 amd64
+=dev-python/urwid-1.2.2 x86 amd64
+=kde-misc/kio-mtp-0.75_p20131020 amd64 x86
+=x11-libs/libqxt-0.6.2_p20141013 amd64 x86
+
+~app-emulation/hasp-3.2_p7 x86 amd64
+sys-block/megarc amd64
+sys-block/megamgr amd64
+sys-block/megactl amd64
+sys-block/megacli amd64
+
+~dev-db/pgpool2-3.3.7 amd64
+
+~sci-libs/gdal-1.11.1 x86 amd64
+=dev-qt/qxbsql-0.2 x86 amd64
+<www-plugins/chrome-binary-plugins-41 x86 amd64
+~sci-electronics/kicad-20130518 x86 amd64
+~sci-geosciences/qgis-2.6.0 x86 amd64
+=media-libs/freetype-2.5.3 x86 amd64
+=sys-libs/zlib-1.2.8-r1 x86 amd64
+~kde-misc/customizable-weather-1.8.3 x86 amd64
+~sys-block/zram-init-3.0 x86 amd64
+
+~media-fonts/paratype-1 x86 amd64
+~dev-python/mailer-0.7 x86 amd64
+~dev-db/pgadmin3-1.20.0 x86 amd64
+~media-gfx/splashutils-1.5.4.4 x86 amd64
+net-im/skype x86 amd64
+net-misc/dropbox-cli x86 amd64
+
+~lxde-base/lxde-meta-0.5.5 x86 amd64
+~x11-libs/libfm-extra-1.2.3 x86 amd64
+~x11-libs/libfm-1.2.3 x86 amd64
+
+kde-misc/plasma-nm x86 amd64
+dev-util/pycharm-community x86 amd64
+net-im/jitsi-bin x86 amd64
+~dev-java/slf4j-api-1.7.7 x86 amd64
+~app-crypt/qca-2.1.0.3 x86 amd64
+~media-video/guvcview-2.0.1 x86 amd64
+~media-fonts/paratype-2.5 x86 amd64
+
+=net-libs/webkit-gtk-2.4.9-r200 amd64
+~net-misc/teamviewer-10.0.41499 x86 amd64
+=sys-block/thin-provisioning-tools-0.4.1 x86 amd64
+net-voip/ekiga x86 amd64
+~dev-cpp/muParser-2.2.4 x86 amd64

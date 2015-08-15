@@ -1,0 +1,257 @@
+app-admin/testdisk ntfs reiserfs
+media-gfx/splashutils fbcondecor
+net-fs/samba quota
+sys-fs/aufs2 inotify kernel-patch
+
+#disable Xorg dependence
+media-fonts/terminus-font -pcf -X
+
+#for accemble splashutils
+media-libs/jpeg static-libs
+media-libs/libjpeg-turbo static-libs
+media-libs/lcms static-libs
+media-libs/libpng static-libs
+virtual/jpeg static-libs
+media-libs/freetype static-libs
+media-libs/libmng static-libs
+app-arch/bzip2 static static-libs
+
+app-office/openoffice java kde odk
+app-office/libreoffice java kde odk
+
+dev-libs/libgcrypt static-libs
+sys-apps/hal -crypt -X
+virtual/ffmpeg encode
+
+dev-qt/qt-creator examples git mercurial perforce qml qtscript
+app-misc/mc -X slang -ncurses
+dev-vcs/subversion -dso extras
+gnome-base/gvfs gdu
+sys-block/parted device-mapper
+kde-apps/kopete oscar
+media-libs/libpng apng
+app-office/openoffice -bash-completion
+net-im/psi extras jingle
+net-im/psimedia extras
+
+dev-libs/ecore curl
+dev-libs/e_dbus connman ofono
+dev-libs/ecore -directfb
+net-im/pidgin -zeroconf
+media-libs/elementary weather
+
+app-arch/p7zip rar wxwidgets
+dev-db/sqlite secure-delete unlock-notify
+
+dev-vcs/git -perl -subversion -gtk
+media-video/vlc -rdp
+x11-libs/fltk xft
+
+
+#required by app-emulation/virt-manager
+app-emulation/libvirt python
+net-libs/gtk-vnc python
+net-misc/spice-gtk python
+sys-devel/gdb python
+dev-libs/boost python
+
+x11-libs/vte python
+dev-libs/libxml2 python
+app-office/libreoffice python
+app-emulation/wine -xml
+app-text/poppler cairo
+net-libs/webkit-efl curl
+app-portage/layman subversion git mercurial
+net-im/psi extras plugins iconsets
+sys-apps/systemd gtk
+sys-apps/systemd-units server
+sys-fs/udev gudev extras hwdb
+virtual/udev hwdb
+net-misc/connman google ntpd ofono openvpn vpnc
+media-libs/mesa g3dvl gles2 gbm
+
+#required by gnome-extra/cinnamon-1.4, required by =gnome-extra/cinnamon-1.4 (argument)
+gnome-base/gnome-menus python
+#required by media-sound/pulseaudio-1.1-r1[udev], required by gnome-extra/cinnamon-1.4, required by =gnome-extra/cinnamon-1.4 (argument)
+sys-fs/udev hwdb
+
+>=gnome-base/gvfs-1.10.1 cdda
+#required by net-misc/vinagre-3.2.2, required by gnome-base/gnome-extra-apps-3.2.1, required by gnome-base/gnome-3.2.1[extras], required by =gnome-3.2.1 (argument)
+=net-libs/gtk-vnc-0.4.4 gtk3
+app-misc/2gis-data msk nsk omsk kaluga minvody spb
+
+sys-libs/zlib minizip static-libs
+sys-libs/glibc -gd # bug #204525
+
+dev-db/postgresql kerberos
+virtual/postgresql kerberos server
+
+net-dns/avahi autoipd
+
+sci-libs/hdf5 -cxx -fortran
+dev-qt/qtsql mysql
+dev-libs/protobuf python
+sys-apps/usb_modeswitch jimtcl
+net-misc/spice-gtk gtk3
+app-emulation/libvirt-glib python
+
+sys-libs/talloc python
+
+sci-libs/gdal geos python
+sci-geosciences/qgis gps grass gsl mapserver postgres python spatialite
+sci-geosciences/grass python -ffmpeg
+kde-apps/kdelibs semantic-desktop
+games-fps/qudos qmax textures
+x11-themes/qtcurve gtk
+dev-libs/elfutils static-libs
+
+media-libs/mlt kdenlive
+
+x11-plugins/qutim-plugins -kde
+net-voip/linphone gtk video
+media-libs/mediastreamer video
+dev-db/mariadb extraengine
+media-sound/sox -ffmpeg
+media-plugins/alsa-plugins -ffmpeg
+app-misc/strigi -ffmpeg
+x11-libs/libfm gtk
+dev-qt/designer -phonon
+
+net-libs/ptlib wav
+
+app-crypt/gcr gtk
+media-libs/libvpx postproc
+
+
+######### skype
+virtual/mysql abi_x86_32
+x11-proto/xf86vidmodeproto abi_x86_32
+dev-libs/elfutils abi_x86_32
+dev-qt/qtcore abi_x86_32
+dev-qt/qtsvg abi_x86_32
+x11-proto/dri2proto abi_x86_32
+dev-util/pkgconfig abi_x86_32
+x11-proto/xcb-proto abi_x86_32 python_targets_python3_4
+dev-libs/libxml2 abi_x86_32
+media-libs/fontconfig abi_x86_32
+x11-proto/xf86bigfontproto abi_x86_32
+x11-libs/libxshmfence abi_x86_32
+media-libs/freetype abi_x86_32
+dev-qt/qtscript abi_x86_32
+media-libs/mesa abi_x86_32
+media-libs/gstreamer abi_x86_32
+x11-libs/libXxf86vm abi_x86_32
+x11-libs/libICE abi_x86_32
+media-libs/glu abi_x86_32
+x11-libs/libpciaccess abi_x86_32
+net-dns/avahi abi_x86_32
+media-libs/libv4l abi_x86_32
+x11-libs/libXtst abi_x86_32
+x11-libs/libXrender abi_x86_32
+dev-db/sqlite abi_x86_32
+x11-libs/libXvMC abi_x86_32
+media-libs/gst-plugins-base abi_x86_32
+dev-qt/qtwebkit abi_x86_32
+x11-libs/libXcursor abi_x86_32
+x11-proto/inputproto abi_x86_32
+x11-proto/randrproto abi_x86_32
+x11-libs/libXext abi_x86_32
+media-libs/libvorbis abi_x86_32
+x11-proto/videoproto abi_x86_32
+virtual/pkgconfig abi_x86_32
+dev-db/mariadb abi_x86_32
+x11-proto/glproto abi_x86_32
+x11-libs/libXfixes abi_x86_32
+x11-libs/libvdpau abi_x86_32
+x11-libs/libXau abi_x86_32
+x11-proto/xproto abi_x86_32
+x11-proto/damageproto abi_x86_32
+x11-proto/kbproto abi_x86_32
+x11-libs/libSM abi_x86_32
+x11-libs/libXdmcp abi_x86_32
+x11-libs/libXinerama abi_x86_32
+x11-libs/libXdamage abi_x86_32
+x11-proto/xineramaproto abi_x86_32
+media-libs/flac abi_x86_32
+sys-libs/readline abi_x86_32
+x11-libs/libXScrnSaver abi_x86_32
+sys-devel/llvm abi_x86_32
+dev-qt/qtgui abi_x86_32
+x11-proto/scrnsaverproto abi_x86_32
+dev-qt/qtxmlpatterns abi_x86_32
+dev-qt/qt3support abi_x86_32
+x11-proto/xextproto abi_x86_32
+dev-qt/qtdbus abi_x86_32
+x11-proto/renderproto abi_x86_32
+virtual/opengl abi_x86_32
+media-sound/pulseaudio abi_x86_32
+x11-proto/recordproto abi_x86_32
+net-libs/gnutls abi_x86_32
+dev-qt/qtsql abi_x86_32
+x11-proto/presentproto abi_x86_32
+sys-apps/util-linux abi_x86_32
+x11-proto/dri3proto abi_x86_32
+x11-libs/libX11 abi_x86_32
+x11-libs/libXi abi_x86_32
+net-print/cups abi_x86_32
+sys-libs/gpm abi_x86_32
+media-libs/libsndfile abi_x86_32
+x11-proto/xf86driproto abi_x86_32
+sys-apps/dbus abi_x86_32
+sys-libs/libcap abi_x86_32
+media-sound/mpg123 abi_x86_32
+sys-libs/ncurses abi_x86_32
+x11-libs/libXrandr abi_x86_32
+net-nds/openldap abi_x86_32
+virtual/glu abi_x86_32
+dev-libs/libpcre abi_x86_32
+dev-libs/libpthread-stubs abi_x86_32
+dev-libs/glib abi_x86_32
+x11-libs/libxcb abi_x86_32
+x11-libs/libXv abi_x86_32
+sys-apps/systemd abi_x86_32
+x11-proto/fixesproto abi_x86_32
+x11-libs/libdrm abi_x86_32
+virtual/libudev abi_x86_32
+media-libs/harfbuzz abi_x86_32
+x11-libs/libXft abi_x86_32
+media-libs/libtheora abi_x86_32
+x11-libs/pixman abi_x86_32
+x11-libs/pango abi_x86_32
+x11-libs/cairo abi_x86_32
+dev-libs/expat abi_x86_32
+virtual/libffi abi_x86_32
+media-libs/tiff abi_x86_32
+virtual/jpeg abi_x86_32
+media-libs/libjpeg-turbo abi_x86_32
+app-arch/bzip2 abi_x86_32
+media-libs/libpng abi_x86_32
+virtual/libiconv abi_x86_32
+dev-libs/openssl abi_x86_32
+app-arch/xz-utils abi_x86_32
+sys-apps/attr abi_x86_32
+media-libs/alsa-lib abi_x86_32
+dev-libs/libffi abi_x86_32
+media-libs/lcms abi_x86_32
+sys-devel/gettext abi_x86_32
+sys-libs/gdbm abi_x86_32
+dev-lang/orc abi_x86_32
+dev-libs/libgpg-error abi_x86_32
+virtual/libintl abi_x86_32
+dev-libs/libgcrypt abi_x86_32
+net-libs/libasyncns abi_x86_32
+media-gfx/graphite2 abi_x86_32
+sys-libs/zlib abi_x86_32
+dev-libs/libtasn1 abi_x86_32
+dev-libs/icu abi_x86_32
+net-libs/ptlib abi_x86_32
+app-arch/lz4 abi_x86_32
+net-libs/opal abi_x86_32
+dev-libs/gmp abi_x86_32
+sys-apps/tcp-wrappers abi_x86_32
+dev-libs/nettle abi_x86_32
+media-libs/libogg abi_x86_32
+dev-libs/lzo abi_x86_32
+media-libs/libmng abi_x86_32
+dev-libs/json-c abi_x86_32
+media-plugins/alsa-plugins abi_x86_32

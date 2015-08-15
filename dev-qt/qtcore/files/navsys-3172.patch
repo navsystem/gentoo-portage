@@ -1,0 +1,19 @@
+diff -ur qt-everywhere-opensource-src-4.8.5_orig/src/xml/sax/qxml.cpp qt-everywhere-opensource-src-4.8.5/src/xml/sax/qxml.cpp
+--- qt-everywhere-opensource-src-4.8.5_orig/src/xml/sax/qxml.cpp	2014-10-31 04:41:47.000000000 +0000
++++ qt-everywhere-opensource-src-4.8.5/src/xml/sax/qxml.cpp	2014-10-31 04:46:43.066247063 +0000
+@@ -6778,9 +6778,12 @@
+             case EValue:
+                 if ( !entityExist(name())) {
+                     QString errorMessage;
+-                    if (isExpandedEntityValueTooLarge(&errorMessage)) {
+-                        reportParseError(errorMessage);
+-                        return false;
++                    if(qgetenv("QT_UNSECURE_XML").isNull())
++                    {
++                        if (isExpandedEntityValueTooLarge(&errorMessage)) {
++                            reportParseError(errorMessage);
++                            return false;
++                        }
+                     }
+ 
+                     entities.insert(name(), string());

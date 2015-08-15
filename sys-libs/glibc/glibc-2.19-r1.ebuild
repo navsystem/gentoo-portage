@@ -2,6 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
+EAPI="4"
 inherit eutils versionator toolchain-funcs flag-o-matic gnuconfig multilib systemd unpacker multiprocessing
 
 DESCRIPTION="GNU libc6 (also called glibc2) C library"
@@ -139,6 +140,8 @@ eblit-run() {
 }
 
 src_unpack()  { eblit-run src_unpack  ; }
+src_prepare()   { eblit-run src_prepare   ; }
+src_configure() { eblit-run src_configure ; }
 src_compile() { eblit-run src_compile ; }
 src_test()    { eblit-run src_test    ; }
 src_install() { eblit-run src_install ; }

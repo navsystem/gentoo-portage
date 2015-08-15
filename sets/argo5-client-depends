@@ -1,0 +1,12 @@
+app-text/poppler
+x11-libs/qwt:5
+media-libs/glc-lib
+dev-python/psycopg
+virtual/ooo
+media-libs/phonon
+sys-apps/hasp
+dev-python/xlwt
+dev-python/xlrd
+app-misc/pip
+@argo5-libs-depends
+

@@ -34,7 +34,7 @@ CDEPEND=">=dev-java/swt-${PV}:${SLOT}
 	>=dev-java/commons-el-1.0
 	>=dev-java/commons-httpclient-3.1:3
 	>=dev-java/commons-logging-1.0.4
-	>=dev-java/hamcrest-core-1.1
+	~dev-java/hamcrest-core-1.1
 	>=dev-java/icu4j-4.0.1:4
 	>=dev-java/jsch-0.1.41
 	>=dev-java/junit-3.8.2:0

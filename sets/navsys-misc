@@ -1,0 +1,13 @@
+sys-fs/ntfs3g
+app-emulation/wine
+app-editors/gvim
+media-sound/audacity
+app-admin/sudo
+media-video/smplayer
+app-cdr/k3b
+kde-apps/kmix
+kde-apps/okular
+kde-apps/ark
+kde-apps/gwenview
+media-video/qt-recordmydesktop
+sys-fs/dosfstools
