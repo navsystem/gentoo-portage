@@ -19,7 +19,7 @@ SRC_URI="https://www.djangoproject.com/m/releases/$(get_version_component_range 
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS=""
 IUSE="doc sqlite test"
 
 RDEPEND=""
@@ -79,7 +79,7 @@ src_install() {
 	optfeature "MySQL backend support in python 2.7 only" dev-python/mysql-python
 	optfeature "MySQL backend support in python 2.7 - 3.4" dev-python/mysql-connector-python
 	optfeature "PostgreSQL backend support" dev-python/psycopg:2
-	optfeature "Memcached support" dev-python/python-memcached
+	optfeature "Memcached support" dev-python/pylibmc dev-python/python-memcached
 	optfeature "ImageField Support" virtual/python-imaging
 	echo ""
 }

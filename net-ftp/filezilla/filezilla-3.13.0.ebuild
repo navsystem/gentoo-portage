@@ -36,6 +36,17 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}"/${PN}-${MY_PV}
 
+pkg_pretend() {
+	if [[ ${MERGE_TYPE} != binary ]]; then
+		if ! test-flag-CXX -std=c++14; then
+			eerror "${P} requires C++14-capable C++ compiler. Your current compiler"
+			eerror "does not seem to support -std=c++14 option. Please upgrade your compiler"
+			eerror "to gcc-4.9 or an equivalent version supporting C++14."
+			die "Currently active compiler does not support -std=c++14"
+		fi
+	fi
+}
+
 src_prepare() {
 	# Missing in tarball
 	cp -a "${FILESDIR}"/${P}-fzputtygen_interface.h \

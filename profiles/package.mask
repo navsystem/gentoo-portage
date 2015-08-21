@@ -30,6 +30,41 @@
 
 #--- END OF EXAMPLES ---
 
+# Lars Wendler <polynomial-c@gentoo.org> (21 Aug 2015)
+# This version breaks tests in app-admin/rsyslog and 
+# also breaks rule settings.
+# See
+# http://lists.adiscon.net/pipermail/rsyslog/2015-August/041013.html
+# and
+# https://github.com/rsyslog/rsyslog/issues/489
+=dev-libs/liblognorm-1.1.2
+
+# Lars Wendler <polynomial-c@gentoo.org> (20 Aug 2015)
+# Masked for testing
+=net-misc/iputils-20150815
+
+# Hans de Graaff <graaff@gentoo.org> (20 Aug 2015)
+# No longer part of ruby-gnome2. Nothing depends on it.
+# Masked for removal in 30 days.
+dev-ruby/ruby-goocanvas
+
+# Patrice Clement <monsieurp@gentoo.org> (19 Aug 2015)
+# Upstream dead: no releases since 2010.
+# Technology has moved on and there are far better alternatives
+# (easymock, mockito and jmock).
+# Masked for removal in 30 days. See bug #190307.
+dev-java/mockobjects
+
+# Patrice Clement <monsieurp@gentoo.org> (19 Aug 2015)
+# Upstream dead too: no releases since 2005.
+# Masked for removal in 30 days. See bug #190307.
+dev-java/xdoclet
+
+# Johannes Huber <johu@gentoo.org> (18 Aug 2015)
+# Masked for removal in 30 days. Does not compile with
+# dev-python/PyQt4-4.11.4, which blocks stabilization.
+# Dead upstream. Last commit 6 years ago. See bug #558020.
+net-misc/guidedog
 
 # Patrice Clement <monsieurp@gentoo.org> (16 Aug 2015)
 # Dependency of dev-java/base64. This project isn't getting a lot of traction
@@ -85,12 +120,6 @@ kde-misc/ksoprano
 kde-misc/nepomukshell
 kde-misc/pgame
 media-video/bangarang
-
-# Michał Górny <mgorny@gentoo.org> (12 Aug 2015)
-# (on behalf of QA team)
-# Disables RSA & DSA keys without warning, effectively blocking incoming
-# SSH connections.
->=net-misc/openssh-7.0
 
 # Patrice Clement <monsieurp@gentoo.org> (11 Aug 2015)
 # Old and doesn't compile with recent JDKs (>= 1.8).
