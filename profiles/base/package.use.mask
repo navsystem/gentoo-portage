@@ -5,6 +5,39 @@
 # This file requires >=portage-2.1.1
 # New entries go on top.
 
+# Jason Zaman <perfinion@gentoo.org> (06 Sep 2015)
+# This is for cgmanager which is linux only.
+# Unmasked in default/linux/package.use.mask.
+sys-auth/consolekit cgroups
+
+# Mike Gilbert <floppym@gentoo.org> (05 Sep 2015)
+# sys-boot/gnu-efi is not supported on all archs.
+sys-apps/systemd gnuefi
+
+# Manuel Rüger <mrueg@gentoo.org> (03 Sep 2015)
+# Mask USE=ruby for packages that solely rely on the soon to be deprecated
+# ruby 1.9
+# See bug #547828
+<app-mobilephone/obexftp-0.24 ruby
+# See bug #541648
+<dev-libs/Ice-3.6 ruby
+# See bug #547768
+<net-irc/epic5-1.10-r1 ruby
+# See bug #547832
+sci-libs/gdal ruby
+# See bug #547834
+<sys-apps/paludis-2.4.0 ruby
+# See bug #480574
+media-libs/mlt ruby
+
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (02 Sep 2015)
+# x11-drivers/xf86-video-amdgpu is not keyworded on most arches
+x11-base/xorg-drivers video_cards_amdgpu
+
+# Andreas K. Huettel <dilfridge@gentoo.org> (1 Sep 2015)
+# Currently broken upstream. We still hope it will get fixed.
+app-office/libreoffice telepathy
+
 # Johannes Huber <johu@gentoo.org> (28 Aug 2015)
 # Dependency not in tree yet
 kde-apps/kaccounts-integration kdepim
