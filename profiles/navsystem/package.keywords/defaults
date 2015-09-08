@@ -49,3 +49,4 @@ net-im/jitsi-bin x86 amd64
 =sys-block/thin-provisioning-tools-0.4.1 x86 amd64
 net-voip/ekiga x86 amd64
 ~dev-cpp/muParser-2.2.4 x86 amd64
+~dev-qt/qt-creator-3.2.2 x86 amd64

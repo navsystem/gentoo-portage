@@ -6,5 +6,3 @@ sys-fs/device-mapper
 # Please, execute rc-update del haspd && rc-update add aksusbd
 # after installing app-emulation/hasp
 app-emulation/haspd
->=sys-devel/gdb-7.6
-
