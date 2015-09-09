@@ -122,6 +122,7 @@ net-libs/ptlib wav
 app-crypt/gcr gtk
 media-libs/libvpx postproc
 
+media-libs/vigra openexr
 
 ######### skype
 virtual/mysql abi_x86_32
