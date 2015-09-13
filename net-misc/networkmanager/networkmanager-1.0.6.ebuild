@@ -22,7 +22,7 @@ IUSE="bluetooth connection-sharing consolekit +dhclient dhcpcd gnutls +introspec
 kernel_linux +nss +modemmanager ncurses +ppp resolvconf selinux systemd teamd test \
 vala +wext +wifi zeroconf" # wimax
 
-KEYWORDS="~alpha amd64 ~arm ~arm64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~arm64 ~ia64 ~ppc ~ppc64 ~sparc x86"
 
 REQUIRED_USE="
 	modemmanager? ( ppp )
@@ -120,6 +120,9 @@ src_prepare() {
 
 	# Force use of /run, avoid eautoreconf, upstream bug #737139, fixed in 'master'
 	sed -e 's:$localstatedir/run/:/run/:' -i configure || die
+
+	# Don't build examples, they are not needed and can cause build failure
+	sed -e '/^\s*examples\s*\\/d' -i Makefile.{am,in} || die
 
 	use vala && vala_src_prepare
 

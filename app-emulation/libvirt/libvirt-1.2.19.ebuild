@@ -28,7 +28,7 @@ else
 	SRC_URI+=" ${BACKPORTS:+
 		https://dev.gentoo.org/~cardoe/distfiles/${P}-${BACKPORTS}.tar.xz
 		https://dev.gentoo.org/~tamiko/distfiles/${P}-${BACKPORTS}.tar.xz}"
-	KEYWORDS="" # "~amd64 ~x86"
+	KEYWORDS="~amd64 ~x86"
 	SLOT="0/${PV}"
 fi
 S="${WORKDIR}/${P%_rc*}"
@@ -126,8 +126,9 @@ DOC_CONTENTS="Important: The openrc libvirtd init script is now broken up into t
 separate services: libvirtd, that solely handles the daemon, and
 libvirt-guests, that takes care of clients during shutdown/restart of the
 host. In order to reenable client handling, edit /etc/conf.d/libvirt-guests
-and enable the service:
+and enable the service and start it:
 	$ rc-update add libvirt-guests
+	$ service libvirt-guests start
 
 For the basic networking support (bridged and routed networks) you don't
 need any extra software. For more complex network modes including but not
