@@ -59,3 +59,4 @@ kde-base/kdelibs amd64
 
 dev-util/cmake amd64
 
+<kde-misc/kscreen-9999 amd64
