@@ -120,3 +120,4 @@ dev-libs/libpcre pcre16
 x11-libs/libxcb xkb
 media-libs/libvpx postproc
 
+dev-lang/php pdo
