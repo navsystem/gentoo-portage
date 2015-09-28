@@ -33,7 +33,7 @@ EXPORT_FUNCTIONS pkg_pretend pkg_setup src_unpack src_prepare src_configure src_
 # @ECLASS-VARIABLE: QT_MINIMAL
 # @DESCRIPTION:
 # Minimal Qt version to require for the package.
-: ${QT_MINIMAL:=5.4.1}
+: ${QT_MINIMAL:=5.4.2}
 
 # @ECLASS-VARIABLE: KDE_AUTODEPS
 # @DESCRIPTION:
@@ -340,7 +340,9 @@ debug-print "${LINENO} ${ECLASS} ${FUNCNAME}: SRC_URI is ${SRC_URI}"
 # Do some basic settings
 kde5_pkg_pretend() {
 	debug-print-function ${FUNCNAME} "$@"
-	_check_gcc_version
+	if [[ ${MERGE_TYPE} != binary ]]; then
+		_check_gcc_version
+	fi
 }
 
 # @FUNCTION: kde5_pkg_setup
@@ -348,7 +350,9 @@ kde5_pkg_pretend() {
 # Do some basic settings
 kde5_pkg_setup() {
 	debug-print-function ${FUNCNAME} "$@"
-	_check_gcc_version
+	if [[ ${MERGE_TYPE} != binary ]]; then
+		_check_gcc_version
+	fi
 }
 
 # @FUNCTION: kde5_src_unpack
