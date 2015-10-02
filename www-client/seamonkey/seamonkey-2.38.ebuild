@@ -38,7 +38,7 @@ DESCRIPTION="Seamonkey Web Browser"
 HOMEPAGE="http://www.seamonkey-project.org"
 
 [[ ${PV} != *_pre* ]] && \
-KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha amd64 ~arm ~ppc ~ppc64 x86"
 
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
@@ -46,7 +46,7 @@ IUSE="+chatzilla +crypt +gmp-autoupdate +ipc minimal pulseaudio +roaming selinux
 
 SRC_URI="${SRC_URI}
 	${MOZ_HTTP_URI}/source/${MY_MOZ_P}.source.tar.xz -> ${P}.source.tar.xz
-	https://dev.gentoo.org/~polynomial-c/mozilla/patchsets/${PATCHFF}.tar.xz
+	https://dev.gentoo.org/~axs/mozilla/patchsets/${PATCHFF}.tar.xz
 	https://dev.gentoo.org/~polynomial-c/mozilla/patchsets/${PATCH}.tar.xz
 	crypt? ( https://www.enigmail.net/download/source/enigmail-${EMVER}.tar.gz )"
 
