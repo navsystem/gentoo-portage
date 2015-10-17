@@ -18,7 +18,7 @@ SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.zip"
 
 LICENSE="HPND"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris"
 IUSE="doc examples jpeg jpeg2k lcms test tiff tk truetype webp zlib"
 
 REQUIRED_USE="test? ( jpeg tiff )"
@@ -65,6 +65,11 @@ python_prepare_all() {
 	if ! use jpeg2k; then
 		sed -i -e 's:feature.jpeg2000 =:& None #:' setup.py || die
 	fi
+
+	sed \
+		-e "/required/s:=.*:= set():g" \
+		-e "/if feature in/s:'jpeg', 'libz'::g" \
+		-i setup.py || die
 
 	distutils-r1_python_prepare_all
 }
