@@ -6,7 +6,7 @@ networkmanager private-headers declarative bash-completion pm-utils vnc rdesktop
 -handbook -crashreporter plymouth vaapi libkms vdpau g3dvl pdfimport zeroconf mdnsresponder-compat modemmanager gold gcrypt
 
 aspell histman hunspell multimedia oscar phonon qml idn lame mod djvu ebook gudev encode right_timezone
-cups dri infinality natspec ffmpeg libav melt aac semantic-desktop -nepomuk gpm opus xmp winbind ads ldap soprano
+cups dri infinality natspec ffmpeg -libav melt aac semantic-desktop -nepomuk gpm opus xmp winbind ads ldap soprano
 
 uuid glamor gpg openssl
 sip sipim
