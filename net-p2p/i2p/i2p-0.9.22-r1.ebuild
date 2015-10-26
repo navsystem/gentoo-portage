@@ -35,7 +35,7 @@ RDEPEND="${CDEPEND}
 	>=virtual/jre-1.6"
 
 EANT_BUILD_TARGET="pkg"
-EANT_GENTOO_CLASSPATH="java-service-wrapper,jrobin,slf4j-api,tomcat-jstl-impl,tomcat-jstl-spec,bcprov"
+EANT_GENTOO_CLASSPATH="java-service-wrapper,jrobin,slf4j-api,tomcat-jstl-impl,tomcat-jstl-spec,bcprov-1.50"
 
 pkg_setup() {
 	enewgroup i2p
@@ -85,7 +85,7 @@ src_install() {
 	# Install main files and basic documentation
 	exeinto ${i2p_home}
 	insinto ${i2p_home}
-	#doins blocklist.txt hosts.txt *.config
+	doins blocklist.txt hosts.txt *.config
 	doexe eepget i2prouter runplain.sh
 	dodoc history.txt INSTALL-headless.txt LICENSE.txt
 	doman man/*
