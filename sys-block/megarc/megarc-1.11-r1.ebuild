@@ -8,7 +8,7 @@ inherit multilib
 
 DESCRIPTION="LSI Logic MegaRAID Text User Interface management tool"
 HOMEPAGE="http://www.lsi.com"
-SRC_URI="http://www.lsi.com/downloads/Public/MegaRAID%20Common%20Files/ut_linux_${PN}_${PV}.zip"
+SRC_URI="http://www.lsi.com/downloads/Public/MegaRAID%20Common%20Files/ut_linux_${PN}_1-11.zip"
 
 LICENSE="LSI"
 SLOT="0"
