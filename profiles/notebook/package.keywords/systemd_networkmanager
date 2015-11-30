@@ -5,8 +5,9 @@
 =net-libs/libqmi-1.0.0 amd64
 ~net-misc/modemmanager-1.0.0 amd64
 ~net-libs/libqmi-1.4.0 amd64
-~sys-apps/systemd-225 amd64
-~sys-apps/util-linux-2.26.2 amd64
+~sys-apps/systemd-228 amd64
+<app-arch/lz4-9999 amd64
+~sys-apps/util-linux-2.27.1 amd64
 <sys-apps/gentoo-systemd-integration-9999 amd64
 <sys-fs/udev-9999  amd64
 <virtual/udev-9999 amd64
