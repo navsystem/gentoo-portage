@@ -19,8 +19,9 @@ DEPEND=">=virtual/jdk-1.6
 	app-arch/unzip
 	>=dev-java/javacup-0.11a_beta20060608:0"
 RDEPEND=">=virtual/jre-1.6
-	>=dev-java/javacup-0.11a_beta20060608:0"
-IUSE=""
+	>=dev-java/javacup-0.11a_beta20060608:0
+	svm? ( sci-libs/libsvm:0[java] )"
+IUSE="svm"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -52,6 +53,7 @@ src_install() {
 	# Really need a virtual to list all available drivers and pull the ones
 	# instaled
 	java-pkg_register-optional-dependency hsqldb,jdbc-mysql,mckoi-1
+	use svm && java-pkg_register-dependency libsvm
 
 	use source && java-pkg_dosrc src/main/java/weka/
 
