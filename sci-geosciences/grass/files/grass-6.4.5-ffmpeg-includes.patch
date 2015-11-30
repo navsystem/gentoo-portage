@@ -1,0 +1,35 @@
+diff -ur grass-6.4.5_orig/lib/ogsf/gsd_img_mpeg.c grass-6.4.5/lib/ogsf/gsd_img_mpeg.c
+--- grass-6.4.5_orig/lib/ogsf/gsd_img_mpeg.c	2013-07-09 19:05:44.000000000 +0000
++++ grass-6.4.5/lib/ogsf/gsd_img_mpeg.c	2015-11-30 04:36:16.000000000 +0000
+@@ -25,13 +25,13 @@
+ 
+ /* FFMPEG stuff */
+ #ifdef HAVE_FFMPEG
+-#include <avformat.h>
+-#include <avio.h>
++#include <libavformat/avformat.h>
++#include <libavformat/avio.h>
+ #if LIBAVUTIL_VERSION_MAJOR < 51
+ #include <avutil.h>
+ #else
+ /* libavutil 51.22.1's avutil.h doesn't include libavutil/mathematics.h */
+-#include <mathematics.h>
++#include <libavutil/mathematics.h>
+ #endif
+ 
+ /* 5 seconds stream duration */
+--- grass-6.4.5.orig/configure.in	2012-02-06 11:16:07.000000000 +0100
++++ grass-6.4.5/configure.in	2015-11-30 04:36:16.000000000 +0000
+@@ -1110,9 +1110,9 @@
+ 
+ LOC_CHECK_INC_PATH(ffmpeg, FFMPEG, FFMPEGINCPATH)
+ 
+-LOC_CHECK_INCLUDES(avcodec.h,FFMPEG,$FFMPEGINCPATH)
+-LOC_CHECK_INCLUDES(avformat.h,FFMPEG,$FFMPEGINCPATH)
+-LOC_CHECK_INCLUDES(swscale.h,FFMPEG,$FFMPEGINCPATH)
++LOC_CHECK_INCLUDES(libavcodec/avcodec.h,FFMPEG,$FFMPEGINCPATH)
++LOC_CHECK_INCLUDES(libavformat/avformat.h,FFMPEG,$FFMPEGINCPATH)
++LOC_CHECK_INCLUDES(libswscale/swscale.h,FFMPEG,$FFMPEGINCPATH)
+ 
+ AC_DEFINE(HAVE_FFMPEG)
+ 
