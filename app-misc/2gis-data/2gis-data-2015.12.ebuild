@@ -61,6 +61,8 @@ my_add_town spb Spb 2011 2 #
 #my_add_town tom Tomsk 2004 12
 #my_add_town ufa Ufa 2008 3
 
+S=${WORKDIR}
+
 src_install() {
 	insinto /opt/2gis
 	# Only required data files were unpacked, so it should be safe to
