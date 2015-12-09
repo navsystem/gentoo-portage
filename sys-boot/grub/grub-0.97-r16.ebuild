@@ -16,7 +16,7 @@
 # qtbz2 -s -j ${PKGDIR}/${CAT}/${PF}.tbz2 && \
 # mv ${PF}.tar.bz2 ${DISTDIR}/grub-static-${PVR}.tar.bz2
 
-EAPI="4"
+EAPI="5"
 
 inherit eutils mount-boot toolchain-funcs linux-info flag-o-matic autotools pax-utils multiprocessing
 
@@ -33,11 +33,8 @@ SLOT="0"
 KEYWORDS="amd64 x86 ~x86-fbsd"
 IUSE="custom-cflags ncurses netboot static"
 
-LIB_DEPEND="ncurses? (
-		>=sys-libs/ncurses-5.9-r3[static-libs(+)]
-		amd64? ( >=sys-libs/ncurses-5.9-r3[abi_x86_32(-)] )
-	)"
-RDEPEND="!static? ( ${LIB_DEPEND//\[static-libs(+)\]/} )"
+LIB_DEPEND="ncurses? ( >=sys-libs/ncurses-5.9-r3:0[static-libs(+),abi_x86_32(-)] )"
+RDEPEND="!static? ( ${LIB_DEPEND//[static-libs(+),/=[} )"
 DEPEND="${RDEPEND}
 	static? ( ${LIB_DEPEND} )"
 
@@ -70,6 +67,21 @@ src_prepare() {
 		|| die
 
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}"/patch
+
+	# Work around issue where the default CFLAGS fail with gcc-4.9.3 (possibly newer), force -O0 instead
+	# bug 564890, 566638
+	if [[ $(gcc-major-version) -ge 5 || $(gcc-major-version) -eq 4 && $(gcc-minor-version) -ge 9 ]]; then
+		if use custom-cflags; then
+			ewarn "You are using custom cflags with gcc-4.9 or newer."
+			ewarn "Be aware the result may segfault at runtime due to unknown optimization"
+			ewarn "incompatibilities."
+		else
+			einfo "Forcing -O0 to get around optimization issue caused by gcc-4.9 and newer with -O2"
+			sed -i	-e "/CFLAGS/s/-O2/-O0/" \
+				"${S}"/configure.ac || die
+		fi
+	fi
+
 	rm -f "${S}"/aclocal.m4 # seems to keep bug 418287 away
 	eautoreconf
 }
