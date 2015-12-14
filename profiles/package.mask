@@ -30,6 +30,15 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas K. Huettel <dilfridge@gentoo.org> (11 Dec 2015)
+# Ancient, smells funny, disowned by upstream, needs syck
+# Masked for removal in 30 days, bug 565012
+dev-perl/YAML-Parser-Syck
+
+# Fabian Groffen <grobian@gentoo.org> (11 Dec 2015)
+# Release candidates for Exim 4.87
+=mail-mta/exim-4.87_rc1
+
 # Michael Palimaka <kensington@gentoo.org> (10 Dec 2015)
 # Relies on dead ISP API. Dead upstream. Masked for removal in 30 days.
 # Bug 567532
@@ -181,11 +190,6 @@ dev-python/imaging
 # dev-python/imaging to dev-python/pillow
 # obsolete now #508266
 virtual/python-imaging
-
-# Lars Wendler <polynomial-c@gentoo.org> (10 Nov 2015)
-# Masked apache-2.4.17 due to broken REDIRECT_URL
-# behavior. See Gentoo bug #565348 for more details.
-=www-servers/apache-2.4.17
 
 # Pacho Ramos <pacho@gentoo.org> (09 Nov 2015)
 # Nobody willing to maintain/bump it. Use qemu instead
@@ -476,7 +480,8 @@ sys-block/afacli
 
 # Mikle Kolyada <zlogene@gentoo.org> (27 Jun 2014)
 # Masked for proper testing. (Major updates in the code).
-=dev-perl/PortageXS-0.02.12
+~dev-perl/PortageXS-0.02.12
+~dev-perl/PortageXS-0.2.12
 
 # Robin H. Johnson <robbat2@gentoo.org> (21 Jun 2014)
 # Needs work, but infra needs it for new VM boxes
