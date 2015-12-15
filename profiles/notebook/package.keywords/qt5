@@ -1,0 +1,10 @@
+~dev-qt/qtcore-5.5.1 amd64
+~dev-qt/qtwidgets-5.5.1-r1 amd64
+~dev-qt/qtdbus-5.5.1 amd64
+~dev-qt/qtconcurrent-5.5.1 amd64
+~dev-qt/qtdeclarative-5.5.1 amd64
+~dev-qt/qtnetwork-5.5.1 amd64
+~dev-qt/qtxmlpatterns-5.5.1 amd64
+~dev-qt/qtgui-5.5.1 amd64
+~dev-qt/qttest-5.5.1 amd64
+~dev-qt/qtbluetooth-5.5.1 amd64

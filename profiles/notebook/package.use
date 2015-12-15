@@ -124,6 +124,9 @@ media-libs/libvpx postproc
 
 media-libs/vigra openexr
 
+x11-libs/libxcb xkb
+dev-libs/libpcre pcre16
+
 ######### skype
 virtual/mysql abi_x86_32
 x11-proto/xf86vidmodeproto abi_x86_32
