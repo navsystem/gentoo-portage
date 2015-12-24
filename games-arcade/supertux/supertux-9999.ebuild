@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Id$
 
 EAPI=5
 
@@ -31,7 +31,7 @@ RDEPEND="media-libs/libsdl2[joystick]
 	curl? ( net-misc/curl )"
 DEPEND="${RDEPEND}"
 
-DOCS="LICENSE WHATSNEW.txt data/credits.txt"
+DOCS="data/credits.txt"
 
 src_unpack() {
 	git-r3_src_unpack
