@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -16,7 +16,7 @@ HOMEPAGE="https://mpv.io/"
 
 if [[ ${PV} != *9999* ]]; then
 	SRC_URI="https://github.com/mpv-player/mpv/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
 	DOCS=( RELEASE_NOTES )
 else
 	EGIT_REPO_URI="https://github.com/mpv-player/mpv.git"
@@ -33,7 +33,7 @@ IUSE="+alsa archive bluray cdda +cli doc drm dvb +dvd +egl +enca encode gbm
 	+iconv jack jpeg lcms +libass libav libcaca libguess libmpv lua luajit
 	openal +opengl oss pulseaudio raspberry-pi rubberband samba sdl selinux
 	test uchardet v4l vaapi vdpau vf-dlopen wayland +X xinerama +xscreensaver
-	xv"
+	xv zsh-completion"
 
 REQUIRED_USE="
 	|| ( cli libmpv )
@@ -52,6 +52,7 @@ REQUIRED_USE="
 	xinerama? ( X )
 	xscreensaver? ( X )
 	xv? ( X )
+	zsh-completion? ( cli )
 "
 
 COMMON_DEPEND="
@@ -177,9 +178,10 @@ src_configure() {
 		--disable-optimize		# Do not add '-O2' to CFLAGS
 		--disable-debug-build	# Do not add '-g' to CFLAGS
 
+		$(use_enable doc html-build)
 		$(use_enable doc pdf-build)
 		$(use_enable vf-dlopen vf-dlopen-filters)
-		$(use_enable cli zsh-comp)
+		$(use_enable zsh-completion zsh-comp)
 		$(use_enable test)
 
 		$(use_enable iconv)
@@ -215,7 +217,6 @@ src_configure() {
 		$(use_enable openal)
 		$(use_enable alsa)
 		--disable-coreaudio
-		--disable-dsound
 		--disable-wasapi
 
 		# Video outputs
