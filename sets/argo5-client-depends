@@ -8,5 +8,6 @@ sys-apps/hasp
 dev-python/xlwt
 dev-python/xlrd
 app-misc/pip
+media-libs/libvlc-qt
 @argo5-libs-depends
 
