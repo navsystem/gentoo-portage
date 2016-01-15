@@ -1,13 +1,13 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Id$
 
 EAPI=5
 
 MY_PN="lib${PN}"
 MY_P="${MY_PN}-${PV}"
 
-inherit multilib eutils
+inherit multilib
 
 DESCRIPTION="A complete Spatial DBMS in a nutshell built upon sqlite"
 HOMEPAGE="http://www.gaia-gis.it/gaia-sins/"
@@ -15,7 +15,7 @@ SRC_URI="http://www.gaia-gis.it/gaia-sins/${MY_PN}-sources/${MY_P}.tar.gz"
 
 LICENSE="MPL-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 IUSE="+geos iconv +proj +xls"
 
 RDEPEND=">=dev-db/sqlite-3.7.5:3[extensions(+)]
@@ -41,5 +41,6 @@ src_configure() {
 
 src_install() {
 	default
-	prune_libtool_files
+
+	find "${ED}" -name '*.la' -exec rm -f {} +
 }
