@@ -3,60 +3,44 @@
 kde-misc/customizable-weather amd64
 kde-misc/kcm-touchpad amd64
 kde-misc/networkmanagement amd64
-kde-misc/polkit-kde-kcmodules amd64
-kde-misc/yakuake amd64
-sys-auth/polkit-kde-agent amd64
-=dev-libs/gobject-introspection-common-1.32.1 amd64
-=dev-libs/gobject-introspection-1.32.1 amd64
-~app-text/poppler-0.20.2 amd64
-
-app-office/akonadi-server amd64
-net-misc/netifrc amd64
-dev-libs/soprano amd64
-kde-base/libkgreeter amd64
-
-media-libs/libraw amd64
-media-libs/lcms amd64
-dev-libs/libical amd64
-dev-util/gtk-doc-am amd64
-kde-misc/baloo-kcmadv amd64
-kde-misc/plasma-nm amd64
-
-
-kde-base/kdebase-startkde amd64
-kde-base/solid-actions-kcm amd64
-kde-base/plasma-workspace amd64
-kde-base/libplasmaclock amd64
-kde-base/kdepimlibs amd64
-kde-base/kmenuedit amd64
-kde-base/kwrited amd64
-kde-base/kdebase-cursors amd64
-kde-base/qguiplatformplugin_kde amd64
-kde-base/klipper amd64
-kde-base/kinfocenter amd64
-kde-base/ksystraycmd amd64
-kde-base/powerdevil amd64
-kde-base/freespacenotifier amd64
-kde-base/kstyles amd64
-kde-base/krunner amd64
-kde-base/ksmserver amd64
-kde-base/kdm amd64
-kde-base/systemsettings amd64
-kde-base/kscreensaver amd64
-kde-base/ksplash amd64
-kde-base/kstartupconfig amd64
-kde-base/kcminit amd64
-kde-base/kwin amd64
-kde-base/liboxygenstyle amd64
-kde-base/libtaskmanager amd64
-kde-base/libplasmagenericshell amd64
-kde-base/khotkeys amd64
-kde-base/ksysguard amd64
-kde-base/kcheckpass amd64
-kde-base/kephal amd64
-kde-base/libkworkspace amd64
-kde-base/kdelibs amd64
-
-dev-util/cmake amd64
 
 <kde-misc/kscreen-9999 amd64
+
+
+<kde-base/kdm-15 amd64
+<kde-base/kmenuedit-15 amd64
+<kde-base/kwrited-15 amd64
+<kde-base/kdebase-startkde-15 amd64
+<kde-base/kscreensaver-15 amd64
+<kde-base/kdebase-cursors-15 amd64
+<kde-base/qguiplatformplugin_kde-15 amd64
+<kde-base/solid-actions-kcm-15 amd64
+<kde-base/klipper-15 amd64
+<kde-base/kinfocenter-15 amd64
+<kde-base/ksystraycmd-15 amd64
+<kde-base/powerdevil-15 amd64
+<kde-base/freespacenotifier-15 amd64
+<kde-base/kstyles-15 amd64
+<kde-base/systemsettings-15 amd64
+<kde-base/plasma-workspace-15 amd64
+<kde-base/libplasmaclock-15 amd64
+<kde-base/ksplash-15 amd64
+<kde-base/krunner-15 amd64
+<kde-base/kstartupconfig-15 amd64
+<kde-base/ksmserver-15 amd64
+<kde-base/libkgreeter-15 amd64
+<kde-base/kcminit-15 amd64
+<kde-base/kwin-15 amd64
+<kde-base/liboxygenstyle-15 amd64
+<kde-base/libtaskmanager-15 amd64
+<kde-base/libplasmagenericshell-15 amd64
+<kde-base/khotkeys-15 amd64
+<kde-base/ksysguard-15 amd64
+<kde-base/kcheckpass-15 amd64
+<kde-base/kephal-15 amd64
+<kde-base/libkworkspace-15 amd64
+<kde-base/kdelibs-15 amd64
+
+=kde-apps/kde-wallpapers-15.08.3 amd64
+
+
