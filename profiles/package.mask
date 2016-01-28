@@ -30,18 +30,41 @@
 
 #--- END OF EXAMPLES ---
 
+# Bernard Cafarelli <voyageur@gentoo.org> (27 Jan 2016)
+# New llvm version, masked for testing
+=sys-devel/llvm-3.8.0*
+=sys-devel/clang-3.8.0*
+
+# James Le Cuirot <chewi@gentoo.org> (26 Jan 2016)
+# No new release since 2008. Removal in 30 days.
+app-cdr/webcdwriter
+
+# James Le Cuirot <chewi@gentoo.org> (26 Jan 2016)
+# Now part of eselect-java. Removal in 30 days.
+app-eselect/eselect-maven
+
+# Alexis Ballier <aballier@gentoo.org> (22 Jan 2016)
+# Breaks some of its revdeps
+# https://bugs.gentoo.org/show_bug.cgi?id=572552
+# https://github.com/ros/console_bridge/pull/31
+=dev-libs/console_bridge-0.3.0
+
+# Michael Sterrett <mr_bones_@gentoo.org> (20 Jan 2016)
+# Buggy and no updates in 9 years.
+# Masked for removal on 20160219
+games-roguelike/slashem
+
+# Michael Sterrett <mr_bones_@gentoo.org> (20 Jan 2016)
+# Upstream went away.  No updates in 8 years.
+# Masked for removal on 20160219
+games-strategy/attal
+
 # Sergey Popov <pinkbyte@gentoo.org> (20 Jan 2016)
 # Mask new versions of Boost - they are known to cause breakages
 ~dev-util/boost-build-1.60.0
 ~dev-libs/boost-1.60.0
 ~dev-util/boost-build-1.59.0
 ~dev-libs/boost-1.59.0
-
-# Michael Orlitzky <mjo@gentoo.org> (18 Jan 2016)
-# Depends on a masked version of mod_perl. Feel free
-# to unmask as soon as mod_perl supports apache-2.4.
-# Bugs #512504, #532718, #541312,and #562454.
-=app-backup/backuppc-3.3.1
 
 # Mike Frysinger <vapier@gentoo.org> (18 Jan 2016)
 # Force people to migrate to the new combined libraries:
@@ -67,12 +90,6 @@ media-libs/evas
 # that can't be transparently used in ghc-7.8 and
 # ghc-7.10, bug #561122
 dev-haskell/extra:0
-
-# Pacho Ramos <pacho@gentoo.org> (16 Jan 2016)
-# Dead for years, not compatible with latest libsigc++ (#569514), it
-# requires either a lot of patching or move to a forked project that tries
-# to continue it. Removal in a month.
-media-sound/seq24
 
 # James Le Cuirot <chewi@gentoo.org> (14 Jan 2016)
 # Superseded by gnu-classpath. Removal in 30 days.
@@ -750,27 +767,11 @@ dev-util/pmk
 # Masked for removal
 dev-perl/SpeedyCGI
 
-# Sergey Popov <pinkbyte@gentoo.org> (25 Dec 2015)
-# Old versions lacks multilib support and proper subslots
-# Masked for removal
-<dev-libs/boost-1.55.0
-<dev-util/boost-build-1.55.0
-
 # Manuel Rüger <mrueg@rueg.eu> (24 Dec 2015)
 # Effectively unmaintained, multiple bugs
 # Bug 288611,358013,413987,468186,480854,528750,548480,566226
 # Masked for removal in 30 days.
 media-tv/xawtv
-
-# Michael Palimaka <kensington@gentoo.org> (22 Dec 2015)
-# Fails to build. Dead upstream. Masked for removal in 30 days.
-# Bug 566446
-media-video/vmaid
-
-# Michael Palimaka <kensington@gentoo.org> (22 Dec 2015)
-# No longer works. Dead upstream. Masked for removal in 30 days.
-# Bug 507914
-app-doc/ebookmerge
 
 # Patrick Lauer <patrick@gentoo.org> (20 Dec 2015)
 # Mask TOFU release that doesn't work #567768 and friends
@@ -856,11 +857,6 @@ virtual/python-imaging
 # Keep it masked until they are done. sys-fs/duperemove is
 # the suggested replacement for the meantime.
 sys-fs/bedup
-
-# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (29 Oct 2015)
-# Mask until it is decided how to address xorg-server file collisions #564358
-=x11-drivers/xf86-input-evdev-2.10.0
-=x11-drivers/xf86-input-evdev-2.10.1
 
 # Ian Delaney <idella4@gentoo.org> (27 Oct 2015)
 # fails to build dev-lisp/sbcl-1.2.16 #563812

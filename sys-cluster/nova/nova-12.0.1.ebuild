@@ -15,7 +15,7 @@ SRC_URI="
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="+compute compute-only iscsi +kvm +memcached mysql +novncproxy openvswitch postgres +rabbitmq sqlite test xen"
 REQUIRED_USE="
 	!compute-only? ( || ( mysql postgres sqlite ) )
@@ -221,6 +221,7 @@ RDEPEND="
 	net-misc/bridge-utils
 	compute? (
 		app-cdr/cdrkit
+		sys-fs/dosfstools
 		kvm? ( app-emulation/qemu )
 		xen? ( app-emulation/xen
 			   app-emulation/xen-tools )
