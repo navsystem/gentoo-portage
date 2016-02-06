@@ -6,3 +6,6 @@ sys-fs/device-mapper
 # Please, execute rc-update del haspd && rc-update add aksusbd
 # after installing app-emulation/hasp
 app-emulation/haspd
+
+=net-im/skype-4.3.0.37-r6
+
