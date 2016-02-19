@@ -42,5 +42,5 @@ kde-misc/networkmanagement amd64
 <kde-base/kdelibs-15 amd64
 
 =kde-apps/kde-wallpapers-15.08.3 amd64
-
+kde-base/legacy-icons amd64
 
