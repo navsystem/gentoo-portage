@@ -8,4 +8,4 @@ sys-fs/device-mapper
 app-emulation/haspd
 
 =net-im/skype-4.3.0.37-r6
-
+>=sys-devel/gdb-7.6

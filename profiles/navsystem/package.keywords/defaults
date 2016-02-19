@@ -51,4 +51,5 @@ net-voip/ekiga x86 amd64
 ~dev-cpp/muParser-2.2.4 x86 amd64
 ~dev-qt/qt-creator-3.2.2 x86 amd64
 =x11-themes/qtcurve-9999-r1 x86 amd64
+=sys-devel/gdb-7.5.50.20130312 x86 amd64
 
