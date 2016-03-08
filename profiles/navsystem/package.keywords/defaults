@@ -4,7 +4,7 @@ dev-util/bdelta amd64 x86
 ~dev-util/codeblocks-10.05 amd64 x86
 =dev-vcs/hgview-1.9.0 x86 amd64
 =dev-python/urwid-1.2.2 x86 amd64
-=kde-misc/kio-mtp-0.75_p20131020 amd64 x86
+=kde-misc/kio-mtp-0.75_p20150403 amd64 x86
 =x11-libs/libqxt-0.6.2_p20141013 amd64 x86
 
 ~app-emulation/hasp-3.2_p7 x86 amd64
