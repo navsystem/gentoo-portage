@@ -86,3 +86,6 @@ net-voip/ekiga x86 amd64
 ~dev-qt/qtxml-5.5.1 x86                                                                                                                                                                                              
 ~dev-qt/qtxmlpatterns-5.5.1 x86
 
+app-editors/sublime-text x86 amd64
+app-eselect/eselect-sublime x86 amd64
+
