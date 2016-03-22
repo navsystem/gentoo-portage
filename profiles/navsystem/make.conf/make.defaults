@@ -24,6 +24,9 @@ video_cards_i915 video_cards_i965 video_cards_r100 video_cards_r200 video_cards_
 
 ruby_targets_ruby19 ruby_targets_ruby21
 
+-python_targets_python2_7 python_targets_python3_4 
+-python_single_target_python2_7 python_single_target_python3_4
+
 -linguas_* linguas_en linguas_en_US linguas_ru linguas_ru_RU
 abi_x86_32
 "

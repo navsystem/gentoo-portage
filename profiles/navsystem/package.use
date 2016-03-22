@@ -22,7 +22,7 @@ media-libs/libmng static-libs
 app-arch/bzip2 static static-libs
 
 app-office/openoffice java kde odk
-app-office/libreoffice java kde odk
+app-office/libreoffice java kde odk -mysql
 
 dev-libs/libgcrypt static-libs
 sys-apps/hal -crypt -X
@@ -121,3 +121,36 @@ x11-libs/libxcb xkb
 media-libs/libvpx postproc
 
 dev-lang/php pdo
+
+net-libs/nodejs python_targets_python2_7
+net-misc/wicd python_targets_python2_7
+dev-python/flup python_targets_python2_7
+app-emulation/qemu python_targets_python2_7
+app-emulation/virt-manager python_targets_python2_7
+dev-vcs/hgview python_targets_python2_7
+sci-geosciences/tilecache python_targets_python2_7
+sci-geosciences/mapserver python_targets_python2_7
+sys-devel/llvm python_targets_python2_7
+dev-libs/gobject-introspection python_targets_python2_7
+
+
+dev-libs/newt python_targets_python2_7
+sys-libs/tdb python_targets_python2_7
+sys-libs/tevent python_targets_python2_7
+sys-libs/talloc python_targets_python2_7
+dev-util/scons python_targets_python2_7
+dev-vcs/git python_targets_python2_7
+dev-vcs/mercurial python_targets_python2_7
+dev-python/pygobject python_targets_python2_7
+x11-libs/xpyb python_targets_python2_7
+dev-java/javatoolkit python_targets_python2_7
+app-text/gnome-doc-utils python_targets_python2_7
+dev-libs/libixion python_targets_python2_7
+sci-libs/geos python_targets_python2_7
+app-arch/rpm python_targets_python2_7
+x11-libs/vte python_targets_python2_7
+dev-python/cryptography python_targets_python2_7
+dev-python/pygments python_targets_python2_7
+dev-python/pyopenssl python_targets_python2_7
+dev-python/notify-python python_targets_python2_7
+dev-python/pygtk python_targets_python2_7
