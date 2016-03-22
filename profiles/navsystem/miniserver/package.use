@@ -1,3 +1,9 @@
 media-libs/phonon -vlc gstreamer
 dev-qt/designer -phonon
 
+dev-vcs/git python_targets_python2_7
+dev-libs/gobject-introspection python_targets_python2_7
+sys-libs/tdb python_targets_python2_7
+sys-libs/tevent python_targets_python2_7
+sys-libs/talloc python_targets_python2_7
+sys-devel/llvm python_targets_python2_7

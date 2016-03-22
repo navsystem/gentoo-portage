@@ -127,6 +127,7 @@ net-misc/wicd python_targets_python2_7
 dev-python/flup python_targets_python2_7
 app-emulation/qemu python_targets_python2_7
 app-emulation/virt-manager python_targets_python2_7
+dev-python/libvirt-python python_targets_python2_7
 dev-vcs/hgview python_targets_python2_7
 sci-geosciences/tilecache python_targets_python2_7
 sci-geosciences/mapserver python_targets_python2_7
