@@ -30,6 +30,17 @@
 
 #--- END OF EXAMPLES ---
 
+# Aaron Bauman <bman@gentoo.org> (19 Mar 2016)
+# Unpatched security vulnerability per bug #521892.
+# Masked for removal in 30 days.
+net-irc/srvx
+
+# Aaron Bauman <bman@gentoo.org> (19 Mar 2016)
+# Unpatched security vulnerability per bug #261182.
+# Masked for removal in 30 days.
+media-sound/shoutcast-server-bin
+media-sound/shoutcast-trans-bin
+
 # Lars Wendler <polynomial-c@gentoo.org> (20 Mar 2016)
 # Don't work with latest claws-mail package. Most plugins are now part of
 # claws-mail sources and can be en-/disabled via USE flags.
@@ -64,7 +75,7 @@ x11-libs/libview
 # Aaron Bauman <bman@gentoo.org> (19 Mar 2016)
 # Unpatched security vulnerability per bug #512356.
 # Masked for removal in 30 days.
-app-forensics/chkrootkit
+=app-forensics/chkrootkit-0.49
 
 # Aaron Bauman <bman@gentoo.org> (19 Mar 2016)
 # Unpatched security vulnerability per bug #529712.
@@ -236,17 +247,6 @@ dev-lang/niecza-bin
 # Mask experimental software
 =mail-mta/postfix-3.2*
 
-# James Le Cuirot <chewi@gentoo.org> (21 Feb 2016)
-# No revdeps, no release since 2007, and upstream have even moved the
-# download to a hidden OldFiles directory in the parent SourceForge
-# project. Removal in 30 days.
-dev-java/xsd2jibx
-
-# James Le Cuirot <chewi@gentoo.org> (19 Feb 2016)
-# Upstream EOL is December 2016. We would rather focus on other things
-# than support it until then. Removal in 30 days.
-www-servers/tomcat:6
-
 # Yixun Lan <dlan@gentoo.org> (16 Feb 2016)
 # Mask early development version, leave only upstream stable version
 >=sys-cluster/ceph-10
@@ -319,12 +319,6 @@ media-libs/evas
 # ghc-7.10, bug #561122
 dev-haskell/extra:0
 
-# Aaron W. Swenson <titanofold@gentoo.org> (11 Jan 2016)
-# Masked for removal after 2016-03-11. Package hasn't been updated in
-# some time and doesn't work with Apache 2.4 without patching by
-# Gentoo. (Bug 548974) Use Apache Module mod_authn_dbd instead.
-www-apache/mod_auth_pgsql
-
 # Andreas K. Hüttel <dilfridge@gentoo.org> (9 Jan 2016)
 # Errorneously added. Is already in perl-core. Please uninstall.
 dev-perl/ExtUtils-Constant
@@ -369,13 +363,6 @@ www-apps/389-dsgw
 # Please migrate to 5.5 or, preferably 5.6.
 dev-lang/php:5.4
 ~virtual/httpd-php-5.4
-
-# Brian Evans <grknight@gentoo.org> (11 Nov 2015)
-# Mask latest xdebug{,-client} beta versions
-# Upstream keeps changing the tarballs causing Manifest errors.
-# wrt bug 565234
->=dev-php/xdebug-2.4.0_beta1
->=dev-php/xdebug-client-2.4.0_beta1
 
 # Michał Górny <mgorny@gentoo.org> (30 Oct 2015)
 # Uses unsafe ioctls that could result in data corruption. Upstream
