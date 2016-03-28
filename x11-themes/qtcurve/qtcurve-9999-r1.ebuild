@@ -4,6 +4,7 @@
 
 EAPI=5
 
+KDE_REQUIRED="optional"
 inherit kde4-base
 KDE_AUTODEPS=false
 KDE_DEBUG=false
