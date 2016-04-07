@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-9999.ebuild,v 1.12 2011/06/30 09:23:16 pva Exp $
 
@@ -20,15 +20,18 @@ HOMEPAGE="http://psi-im.org/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="crypt dbus debug doc enchant extras jingle iconsets +qt4 qt5 spell sql ssl xscreensaver
+IUSE="aspell crypt dbus debug doc enchant extras +hunspell jingle iconsets +qt4 qt5 spell sql ssl xscreensaver
 plugins whiteboarding webkit"
 
 REQUIRED_USE="
+	spell? ( ^^ ( aspell enchant hunspell ) )
+	aspell? ( spell )
+	enchant? ( spell )
+	hunspell? ( spell )
 	iconsets? ( extras )
 	plugins? ( extras )
 	sql? ( extras )
 	webkit? ( extras )
-	sql? ( qt4 )
 	^^ ( qt4 qt5 )
 "
 
@@ -37,7 +40,8 @@ RDEPEND="
 	|| ( >=sys-libs/zlib-1.2.5.1-r2[minizip] <sys-libs/zlib-1.2.5.1-r1 )
 	spell? (
 		enchant? ( >=app-text/enchant-1.3.0 )
-		!enchant? ( app-text/aspell )
+		hunspell? ( app-text/hunspell )
+		aspell? ( app-text/aspell )
 	)
 	xscreensaver? ( x11-libs/libXScrnSaver )
 	qt4? (
@@ -45,8 +49,8 @@ RDEPEND="
 		dbus? ( dev-qt/qtdbus:4 )
 		|| ( <app-crypt/qca-2.1:2 >=app-crypt/qca-2.1:2[qt4] )
 		whiteboarding? ( dev-qt/qtsvg:4 )
+		webkit? ( dev-qt/qtwebkit:4 )
 		extras? (
-			webkit? ( dev-qt/qtwebkit:4 )
 			sql? (
 				dev-qt/qtsql:4
 				dev-libs/qjson
@@ -62,8 +66,9 @@ RDEPEND="
 		dbus? ( dev-qt/qtdbus:5 )
 		>=app-crypt/qca-2.1:2[qt5]
 		whiteboarding? ( dev-qt/qtsvg:5 )
+		webkit? ( dev-qt/qtwebkit:5 )
 		extras? (
-			webkit? ( dev-qt/qtwebkit:5 )
+			sql? ( dev-qt/qtsql:5 )
 		)
 	)
 "
@@ -141,16 +146,16 @@ src_prepare() {
 		PATCHES_DIR="${WORKDIR}/psi-plus/patches"
 		EPATCH_SOURCE="${PATCHES_DIR}" EPATCH_SUFFIX="diff" EPATCH_FORCE="yes" epatch
 
+		PSI_REVISION="$(cd "${WORKDIR}/${P}" && git describe --tags|cut -d - -f 2)"
 		PSI_PLUS_REVISION="$(cd "${WORKDIR}/psi-plus" && git describe --tags|cut -d - -f 2)"
+		PSI_PLUS_TAG="$(cd "${WORKDIR}/psi-plus" && git describe --tags|cut -d - -f 1)"
 
-		if use sql; then
-			epatch "${PATCHES_DIR}/dev/psi-new-history.patch" || die "patching with ${SQLPATCH} failed"
-		fi
+		use sql && epatch "${PATCHES_DIR}/dev/psi-new-history.patch"
 
 		use webkit && {
-			echo "0.16.${PSI_PLUS_REVISION}-webkit (@@DATE@@)" > version
+			echo "${PSI_PLUS_TAG}.${PSI_PLUS_REVISION}.${PSI_REVISION}-webkit (@@DATE@@)" > version
 		} || {
-			echo "0.16.${PSI_PLUS_REVISION} (@@DATE@@)" > version
+			echo "${PSI_PLUS_TAG}.${PSI_PLUS_REVISION}.${PSI_REVISION} (@@DATE@@)" > version
 		}
 
 		qconf || die "Failed to create ./configure."
@@ -167,15 +172,11 @@ src_configure() {
 	"
 	use dbus || myconf+=" --disable-qdbus"
 	use debug && myconf+=" --debug"
-	if use spell; then
-		if use enchant; then
-			myconf+=" --disable-aspell"
-		else
-			myconf+=" --disable-enchant"
-		fi
-	else
-		myconf+=" --disable-aspell --disable-enchant"
-	fi
+
+	for s in aspell enchant hunspell; do
+		use $s || myconf+=" --disable-$s"
+	done
+	
 	use whiteboarding && myconf+=" --enable-whiteboarding"
 	use xscreensaver || myconf+=" --disable-xss"
 	if use extras; then
