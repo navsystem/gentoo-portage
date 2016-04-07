@@ -1,6 +1,11 @@
 app-admin/testdisk ntfs reiserfs
 media-gfx/splashutils fbcondecor
-net-fs/samba quota
+net-fs/samba quota gnutls client
+
+sys-libs/ntdb python
+sys-libs/tevent python
+sys-libs/tdb python
+
 sys-fs/aufs2 inotify kernel-patch
 
 #disable Xorg dependence
@@ -22,6 +27,7 @@ app-office/libreoffice java kde odk
 dev-libs/libgcrypt static-libs
 sys-apps/hal -crypt -X
 virtual/ffmpeg encode
+media-video/ffmpeg gnutls
 
 dev-qt/qt-creator examples git mercurial perforce qml qtscript
 app-misc/mc -X slang -ncurses
@@ -31,7 +37,7 @@ sys-block/parted device-mapper
 kde-apps/kopete oscar
 media-libs/libpng apng
 app-office/openoffice -bash-completion
-net-im/psi extras jingle
+net-im/psi extras jingle plugins iconsets -aspell hunspell
 net-im/psimedia extras
 
 dev-libs/ecore curl
@@ -62,7 +68,6 @@ app-emulation/wine -xml
 app-text/poppler cairo
 net-libs/webkit-efl curl
 app-portage/layman subversion git mercurial
-net-im/psi extras plugins iconsets
 sys-apps/systemd gtk
 sys-apps/systemd-units server
 sys-fs/udev gudev extras hwdb

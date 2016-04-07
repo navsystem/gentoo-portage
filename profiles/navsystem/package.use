@@ -1,6 +1,10 @@
 app-admin/testdisk ntfs reiserfs
 media-gfx/splashutils fbcondecor
-net-fs/samba quota
+net-fs/samba quota gnutls client python_targets_python2_7
+sys-libs/ntdb python python_targets_python2_7
+sys-libs/tevent python python_targets_python2_7
+sys-libs/tdb python python_targets_python2_7
+sys-libs/ldb python_targets_python2_7
 sys-fs/aufs2 inotify kernel-patch
 
 #fix update xorg
@@ -26,7 +30,7 @@ app-office/libreoffice java kde odk -mysql
 
 dev-libs/libgcrypt static-libs
 sys-apps/hal -crypt -X
-virtual/ffmpeg encode
+virtual/ffmpeg encode gnutls
 
 dev-qt/qt-creator examples git mercurial perforce qml qtscript python
 app-misc/mc -X slang -ncurses
@@ -155,3 +159,25 @@ dev-python/pygments python_targets_python2_7
 dev-python/pyopenssl python_targets_python2_7
 dev-python/notify-python python_targets_python2_7
 dev-python/pygtk python_targets_python2_7
+net-fs/samba python_targets_python2_7
+dev-python/subunit python_targets_python2_7
+dev-python/pip python_targets_python2_7
+dev-python/testtools python_targets_python2_7
+dev-python/progress python_targets_python2_7
+dev-python/retrying python_targets_python2_7
+dev-python/pbr python_targets_python2_7
+dev-python/mimeparse python_targets_python2_7
+dev-python/unittest2 python_targets_python2_7
+dev-python/lockfile python_targets_python2_7
+dev-python/colorama python_targets_python2_7
+dev-python/distlib python_targets_python2_7
+dev-python/extras python_targets_python2_7
+dev-python/CacheControl python_targets_python2_7
+dev-python/linecache2 python_targets_python2_7
+dev-python/traceback2 python_targets_python2_7
+
+dev-libs/libxml2 python_targets_python2_7
+dev-python/sip python_targets_python2_7
+x11-proto/xcb-proto python_targets_python2_7
+dev-python/dbus-python python_targets_python2_7
+dev-python/PyQt4 python_targets_python2_7
