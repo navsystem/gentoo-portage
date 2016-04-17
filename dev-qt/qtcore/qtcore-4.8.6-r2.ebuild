@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -29,11 +29,11 @@ MULTILIB_WRAPPED_HEADERS=(
 )
 
 PATCHES=(
-	"${FILESDIR}/${PN}-4.8.5-moc-boost-lexical-cast.patch"
 	"${FILESDIR}/${PN}-4.8.5-honor-ExcludeSocketNotifiers-in-glib-event-loop.patch" # bug 514968
 	"${FILESDIR}/${PN}-4.8.5-qeventdispatcher-recursive.patch" # bug 514968
 	"${FILESDIR}/${PN}-4.8.6-QNAM-corruptions-fix.patch" # bug 548622
 	"${FILESDIR}/navsys-3172.patch"
+	"${FILESDIR}/${PN}-4.8.6-moc-boost-1.60.patch" # bug 556104
 )
 
 QT4_TARGET_DIRECTORIES="
