@@ -126,6 +126,13 @@ media-libs/libvpx postproc
 
 dev-lang/php pdo
 
+sys-auth/polkit-qt qt5
+media-libs/phonon-vlc qt5
+dev-libs/libdbusmenu-qt qt5
+media-libs/phonon qt5
+
+kde-apps/kde4-l10n minimal
+
 net-libs/nodejs python_targets_python2_7
 net-misc/wicd python_targets_python2_7
 dev-python/flup python_targets_python2_7
