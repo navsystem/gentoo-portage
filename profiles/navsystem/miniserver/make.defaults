@@ -6,4 +6,5 @@ USE="${USE} -X -kde -gtk -cups -cairo -webkit -ldap -ads -acl -kerberos
 -infinality
 -mysql
 uuid
+-openrc systemd
 "
