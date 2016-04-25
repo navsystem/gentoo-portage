@@ -30,6 +30,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Alex Brandt <alunduil@gentoo.org> (23 Apr 2016)
+# Contains collisions with dev-python/ipaddress.  See #580388 for more details.
+# Masked for removal in 30 days.
+dev-python/py2-ipaddress
+
 # Michael Palimaka <kensington@gentoo.org> (21 Apr 2016)
 # Requires package no longer in the tree to be useful. Unmaintained.
 # Dead upstream. Masked for removal in 30 days.
@@ -280,10 +285,6 @@ dev-vcs/statcvs
 # Drops libsystemd-{daemon,id128,journal,login}.pc.
 # Bug: https://bugs.gentoo.org/577158
 =sys-apps/systemd-229-r100
-
-# Alexandre Rostovtsev <tetromino@gentoo.org> (10 Mar 2016)
-# Masking until we figure out what to do about bug #576930
-=gnome-base/gnome-extra-apps-3.18.0-r2
 
 # Ian Stakenvicius <axs@gentoo.org> (06 Mar 2016)
 # Mask old versions of thunderbird as they are no longer supported,
