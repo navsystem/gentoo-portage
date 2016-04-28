@@ -88,4 +88,5 @@ net-voip/ekiga x86 amd64
 
 app-editors/sublime-text x86 amd64
 app-eselect/eselect-sublime x86 amd64
+~dev-db/postgis-2.2.2 x86 amd64
 
