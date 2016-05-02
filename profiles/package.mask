@@ -30,6 +30,25 @@
 
 #--- END OF EXAMPLES ---
 
+# Lars Wendler <polynomial-c@gentoo.org> (2 May 2016)
+# Broken reverse deps. At least one header file has been moved around.
+>=media-gfx/imagemagick-7.0.1.0
+
+# Lars Wendler <polynomial-c@gentoo.org> (1 May 2016)
+# Broken custom makefile in x11-drivers/xf86-video-virtualbox
+# Fails to compile since version 5.0.18. No soluton yet. This is a Gentoo
+# problem so no chance to get a solution from upstream (bug #580600).
+# Masked app-emulation/virtualbox-guest-additions as well as it depends on
+# the broken package.
+>=app-emulation/virtualbox-guest-additions-5.0.18
+>=x11-drivers/xf86-video-virtualbox-5.0.18
+
+# Rafael G. Martins <rafaelmartins@gentoo.org> (30 Apr 2016)
+# Packages merged upstream with app-text/blogc. Please install
+# app-text/blogc with USE=git and USE=httpd instead. Removal in 30 days.
+dev-vcs/blogc-git-receiver
+www-servers/blogc-runserver
+
 # James Le Cuirot <chewi@gentoo.org> (27 Apr 2016)
 # Very very dead upstream and probably doesn't work any more like
 # similar clients. Removal in 30 days.
@@ -124,7 +143,6 @@ dev-java/freehep-xml
 # Work in progress. Do not unmask! Unmasking these ebuilds
 # is like fiddling with the infinite improbability drive;
 # expect unexpected, weird, and potentially fatal results.
-=dev-lang/perl-5.22.2*
 =dev-lang/perl-5.24*
 
 # Michael Sterrett <mr_bones_@gentoo.org> (06 Apr 2016)
@@ -254,6 +272,7 @@ dev-vcs/statcvs
 >=dev-lang/ocaml-4.03_beta
 >=dev-ml/camlp4-4.03
 >=dev-ml/ppx_tools-4.03
+>=dev-ml/labltk-8.06.1
 
 # Patrice Clement <monsieurp@gentoo.org> (29 Feb 2016)
 # Duplicate of dev-libs/libedit.
@@ -557,10 +576,6 @@ app-admin/hwreport
 # FAIL:07:02:35 (00:00:00) db_verify_preop: expected 0, got 1
 =sys-libs/db-6.1*
 =sys-libs/db-6.2*
-
-# Yixun Lan <dlan@gentoo.org> (17 Jul 2014)
-# Masked for proper testing. (Major updates in the code).
-=net-misc/tinc-1.1_pre*
 
 # Ulrich Müller <ulm@gentoo.org> (15 Jul 2014)
 # Permanently mask sys-libs/lib-compat and its reverse dependencies,
