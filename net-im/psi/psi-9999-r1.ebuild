@@ -4,7 +4,8 @@
 
 EAPI=5
 
-PLOCALES="ar be bg br ca cs da de ee el eo es et fi fr hr hu it ja mk nl pl pt pt_BR ru se sk sl sr sr@latin sv sw uk ur_PK vi zh_CN zh_TW"
+PLOCALES="be bg ca cs de en eo es et fa fi fr he hu it ja kk mk nl pl pt pt_BR ru sk sl sr@latin sv sw uk ur_PK vi zh_CN zh_TW"
+PLOCALE_BACKUP="en"
 
 PSI_URI="git://github.com/psi-im"
 PSI_PLUS_URI="git://github.com/psi-plus"
@@ -21,7 +22,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
 IUSE="aspell crypt dbus debug doc enchant extras +hunspell jingle iconsets +qt4 qt5 spell sql ssl xscreensaver
-plugins whiteboarding webkit"
++plugins whiteboarding webkit"
 
 REQUIRED_USE="
 	spell? ( ^^ ( aspell enchant hunspell ) )
@@ -78,6 +79,7 @@ DEPEND="${RDEPEND}
 	)
 	doc? ( app-doc/doxygen )
 	virtual/pkgconfig
+	qt5? ( dev-qt/linguist-tools )
 "
 PDEPEND="
 	crypt? ( >=app-crypt/qca-2.1.0[gpg] )
@@ -179,10 +181,8 @@ src_configure() {
 	
 	use whiteboarding && myconf+=" --enable-whiteboarding"
 	use xscreensaver || myconf+=" --disable-xss"
-	if use extras; then
-		use plugins && myconf+=" --enable-plugins"
-		use webkit && myconf+=" --enable-webkit"
-	fi
+	use plugins || myconf+=" --disable-plugins"
+	use webkit && myconf+=" --enable-webkit"
 
 	QTDIR="${EPREFIX}"/usr
 	use qt5 && QTDIR="${EPREFIX}"/usr/$(get_libdir)/qt5
@@ -219,7 +219,7 @@ src_install() {
 	newdoc certs/README README.certs
 	dodoc README
 
-	if use extras && use plugins; then
+	if use plugins; then
 		insinto /usr/share/${MY_PN}/plugins
 		doins src/plugins/plugins.pri
 		doins src/plugins/psiplugin.pri
@@ -239,8 +239,13 @@ src_install() {
 			lrelease "translations/${PN}_${1}.ts" || die "lrelease ${1} failed"
 			doins "translations/${PN}_${1}.qm"
 		else
-			lrelease "${x}/${PN}_${1}.ts" || die "lrelease ${1} failed"
-			doins "${x}/${PN}_${1}.qm"
+			# PLOCALES are set from Psi+. So we don't want to fail here if no locale
+			if [ -f "${x}/${PN}_${1}.ts" ]; then
+				lrelease "${x}/${PN}_${1}.ts" || die "lrelease ${1} failed"
+				doins "${x}/${PN}_${1}.qm"
+			else
+				ewarn "Unfortunately locale \"${1}\" is supported for Psi+ only"
+			fi
 		fi
 	}
 	l10n_for_each_locale_do install_locale
