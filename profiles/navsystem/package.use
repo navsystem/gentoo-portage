@@ -189,3 +189,4 @@ x11-proto/xcb-proto python_targets_python2_7
 dev-python/dbus-python python_targets_python2_7
 dev-python/PyQt4 python_targets_python2_7
 dev-python/pyparsing python_targets_python2_7
+dev-python/cffi python_targets_python2_7
