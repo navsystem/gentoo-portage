@@ -267,6 +267,8 @@ media-plugins/alsa-plugins abi_x86_32
 virtual/libmysqlclient abi_x86_32
 x11-libs/libva abi_x86_32
 dev-libs/protobuf abi_x86_32
+dev-libs/protobuf-c abi_x86_32
+dev-lang/lua abi_x86_32
 
 x11-libs/libva-intel-driver abi_x86_32
 x11-libs/libva-vdpau-driver abi_x86_32
