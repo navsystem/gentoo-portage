@@ -53,6 +53,7 @@ dev-vcs/git -perl -subversion -gtk
 media-video/vlc -rdp
 x11-libs/fltk xft
 
+media-libs/glc-lib qt4
 
 #required by app-emulation/virt-manager
 app-emulation/libvirt python
