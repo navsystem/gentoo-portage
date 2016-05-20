@@ -47,3 +47,4 @@ dev-python/pip python_targets_python2_7
 dev-python/colorama python_targets_python2_7
 dev-python/CacheControl python_targets_python2_7
 dev-python/chardet python_targets_python2_7
+dev-vcs/mercurial python_targets_python2_7 
