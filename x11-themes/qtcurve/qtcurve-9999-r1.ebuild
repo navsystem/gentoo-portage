@@ -101,7 +101,7 @@ multilib_src_configure() {
 		-DLIB_INSTALL_DIR=/usr/$(get_libdir)
 		-DENABLE_GTK2=$(usex gtk)
 		-DENABLE_QT4=$(usex qt4)
-		-DQTC_ENABLE_X11=$()
+		-DQTC_ENABLE_X11=$(usex X)
 		$(is_final_abi && usex nls && echo -DQTC_INSTALL_PO=ON || echo -DQTC_INSTALL_PO=OFF)
 	)
 	cmake-utils_src_configure
