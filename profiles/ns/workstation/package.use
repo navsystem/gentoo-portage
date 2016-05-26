@@ -1,0 +1,127 @@
+app-admin/testdisk ntfs reiserfs
+media-gfx/splashutils fbcondecor
+net-fs/samba quota gnutls client
+
+
+sys-fs/aufs2 inotify kernel-patch
+
+media-fonts/terminus-font -pcf -X
+
+media-libs/jpeg static-libs
+media-libs/libjpeg-turbo static-libs
+media-libs/lcms static-libs
+media-libs/libpng static-libs
+virtual/jpeg static-libs
+media-libs/freetype static-libs
+media-libs/libmng static-libs
+app-arch/bzip2 static static-libs
+
+app-office/libreoffice java odk
+
+dev-libs/libgcrypt static-libs
+sys-apps/hal -crypt -X
+virtual/ffmpeg encode
+media-video/ffmpeg gnutls
+
+dev-qt/qt-creator examples git mercurial perforce qml qtscript
+app-misc/mc -X slang -ncurses
+dev-vcs/subversion -dso extras
+gnome-base/gvfs gdu
+sys-block/parted device-mapper
+kde-apps/kopete oscar
+media-libs/libpng apng
+app-office/openoffice -bash-completion
+net-im/psi extras jingle plugins iconsets -aspell hunspell -qt4 qt5
+net-im/psimedia extras -qt4 qt5
+sys-devel/qconf -qt4 qt5
+
+dev-libs/ecore curl
+dev-libs/e_dbus connman ofono
+dev-libs/ecore -directfb
+net-im/pidgin -zeroconf
+media-libs/elementary weather
+
+app-arch/p7zip rar wxwidgets
+dev-db/sqlite secure-delete unlock-notify
+
+dev-vcs/git -perl -subversion -gtk
+media-video/vlc -rdp
+x11-libs/fltk xft
+
+media-libs/glc-lib qt4
+
+
+app-emulation/wine -xml
+app-text/poppler cairo
+net-libs/webkit-efl curl
+app-portage/layman subversion git mercurial
+sys-apps/systemd gtk
+sys-apps/systemd-units server
+sys-fs/udev gudev extras hwdb
+virtual/udev hwdb
+net-misc/connman google ntpd ofono openvpn vpnc
+media-libs/mesa g3dvl gles2 gbm
+
+sys-fs/udev hwdb
+
+>=gnome-base/gvfs-1.10.1 cdda
+=net-libs/gtk-vnc-0.4.4 gtk3
+app-misc/2gis-data msk nsk omsk kaluga minvody spb
+
+sys-libs/zlib minizip static-libs
+sys-libs/glibc -gd # bug #204525
+
+dev-db/postgresql kerberos
+virtual/postgresql kerberos server
+
+net-dns/avahi autoipd
+
+sci-libs/hdf5 -cxx -fortran
+dev-qt/qtsql mysql
+sys-apps/usb_modeswitch jimtcl
+net-misc/spice-gtk gtk3
+
+
+kde-apps/kdelibs semantic-desktop
+games-fps/qudos qmax textures
+x11-themes/qtcurve gtk
+dev-libs/elfutils static-libs
+
+media-libs/mlt kdenlive
+
+x11-plugins/qutim-plugins -kde
+net-voip/linphone gtk video
+media-libs/mediastreamer video
+dev-db/mariadb extraengine
+media-sound/sox -ffmpeg
+media-plugins/alsa-plugins -ffmpeg
+app-misc/strigi -ffmpeg
+x11-libs/libfm gtk
+dev-qt/designer -phonon
+
+net-libs/ptlib wav
+
+app-crypt/gcr gtk
+media-libs/libvpx postproc
+
+media-libs/vigra openexr
+
+x11-libs/libxcb xkb
+dev-libs/libpcre pcre16
+
+sys-libs/ntdb python
+kde-apps/solid-runtime -bluetooth
+sys-libs/tevent python
+net-libs/gtk-vnc python
+app-crypt/pinentry gnome-keyring
+sys-libs/tdb python
+dev-qt/qtmultimedia gstreamer
+net-misc/spice-gtk python usbredir
+
+dev-libs/protobuf python
+dev-libs/boost python
+app-emulation/libvirt-glib python
+
+dev-java/swing-layout source
+sys-libs/gpm static-libs
+

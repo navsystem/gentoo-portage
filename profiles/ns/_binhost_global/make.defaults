@@ -1,0 +1,4 @@
+PKGDIR=/var/lib/gentoobuild/packages/multibinhost
+FEATURES="${FEATURES} buildpkg"
+MAKEOPTS="-j64"
+EMERGE_DEFAULT_OPTS="-j --load-average 64 --keep-going"

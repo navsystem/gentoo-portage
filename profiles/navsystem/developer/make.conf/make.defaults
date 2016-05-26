@@ -1,3 +1,0 @@
-MAKEOPTS="-j65"
-FEATURES="${FEATURES} buildpkg"
-

@@ -1,3 +1,0 @@
-PKGDIR=/var/tmp/packages
-ESVN_OFFLINE=1
-EGIT_OFFLINE=1

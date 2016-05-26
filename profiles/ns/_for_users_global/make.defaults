@@ -1,0 +1,1 @@
+EMERGE_DEFAULT_OPTS="-j2 --keep-going --binpkg-respect-use=n"
