@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Id$
 
 EAPI="4"
 
-inherit qt4-r2 git-2
+inherit qt4-r2 git-r3
 
-EGIT_REPO_URI="git://gitorious.org/qt/qtserialport.git"
-EGIT_BRANCH="stable"
+EGIT_REPO_URI="git://code.qt.io/qt/qtserialport.git"
+EGIT_BRANCH="qt4-dev"
 
 DESCRIPTION="Qt library for access to serial ports"
 HOMEPAGE="http://qt.gitorious.org/qt/qtserialport"
@@ -18,3 +18,4 @@ IUSE="debug"
 
 DEPEND="dev-qt/qtcore:4"
 RDEPEND="${DEPEND}"
+
