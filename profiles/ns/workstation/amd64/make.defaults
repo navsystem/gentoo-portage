@@ -1,0 +1,3 @@
+PORTAGE_BINHOST="ftp://binhost:binhost@trac/amd64-workstation"
+PKGDIR="/var/tmp/packages"
+EMERGE_DEFAULT_OPTS="-j2 -g"
