@@ -53,3 +53,5 @@ sys-libs/tevent python
 sys-libs/tdb python
 media-plugins/gst-plugins-meta ogg vorbis
 sys-libs/ntdb python
+
+www-apps/redmine fastcgi ldap
