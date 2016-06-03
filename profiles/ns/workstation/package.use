@@ -78,6 +78,7 @@ net-dns/avahi autoipd
 
 sci-libs/hdf5 -cxx -fortran
 dev-qt/qtsql mysql
+dev-qt/qtmultimedia widgets
 sys-apps/usb_modeswitch jimtcl
 net-misc/spice-gtk gtk3
 
