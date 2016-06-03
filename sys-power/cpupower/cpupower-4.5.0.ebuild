@@ -2,12 +2,12 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
-inherit eutils multilib toolchain-funcs
+EAPI=6
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Shows and sets processor power related values"
 HOMEPAGE="https://www.kernel.org/"
-SRC_URI="mirror://kernel/linux/kernel/v${PV%%.*}.x/linux-${PV}.tar.xz"
+SRC_URI="https://dev.gentoo.org/~floppym/dist/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -22,8 +22,6 @@ DEPEND="${RDEPEND}
 	virtual/os-headers
 	nls? ( sys-devel/gettext )"
 
-S=${WORKDIR}/linux-${PV}/tools/power/${PN}
-
 src_compile() {
 	myemakeargs=(
 		DEBUG=$(usex debug true false)
@@ -37,8 +35,8 @@ src_compile() {
 		CC="$(tc-getCC)"
 		LD="$(tc-getCC)"
 		STRIP=true
-		LDFLAGS="${LDFLAGS}"
-		OPTIMIZATION="${CFLAGS}"
+		OPTIMIZATION=
+		VERSION=${PV}
 	)
 
 	if [[ -n ${LINGUAS+set} ]]; then
@@ -53,6 +51,6 @@ src_install() {
 	emake DESTDIR="${D}" "${myemakeargs[@]}" install
 	dodoc README ToDo
 
-	newconfd "${FILESDIR}"/conf.d-r2 ${PN}
-	newinitd "${FILESDIR}"/init.d-r4 ${PN}
+	newconfd "${FILESDIR}"/conf.d-r2 cpupower
+	newinitd "${FILESDIR}"/init.d-r4 cpupower
 }
