@@ -10,3 +10,7 @@ uuid
 gpm samba
 postgres sqlite
 "
+
+PORTAGE_BINHOST="ftp://binhost:binhost@trac/amd64-miniserver"
+PKGDIR="/var/tmp/packages"
+EMERGE_DEFAULT_OPTS="-j2 -g"
