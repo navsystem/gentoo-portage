@@ -1,6 +1,8 @@
 media-libs/phonon -vlc gstreamer
 dev-qt/designer -phonon
 
+www-servers/uwsgi cgi python python_asyncio python_gevent
+
 dev-vcs/git python_targets_python2_7
 dev-libs/gobject-introspection python_targets_python2_7
 sys-libs/tdb python_targets_python2_7
