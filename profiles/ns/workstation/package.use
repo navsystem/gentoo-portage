@@ -125,4 +125,5 @@ app-emulation/libvirt-glib python
 
 dev-java/swing-layout source
 sys-libs/gpm static-libs
+net-misc/tigervnc server
 
