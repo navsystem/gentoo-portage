@@ -24,7 +24,7 @@ fi
 LICENSE="Apache-2.0"
 SLOT="0"
 IUSE="cherrypy ldap libcloud libvirt gnupg keyring mako mongodb mysql neutron nova"
-IUSE+=" openssl profile redis selinux test timelib raet +zeromq vim-syntax"
+IUSE+=" openssl portage profile redis selinux test timelib raet +zeromq vim-syntax"
 
 RDEPEND="sys-apps/pciutils
 	dev-python/jinja[${PYTHON_USEDEP}]
@@ -38,7 +38,6 @@ RDEPEND="sys-apps/pciutils
 	libcloud? ( >=dev-python/libcloud-0.14.0[${PYTHON_USEDEP}] )
 	mako? ( dev-python/mako[${PYTHON_USEDEP}] )
 	ldap? ( dev-python/python-ldap[${PYTHON_USEDEP}] )
-	openssl? ( dev-python/pyopenssl[${PYTHON_USEDEP}] )
 	libvirt? ( dev-python/libvirt-python[${PYTHON_USEDEP}] )
 	openssl? (
 		dev-libs/openssl:*[-bindist]
@@ -55,6 +54,7 @@ RDEPEND="sys-apps/pciutils
 	)
 	cherrypy? ( >=dev-python/cherrypy-3.2.2[${PYTHON_USEDEP}] )
 	mongodb? ( dev-python/pymongo[${PYTHON_USEDEP}] )
+	portage? ( sys-apps/portage[${PYTHON_USEDEP}] )
 	keyring? ( dev-python/keyring[${PYTHON_USEDEP}] )
 	mysql? ( dev-python/mysql-python[${PYTHON_USEDEP}] )
 	redis? ( dev-python/redis-py[${PYTHON_USEDEP}] )
@@ -67,6 +67,7 @@ RDEPEND="sys-apps/pciutils
 	vim-syntax? ( app-vim/salt-vim )"
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	test? (
+		dev-python/psutil[${PYTHON_USEDEP}]
 		dev-python/pip[${PYTHON_USEDEP}]
 		dev-python/virtualenv[${PYTHON_USEDEP}]
 		dev-python/mock[${PYTHON_USEDEP}]
@@ -87,7 +88,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-2015.5.5-cron-tests.patch"
 	"${FILESDIR}/${PN}-2015.5.5-remove-buggy-tests.patch"
 	"${FILESDIR}/${PN}-2015.8.2-tmpdir.patch"
-	"${FILESDIR}/${PN}-2015.8.4-boto-vpc-test.patch"
+	"${FILESDIR}/${PN}-2015.8.10-remove-failing-boto-test.patch"
 )
 
 python_prepare() {
