@@ -127,3 +127,10 @@ dev-java/swing-layout source
 sys-libs/gpm static-libs
 net-misc/tigervnc server
 
+media-libs/mlt qt5 -qt4
+
+media-libs/phonon-vlc qt5
+sys-auth/polkit-qt qt5
+media-libs/phonon qt5
+app-text/poppler qt5
+dev-libs/libdbusmenu-qt qt5

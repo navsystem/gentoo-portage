@@ -1,1 +1,1 @@
-USE="${USE} -kf5 kde"
+USE="${USE} kf5"
