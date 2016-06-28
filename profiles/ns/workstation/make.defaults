@@ -25,6 +25,7 @@ video_cards_r300 video_cards_r600 video_cards_i915 video_cards_i965
 -video_cards_tseng -video_cards_v4l -video_cards_via -video_cards_virtualbox -video_cards_vmware -video_cards_voodoo -video_cards_xgi
 
 -linguas_* linguas_en linguas_en_US linguas_ru linguas_ru_RU
+-l10n_* l10n_en l10n_en_US l10n_ru l10n_ru_RU
 
 dracut_modules_plymouth dracut_modules_systemd dracut_modules_btrfs
 python_targets_python3_4 python_targets_python2_7 python_syngle_target_python3_4
