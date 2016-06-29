@@ -30,6 +30,22 @@
 
 #--- END OF EXAMPLES ---
 
+# Michael Palimaka <kensington@gentoo.org> (29 Jun 2016)
+# No longer released upstream. Use kde-apps/ffmpegthumbs instead.
+# Masked for removal in 30 days.
+kde-apps/mplayerthumbs
+
+# Johannes Huber <johu@gentoo.org> (28 Jun 2016)
+# Masked for removal in 30 days. Dead upstream. Was only
+# useful with Nepomuk, superseded by Baloo long time ago.
+# No reverse dependencies, bug #583716.
+app-misc/strigi
+
+# Michał Górny <mgorny@gentoo.org> (27 Jun 2016)
+# (on behalf of QA & proxy-maint)
+# Major QA violations, bug #587342 (#585722 in particular).
+games-emulation/ppsspp
+
 # Alexis Ballier <aballier@gentoo.org> (27 Jun 2016)
 # Breaks dev-ml/ppx_type_conv
 >=dev-ml/ppx_deriving-4
@@ -556,11 +572,6 @@ www-apps/trac-downloads
 # Causes undefined references few layers down (in mediastreamer),
 # someone needs to investigate.
 >=net-libs/libzrtpcpp-4
-
-# Christian Faulhammer <fauli@gentoo.org> (02 Sep 2014)
-# website not working anymore and will stay like this,
-# tool is useless. See bug 504734
-app-admin/hwreport
 
 # Sergey Popov <pinkbyte@gentoo.org> (28 Aug 2014)
 # Security mask, wrt bug #519650
