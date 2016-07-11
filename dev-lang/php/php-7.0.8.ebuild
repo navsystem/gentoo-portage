@@ -204,16 +204,12 @@ DEPEND="${DEPEND}
 	>=sys-devel/libtool-1.5.18"
 
 # Allow users to install production version if they want to
+if [[ "${PHP_INI_VERSION}" == "production" ]]; then
+	PHP_INI_UPSTREAM="php.ini-production"
+else
+	PHP_INI_UPSTREAM="php.ini-development"
+fi
 
-case "${PHP_INI_VERSION}" in
-	production|development)
-		;;
-	*)
-		PHP_INI_VERSION="development"
-		;;
-esac
-
-PHP_INI_UPSTREAM="php.ini-${PHP_INI_VERSION}"
 PHP_INI_FILE="php.ini"
 
 want_apache
@@ -770,17 +766,28 @@ pkg_postinst() {
 	# supposed to remove that dead link per bug 572436.
 	eselect php cleanup || die
 
-	elog "To build extensions for this version of PHP, you will need to"
-	elog "add php${SLOT/./-} to your PHP_TARGETS USE_EXPAND variable."
-	elog
-	elog "This ebuild installed a version of php.ini based on"
-	elog "php.ini-${PHP_INI_VERSION}. You can choose which version of"
-	elog "php.ini to install by default by setting PHP_INI_VERSION"
-	elog "to either 'production' or 'development' in your make.conf."
-	elog "Both versions of php.ini can be found with the PHP docs in"
-	elog "${EPREFIX}/usr/share/doc/${PF}"
-	elog
-	elog "For more details on how version slotting works, please see"
+	if ! has "php${SLOT/./-}" ${PHP_TARGETS}; then
+	   elog "To build extensions for this version of PHP, you will need to"
+	   elog "add php${SLOT/./-} to your PHP_TARGETS USE_EXPAND variable."
+	   elog
+	fi
+
+	# Only mention PHP_INI_VERSION if the user doesn't have it set.
+	case "${PHP_INI_VERSION}" in
+		production|development)
+		;;
+	*)
+		elog "This ebuild installed a version of php.ini based on"
+		elog "${PHP_INI_UPSTREAM}. You can choose which version of"
+		elog "php.ini to install by default by setting PHP_INI_VERSION"
+		elog "to either 'production' or 'development' in your make.conf."
+		elog "Both versions of php.ini can be found with the PHP docs in"
+		elog "${EPREFIX}/usr/share/doc/${PF}"
+		elog
+		;;
+	esac
+
+	elog "For details on how version slotting works, please see"
 	elog "the wiki:"
 	elog
 	elog "  https://wiki.gentoo.org/wiki/PHP"
