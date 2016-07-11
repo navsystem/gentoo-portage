@@ -1,0 +1,22 @@
+=net-im/ejabberd-16.04 amd64 x86
+=dev-erlang/lager-3.2.0 amd64 x86
+=dev-erlang/esip-1.0.4 amd64 x86
+=dev-erlang/p1_oauth2-0.6.1 amd64 x86
+=dev-erlang/p1_utils-1.0.4 amd64 x86
+=dev-erlang/p1_pgsql-1.1.0 amd64 x86
+=dev-erlang/fast_yaml-1.0.3 amd64 x86
+=dev-erlang/stringprep-1.0.3 amd64 x86
+=dev-erlang/fast_xml-1.1.3 amd64 x86
+=dev-erlang/stun-1.0.3 amd64 x86
+=dev-erlang/p1_pam-1.0.0 amd64 x86
+=dev-erlang/sqlite3-1.1.5 amd64 x86
+=dev-erlang/fast_tls-1.0.3 amd64 x86
+=dev-erlang/p1_xmlrpc-1.15.1 amd64 x86
+=dev-util/rebar-2.6.1 amd64 x86
+=dev-erlang/iconv-1.0.0 amd64 x86
+=dev-erlang/luerl-0.2 amd64 x86
+=dev-erlang/cache_tab-1.0.2 amd64 x86
+=dev-erlang/ezlib-1.0.1 amd64 x86
+=dev-erlang/jiffy-0.14.7 amd64 x86
+=dev-erlang/goldrush-0.1.8.1 amd64 x86
+
