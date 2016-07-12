@@ -17,9 +17,23 @@ if [[ ${PV} =~ [9]{4,} ]] ; then
 	EGIT_REPO_URI="git://git.ganeti.org/ganeti.git"
 	inherit git-2
 	KEYWORDS=""
+	PATCHES=()
 else
-	SRC_URI="http://downloads.ganeti.org/releases/${SERIES}/${MY_P}.tar.gz"
+	DEBIAN_PATCH=4
+	SRC_URI="
+	  http://downloads.ganeti.org/releases/${SERIES}/${MY_P}.tar.gz
+	  mirror://ubuntu/pool/universe/${PN:0:1}/${PN}/${PN}_${PV}-${DEBIAN_PATCH}.debian.tar.xz
+	"
 	KEYWORDS="~amd64 ~x86"
+	PATCHES=(
+	  "${WORKDIR}"/debian/patches/do-not-backup-export-dir.patch
+	  "${WORKDIR}"/debian/patches/Makefile.am-use-C.UTF-8
+	  "${WORKDIR}"/debian/patches/relax-deps
+	  "${WORKDIR}"/debian/patches/ghc-7.10-compatibility.patch
+	  "${WORKDIR}"/debian/patches/zlib-0.6-compatibility
+	  "${WORKDIR}"/debian/patches/fix_FTBFS_with_sphinx-1.3.5
+	  "${WORKDIR}"/debian/patches/fix_ftbfs_with_sphinx_1.4
+	)
 fi
 
 DESCRIPTION="Ganeti is a virtual server management software tool"
@@ -27,7 +41,7 @@ HOMEPAGE="http://www.ganeti.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="drbd haskell-daemons htools ipv6 kvm lxc monitoring multiple-users rbd syslog test xen"
+IUSE="drbd haskell-daemons htools ipv6 kvm lxc monitoring multiple-users rbd syslog test xen restricted-commands"
 
 REQUIRED_USE="|| ( kvm xen lxc )
 	test? ( ipv6 )
@@ -64,10 +78,10 @@ DEPEND="
 	>=dev-haskell/old-time-1.1.0.0:0=
 	>=dev-haskell/random-1.0.1.1:0=
 	haskell-daemons? ( >=dev-haskell/text-0.11.1.13:0= )
-	>=dev-haskell/transformers-0.3.0.0:0=
+	>=dev-haskell/transformers-0.4.3.0:0=
 
 	>=dev-haskell/attoparsec-0.10.1.1:0=
-	<dev-haskell/attoparsec-0.13:0
+	<dev-haskell/attoparsec-0.14:0
 	>=dev-haskell/base64-bytestring-1.0.0.1:0=
 	<dev-haskell/base64-bytestring-1.1:0=
 	>=dev-haskell/crypto-4.2.4:0=
@@ -79,9 +93,7 @@ DEPEND="
 	>=dev-haskell/hslogger-1.1.4:0=
 	<dev-haskell/hslogger-1.3:0=
 	>=dev-haskell/json-0.5:0=
-	<dev-haskell/json-0.9:0=
 	>=dev-haskell/lens-3.10:0=
-	<dev-haskell/lens-4.8:0=
 	>=dev-haskell/lifted-base-0.2.0.3:0=
 	<dev-haskell/lifted-base-0.3:0=
 	>=dev-haskell/monad-control-0.3.1.3:0=
@@ -97,9 +109,8 @@ DEPEND="
 	>=dev-haskell/transformers-base-0.4.1:0=
 	<dev-haskell/transformers-base-0.5:0=
 	>=dev-haskell/utf8-string-0.3.7:0=
-	<dev-haskell/utf8-string-0.4:0=
 	>=dev-haskell/zlib-0.5.3.3:0=
-	<dev-haskell/zlib-0.6:0=
+	<dev-haskell/zlib-0.7:0=
 
 	>=dev-haskell/psqueue-1.1:0=
 	<dev-haskell/psqueue-1.2:0=
@@ -110,9 +121,6 @@ DEPEND="
 	>=dev-haskell/case-insensitive-0.4.0.1
 
 	dev-haskell/vector:0=
-	<dev-haskell/semigroupoids-4.1:0=
-	<dev-haskell/contravariant-0.6
-	<dev-haskell/transformers-compat-0.4[three]
 	xen? ( >=app-emulation/xen-3.0 )
 	kvm? (
 		dev-python/psutil
@@ -133,7 +141,7 @@ RDEPEND="${DEPEND}
 DEPEND+="
 	sys-devel/m4
 	app-text/pandoc
-	<dev-python/sphinx-1.3[${PYTHON_USEDEP}]
+	<=dev-python/sphinx-1.3.5[${PYTHON_USEDEP}]
 	media-fonts/urw-fonts
 	media-gfx/graphviz
 	>=dev-haskell/test-framework-0.6:0=
@@ -149,13 +157,13 @@ DEPEND+="
 		>=dev-haskell/hunit-1.2.4.2:0=
 		<dev-haskell/hunit-1.3:0=
 		>=dev-haskell/quickcheck-2.4.2:2=
-		<dev-haskell/quickcheck-2.8:2=
+		<dev-haskell/quickcheck-2.8.3:2=
 		sys-apps/fakeroot
-		net-misc/socat
+		>=net-misc/socat-1.7
 		dev-util/shelltestrunner
 	)"
 
-PATCHES=(
+PATCHES+=(
 	"${FILESDIR}/${PN}-2.12-start-stop-daemon-args.patch"
 	"${FILESDIR}/${PN}-2.11-add-pgrep.patch"
 	"${FILESDIR}/${PN}-2.15-daemon-util.patch"
@@ -198,6 +206,16 @@ pkg_setup () {
 src_prepare() {
 	local testfile
 	eapply "${PATCHES[@]}"
+	# Upstream commits:
+	# 4c3c2ca2a97a69c0287a3d23e064bc17978105eb
+	# 24618882737fd7c189adf99f4acc767d48f572c3
+	sed -i \
+		-e '/QuickCheck/s,< 2.8,< 2.8.3,g' \
+		cabal/ganeti.template.cabal
+	# Neuter -Werror
+	sed -i \
+		-e '/^if DEVELOPER_MODE/,/^endif/s/-Werror//' \
+		Makefile.am
 
 	# not sure why these tests are failing
 	# should remove this on next version bump if possible
@@ -233,6 +251,7 @@ src_configure () {
 		--with-ssh-initscript=/etc/init.d/sshd \
 		--with-export-dir=/var/lib/ganeti-storage/export \
 		--with-os-search-path=/usr/share/${PN}/os \
+		$(use_enable restricted-commands) \
 		$(use_enable test haskell-tests) \
 		$(usex multiple-users "--with-default-user=" "" "gnt-daemons" "") \
 		$(usex multiple-users "--with-user-prefix=" "" "${USER_PREFIX}" "") \
@@ -241,7 +260,10 @@ src_configure () {
 		$(use_enable syslog) \
 		$(use_enable monitoring) \
 		$(usex kvm '--with-kvm-path=' '' "/usr/bin/qemu-system-${kvm_arch}" '') \
-		$(usex haskell-daemons "--enable-confd=haskell" '' '' '')
+		$(usex haskell-daemons "--enable-confd=haskell" '' '' '') \
+		--with-haskell-flags="-optl -Wl,-z,relro -optl -Wl,--as-needed" \
+		--enable-socat-escape \
+		--enable-socat-compress
 }
 
 src_install () {
