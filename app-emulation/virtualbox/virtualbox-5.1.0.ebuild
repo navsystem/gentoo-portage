@@ -75,6 +75,7 @@ DEPEND="${RDEPEND}
 	java? ( >=virtual/jre-1.6:= )
 	pam? ( sys-libs/pam )
 	pulseaudio? ( media-sound/pulseaudio )
+	qt5? ( dev-qt/linguist-tools:5 )
 	vboxwebsrv? ( net-libs/gsoap[-gnutls(-)] )
 	${PYTHON_DEPS}"
 
@@ -241,7 +242,7 @@ src_install() {
 	use debug && binpath="debug"
 	cd "${S}"/out/linux.${ARCH}/${binpath}/bin || die
 
-	local vbox_inst_path="/usr/$(get_libdir)/${PN}" each fwfile
+	local vbox_inst_path="/usr/$(get_libdir)/${PN}" each fwfile size ico icofile
 
 	vbox_inst() {
 		local binary="${1}"
@@ -349,6 +350,16 @@ src_install() {
 		done
 		newicon ${PN}-48px.png ${PN}.png
 		doicon -s scalable ${PN}.svg
+		popd &>/dev/null || die
+		pushd "${S}"/src/VBox/Artwork/other &>/dev/null || die
+		for size in 16 24 32 48 64 72 96 128 256 512 ; do
+			for ico in hdd ova ovf vbox{,-extpack} vdi vdh vmdk ; do
+				icofile="${PN}-${ico}-${size}px.png"
+				if [[ -f "${icofile}" ]] ; then
+					newicon -s ${size} ${icofile} ${PN}-${ico}.png
+				fi
+			done
+		done
 		popd &>/dev/null || die
 	fi
 
