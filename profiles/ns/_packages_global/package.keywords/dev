@@ -13,7 +13,7 @@
 =app-portage/deltup-0.4.6 amd64 x86
 <sci-geosciences/osm2pgsql-99999999 amd64 x86
 =net-misc/modem-manager-gui-0.0.16 amd64 x86
-=sci-geosciences/mapserver-7.0.1 amd64 x86
+=sci-geosciences/mapserver-7.0.1-r1 amd64 x86
 =sys-block/megamgr-5.20-r2 amd64 x86
 =sci-geosciences/tilecache-2.11-r1 amd64 x86
 =dev-db/pgpool2-3.5.2 amd64 x86
