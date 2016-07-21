@@ -9,6 +9,7 @@ uuid
 -openrc
 gpm samba
 postgres sqlite
+tracepath traceroute
 "
 
 PORTAGE_BINHOST="ftp://binhost:binhost@trac/amd64-miniserver"
