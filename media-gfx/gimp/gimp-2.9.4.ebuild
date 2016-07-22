@@ -39,7 +39,7 @@ RDEPEND=">=dev-libs/glib-2.30.2:2
 	dev-libs/libxslt
 	x11-themes/hicolor-icon-theme
 	>=media-libs/babl-0.1.18
-	>=media-libs/gegl-0.3.8:0.3[cairo]
+	>=media-libs/gegl-0.3.8:0.3[cairo,png]
 	>=dev-libs/glib-2.43
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
@@ -129,6 +129,7 @@ src_compile() {
 	addwrite /dev/dri/  # bug #574038
 	addwrite /proc/mtrr  # bug 589198
 
+	export XDG_DATA_DIRS=/usr/share  # bug 587004
 	gnome2_src_compile
 }
 
