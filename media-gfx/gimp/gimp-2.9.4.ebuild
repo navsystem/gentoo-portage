@@ -117,6 +117,10 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.9.2-no-deprecation.patch  # bug 395695, comment 9 and 16
 	epatch "${FILESDIR}"/${PN}-2.9.4-gegl-bin.patch
 
+	# Bug 589394
+	rm icons/Symbolic-Inverted/Makefile.in || die
+	epatch "${FILESDIR}"/${PN}-2.9.4-mkdir-makefile.patch
+
 	sed -i -e 's/== "xquartz"/= "xquartz"/' configure.ac || die #494864
 	eautoreconf  # If you remove this: remove dev-util/gtk-doc-am from DEPEND, too
 
@@ -127,6 +131,7 @@ src_compile() {
 	addwrite /dev/nvidiactl  # bug #569738
 	addwrite /dev/nvidia0  # bug #569738
 	addwrite /dev/dri/  # bug #574038
+	addwrite /dev/ati/  # bug 589198
 	addwrite /proc/mtrr  # bug 589198
 
 	export XDG_DATA_DIRS=/usr/share  # bug 587004
