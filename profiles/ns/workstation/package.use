@@ -134,3 +134,4 @@ sys-auth/polkit-qt qt5
 media-libs/phonon qt5
 app-text/poppler qt5
 dev-libs/libdbusmenu-qt qt5
+sci-libs/gdal geos
