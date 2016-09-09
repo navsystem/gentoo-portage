@@ -32,8 +32,7 @@ RDEPEND="
 	ncurses? ( >=sys-libs/ncurses-5.9-r3:0=[${MULTILIB_USEDEP}] )
 	ocaml? (
 		>=dev-lang/ocaml-4.00.0:0=
-		dev-ml/findlib
-		dev-ml/ocaml-ctypes )"
+		dev-ml/ocaml-ctypes:= )"
 # configparser-3.2 breaks the build (3.3 or none at all are fine)
 DEPEND="${RDEPEND}
 	dev-lang/perl
@@ -45,7 +44,8 @@ DEPEND="${RDEPEND}
 	doc? ( dev-python/sphinx )
 	gold? ( sys-libs/binutils-libs )
 	libffi? ( virtual/pkgconfig )
-	ocaml? ( test? ( dev-ml/ounit ) )
+	ocaml? ( dev-ml/findlib
+		test? ( dev-ml/ounit ) )
 	!!<dev-python/configparser-3.3.0.2
 	${PYTHON_DEPS}"
 
@@ -179,6 +179,9 @@ multilib_src_configure() {
 	if multilib_is_native_abi; then
 		mycmakeargs+=(
 			-DLLVM_BUILD_DOCS=$(usex doc)
+			# note: this is used only when OCaml is enabled, so we can
+			# set it to 'yes' even without OCaml around
+			-DLLVM_ENABLE_OCAMLDOC=$(usex doc)
 			-DLLVM_ENABLE_SPHINX=$(usex doc)
 			-DLLVM_ENABLE_DOXYGEN=OFF
 			-DLLVM_INSTALL_UTILS=ON
