@@ -18,10 +18,8 @@ SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/${P}
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~arm64 ~x86"
-IUSE="cups +gn +gnome +gnome-keyring gtk3 +hangouts kerberos neon pic +proprietary-codecs pulseaudio selinux +suid +system-ffmpeg +tcmalloc widevine"
+IUSE="cups +gn gnome gnome-keyring gtk3 +hangouts kerberos neon pic +proprietary-codecs pulseaudio selinux +suid +system-ffmpeg +tcmalloc widevine"
 RESTRICT="!system-ffmpeg? ( proprietary-codecs? ( bindist ) )"
-
-REQUIRED_USE="gn? ( gnome gnome-keyring )"
 
 # Native Client binaries are compiled with different set of flags, bug #452066.
 QA_FLAGS_IGNORED=".*\.nexe"
@@ -98,6 +96,7 @@ RDEPEND="${COMMON_DEPEND}
 	tcmalloc? ( !<x11-drivers/nvidia-drivers-331.20 )
 	widevine? ( www-plugins/chrome-binary-plugins[widevine(-)] )
 "
+# dev-vcs/git - https://bugs.gentoo.org/593476
 DEPEND="${COMMON_DEPEND}
 	>=app-arch/gzip-1.7
 	!arm? (
@@ -111,6 +110,7 @@ DEPEND="${COMMON_DEPEND}
 	>=sys-devel/bison-2.4.3
 	sys-devel/flex
 	virtual/pkgconfig
+	dev-vcs/git
 	$(python_gen_any_dep '
 		dev-python/beautifulsoup:python-2[${PYTHON_USEDEP}]
 		>=dev-python/beautifulsoup-4.3.2:4[${PYTHON_USEDEP}]
@@ -412,6 +412,7 @@ src_configure() {
 	myconf_gn+=" enable_widevine=$(usex widevine true false)"
 	myconf_gn+=" use_cups=$(usex cups true false)"
 	myconf_gn+=" use_gconf=$(usex gnome true false)"
+	myconf_gn+=" use_gnome_keyring=$(usex gnome-keyring true false)"
 	myconf_gn+=" use_gtk3=$(usex gtk3 true false)"
 	myconf_gn+=" use_kerberos=$(usex kerberos true false)"
 	myconf_gn+=" use_pulseaudio=$(usex pulseaudio true false)"
