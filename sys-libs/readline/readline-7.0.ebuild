@@ -6,7 +6,7 @@ EAPI="5"
 inherit eutils multilib toolchain-funcs flag-o-matic multilib-minimal
 
 # Official patches
-# See ftp://ftp.cwru.edu/pub/bash/readline-6.3-patches/
+# See ftp://ftp.cwru.edu/pub/bash/readline-7.0-patches/
 PLEVEL=${PV##*_p}
 MY_PV=${PV/_p*}
 MY_PV=${MY_PV/_/-}
@@ -36,7 +36,7 @@ esac
 
 LICENSE="GPL-3"
 SLOT="0/7"  # subslot matches SONAME major
-#KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
 IUSE="static-libs utils"
 
 RDEPEND=">=sys-libs/ncurses-5.9-r3:0=[static-libs?,${MULTILIB_USEDEP}]"
@@ -150,12 +150,4 @@ multilib_src_install_all() {
 	dohtml -r doc/.
 	docinto ps
 	dodoc doc/*.ps
-}
-
-pkg_preinst() {
-	preserve_old_lib /$(get_libdir)/lib{history,readline}.so.{4,5} #29865
-}
-
-pkg_postinst() {
-	preserve_old_lib_notify /$(get_libdir)/lib{history,readline}.so.{4,5}
 }

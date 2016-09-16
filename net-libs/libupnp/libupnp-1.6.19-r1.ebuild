@@ -19,7 +19,8 @@ DOCS="NEWS README ChangeLog"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-suse.patch \
-		"${FILESDIR}"/${P}-docs-install.patch
+		"${FILESDIR}"/${P}-docs-install.patch \
+		"${FILESDIR}"/CVE-2016-6255.patch
 
 	# fix tests
 	chmod +x ixml/test/test_document.sh || die
