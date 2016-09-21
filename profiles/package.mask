@@ -30,6 +30,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Christoph Junghans <ottxor@gentoo.org> (20 Sep 2016)
+# Switch to a non-stable scheme  following google-chrome
+# please unmask latest version yourself
+=www-plugins/google-talkplugin-5.4.2.0
+
 # Gnome Team <gnome@gentoo.org> (19 sep 2016)
 # Gnome 3.22 mask
 >=dev-util/gdbus-codegen-2.50.0
@@ -545,11 +550,6 @@ net-misc/tightvnc
 # Dead for ages, relies on obsolete and vulnerable webkit-gtk versions
 # (#572984). Removal in a month.
 gnome-extra/gnome-web-photo
-
-# Michael Palimaka <kensington@gentoo.org> (20 Aug 2016)
-# Deprecated. Use kde-plasma/kwallet-pam[oldwallet] instead.
-# Masked for removal in 30 days.
-kde-apps/kwalletd-pam
 
 # Pacho Ramos <pacho@gentoo.org> (20 Aug 2016)
 # codecs are not usable, also really obsolete, bug #181959
