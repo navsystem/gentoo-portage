@@ -73,7 +73,6 @@ COMMON_DEPEND="
 	x11-libs/libXtst:=
 	x11-libs/pango:=
 	app-arch/snappy:=
-	>=dev-libs/libevent-1.4.13:=
 	dev-libs/libxml2:=[icu]
 	dev-libs/libxslt:=
 	media-libs/flac:=
@@ -83,6 +82,7 @@ COMMON_DEPEND="
 	kerberos? ( virtual/krb5 )
 	!gn? (
 		>=app-accessibility/speech-dispatcher-0.8:=
+		>=dev-libs/libevent-1.4.13:=
 	)
 "
 # For nvidia-drivers blocker, see bug #413637 .
@@ -365,10 +365,10 @@ src_configure() {
 		-Duse_system_xdg_utils=1
 		-Duse_system_zlib=1"
 
+	# libevent: https://bugs.gentoo.org/593458
 	local gn_system_libraries="
 		flac
 		harfbuzz-ng
-		libevent
 		libjpeg
 		libpng
 		libvpx
@@ -407,7 +407,6 @@ src_configure() {
 		$(gyp_use tcmalloc use_allocator tcmalloc none)
 		$(gyp_use widevine enable_widevine)"
 
-	# TODO: support USE=gnome-keyring for GN
 	myconf_gn+=" enable_hangout_services_extension=$(usex hangouts true false)"
 	myconf_gn+=" enable_widevine=$(usex widevine true false)"
 	myconf_gn+=" use_cups=$(usex cups true false)"
@@ -452,11 +451,12 @@ src_configure() {
 		-Dlinux_use_gold_flags=0
 		-Dsysroot="
 	# Trying to use gold results in linker crash.
-	myconf_gn+=" use_gold=false use_sysroot=false"
+	myconf_gn+=" use_gold=false use_sysroot=false linux_use_bundled_binutils=false"
 
 	ffmpeg_branding="$(usex proprietary-codecs Chrome Chromium)"
 	myconf_gyp+=" -Dproprietary_codecs=1 -Dffmpeg_branding=${ffmpeg_branding}"
-	myconf_gn+=" proprietary_codecs=true ffmpeg_branding=\"${ffmpeg_branding}\""
+	myconf_gn+=" proprietary_codecs=$(usex proprietary-codecs true false)"
+	myconf_gn+=" ffmpeg_branding=\"${ffmpeg_branding}\""
 
 	# Set up Google API keys, see http://www.chromium.org/developers/how-tos/api-keys .
 	# Note: these are for Gentoo use ONLY. For your own distribution,
@@ -536,6 +536,9 @@ src_configure() {
 
 	# Make sure the build system will use the right tools, bug #340795.
 	tc-export AR CC CXX NM
+
+	# Define a custom toolchain for GN
+	myconf_gn+=" custom_toolchain=\"${FILESDIR}/toolchain:default\""
 
 	# Tools for building programs to be executed on the build system, bug #410883.
 	if tc-is-cross-compiler; then
