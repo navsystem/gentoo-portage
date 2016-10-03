@@ -43,6 +43,7 @@ DEPEND="${RDEPEND}
 	!!<dev-python/configparser-3.3.0.2
 	${PYTHON_DEPS}"
 PDEPEND="
+	~sys-devel/clang-runtime-${PV}
 	default-compiler-rt? ( sys-libs/compiler-rt )
 	default-libcxx? ( sys-libs/libcxx )"
 
@@ -213,17 +214,17 @@ src_install() {
 
 	# Apply CHOST and version suffix to clang tools
 	local clang_version=4.0
-	local clang_tools=( clang clang++ clang-cl )
+	local clang_tools=( clang clang++ clang-cl clang-cpp )
 	local abi i
 
 	# cmake gives us:
 	# - clang-X.Y
 	# - clang -> clang-X.Y
-	# - clang++, clang-cl -> clang
+	# - clang++, clang-cl, clang-cpp -> clang
 	# we want to have:
 	# - clang-X.Y
-	# - clang++-X.Y, clang-cl-X.Y -> clang-X.Y
-	# - clang, clang++, clang-cl -> clang*-X.Y
+	# - clang++-X.Y, clang-cl-X.Y, clang-cpp-X.Y -> clang-X.Y
+	# - clang, clang++, clang-cl, clang-cpp -> clang*-X.Y
 	# also in CHOST variant
 	for i in "${clang_tools[@]:1}"; do
 		rm "${ED%/}/usr/bin/${i}" || die
@@ -265,11 +266,5 @@ multilib_src_install_all() {
 	python_fix_shebang "${ED}"
 	if use static-analyzer; then
 		python_optimize "${ED}"usr/share/scan-view
-	fi
-}
-
-pkg_postinst() {
-	if ! has_version 'sys-libs/libomp'; then
-		elog "To enable OpenMP support in clang, install sys-libs/libomp."
 	fi
 }
