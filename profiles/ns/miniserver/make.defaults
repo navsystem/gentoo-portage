@@ -10,6 +10,7 @@ uuid
 gpm samba
 postgres sqlite
 tracepath traceroute
+usb
 "
 
 PORTAGE_BINHOST="ftp://binhost:binhost@trac/amd64-miniserver"
