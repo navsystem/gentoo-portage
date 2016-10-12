@@ -3,18 +3,18 @@
 # $Id$
 
 EAPI=6
-inherit autotools git-r3
+inherit autotools
 
 MY_PN=${PN/g/G}
 
 DESCRIPTION="The default theme from Xubuntu"
 HOMEPAGE="http://shimmerproject.org/project/greybird/ https://github.com/shimmerproject/Greybird"
-EGIT_REPO_URI="https://github.com/shimmerproject/${MY_PN}"
+SRC_URI="https://github.com/shimmerproject/${MY_PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 # README says "dual-licensed as GPLv2 or later and CC-BY-SA 3.0 or later"
 LICENSE="CC-BY-SA-3.0 GPL-2+"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="ayatana gnome"
 
 RDEPEND="
@@ -25,6 +25,9 @@ DEPEND="${RDEPEND}
 	dev-ruby/sass
 	dev-libs/glib:2
 "
+
+S=${WORKDIR}/${MY_PN}-${PV}
+#RESTRICT="binchecks strip"
 
 src_prepare() {
 	eapply_user
