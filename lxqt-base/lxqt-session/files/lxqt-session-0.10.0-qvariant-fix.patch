@@ -1,0 +1,12 @@
+diff -ur lxqt-session-0.10.0_orig/lxqt-config-session/modulemodel.cpp lxqt-session-0.10.0/lxqt-config-session/modulemodel.cpp
+--- lxqt-session-0.10.0_orig/lxqt-config-session/modulemodel.cpp	2015-10-31 07:20:34.000000000 +0600
++++ lxqt-session-0.10.0/lxqt-config-session/modulemodel.cpp	2016-10-12 10:03:28.651199658 +0600
+@@ -83,7 +83,7 @@
+     else if (index.column() == 1 && (role == Qt::DisplayRole || role == Qt::DecorationRole))
+     {
+         if (role == Qt::DisplayRole && mStateMap[name] == true)
+-            return tr("Running") + " ";
++            return QVariant(tr("Running") + " ");
+     }
+     return QVariant();
+ }

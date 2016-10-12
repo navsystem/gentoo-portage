@@ -3,9 +3,10 @@
 # $Id$
 
 EAPI=5
+
 inherit cmake-utils
 
-DESCRIPTION="LXQt quick launcher"
+DESCRIPTION="LXQT session manager"
 HOMEPAGE="http://lxqt.org/"
 
 if [[ ${PV} = *9999* ]]; then
@@ -19,24 +20,30 @@ fi
 LICENSE="GPL-2 LGPL-2.1+"
 SLOT="0"
 
-RDEPEND="dev-libs/glib:2
+PATCHES=(
+	"${FILESDIR}/${P}-qvariant-fix.patch"
+)
+
+CDEPEND="
 	>=dev-libs/libqtxdg-1.0.0
 	dev-qt/qtcore:5
 	dev-qt/qtdbus:5
-	dev-qt/qtscript:5
 	dev-qt/qtgui:5
 	dev-qt/qtwidgets:5
 	dev-qt/qtx11extras:5
 	dev-qt/qtxml:5
-	kde-frameworks/kwindowsystem:5
-	>=lxde-base/menu-cache-0.5.1
+	kde-frameworks/kwindowsystem:5[X]
 	>=lxqt-base/liblxqt-${PV}
-	>=lxqt-base/lxqt-globalkeys-${PV}"
-DEPEND="${RDEPEND}
+	x11-libs/libX11"
+DEPEND="${CDEPEND}
 	dev-qt/linguist-tools:5
+	dev-util/intltool
+	sys-devel/gettext
 	virtual/pkgconfig"
+RDEPEND="${CDEPEND}
+	=lxqt-base/lxqt-common-0.10*"
 
 src_install(){
 	cmake-utils_src_install
-	doman man/*.1
+	doman lxqt-config-session/man/*.1 lxqt-session/man/*.1
 }
