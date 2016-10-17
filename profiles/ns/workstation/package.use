@@ -103,7 +103,7 @@ dev-qt/designer -phonon
 net-libs/ptlib wav
 
 app-crypt/gcr gtk
-media-libs/libvpx postproc
+media-libs/libvpx postproc svc
 
 media-libs/vigra openexr
 
