@@ -1,0 +1,4 @@
+~sys-apps/systemd-231 amd64 x86
+~sys-apps/util-linux-2.28.2 amd64 x86
+~app-shells/bash-completion-2.3 amd64 x86
+
