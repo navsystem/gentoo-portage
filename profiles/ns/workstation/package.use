@@ -135,3 +135,5 @@ media-libs/phonon qt5
 app-text/poppler qt5
 dev-libs/libdbusmenu-qt qt5
 sci-libs/gdal geos
+sci-geosciences/qgis grass mapserver python
+sci-libs/gdal python    
