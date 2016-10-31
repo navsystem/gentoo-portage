@@ -4,7 +4,7 @@
 =app-portage/getdelta-0.7.9-r2 amd64 x86
 =dev-vcs/hgview-1.9.0 amd64 x86
 =sci-geosciences/mapnik-3.0.9 amd64 x86
-=net-im/qutim-0.3.2 amd64 x86
+=net-im/qutim-0.3.3_p1 amd64 x86
 =media-fonts/paratype-2.5 amd64 x86
 =net-im/skype-4.3.0.37-r5 amd64 x86
 =media-sound/deadbeef-0.6.2 amd64 x86
@@ -30,3 +30,4 @@
 =app-editors/sublime-text-3103 amd64 x86
 =dev-qt/qt-creator-4.0.3 amd64
 =sys-devel/gcc-5.4.0 amd64
+=sci-geosciences/qgis-2.14.5 amd64 x86

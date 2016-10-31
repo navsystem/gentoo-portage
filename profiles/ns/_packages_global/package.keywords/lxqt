@@ -13,3 +13,6 @@ lxqt-base/lxqt-globalkeys amd64 x86
 lxqt-base/liblxqt amd64 x86
 lxqt-base/lxqt-about amd64 x86
 lxqt-base/lxqt-common amd64 x86
+=dev-util/cmake-3.6.2 amd64 x86
+x11-libs/libfm-qt amd64 x86
+
