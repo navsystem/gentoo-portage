@@ -4,4 +4,5 @@ x11-libs/libqxt
 app-admin/sudo
 media-libs/phonon
 dev-cpp/muParser
+dev-libs/libmodbus
 @argo5-libs-depends
