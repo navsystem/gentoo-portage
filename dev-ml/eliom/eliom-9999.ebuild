@@ -24,11 +24,11 @@ SLOT="0/${PV}"
 IUSE="doc +ocamlopt +ppx"
 
 RDEPEND=">=dev-lang/ocaml-4.03:=[ocamlopt?]
-	>=dev-ml/js_of_ocaml-2.5-r1:=
-	>=www-servers/ocsigenserver-2.5:=
+	>=dev-ml/js_of_ocaml-2.8.2:=
+	>=www-servers/ocsigenserver-2.8:=
 	>=dev-ml/tyxml-4:=
 	>=dev-ml/deriving-0.6:=
-	>=dev-ml/reactiveData-0.2:=
+	>=dev-ml/reactiveData-0.2.1:=
 	dev-ml/ocaml-ipaddr:=
 	dev-ml/react:=
 	dev-ml/ocaml-ssl:=
