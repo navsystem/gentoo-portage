@@ -39,6 +39,10 @@ QT4_TARGET_DIRECTORIES="
 QCONFIG_ADD="declarative"
 QCONFIG_DEFINE="QT_DECLARATIVE"
 
+PATCHES=(
+	"${FILESDIR}/../../qtcore/files/qt-4.8.6-4badb867b.patch"  #595618
+)
+
 pkg_setup() {
 	use webkit && QT4_TARGET_DIRECTORIES+="
 		src/3rdparty/webkit/Source/WebKit/qt/declarative"

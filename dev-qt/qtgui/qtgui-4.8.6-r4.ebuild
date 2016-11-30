@@ -78,6 +78,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-4.8.5-CVE-2015-0295.patch" # bug 541972
 	"${FILESDIR}/${PN}-4.8.6-CVE-2015-1858.patch" # bug 546174 - also covers CVE-2015-1859
 	"${FILESDIR}/${PN}-4.8.6-CVE-2015-1860.patch" # bug 546174
+	"${FILESDIR}/../../qtcore/files/qt-4.8.6-4badb867b.patch"  #595618
 )
 
 QT4_TARGET_DIRECTORIES="

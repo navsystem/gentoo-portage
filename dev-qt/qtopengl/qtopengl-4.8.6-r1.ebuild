@@ -32,6 +32,10 @@ QT4_TARGET_DIRECTORIES="
 QCONFIG_ADD="opengl"
 QCONFIG_DEFINE="QT_OPENGL"
 
+PATCHES=(
+	"${FILESDIR}/../../qtcore/files/qt-4.8.6-4badb867b.patch"  #595618
+)
+
 multilib_src_configure() {
 	local myconf=(
 		-opengl

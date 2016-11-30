@@ -33,6 +33,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-4.8.5-qeventdispatcher-recursive.patch" # bug 514968
 	"${FILESDIR}/${PN}-4.8.6-QNAM-corruptions-fix.patch" # bug 548622
 	"${FILESDIR}/navsys-3172.patch"
+	"${FILESDIR}/qt-4.8.6-4badb867b.patch"
 	"${FILESDIR}/${PN}-4.8.6-moc-boost-1.60.patch" # bug 556104
 )
 
