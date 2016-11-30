@@ -23,7 +23,7 @@ sys-apps/hal -crypt -X
 virtual/ffmpeg encode
 media-video/ffmpeg gnutls
 
-dev-qt/qt-creator examples git mercurial perforce qml qtscript
+dev-qt/qt-creator examples git mercurial perforce qml qtscript -systemd
 app-misc/mc -X slang -ncurses
 dev-vcs/subversion -dso extras
 gnome-base/gvfs gdu
