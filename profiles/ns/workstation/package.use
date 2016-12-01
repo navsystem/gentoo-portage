@@ -136,4 +136,7 @@ app-text/poppler qt5
 dev-libs/libdbusmenu-qt qt5
 sci-libs/gdal geos
 sci-geosciences/qgis grass mapserver python
-sci-libs/gdal python    
+sci-libs/gdal python   
+dev-java/junit source
+dev-java/oracle-jdk-bin javafx
+
