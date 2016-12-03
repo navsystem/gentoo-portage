@@ -34,6 +34,10 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
+PATCHES=(
+	"${FILESDIR}/../../qtcore/files/qt-4.8.6-4badb867b.patch"  #595618
+)
+
 QT4_TARGET_DIRECTORIES="
 	src/sql
 	src/plugins/sqldrivers"
