@@ -76,7 +76,7 @@ virtual/postgresql kerberos server
 
 net-dns/avahi autoipd
 
-sci-libs/hdf5 -cxx -fortran
+sci-libs/hdf5 -cxx -fortran -hl
 dev-qt/qtsql mysql
 dev-qt/qtmultimedia widgets
 sys-apps/usb_modeswitch jimtcl
