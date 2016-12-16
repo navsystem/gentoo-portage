@@ -3,6 +3,7 @@ dev-db/pgadmin3
 kde-misc/yakuake
 #dev-vcs/kdesvn
 dev-qt/qt-creator
+dev-qt/qt-docs
 sys-apps/net-tools
 dev-db/postgresql
 x11-misc/x11vnc
