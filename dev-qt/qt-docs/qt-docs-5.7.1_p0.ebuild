@@ -21,6 +21,11 @@ DEPEND="app-arch/p7zip"
 
 S=${WORKDIR}/Docs/Qt-$(get_version_component_range 1-2)
 
+src_prepare() {
+	default_src_prepare
+	rm Makefile
+}
+
 src_install() {
 	# ${PV} instead of ${PF} is intentional
 	local dest=/usr/share/doc/qt-${PV%%_p*}
