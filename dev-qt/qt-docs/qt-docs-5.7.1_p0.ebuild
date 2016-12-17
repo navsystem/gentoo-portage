@@ -22,8 +22,13 @@ DEPEND="app-arch/p7zip"
 S=${WORKDIR}/Docs/Qt-$(get_version_component_range 1-2)
 
 src_prepare() {
-	default_src_prepare
-	rm Makefile
+	default
+
+	# bug 597026
+	rm -r global || die
+
+	# bug 602750
+	rm Makefile || die
 }
 
 src_install() {
@@ -32,8 +37,4 @@ src_install() {
 	insinto "${dest}"
 	doins -r *
 	docompress -x "${dest}"
-
-	# these files are not shipped in any other version of qt-docs and collide with qtcore
-	# bug 597026
-	rm -rf "${ED}${dest}"/global || die
 }
