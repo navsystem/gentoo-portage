@@ -1,7 +1,6 @@
-net-libs/libktorrent amd64 x86
-net-p2p/ktorrent amd64 x86
+#net-libs/libktorrent amd64 x86
+#net-p2p/ktorrent amd64 x86
 kde-misc/yakuake amd64 x86
-kde-apps/krdc amd64 x86
-=kde-apps/khelpcenter-5.5.5-r1 amd64 x86
+#kde-apps/krdc amd64 x86
 =x11-themes/qtcurve-9999-r0 amd64 x86
 
