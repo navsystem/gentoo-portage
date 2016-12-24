@@ -128,7 +128,7 @@ sys-libs/gpm static-libs
 net-misc/tigervnc server
 
 media-libs/mlt qt5 -qt4
-
+dev-qt/qtwebkit -exceptions
 media-libs/phonon-vlc qt5
 sys-auth/polkit-qt qt5
 media-libs/phonon qt5
@@ -139,4 +139,4 @@ sci-geosciences/qgis grass mapserver python
 sci-libs/gdal python   
 dev-java/junit source
 dev-java/oracle-jdk-bin javafx
-
+x11-libs/qscintilla  qt4
