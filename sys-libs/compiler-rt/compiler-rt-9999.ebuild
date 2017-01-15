@@ -24,9 +24,10 @@ KEYWORDS=""
 IUSE="test"
 
 RDEPEND="
-	!<sys-devel/llvm-4.0"
+	!<sys-devel/llvm-4"
+# llvm-4 needed for --cmakedir
 DEPEND="${RDEPEND}
-	~sys-devel/llvm-${PV}
+	>=sys-devel/llvm-4
 	test? ( ~sys-devel/clang-${PV} )
 	${PYTHON_DEPS}"
 
@@ -50,11 +51,10 @@ src_configure() {
 		fi
 	fi
 
-	local clang_version=4.0.0
+	local llvm_version=$(llvm-config --version) || die
+	local clang_version=$(get_version_component_range 1-3 "${llvm_version}")
 	local libdir=$(get_libdir)
 	local mycmakeargs=(
-		# used to find cmake modules
-		-DLLVM_LIBDIR_SUFFIX="${libdir#lib}"
 		-DCOMPILER_RT_INSTALL_PATH="${EPREFIX}/usr/lib/clang/${clang_version}"
 		# use a build dir structure consistent with install
 		# this makes it possible to easily deploy test-friendly clang
@@ -75,7 +75,8 @@ run_tests_for_abi() {
 
 src_test() {
 	# prepare a test compiler
-	local clang_version=4.0.0
+	local llvm_version=$(llvm-config --version) || die
+	local clang_version=$(get_version_component_range 1-3 "${llvm_version}")
 
 	# copy clang over since resource_dir is located relatively to binary
 	# therefore, we can put our new libraries in it

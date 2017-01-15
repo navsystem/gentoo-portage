@@ -23,8 +23,9 @@ KEYWORDS=""
 IUSE="test"
 
 RDEPEND="!<sys-devel/llvm-${PV}"
+# llvm-4 needed for --cmakedir
 DEPEND="${RDEPEND}
-	~sys-devel/llvm-${PV}
+	>=sys-devel/llvm-4
 	test? (
 		app-portage/unsandbox
 		$(python_gen_any_dep 'dev-python/lit[${PYTHON_USEDEP}]')
@@ -56,11 +57,10 @@ src_configure() {
 	# pre-set since we need to pass it to cmake
 	BUILD_DIR=${WORKDIR}/${P}_build
 
-	local clang_version=4.0.0
+	local llvm_version=$(llvm-config --version) || die
+	local clang_version=$(get_version_component_range 1-3 "${llvm_version}")
 	local libdir=$(get_libdir)
 	local mycmakeargs=(
-		# used to find cmake modules
-		-DLLVM_LIBDIR_SUFFIX="${libdir#lib}"
 		-DCOMPILER_RT_INSTALL_PATH="${EPREFIX}/usr/lib/clang/${clang_version}"
 		# use a build dir structure consistent with install
 		# this makes it possible to easily deploy test-friendly clang
