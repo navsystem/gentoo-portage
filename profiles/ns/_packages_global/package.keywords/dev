@@ -1,5 +1,5 @@
 <dev-db/postgis-9999 amd64 x86
-=dev-vcs/mercurial-server-1.2 amd64 x86
+~dev-vcs/mercurial-server-1.2 amd64 x86
 <sys-kernel/dracut-9999 amd64 x86
 =app-portage/getdelta-0.7.9-r2 amd64 x86
 =dev-vcs/hgview-1.9.0 amd64 x86
