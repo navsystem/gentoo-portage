@@ -140,3 +140,5 @@ sci-libs/gdal python
 dev-java/junit source
 dev-java/oracle-jdk-bin javafx
 x11-libs/qscintilla  qt4
+x11-libs/qwtpolar qt4 -qt5
+x11-libs/qwt designer
