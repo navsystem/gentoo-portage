@@ -39,4 +39,5 @@
 ~dev-qt/qtxmlpatterns-5.7.1 amd64
 ~dev-qt/qtlocation-5.7.1 amd64
 ~dev-qt/qtquickcontrols2-5.7.1 amd64
+~dev-qt/qtwebsockets-5.7.1 amd64
 
