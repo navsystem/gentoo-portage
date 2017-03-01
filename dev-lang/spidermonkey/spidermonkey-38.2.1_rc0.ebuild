@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 WANT_AUTOCONF="2.1"
@@ -41,7 +40,8 @@ src_prepare() {
 		"${FILESDIR}"/mozjs38-1269317.patch \
 		"${FILESDIR}"/mozjs38-fix-tracelogger.patch \
 		"${FILESDIR}"/mozjs38-copy-headers.patch \
-		"${FILESDIR}"/mozjs38-pkg-config-version.patch
+		"${FILESDIR}"/mozjs38-pkg-config-version.patch \
+		"${FILESDIR}"/mozilla_configure_regexp_esr38.patch
 
 	eapply_user
 
@@ -140,6 +140,6 @@ src_install() {
 	if ! use static-libs; then
 		# We can't actually disable building of static libraries
 		# They're used by the tests and in a few other places
-		find "${D}" -iname '*.a' -delete || die
+		find "${D}" -iname '*.a' -o -iname '*.ajs' -delete || die
 	fi
 }
