@@ -16,7 +16,7 @@ SRC_URI="
 
 LICENSE="GPL-2+ GPL-3+"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="examples georeferencer grass mapserver oracle postgres python webkit"
 
 REQUIRED_USE="
@@ -36,7 +36,7 @@ COMMON_DEPEND="
 	dev-qt/qtscript:4
 	dev-qt/qtsvg:4
 	dev-qt/qtsql:4
-	sci-libs/gdal:=[geos,oracle?,python?,${PYTHON_USEDEP}]
+	sci-libs/gdal:=[geos,python?,${PYTHON_USEDEP}]
 	sci-libs/geos
 	sci-libs/libspatialindex:=
 	sci-libs/proj
@@ -46,7 +46,10 @@ COMMON_DEPEND="
 	georeferencer? ( sci-libs/gsl:= )
 	grass? ( >=sci-geosciences/grass-7.0.0:= )
 	mapserver? ( dev-libs/fcgi )
-	oracle? ( dev-db/oracle-instantclient:= )
+	oracle? (
+		dev-db/oracle-instantclient:=
+		sci-libs/gdal:=[oracle]
+	)
 	postgres? ( dev-db/postgresql:= )
 	python? ( ${PYTHON_DEPS}
 		dev-python/future[${PYTHON_USEDEP}]
