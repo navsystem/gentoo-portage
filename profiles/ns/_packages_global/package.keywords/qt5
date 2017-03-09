@@ -41,3 +41,4 @@
 ~dev-qt/qtquickcontrols2-5.7.1 amd64
 ~dev-qt/qtwebsockets-5.7.1 amd64
 
+=media-video/guvcview-2.0.5 amd64
