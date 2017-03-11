@@ -1,3 +1,5 @@
 =x11-drivers/xf86-video-ati-7.8.0 amd64 x86
 =x11-libs/libdrm-2.4.74 amd64 x86
 =media-libs/mesa-13.0.2 amd64 x86
+~net-misc/tigervnc-1.7.1 amd64 x86
+
