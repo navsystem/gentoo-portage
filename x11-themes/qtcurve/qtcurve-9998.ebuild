@@ -14,7 +14,7 @@ inherit kde5 cmake-multilib
 DESCRIPTION="A set of widget styles for Qt and GTK2"
 HOMEPAGE="https://projects.kde.org/projects/playground/base/qtcurve"
 
-if [[ ${PV} == *9999* ]]; then
+if [[ ${PV} == *999* ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/eegorov/qtcurve.git"
 	EGIT_COMMIT=c1543d2f27e5ac6f6424537a53e3764233967e68
@@ -65,7 +65,7 @@ DEPEND="${RDEPEND}
 
 DOCS=( AUTHORS ChangeLog.md README.md TODO.md )
 
-[[ ${PV} == *9999* ]] || PATCHES=( "${DISTDIR}/${P}-old_config_file.patch" )
+[[ ${PV} == *999* ]] || PATCHES=( "${DISTDIR}/${P}-old_config_file.patch" )
 PATCHES+=(
 	"${FILESDIR}/qtcurve-remove-filedialog-hooks.patch"
 )
