@@ -28,7 +28,7 @@
 =sys-devel/qconf-2.0 amd64
 =net-misc/teamviewer-12.0.71510 amd64 x86
 =app-editors/sublime-text-3103 amd64 x86
-=dev-qt/qt-creator-4.1.0 amd64 x86
+=dev-qt/qt-creator-4.2.0 amd64 x86
 =sys-devel/gcc-5.4.0 amd64 x86
 ~sci-geosciences/qgis-2.18.3-r1 amd64 x86
 =sci-libs/gdal-2.0.3 amd64 x86

@@ -42,3 +42,5 @@
 ~dev-qt/qtwebsockets-5.7.1 amd64
 
 =media-video/guvcview-2.0.5 amd64
+=dev-libs/double-conversion-2.0.1 amd64
+
