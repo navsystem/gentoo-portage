@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-99999999.ebuild,v 1.9 2012/07/13 15:29:34 calchan Exp $
+# $Id$
 
 # rafaelmartins: Please try to keep the live ebuild synchronized with
 # the latest snapshot ebuild. e.g.:
 # cp kicad-YYYYMMDD_pXXXX.ebuild kicad-99999999.ebuild
 
-EAPI="3"
+EAPI=5
 
 WX_GTK_VER="2.8"
 
