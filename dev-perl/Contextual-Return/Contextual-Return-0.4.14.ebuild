@@ -4,7 +4,7 @@
 EAPI=6
 
 DIST_AUTHOR=DCONWAY
-DIST_VERSION=0.004011
+DIST_VERSION=0.004014
 inherit perl-module
 
 DESCRIPTION="Create context-sensitive return values"
