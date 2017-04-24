@@ -1,8 +1,7 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-9999.ebuild,v 1.12 2011/06/30 09:23:16 pva Exp $
 
-EAPI=5
+EAPI=6
 
 PLOCALES="be bg ca cs de en eo es et fa fi fr he hu it ja kk mk nl pl pt pt_BR ru sk sl sr@latin sv sw uk ur_PK vi zh_CN zh_TW"
 PLOCALE_BACKUP="en"
@@ -22,7 +21,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
 IUSE="aspell crypt dbus debug doc enchant extras +hunspell jingle iconsets +qt4 qt5 spell sql ssl xscreensaver
-+plugins whiteboarding webkit"
++plugins whiteboarding webengine webkit"
 
 REQUIRED_USE="
 	spell? ( ^^ ( aspell enchant hunspell ) )
@@ -30,15 +29,14 @@ REQUIRED_USE="
 	enchant? ( spell )
 	hunspell? ( spell )
 	iconsets? ( extras )
-	plugins? ( extras )
 	sql? ( extras )
-	webkit? ( extras )
+	webengine? ( webkit )
 	^^ ( qt4 qt5 )
 "
 
 RDEPEND="
 	net-dns/libidn
-	|| ( >=sys-libs/zlib-1.2.5.1-r2[minizip] <sys-libs/zlib-1.2.5.1-r1 )
+	sys-libs/zlib[minizip]
 	spell? (
 		enchant? ( >=app-text/enchant-1.3.0 )
 		hunspell? ( app-text/hunspell )
@@ -48,7 +46,7 @@ RDEPEND="
 	qt4? (
 		dev-qt/qtgui:4
 		dbus? ( dev-qt/qtdbus:4 )
-		|| ( <app-crypt/qca-2.1:2 >=app-crypt/qca-2.1:2[qt4] )
+		app-crypt/qca:2[qt4]
 		whiteboarding? ( dev-qt/qtsvg:4 )
 		webkit? ( dev-qt/qtwebkit:4 )
 		extras? (
@@ -65,9 +63,12 @@ RDEPEND="
 		dev-qt/qtmultimedia:5
 		dev-qt/qtx11extras:5
 		dbus? ( dev-qt/qtdbus:5 )
-		>=app-crypt/qca-2.1:2[qt5]
+		app-crypt/qca:2[qt5]
 		whiteboarding? ( dev-qt/qtsvg:5 )
-		webkit? ( dev-qt/qtwebkit:5 )
+		webkit? (
+			webengine? ( >=dev-qt/qtwebengine-5.7:5 )
+			!webengine? ( dev-qt/qtwebkit:5 )
+		)
 		extras? (
 			sql? ( dev-qt/qtsql:5 )
 		)
@@ -75,7 +76,7 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	extras? (
-		>=sys-devel/qconf-1.6_pre1
+		>=sys-devel/qconf-2.3
 	)
 	doc? ( app-doc/doxygen )
 	virtual/pkgconfig
@@ -139,6 +140,7 @@ src_unpack() {
 }
 
 src_prepare() {
+	default
 	if use extras; then
 		cp -a "${WORKDIR}/psi-plus/iconsets" "${S}" || die
 		if use iconsets; then
@@ -162,7 +164,6 @@ src_prepare() {
 
 		qconf || die "Failed to create ./configure."
 	fi
-	epatch_user
 }
 
 src_configure() {
@@ -179,18 +180,21 @@ src_configure() {
 	use qt4 && CONF+=(--qtdir="$(qt4_get_bindir)/..")
 	use qt5 && CONF+=(--qtdir="$(qt5_get_bindir)/..")
 
-
 	use dbus || CONF+=("--disable-qdbus")
 	use debug && CONF+=("--debug")
 
 	for s in aspell enchant hunspell; do
 		use $s || CONF+=("--disable-$s")
 	done
-	
+
 	use whiteboarding && CONF+=("--enable-whiteboarding")
 	use xscreensaver || CONF+=("--disable-xss")
 	use plugins || CONF+=("--disable-plugins")
-	use webkit && CONF+=("--enable-webkit")
+	if use webkit; then
+		CONF+=("--enable-webkit")
+		use webengine && CONF+=("--with-webkit=qtwebengine")
+		use webengine || CONF+=("--with-webkit=qwebkit")
+	fi
 
 	elog ./configure "${CONF[@]}"
 	./configure "${CONF[@]}"
@@ -221,16 +225,17 @@ src_install() {
 	use doc && dohtml -r doc/api
 
 	# install translations
+	local mylrelease="$(qt$(usex qt5 5 4)_get_bindir)"/lrelease
 	cd "${WORKDIR}/psi-l10n"
 	insinto /usr/share/${MY_PN}
 	install_locale() {
 		if use extras; then
-			lrelease "translations/${PN}_${1}.ts" || die "lrelease ${1} failed"
+			"${mylrelease}" "translations/${PN}_${1}.ts" || die "lrelease ${1} failed"
 			doins "translations/${PN}_${1}.qm"
 		else
 			# PLOCALES are set from Psi+. So we don't want to fail here if no locale
 			if [ -f "${x}/${PN}_${1}.ts" ]; then
-				lrelease "${x}/${PN}_${1}.ts" || die "lrelease ${1} failed"
+				"${mylrelease}" "${x}/${PN}_${1}.ts" || die "lrelease ${1} failed"
 				doins "${x}/${PN}_${1}.qm"
 			else
 				ewarn "Unfortunately locale \"${1}\" is supported for Psi+ only"

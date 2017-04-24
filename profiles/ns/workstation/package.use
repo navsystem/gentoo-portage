@@ -31,7 +31,7 @@ sys-block/parted device-mapper
 kde-apps/kopete oscar
 media-libs/libpng apng
 app-office/openoffice -bash-completion
-net-im/psi extras jingle plugins iconsets -aspell hunspell -qt4 qt5
+net-im/psi extras jingle plugins iconsets -aspell hunspell -qt4 qt5 -sql
 net-im/psimedia extras -qt4 qt5
 sys-devel/qconf -qt4 qt5
 
@@ -90,6 +90,7 @@ dev-libs/elfutils static-libs
 
 media-libs/mlt kdenlive
 
+net-im/qutim -hunspell
 x11-plugins/qutim-plugins -kde
 net-voip/linphone gtk video
 media-libs/mediastreamer video
