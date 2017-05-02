@@ -1,0 +1,16 @@
+diff -ur vhba-module-20140928_orig/vhba.c vhba-module-20140928/vhba.c
+--- vhba-module-20140928_orig/vhba.c    2014-09-29 02:19:13.000000000 +0700
++++ vhba-module-20140928/vhba.c 2017-05-02 17:47:59.038321477 +0600
+@@ -22,7 +22,12 @@
+ #include <linux/module.h>
+ #include <linux/highmem.h>
+ #include <linux/fs.h>
++#include <linux/version.h>
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(4,11,0)
++#include <linux/sched/signal.h>
++#else
+ #include <linux/sched.h>
++#endif
+ #include <linux/platform_device.h>
+ #include <linux/miscdevice.h>
+ #include <linux/poll.h>
