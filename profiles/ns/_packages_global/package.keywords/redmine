@@ -1,4 +1,4 @@
-=dev-ruby/rails-dom-testing-1.0.7 amd64
+=dev-ruby/rails-dom-testing-1.0.8 amd64
 =dev-ruby/activesupport-4.2.8 amd64
 =dev-ruby/thor-0.19.1 amd64
 =dev-ruby/loofah-2.0.3 amd64
@@ -28,7 +28,7 @@
 =dev-ruby/power_assert-0.3.1 amd64                                                                                                                                                                                  
 =dev-ruby/rbpdf-font-1.19.0-r1 amd64 
 =dev-ruby/uglifier-3.0.4 amd64
-=dev-ruby/roadie-3.1.1 amd64
+=dev-ruby/roadie-3.2.1-r1 amd64
 =www-apps/redmine-3.2.1 amd64
 =virtual/ruby-ffi-3 amd64
 =dev-ruby/rack-test-0.6.3 amd64
