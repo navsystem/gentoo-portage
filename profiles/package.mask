@@ -306,10 +306,6 @@ app-emulation/wine-any
 # Experimental version.
 >=net-wireless/gnuradio-3.7.11
 
-# Amadeusz Zolnowski <aidecoe@gentoo.org> (2 Apr 2017)
-# Masked, committed accidentally. It's not tested yet, possibly broken.
-=net-im/ejabberd-17.01
-
 # Yixun Lan <dlan@gentoo.org> (30 Mar 2017)
 # Masked, broken due to emoji support which requre npm package installed (bug #612218)
 =app-i18n/ibus-1.5.15
@@ -675,10 +671,6 @@ sys-fs/bedup
 =dev-lisp/asdf-3.1.6
 =dev-lisp/uiop-3.1.6
 
-# Justin Lecher <jlec@gentoo.org> (23 Oct 2015)
-# Breaking changes #563540
-=app-text/ghostscript-gpl-9.18
-
 # Mike Pagano <mpagano@gentoo.org> (2 Oct 2015)
 # A regression in kernel 4.1.9 could lead to a system
 # lockup.  This has been fixed in gentoo-sources-4.1.9-r1
@@ -702,6 +694,7 @@ sys-fs/bedup
 # Releases are not from original upstream but from a fork.
 # Masked as requested by vapier.
 ~net-misc/iputils-20160308
+~net-misc/iputils-20161105
 
 # Sebastian Pipping <sping@gentoo.org> (8 Aug 2015)
 # Upcoming, too young to go into testing unmasked
@@ -716,11 +709,6 @@ dev-libs/iniparser:4
 # Version bump is a WIP, see bug #524242
 # It works (except USE=vamp) but is not up to Gentoo standards yet
 >=media-sound/audacity-2.1.1
-
-# Patrick Lauer <patrick@gentoo.org> (14 Jun 2015)
-# Has race condition / failure modes that make systems unusable
-# See #551724 and duplicates
-=sys-fs/udev-init-scripts-29
 
 # Justin Lecher <jlec@gentoo.org> (28 Feb 2015)
 # Unfixed security problems
