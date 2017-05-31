@@ -10,7 +10,7 @@
 =dev-ruby/sprockets-rails-3.0.4 amd64
 =dev-ruby/activejob-4.2.8 amd64
 =dev-ruby/pg-0.18.4 amd64
-=dev-ruby/coffee-rails-4.1.1-r1 amd64
+=dev-ruby/coffee-rails-4.1.1-r2 amd64
 =dev-ruby/rbpdf-1.19.0 amd64
 =dev-ruby/jquery-rails-3.1.4 amd64
 =dev-ruby/actionpack-4.2.8 amd64

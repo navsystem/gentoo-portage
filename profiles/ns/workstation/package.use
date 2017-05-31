@@ -1,6 +1,6 @@
 app-admin/testdisk ntfs reiserfs
 media-gfx/splashutils fbcondecor
-net-fs/samba quota gnutls client
+net-fs/samba quota gnutls client addc -system-mitkrb5
 
 
 sys-fs/aufs2 inotify kernel-patch
@@ -34,6 +34,8 @@ app-office/openoffice -bash-completion
 net-im/psi extras jingle plugins iconsets -aspell hunspell -qt4 qt5 -sql
 net-im/psimedia extras -qt4 qt5
 sys-devel/qconf -qt4 qt5
+
+app-admin/sudo -gcrypt
 
 dev-libs/ecore curl
 dev-libs/e_dbus connman ofono
