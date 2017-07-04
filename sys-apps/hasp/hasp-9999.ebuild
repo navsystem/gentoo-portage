@@ -1,10 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
 
-EAPI=4
+EAPI=6
 
-inherit eutils git-2 linux-info linux-mod systemd
+inherit eutils git-r3 linux-info linux-mod systemd
 
 DESCRIPTION="Hardware Against Software Piracy for access to parallel and usb keys"
 HOMEPAGE="http://www.etersoft.ru"

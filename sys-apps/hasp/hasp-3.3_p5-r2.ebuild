@@ -1,14 +1,13 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
 
-EAPI=4
+EAPI=6
 
 inherit eutils rpm linux-info linux-mod systemd
 
 DESCRIPTION="Hardware Against Software Piracy for access to parallel and usb keys"
 HOMEPAGE="http://www.etersoft.ru"
-SRC_URI="http://updates.etersoft.ru/pub/Etersoft/HASP/3.3/sources/Gentoo/2009/haspd-3.3-eter5gentoo.src.rpm"
+SRC_URI="http://ftp.etersoft.ru/pub/Etersoft/HASP/3.3/sources/Gentoo/2009/haspd-3.3-eter5gentoo.src.rpm"
 
 LICENSE="Etersoft"
 SLOT="0"
@@ -34,13 +33,7 @@ pkg_setup() {
 		CONFIG_CHECK="PARPORT PARPORT_PC"
 
 		linux-mod_pkg_setup
-		if kernel_is 3 ; then
-			BUILD_PARAMS="KERNSRC=${KERNEL_DIR}" BUILD_TARGETS="kernel26" || die
-		elif kernel_is 2 6 ; then
-			BUILD_PARAMS="KERNSRC=${KERNEL_DIR}" BUILD_TARGETS="kernel26" || die
-		elif kernel_is 2 4 ; then
-			BUILD_PARAMS="KERNSRC=${KERNEL_DIR}" BUILD_TARGETS="kernel24" || die
-		fi
+		BUILD_PARAMS="KERNSRC=${KERNEL_DIR}" BUILD_TARGETS="kernel3"
 	fi
 }
 
@@ -51,6 +44,9 @@ src_unpack() {
 
 src_prepare() {
 	epatch "${FILESDIR}/remove-udev-rule-for-old-kernels.patch"
+	epatch "${FILESDIR}/linux-3.15.patch"
+	epatch "${FILESDIR}/linux-4.11.patch"
+	epatch "${FILESDIR}/linux-4.12.patch"
 }
 
 src_compile() {
