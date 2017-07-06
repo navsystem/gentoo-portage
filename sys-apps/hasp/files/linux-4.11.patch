@@ -1,49 +1,15 @@
 diff -ur haspd-3.3_orig/aksparlnx/aksparpub.c haspd-3.3/aksparlnx/aksparpub.c
---- a/aksparlnx/aksparpub.c	2013-02-21 04:17:58.000000000 +0700
-+++ b/aksparlnx/aksparpub.c	2017-05-02 17:26:16.319700198 +0600
-@@ -52,7 +52,12 @@
+--- haspd-3.3_orig/aksparlnx/aksparpub.c	2017-05-02 17:38:15.981915299 +0600
++++ haspd-3.3/aksparlnx/aksparpub.c	2017-05-02 17:39:17.821045083 +0600
+@@ -52,7 +52,11 @@
  #include <linux/slab.h>
  #include <linux/kernel.h>
  #include <linux/major.h>
 +#if LINUX_VERSION_CODE >= KERNEL_VERSION(4,11,0)
 +#include <linux/sched/signal.h>
-+#include <linux/wait.h>
 +#else
  #include <linux/sched.h>
 +#endif
  #include <linux/vmalloc.h>
  #include <linux/delay.h>
  #if defined(__x86_64__) && LINUX_VERSION_CODE < 0x2060E
-@@ -1030,13 +1030,32 @@ static void hl_wakeup(struct _porttabentry *port)
- static int hl_parport_claim_or_block(struct _porttabentry *port, signed long *timeout)
- {
-     int r;
-+#if LINUX_VERSION_CODE > KERNEL_VERSION(3,15,0)
-+    DEFINE_WAIT(wait);
-+#endif
- 
-     r = parport_claim(port->pdev);
-     if (r == -EAGAIN) {
-         if (*timeout)
-+        {
-+#if LINUX_VERSION_CODE > KERNEL_VERSION(3,15,0)
-+            prepare_to_wait(&port->wait_q, &wait, TASK_INTERRUPTIBLE);
-+            *timeout = schedule_timeout(*timeout);
-+            finish_wait(&port->wait_q, &wait);
-+#else
-             *timeout = interruptible_sleep_on_timeout(&port->wait_q, *timeout);
-+#endif
-+        }
-         else
-+        {
-+#if LINUX_VERSION_CODE > KERNEL_VERSION(3,15,0)
-+            prepare_to_wait(&port->wait_q, &wait, TASK_UNINTERRUPTIBLE);
-+            schedule();
-+            finish_wait(&port->wait_q, &wait);
-+#else
-             interruptible_sleep_on(&port->wait_q);
-+#endif
-+        }
-         return 0;
-     }
-     return r;
