@@ -25,6 +25,10 @@ QT5_TARGET_SUBDIRS=(
 	src/tools/qdbuscpp2xml
 )
 
+PATCHES=(
+	"${FILESDIR}"/KDEBUG_363753_p{1,2}.patch
+)
+
 QT5_GENTOO_CONFIG=(
 	:dbus
 	:dbus-linked:
