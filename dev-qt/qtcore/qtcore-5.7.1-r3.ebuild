@@ -28,6 +28,7 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-5.6.2-plugins.patch
 	"${FILESDIR}"/${P}-qipm.patch
 	"${FILESDIR}"/${P}-qsfpm-{1,2}.patch
+	"${FILESDIR}"/KDEBUG_363753_p{1,2}.patch
 )
 
 QT5_TARGET_SUBDIRS=(
