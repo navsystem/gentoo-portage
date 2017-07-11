@@ -1,12 +1,11 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 inherit multibuild postgres
 EXPORT_FUNCTIONS pkg_setup src_prepare src_compile src_install src_test
 
 
-# @ECLASS: postgres-multi
+# @ECLASS: postgres-multi.eclass
 # @MAINTAINER:
 # PostgreSQL <pgsql-bugs@gentoo.org>
 # @AUTHOR: Aaron W. Swenson <titanofold@gentoo.org>
@@ -40,7 +39,7 @@ fi
 # POSTGRES_COMPAT.
 export _POSTGRES_INTERSECT_SLOTS=( )
 
-# @FUNCTION _postgres-multi_multibuild_wrapper
+# @FUNCTION: _postgres-multi_multibuild_wrapper
 # @INTERNAL
 # @USAGE: _postgres-multi_multibuild_wrapper <command> [<arg> ...]
 # @DESCRIPTION:
@@ -99,7 +98,6 @@ postgres-multi_forbest() {
 }
 
 # @FUNCTION: postgres-multi_pkg_setup
-# @REQUIRED
 # @USAGE: postgres-multi_pkg_setup
 # @DESCRIPTION:
 # Initialize internal environment variable(s). This is required if
@@ -120,7 +118,6 @@ postgres-multi_pkg_setup() {
 }
 
 # @FUNCTION: postgres-multi_src_prepare
-# @REQUIRED
 # @USAGE: postgres-multi_src_prepare
 # @DESCRIPTION:
 # Calls eapply_user then copies ${S} into a build directory for each
