@@ -19,7 +19,8 @@
 		<flag name='plugins'>Enable plugins support</flag>
 		<flag name="powersave">Disable some non critical timers for much less CPU usage</flag>
 		<flag name='sql'>Enable psi-new-history extras patch</flag>
-		<flag name='webkit'>Enable chatlog rendering using webkit</flag>
+		<flag name='webengine'>Use <pkg>dev-qt/qtwebengine</pkg> instead of <pkg>dev-qt/qtwebkit</pkg></flag>
+		<flag name='webkit'>Enable themed, html-based chatlogs</flag>
 		<flag name='whiteboarding'>Enable experimental interactive SVG drawing</flag>
 		<flag name="xscreensaver">Use X screensaver protocol extension to monitor idle/active status based on mouse/keyboard events</flag>
 	</use>
