@@ -11,7 +11,8 @@
 =dev-ruby/activejob-4.2.8 amd64
 =dev-ruby/pg-0.18.4 amd64
 =dev-ruby/coffee-rails-4.1.1-r2 amd64
-=dev-ruby/rbpdf-1.19.0 amd64
+=dev-ruby/rbpdf-1.19.2 amd64
+=dev-ruby/mimemagic-0.3.2 amd64
 =dev-ruby/jquery-rails-3.1.4 amd64
 =dev-ruby/actionpack-4.2.8 amd64
 =dev-ruby/railties-4.2.8 amd64
@@ -29,7 +30,7 @@
 =dev-ruby/rbpdf-font-1.19.0-r1 amd64 
 =dev-ruby/uglifier-3.0.4 amd64
 =dev-ruby/roadie-3.2.1-r1 amd64
-=www-apps/redmine-3.2.1 amd64
+=www-apps/redmine-3.4.0 amd64
 =virtual/ruby-ffi-3 amd64
 =dev-ruby/rack-test-0.6.3 amd64
 =dev-ruby/rack-openid-1.4.2 amd64
