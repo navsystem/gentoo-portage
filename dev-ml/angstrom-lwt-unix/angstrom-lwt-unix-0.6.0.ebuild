@@ -5,23 +5,33 @@ EAPI=6
 
 inherit findlib
 
-DESCRIPTION="Convert OCaml parsetrees between different major versions"
-HOMEPAGE="https://github.com/let-def/ocaml-migrate-parsetree"
-SRC_URI="https://github.com/let-def/ocaml-migrate-parsetree/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+DESCRIPTION="Parser combinators built for speed and memory efficiency"
+HOMEPAGE="https://github.com/inhabitedtype/angstrom"
+SRC_URI="https://github.com/inhabitedtype/angstrom/archive/${PV}.tar.gz -> angstrom-${PV}.tar.gz"
 
-LICENSE="LGPL-2.1"
+LICENSE="BSD"
 SLOT="0/${PV}"
 KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND="
+RDEPEND="
 	dev-lang/ocaml:=
-	dev-ml/result:=
+	dev-ml/angstrom:=
+	dev-ml/lwt:=
 "
-RDEPEND="${DEPEND}"
-DEPEND="${DEPEND}
+DEPEND="${RDEPEND}
 	dev-ml/jbuilder
 	dev-ml/opam"
+
+S="${WORKDIR}/angstrom-${PV}"
+
+src_compile() {
+	jbuilder build -p ${PN} || die
+}
+
+src_test() {
+	jbuilder runtest -p ${PN}
+}
 
 src_install() {
 	opam-installer -i \
