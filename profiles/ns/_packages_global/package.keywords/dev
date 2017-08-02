@@ -19,6 +19,7 @@
 =sys-block/megarc-1.11-r2 amd64 x86
 =dev-python/simple-date-0.4.8 amd64 x86
 =net-im/jitsi-bin-2.5 amd64 x86
+=net-im/psi-1.2 amd64 x86
 =net-im/psimedia-9999 amd64 x86
 =net-misc/teamviewer-12.0.76279 amd64 x86
 =app-editors/sublime-text-3103 amd64 x86

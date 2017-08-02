@@ -31,7 +31,7 @@ sys-block/parted device-mapper
 kde-apps/kopete oscar
 media-libs/libpng apng
 app-office/openoffice -bash-completion
-net-im/psi extras jingle plugins iconsets -aspell hunspell -qt4 qt5 -sql webengine
+net-im/psi extras jingle plugins iconsets -aspell hunspell -qt4 qt5 -sql webengine -webkit
 net-im/psimedia extras -qt4 qt5
 sys-devel/qconf -qt4 qt5
 
