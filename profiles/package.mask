@@ -29,6 +29,18 @@
 
 #--- END OF EXAMPLES ---
 
+# Lars Wendler <polynomial-c@gentoo.org> (06 Aug 2017)
+# Masked for security reasons:
+# https://bugs.gentoo.org/600214
+<app-emulation/virtualbox-5.0.40
+<app-emulation/virtualbox-additions-5.0.40
+<app-emulation/virtualbox-bin-5.0.40
+<app-emulation/virtualbox-extpack-oracle-5.0.40
+<app-emulation/virtualbox-guest-additions-5.0.40
+<app-emulation/virtualbox-modules-5.0.40
+<x11-drivers/xf86-video-virtualbox-5.0.40
+
+
 # Bernard Cafarelli <voyageur@gentoo.org> (04 Aug 2017)
 # Temporary mask as current net-ftp/filezilla does not compile
 # with it, bug #626292
@@ -57,15 +69,6 @@ sys-boot/plymouth
 sys-boot/plymouth-openrc-plugin
 
 # Michał Górny <mgorny@gentoo.org> (04 Aug 2017)
-# sys-apps/yum is severely outdated (last bump 2013), unmaintained
-# since 2010. It has vulnerabilities. Removal in 30 days. Bug #499328.
-#
-# app-arch/createrepo is the last unmasked dependency. Since it is not
-# useful at all without yum, it is being removed as well. Bug #620992.
-app-arch/createrepo
-sys-apps/yum
-
-# Michał Górny <mgorny@gentoo.org> (04 Aug 2017)
 # Unmaintained since mid-2016, requires an active maintainer. Has
 # multiple build failure bugs. Removal in 30 days. Bug #580516.
 sys-kernel/openvz-sources
@@ -91,11 +94,6 @@ dev-libs/DFB++
 # Pacho Ramos <pacho@gentoo.org> (26 Jul 2017)
 # Upstream dead, vulnerable (#569980), removal in a month.
 dev-scheme/stalin
-
-# Pacho Ramos <pacho@gentoo.org> (26 Jul 2017)
-# Orphan, severely outdated and vulnerable to security issues (#585940).
-# Removal in a month.
-sys-apps/pacman
 
 # Pacho Ramos <pacho@gentoo.org> (26 Jul 2017)
 # One of the last consumers of old udisks:0, upstream dead for ages
