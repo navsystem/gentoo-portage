@@ -3,7 +3,7 @@
 
 EAPI=6
 
-SRC_URI="https://dev.gentoo.org/~aidecoe/distfiles/sys-boot/plymouth/gentoo-logo.png"
+SRC_URI="https://dev.gentoo.org/~aidecoe/distfiles/${CATEGORY}/${PN}/gentoo-logo.png"
 
 if [[ ${PV} == 9999 ]]; then
 	EGIT_REPO_URI="https://anongit.freedesktop.org/git/plymouth"
@@ -47,6 +47,7 @@ DOC_CONTENTS="
 "
 
 PATCHES=(
+	"${FILESDIR}"/0.9.3-glibc-sysmacros.patch
 )
 
 src_configure() {
