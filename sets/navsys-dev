@@ -17,12 +17,11 @@ kde-apps/krdc
 app-editors/vim
 dev-util/valgrind
 net-dialup/minicom
-kde-apps/kde-l10n
-#kde-apps/okular
+kde-apps/okular
 app-arch/p7zip
 kde-apps/kcalc
 dev-vcs/hgview
-#kde-apps/ksnapshot
+kde-apps/spectacle
 net-libs/gsoap
 net-print/foomatic-db
 net-print/foomatic-db-ppds
