@@ -424,18 +424,6 @@ gnome-extra/sushi office
 # remove mask if/when dev-lang/ghc is keywoded for arm
 dev-util/dbus-test-runner test
 
-# Alexandre Rostovtsev <tetromino@gentoo.org> (27 Dec 2012)
-# remove mask when app-text/yelp-tools is keyworded here
->=gnome-extra/zenity-3.6 test
-
-# Alexandre Rostovtsev <tetromino@gentoo.org> (27 Dec 2012)
-# remove mask when >=app-editors/gedit-3.6 is keyworded here
-dev-util/devhelp gedit
-
-# Alexandre Rostovtsev <tetromino@gentoo.org> (27 Dec 2012)
-# remove mask when app-crypt/libsecret is keyworded here
->=gnome-base/gvfs-1.14 gnome-keyring
-
 # Markus Meier <maekke@gentoo.org> (25 Dez 2012)
 # unkeyworded deps for app-accessibility/speech-dispatcher
 app-accessibility/speech-dispatcher flite
@@ -459,11 +447,6 @@ net-analyzer/wireshark doc-pdf
 # Markus Meier <maekke@gentoo.org> (25 Jul 2012)
 # no stable media-video/vlc yet, bug #401313
 media-libs/phonon vlc
-
-# Alexandre Rostovtsev <tetromino@gentoo.org> (12 Apr 2012)
-# Temporary mask-in-base, unmask-in-arch for dev-python/mako keywording for
-# gobject-introspection[doctool], bug #411761
-dev-libs/gobject-introspection -doctool
 
 # Michael Sterrett <mr_bones_@gentoo.org> (04 Mar 2012)
 # arm is missing keywords for >=dev-libs/json-glib-0.12
