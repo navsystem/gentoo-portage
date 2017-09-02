@@ -1,10 +1,11 @@
---- a/usr/share/applications/viber.desktop	2015-06-17 21:16:53.433614372 +0000
-+++ b/usr/share/applications/viber.desktop	2015-06-17 21:27:17.390588132 +0000
-@@ -6,5 +6,5 @@
+diff -ur usr_/share/applications/viber.desktop usr/share/applications/viber.desktop
+--- usr_/share/applications/viber.desktop	2017-01-16 20:49:12.000000000 +0600
++++ usr/share/applications/viber.desktop	2017-09-02 22:37:08.847251936 +0600
+@@ -5,5 +5,6 @@
+ Icon=/usr/share/pixmaps/viber.png
  Terminal=false
  Type=Application
- Encoding=UTF-8
--Categories=Network;Application;
--Path=
+-Categories=Network;InstantMessaging;P2P;
 +Categories=Network;InstantMessaging;Telephony;
 +Path=/opt/viber
+ MimeType=x-scheme-handler/viber;
