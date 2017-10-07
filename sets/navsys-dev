@@ -1,7 +1,6 @@
 @argo5-depends
 dev-db/pgadmin3
 kde-misc/yakuake
-#dev-vcs/kdesvn
 dev-qt/qt-creator
 dev-qt/qt-docs
 sys-apps/net-tools
@@ -20,7 +19,6 @@ net-dialup/minicom
 kde-apps/okular
 app-arch/p7zip
 kde-apps/kcalc
-dev-vcs/hgview
 kde-apps/spectacle
 net-libs/gsoap
 net-print/foomatic-db
