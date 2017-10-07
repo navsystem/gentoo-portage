@@ -82,13 +82,20 @@ src_configure() {
 		# built-ins installed by sys-libs/compiler-rt
 		-DCOMPILER_RT_BUILD_BUILTINS=OFF
 		-DCOMPILER_RT_BUILD_LIBFUZZER=ON
+		-DCOMPILER_RT_BUILD_PROFILE=ON
 		-DCOMPILER_RT_BUILD_SANITIZERS=ON
 		-DCOMPILER_RT_BUILD_XRAY=ON
 	)
 	if use test; then
+		cat > "${T}"/unsandbox-lit.py <<-EOF || die
+			import os, sys
+			os.execlp("unsandbox", sys.argv[0], "lit", *sys.argv[1:])
+		EOF
+
 		mycmakeargs+=(
 			-DLLVM_MAIN_SRC_DIR="${WORKDIR}/llvm"
-			-DLIT_COMMAND="${EPREFIX}/usr/bin/unsandbox;${EPREFIX}/usr/bin/lit"
+			-DLLVM_EXTERNAL_LIT="${T}/unsandbox-lit.py"
+			-DLLVM_LIT_ARGS="-vv"
 
 			# they are created during src_test()
 			-DCOMPILER_RT_TEST_COMPILER="${BUILD_DIR}/lib/llvm/${LLVM_SLOT}/bin/clang"
