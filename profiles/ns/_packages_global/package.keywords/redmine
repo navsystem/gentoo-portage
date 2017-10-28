@@ -51,7 +51,7 @@
 =dev-ruby/request_store-1.0.5 amd64
 =dev-ruby/actionmailer-4.2.8 amd64
 =dev-ruby/listen-1.3.1-r3 amd64
-=dev-ruby/tzinfo-1.2.2 amd64
+=dev-ruby/tzinfo-1.2.4 amd64
 =dev-ruby/actionpack-action_caching-1.2.0 amd64
 =dev-ruby/activerecord-4.2.8 amd64
 =dev-ruby/i18n-0.7.0-r2 amd64
