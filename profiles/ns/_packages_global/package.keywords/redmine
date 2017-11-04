@@ -44,7 +44,7 @@
 =dev-ruby/ffi-1.9.10-r1 amd64
 =dev-ruby/sprockets-3.7.0 amd64
 =dev-ruby/rb-inotify-0.9.7 amd64
-=dev-ruby/mail-2.6.4 amd64
+=dev-ruby/mail-2.6.6 amd64
 =dev-ruby/addressable-2.4.0 amd64
 =dev-ruby/builder-3.0.4-r2 amd64
 =dev-ruby/bundler-1.12.4 amd64
