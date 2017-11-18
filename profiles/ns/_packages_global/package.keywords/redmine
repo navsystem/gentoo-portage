@@ -24,7 +24,7 @@
 =dev-ruby/actionview-4.2.8 amd64
 ~dev-ruby/rails-deprecated_sanitizer-1.0.3 amd64
 =dev-ruby/css_parser-1.4.10 amd64
-=dev-ruby/arel-6.0.3 amd64
+=dev-ruby/arel-6.0.4 amd64
 =dev-ruby/test-unit-3.2.3 amd64
 =dev-ruby/power_assert-0.3.1 amd64                                                                                                                                                                                  
 =dev-ruby/rbpdf-font-1.19.0-r1 amd64 
