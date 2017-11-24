@@ -147,3 +147,4 @@ x11-libs/qwtpolar qt4 -qt5
 x11-libs/qwt designer
 mail-client/thunderbird gtk2
 dev-libs/xmlsec nss
+sci-mathematics/octave gui
