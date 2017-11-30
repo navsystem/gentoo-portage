@@ -18,7 +18,7 @@ IUSE="+data"
 DEPEND="app-arch/p7zip
 	media-gfx/icoutils"
 
-RDEPEND=">=app-emulation/wine-1.5
+RDEPEND="virtual/wine
 	data? ( app-misc/2gis-data )"
 
 S="${WORKDIR}"
