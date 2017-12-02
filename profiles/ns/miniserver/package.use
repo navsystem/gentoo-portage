@@ -3,7 +3,7 @@ dev-qt/designer -phonon
 media-libs/phonon qt4
 media-libs/phonon-gstreamer qt4
 
-www-servers/uwsgi cgi python python_asyncio python_gevent
+www-servers/uwsgi cgi python python_gevent
 
 dev-vcs/git python_targets_python2_7
 dev-libs/gobject-introspection python_targets_python2_7
