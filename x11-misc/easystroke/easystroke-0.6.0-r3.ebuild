@@ -1,8 +1,8 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
-inherit eutils toolchain-funcs
+EAPI=6
+inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="a gesture-recognition application for X11"
 HOMEPAGE="https://sourceforge.net/apps/trac/easystroke/"
@@ -29,13 +29,18 @@ DEPEND="
 	dev-util/intltool
 	sys-devel/gettext
 "
+PATCHES=(
+	"${FILESDIR}"/${P}-cellrendertextish.patch
+	"${FILESDIR}"/${P}-desktop.patch
+	"${FILESDIR}"/${P}-gentoo.patch
+	"${FILESDIR}"/${P}-reinstate-signal-handlers.patch
+	"${FILESDIR}"/${P}-buttons-scroll-send.patch
+	"${FILESDIR}"/${P}-cxx11.patch
+	"${FILESDIR}"/${P}-abs.patch
+)
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-cellrendertextish.patch
-	epatch "${FILESDIR}"/${P}-desktop.patch
-	epatch "${FILESDIR}"/${P}-gentoo.patch
-	epatch "${FILESDIR}"/${P}-reinstate-signal-handlers.patch
-	epatch "${FILESDIR}"/${P}-buttons-scroll-send.patch
+	default
 
 	tc-export CC CXX PKG_CONFIG
 
@@ -51,6 +56,7 @@ src_prepare() {
 }
 
 src_compile() {
+	append-cxxflags -std=c++11
 	emake \
 		AOFLAGS='' \
 		LDFLAGS="${LDFLAGS}" \
