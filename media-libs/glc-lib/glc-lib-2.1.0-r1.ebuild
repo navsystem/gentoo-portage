@@ -1,8 +1,8 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=6
 
 inherit qmake-utils multibuild multilib
 
@@ -28,12 +28,17 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/glc_lib"
 
+PATCHES=(
+	"${FILESDIR}/${P}-install_path.patch"
+	"${FILESDIR}/${PN}-depend_on_libGLU.patch"
+	"${FILESDIR}/${PN}-fix_inline_shared_functions.patch"
+	"${FILESDIR}/${P}-qt5.patch"
+	"${FILESDIR}/${P}-qt-multilib.patch"
+)
+
 src_prepare() {
-	epatch	"${FILESDIR}/${P}-install_path.patch" \
-		"${FILESDIR}/${PN}-depend_on_libGLU.patch" \
-		"${FILESDIR}/${PN}-fix_inline_shared_functions.patch" \
-		"${FILESDIR}/${P}-qt5.patch" \
-		"${FILESDIR}/${P}-qt-multilib.patch"
+	default
+	sed -i "GLC_lib.pro" -e "/LIB_DIR/s/lib/$(get_libdir)/" || die
 
 	MULTIBUILD_VARIANTS=( )
 	use qt4 &&  MULTIBUILD_VARIANTS+=( qt4 )
@@ -52,7 +57,7 @@ src_configure() {
 			;;
 		esac
 	}
-	multibuild_parallel_foreach_variant run_in_build_dir configuration
+	multibuild_foreach_variant run_in_build_dir configuration
 }
 
 src_compile() {
