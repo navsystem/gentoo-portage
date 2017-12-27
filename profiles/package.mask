@@ -29,6 +29,39 @@
 
 #--- END OF EXAMPLES ---
 
+# Alice Ferrazzi <alicef@gentoo.org> (27 Dec 2017)
+# Masked for removal in 30 days.
+# There are issue on this kernel version due to a heavy changeset.
+# (bug #642268)
+=sys-kernel/gentoo-sources-4.14.9
+
+# Andreas K. Hüttel <dilfridge@gentoo.org> (27 Dec 2017)
+# Ancient. EAPI=3. (Nearly) no consumers. Needs to go.
+# Removal in 30 days.
+dev-lang/swig:1
+
+# Andreas K. Hüttel <dilfridge@gentoo.org> (27 Dec 2017)
+# Last remaining consumer of dev-lang/swig:1, which needs
+# to go the way of the dinosaur. Removal in 30 days.
+dev-python/apse
+
+# Matthias Maier <tamiko@gentoo.org> (26 Dec 2017)
+# gcc depends on mpfr and this version changes soname. Spare users with
+# FEATURES=-preserve-libs from completely frying their system.
+>=dev-libs/mpfr-4.0.0
+
+# Andreas K. Hüttel <dilfridge@gentoo.org> (25 Dec 2017)
+# Provided (and blocked) by app-text/texlive-core
+# Removal in 30 days; bug 628820
+app-text/dvibook
+app-text/dvipdfm
+app-text/dvipdfmx
+app-text/xdvipdfmx
+
+# Andreas Sturmlechner <asturm@gentoo.org> (25 Dec 2017)
+# Masked for testing
+=dev-db/tora-3.2
+
 # Thomas Beierlein <tomjbe@gentoo.org> (23 Dec 2017)
 # To adapt to changed version naming by upstream 
 # (pcb-yyyymmdd to pcb-x.y.z) we move the ebuild to
@@ -508,15 +541,6 @@ sci-geosciences/gmapcatcher
 dev-java/icedtea-bin:7
 virtual/jdk:1.7
 virtual/jre:1.7
-
-# Andreas K. Hüttel <dilfridge@gentoo.org> (04 Nov 2017)
-# Many, many, many open bugs. Blocks gcc-6 stabilization.
-# Removal of the old versions in 30 days; please upgrade to
-# Audacious 3.9 (may require manual keywording since not
-# marked stable anymore).
-<media-sound/audacious-3.9
-<media-plugins/audacious-plugins-3.9
-<x11-themes/audacious-themes-0.0.4-r1
 
 # Marc Schiffbauer <mschiff@gentoo.org> (01 Nov 2017)
 # Upstream abandoned obnam as of the end of the year
