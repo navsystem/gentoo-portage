@@ -33,3 +33,4 @@
 <www-client/chromium-63 x86
 =dev-libs/libxml2-2.9.5 x86
 =media-gfx/scour-0.36 amd64 x86
+=sci-geosciences/qgis-2.18.14 amd64

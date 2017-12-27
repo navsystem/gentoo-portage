@@ -144,7 +144,7 @@ dev-java/junit source
 dev-java/oracle-jdk-bin javafx
 x11-libs/qscintilla  qt5
 x11-libs/qwtpolar qt4 -qt5
-x11-libs/qwt designer
+x11-libs/qwt designer qt4
 mail-client/thunderbird gtk2
 dev-libs/xmlsec nss
 sci-mathematics/octave gui
