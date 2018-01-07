@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -11,12 +11,12 @@ SRC_URI="mirror://xfce/src/panel-plugins/${PN}/${PV%.*}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86"
 IUSE="upower"
 
 RDEPEND=">=dev-libs/glib-2.20:=
 	dev-libs/libxml2:=
-	>=net-libs/libsoup-2.32:=
+	>=net-libs/libsoup-2.32:=[ssl]
 	>=x11-libs/gtk+-2.14:2=
 	>=xfce-base/libxfce4ui-4.10:=
 	>=xfce-base/libxfce4util-4.10:=

@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -18,7 +18,7 @@ EGIT_REPO_URI="https://git.llvm.org/git/compiler-rt.git
 
 LICENSE="|| ( UoI-NCSA MIT )"
 # Note: this needs to be updated to match version of clang-9999
-SLOT="6.0.0"
+SLOT="7.0.0"
 KEYWORDS=""
 IUSE="test"
 RESTRICT="!test? ( test )"
@@ -108,6 +108,13 @@ src_configure() {
 		CC=${EPREFIX}/usr/lib/llvm/${LLVM_SLOT}/bin/clang \
 		CXX=${EPREFIX}/usr/lib/llvm/${LLVM_SLOT}/bin/clang++ \
 		strip-unsupported-flags
+	fi
+
+	if use prefix && [[ "${CHOST}" == *-darwin* ]] ; then
+		mycmakeargs+=(
+			# disable use of SDK for the system itself
+			-DDARWIN_macosx_CACHED_SYSROOT=/
+		)
 	fi
 
 	cmake-utils_src_configure

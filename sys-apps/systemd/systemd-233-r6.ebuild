@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -112,7 +112,7 @@ pkg_pretend() {
 			~INOTIFY_USER ~IPV6 ~NET ~NET_NS ~PROC_FS ~SIGNALFD ~SYSFS
 			~TIMERFD ~TMPFS_XATTR ~UNIX
 			~CRYPTO_HMAC ~CRYPTO_SHA256 ~CRYPTO_USER_API_HASH
-			~!FW_LOADER_USER_HELPER ~!GRKERNSEC_PROC ~!IDE ~!SYSFS_DEPRECATED
+			~!FW_LOADER_USER_HELPER_FALLBACK ~!GRKERNSEC_PROC ~!IDE ~!SYSFS_DEPRECATED
 			~!SYSFS_DEPRECATED_V2"
 
 		use acl && CONFIG_CHECK+=" ~TMPFS_POSIX_ACL"
@@ -158,9 +158,9 @@ src_prepare() {
 
 	if ! use vanilla; then
 		PATCHES+=(
-			"${FILESDIR}/218-Dont-enable-audit-by-default.patch"
-			"${FILESDIR}/228-noclean-tmp.patch"
-			"${FILESDIR}/233-systemd-user-pam.patch"
+			"${FILESDIR}/gentoo-Dont-enable-audit-by-default.patch"
+			"${FILESDIR}/gentoo-noclean-tmp.patch"
+			"${FILESDIR}/gentoo-systemd-user-pam.patch"
 		)
 	fi
 

@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -108,7 +108,7 @@ pkg_pretend() {
 			~INOTIFY_USER ~IPV6 ~NET ~NET_NS ~PROC_FS ~SIGNALFD ~SYSFS
 			~TIMERFD ~TMPFS_XATTR ~UNIX
 			~CRYPTO_HMAC ~CRYPTO_SHA256 ~CRYPTO_USER_API_HASH
-			~!FW_LOADER_USER_HELPER ~!GRKERNSEC_PROC ~!IDE ~!SYSFS_DEPRECATED
+			~!FW_LOADER_USER_HELPER_FALLBACK ~!GRKERNSEC_PROC ~!IDE ~!SYSFS_DEPRECATED
 			~!SYSFS_DEPRECATED_V2"
 
 		use acl && CONFIG_CHECK+=" ~TMPFS_POSIX_ACL"
@@ -151,11 +151,10 @@ src_prepare() {
 
 	if ! use vanilla; then
 		PATCHES+=(
-			"${FILESDIR}/218-Dont-enable-audit-by-default.patch"
-			"${FILESDIR}/228-noclean-tmp.patch"
-			"${FILESDIR}/233-systemd-user-pam.patch"
-			"${FILESDIR}/236-uucp-group.patch"
-			"${FILESDIR}/generator-path.patch"
+			"${FILESDIR}/gentoo-Dont-enable-audit-by-default.patch"
+			"${FILESDIR}/gentoo-systemd-user-pam.patch"
+			"${FILESDIR}/gentoo-uucp-group-r1.patch"
+			"${FILESDIR}/gentoo-generator-path.patch"
 		)
 	fi
 
@@ -204,6 +203,8 @@ multilib_src_configure() {
 		-Drootprefix="$(usex usrmerge "${EPREFIX}/usr" "${EPREFIX:-/}")"
 		-Dsysvinit-path=
 		-Dsysvrcnd-path=
+		# Avoid infinite exec recursion, bug 642724
+		-Dtelinit-path="${EPREFIX}/lib/sysvinit/telinit"
 		# no deps
 		-Defi=$(meson_multilib)
 		-Dima=true
@@ -392,6 +393,7 @@ pkg_postinst() {
 
 	enewgroup input
 	enewgroup kvm 78
+	enewgroup render
 	enewgroup systemd-journal
 	newusergroup systemd-bus-proxy
 	newusergroup systemd-coredump
