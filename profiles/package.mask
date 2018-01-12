@@ -29,6 +29,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (12 Jan 2018)
+# Dead upstream, EAPI 2, depends on dead Qt4. kde-apps/filelight
+# is a possible alternative. Masked for removal in 30 days.
+sys-apps/qdiskusage
+
 # Kent Fredric <kentnl@gentoo.org> (10 Jan 2018)
 # Dead upstream, Broken since 2009.
 # Bug #644146. Removal in 30 days
@@ -294,9 +299,10 @@ dev-vcs/monotone
 app-misc/tasque
 
 # Pacho Ramos <pacho@gentoo.org> (28 Dec 2017)
+# Sebastian Pipping <sping@gentoo.org> (12 Jan 2018)
 # Needs a major version bump and relies on lots of dead libs (#624160).
 # Removal in a month.
-x11-terms/terminator
+<x11-terms/terminator-1.91
 
 # Pacho Ramos <pacho@gentoo.org> (28 Dec 2017)
 # Requires dead gnome2 python bindings (#629180) and old gstreamer, also all
@@ -768,12 +774,6 @@ sys-kernel/hardened-sources
 # Open security bugs, no upstream, bug 628432
 # Alternatives: app-arch/libarchive, app-arch/unar
 app-arch/unrar-gpl
-
-# Michał Górny <mgorny@gentoo.org> (20 Aug 2017)
-# Pre-release of a new incompatible version that breaks the only reverse
-# dependency in Gentoo. Masked until 2.0.0 proper is released, or
-# dev-cpp/libjson-rpc-cpp is fixed, whichever happens first.
->=dev-cpp/catch-2
 
 # Sébastien Fabbro <bicatali@gentoo.org> (19 Aug 2017)
 # ipython-6 is python-3 only and causes circular dependencies
