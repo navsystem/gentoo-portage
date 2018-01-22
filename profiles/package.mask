@@ -29,6 +29,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Eray Aslan <eras@gentoo.org> (22 Jan 2018)
+# Vulnerable - see https://bugs.gentoo.org/630684
+# Please migrate to cyrus-imapd-3.0 releases
+=net-mail/cyrus-imapd-2.5*
+
 # Andreas Sturmlechner <asturm@gentoo.org> (20 Jan 2018)
 # Outdated and broken for a long time, blocking cleanups.
 # Depends on deprecated LINGUAS/Qt4/kde4-functions.eclass.
@@ -41,10 +46,6 @@ net-p2p/primecoind
 # Outdated and broken for a long time, holding up several cleanups.
 # Masked for removal in 30 days. Bug #513564
 sci-physics/geant-python
-
-# Jeroen Roovers <jer@gentoo.org> (19 Jan 2018)
-# Breaks net-libs/nodejs (bug #645018)
-=dev-libs/libuv-1.19.0
 
 # Patrice Clement <monsieurp@gentoo.org> (18 Jan 2018)
 # mpv-0.28.0 requires changes currently only available in ffmpeg-9999.
@@ -669,12 +670,6 @@ net-nds/portmap
 # Dead upstream.
 # Removal in 30 days.
 mail-client/drac
-
-# Thomas Beierlein <tomjbe@gentoo.org> (22 Dec 2017)
-# Development moved to another naming scheme.
-# Use media-radio/tucnak instead.
-# Masked for removal in 30 days.
-media-radio/tucnak2
 
 # Alice Ferrazzi <alicef@gentoo.org> (22 Dec 2017)
 # Masked for removal in 30 days.
