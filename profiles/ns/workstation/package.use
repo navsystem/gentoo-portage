@@ -151,3 +151,5 @@ sci-mathematics/octave gui
 sys-fs/cryptsetup -gcrypt
 net-misc/iputils -gcrypt
 sys-apps/dbus user-session
+net-wireless/bluez user-session
+
