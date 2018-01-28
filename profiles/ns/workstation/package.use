@@ -150,3 +150,4 @@ dev-libs/xmlsec nss
 sci-mathematics/octave gui
 sys-fs/cryptsetup -gcrypt
 net-misc/iputils -gcrypt
+sys-apps/dbus user-session
