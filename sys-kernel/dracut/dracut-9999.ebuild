@@ -1,34 +1,40 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
-EAPI=5
+EAPI=6
 
-inherit bash-completion-r1 eutils linux-info multilib systemd git-r3
+inherit bash-completion-r1 eutils linux-info toolchain-funcs systemd
+
+if [[ ${PV} == 9999 ]] ; then
+	inherit git-r3
+	EGIT_REPO_URI="https://github.com/dracutdevs/dracut"
+else
+	[[ "${PV}" = *_rc* ]] || \
+	KEYWORDS="~alpha amd64 ~arm ia64 ~mips ~ppc ~ppc64 sparc x86"
+	SRC_URI="mirror://kernel/linux/utils/boot/${PN}/${P}.tar.xz"
+fi
 
 DESCRIPTION="Generic initramfs generation tool"
 HOMEPAGE="https://dracut.wiki.kernel.org"
-#SRC_URI="mirror://kernel/linux/utils/boot/${PN}/${P}.tar.xz"
-EGIT_REPO_URI="git://github.com/haraldh/${PN}.git"
+
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="debug selinux systemd"
+IUSE="debug selinux"
 
 RESTRICT="test"
 
 CDEPEND="virtual/udev
-	systemd? ( >=sys-apps/systemd-199 )
+	virtual/pkgconfig
+	>=sys-apps/kmod-15[tools]
 	"
 RDEPEND="${CDEPEND}
 	app-arch/cpio
-	>=app-shells/bash-4.0
-	>sys-apps/kmod-5[tools]
+	>=app-shells/bash-4.0:0
 	|| (
 		>=sys-apps/sysvinit-2.87-r3
 		sys-apps/systemd[sysv-utils]
-		sys-apps/systemd-sysv-utils
 	)
+	sys-apps/coreutils[xattr(-)]
 	>=sys-apps/util-linux-2.21
 
 	debug? ( dev-util/strace )
@@ -37,146 +43,60 @@ RDEPEND="${CDEPEND}
 		sys-libs/libsepol
 		sec-policy/selinux-dracut
 	)
+	!net-analyzer/arping
 	"
 DEPEND="${CDEPEND}
 	app-text/asciidoc
 	>=dev-libs/libxslt-1.1.26
 	app-text/docbook-xml-dtd:4.5
 	>=app-text/docbook-xsl-stylesheets-1.75.2
-	virtual/pkgconfig
 	"
 
 DOCS=( AUTHORS HACKING NEWS README README.generic README.kernel README.modules
 	README.testsuite TODO )
-MY_LIBDIR=/usr/lib
-QA_MULTILIB_PATHS="
-	usr/lib/dracut/dracut-install
-	usr/lib/dracut/skipcpio
-	"
 
-#
-# Helper functions
-#
+QA_MULTILIB_PATHS="usr/lib/dracut/.*"
 
-# Removes module from modules.d.
-# $1 = module name
-# Module name can be specified without number prefix.
-rm_module() {
-	local force m
-	[[ $1 = -f ]] && force=-f
-
-	for m in $@; do
-		if [[ $m =~ ^[0-9][0-9][^\ ]*$ ]]; then
-			rm ${force} --interactive=never -r "${modules_dir}"/$m
-		else
-			rm ${force} --interactive=never -r "${modules_dir}"/[0-9][0-9]$m
-		fi
-	done
-}
-
-src_prepare() {
-	local libdirs="/$(get_libdir) /usr/$(get_libdir)"
-	if [[ ${SYMLINK_LIB} = yes ]]; then
-		# Preserve lib -> lib64 symlinks in initramfs
-		[[ $libdirs =~ /lib\  ]] || libdirs+=" /lib /usr/lib"
-	fi
-	einfo "Setting libdirs to \"${libdirs}\" ..."
-	sed -e "3alibdirs=\"${libdirs}\"" \
-		-i "${S}/dracut.conf.d/gentoo.conf.example" || die
-
-	local udevdir="$("$(tc-getPKG_CONFIG)" udev --variable=udevdir)"
-	einfo "Setting udevdir to ${udevdir}..."
-	sed -r -e "s|^(udevdir=).*$|\1${udevdir}|" \
-			-i "${S}/dracut.conf.d/gentoo.conf.example" || die
-
-	if use systemd; then
-		local systemdutildir="$(systemd_get_utildir)"
-		local systemdsystemunitdir="$(systemd_get_unitdir)"
-		local systemdsystemconfdir="$("$(tc-getPKG_CONFIG)" systemd \
-			--variable=systemdsystemconfdir)"
-		[[ ${systemdsystemconfdir} ]] \
-			|| systemdsystemconfdir=/etc/systemd/system
-		einfo "Setting systemdutildir to ${systemdutildir} and ..."
-		sed -e "5asystemdutildir=\"${systemdutildir}\"" \
-			-i "${S}/dracut.conf.d/gentoo.conf.example" || die
-		einfo "Setting systemdsystemunitdir to ${systemdsystemunitdir} and..."
-		sed -e "6asystemdsystemunitdir=\"${systemdsystemunitdir}\"" \
-			-i "${S}/dracut.conf.d/gentoo.conf.example" || die
-		einfo "Setting systemdsystemconfdir to ${systemdsystemconfdir}..."
-		sed -e "7asystemdsystemconfdir=\"${systemdsystemconfdir}\"" \
-			-i "${S}/dracut.conf.d/gentoo.conf.example" || die
-	else
-		local systemdutildir="/lib/systemd"
-		einfo "Setting systemdutildir for standalone udev to" \
-			"${systemdutildir}..."
-		sed -e "5asystemdutildir=\"${systemdutildir}\"" \
-			-i "${S}/dracut.conf.d/gentoo.conf.example" || die
-	fi
-
-	epatch_user
-}
+PATCHES=(
+	"${FILESDIR}/045-systemdutildir.patch"
+)
 
 src_configure() {
-	local myconf="--libdir=${MY_LIBDIR}"
-	myconf+=" --bashcompletiondir=$(get_bashcompdir)"
+	local myconf=(
+		--prefix="${EPREFIX}/usr"
+		--sysconfdir="${EPREFIX}/etc"
+		--bashcompletiondir="$(get_bashcompdir)"
+		--systemdsystemunitdir="$(systemd_get_systemunitdir)"
+	)
 
-	if use systemd; then
-		myconf+=" --systemdsystemunitdir='$(systemd_get_unitdir)'"
-	fi
+	tc-export CC PKG_CONFIG
 
-	econf ${myconf}
-}
-
-src_compile() {
-	tc-export CC
-	emake doc install/dracut-install skipcpio/skipcpio
+	echo ./configure "${myconf[@]}"
+	./configure "${myconf[@]}" || die
 }
 
 src_install() {
 	default
 
-	local my_libdir="${MY_LIBDIR}"
-	local dracutlibdir="${my_libdir#/}/dracut"
+	local dracutlibdir="usr/lib/dracut"
 
-	echo "DRACUT_VERSION=$PVR" > "${D%/}/${dracutlibdir}/dracut-version.sh"
+	local libdirs="/$(get_libdir) /usr/$(get_libdir)"
+	if [[ ${SYMLINK_LIB} = yes ]]; then
+		# Preserve lib -> lib64 symlinks in initramfs
+		[[ $libdirs =~ /lib\  ]] || libdirs+=" /lib /usr/lib"
+	fi
 
-	insinto "${dracutlibdir}/dracut.conf.d/"
-	newins dracut.conf.d/gentoo.conf.example gentoo.conf
+	einfo "Setting libdirs to \"${libdirs}\" ..."
+	echo "libdirs=\"${libdirs}\"" > "${T}/gentoo.conf"
+	insinto "${dracutlibdir}/dracut.conf.d"
+	doins "${T}/gentoo.conf"
 
 	insinto /etc/logrotate.d
 	newins dracut.logrotate dracut
 
 	dodir /var/lib/dracut/overlay
 
-	dohtml dracut.html
-
-	if ! use systemd; then
-		# Scripts in kernel/install.d are systemd-specific
-		rm -r "${D%/}/${my_libdir}/kernel" || die
-	fi
-
-	#
-	# Modules
-	#
-	local module
-	modules_dir="${D%/}/${dracutlibdir}/modules.d"
-
-	use debug || rm_module 95debug
-	use selinux || rm_module 98selinux
-
-	if use systemd; then
-		# With systemd following modules do not make sense
-		rm_module 96securityfs 97masterkey 98integrity
-	else
-		rm_module 00systemd 98dracut-systemd
-		# Without systemd following modules do not make sense
-		rm_module 00systemd-bootchart 01systemd-initrd 02systemd-networkd
-	fi
-
-	# Remove modules which won't work for sure
-	rm_module 95fcoe # no tools
-	# fips module depends on masked app-crypt/hmaccalc
-	rm_module 01fips 02fips-aesni
+	dodoc dracut.html
 }
 
 pkg_postinst() {
@@ -221,7 +141,7 @@ pkg_postinst() {
 	elog "dependencies may be installed:"
 	elog ""
 	optfeature "Networking support"  net-misc/curl "net-misc/dhcp[client]" \
-		sys-apps/iproute2
+		sys-apps/iproute2 "net-misc/iputils[arping]"
 	optfeature \
 		"Measure performance of the boot process for later visualisation" \
 		app-benchmarks/bootchart2 app-admin/killproc sys-process/acct
