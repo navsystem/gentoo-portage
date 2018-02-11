@@ -29,7 +29,7 @@
 =dev-ruby/power_assert-0.3.1 amd64                                                                                                                                                                                  
 =dev-ruby/rbpdf-font-1.19.1 amd64 
 =dev-ruby/uglifier-3.2.0 amd64
-=dev-ruby/roadie-3.2.1-r1 amd64
+=dev-ruby/roadie-3.2.2 amd64
 ~www-apps/redmine-3.4.4 amd64
 =virtual/ruby-ffi-3 amd64
 =dev-ruby/rack-test-0.6.3 amd64
@@ -55,4 +55,4 @@
 =dev-ruby/actionpack-action_caching-1.2.0 amd64
 =dev-ruby/activerecord-4.2.10 amd64
 =dev-ruby/i18n-0.7.0-r2 amd64
-=dev-ruby/ruby-net-ldap-0.16.0 amd64
+=dev-ruby/ruby-net-ldap-0.16.1 amd64
