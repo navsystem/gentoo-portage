@@ -3,10 +3,10 @@
 
 EAPI=6
 
-PYTHON_COMPAT=( python3_{4,5,6} )
+PYTHON_COMPAT=( python2_7 python3_{4,5,6} )
 PYTHON_REQ_USE='threads(+)'
 
-inherit flag-o-matic python-any-r1 waf-utils systemd user
+inherit flag-o-matic python-r1 waf-utils systemd user
 
 if [[ ${PV} == *9999* ]]; then
 	inherit git-r3
@@ -32,14 +32,14 @@ IUSE_NTPSEC_REFCLOCK=${NTPSEC_REFCLOCK[@]/#/rclock_}
 
 LICENSE="HPND MIT BSD-2 BSD CC-BY-SA-4.0"
 SLOT="0"
-IUSE="${IUSE_NTPSEC_REFCLOCK} debug doc early gdb heat libressl nist ntpviz samba seccomp smear tests" #ionice
+IUSE="${IUSE_NTPSEC_REFCLOCK} doc early gdb heat libressl nist ntpviz samba seccomp smear tests" #ionice
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 # net-misc/pps-tools oncore,pps
 CDEPEND="${PYTHON_DEPS}
 	${BDEPEND}
 	sys-libs/libcap
-	dev-python/psutil
+	dev-python/psutil[${PYTHON_USEDEP}]
 	libressl? ( dev-libs/libressl:0= )
 	!libressl? ( dev-libs/openssl:0= )
 	seccomp? ( sys-libs/libseccomp )
@@ -58,9 +58,13 @@ DEPEND="${CDEPEND}
 "
 
 pkg_setup() {
-	python-any-r1_pkg_setup
 	enewgroup ntp 123
 	enewuser ntp 123 -1 /dev/null ntp
+}
+
+src_prepare() {
+	default
+	python_copy_sources
 }
 
 src_configure() {
@@ -80,37 +84,58 @@ src_configure() {
 	# Remove autostripping of binaries
 	sed -i -e '/Strip binaries/d' wscript
 
-	waf-utils_src_configure --nopyc --nopyo --refclock="${CLOCKSTRING}" \
-		$(use	doc			&& echo "--enable-doc") \
-		$(use	early		&& echo "--enable-early-droproot") \
-		$(use	gdb			&& echo "--enable-debug-gdb") \
-		$(use	nist		&& echo "--enable-lockclock") \
-		$(use	samba		&& echo "--enable-mssntp") \
-		$(use	seccomp		&& echo "--enable-seccomp") \
-		$(use	smear		&& echo "--enable-leap-smear") \
-		$(use	tests		&& echo "--alltests") \
-		$(use_enable debug debug)
+	local myconf=(
+		--nopyc
+		--nopyo
+		--refclock="${CLOCKSTRING}"
+		$(use doc	&& echo "--enable-doc")
+		$(use early	&& echo "--enable-early-droproot")
+		$(use gdb	&& echo "--enable-debug-gdb")
+		$(use nist	&& echo "--enable-lockclock")
+		$(use samba	&& echo "--enable-mssntp")
+		$(use seccomp	&& echo "--enable-seccomp")
+		$(use smear	&& echo "--enable-leap-smear")
+		$(use tests	&& echo "--alltests"))
+
+	python_configure() {
+		waf-utils_src_configure "${myconf[@]}"
+	}
+	python_foreach_impl run_in_build_dir python_configure
+}
+
+src_compile() {
+	python_compile() {
+		waf-utils_src_compile
+	}
+	python_foreach_impl run_in_build_dir python_compile
 }
 
 src_install() {
-	waf-utils_src_install
+	python_install() {
+		waf-utils_src_install
+	}
+	python_foreach_impl run_in_build_dir python_install
 
 	# Install heat generating scripts
-	use heat && dosbin "${S}/contrib/ntpheat"{,usb}
+	use heat && dosbin "${S}"/contrib/ntpheat{,usb}
 
 	# Install the openrc files
-	newinitd "${FILESDIR}/ntpd.rc-r1" "ntp"
-	newconfd "${FILESDIR}/ntpd.confd" "ntp"
+	newinitd "${FILESDIR}"/ntpd.rc-r2 ntp
+	newconfd "${FILESDIR}"/ntpd.confd ntp
 
 	# Install the systemd unit file
-	systemd_newunit "${FILESDIR}/ntpd.service" ntpd.service
+	systemd_newunit "${FILESDIR}"/ntpd.service ntpd.service
+
+	# Prepare a directory for the ntp.drift file
+	mkdir -pv "${ED}"/var/lib/ntp
+	chown ntp:ntp "${ED}"/var/lib/ntp
+	chmod 770 "${ED}"/var/lib/ntp
 
 	# Install a log rotate script
-	mkdir -pv "${ED}/etc/"logrotate.d
-	cp -v "${S}/etc/logrotate-config.ntpd" "${ED}/etc/logrotate.d/ntpd"
+	mkdir -pv "${ED}"/etc/logrotate.d
+	cp -v "${S}"/etc/logrotate-config.ntpd "${ED}"/etc/logrotate.d/ntpd
 
-	# Install the configuration files
-	cp -Rv "${S}/etc/ntp.d/" "${ED}/etc/"
-	mv -v "${ED}/etc/ntp.d/default.conf" "${ED}/etc/ntp.conf"
-	sed "s|includefile |includefile ntp.d/|" -i "${ED}/etc/ntp.conf"
+	# Install the configuration file and sample configuration
+	cp -v "${FILESDIR}"/ntp.conf "${ED}"/etc/ntp.conf
+	cp -Rv "${S}"/etc/ntp.d/ "${ED}"/etc/
 }
