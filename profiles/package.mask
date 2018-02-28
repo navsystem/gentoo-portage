@@ -29,6 +29,16 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (28 Feb 2018)
+# Dead upstream, depends on dead Qt4.
+# Masked for removal in 30 days.
+dev-tex/qtexengine
+
+# Andreas Sturmlechner <asturm@gentoo.org> (27 Feb 2018)
+# Depends on deprecated Qt4, no Qt5 work found. No maintainer.
+# Masked for removal in 30 days. Bug #644534
+app-text/searchmonkey
+
 # Andreas Sturmlechner <asturm@gentoo.org> (27 Feb 2018)
 # Depends on deprecated Qt4. No maintainer, needs someone to bump to Qt5.
 # Masked for removal in 30 days. Bug #602042
@@ -163,12 +173,6 @@ app-crypt/monkeysign
 # Dead upstream. Masked for removal in 30 days.
 media-sound/lastfmplayer
 
-# Lars Wendler <polynomial-c@gentoo.org> (08 Feb 2018)
-# 4.4.0 server does not properly write lease changes to the lease file
-# in some cases:
-# https://lists.isc.org/pipermail/dhcp-users/2018-February/021164.html
-=net-misc/dhcp-4.4.0
-
 # Eray Aslan <eras@gentoo.org> (08 Feb 2018)
 # Mask experimental software
 =mail-mta/postfix-3.4*
@@ -220,17 +224,6 @@ media-sound/qpitch
 # Patrice Clement <monsieurp@gentoo.org> (26 Jan 2018)
 # Has different symbols. Known to cause issues with i3bar/swaybar.
 media-fonts/fontawesome:0/5
-
-# Michael Palimaka <kensington@gentoo.org> (25 Jan 2018)
-# Requires dead Qt 4. Dead upstream.
-# Masked for removal in 30 days. Bug #644532.
-media-video/qx11grab
-
-# Andreas Sturmlechner <asturm@gentoo.org> (22 Jan 2018)
-# Depends on deprecated Qt4, upstream is slowly doing a qml port.
-# Masked for removal in 60 days. Revisit bug #645504 before deciding
-# eventual removal.
-games-strategy/hedgewars
 
 # Eray Aslan <eras@gentoo.org> (22 Jan 2018)
 # Vulnerable - see https://bugs.gentoo.org/630684
@@ -404,11 +397,6 @@ app-admin/procinfo
 # Upstream dead, fails to build, nothing requires it (#641750). Removal in a
 # month.
 net-misc/bti
-
-# Pacho Ramos <pacho@gentoo.org> (04 Jan 2018)
-# Forces old versions of some dependencies, no reverse deps (#643152).
-# Removal in a month.
-dev-util/conan
 
 # Alice Ferrazzi <alicef@gentoo.org> (30 Dec 2017)
 # Masked for removal in 30 days.
