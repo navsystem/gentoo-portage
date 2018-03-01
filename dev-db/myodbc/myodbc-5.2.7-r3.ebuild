@@ -69,6 +69,7 @@ multilib_src_configure() {
 		-DWITH_DOCUMENTATION_INSTALL_PATH=/usr/share/doc/${PF}
 		-DMYSQL_LIB_DIR="${ROOT}/usr/$(get_libdir)"
 		-DLIB_SUBDIR="$(get_libdir)"
+		-DNO_THREADS=ON
 	)
 	cmake-utils_src_configure
 }
