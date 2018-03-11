@@ -1,6 +1,5 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 
@@ -9,8 +8,9 @@ inherit bash-completion-r1
 libbtrfs_soname=0
 
 if [[ ${PV} != 9999 ]]; then
-	MY_PV=v${PV}
-	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+	MY_PV="v${PV/_/-}"
+	[[ "${PV}" = *_rc* ]] || \
+	KEYWORDS="~amd64 ~arm ~arm64 ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 	SRC_URI="https://www.kernel.org/pub/linux/kernel/people/kdave/${PN}/${PN}-${MY_PV}.tar.xz"
 	S="${WORKDIR}"/${PN}-${MY_PV}
 else
@@ -25,7 +25,7 @@ HOMEPAGE="https://btrfs.wiki.kernel.org"
 
 LICENSE="GPL-2"
 SLOT="0/${libbtrfs_soname}"
-IUSE="+convert static static-libs"
+IUSE="+convert reiserfs static static-libs +zstd"
 
 RESTRICT=test # tries to mount repared filesystems
 
@@ -36,7 +36,11 @@ RDEPEND="
 	convert? (
 		sys-fs/e2fsprogs:0=
 		sys-libs/e2fsprogs-libs:0=
+		reiserfs? (
+			>=sys-fs/reiserfsprogs-3.6.27
+		)
 	)
+	zstd? ( app-arch/zstd:0= )
 "
 DEPEND="${RDEPEND}
 	convert? ( sys-apps/acl )
@@ -50,7 +54,11 @@ DEPEND="${RDEPEND}
 		convert? (
 			sys-fs/e2fsprogs:0[static-libs(+)]
 			sys-libs/e2fsprogs-libs:0[static-libs(+)]
+			reiserfs? (
+				>=sys-fs/reiserfsprogs-3.6.27[static-libs(+)]
+			)
 		)
+		zstd? ( app-arch/zstd:0[static-libs(+)] )
 	)
 "
 
@@ -61,7 +69,7 @@ fi
 src_prepare() {
 	default
 	if [[ ${PV} == 9999 ]]; then
-		eautoreconf
+		AT_M4DIR=m4 eautoreconf
 		mkdir config || die
 		local automakedir="$(autotools_run_tool --at-output automake --print-libdir)"
 		[[ -e ${automakedir} ]] || die "Could not locate automake directory"
@@ -76,6 +84,8 @@ src_configure() {
 		--bindir="${EPREFIX}"/sbin
 		$(use_enable convert)
 		$(use_enable elibc_glibc backtrace)
+		$(use_enable zstd)
+		--with-convert=ext2$(usex reiserfs ',reiserfs' '')
 	)
 	econf "${myeconfargs[@]}"
 }
