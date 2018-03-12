@@ -7,7 +7,7 @@
 =dev-ruby/sass-rails-5.0.7 amd64
 =dev-ruby/nokogiri-1.6.7.2 amd64
 =dev-ruby/actionpack-xml_parser-1.0.2 amd64
-~dev-ruby/sprockets-rails-3.2.0 amd64
+~dev-ruby/sprockets-rails-3.2.1 amd64
 =dev-ruby/activejob-4.2.10 amd64
 =dev-ruby/pg-0.18.4 amd64
 =dev-ruby/coffee-rails-4.1.1-r2 amd64
