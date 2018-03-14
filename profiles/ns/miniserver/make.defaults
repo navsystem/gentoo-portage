@@ -13,6 +13,6 @@ tracepath traceroute
 usb
 "
 
-PORTAGE_BINHOST="ftp://binhost:binhost@trac/amd64-miniserver"
+PORTAGE_BINHOST="http://binhost.rnic55.ru/amd64-miniserver/"
 PKGDIR="/var/tmp/packages"
 EMERGE_DEFAULT_OPTS="-j2 -g"
