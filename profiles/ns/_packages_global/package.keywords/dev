@@ -33,6 +33,8 @@
 <www-client/chromium-63 x86
 =dev-libs/libxml2-2.9.5 x86
 =media-gfx/scour-0.36 amd64 x86
-=sci-geosciences/qgis-2.18.14 amd64
+=sci-geosciences/qgis-3.0.1 amd64
+=dev-python/owslib-0.16.0 amd64
+=dev-python/pyproj-1.9.5.1 amd64
 =sys-devel/gcc-7.3.0 amd64
 =net-im/psi-1.3-r1 amd64
