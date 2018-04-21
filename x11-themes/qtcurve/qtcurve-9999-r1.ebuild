@@ -1,81 +1,85 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 
-KDE_REQUIRED="optional"
-inherit kde4-base
 KDE_AUTODEPS=false
-KDE_DEBUG=false
-KDE_HANDBOOK=false # needed for kde5.eclass, but misinterpreted by kde4-base.eclass
-inherit kde5 cmake-multilib
+inherit kde5 cmake-multilib git-r3
 
-DESCRIPTION="A set of widget styles for Qt and GTK2"
-HOMEPAGE="https://projects.kde.org/projects/playground/base/qtcurve"
+DESCRIPTION="Widget styles for Qt and GTK2"
+HOMEPAGE="https://cgit.kde.org/qtcurve.git"
 
-if [[ ${PV} == *9999* ]]; then
-	inherit git-r3
-	EGIT_REPO_URI="https://github.com/eegorov/qtcurve.git"
-	KEYWORDS=""
-else
-	SRC_URI="https://github.com/QtCurve/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz
-		https://github.com/QtCurve/${PN}/commit/69047935dd4a9549d238cbc457e9c3cfa37386ae.patch -> ${P}-old_config_file.patch"
-	KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
-fi
+EGIT_REPO_URI="https://github.com/eegorov/qtcurve.git"
+KEYWORDS=""
 
-LICENSE="GPL-2"
+LICENSE="LGPL-2+"
 SLOT="0"
-IUSE="+X gtk kde kf5 nls +qt4 qt5 windeco"
-REQUIRED_USE="gtk? ( X )
-	kde? ( qt4 X )
-	kf5? ( qt5 )
-	windeco? ( kde )
-	|| ( gtk qt4 qt5 )"
+IUSE="+X gtk plasma nls +qt4 qt5 test"
 
-RDEPEND="X? ( x11-libs/libxcb[${MULTILIB_USEDEP}]
-		x11-libs/libX11[${MULTILIB_USEDEP}]
-		x11-libs/xcb-util-image[${MULTILIB_USEDEP}] )
+REQUIRED_USE="gtk? ( X )
+	|| ( gtk qt4 qt5 )
+	plasma? ( qt5 )
+"
+COMMON_DEPEND="
 	gtk? ( x11-libs/gtk+:2[${MULTILIB_USEDEP}] )
-	qt4? ( dev-qt/qtdbus:4[${MULTILIB_USEDEP}]
+	qt4? (
+		dev-qt/qtcore:4[${MULTILIB_USEDEP}]
+		dev-qt/qtdbus:4[${MULTILIB_USEDEP}]
 		dev-qt/qtgui:4[${MULTILIB_USEDEP}]
-		dev-qt/qtsvg:4[${MULTILIB_USEDEP}] )
-	qt5? ( dev-qt/qtdeclarative:5
-		dev-qt/qtgui:5
-		dev-qt/qtsvg:5
-		dev-qt/qtwidgets:5
-		X? ( dev-qt/qtdbus:5
-			dev-qt/qtx11extras:5 ) )
-	kde? ( $(add_kdebase_dep systemsettings)
-		windeco? ( $(add_kdebase_dep kwin) ) )
-	kf5? ( $(add_frameworks_dep extra-cmake-modules)
+		dev-qt/qtsvg:4[${MULTILIB_USEDEP}]
+	)
+	qt5? (
+		$(add_qt_dep qtdbus)
+		$(add_qt_dep qtgui)
+		$(add_qt_dep qtsvg)
+		$(add_qt_dep qtwidgets)
+		$(add_qt_dep qtx11extras)
+	)
+	plasma? (
+		$(add_frameworks_dep frameworkintegration)
 		$(add_frameworks_dep karchive)
+		$(add_frameworks_dep kcompletion)
 		$(add_frameworks_dep kconfig)
 		$(add_frameworks_dep kconfigwidgets)
-		$(add_frameworks_dep ki18n)
+		$(add_frameworks_dep kcoreaddons)
 		$(add_frameworks_dep kdelibs4support)
+		$(add_frameworks_dep kguiaddons)
+		$(add_frameworks_dep ki18n)
+		$(add_frameworks_dep kiconthemes)
 		$(add_frameworks_dep kio)
 		$(add_frameworks_dep kwidgetsaddons)
-		$(add_frameworks_dep kxmlgui) )
-	!x11-themes/gtk-engines-qtcurve"
-DEPEND="${RDEPEND}
+		$(add_frameworks_dep kwindowsystem)
+		$(add_frameworks_dep kxmlgui)
+		$(add_qt_dep qtprintsupport)
+	)
+	X? (
+		x11-libs/libX11[${MULTILIB_USEDEP}]
+		x11-libs/libxcb[${MULTILIB_USEDEP}]
+		x11-libs/xcb-util-image[${MULTILIB_USEDEP}]
+	)
+"
+DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
-	nls? ( sys-devel/gettext )"
+	nls? ( sys-devel/gettext )
+"
+RDEPEND="${COMMON_DEPEND}
+	!x11-themes/gtk-engines-qtcurve
+"
 
 DOCS=( AUTHORS ChangeLog.md README.md TODO.md )
-
-[[ ${PV} == *9999* ]] || PATCHES=( "${DISTDIR}/${P}-old_config_file.patch" )
 
 pkg_pretend() {
 	if [[ "$(multilib_get_enabled_abis)" != "${DEFAULT_ABI}" ]]; then
 		use qt5 && elog "Qt5 is not (yet) multilib-aware, qtcurve will be built for Qt5 with native ABI only"
-		use kde && elog "KDE is not (yet) multilib-aware, qtcurve will be built for KDE with native ABI only"
-		use kf5 && elog "KF5 is not (yet) multilib-aware, qtcurve will be built for KF5 with native ABI only"
+		use plasma && elog "KF5 is not (yet) multilib-aware, qtcurve will be built for KF5 with native ABI only"
 	fi
 }
 
 pkg_setup() {
-	use kde && kde4-base_pkg_setup
+	# bug #498776
+	if ! version_is_at_least 4.7 $(gcc-version) ; then
+		append-cxxflags -Doverride=
+	fi
 }
 
 multilib_src_configure() {
@@ -83,24 +87,24 @@ multilib_src_configure() {
 
 	if multilib_is_native_abi; then
 		mycmakeargs=(
-			-DQTC_QT4_ENABLE_KDE=$(usex kde)
-			-DQTC_QT4_ENABLE_KWIN=$(usex windeco)
 			-DENABLE_QT5=$(usex qt5)
-			-QTC_QT5_ENABLE_KDE=$(usex kf5)
+			-QTC_QT5_ENABLE_KDE=$(usex plasma)
 		)
 	else
 		mycmakeargs=(
-			-DQTC_QT4_ENABLE_KDE=OFF
-			-DQTC_QT4_ENABLE_KWIN=OFF
-			-DQTC_QT5_ENABLE_KDE=OFF
 			-DENABLE_QT5=OFF
+			-DQTC_QT5_ENABLE_KDE=OFF
 		)
 	fi
 
 	mycmakeargs+=(
 		-DLIB_INSTALL_DIR=/usr/$(get_libdir)
+		-DQTC_QT4_ENABLE_KDE=OFF
+		-DQTC_QT4_ENABLE_KWIN=OFF
+		-DQTC_KDE4_DEFAULT_HOME=ON
 		-DENABLE_GTK2=$(usex gtk)
 		-DENABLE_QT4=$(usex qt4)
+		-DENABLE_TEST="$(usex test)"
 		-DQTC_ENABLE_X11=$(usex X)
 		$(is_final_abi && usex nls && echo -DQTC_INSTALL_PO=ON || echo -DQTC_INSTALL_PO=OFF)
 	)
