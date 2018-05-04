@@ -3,14 +3,17 @@
 
 EAPI=6
 
-if [[ ${PV} == 9999  ]]; then
-	GRUB_AUTOGEN=1
-fi
+GRUB_AUTOGEN=1
+GRUB_AUTORECONF=1
 
 if [[ -n ${GRUB_AUTOGEN} ]]; then
 	PYTHON_COMPAT=( python{2_7,3_3,3_4,3_5} )
+	inherit python-any-r1
+fi
+
+if [[ -n ${GRUB_AUTORECONF} ]]; then
 	WANT_LIBTOOL=none
-	inherit autotools python-any-r1
+	inherit autotools
 fi
 
 inherit autotools bash-completion-r1 flag-o-matic multibuild pax-utils toolchain-funcs versionator
@@ -36,6 +39,8 @@ PATCHES=(
 	"${FILESDIR}"/gfxpayload.patch
 	"${FILESDIR}"/grub-2.02_beta2-KERNEL_GLOBS.patch
 	"${FILESDIR}"/2.02-multiple-early-initrd.patch
+	"${FILESDIR}"/2.02-freetype-capitalise-variables.patch
+	"${FILESDIR}"/2.02-freetype-pkg-config.patch
 )
 
 DEJAVU=dejavu-sans-ttf-2.37
@@ -154,6 +159,9 @@ src_prepare() {
 	if [[ -n ${GRUB_AUTOGEN} ]]; then
 		python_setup
 		bash autogen.sh || die
+	fi
+
+	if [[ -n ${GRUB_AUTORECONF} ]]; then
 		autopoint() { :; }
 		eautoreconf
 	fi

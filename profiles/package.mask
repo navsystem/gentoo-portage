@@ -29,6 +29,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Mikle Kolyada <zlogene@gentoo.org> (4 May 2018)
+# Upstream is dead, no maintainer, no longer updated.
+# Masked for removal in 30 days
+games-misc/fortune-mod-gentoo-ru
+
 # Mike Gilbert <floppym@gentoo.org> (30 Apr 2018)
 # Dev channel releases are only for people who are developers or want more
 # experimental features and accept a more unstable release.
@@ -517,11 +522,6 @@ dev-lang/spidermonkey:52
 # If you still would like to use this version, please report any issues to
 # upstream.
 >=app-text/jabref-bin-4.0
-
-# Pacho Ramos <pacho@gentoo.org> (14 Jul 2017)
-# Doesn't work with >=openvpn-2.3, bug 470696
-# Fix is work in progress, see above bug. dilfridge@g.o
-net-vpn/kvpnc
 
 # Pacho Ramos <pacho@gentoo.org> (14 Jul 2017)
 # Randomly broken due to sys-devel/binutils-config bug (#584296).
