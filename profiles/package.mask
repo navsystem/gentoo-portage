@@ -29,6 +29,12 @@
 
 #--- END OF EXAMPLES ---
 
+# Amy Liffey <amynka@gentoo.org> (16 May 2018)
+# Obsolete and not used anymore replaced by app-crypt/eid-mw.
+# Requested by maintainer Vincent Hardy <vincent.hardy.be@gmail.com>
+# Removal in 30 days.
+app-misc/eid-viewer-bin
+
 # Michał Górny <mgorny@gentoo.org> (16 May 2018)
 # Ancient, unmaintained and seriously broken.  Applying patches
 # in the ebuild was broken in 2014 and nobody even reported that.
@@ -726,12 +732,6 @@ dev-java/jcs
 # Keep it masked until they are done. sys-fs/duperemove is
 # the suggested replacement for the meantime.
 sys-fs/bedup
-
-# Lars Wendler <polynomial-c@gentoo.org> (20 Aug 2015)
-# Releases are not from original upstream but from a fork.
-# Masked as requested by vapier.
-~net-misc/iputils-20160308
-~net-misc/iputils-20161105
 
 # Justin Lecher <jlec@gentoo.org> (28 Feb 2015)
 # Unfixed security problems
