@@ -1,4 +1,3 @@
-dev-libs/qjson
 dev-qt/qtcore:4
 dev-qt/qtsql:4
 dev-qt/qtgui:4
