@@ -29,6 +29,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Mike Gilbert <floppym@gentoo.org> (15 Jun 2018)
+# Dev channel releases are only for people who are developers or want more
+# experimental features and accept a more unstable release.
+>=www-client/chromium-69
+
 # Brian Evans <grknight@gentoo.org> (14 Jun 2018)
 # Mask new php pre-releases for initial testing
 dev-lang/php:7.3
@@ -203,10 +208,8 @@ sci-libs/freesteam
 # Remaining fetch-restricted game packages missing BLAKE2B hashes.
 # Please provide updated hashes if you have the matching distfiles.
 # Bug #642876.  Removal in 30 days.
-games-action/trine2
 games-misc/dont-starve
 games-puzzle/larry
-games-rpg/avadon
 games-rpg/penumbra-collection
 
 # Hans de Graaff <graaff@gentoo.org> (7 May 2018)
@@ -227,11 +230,6 @@ dev-ruby/twitter:5
 # SoQt does not build yet
 >=media-libs/coin-4.0.0
 >=media-libs/simage-1.7.1
-
-# Mike Gilbert <floppym@gentoo.org> (30 Apr 2018)
-# Dev channel releases are only for people who are developers or want more
-# experimental features and accept a more unstable release.
->=www-client/chromium-68
 
 # Aaron Bauman <bman@gentoo.org> (30 Apr 2018)
 # Masked for testing
@@ -324,10 +322,6 @@ sys-libs/uclibc
 =sys-firmware/intel-microcode-20171117_p20171215-r1
 =sys-firmware/intel-microcode-20180108
 =sys-firmware/intel-microcode-20180108-r1
-
-# Patrice Clement <monsieurp@gentoo.org> (26 Jan 2018)
-# Has different symbols. Known to cause issues with i3bar/swaybar.
-media-fonts/fontawesome:0/5
 
 # Eray Aslan <eras@gentoo.org> (22 Jan 2018)
 # Vulnerable - see https://bugs.gentoo.org/630684
