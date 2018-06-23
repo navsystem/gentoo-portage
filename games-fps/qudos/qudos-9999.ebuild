@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/qudos/qudos-0.40.1.ebuild,v 1.17 2011/10/26 18:00:22 mr_bones_ Exp $
+# $id$
 
-EAPI=2
+EAPI=5
 inherit eutils toolchain-funcs games git-r3
 
 DESCRIPTION="Enhanced Quake 2 engine"
