@@ -1,7 +1,5 @@
 media-libs/phonon -vlc gstreamer
 dev-qt/designer -phonon
-media-libs/phonon qt4
-media-libs/phonon-gstreamer qt4
 
 www-servers/uwsgi cgi python python_gevent
 

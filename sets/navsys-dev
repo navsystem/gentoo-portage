@@ -1,4 +1,4 @@
-@argo5-depends
+#@argo5-depends
 dev-db/pgadmin3
 kde-misc/yakuake
 dev-qt/qt-creator

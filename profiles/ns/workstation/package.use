@@ -31,9 +31,9 @@ sys-block/parted device-mapper
 kde-apps/kopete oscar
 media-libs/libpng apng
 app-office/openoffice -bash-completion
-net-im/psi extras jingle plugins iconsets -aspell hunspell -qt4 qt5 -sql webengine -webkit
-net-im/psimedia extras -qt4 qt5
-sys-devel/qconf -qt4 qt5
+net-im/psi extras jingle plugins iconsets -aspell hunspell qt5 -sql webengine -webkit
+net-im/psimedia extras qt5
+sys-devel/qconf qt5
 
 app-admin/sudo -gcrypt
 
@@ -50,7 +50,7 @@ dev-vcs/git -perl -subversion -gtk
 media-video/vlc -rdp
 x11-libs/fltk xft
 
-media-libs/glc-lib qt4
+media-libs/glc-lib
 
 
 app-emulation/wine -xml -vaapi
@@ -130,7 +130,7 @@ dev-java/swing-layout source
 sys-libs/gpm static-libs
 net-misc/tigervnc server
 
-media-libs/mlt qt5 -qt4
+media-libs/mlt qt5
 dev-qt/qtwebkit -exceptions printsupport
 media-libs/phonon-vlc qt5
 sys-auth/polkit-qt qt5
@@ -143,8 +143,8 @@ sci-libs/gdal python
 dev-java/junit source
 dev-java/oracle-jdk-bin javafx
 x11-libs/qscintilla  qt5
-x11-libs/qwtpolar qt4 -qt5
-x11-libs/qwt designer qt4
+x11-libs/qwtpolar -qt5
+x11-libs/qwt designer
 mail-client/thunderbird gtk2
 dev-libs/xmlsec nss
 sci-mathematics/octave gui
