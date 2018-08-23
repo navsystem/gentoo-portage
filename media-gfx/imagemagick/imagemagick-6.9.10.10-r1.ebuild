@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit eutils flag-o-matic libtool multilib toolchain-funcs eapi7-ver
+inherit eapi7-ver eutils flag-o-matic libtool multilib toolchain-funcs
 
 MY_P=ImageMagick-$(ver_rs 3 '-')
 
@@ -69,6 +69,13 @@ S="${WORKDIR}/${MY_P}"
 PATCHES=( "${FILESDIR}"/policy-hardening.patch )
 
 src_prepare() {
+	# Install default (unrestricted) policy in $HOME for test suite #664238
+	local _im_local_config_home="${HOME}/.config/ImageMagick"
+	mkdir -p "${_im_local_config_home}" || \
+		die "Failed to create IM config dir in '${_im_local_config_home}'"
+	cp "${FILESDIR}"/policy.test.xml "${_im_local_config_home}/policy.xml" || \
+		die "Failed to install default blank policy.xml in '${_im_local_config_home}'"
+
 	local mesa_cards ati_cards nvidia_cards render_cards
 	default
 
@@ -196,7 +203,7 @@ pkg_postinst() {
 	else
 		local v
 		for v in ${REPLACING_VERSIONS}; do
-			if ! version_is_at_least "6.9.10.10-r1" ${v}; then
+			if ! ver_test "${v}" -gt "6.9.10.10-r1"; then
 				# This is an upgrade
 				_show_policy_xml_notice=yes
 
