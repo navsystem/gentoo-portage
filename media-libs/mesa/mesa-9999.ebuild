@@ -281,8 +281,9 @@ pkg_pretend() {
 
 	if use xa; then
 		if ! use video_cards_freedreno &&
-		   ! use video_cards_nouveau; then
-			ewarn "Ignoring USE=xa         since VIDEO_CARDS does not contain freedreno or nouveau"
+		   ! use video_cards_nouveau &&
+		   ! use video_cards_vmware; then
+			ewarn "Ignoring USE=xa         since VIDEO_CARDS does not contain freedreno, nouveau, or vmware"
 		fi
 	fi
 
@@ -347,9 +348,7 @@ multilib_src_configure() {
 		fi
 	fi
 
-	if use egl; then
-		emesonargs+=( -Dplatforms=x11,surfaceless$(use wayland && echo ",wayland")$(use gbm && echo ",drm") )
-	fi
+	emesonargs+=( -Dplatforms=x11,surfaceless$(use wayland && echo ",wayland")$(use gbm && echo ",drm") )
 
 	if use gallium; then
 		emesonargs+=(
@@ -387,7 +386,8 @@ multilib_src_configure() {
 		fi
 
 		if use video_cards_freedreno ||
-		   use video_cards_nouveau; then
+		   use video_cards_nouveau ||
+		   use video_cards_vmware; then
 			emesonargs+=($(meson_use xa gallium-xa))
 		else
 			emesonargs+=(-Dgallium-xa=false)
