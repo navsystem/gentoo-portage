@@ -131,7 +131,7 @@ sys-libs/gpm static-libs
 net-misc/tigervnc server
 
 media-libs/mlt qt5
-dev-qt/qtwebkit -exceptions printsupport
+dev-qt/qtwebkit -exceptions printsupport -gstreamer
 media-libs/phonon-vlc qt5
 sys-auth/polkit-qt qt5
 media-libs/phonon qt5
