@@ -15,7 +15,7 @@
 *sys-apps/kexec-tools
 *app-shells/gentoo-bashcomp
 *app-shells/bash-completion
-*sys-process/vixie-cron
+*sys-process/cronie
 *app-admin/logrotate
 *net-fs/samba
 *sys-process/iotop
