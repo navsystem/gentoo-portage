@@ -126,6 +126,8 @@ src_prepare() {
 
 	eapply "${FILESDIR}"/bug_1461221.patch
 	eapply "${FILESDIR}"/${PN}-60.0-blessings-TERM.patch # 654316
+	eapply "${FILESDIR}"/${PN}-60.0-rust-1.29-comp.patch
+	eapply "${FILESDIR}"/${PN}-60.0-missing-errno_h-in-SandboxOpenedFiles_cpp.patch
 
 	# Enable gnomebreakpad
 	if use debug ; then
@@ -294,7 +296,7 @@ src_install() {
 
 	cd "${S}"
 	MOZ_MAKE_FLAGS="${MAKEOPTS}" SHELL="${SHELL:-${EPREFIX}/bin/bash}" MOZ_NOSPAM=1 \
-	DESTDIR="${D}" ./mach install
+	DESTDIR="${D}" ./mach install || die
 
 	if use geckodriver ; then
 		cp "${BUILD_OBJ_DIR}"/dist/bin/geckodriver "${ED%/}"${MOZILLA_FIVE_HOME} || die
@@ -383,9 +385,8 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	# Update mimedb for the new .desktop file
-	xdg_desktop_database_update
 	gnome2_icon_cache_update
+	xdg_desktop_database_update
 
 	if ! use gmp-autoupdate && ! use eme-free ; then
 		elog "USE='-gmp-autoupdate' has disabled the following plugins from updating or"
@@ -405,4 +406,5 @@ pkg_postinst() {
 
 pkg_postrm() {
 	gnome2_icon_cache_update
+	xdg_desktop_database_update
 }
