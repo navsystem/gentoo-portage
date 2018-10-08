@@ -29,6 +29,22 @@
 
 #--- END OF EXAMPLES ---
 
+# Davide Pesavento <pesa@gentoo.org> (08 Oct 2018)
+# Ebuild is not ready, major packaging changes required. Bug 668014.
+>=dev-python/PyQt5-5.11
+
+# Virgil Dupras <vdupras@gentoo.org> (07 Oct 2018)
+# Masked for removal, along with orphans, because it's unmaintained
+# and vulnerable. Bug #629270
+app-office/openerp
+dev-python/pychart
+dev-python/pywebdav
+dev-python/vatnumber
+
+# Andreas Sturmlechner <asturm@gentoo.org> (07 Oct 2018)
+# Masked for more testing especially of reverse-deps.
+>=dev-games/ogre-1.11.2
+
 # Mart Raudsepp <leio@gentoo.org> (06 Oct 2018)
 # Netspeed applet moved into mate-base/mate-applets since v1.14,
 # use that instead. Bug #667910
