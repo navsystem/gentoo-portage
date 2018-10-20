@@ -153,3 +153,4 @@ net-misc/iputils -gcrypt
 sys-apps/dbus user-session
 net-wireless/bluez user-session
 dev-python/PyQt5 designer
+net-libs/nodejs inspector
