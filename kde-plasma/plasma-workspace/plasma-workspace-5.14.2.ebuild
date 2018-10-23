@@ -55,6 +55,7 @@ COMMON_DEPEND="
 	$(add_plasma_dep kscreenlocker)
 	$(add_plasma_dep kwin)
 	$(add_plasma_dep libksysguard)
+	$(add_plasma_dep libkworkspace)
 	$(add_qt_dep qtdbus)
 	$(add_qt_dep qtdeclarative 'widgets')
 	$(add_qt_dep qtgui 'jpeg')
@@ -107,7 +108,6 @@ RDEPEND="${COMMON_DEPEND}
 	x11-apps/xsetroot
 	systemd? ( sys-apps/dbus[user-session] )
 	!systemd? ( sys-apps/dbus )
-	!dev-libs/xembed-sni-proxy
 	!kde-plasma/freespacenotifier:4
 	!kde-plasma/libtaskmanager:4
 	!kde-plasma/kcminit:4
@@ -126,6 +126,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-5.4-startkde-script.patch"
 	"${FILESDIR}/${PN}-5.10-startplasmacompositor-script.patch"
 	"${FILESDIR}/${PN}-5.12.80-tests-optional.patch"
+	"${FILESDIR}/${PN}-5.14.2-split-libkworkspace.patch"
 )
 
 RESTRICT+=" test"
@@ -135,10 +136,17 @@ src_prepare() {
 
 	sed -e "s|\`qtpaths|\`$(qt5_get_bindir)/qtpaths|" \
 		-i startkde/startkde.cmake startkde/startplasmacompositor.cmake || die
+
+	cmake_comment_add_subdirectory libkworkspace
+	# delete colliding libkworkspace translations
+	if [[ ${KDE_BUILD_TYPE} = release ]]; then
+		find po -type f -name "*po" -and -name "libkworkspace*" -delete || die
+	fi
 }
 
 src_configure() {
 	local mycmakeargs=(
+		-DBUILD_xembed-sni-proxy=OFF
 		$(cmake-utils_use_find_package appstream AppStreamQt)
 		$(cmake-utils_use_find_package calendar KF5Holidays)
 		$(cmake-utils_use_find_package geolocation KF5NetworkManagerQt)
