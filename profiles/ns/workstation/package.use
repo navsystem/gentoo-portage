@@ -1,6 +1,6 @@
 app-admin/testdisk ntfs reiserfs
 media-gfx/splashutils fbcondecor
-net-fs/samba quota gnutls client addc -system-mitkrb5
+net-fs/samba quota gnutls client addc -system-mitkrb5 python 
 
 
 sys-fs/aufs2 inotify kernel-patch
