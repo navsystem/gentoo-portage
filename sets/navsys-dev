@@ -1,5 +1,5 @@
 #@argo5-depends
-dev-db/pgadmin3
+dev-db/pgadmin4
 kde-misc/yakuake
 dev-qt/qt-creator
 dev-qt/qt-docs
