@@ -21,4 +21,4 @@
 *sys-process/iotop
 *net-misc/ntp
 *sys-apps/pciutils
-*sys-boot/grub-static
+*sys-boot/grub
