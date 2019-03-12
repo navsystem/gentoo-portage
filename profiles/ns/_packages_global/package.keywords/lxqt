@@ -15,7 +15,8 @@ lxqt-base/lxqt-about amd64 x86
 lxqt-base/lxqt-common amd64 x86
 =dev-util/cmake-3.6.3 amd64 x86
 x11-libs/libfm-qt amd64 x86
-~x11-themes/lxqt-themes-0.13.0 amd64
-~media-sound/pavucontrol-qt-0.4.0 amd64
-~dev-util/lxqt-build-tools-0.5.0 amd64
-~lxqt-base/lxqt-l10n-0.13.0 amd64
+media-sound/pavucontrol-qt amd64
+dev-util/lxqt-build-tools amd64
+lxqt-base/lxqt-l10n amd64
+dev-util/lxqt-build-tools amd64
+x11-themes/lxqt-themes amd64
