@@ -9,7 +9,7 @@
 *app-misc/mc
 *sys-process/htop
 *net-analyzer/jnettop
-*net-analyzer/netcat6
+*net-analyzer/openbsd-netcat
 *sys-apps/less
 *net-misc/bridge-utils
 *sys-apps/kexec-tools
