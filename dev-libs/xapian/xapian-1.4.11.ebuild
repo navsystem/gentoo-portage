@@ -1,7 +1,7 @@
 # Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="6"
+EAPI="7"
 
 inherit eutils multilib-minimal
 
@@ -13,13 +13,11 @@ SRC_URI="http://oligarchy.co.uk/xapian/${PV}/${MY_P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0/30" # ABI version of libxapian.so
-KEYWORDS="alpha amd64 arm ~arm64 ~hppa ~ia64 ~mips ppc ppc64 s390 ~sparc ~x86 ~x64-solaris"
-IUSE="doc static-libs -cpu_flags_x86_sse +cpu_flags_x86_sse2 +glass +chert +inmemory"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86 ~x64-solaris"
+IUSE="doc static-libs -cpu_flags_x86_sse +cpu_flags_x86_sse2 +glass +inmemory +remote"
 
 DEPEND="sys-libs/zlib"
 RDEPEND="${DEPEND}"
-
-REQUIRED_USE="inmemory? ( chert )"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -39,10 +37,10 @@ multilib_src_configure() {
 	myconf="${myconf} $(use_enable static-libs static)"
 
 	use glass || myconf="${myconf} --disable-backend-glass"
-	use chert || myconf="${myconf} --disable-backend-chert"
 	use inmemory || myconf="${myconf} --disable-backend-inmemory"
+	use remote || myconf="${myconf} --disable-backend-remote"
 
-	myconf="${myconf} --enable-backend-remote --program-suffix="
+	myconf="${myconf} --enable-backend-chert --program-suffix="
 
 	ECONF_SOURCE=${S} econf $myconf
 }
