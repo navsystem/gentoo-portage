@@ -31,7 +31,7 @@
 
 # Sobhan Mohammadpour <sobhan@gentoo.org> (17 Mar 2019)
 # Masked for testing
-=mail-client/geary-3.32.0
+=mail-client/geary-3.32.0-r1
 
 # Patrice Clement <monsieurp@gentoo.org> (17 Mar 2019)
 # Old and unmaintained Java libraries. Removal in 30 days.
@@ -184,7 +184,8 @@ dev-python/etsproxy
 dev-python/graphcanvas
 dev-python/pyface
 dev-python/scimath
-dev-python/traits
+=dev-python/traits-4.5.0
+=dev-python/traits-4.6.0
 dev-python/traitsui
 sci-visualization/mayavi
 
@@ -367,12 +368,6 @@ app-arch/star
 # Fails to build with ffmpeg-4 (bug #673352). Dead upstream.
 # Masked for removal in 30 days.
 media-sound/karlyriceditor
-
-# Matt Turner <mattst88@gentoo.org> (06 Mar 2019)
-# Does not build with glibc >= 2.25 (stabilized a year ago). Unmaintained by
-# maintainer-by-proxy: Bugs #628734 and #641176
-# Removal in 30 days
-sys-fs/cryptmount
 
 # Georgy Yakovlev <gyakovlev@gentoo.org> (06 Mar 2019)
 # Mask rust 1.33.0 & co because it breaks firefox simd
