@@ -29,6 +29,12 @@
 
 #--- END OF EXAMPLES ---
 
+# Michael Haubenwallner <haubi@gentoo.org> (25 Mar 2019)
+# Obsolete, in favor of app-portage/prefix-toolkit.
+# Removal in 30 days.  Bug #658572
+app-portage/prefix-chain-setup
+sys-apps/prefix-chain-utils
+
 # Michał Górny <mgorny@gentoo.org> (23 Mar 2019)
 # Unmaintained.  Fails to build against current sys-auth/libfprint.
 # Obsoleted upstream, in favor of libfprint[examples].
@@ -947,12 +953,6 @@ app-eselect/eselect-lua
 # Dev channel releases are only for people who are developers or want more
 # experimental features and accept a more unstable release.
 www-plugins/chrome-binary-plugins:unstable
-
-# Michael Weber <xmw@gentoo.org> (17 Jul 2013)
-# Upstream next versions
-# Michał Górny <mgorny@gentoo.org> (15 Mar 2019)
-# No single unmasked version since.  Removal in 30 days.  Bug #671238.
->=sys-boot/raspberrypi-firmware-1_pre
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (03 Jan 2009)
 # These packages are not supposed to be merged directly, instead
