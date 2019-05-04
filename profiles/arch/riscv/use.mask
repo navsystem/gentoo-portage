@@ -1,0 +1,21 @@
+# Copyright 2019 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+# Unmask the flag which corresponds to ARCH.
+-riscv
+
+# The required library has not been ported to riscv yet.
+seccomp
+
+# Not tested
+elogind
+emacs
+fuse
+gtk
+gtk2
+gtk3
+libedit
+libressl
+qt5
+slang
+X
