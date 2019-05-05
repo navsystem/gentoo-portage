@@ -1,14 +1,14 @@
 # Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
-PYTHON_COMPAT=( python3_{5,6} )
+EAPI=7
+PYTHON_COMPAT=( python3_{5,6,7} )
 
 inherit gnome.org gnome2-utils meson pax-utils python-single-r1 virtualx xdg
 
 DESCRIPTION="Provides core UI functions for the GNOME 3 desktop"
 HOMEPAGE="https://wiki.gnome.org/Projects/GnomeShell"
-SRC_URI+=" https://dev.gentoo.org/~leio/distfiles/${P}-patchset.tar.xz"
+SRC_URI+=" https://dev.gentoo.org/~leio/distfiles/${PF}-patchset.tar.xz"
 
 LICENSE="GPL-2+ LGPL-2+"
 SLOT="0"
@@ -21,7 +21,7 @@ KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 # libXfixes-5.0 needed for pointer barriers and #include <X11/extensions/Xfixes.h>
 # FIXME:
 #  * gstreamer support is currently automagic
-COMMON_DEPEND="
+DEPEND="
 	>=dev-libs/libcroco-0.6.8:0.6
 	>=gnome-extra/evolution-data-server-3.17.2:=
 	>=app-crypt/gcr-3.7.5[introspection]
@@ -75,7 +75,7 @@ COMMON_DEPEND="
 # 9. Optional telepathy chat integration
 # 10. Cantarell font used in gnome-shell global CSS (if removing this for some reason, make sure it's pulled in somehow for non-meta users still too)
 # 11. TODO: semi-optional webkit-gtk[introspection] for captive portal helper
-RDEPEND="${COMMON_DEPEND}
+RDEPEND="${DEPEND}
 	>=sys-apps/accountsservice-0.6.14[introspection]
 	app-accessibility/at-spi2-core:2[introspection]
 	app-misc/geoclue[introspection]
@@ -106,7 +106,7 @@ PDEPEND="
 	>=gnome-base/gnome-control-center-3.26[bluetooth(+)?,networkmanager(+)?]
 	browser-extension? ( gnome-extra/chrome-gnome-shell )
 "
-DEPEND="${COMMON_DEPEND}
+BDEPEND="
 	dev-lang/sassc
 	dev-libs/libxslt
 	>=dev-util/gdbus-codegen-2.45.3
@@ -117,12 +117,11 @@ DEPEND="${COMMON_DEPEND}
 "
 
 PATCHES=(
-	# Patches from gnome-3-28 branch on top of 3.30.2
+	# Patches from gnome-3-30 branch on top of 3.30.2
+	# Fix automagic gnome-bluetooth dep, bug #398145
 	"${WORKDIR}"/patches/
 	# Change favorites defaults, bug #479918
 	"${FILESDIR}"/3.28.3-defaults.patch
-	# Fix automagic gnome-bluetooth dep, bug #398145
-	"${FILESDIR}"/3.28.3-optional-bluetooth.patch
 )
 
 src_prepare() {
@@ -150,7 +149,7 @@ src_install() {
 	meson_src_install
 
 	# Required for gnome-shell on hardened/PaX, bug #398941; FIXME: Is this still relevant?
-	pax-mark m "${ED}usr/bin/gnome-shell"{,-extension-prefs}
+	pax-mark m "${ED}/usr/bin/gnome-shell"{,-extension-prefs}
 }
 
 src_test() {
