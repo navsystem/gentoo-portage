@@ -250,7 +250,7 @@ src_prepare() {
 	java-pkg_jar-from --into libs.smack/external smack-2.2 smack.jar smack.jar
 	java-pkg_jar-from --into libs.smack/external smack-2.2 smackx.jar smackx.jar
 	# java-pkg_jar-from --into libs.svnClientAdapter.javahl/external subversion svn-javahl.jar svnjavahl-1.8.4.jar
-	java-pkg_jar-from --into libs.xerces/external xerces-2 xercesImpl.jar xerces-2.8.0.jar
+	java-pkg_jar-from --into libs.xerces/external xerces-2 xerces.jar xerces-2.8.0.jar
 	java-pkg_jar-from --build-only --into o.apache.commons.codec/external commons-codec commons-codec.jar apache-commons-codec-1.3.jar
 	java-pkg_jar-from --into o.apache.commons.httpclient/external commons-httpclient-3 commons-httpclient.jar commons-httpclient-3.1.jar
 	java-pkg_jar-from --into o.apache.commons.logging/external commons-logging commons-logging.jar commons-logging-1.1.1.jar
@@ -343,7 +343,7 @@ src_install() {
 	rm smack.jar && java-pkg_jar-from --into "${instdir}" smack-2.2 smack.jar
 	rm smackx.jar && java-pkg_jar-from --into "${instdir}" smack-2.2 smackx.jar
 	# rm svnjavahl.jar && dosym /usr/share/subversion/lib/svn-javahl.jar ${instdir}/svnjavahl.jar || die
-	rm xerces-2.8.0.jar && java-pkg_jar-from --into "${instdir}" xerces-2 xercesImpl.jar xerces-2.8.0.jar
+	rm xerces-2.8.0.jar && java-pkg_jar-from --into "${instdir}" xerces-2 xerces.jar xerces-2.8.0.jar
 	popd >/dev/null || die
 
 	local instdir="${D}"/${INSTALL_DIR}/modules/ext/jaxb
