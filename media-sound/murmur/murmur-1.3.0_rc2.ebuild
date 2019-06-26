@@ -16,12 +16,15 @@ else
 	if [[ "${PV}" == *_pre* ]] ; then
 		MY_P="${MY_PN}-${PV}"
 		SRC_URI="https://dev.gentoo.org/~polynomial-c/dist/${MY_P}.tar.xz"
+		S="${WORKDIR}/${MY_P}"
 	else
-		MY_P="${MY_PN}-${PV/_/~}"
-		SRC_URI="https://mumble.info/snapshot/${MY_P}.tar.gz"
+		MY_PV="${PV/_/-}"
+		MY_P="${MY_PN}-${MY_PV}"
+		SRC_URI="https://github.com/mumble-voip/mumble/releases/download/${MY_PV}/${MY_P}.tar.gz
+			https://dl.mumble.info/${MY_P}.tar.gz"
+		S="${WORKDIR}/${MY_PN}-${PV/_*}"
 	fi
 	KEYWORDS="~amd64 ~arm ~x86"
-	S="${WORKDIR}/${MY_P}"
 fi
 
 LICENSE="BSD"
@@ -122,12 +125,8 @@ src_install() {
 	newinitd "${FILESDIR}"/murmur.initd-r1 murmur
 	newconfd "${FILESDIR}"/murmur.confd murmur
 
-	if use dbus; then
-		systemd_newunit "${FILESDIR}"/murmurd-dbus.service "${PN}".service
-		systemd_newtmpfilesd "${FILESDIR}"/murmurd-dbus.tmpfiles "${PN}".conf
-	else
-		systemd_newunit "${FILESDIR}"/murmurd-no-dbus.service "${PN}".service
-	fi
+	systemd_dounit scripts/${PN}.service
+	systemd_newtmpfilesd "${FILESDIR}"/murmurd-dbus.tmpfiles "${PN}".conf
 
 	keepdir /var/lib/murmur /var/log/murmur
 	fowners -R murmur /var/lib/murmur /var/log/murmur
