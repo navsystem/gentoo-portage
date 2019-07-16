@@ -16,7 +16,7 @@ VERSION_CRYPTSETUP="2.1.0"
 VERSION_DMRAID="1.0.0.rc16-3"
 VERSION_DROPBEAR="2019.78"
 VERSION_EUDEV="3.2.8"
-VERSION_E2FSPROGS="1.45.2"
+VERSION_E2FSPROGS="1.45.3"
 VERSION_FUSE="2.9.9"
 VERSION_GPG="1.4.23"
 VERSION_ISCSI="2.0.875"
@@ -212,13 +212,20 @@ pkg_postinst() {
 	local gk_config="${EROOT%/}/etc/genkernel.conf"
 	if [[ -f "${gk_config}" ]] ; then
 		if grep -q -E "^SSH=[\"\']?yes" "${gk_config}" 2>/dev/null ; then
-			if ! grep -q dosshd "${gk_config}" 2>/dev/null ; then
+			if ! grep -q dosshd /proc/cmdline 2>/dev/null ; then
 				ewarn ""
 				ewarn "IMPORTANT: SSH is currently enabled in your genkernel config"
 				ewarn "file (${gk_config}). However, 'dosshd' is missing from current"
 				ewarn "kernel command-line. You MUST add 'dosshd' to keep sshd enabled"
 				ewarn "in genkernel v4+ initramfs!"
 			fi
+		fi
+
+		if grep -q -E "^CMD_CALLBACK=.*emerge.*@module-rebuild" "${gk_config}" 2>/dev/null ; then
+			elog ""
+			elog "Please remove `emerge @module-rebuild` from genkernel config"
+			elog "file (${gk_config}) and make use of new MODULEREBUILD option"
+			elog "instead."
 		fi
 	fi
 }
