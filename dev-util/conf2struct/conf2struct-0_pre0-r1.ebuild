@@ -27,11 +27,16 @@ PATCHES=(
 
 LICENSE="BSD-2"
 SLOT="0"
-IUSE="caps pcre systemd tcpd"
+IUSE=""
 
 RDEPEND="dev-libs/libconfig
 	dev-perl/Conf-Libconfig"
 DEPEND="${RDEPEND}"
+
+src_compile(){
+	# -j1 due to parallel make issue reported upstream at: https://github.com/yrutschle/conf2struct/issues/10
+	emake -j1 CC="$(tc-getCC)" CFLAGS="${CFLAGS}"
+}
 
 src_install(){
 	emake DESTDIR="${D}" prefix="${EPREFIX%/}/usr" install
