@@ -54,7 +54,10 @@ DEPEND="${RDEPEND}
 	>=dev-libs/boost-1.41.0
 "
 BDEPEND="
-	virtual/pkgconfig"
+	acct-group/murmur
+	acct-user/murmur
+	virtual/pkgconfig
+"
 
 DOC_CONTENTS="
 	Useful scripts are located in /usr/share/doc/${PF}/scripts.\n

@@ -54,7 +54,10 @@ DEPEND="${RDEPEND}
 	>=dev-libs/boost-1.41.0
 "
 BDEPEND="
-	virtual/pkgconfig"
+	acct-group/murmur
+	acct-user/murmur
+	virtual/pkgconfig
+"
 
 if [[ "${PV}" == *9999 ]] ; then
 	# Required for the mkini.sh script which calls perl multiple times
