@@ -1,7 +1,7 @@
 =games-fps/qudos-9999 amd64 x86
 =games-fps/quake2-textures-0_beta8 amd64 x86
 <games-action/supertuxkart-9999 amd64 x86
-~dev-libs/angelscript-2.33.0 amd64
+~dev-libs/angelscript-2.34.0 amd64
 <games-arcade/openbubbles-9999 amd64 x86
 <games-arcade/supertux-9999 amd64 x86
 <games-simulation/cannonsmash-9999 amd64 x86
