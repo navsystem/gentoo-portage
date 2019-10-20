@@ -29,6 +29,35 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2019-10-20)
+# Full of ancient StarOffice era templates, last updated in 2006.
+# Removal in 30 days. Bug #697400
+app-office/ooextras
+
+# Hans de Graaff <graaff@gentoo.org> (2019-10-19)
+# ruby24-only packages with no reverse dependencies and no recent
+# releases. Masked for removal in 30 days.
+dev-ruby/cocaine
+dev-ruby/debugger-linecache
+dev-ruby/escape_utils
+dev-ruby/http-form_data:1.0
+dev-ruby/ruby-beautify
+dev-ruby/termcolor
+dev-ruby/terrapin
+dev-ruby/vcard
+www-servers/thin
+
+# Michał Górny <mgorny@gentoo.org> (2019-10-20)
+# A dummy package with no revdeps.  Replaced by app-text/rarian.
+# Removal in 30 days.  Bug #697376.
+app-text/scrollkeeper
+
+# David Seifert <soap@gentoo.org> (2019-10-19)
+# EAPI 0, tarball completely broken, only contains
+# symlinks to /usr/portage/distdir.
+# Removal in 15 days. Bug #697306.
+media-fonts/jsmath-extra-light
+
 # David Seifert <soap@gentoo.org> (2019-10-19)
 # EAPI 0, broken build system, unmaintained,
 # Removal in 30 days.  Bug #679304, #688906, #697356.
@@ -917,9 +946,7 @@ www-plugins/chrome-binary-plugins:unstable
 # These packages are not supposed to be merged directly, instead
 # please use sys-devel/crossdev to install them.
 dev-libs/cygwin
-dev-util/mingw-runtime
 dev-util/mingw64-runtime
-dev-util/w32api
 sys-libs/newlib
 dev-embedded/avr-libc
 
