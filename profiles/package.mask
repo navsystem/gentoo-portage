@@ -29,6 +29,27 @@
 
 #--- END OF EXAMPLES ---
 
+# Matthew Thode <prometheanfire@gentoo.org> (2019-10-20)
+# defunct upstream, removal in 30 days. Bug #611580
+app-emulation/openstack-guest-agents-unix
+
+# Michał Górny <mgorny@gentoo.org> (2019-10-20)
+# Fails to build.  Last release in 2009.  The stable version is EAPI 0.
+# Removal in 30 days.  Bug #698162.
+net-analyzer/nagios-sap-ccms-plugin
+
+# Michał Górny <mgorny@gentoo.org> (2019-10-20)
+# Testing version that breaks multiple plugins.  Let's keep it masked
+# until upstream releases fixed versions.
+~xfce-base/xfce4-panel-4.15.0
+
+# Michał Górny <mgorny@gentoo.org> (2019-10-20)
+# The XFCE GTK+ engines have been abandoned upstream.  They do not work
+# well with modern GTK+ versions, and have no seen any updates
+# since 2015.
+# Removal in 30 days.  Bug #577252.
+x11-themes/gtk-engines-xfce
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2019-10-20)
 # Full of ancient StarOffice era templates, last updated in 2006.
 # Removal in 30 days. Bug #697400
@@ -40,11 +61,9 @@ app-office/ooextras
 dev-ruby/cocaine
 dev-ruby/debugger-linecache
 dev-ruby/escape_utils
-dev-ruby/http-form_data:1.0
 dev-ruby/ruby-beautify
 dev-ruby/termcolor
 dev-ruby/terrapin
-dev-ruby/vcard
 www-servers/thin
 
 # Michał Górny <mgorny@gentoo.org> (2019-10-20)
@@ -407,7 +426,7 @@ dev-php/pecl-svn
 dev-php/pecl-xrange
 dev-php/suhosin
 dev-php/xcache
-dev-php/xhprof
+<dev-php/xhprof-0.9.10
 
 # Matt Turner <mattst88@gentoo.org> (2019-09-28)
 # Merged into Mesa. No reverse dependencies. Bug #654464
