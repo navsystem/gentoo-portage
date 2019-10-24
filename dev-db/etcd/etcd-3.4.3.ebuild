@@ -5,13 +5,13 @@ EAPI=6
 
 inherit user systemd golang-vcs-snapshot
 
-KEYWORDS="amd64"
-EGO_PN="github.com/coreos/etcd"
-GIT_COMMIT="94745a4"
+KEYWORDS="~amd64"
+EGO_PN="go.etcd.io/etcd"
+GIT_COMMIT="3cf2f69"
 MY_PV="${PV/_rc/-rc.}"
 DESCRIPTION="Highly-available key value store for shared configuration and service discovery"
 HOMEPAGE="https://github.com/etcd-io/etcd"
-SRC_URI="https://${EGO_PN}/archive/v${MY_PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="${HOMEPAGE}/archive/v${MY_PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="Apache-2.0 BSD BSD-2 MIT"
 SLOT="0"
 IUSE="doc +server"
@@ -25,10 +25,18 @@ src_prepare() {
 	sed -e 's:\(for p in \)shellcheck :\1 :' \
 		-e 's:^			gofmt \\$:\\:' \
 		-e 's:^			govet \\$:\\:' \
+		-e 's:^			govet_shadow \\$:\\:' \
 		-i "${S}"/src/${EGO_PN}/test || die
 	# missing ... in args forwarded to print-like function
 	sed -e 's:l\.Logger\.Panic(v):l.Logger.Panic(v...):' \
 		-i "${S}"/src/${EGO_PN}/raft/logger.go || die
+
+	sed -e 's:TestGetDefaultInterface(:_\0:' \
+		-e 's:TestGetDefaultHost(:_\0:' \
+		-i "${S}"/src/${EGO_PN}/pkg/netutil/routes_linux_test.go || die
+
+	# Avoid network-sandbox violations since go-1.13
+	rm src/${EGO_PN}/go.mod || die
 }
 
 pkg_setup() {
@@ -73,6 +81,6 @@ src_install() {
 
 src_test() {
 	pushd src/${EGO_PN} || die
-	./test || die
+	GO111MODULES=off ./test || die
 	popd || die
 }
