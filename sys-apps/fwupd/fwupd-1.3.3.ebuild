@@ -44,7 +44,7 @@ DEPEND="${PYTHON_DEPS}
 	dev-libs/libgpg-error
 	dev-libs/libgudev:=
 	>=dev-libs/libgusb-0.2.9[introspection?]
-	>=dev-libs/libxmlb-0.1.7
+	>=dev-libs/libxmlb-0.1.13
 	dev-python/pillow[${PYTHON_USEDEP}]
 	dev-python/pycairo[${PYTHON_USEDEP}]
 	dev-python/pygobject:3[cairo,${PYTHON_USEDEP}]
@@ -87,6 +87,7 @@ RDEPEND="
 "
 
 pkg_setup() {
+	python-single-r1_pkg_setup
 	if use nvme; then
 		kernel_is -ge 4 4 || die "NVMe support requires kernel >= 4.4"
 	fi
