@@ -34,6 +34,8 @@ python_targets_python3_6 python_targets_python3_5 python_targets_python2_7 pytho
 
 abi_x86_32
 
+cgroup-hybrid
+
 "
 
 AUTOCLEAN="yes"
