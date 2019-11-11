@@ -7,7 +7,7 @@ inherit elisp
 
 DESCRIPTION="An authoring and publishing environment for Emacs"
 HOMEPAGE="https://www.gnu.org/software/emacs-muse/"
-SRC_URI="http://download.gna.org/muse-el/${P}.tar.gz"
+SRC_URI="https://github.com/alexott/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3+ FDL-1.2+ GPL-2 MIT"
 SLOT="0"
@@ -20,7 +20,7 @@ RESTRICT="test"					#426546
 SITEFILE="50${PN}-gentoo.el"
 
 src_compile() {
-	default
+	emake -j1
 }
 
 src_install() {
@@ -28,6 +28,5 @@ src_install() {
 	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 	doinfo texi/muse.info
 	dodoc AUTHORS NEWS README ChangeLog*
-	insinto /usr/share/doc/${PF}
-	doins -r contrib etc examples experimental scripts
+	dodoc -r contrib etc examples experimental scripts
 }
