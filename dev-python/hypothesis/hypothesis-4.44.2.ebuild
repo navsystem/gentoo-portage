@@ -16,9 +16,10 @@ LICENSE="MPL-2.0"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="test"
+RESTRICT="!test? ( test )"
 
 CDEPEND="
-	>=dev-python/attrs-16.0.0[${PYTHON_USEDEP}]
+	>=dev-python/attrs-19.2.0[${PYTHON_USEDEP}]
 	$(python_gen_cond_dep 'dev-python/enum34[${PYTHON_USEDEP}]' 'python2*' pypy)
 "
 RDEPEND="${CDEPEND}"
@@ -27,7 +28,7 @@ DEPEND="${CDEPEND}
 	test? (
 		dev-python/flaky[${PYTHON_USEDEP}]
 		dev-python/mock[${PYTHON_USEDEP}]
-		dev-python/pytest[${PYTHON_USEDEP}]
+		>=dev-python/pytest-4.3[${PYTHON_USEDEP}]
 		dev-python/pytest-xdist[${PYTHON_USEDEP}]
 	)
 "
@@ -35,7 +36,7 @@ DEPEND="${CDEPEND}
 S="${WORKDIR}/${PN}-${PN}-python-${PV}/${PN}-python"
 
 python_test() {
-	pytest tests/cover/test_testdecorators.py || die "Tests fail with ${EPYTHON}"
+	py.test -v tests/cover/test_testdecorators.py || die "Tests fail with ${EPYTHON}"
 }
 
 pkg_postinst() {
