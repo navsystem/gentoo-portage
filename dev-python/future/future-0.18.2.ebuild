@@ -3,7 +3,7 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python{2_7,3_{5,6,7}} )
+PYTHON_COMPAT=( python{2_7,3_{5,6,7,8}} pypy{,3} )
 
 inherit distutils-r1
 
@@ -25,13 +25,17 @@ BDEPEND="
 		$(python_gen_any_dep '
 			dev-python/sphinx[${PYTHON_USEDEP}]
 			dev-python/sphinx-bootstrap-theme[${PYTHON_USEDEP}]
-		' python{2_7,3_{5,6,7}})
+		')
 	)
 	test? (
 		$(python_gen_cond_dep 'dev-python/numpy[${PYTHON_USEDEP}]' \
 			python{2_7,3_{5,6,7}})
 	)
 "
+
+PATCHES=(
+	"${FILESDIR}"/${P}-tests.patch
+)
 
 python_check_deps() {
 	use doc || return 0
