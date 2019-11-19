@@ -321,10 +321,6 @@ kde-misc/systemd-kcm
 # Removal in 30 days
 dev-python/gnome-keyring-python
 
-# Matthew Thode <prometheanfire@gentoo.org> (2019-10-20)
-# defunct upstream, removal in 30 days. Bug #611580
-app-emulation/openstack-guest-agents-unix
-
 # Michał Górny <mgorny@gentoo.org> (2019-10-20)
 # Fails to build.  Last release in 2009.  The stable version is EAPI 0.
 # Removal in 30 days.  Bug #698162.
@@ -862,11 +858,6 @@ app-admin/amazon-ec2-init
 # over 2G but it 'currently performs 3-5% slower and has 1-2% worse
 # compression'.
 >=dev-util/xdelta-3.1.0
-
-# Tim Harder <radhermit@gentoo.org> (2016-11-03)
-# Masked for testing
-=sys-fs/fuse-3*
-=net-fs/sshfs-3*
 
 # Andreas K. Hüttel <dilfridge@gentoo.org> (2016-04-03)
 # Can exhaust all available memory depending on task
