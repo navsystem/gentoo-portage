@@ -1,0 +1,10 @@
+--- qgis-3.2.3_orig/python/gui/auto_generated/qgsattributeformrelationeditorwidget.sip.in	2018-09-14 14:00:19.000000000 +0200
++++ qgis-3.2.3/python/gui/auto_generated/qgsattributeformrelationeditorwidget.sip.in	2019-03-27 15:42:40.073992436 +0100
+@@ -30,5 +30,6 @@
+ %End
+ 
+-    virtual void createSearchWidgetWrappers();
++    virtual void createSearchWidgetWrappers( const QgsAttributeEditorContext &context = QgsAttributeEditorContext() );
++
+ 
+     virtual QString currentFilterExpression() const;
