@@ -1,7 +1,7 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
 KDE_AUTODEPS=false
 inherit kde5 cmake-multilib git-r3
@@ -10,24 +10,19 @@ DESCRIPTION="Widget styles for Qt and GTK2"
 HOMEPAGE="https://cgit.kde.org/qtcurve.git"
 
 EGIT_REPO_URI="https://github.com/eegorov/qtcurve.git"
+EGIT_COMMIT=34d80d0234aa736f70fd404624ed17fb7bcfabdf
 KEYWORDS=""
 
 LICENSE="LGPL-2+"
 SLOT="0"
-IUSE="+X gtk plasma nls +qt4 qt5 test"
+IUSE="+X gtk plasma nls qt5 test"
 
 REQUIRED_USE="gtk? ( X )
-	|| ( gtk qt4 qt5 )
+	|| ( gtk qt5 )
 	plasma? ( qt5 )
 "
 COMMON_DEPEND="
 	gtk? ( x11-libs/gtk+:2[${MULTILIB_USEDEP}] )
-	qt4? (
-		dev-qt/qtcore:4[${MULTILIB_USEDEP}]
-		dev-qt/qtdbus:4[${MULTILIB_USEDEP}]
-		dev-qt/qtgui:4[${MULTILIB_USEDEP}]
-		dev-qt/qtsvg:4[${MULTILIB_USEDEP}]
-	)
 	qt5? (
 		$(add_qt_dep qtdbus)
 		$(add_qt_dep qtgui)
@@ -75,13 +70,6 @@ pkg_pretend() {
 	fi
 }
 
-pkg_setup() {
-	# bug #498776
-	if ! version_is_at_least 4.7 $(gcc-version) ; then
-		append-cxxflags -Doverride=
-	fi
-}
-
 multilib_src_configure() {
 	local mycmakeargs
 
@@ -103,7 +91,7 @@ multilib_src_configure() {
 		-DQTC_QT4_ENABLE_KWIN=OFF
 		-DQTC_KDE4_DEFAULT_HOME=ON
 		-DENABLE_GTK2=$(usex gtk)
-		-DENABLE_QT4=$(usex qt4)
+		-DENABLE_QT4=OFF
 		-DENABLE_TEST="$(usex test)"
 		-DQTC_ENABLE_X11=$(usex X)
 		$(is_final_abi && usex nls && echo -DQTC_INSTALL_PO=ON || echo -DQTC_INSTALL_PO=OFF)
