@@ -60,16 +60,10 @@ app-misc/rq
 # sys-auth/docker_auth: #695298
 #
 # Removal in 30 days.
-app-admin/docker-bench
 app-admin/linux-bench
-app-emulation/cadvisor
 app-emulation/cri-tools
-app-emulation/reg
 dev-go/glide
-dev-util/drone
-dev-util/drone-cli
 net-misc/istioctl
-sys-auth/docker_auth
 
 # Michał Górny <mgorny@gentoo.org> (2019-12-01)
 # Added in 2013 and not updated since.  Unmaintained upstream since
@@ -286,11 +280,6 @@ app-misc/rioutil
 # and accept a more unstable release.
 >=www-client/chromium-80
 
-# Aaron Bauman <bman@gentoo.org> (2019-11-10)
-# Maintainer-needed, EAPI=0, Removal in 15 days
-# Upstream is dead and can't locate a new home
-net-p2p/createtorrent
-
 # Michał Górny <mgorny@gentoo.org> (2019-11-10)
 # Added in 2008 and not updated since.  Multiple releases behind
 # upstream.  Still at EAPI 0.
@@ -358,11 +347,6 @@ sys-cluster/dlm-lib
 # with modern media is doubtful.
 # Removal in 30 days.  Bug #699694.
 media-video/emovix
-
-# Aaron Bauman <bman@gentoo.org> (2019-11-09)
-# homepage dead, maintainer-needed
-# EAPI=4. Removal in 30 days
-app-forensics/magicrescue
 
 # Aaron Bauman <bman@gentoo.org> (2019-11-09)
 # maintainer-needed, no known upstream homepage
