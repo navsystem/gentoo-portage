@@ -10,6 +10,8 @@ cups dri infinality natspec ffmpeg -libav melt aac semantic-desktop -nepomuk gpm
 
 tracepath traceroute
 
+rpc
+
 uuid glamor gpg openssl
 sip sipim
 
