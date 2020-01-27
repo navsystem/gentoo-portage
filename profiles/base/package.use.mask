@@ -6,6 +6,16 @@
 # This file is only for generic masks. For arch-specific masks (i.e.
 # mask everywhere, unmask on arch/*) use arch/base.
 
+# Michał Górny <mgorny@gentoo.org> (2020-01-27)
+# Requires old split dev-python/twisted-*.
+net-irc/telepathy-idle test
+net-voip/telepathy-rakia test
+
+# Michał Górny <mgorny@gentoo.org> (2020-01-27)
+# dev-python/zsi is being removed.
+media-sound/sonata lyrics
+sci-chemistry/pdb2pqr opal
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2020-01-19)
 # media-libs/pulseaudio-qt is not keyworded
 kde-misc/kdeconnect pulseaudio
@@ -62,7 +72,6 @@ sci-visualization/veusz fits
 # Michał Górny <mgorny@gentoo.org> (2019-11-25)
 # Requires old version of dev-python/sphinx that's being removed.
 ~dev-python/fabric-2.3.1 doc
-<dev-python/hacking-1.1.0 doc
 
 # Michał Górny <mgorny@gentoo.org> (2019-11-09)
 # eMovix is being removed.
