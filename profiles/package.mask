@@ -32,6 +32,37 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2020-02-04)
+# Python-2-only, blocks pygtk-removal. Use app-text/coolreader or
+# app-text/fbreader instead. Masked for removal in 30 days.
+app-text/pybookreader
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2020-02-04)
+# Python-2-only, blocks pygtk-removal, last release in 2010.
+# Masked for removal in 30 days.
+app-misc/hachoir-metadata
+app-misc/hachoir-urwid
+dev-python/hachoir-core
+dev-python/hachoir-parser
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2020-02-03)
+# No maintainer, py27-only, blocks pygtk-removal, last release in 2012.
+# Masked for removal in 30 days.
+app-misc/pystopwatch
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2020-02-03)
+# No maintainer, py27-only, broken at runtime, last release in 2010.
+# Masked for removal in 30 days.
+x11-misc/googsystray
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2020-02-03)
+# Ancient, no maintainer, py27-only, bug 708104. Masked for removal in 30 days.
+dev-util/gquilt
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2020-02-03)
+# Ancient, no maintainer, py27-only. Masked for removal in 30 days.
+dev-util/xesam-tools
+
 # Mart Raudsepp <leio@gentoo.org> (2020-02-03)
 # Known breakages that need to be handled first, bug 698922
 >=x11-libs/pango-1.43
@@ -695,12 +726,6 @@ media-plugins/vdr-osdpip
 # removal from tree ~4 Feb 2020
 # wrt bug 704050
 media-plugins/vdr-browse
-
-# Mike Gilbert <floppym@gentoo.org> (2020-01-04)
-# Un-fetchable distfile, bug 704782.
-# No maintainer.
-# Removal in 30 days.
-net-misc/chrome-remote-desktop
 
 # Jonas Stein <jstein@gentoo.org> (2019-12-30)
 # Package masked for removal. Broken SRC_URI, 
