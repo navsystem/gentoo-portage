@@ -32,6 +32,31 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2020-02-24)
+# app-admin/packagekit-base is Python 2 only and behind upstream.
+# The Portage backend is unmaintained.  Other packages are its reverse
+# dependencies.
+#
+# It is unclear why app-backup/deja-dup needs it unconditionally.
+# However, it has not been bumped since 2016.
+#
+# Removal in 30 days.  Bug #708398.
+app-admin/packagekit
+app-admin/packagekit-base
+app-admin/packagekit-gtk
+app-admin/packagekit-qt
+app-backup/deja-dup
+gnome-extra/gnome-packagekit
+
+# Michał Górny <mgorny@gentoo.org> (2020-02-24)
+# Effectively unmaintained in Gentoo.  Multiple versions behind
+# upstream.  Python 2 only.
+# Removal in 30 days.  Bug #709466.
+app-admin/equo
+app-admin/matter
+sys-apps/entropy
+sys-apps/entropy-server
+
 # David Seifert <soap@gentoo.org> (2020-02-23)
 # Last release in 2013, the scons SConstruct script uses variables
 # that have been removed from Scons years ago and also uses a ton of
@@ -41,8 +66,7 @@ games-strategy/boswars
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2020-02-22)
 # Last release in 2009, py2-only, blocks dev-python/pygtk removal, bug #708100
-# media-gfx/mcomix meanwhile is a fork of comix that will be kept until its
-# fork mcomix3 was packaged. Masked for removal in 30 days.
+# Use media-gfx/mcomix instead. Masked for removal in 30 days.
 media-gfx/comix
 
 # Mart Raudsepp <leio@gentoo.org> (2020-02-21)
