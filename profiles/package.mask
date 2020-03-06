@@ -32,6 +32,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2020-03-06)
+# Python 2 only.  Last update in 2012.  Blocker for a few dependencies.
+# Removal in 30 days.  Bug #708336.
+www-apps/ownpaste
+
 # Michał Górny <mgorny@gentoo.org> (2020-03-04)
 # Dead.  Last commit in 2011.  Python 2 only.  Requires old version
 # of Django.  The Gentoo instance is being replaced by pluto
@@ -403,12 +408,6 @@ sys-firmware/iwl6050-ucode
 # Mask until sys-libs/libxcrypt[system] is unmasked
 >=virtual/libcrypt-2
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2020-02-05)
-# Blocks dev-python/pygtk removal, bug #706478. Masked for removal in 30 days.
-dev-libs/libappindicator:2
-dev-perl/Gtk2-AppIndicator
-x11-plugins/pidgin-indicator
-
 # Michał Górny <mgorny@gentoo.org> (2020-02-05)
 # Unmaintained.  No Python 3 support.  Last release ~2014, homepage
 # gone.
@@ -420,13 +419,6 @@ net-im/turses
 # All remaining reverse dependencies are masked for removal.
 # Removal in 30 days.  Bug #708332.
 dev-python/egenix-mx-base
-
-# Ulrich Müller <ulm@gentoo.org> (2020-02-05)
-# Last version bump in 2014, while upstream is at 2019/1.
-# Ebuild claims "free-noncomm", but has an inaccessible distfile
-# behind a registration wall. Unresponsive Gentoo maintainer.
-# Masked for removal in 30 days. Bug #702352.
-sci-chemistry/shelx
 
 # Joonas Niilola <juippis@gentoo.org> (2020-02-05)
 # Stagnant upstream with latest release from 2016, python2-only, no maintainer
