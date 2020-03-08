@@ -62,7 +62,6 @@ dev-python/columnize
 dev-python/common
 dev-python/crumbs
 dev-python/cssselect2
-dev-python/curtsies
 dev-python/cx_Freeze
 dev-python/d2to1
 dev-python/datashape
@@ -147,7 +146,6 @@ dev-python/pycobertura
 dev-python/pydot-ng
 dev-python/pyee
 dev-python/pyev
-dev-python/pyfeyn
 dev-python/pyfiglet
 dev-python/pygcrypt
 dev-python/pygeocoder
@@ -156,7 +154,6 @@ dev-python/pykka
 dev-python/pymtp
 dev-python/pynzb
 dev-python/pyopencl
-dev-python/pyphen
 dev-python/pyprof2calltree
 dev-python/pyshark
 dev-python/pysnmp-apps
@@ -181,8 +178,7 @@ dev-python/python-socketio
 dev-python/python-twitter
 dev-python/python-uinput
 dev-python/pythonmagick
-dev-python/pyx
-dev-python/pyzor
+<dev-python/pyx-0.15
 dev-python/rackspace-monitoring
 dev-python/readlike
 dev-python/redis-py-cluster
@@ -214,12 +210,10 @@ dev-python/venusian
 dev-python/versiontools
 dev-python/vulture
 dev-python/weasyprint
-dev-python/ws4py
 dev-python/wsgiintercept
 dev-python/wtf-peewee
 dev-python/xdis
 dev-python/zc-buildout
-www-apps/nikola
 
 # Mikle Kolyada <zlogene@gentoo.org> (2020-03-07)
 # virtual/shadow has the only alive provider.
@@ -709,12 +703,6 @@ dev-java/eclipse-ecj:4.13
 # library please add a note to describe use case to the bug #697826.
 # Masked for removal in a year.
 dev-libs/gmp:3
-
-# Mike Gilbert <floppym@gentoo.org> (2019-10-11)
-# Inactive upstream for many years.
-# Several open bugs.
-# Please migrate to sys-apps/man-db.
-sys-apps/man
 
 # Stefan Strogin <steils@gentoo.org> (2019-09-27)
 # Requires >=dev-lang/lua-5.3 which is masked
