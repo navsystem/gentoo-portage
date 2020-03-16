@@ -1,6 +1,11 @@
 # Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# Thomas Deutschmann <whissi@gentoo.org> (2020-03-15)
+# Mask USE=dav1d, media-libs/dav1d is not keyworded
+# Mask USE=libaribb24, media-libs/aribb24 is not keyworded
+media-video/ffmpeg dav1d libaribb24 libtesseract
+
 # Andrey Utkin <andrey_utkin@gentoo.org> (2020-03-11)
 # USE=bpf depends on sys-devel/clang which is not keyworded on alpha.
 media-tv/v4l-utils bpf
@@ -186,10 +191,6 @@ app-admin/conky cmus irc
 # the nvidia SDK needs nvidia-drivers and thus can never work on alpha
 # Likewise, nasm is x86/x86-64 only
 media-video/ffmpeg nvenc openh264
-
-# Justin Lecher <jlec@gentoo.org> (2016-02-22)
-# Missing test deps keyword #575366
-dev-cpp/eigen test
 
 # Tobias Klausmann <klausman@gentoo.org> (2016-02-04)
 # sys-cluster/ceph is not broken per se, but a maintenance burden.
