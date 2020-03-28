@@ -32,6 +32,36 @@
 
 #--- END OF EXAMPLES ---
 
+# Matthew Thode <prometheanfire@gentoo.org> (2020-03-28)
+# No consumers. requires old dev-python/pika, bug 715152. Removal in 14 days.
+dev-python/pika-pool
+
+# Andreas K. Hüttel <dilfridge@gentoo.org> (2020-03-27)
+# No consumers. Build problems, bug 668244. Removal in 30 days.
+media-libs/openmoiv
+
+# Rafael G. Martins <rafaelmartins@gentoo.org> (2020-03-27)
+# Python 2 only. Uses old version of DNSimple API.
+# Removal in 30 days.  Bug #712960
+net-dns/dnsimple-dyndns
+
+# Georgy Yakovlev <gyakovlev@gentoo.org> (2020-03-27)
+# Vulnerable old version of icedtea-web #711392
+# new version uses maven + rust
+dev-java/icedtea-web
+
+# Michał Górny <mgorny@gentoo.org> (2020-03-27)
+# Unmaintained.  Not tested for py3.7.  Last bumped in 2015.
+# Bad quality ebuild.
+# Removal in 30 days.  Bug #710230.
+dev-vcs/pwclient
+
+# Michał Górny <mgorny@gentoo.org> (2020-03-27)
+# Unmaintained.  Not tested for py3.7.  Last bumped in 2017.
+# Bad quality ebuild.
+# Removal in 30 days.  Bug #710226.
+dev-util/fatrace
+
 # Michał Górny <mgorny@gentoo.org> (2020-03-27)
 # It was integrated into dev-python/fonttools, and has no reverse
 # dependencies.
