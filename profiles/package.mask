@@ -32,10 +32,6 @@
 
 #--- END OF EXAMPLES ---
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2020-04-05)
-# Breaks app-text/texlive-core right now, bug #716344.
-~app-text/poppler-0.87.0
-
 # Joonas Niilola <juippis@gentoo.org> (2020-04-05)
 # Not maintained in Gentoo, doesn't build for 2 years, has only
 # deprecated version present in Gentoo. Has a huge number of open
@@ -571,6 +567,7 @@ dev-db/clickhouse
 # until upstream releases fixed versions.
 ~xfce-base/xfce4-panel-4.15.0
 ~xfce-base/xfce4-panel-4.15.1
+~xfce-base/xfce4-panel-4.15.2
 
 # Lars Wendler <polynomial-c@gentoo.org> (2019-10-16)
 # Depends on apache-2.2
