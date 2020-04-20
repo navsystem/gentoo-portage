@@ -23,7 +23,8 @@ sys-apps/hal -crypt -X
 virtual/ffmpeg encode
 media-video/ffmpeg gnutls
 
-dev-qt/qt-creator examples git mercurial perforce qml qtscript -systemd
+dev-qt/qt-creator examples git mercurial perforce qml qtscript -systemd doc subversion
+dev-qt/qtdeclarative localstorage
 app-misc/mc -X slang -ncurses
 dev-vcs/subversion -dso extras
 gnome-base/gvfs gdu
@@ -131,7 +132,7 @@ sys-libs/gpm static-libs
 net-misc/tigervnc server
 
 media-libs/mlt qt5
-dev-qt/qtwebkit -exceptions printsupport -gstreamer
+dev-qt/qtwebkit -exceptions printsupport -gstreamer gtk
 media-libs/phonon-vlc qt5
 sys-auth/polkit-qt qt5
 media-libs/phonon qt5

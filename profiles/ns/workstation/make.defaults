@@ -8,11 +8,11 @@ networkmanager private-headers declarative bash-completion pm-utils vnc rdesktop
 aspell histman hunspell multimedia oscar phonon qml idn lame mod djvu ebook gudev encode right_timezone
 cups dri infinality natspec ffmpeg -libav melt aac semantic-desktop -nepomuk gpm opus xmp winbind ads ldap soprano
 
-tracepath traceroute
+tracepath traceroute freetds odbc midi timidity vnc
 
 rpc lto wayland gles2
 
-uuid glamor gpg openssl
+uuid glamor gpg openssl infinality
 sip sipim json
 
 input_devices_evdev video_cards_intel video_cards_nouveau video_cards_radeon video_cards_vesa
