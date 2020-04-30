@@ -32,6 +32,10 @@
 
 #--- END OF EXAMPLES ---
 
+# Matt Turner <mattst88@gentoo.org> (2020-04-29)
+# Masked for testing
+>=dev-libs/gjs-1.64
+
 # Mikle Kolyada <zlogene@gentoo.org> (2020-04-28)
 # Dead upstream. Removal in 30 days
 sys-cluster/openais
@@ -649,11 +653,6 @@ sys-block/kvpm
 # most third-party signatures, or app-antivirus/fangfrisch serves
 # as a replacement with a sane upstream.
 app-antivirus/clamav-unofficial-sigs
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2020-03-30)
-# Unmaintained revdep on dev-python/pygtk blocking its removal, py2-only
-# Bugs #484270 and #705646, masked for removal in 30 days.
-dev-python/basemap
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (2020-03-29)
 # Old releases gone from upstream, new releases use overly restrictive
