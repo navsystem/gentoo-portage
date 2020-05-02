@@ -14,7 +14,7 @@ SRC_URI="https://downloads.slack-edge.com/linux_releases/${PN}-desktop-${PV}-amd
 LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="-* ~amd64"
-IUSE="ayatana suid"
+IUSE="appindicator suid"
 RESTRICT="bindist mirror"
 
 RDEPEND="app-accessibility/at-spi2-atk:2[${MULTILIB_USEDEP}]
@@ -46,18 +46,18 @@ RDEPEND="app-accessibility/at-spi2-atk:2[${MULTILIB_USEDEP}]
 	x11-libs/libXScrnSaver:0[${MULTILIB_USEDEP}]
 	x11-libs/libXtst:0[${MULTILIB_USEDEP}]
 	x11-libs/pango:0[${MULTILIB_USEDEP}]
-	ayatana? ( dev-libs/libappindicator:3[${MULTILIB_USEDEP}] )"
+	appindicator? ( dev-libs/libappindicator:3[${MULTILIB_USEDEP}] )"
 
-QA_PREBUILT="opt/slack/chrome-sandbox
-	opt/slack/libEGL.so
-	opt/slack/libffmpeg.so
-	opt/slack/libGLESv2.so
-	opt/slack/resources/app.asar.unpacked/node_modules/*/*/build/Release/*.node
-	opt/slack/resources/app.asar.unpacked/node_modules/*/build/Release/*.node
-	opt/slack/slack
-	opt/slack/swiftshader/libEGL.so
-	opt/slack/swiftshader/libGLESv2.so
-	opt/slack/swiftshader/libvk_swiftshader.so"
+QA_PREBUILT="/opt/slack/chrome-sandbox
+	/opt/slack/libEGL.so
+	/opt/slack/libffmpeg.so
+	/opt/slack/libGLESv2.so
+	/opt/slack/resources/app.asar.unpacked/node_modules/*/*/build/Release/*.node
+	/opt/slack/resources/app.asar.unpacked/node_modules/*/build/Release/*.node
+	/opt/slack/slack
+	/opt/slack/swiftshader/libEGL.so
+	/opt/slack/swiftshader/libGLESv2.so
+	/opt/slack/swiftshader/libvk_swiftshader.so"
 
 S="${WORKDIR}"
 
@@ -70,7 +70,7 @@ src_prepare() {
 		usr/share/applications/slack.desktop \
 		|| die "sed failed in Icon for slack.desktop"
 
-	if use ayatana ; then
+	if use appindicator ; then
 		sed -i '/Exec/s|=|=env XDG_CURRENT_DESKTOP=Unity |' \
 			usr/share/applications/slack.desktop \
 			|| die "sed failed for slack.desktop"
