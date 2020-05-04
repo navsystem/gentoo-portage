@@ -11,7 +11,7 @@ SRC_URI="https://git.opensvc.com/?p=multipath-tools/.git;a=snapshot;h=${PV};sf=t
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~ia64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha amd64 ~arm ~arm64 ~ia64 ppc ppc64 x86"
 IUSE="systemd rbd"
 
 BDEPEND="virtual/pkgconfig"
@@ -37,6 +37,7 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-0.7.5-respect-flags.patch
 	"${FILESDIR}"/${PN}-0.8.3-no-gziped-docs.patch
 	"${FILESDIR}"/${PN}-0.8.3-json-c-0.14.patch
+	"${FILESDIR}"/${PN}-0.8.3-fix-gcc-10-compatibility.patch
 )
 
 get_systemd_pv() {
