@@ -25,7 +25,7 @@ SRC_URI="
 # setuptools & wheel .whl files are required for testing, exact version is not very important.
 
 LICENSE="MIT"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 SLOT="0"
 IUSE="test -vanilla"
 
@@ -56,6 +56,7 @@ DEPEND="
 python_prepare_all() {
 	local PATCHES=(
 		"${FILESDIR}/${PN}-19.3-disable-version-check.patch"
+		"${FILESDIR}/${P}-test-endian.patch"
 	)
 	if ! use vanilla; then
 		PATCHES+=( "${FILESDIR}/pip-20.0.2-disable-system-install.patch" )
