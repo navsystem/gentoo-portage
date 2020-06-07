@@ -3,35 +3,31 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python3_{6,7,8} )
+PYTHON_COMPAT=( python3_{6..9} )
 PYTHON_REQ_USE='tk?,threads(+)'
 
 DISTUTILS_USE_SETUPTOOLS=bdepend
-
 inherit distutils-r1 flag-o-matic virtualx toolchain-funcs prefix
 
+FT_PV=2.6.1
 DESCRIPTION="Pure python plotting library with matlab like syntax"
 HOMEPAGE="https://matplotlib.org/"
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz
+	test? (
+		https://downloads.sourceforge.net/project/freetype/freetype2/${FT_PV}/freetype-${FT_PV}.tar.gz
+	)"
 
-SLOT="0"
 # Main license: matplotlib
 # Some modules: BSD
 # matplotlib/backends/qt4_editor: MIT
 # Fonts: BitstreamVera, OFL-1.1
 LICENSE="BitstreamVera BSD matplotlib MIT OFL-1.1"
+SLOT="0"
 KEYWORDS="~amd64 ~arm ~arm64 ~ppc ~ppc64 ~x86"
 IUSE="cairo doc excel examples gtk3 latex qt5 tk wxwidgets"
 
-REQUIRED_USE="
-	test? (
-		cairo latex qt5 tk wxwidgets gtk3
-	)
-"
-
 # internal copy of pycxx highly patched
 #	dev-python/pycxx
-
 RDEPEND="
 	>=dev-python/cycler-0.10.0-r1[${PYTHON_USEDEP}]
 	>=dev-python/kiwisolver-1.2.0[${PYTHON_USEDEP}]
@@ -92,14 +88,19 @@ BDEPEND="
 		dev-texlive/texlive-latexrecommended
 		>=media-gfx/graphviz-2.42.3[cairo]
 	)
-	test? ( dev-python/mock[${PYTHON_USEDEP}] )
+	test? (
+		dev-python/flaky[${PYTHON_USEDEP}]
+		dev-python/mock[${PYTHON_USEDEP}]
+		dev-python/pygobject:3[cairo?,${PYTHON_USEDEP}]
+		x11-libs/gtk+:3[introspection]
+	)
 "
 
 # A few C++ source files are written to srcdir.
 # Other than that, the ebuild shall be fit for out-of-source build.
 DISTUTILS_IN_SOURCE_BUILD=1
 
-distutils_enable_tests nose
+distutils_enable_tests pytest
 
 pkg_setup() {
 	unset DISPLAY # bug #278524
@@ -139,6 +140,9 @@ python_prepare_all() {
 		-i lib/matplotlib/{mathtext,fontconfig_pattern}.py \
 		|| die "sed pyparsing failed"
 
+	sed -e 's:\(@pytest.mark.flaky\)(reruns=3):\1:' \
+		-i lib/matplotlib/tests/test_*.py || die
+
 	hprefixify setupext.py
 
 	rm -rf libqhull || die
@@ -146,10 +150,6 @@ python_prepare_all() {
 	export XDG_RUNTIME_DIR="${T}/runtime-dir"
 	mkdir "${XDG_RUNTIME_DIR}" || die
 	chmod 0700 "${XDG_RUNTIME_DIR}" || die
-
-	local freetype_version
-	freetype_version="$(best_version media-libs/freetype | sed -r -e 's/.*-([0-9].*[0-9])(-r[0-9]+|$)/\1/g')"
-	sed -i -r -e "s:(LOCAL_FREETYPE_VERSION =).*:\\1 \"${freetype_version}\":g" setupext.py lib/matplotlib/__init__.py || die
 
 	distutils-r1_python_prepare_all
 }
@@ -176,6 +176,8 @@ python_configure() {
 		tests = $(usex test True False)
 		[gui_support]
 		agg = True
+		gtk = False
+		gtkagg = False
 		pyside = False
 		pysideagg = False
 		qt4 = False
@@ -184,6 +186,7 @@ python_configure() {
 		$(use_setup gtk3)
 		$(use_setup qt5)
 		$(use_setup tk)
+		$(use_setup wxwidgets wx)
 	EOF
 
 	if use gtk3 && use cairo; then
@@ -191,26 +194,11 @@ python_configure() {
 	else
 		echo "gtk3cairo = False" >> "${BUILD_DIR}"/setup.cfg || die
 	fi
-
-	if python_is_python3; then
-		cat >> "${BUILD_DIR}"/setup.cfg <<- EOF || die
-			gtk = False
-			gtkagg = False
-			wx = False
-			wxagg = False
-		EOF
-	else
-		cat >> "${BUILD_DIR}"/setup.cfg <<-EOF || die
-			$(use_setup gtk2 gtk)
-			$(use_setup wxwidgets wx)
-		EOF
-	fi
 }
 
 wrap_setup() {
 	local MAKEOPTS=-j1
 	local -x MPLSETUPCFG="${BUILD_DIR}"/setup.cfg
-	unset DISPLAY
 	"$@"
 }
 
@@ -230,11 +218,19 @@ python_compile_all() {
 	fi
 }
 
-python_test() {
-	wrap_setup distutils_install_for_testing
+src_test() {
+	virtx distutils-r1_src_test
+}
 
-	distutils_install_for_testing
-	"${EPYTHON}" -c "import sys, matplotlib as m; sys.exit(0 if m.test(verbosity=2) else 1)" || die
+python_test() {
+	# we need to rebuild mpl against bundled freetype, otherwise
+	# over 1000 tests will fail because of mismatched font rendering
+	local -x MPLLOCALFREETYPE=1
+	ln -s "${WORKDIR}/freetype-${FT_PV}" "${BUILD_DIR}" || die
+	wrap_setup distutils-r1_python_compile --build-lib="${BUILD_DIR}"/test-lib
+	local -x PYTHONPATH=${BUILD_DIR}/test-lib:${PYTHONPATH}
+
+	"${EPYTHON}" -c "import sys, matplotlib as m; sys.exit(m.test(verbosity=2))" || die
 }
 
 python_install() {
