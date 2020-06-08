@@ -6,10 +6,9 @@
 # This file is only for generic masks. For arch-specific masks (i.e.
 # mask everywhere, unmask on arch/*) use arch/base.
 
-# Michał Górny <mgorny@gentoo.org> (2020-06-07)
-# dev-python/wxpython is broken seriusly with Python 3.7+ (it segfaults)
-# and there is really no point in attempting to port it to py3.9.
-dev-python/matplotlib wxwidgets
+# Mikle Kolyada <zlogene@gentoo.org> (2020-06-08)
+# requires clisp whichis keyworded on fewer arches
+app-text/texlive-core xindy
 
 # Georgy Yakovlev <gyakovlev@gentoo.org> (2020-05-04)
 # Broken error[E0478]: lifetime bound not satisfied
