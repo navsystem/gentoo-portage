@@ -4,7 +4,7 @@
 EAPI=7
 
 DISTUTILS_USE_SETUPTOOLS=rdepend
-PYTHON_COMPAT=( python3_{6,7} )
+PYTHON_COMPAT=( python3_{6..9} )
 PYTHON_REQ_USE="threads(+)"
 
 inherit distutils-r1
@@ -15,7 +15,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~arm64 ~x86"
 
 RDEPEND="
 	>=dev-libs/mathjax-2.4
@@ -43,7 +43,10 @@ BDEPEND="
 	)
 	"
 
-PATCHES=( "${FILESDIR}/${PN}"-5.7.0-no-mathjax.patch )
+PATCHES=(
+	"${FILESDIR}/${PN}"-5.7.0-no-mathjax.patch
+	"${FILESDIR}"/${P}-py39.patch
+)
 
 distutils_enable_tests pytest
 
