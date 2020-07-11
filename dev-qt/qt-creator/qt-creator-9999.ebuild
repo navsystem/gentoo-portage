@@ -26,13 +26,13 @@ fi
 
 # TODO: unbundle sqlite
 
-QTC_PLUGINS=(android +autotest baremetal beautifier boot2qt
+QTC_PLUGINS=(android +autotest autotools:autotoolsprojectmanager baremetal bazaar beautifier boot2qt
 	'+clang:clangcodemodel|clangformat|clangpchmanager|clangrefactoring|clangtools' clearcase
 	cmake:cmakeprojectmanager cppcheck ctfvisualizer cvs +designer git glsl:glsleditor +help ios
 	lsp:languageclient mcu:mcusupport mercurial modeling:modeleditor nim perforce perfprofiler python
 	qbs:qbsprojectmanager +qmldesigner qmlprofiler qnx remotelinux scxml:scxmleditor serialterminal
 	silversearcher subversion valgrind webassembly winrt)
-IUSE="doc systemd test +webengine ${QTC_PLUGINS[@]%:*}"
+IUSE="doc systemd test webengine ${QTC_PLUGINS[@]%:*}"
 RESTRICT="!test? ( test )"
 REQUIRED_USE="
 	boot2qt? ( remotelinux )
@@ -43,7 +43,7 @@ REQUIRED_USE="
 "
 
 # minimum Qt version required
-QT_PV="5.12.3:5"
+QT_PV="5.14:5"
 
 BDEPEND="
 	>=dev-qt/linguist-tools-${QT_PV}
@@ -81,7 +81,6 @@ CDEPEND="
 		webengine? ( >=dev-qt/qtwebengine-${QT_PV}[widgets] )
 	)
 	perfprofiler? ( dev-libs/elfutils )
-	qbs? ( >=dev-util/qbs-1.13.1 )
 	serialterminal? ( >=dev-qt/qtserialport-${QT_PV} )
 	systemd? ( sys-apps/systemd:= )
 "
@@ -95,11 +94,13 @@ DEPEND="${CDEPEND}
 "
 RDEPEND="${CDEPEND}
 	sys-devel/gdb[client,python]
+	autotools? ( sys-devel/autoconf )
 	cmake? ( dev-util/cmake )
 	cppcheck? ( dev-util/cppcheck )
 	cvs? ( dev-vcs/cvs )
 	git? ( dev-vcs/git )
 	mercurial? ( dev-vcs/mercurial )
+	qbs? ( >=dev-util/qbs-1.15 )
 	qmldesigner? ( >=dev-qt/qtquicktimeline-${QT_PV} )
 	silversearcher? ( sys-apps/the_silver_searcher )
 	subversion? ( dev-vcs/subversion )
@@ -209,8 +210,6 @@ src_configure() {
 		KSYNTAXHIGHLIGHTING_INCLUDE_DIR="${EPREFIX}/usr/include/KF5/KSyntaxHighlighting" \
 		$(use clang && echo LLVM_INSTALL_DIR="$(get_llvm_prefix ${LLVM_MAX_SLOT})") \
 		$(use qbs && echo QBS_INSTALL_DIR="${EPREFIX}/usr") \
-		CONFIG+=qbs_disable_rpath \
-		CONFIG+=qbs_enable_project_file_updates \
 		$(use systemd && echo CONFIG+=journald) \
 		$(use test && echo BUILD_TESTS=1)
 }
