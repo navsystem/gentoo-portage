@@ -38,7 +38,7 @@ RDEPEND="${COMMON_DEPEND}"
 
 # sphinx required for man-page and html creation
 BDEPEND="${PYTHON_DEPS}
-	dev-python/sphinx
+	doc? ( dev-python/sphinx )
 	virtual/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
