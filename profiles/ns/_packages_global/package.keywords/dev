@@ -12,7 +12,7 @@
 =app-portage/deltup-0.4.6 amd64 x86
 <sci-geosciences/osm2pgsql-99999999 amd64 x86
 =net-misc/modem-manager-gui-0.0.16 amd64 x86
-=sci-geosciences/mapserver-7.2.2 amd64 x86
+=sci-geosciences/mapserver-7.6.0 amd64 x86
 =sys-block/megamgr-5.20-r2 amd64 x86
 =sci-geosciences/tilecache-2.11-r1 amd64 x86
 =dev-db/pgpool2-3.6.5 amd64 x86
@@ -33,7 +33,7 @@
 <www-client/chromium-63 x86
 =dev-libs/libxml2-2.9.5 x86
 =media-gfx/scour-0.36 amd64 x86
-=sci-geosciences/qgis-3.10.1 amd64
+=sci-geosciences/qgis-3.10.7 amd64
 =sci-libs/proj-6.2.1 amd64
 =dev-python/sip-4.19.20 amd64
 =sci-libs/shapelib-1.4.1 amd64

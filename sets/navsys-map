@@ -1,5 +1,2 @@
-sci-geosciences/mapserver
-sci-geosciences/tilecache
-sci-geosciences/osm2pgsql
 dev-db/postgis
 
