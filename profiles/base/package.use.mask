@@ -52,7 +52,7 @@ www-client/firefox screencast
 # Mart Raudsepp <leio@gentoo.org> (2020-06-28)
 # media-video/pipewire:0/0.3 is ongoing work, 0.2 on mutter-3.34
 # is not worth trying to get to work.
-x11-wm/mutter screencast
+<x11-wm/mutter-3.36 screencast
 
 # Stephan Hartmann <stha09@googlemail.com> (2020-06-28)
 # Mostly intended for development and not for general use.
@@ -167,10 +167,6 @@ sci-physics/root cudnn
 # Encrypted Media Extensions (eme-free) can't be disabled everywhere
 mail-client/thunderbird eme-free
 www-client/firefox eme-free
-
-# Michał Górny <mgorny@gentoo.org> (2020-03-03)
-# Tests require py2 sleekxmpp and they are restricted anyway.
-net-im/spectrum2 test
 
 # Rick Farina <zerochaos@gentoo.org> (2020-02-26)
 # dev-python/pyzmq USE=doc deps are not met with python2_7
