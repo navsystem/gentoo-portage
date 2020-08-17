@@ -32,6 +32,46 @@
 
 #--- END OF EXAMPLES ---
 
+# Kent Fredric <kentnl@gentoo.org> (2020-08-17)
+# No reverse dependencies, and Gtk support is becomming
+# obsolete in Gentoo
+# Removal in 30 days
+dev-perl/gnome2-vfs-perl
+
+# Michał Górny <mgorny@gentoo.org> (2020-08-17)
+# Dead pygtk-2 era library.  No reverse dependencies left.
+# Removal in 30 days.  Bug #706480.
+dev-python/notify-python
+
+# Mart Raudsepp <leio@gentoo.org> (2020-08-16)
+# Temporary mask until accidentally missed app-crypt/gcr
+# bump is finalized
+=gnome-base/gnome-core-apps-3.36.5
+
+# Alfredo Tupone <tupone@gentoo.org> (2020-08-16)
+# Ported to py3.8 but not yet released
+# Masked to allow py2.7 removal
+dev-ada/langkit
+dev-ada/libadalang
+dev-ada/libadalang-tools
+dev-ada/gps
+
+# Zac Medico <zmedico@gentoo.org> (2020-08-16)
+# Not ported to py3.7. No reverse deps.
+# Removal in 30 days. Bug #719098.
+dev-python/mem_top
+
+# Michał Górny <mgorny@gentoo.org> (2020-08-16)
+# Unmaintained.  Not ported to py3.7.  The only revdep is queued
+# for removal.
+# Removal in 30 days.  Bug #719544.
+dev-python/robotframework
+
+# Zac Medico <zmedico@gentoo.org> (2020-08-01)
+# Not ported to py3.7. No reverse deps.
+# Removal in 30 days. Bug #719542.
+dev-python/robotbackgroundlogger
+
 # Sergei Trofimovich <slyfox@gentoo.org> (2020-08-16)
 # Obsolete package without reverse dependencies.
 # Does not compile against ghc-8.8. Removal in 30 days.
@@ -337,11 +377,6 @@ media-gfx/cptutils
 net-wireless/cpyrit-cuda
 net-wireless/cpyrit-opencl
 net-wireless/pyrit
-
-# Aaron Bauman <bman@gentoo.org> (2020-08-02)
-# Py2 only. m-n. Bug #735486
-# Removal in 30 days
-sys-fs/ecryptfs-utils
 
 # Aaron Bauman <bman@gentoo.org> (2020-08-02)
 # Py2 only. m-n. Bug #735524
@@ -812,12 +847,6 @@ sys-kernel/genkernel-next
 # dependencies have long since switched to vendoring.
 # Removal in 30 days. Bug #732136.
 dev-go/goptlib
-
-# Kent Fredric <kentnl@gentoo.org> (2020-07-10)
-# No reverse dependencies, and Gtk2 support is becomming
-# obsolete in Gentoo.
-# Removal in 30 days
-dev-perl/gnome2-perl
 
 # Michał Górny <mgorny@gentoo.org> (2020-07-04)
 # Unmaintained.  Requires scipy-python2.  Current version is from 2015,
