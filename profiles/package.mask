@@ -32,6 +32,17 @@
 
 #--- END OF EXAMPLES ---
 
+# Piotr Karbowski <slashbeast@gentoo.org> (2020-08-28)
+# Temporary mask due to multiple reports of segfaults at startup, bug #739056 
+=x11-base/xorg-server-1.20.9
+
+# Marek Szuba <marecki@gentoo.org> (2020-08-26)
+# ROCm has had open-source OpenCL image support since 3.3, and since 3.7
+# it no longer attempts to use the proprietary library even when it is
+# present. Last but not least, upstream no longer publishes this.
+# Removal in 30 days. Bug #739066.
+dev-libs/hsa-ext-rocr
+
 # Sergei Trofimovich <slyfox@gentoo.org> (2020-08-24)
 # Abandoned upstream.
 # Does not compile against ghc-8.8. Removal in 30 days.
