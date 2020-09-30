@@ -3,10 +3,8 @@
 
 EAPI=7
 
+DISTUTILS_USE_SETUPTOOLS=rdepend
 PYTHON_COMPAT=( python3_{6,7,8,9} )
-# The package uses entry points but setup.py is weird
-# so the eclass doesn't detect it
-DISTUTILS_USE_SETUPTOOLS=manual
 
 inherit distutils-r1
 
@@ -28,17 +26,19 @@ RDEPEND="
 	dev-python/minidb[${PYTHON_USEDEP}]
 	dev-python/pyyaml[${PYTHON_USEDEP}]
 	dev-python/requests[${PYTHON_USEDEP}]
-	dev-python/setuptools[${PYTHON_USEDEP}]
 "
 BDEPEND="
-	dev-python/setuptools[${PYTHON_USEDEP}]
 	test? (
 		${RDEPEND}
+		dev-python/docutils[${PYTHON_USEDEP}]
+		dev-python/pycodestyle[${PYTHON_USEDEP}]
 		dev-python/pytest[${PYTHON_USEDEP}]
 	)
 "
 
 DOCS=( CHANGELOG.md README.md )
+
+distutils_enable_sphinx docs/source dev-python/alabaster
 
 python_test() {
 	local skipped_tests=(

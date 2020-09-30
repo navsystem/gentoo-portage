@@ -22,11 +22,12 @@ REQUIRED_USE="
 "
 
 RDEPEND="
-	>=dev-libs/libuv-1.35.0:=
-	>=net-dns/c-ares-1.15.0
-	>=net-libs/nghttp2-1.39.2
+	>=app-arch/brotli-1.0.9
+	>=dev-libs/libuv-1.40.0:=
+	>=net-dns/c-ares-1.16.1
+	>=net-libs/nghttp2-1.41.0
 	sys-libs/zlib
-	icu? ( >=dev-libs/icu-66.1:= )
+	icu? ( >=dev-libs/icu-67.1:= )
 	system-ssl? ( >=dev-libs/openssl-1.1.1:0= )
 "
 BDEPEND="
@@ -95,7 +96,11 @@ src_configure() {
 	xdg_environment_reset
 
 	local myconf=(
-		--shared-cares --shared-libuv --shared-nghttp2 --shared-zlib
+		--shared-brotli
+		--shared-cares
+		--shared-libuv
+		--shared-nghttp2
+		--shared-zlib
 	)
 	use debug && myconf+=( --debug )
 	use icu && myconf+=( --with-intl=system-icu ) || myconf+=( --with-intl=none )

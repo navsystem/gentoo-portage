@@ -12,7 +12,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS="amd64 ~arm ~arm64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="examples extras pandas scipy test xml yaml"
 RESTRICT="!test? ( test )"
 
@@ -29,12 +29,12 @@ RDEPEND="
 	pandas? (
 		>=dev-python/pandas-0.23.3[${PYTHON_USEDEP}]
 	)
-	scipy? ( >=sci-libs/scipy-1.1.0[${PYTHON_USEDEP}] )
+	scipy? ( >=dev-python/scipy-1.1.0[${PYTHON_USEDEP}] )
 	xml? ( >=dev-python/lxml-4.2.3[${PYTHON_USEDEP}] )
 	yaml? ( >=dev-python/pyyaml-3.13[${PYTHON_USEDEP}] )"
 BDEPEND="
 	test? (
-		>=sci-libs/scipy-1.1.0[${PYTHON_USEDEP}]
+		>=dev-python/scipy-1.1.0[${PYTHON_USEDEP}]
 	)"
 
 distutils_enable_tests pytest

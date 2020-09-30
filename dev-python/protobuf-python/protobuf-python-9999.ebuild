@@ -2,8 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="7"
-PYTHON_COMPAT=(python{2_7,3_6,3_7,3_8})
-DISTUTILS_USE_SETUPTOOLS="manual"
+PYTHON_COMPAT=(python{3_6,3_7,3_8,3_9})
+DISTUTILS_USE_SETUPTOOLS="rdepend"
 
 inherit distutils-r1
 
@@ -23,14 +23,13 @@ else
 fi
 
 LICENSE="BSD"
-SLOT="0/23"
+SLOT="0/24"
 KEYWORDS=""
 IUSE=""
 
 BDEPEND="${PYTHON_DEPS}
 	~dev-libs/protobuf-${PV}
 	dev-python/namespace-google[${PYTHON_USEDEP}]
-	dev-python/setuptools[${PYTHON_USEDEP}]
 	dev-python/six[${PYTHON_USEDEP}]"
 DEPEND="${PYTHON_DEPS}
 	~dev-libs/protobuf-${PV}"
@@ -42,6 +41,17 @@ S="${WORKDIR}/protobuf-${PV}/python"
 if [[ "${PV}" == "9999" ]]; then
 	EGIT_CHECKOUT_DIR="${WORKDIR}/protobuf-${PV}"
 fi
+
+python_prepare_all() {
+	pushd "${WORKDIR}/protobuf-${PV}" > /dev/null || die
+	eapply "${FILESDIR}/${PN}-3.13.0-google.protobuf.pyext._message.PyUnknownFieldRef.patch"
+	eapply_user
+	popd > /dev/null || die
+
+	distutils-r1_python_prepare_all
+
+	sed -e "/^[[:space:]]*setup_requires = \['wheel'\],$/d" -i setup.py || die
+}
 
 python_configure_all() {
 	mydistutilsargs=(--cpp_implementation)

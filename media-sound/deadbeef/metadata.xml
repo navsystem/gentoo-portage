@@ -1,33 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-        <use>
-                <flag name='adplug'>Add supereq for <pkg>media-libs/adplug</pkg></flag>
-                <flag name='alac'>Enable support for alac</flag>
-                <flag name='ape'>Monkey's Audio plugin</flag>
-                <flag name='converter'>Enable media-converter</flag>
-                <flag name='cover'>Build album art loader plugin</flag>
-                <flag name='cover-imlib2'>Use imlib2 in artwork plugin</flag>
-                <flag name='dumb'>Support for tracker music(MOD, S3M, XM, IT, STM, 669, PTM, PSM, MTM, DSM, ASYLUM AMF, UMX, J2B)</flag>
-                <flag name='gme'>Game Music Emu plugin for NSF, AY, etc</flag>
-                <flag name='gtk2'>Build with x11-libs/gtk+:2</flag>
-                <flag name='gtk3'>Build with x11-libs/gtk+:3</flag>
-                <flag name='hotkeys'>Enable hotkeys plugin</flag>
-                <flag name='lastfm'>Enable lastfm plugin</flag>
-                <flag name='m3u'>Support for m3u playlists</flag>
-                <flag name='midi'>Add support for midi files</flag>
-                <flag name='mono2stereo'>Enable mono2stereo plugin</flag>
-                <flag name='notify'>Notification-daemon support plugin</flag>
-                <flag name='nullout'>NULL output plugin</flag>
-                <flag name='psf'>AOSDK-based PSF(QSF,SSF,DSF) plugin</flag>
-                <flag name='rpath'>Hardcode runtime library paths</flag>
-                <flag name='shellexec'>Shell commands plugin</flag>
-                <flag name='shn'>Support for shorten (.shn) files</flag>
-                <flag name='sid'>Commodore64 SID music player plugin</flag>
-                <flag name='src'>Add <pkg>media-libs/libsamplerate</pkg> support</flag>
-                <flag name='supereq'>SuperEQ DSP plugin</flag>
-                <flag name='tta'>Build tta plugin</flag>
-                <flag name='vtx'>Libayemy VTX ZX-Spectrum music player plugin</flag>
-                <flag name='zip'>Vfs_zip plugin</flag>
-        </use>
+	<maintainer type="person">
+		<email>slashbeast@gentoo.org</email>
+		<name>Piotr Karbowski</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">DeaDBeeF-Player/deadbeef</remote-id>
+	</upstream>
+	<use>
+		<flag name='converter'>File format converter</flag>
+		<flag name='cover'>Support for cover art</flag>
+		<flag name='hotkeys'>Keyboard shortcuts support</flag>
+		<flag name='lastfm'>last.fm/AudioScrobbler protocol support</flag>
+		<flag name='notify'>Desktop notifications support</flag>
+		<flag name='nullout'>Dummy output driver</flag>
+		<flag name='shellexec'>Define custom shell commands that can be called on tracks</flag>
+		<flag name='supereq'>Enable equalizer</flag>
+	</use>
 </pkgmetadata>

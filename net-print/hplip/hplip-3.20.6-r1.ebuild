@@ -18,7 +18,7 @@ SRC_URI="mirror://sourceforge/hplip/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm arm64 ~ppc ~ppc64 x86"
+KEYWORDS="amd64 arm arm64 ppc ppc64 x86"
 
 IUSE="doc fax +hpcups hpijs kde libnotify libressl -libusb0 minimal parport policykit qt5 scanner +snmp static-ppds X"
 
@@ -35,7 +35,7 @@ COMMON_DEPEND="
 		snmp? (
 			!libressl? ( dev-libs/openssl:0= )
 			libressl? ( dev-libs/libressl:= )
-			net-analyzer/net-snmp
+			net-analyzer/net-snmp:=
 		)
 	)
 "

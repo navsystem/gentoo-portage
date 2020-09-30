@@ -65,24 +65,32 @@ QA_FLAGS_IGNORED_amd64=" usr/lib64/vmd/plugins/LINUX/tcl/volutil/volutil"
 QA_FLAGS_IGNORED_x86=" usr/lib/vmd/plugins/LINUX/tcl/volutil/volutil"
 
 pkg_nofetch() {
-	elog "Please download ${P}.src.tar from"
+	elog "Please download ${MY_P}.src.tar from"
 	elog "${VMD_DOWNLOAD}"
 	elog "after agreeing to the license and get"
-	elog "https://dev.gentoo.org/~jlec/distfiles/${P}-gentoo-patches.tar.xz"
+	elog "https://dev.gentoo.org/~jlec/distfiles/${PN}-1.9.3-gentoo-patches.tar.xz"
 	elog "Place both into your DISTDIR directory"
 	elog
 	elog "Due to an upstream bug (https://bugs.gentoo.org/640440) sources"
 	elog "file may get downloaded as a compressed tarball or not. In that case"
 	elog "you will need to ensure you uncompress the file and rename it"
-	elog "as ${P}.src.tar"
+	elog "to ${MY_P}.src.tar"
 }
 
 src_prepare() {
+	# Apply user patches from ${WORKDIR} to allow patching on patches
+	# subdir too
+	cd "${WORKDIR}"
 	xdg_src_prepare
+
+	# https://www.ks.uiuc.edu/Research/vmd/mailing_list/vmd-l/32121.html
+	# https://www.ks.uiuc.edu/Research/vmd/mailing_list/vmd-l/32116.html
+	eapply "${FILESDIR}"/${PN}-1.9.4-gentoo-plugins.patch
 
 	use cuda && cuda_sanitize
 
-	cd "${WORKDIR}"/plugins || die
+	# Prepare plugins
+	cd plugins || die
 
 	sed '/^.SILENT/d' -i $(find -name Makefile)
 
@@ -113,6 +121,8 @@ src_prepare() {
 	cd "${S}" || die
 
 	eapply "${FILESDIR}"/${PN}-1.9.4-gentoo-paths.patch
+
+	# https://www.ks.uiuc.edu/Research/vmd/mailing_list/vmd-l/32122.html
 	eapply "${FILESDIR}"/${PN}-1.9.4-tmpdir.patch
 
 	# PREFIX
