@@ -46,7 +46,7 @@ SRC_URI="${MOZ_SRC_BASE_URI}/source/${PN}-${MOZ_PV}.source.tar.xz
 DESCRIPTION="Firefox Web Browser"
 HOMEPAGE="https://www.mozilla.com/firefox"
 
-KEYWORDS="~amd64 ~arm64 ~ppc64 ~x86"
+KEYWORDS="amd64 ~arm64 ~ppc64 ~x86"
 
 SLOT="0/esr$(ver_cut 1)"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
@@ -557,16 +557,10 @@ src_configure() {
 
 	mozconfig_use_enable debug
 	if use debug ; then
-		if is-flag '-g*' ; then
-			mozconfig_add_options_ac '+debug' --enable-debug-symbols=$(get-flag '-g*')
-		else
-			mozconfig_add_options_ac '+debug' --enable-debug-symbols
-		fi
-
 		mozconfig_add_options_ac '+debug' --disable-optimize
 	else
 		if is-flag '-g*' ; then
-			mozconfig_add_options_ac '+debug' --enable-debug-symbols=$(get-flag '-g*')
+			mozconfig_add_options_ac 'from CFLAGS' --enable-debug-symbols=$(get-flag '-g*')
 		else
 			mozconfig_add_options_ac 'Gentoo default' --disable-debug-symbols
 		fi
