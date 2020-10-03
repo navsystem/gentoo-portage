@@ -6,7 +6,7 @@
 ~sci-geosciences/mapnik-3.0.18 amd64 x86
 =media-fonts/paratype-2.5 amd64 x86
 =net-im/skype-4.3.0.37-r5 amd64 x86
-=media-sound/deadbeef-0.6.2 amd64 x86
+=media-sound/deadbeef-1.8.4 amd64 x86
 =sys-block/zram-init-3.8 amd64 x86
 ~dev-util/bdelta-0.3.1 amd64 x86
 =app-portage/deltup-0.4.6 amd64 x86
@@ -19,7 +19,7 @@
 =sys-block/megarc-1.11-r2 amd64 x86
 =dev-python/simple-date-0.4.8 amd64 x86
 =net-im/jitsi-bin-2.5 amd64 x86
-=net-im/psi-1.4 amd64 x86
+=net-im/psi-1.5 amd64 x86
 =net-im/psimedia-9999 amd64 x86
 =net-misc/teamviewer-12.0.85001 amd64 x86
 =app-editors/sublime-text-3103 amd64 x86
