@@ -3,17 +3,15 @@
 
 EAPI=7
 
-inherit flag-o-matic
-
-MAJOR="2.2"
+MAJOR="3.0"
 DESCRIPTION="GNU Ubiquitous Intelligent Language for Extensions"
 HOMEPAGE="https://www.gnu.org/software/guile/"
 SRC_URI="mirror://gnu/guile/${P}.tar.gz"
 
 LICENSE="LGPL-3+"
-SLOT="12/2.2-1" # libguile-2.2.so.1 => 2.2-1
-KEYWORDS="~alpha amd64 arm arm64 hppa ~ia64 ~m68k ~mips ppc ppc64 ~riscv s390 sparc x86 ~ppc-aix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
-IUSE="debug debug-malloc +deprecated +networking +nls +regex +threads" # upstream recommended +networking +nls
+SLOT="12/3.0-1" # libguile-2.2.so.1 => 2.2-1
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86 ~ppc-aix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
+IUSE="debug debug-malloc +deprecated +jit +networking +nls +regex +threads" # upstream recommended +networking +nls
 REQUIRED_USE="regex" # workaround for bug 596322
 RESTRICT="strip"
 
@@ -35,9 +33,6 @@ PATCHES=( "${FILESDIR}/${PN}-2.2.3-gentoo-sandbox.patch" )
 DOCS=( GUILE-VERSION HACKING README )
 
 src_configure() {
-	# see bug #178499
-	filter-flags -ftree-vectorize
-
 	# see bug #676468
 	mv prebuilt/32-bit-big-endian{,.broken} || die
 
@@ -55,6 +50,7 @@ src_configure() {
 		$(use_enable debug guile-debug) \
 		$(use_enable debug-malloc) \
 		$(use_enable deprecated) \
+		$(use_enable jit) \
 		$(use_enable networking) \
 		$(use_enable nls) \
 		$(use_enable regex) \
@@ -65,7 +61,7 @@ src_install() {
 	default
 
 	# From Novell
-	# 	https://bugzilla.novell.com/show_bug.cgi?id=874028#c0
+	# https://bugzilla.novell.com/show_bug.cgi?id=874028#c0
 	dodir /usr/share/gdb/auto-load/$(get_libdir)
 	mv "${ED}"/usr/$(get_libdir)/libguile-*-gdb.scm "${ED}"/usr/share/gdb/auto-load/$(get_libdir) || die
 

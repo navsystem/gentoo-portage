@@ -1,6 +1,11 @@
 # Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# Sam James <sam@gentoo.org> (2020-10-05)
+# Guile only supports JIT on some arches
+# (See 9.3.8 in the Guile manual)
+dev-scheme/guile -jit
+
 # Georgy Yakovlev <gyakovlev@gentoo.org> (2020-09-18)
 # swt 4.10 not keyworded on x86
 dev-java/openjdk:8 javafx
@@ -129,10 +134,11 @@ app-admin/conserver -freeipmi
 # No Spice protocol for x86
 app-emulation/nemu spice
 
-# Thomas Deutschmann <whissi@gentoo.org> (2018-11-15)
+# Thomas Deutschmann <whissi@gentoo.org> (2020-10-06)
+# - aesni plugin is supported on x86
 # - rdrand plugin is supported on x86
 # - padlock plugin is supported on x86
-net-vpn/strongswan -strongswan_plugins_rdrand -strongswan_plugins_padlock
+net-vpn/strongswan -strongswan_plugins_aesni -strongswan_plugins_rdrand -strongswan_plugins_padlock
 
 # Alexys Jacob <ultrabug@gentoo.org> (2018-11-05)
 # Requires dev-db/mongodb which has dropped x86 support

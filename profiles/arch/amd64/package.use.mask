@@ -17,6 +17,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Sam James <sam@gentoo.org> (2020-10-05)
+# Guile only supports JIT on some arches
+# (See 9.3.8 in the Guile manual)
+dev-scheme/guile -jit
+
 # Thomas Deutschmann <whissi@gentoo.org> (2020-09-07)
 # dev-util/nvidia-cuda-toolkit is keyworded on amd64
 app-metrics/collectd -collectd_plugins_gpu_nvidia
@@ -124,9 +129,10 @@ x11-apps/igt-gpu-tools -overlay
 # freeipmi is supported on amd64
 app-admin/conserver -freeipmi
 
-# Thomas Deutschmann <whissi@gentoo.org> (2018-11-15)
+# Thomas Deutschmann <whissi@gentoo.org> (2020-10-06)
+# - aesni plugin is supported on amd64
 # - rdrand plugin is supported on amd64
-net-vpn/strongswan -strongswan_plugins_rdrand
+net-vpn/strongswan -strongswan_plugins_aesni -strongswan_plugins_rdrand
 
 # James Le Cuirot <chewi@gentoo.org> (2018-11-02)
 # Vulkan is only available on amd64 at present.
