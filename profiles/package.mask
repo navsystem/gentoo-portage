@@ -32,12 +32,21 @@
 
 #--- END OF EXAMPLES ---
 
+# Andrew Savchenko <bircoph@gentoo.org> (2020-10-11)
+# Mask old openafs version and corresponding openafs-kernel with
+# multiple CVEs.
+# All kernel module functionality is merged back in the single
+# net-fs/openafs package using USE="modules" starting from 1.8 branch.
+# No reverse dependencies, bug #719136. Removal in 30 days.
+net-fs/openafs-kernel
+<net-fs/openafs-1.8
+
 # Sam James <sam@gentoo.org> (2020-10-11)
 # Current Wireshark in ~arch is vulnerable.
-# Maintainer did not want to update after QA
-# intervention.
-# Please use stable Wireshark for now.
-# 744592
+# Not updated yet due to maintainer inactivity.
+# This forces a downgrade to the fixed, stable
+# version of Wireshark.
+# bug #744592
 =net-analyzer/wireshark-3.3.0
 
 # Sergei Trofimovich <slyfox@gentoo.org> (2020-10-11)
@@ -442,43 +451,6 @@ dev-python/args
 # Removal in 30 days
 net-dialup/tkvoice
 
-# Sam James <sam@gentoo.org> (2020-09-12)
-# Merged into app-text/texlive-core
-# Removal in 30 days
-dev-tex/chktex
-
-# Sam James <sam@gentoo.org> (2020-09-12)
-# Merged into dev-texlive/texlive-bibtexextra
-# Removal in 30 days
-dev-tex/biblatex-apa
-
-# Mikle Kolyada <zlogene@gentoo.org> (2020-09-12)
-# Merged into the texlive-core package.
-# Removal in 30 days
-dev-tex/detex
-
-# Mikle Kolyada <zlogene@gentoo.org> (2020-09-12)
-# Has been a part of a cstex macro for a long time.
-# The cste xmacro is provided by the
-# dev-texlive/texlive-langczechslovak package.
-# Removal in 30 days
-dev-tex/csindex
-
-# Mikle Kolyada <zlogene@gentoo.org> (2020-09-12)
-# Dead upstream and does not build.
-# Removal in 30 days
-dev-tex/dvipost
-
-# Louis Sautier <sbraz@gentoo.org> (2020-09-12)
-# Masked for removal in 30 days, unmaintained, no revdeps.
-# Former dependency of app-admin/supervisor.
-dev-python/meld3
-
-# Zac Medico <zmedico@gentoo.org> (2020-09-11)
-# Upstream is inactive and does not support OpenSSL 1.1.
-# Removal in 30 days. Bug #741614.
-net-vpn/peervpn
-
 # Thomas Deutschmann <whissi@gentoo.org> (2020-09-11)
 # These versions are not compatible with current stable
 # dev-libs/openssl version, bug #741622.
@@ -607,6 +579,11 @@ net-libs/nDPI
 # are developers or want more experimental features
 # and accept a more unstable release.
 >=www-client/chromium-87
+
+# Mart Raudsepp <leio@gentoo.org> (2020-06-06)
+# Meson port does not handle multilib yet and has issues
+# regarding runstatedir (not using /run).
+=net-misc/networkmanager-1.22*
 
 # Georgy Yakovlev <gyakovlev@gentoo.org> (2020-03-27)
 # Vulnerable old version of icedtea-web #711392
