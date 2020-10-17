@@ -10,7 +10,7 @@ cups dri infinality natspec ffmpeg -libav melt aac semantic-desktop -nepomuk gpm
 
 tracepath traceroute freetds odbc midi timidity vnc
 
-cmake rpc lto wayland gles2
+cmake rpc lto wayland screencast gles2
 
 uuid glamor gpg openssl infinality
 sip sipim json
