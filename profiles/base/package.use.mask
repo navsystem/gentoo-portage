@@ -62,10 +62,6 @@ sci-geosciences/qgis grass
 dev-db/mariadb columnstore
 
 # Michał Górny <mgorny@gentoo.org> (2020-08-01)
-# Require dev-python/twisted with py2.7.
-net-voip/telepathy-haze test
-
-# Michał Górny <mgorny@gentoo.org> (2020-08-01)
 # dev-python/distributed is going to be last rited.
 dev-python/joblib doc
 
@@ -78,7 +74,6 @@ www-apps/nikola websocket
 # They are generally fixable by adding py3 support and using
 # distutils_enable_sphinx to build docs.
 <=dev-python/lockfile-0.12.2-r2 doc
-<=dev-python/mysql-python-1.2.5-r3 doc
 <dev-python/pep8-1.7.1-r1 doc
 <dev-python/psycopg-2.8.4 doc
 
@@ -130,11 +125,6 @@ dev-util/meson test
 # Michał Górny <mgorny@gentoo.org> (2020-04-19)
 # Requires dev-vcs/ghp-import that is masked for removal.
 www-apps/nikola ghpages
-
-# Ulrich Müller <ulm@gentoo.org> (2020-04-08)
-# Old versions of libjpeg-turbo have known security issues.
-# Use the bundled lib on your own risk. Bug #715106.
-net-im/zoom bundled-libjpeg-turbo
 
 # Alfredo Tupone <tupone@gentoo.org> (2020-04-04)
 # Ada support is not yet ready for sys-deve/gcc
