@@ -12,7 +12,7 @@ if [[ ${PV} == "9999" ]]; then
 	inherit git-r3
 else
 	SRC_URI="https://gmic.eu/files/source/${PN}_${PV}.tar.gz"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64 ~arm64 ~x86"
 fi
 
 DESCRIPTION="GREYC's Magic Image Converter"
@@ -96,6 +96,8 @@ src_prepare() {
 			-e '/${CMAKE_EXE_LINKER_FLAGS} -s/d' \
 			-i gmic-qt/CMakeLists.txt || die
 		local S="${S}/gmic-qt"
+		# Bug #753377
+		local PATCHES=()
 		cmake_src_prepare
 	fi
 }
