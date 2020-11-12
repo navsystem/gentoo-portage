@@ -126,20 +126,6 @@ sci-libs/mkl-rt
 # Removal in 30 days.  Bug #725646.
 media-fonts/mathematica-fonts
 
-# Michał Górny <mgorny@gentoo.org> (2020-11-07)
-# sys-cluster/cluster-glue fails to install for almost a year now.
-# The remaining packages are its reverse dependencies.
-#
-# The stable version of sys-cluster/pacemaker is vulnerable.  It is also
-# using Python 2.  A newer version can not be stabilized because
-# of the above.
-#
-# Removal in 30 days.  Bug #704610.
-sys-cluster/cluster-glue
-sys-cluster/crmsh
-sys-cluster/pacemaker
-sys-cluster/resource-agents
-
 # Andreas Sturmlechner <asturm@gentoo.org> (2020-11-05)
 # Replaced by kde-frameworks/kdav, masked for removal in 14 days.
 kde-apps/kdav
@@ -351,6 +337,7 @@ dev-lua/luacrypto
 >=dev-lua/messagepack-0.3.2-r100
 >=dev-lua/toluapp-1.0.93_p20190513-r100
 >=dev-util/geany-plugins-1.37-r100
+=games-action/minetest-5.3.0-r100
 >=games-engines/love-0.7.2-r100:0.7
 >=games-engines/love-0.8.0-r100:0.8
 >=games-engines/love-11.3-r100:0
@@ -708,6 +695,7 @@ app-admin/amazon-ec2-init
 # Adding Lua 5.3 to mask
 app-eselect/eselect-lua
 =dev-lang/lua-5.1.5-r103
+=dev-lang/lua-5.1.5-r104
 =dev-lang/lua-5.2.4-r2
 =dev-lang/lua-5.3.5-r2
 
