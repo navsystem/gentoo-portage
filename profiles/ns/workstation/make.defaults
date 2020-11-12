@@ -8,6 +8,8 @@ networkmanager private-headers declarative bash-completion pm-utils vnc rdesktop
 aspell histman hunspell multimedia oscar phonon qml idn lame mod djvu ebook gudev encode right_timezone
 cups dri infinality natspec ffmpeg -libav melt aac semantic-desktop -nepomuk gpm opus xmp winbind ads ldap soprano
 
+btrfs
+
 tracepath traceroute freetds odbc midi timidity vnc
 
 cmake rpc lto wayland screencast gles2
