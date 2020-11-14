@@ -1,6 +1,10 @@
 # Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# Cédric Krier <cedk@gentoo.org> (2020-11-10)
+# virtual/rust has no ppc keyword
+dev-vcs/mercurial rust
+
 # Mark Wright <gienah@gentoo.org> (2020-10-11)
 # dev-ml/ounit2 is not keyworded
 dev-ml/cudf test
@@ -70,6 +74,10 @@ net-libs/pjproject g729
 # Luke Dashjr <luke-jr+gentoobugs@utopios.org> (2019-09-21)
 # iasl is stable on ppc
 sys-firmware/seabios -debug
+
+# Eugene Bright <eugene@bright.gdn> (2019-09-09)
+# Missing keyword on dev-embedded/libjaylink
+sys-apps/flashrom jlink-spi
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2019-05-15)
 # sys-cluster/hpx, sci-libs/silo not keyworded
