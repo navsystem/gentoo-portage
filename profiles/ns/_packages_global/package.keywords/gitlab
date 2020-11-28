@@ -1,0 +1,5 @@
+www-apps/gitlabhq amd64
+dev-vcs/gitlab-shell amd64
+dev-vcs/gitlab-gitaly amd64
+www-servers/gitlab-workhorse amd64
+app-eselect/eselect-gitlabhq amd64
