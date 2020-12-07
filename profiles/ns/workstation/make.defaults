@@ -15,7 +15,9 @@ tracepath traceroute freetds odbc midi timidity vnc
 cmake rpc lto wayland screencast gles2
 
 uuid glamor gpg openssl infinality
-sip sipim json
+sip sipim json 
+
+spice lz4 zstd lzo
 
 input_devices_evdev video_cards_intel video_cards_nouveau video_cards_radeon video_cards_vesa
 video_cards_r300 video_cards_r600 video_cards_i915 video_cards_i965
