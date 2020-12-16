@@ -375,20 +375,6 @@ net-news/quiterss
 # (current RC2 is from 2016). Bugs #653100 and #734880. Removal in 30 days.
 app-text/goldendict
 
-# Michał Górny <mgorny@gentoo.org> (2020-11-15)
-# Fails to build.  Lots of bugs filed.  Not touched by maintainer
-# since 2018.
-# Removal in 30 days.  Bug #721990.
-media-video/cinelerra
-
-# Aisha Tammy <gentoo@aisha.cc> (2020-11-13)
-# dead packages with latest releases before 2013
-# these are superseded by other scikit packages
-# scikit-optimize, sktime
-# Removal in 30 days (Bug #749297)
-sci-libs/scikits_optimization
-sci-libs/scikits_timeseries
-
 # Jonas Stein <jstein@gentoo.org> (2020-11-12)
 # Adobe will stop distributing Flash Player after 2020-12-31.
 # Masked for removal after 2020-12-31
@@ -570,6 +556,7 @@ kde-apps/kdebase-meta:5
 >=games-engines/love-0.8.0-r100:0.8
 >=games-engines/love-11.3-r100:0
 >=games-engines/solarus-1.3.1-r100
+>=games-engines/stratagus-2.4.3-r100
 >=games-puzzle/fish-fillets-1.0.1-r100
 >=games-roguelike/crossfire-client-1.71.0-r100
 >=games-roguelike/stone-soup-0.25.1-r100
@@ -598,7 +585,8 @@ kde-apps/kdebase-meta:5
 >=net-p2p/eiskaltdcpp-2.2.10-r100
 >=sci-astronomy/celestia-1.7.0_pre20200316-r100
 >=sci-libs/plplot-5.15.0-r100
->=sci-visualization/gnuplot-5.4.0-r100
+=sci-visualization/gnuplot-5.4.0-r100
+=sci-visualization/gnuplot-5.4.1-r1
 >=sci-visualization/fityk-1.3.1-r100
 >=sys-apps/likwid-4.3.4
 >=www-apache/mod_security-2.9.3-r100
@@ -606,7 +594,9 @@ kde-apps/kdebase-meta:5
 >=www-client/luakit-2.2.1-r100
 >=www-servers/lighttpd-1.4.55-r100
 >=x11-misc/devilspie2-0.43-r100
+>=x11-themes/gtk-engines-2.20.2-r100
 >=x11-wm/awesome-4.3-r100
+>=x11-wm/notion-3_p2015061300-r100
 >=mail-filter/opendkim-2.10.3-r25
 
 # Azamat H. Hackimov <azamat.hackimov@gmail.com> (2020-10-06)
