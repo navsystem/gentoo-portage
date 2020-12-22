@@ -158,3 +158,4 @@ net-libs/nodejs inspector
 media-libs/libsdl2 haptic
 app-arch/xz-utils static-libs
 net-dns/dnsmasq script
+app-arch/zstd static-libs
