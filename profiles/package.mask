@@ -32,6 +32,14 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2020-12-30)
+# Unmaintained.  Entirely replaced by media-libs/libjpeg-turbo,
+# to the point that reverse dependencies no longer build with
+# media-libs/jpeg.  The two libraries are binary-incompatible,
+# and the current method of switching between them is incorrect.
+# Removal in 30 days.  Bug #762634.
+media-libs/jpeg
+
 # Hans de Graaff <graaff@gentoo.org> (2020-12-29)
 # These slots masked for removal in 30 days due to
 # security issues, bug 730786
@@ -518,10 +526,6 @@ net-misc/gnome-remote-desktop
 # Mart Raudsepp <leio@gentoo.org> (2020-02-03)
 # Needs news item, known breakages that need to be handled first, bug 698922
 >=x11-libs/pango-1.43
-
-# Robin H. Johnson <robbat2@gentoo.org> (2020-01-26)
-# EAPI conversion caused some regressions, need to redesign old ebuilds.
-=dev-lang/lua-5.1.5-r5
 
 # Andrew Ammerlaan <andrewammerlaan@riseup.net> (2020-01-26)
 # Proxy Maintainers <proxy-maint@gentoo.org>
