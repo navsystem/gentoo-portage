@@ -11,9 +11,18 @@ SRC_URI="https://github.com/tategakibunko/${PN}/archive/v${PV}.tar.gz
 LICENSE="ISC"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
+IUSE="test"
+RESTRICT="!test? ( test )"
 
-DEPEND="dev-ml/ppx_deriving
+RDEPEND="dev-ml/ppx_deriving
 	dev-ml/uucp
-	dev-ml/uutf"
-RDEPEND="${DEPEND}"
+	dev-ml/uutf
+	dev-ml/menhir"
+DEPEND="${RDEPEND}
+	test? ( dev-ml/ounit )"
 BDEPEND="dev-ml/dune"
+
+src_install() {
+	default
+	rm -r "${D}"/usr/doc || die
+}
