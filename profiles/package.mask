@@ -32,6 +32,10 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2021-02-23)
+# Slotted mistakenly
+dev-libs/quazip:1
+
 # Matthew Thode <prometheanfire@gentoo.org> (2021-02-22)
 # Removing unneeded packages from tree Bug #772200
 # Removal on 2021-03-22
@@ -45,11 +49,6 @@ dev-python/os-diskconfig-python-novaclient-ext
 # missing dependencies, python3.7 only, no reverse dependencies.
 # Removal on 2021-03-23.  Bug #738004, #751316, #766989.
 dev-python/moviepy
-
-# Robert Siebeck <gentoo.2019@r123.de> (2021-02-19)
-# This version seems broken on some systems. Masking until this is resolved.
-# bug #771363
-=net-im/signal-desktop-bin-1.40.0-r1
 
 # Michał Górny <mgorny@gentoo.org> (2021-02-19)
 # Xfce 4.16 has the same functionality built-in, rendering the plugin
