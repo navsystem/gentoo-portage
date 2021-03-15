@@ -29,15 +29,14 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}"
 BDEPEND="
-	>=app-text/txt2tags-2.5
 	virtual/pkgconfig
 "
 
-DOCS=( NOTICE )
+DOCS=( NOTICE README.rst CHANGELOG.rst )
 
 src_configure() {
 	local mycmakeargs=(
-		-DWITH_RC_FILES=OFF
+		-DINSTALL_RC_FILES=OFF
 	)
 	cmake_src_configure
 }
