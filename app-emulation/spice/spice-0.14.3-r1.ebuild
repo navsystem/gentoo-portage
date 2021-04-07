@@ -3,7 +3,7 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python3_{7,8} )
+PYTHON_COMPAT=( python3_{7,8,9} )
 inherit autotools python-any-r1 readme.gentoo-r1 xdg-utils
 
 DESCRIPTION="SPICE server"
@@ -12,7 +12,7 @@ SRC_URI="https://www.spice-space.org/download/releases/spice-server/${P}.tar.bz2
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~arm64 ~ppc64 ~x86"
+KEYWORDS="~amd64 ~arm64 ~ppc64 x86"
 IUSE="libressl lz4 sasl smartcard static-libs gstreamer test"
 
 RESTRICT="!test? ( test )"
@@ -36,7 +36,8 @@ RDEPEND="
 	)"
 DEPEND="${RDEPEND}
 	>=app-emulation/spice-protocol-0.14.0
-	smartcard? ( app-emulation/qemu[smartcard] )"
+	smartcard? ( app-emulation/qemu[smartcard] )
+	test? ( net-libs/glib-networking )"
 BDEPEND="${PYTHON_DEPS}
 	virtual/pkgconfig
 	$(python_gen_any_dep '
