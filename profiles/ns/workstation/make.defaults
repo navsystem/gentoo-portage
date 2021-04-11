@@ -42,6 +42,8 @@ abi_x86_32
 
 cgroup-hybrid
 
+-postgres_targets_postgres10 -postgres_targets_postgres11 postgres_targets_postgres12 postgres_targets_postgres13
+
 "
 
 AUTOCLEAN="yes"

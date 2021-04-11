@@ -1,4 +1,5 @@
 <dev-db/postgis-9999 amd64 x86
+<sci-libs/geos-9999 amd64 
 ~dev-vcs/mercurial-server-1.2 amd64 x86
 <sys-kernel/dracut-9999 amd64 x86
 =app-portage/getdelta-0.7.9-r2 amd64 x86
@@ -23,7 +24,7 @@
 =net-im/psimedia-9999 amd64 x86
 =net-misc/teamviewer-12.0.85001 amd64 x86
 =app-editors/sublime-text-3103 amd64 x86
-=dev-qt/qt-creator-4.12.3 amd64
+=dev-qt/qt-creator-4.12.3-r1 amd64
 =dev-libs/libclangformat-ide-10.0.0 amd64
 =sci-libs/gdal-2.0.3 amd64 x86
 =dev-db/spatialite-4.3.0a amd64 x86
