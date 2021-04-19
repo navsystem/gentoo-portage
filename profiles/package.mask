@@ -33,6 +33,14 @@
 #--- END OF EXAMPLES ---
 
 # Miroslav Šulc <fordfrog@gentoo.org> (2021-04-18)
+# our version is outdated with security issues, new version
+# uses gradle to build which we don't support atm,
+# also being a web framework deployable to application servers,
+# we have no usage for it, and nothing depends on it
+# removal in 30 days
+dev-java/tapestry
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-18)
 # the project has been abandoned and the developement
 # is now under name SpotBugs
 # see: https://github.com/findbugsproject/findbugs
@@ -138,6 +146,8 @@ x11-misc/xstroke
 >=media-sound/gnome-music-40
 >=media-gfx/gnome-photos-40
 >=net-misc/rygel-0.40
+>=app-misc/bijiben-40
+>=gnome-extra/gnome-boxes-40
 
 # Michał Górny <mgorny@gentoo.org> (2021-04-10)
 # Obsolete backport to Python < 3.4.  No reverse dependencies left.
@@ -284,6 +294,7 @@ sys-devel/autoconf:2.71
 >=gnome-extra/gnome-calendar-40
 # Bug #780633
 >=dev-libs/libgweather-40
+>=gnome-base/gnome-settings-daemon-40
 
 # Marek Szuba <marecki@gentoo.org> (2021-03-19)
 # Depends on bundled out-of-date Qt5 libraries, and even with those
