@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Parse Perl string literals and string-literal-like things"
 
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~ppc"
 IUSE="test examples"
 RESTRICT="!test? ( test )"
 
@@ -20,6 +20,8 @@ RDEPEND="
 	virtual/perl-Encode
 	virtual/perl-Exporter
 	>=dev-perl/PPI-1.117.0
+	dev-perl/PPIx-Regexp
+	dev-perl/Readonly
 	virtual/perl-Scalar-List-Utils
 "
 BDEPEND="${RDEPEND}
