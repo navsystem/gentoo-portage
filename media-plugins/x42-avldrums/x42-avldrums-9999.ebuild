@@ -4,7 +4,7 @@
 EAPI=7
 
 DESCRIPTION="AVLinux Drumkits"
-HOMEPAGE="https://github.com/x42/avldrums.lv2"
+HOMEPAGE="http://x42-plugins.com/x42/x42-avldrums https://github.com/x42/avldrums.lv2"
 
 if [[ ${PV} == *9999 ]]; then
 	inherit git-r3
@@ -26,8 +26,11 @@ SLOT="0"
 RESTRICT="mirror"
 
 RDEPEND="dev-libs/glib
-	virtual/opengl
+	media-libs/glu
+	media-libs/lv2
 	x11-libs/cairo[X]
+	media-libs/libglvnd[X]
+	x11-libs/libX11
 	x11-libs/pango
 "
 DEPEND="${RDEPEND}"
