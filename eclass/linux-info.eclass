@@ -64,7 +64,12 @@ KERNEL_DIR="${KERNEL_DIR:-${ROOT%/}/usr/src/linux}"
 # A string containing the error message to display when the check against CONFIG_CHECK
 # fails. <CFG> should reference the appropriate option used in CONFIG_CHECK.
 #
-#   e.g.: ERROR_MTRR="MTRR exists in the .config but shouldn't!!"
+# e.g.: ERROR_MTRR="MTRR exists in the .config but shouldn't!!"
+#
+# CONFIG_CHECK="CFG" with ERROR_<CFG>="Error Message" will die
+# CONFIG_CHECK="~CFG" with ERROR_<CFG>="Error Message" calls eerror without dieing
+# CONFIG_CHECK="~CFG" with WARNING_<CFG>="Warning Message" calls ewarn without dieing
+
 
 # @ECLASS-VARIABLE: KBUILD_OUTPUT
 # @DEFAULT_UNSET
@@ -76,43 +81,43 @@ KERNEL_DIR="${KERNEL_DIR:-${ROOT%/}/usr/src/linux}"
 # set by hand. These are as follows:
 
 # @ECLASS-VARIABLE: KV_FULL
-# @INTERNAL
+# @OUTPUT_VARIABLE
 # @DESCRIPTION:
 # A read-only variable. It's a string containing the full kernel version. ie: 2.6.9-gentoo-johnm-r1
 
 # @ECLASS-VARIABLE: KV_MAJOR
-# @INTERNAL
+# @OUTPUT_VARIABLE
 # @DESCRIPTION:
 # A read-only variable. It's an integer containing the kernel major version. ie: 2
 
 # @ECLASS-VARIABLE: KV_MINOR
-# @INTERNAL
+# @OUTPUT_VARIABLE
 # @DESCRIPTION:
 # A read-only variable. It's an integer containing the kernel minor version. ie: 6
 
 # @ECLASS-VARIABLE: KV_PATCH
-# @INTERNAL
+# @OUTPUT_VARIABLE
 # @DESCRIPTION:
 # A read-only variable. It's an integer containing the kernel patch version. ie: 9
 
 # @ECLASS-VARIABLE: KV_EXTRA
-# @INTERNAL
+# @OUTPUT_VARIABLE
 # @DESCRIPTION:
 # A read-only variable. It's a string containing the kernel EXTRAVERSION. ie: -gentoo
 
 # @ECLASS-VARIABLE: KV_LOCAL
-# @INTERNAL
+# @OUTPUT_VARIABLE
 # @DESCRIPTION:
 # A read-only variable. It's a string containing the kernel LOCALVERSION concatenation. ie: -johnm
 
 # @ECLASS-VARIABLE: KV_DIR
-# @INTERNAL
+# @OUTPUT_VARIABLE
 # @DESCRIPTION:
 # A read-only variable. It's a string containing the kernel source directory, will be null if
 # KERNEL_DIR is invalid.
 
 # @ECLASS-VARIABLE: KV_OUT_DIR
-# @INTERNAL
+# @OUTPUT_VARIABLE
 # @DESCRIPTION:
 # A read-only variable. It's a string containing the kernel object directory, will be KV_DIR unless
 # KBUILD_OUTPUT is used. This should be used for referencing .config.

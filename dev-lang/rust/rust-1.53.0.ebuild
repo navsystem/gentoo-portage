@@ -19,7 +19,7 @@ else
 	SLOT="stable/${ABI_VER}"
 	MY_P="rustc-${PV}"
 	SRC="${MY_P}-src.tar.xz"
-	#KEYWORDS="~amd64 ~arm ~arm64 ~ppc64 ~riscv ~x86"
+	KEYWORDS="~amd64 ~arm ~arm64 ~ppc64 ~riscv ~x86"
 fi
 
 RUST_STAGE0_VERSION="1.$(($(ver_cut 2) - 1)).0"
@@ -261,7 +261,7 @@ src_configure() {
 		if use system-llvm; then
 			# un-hardcode rust-lld linker for this target
 			# https://bugs.gentoo.org/715348
-			sed -i '/linker:/ s/rust-lld/wasm-ld/' compiler/rustc_target/src/spec/wasm32_base.rs || die
+			sed -i '/linker:/ s/rust-lld/wasm-ld/' compiler/rustc_target/src/spec/wasm_base.rs || die
 		fi
 	fi
 	rust_targets="${rust_targets#,}"
@@ -305,6 +305,9 @@ src_configure() {
 		experimental-targets = ""
 		link-shared = $(toml_usex system-llvm)
 		[build]
+		build-stage = 2
+		test-stage = 2
+		doc-stage = 2
 		build = "${rust_target}"
 		host = ["${rust_target}"]
 		target = [${rust_targets}]
@@ -500,8 +503,7 @@ src_compile() {
 	(
 	IFS=$'\n'
 	env $(cat "${S}"/config.env) RUST_BACKTRACE=1\
-		"${EPYTHON}" ./x.py build --stage 2 \
-			-vv --config="${S}"/config.toml -j$(makeopts_jobs) || die
+		"${EPYTHON}" ./x.py build -vv --config="${S}"/config.toml -j$(makeopts_jobs) || die
 	)
 }
 
