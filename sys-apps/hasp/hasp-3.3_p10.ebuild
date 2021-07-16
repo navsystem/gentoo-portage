@@ -3,15 +3,15 @@
 
 EAPI=6
 
-inherit eutils git-r3 linux-info linux-mod systemd
+inherit eutils rpm linux-info linux-mod systemd
 
 DESCRIPTION="Hardware Against Software Piracy for access to parallel and usb keys"
 HOMEPAGE="http://www.etersoft.ru"
-EGIT_REPO_URI="git://git.etersoft.ru/people/piastry/packages/haspd.git"
+SRC_URI="http://ftp.etersoft.ru/pub/Etersoft/HASP/3.3/sources/haspd-3.3-alt10.src.rpm"
 
 LICENSE="Etersoft"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="amd64 x86"
 
 IUSE="net_hasp wine usb lpt demo"
 
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}"
 QA_PREBUILT="usr/sbin/aksusbd usr/sbin/haspdemo usr/sbin/winehasp
 usr/sbin/hasplm usr/sbin/hasplmd usr/sbin/nethaspdemo"
 
-S="${WORKDIR}/haspd-3.2"
+S="${WORKDIR}/haspd-3.3"
 
 pkg_setup() {
 	if use lpt ; then
@@ -33,18 +33,21 @@ pkg_setup() {
 		CONFIG_CHECK="PARPORT PARPORT_PC"
 
 		linux-mod_pkg_setup
-		if kernel_is 3 ; then
-			BUILD_PARAMS="KERNSRC=${KERNEL_DIR}" BUILD_TARGETS="kernel26" || die
-		elif kernel_is 2 6 ; then
-			BUILD_PARAMS="KERNSRC=${KERNEL_DIR}" BUILD_TARGETS="kernel26" || die
-		elif kernel_is 2 4 ; then
-			BUILD_PARAMS="KERNSRC=${KERNEL_DIR}" BUILD_TARGETS="kernel24" || die
-		fi
+		BUILD_PARAMS="KERNSRC=${KERNEL_DIR}" BUILD_TARGETS="kernel3"
 	fi
-	if use usb; then
-		CONFIG_CHECK="${CONFIG_CHECK} ~USB_DEVICEFS"
-	fi
-	linux-info_pkg_setup
+}
+
+src_unpack() {
+	rpm_unpack
+	unpack ./haspd-3.3.tar
+}
+
+src_prepare() {
+	epatch "${FILESDIR}/remove-udev-rule-for-old-kernels.patch"
+	epatch "${FILESDIR}/linux-3.15.patch"
+	epatch "${FILESDIR}/linux-4.11.patch"
+	epatch "${FILESDIR}/linux-4.12.patch"
+	default
 }
 
 src_compile() {
@@ -80,10 +83,10 @@ src_install() {
 		newinitd "${FILESDIR}"/hasplmd.init hasplmd
 	fi
 
-	if use lpt ; then
-		linux-mod_src_install || die
-		dodir /lib/udev/rules.d
-		insinto /lib/udev/rules.d
-		doins "${FILESDIR}"/80-lpt-hardlock.rules
-	fi
+	use lpt && linux-mod_src_install
+	local udevrulesdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)/rules.d"
+	dodir ${udevrulesdir}
+	insinto ${udevrulesdir}
+	use lpt && doins "${FILESDIR}"/80-lpt-hardlock.rules
+	use usb && doins aksusbd/udev/rules.d/80-hasp.rules
 }
