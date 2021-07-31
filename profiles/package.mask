@@ -32,6 +32,24 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas K. Hüttel <dilfridge@gentoo.org> (2021-07-31)
+# Obsolete; all versions in current Perl core distributions
+# are newer, and no virtuals currently pull these packages.
+# Removal in 30 days.
+perl-core/ExtUtils-MakeMaker
+perl-core/ExtUtils-Manifest
+perl-core/File-Path
+perl-core/Getopt-Long
+perl-core/HTTP-Tiny
+perl-core/JSON-PP
+perl-core/libnet
+
+# David Seifert <soap@gentoo.org> (2021-07-30)
+# games-engines/renpy has been gone for 6 months, the
+# eselect module has no use anymore and the ebuild has
+# QA issues. Bug #805275, removal in 30 days.
+app-eselect/eselect-renpy
+
 # Miroslav Šulc <fordfrog@gentoo.org> (2021-07-30)
 # these libs have no consumers, removal in 30 days
 # see bug: https://bugs.gentoo.org/805152
