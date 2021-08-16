@@ -7,6 +7,7 @@
 #  dev-db/mysql and dev-db/percona-server do not support this arch
 #  dev-db/mariadb-galera has been absent from the tree since June 2019
 #  dev-db/mysql-cluster not tested yet, seriously outdated in the tree
+dev-python/pymysql test
 sci-libs/gdal mysql
 sys-cluster/slurm slurmdbd
 
@@ -64,18 +65,13 @@ kde-frameworks/solid ios
 app-admin/sudo sssd
 
 # Alex Fan <alexfanqi@yahoo.com> (2021-07-20)
-# sci-libs/hdf5 fails tests with these 2 use flags enabled,
-# otherwise passes all tests
-sci-libs/hdf5 fortran debug
+# hdf5-1.10 always fails tests with these 2 use flags enabled, otherwise
+# passes all tests on at least some systems. No longer needed for 1.12,
+# though.
+<sci-libs/hdf5-1.12.1 fortran debug
 
 # Marek Szuba <marecki@gentoo.org> (2021-07-19)
-# sci-libs/hdf5 may or may not work properly on this arch (on some
-# systems fails tests even with the mask above in place), masked for
-# further testing.
-dev-libs/starpu hdf5
-sci-libs/armadillo hdf5
-sci-libs/gdal hdf5
-# (via dev-python/pytables)
+# dependencies not keyworded here yet
 dev-python/pandas doc full-support test
 
 # Marek Szuba <marecki@gentoo.org> (2021-07-14)
