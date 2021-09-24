@@ -29,6 +29,7 @@ BDEPEND="
 		dev-python/pytest-ordering[${PYTHON_USEDEP}]
 		dev-python/pytest-timeout[${PYTHON_USEDEP}]
 		>=dev-python/stdio-mgr-1.0.1[${PYTHON_USEDEP}]
+		dev-python/sphinx[${PYTHON_USEDEP}]
 		dev-python/timeout-decorator[${PYTHON_USEDEP}]
 	)
 "
@@ -42,6 +43,7 @@ distutils_enable_sphinx doc/source \
 python_prepare_all() {
 	# --strict option is deprecated in pytest>6
 	sed -i -e '/addopts/d' tox.ini || die
+	sed -e '/CLI_TEST_TIMEOUT/s/2/20/' -i tests/test_cli.py || die
 
 	distutils-r1_python_prepare_all
 }

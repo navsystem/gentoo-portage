@@ -33,6 +33,18 @@
 
 #--- END OF EXAMPLES ---
 
+# Anthony G. Basile <blueness@gentoo.org> (2021-09-24)
+# Masked for removal in 30 days.  Dead upstream.
+dev-lang/bashforth
+
+# Michał Górny <mgorny@gentoo.org> (2021-08-28)
+# EOL kernel with known vulnerabilities.  Please move to 5.14 or one
+# of the LTS branches.  Bug #814464.
+=sys-kernel/gentoo-kernel-5.13*
+=sys-kernel/gentoo-kernel-bin-5.13*
+=sys-kernel/vanilla-kernel-5.13*
+=virtual/dist-kernel-5.13*
+
 # Mart Raudsepp <leio@gentoo.org> (2021-09-23)
 # Incompatible with c++17 abseil-cpp, no in-tree consumers yet
 media-libs/webrtc-audio-processing:1
@@ -79,23 +91,6 @@ sys-devel/automake:1.11
 =sys-kernel/vanilla-sources-5.13.17
 =sys-kernel/vanilla-sources-5.10.65
 =sys-kernel/vanilla-sources-5.4.146
-
-# Michał Górny <mgorny@gentoo.org> (2021-09-16)
-# POSIX CPU timers are broken.  Please downgrade or wait for next bump
-# before rebooting.
-# See e.g. https://lkml.org/lkml/2021/9/15/799
-~sys-kernel/gentoo-kernel-5.13.17
-~sys-kernel/gentoo-kernel-5.10.65
-~sys-kernel/gentoo-kernel-5.4.146
-~sys-kernel/gentoo-kernel-bin-5.13.17
-~sys-kernel/gentoo-kernel-bin-5.10.65
-~sys-kernel/gentoo-kernel-bin-5.4.146
-~sys-kernel/vanilla-kernel-5.13.17
-~sys-kernel/vanilla-kernel-5.10.65
-~sys-kernel/vanilla-kernel-5.4.146
-~virtual/dist-kernel-5.13.17
-~virtual/dist-kernel-5.10.65
-~virtual/dist-kernel-5.4.146
 
 # Mart Raudsepp <leio@gentoo.org> (2021-09-15)
 # New major parallel-installable release which needs special care to not
@@ -249,14 +244,6 @@ games-puzzle/gnudoku
 # and accept a more unstable release.
 >=www-client/chromium-95
 
-# Michał Górny <mgorny@gentoo.org> (2021-08-28)
-# EOL kernel with known vulnerabilities.  Please move to 5.13 or one
-# of the LTS branches.  Bug #808990.
-=sys-kernel/gentoo-kernel-5.12*
-=sys-kernel/gentoo-kernel-bin-5.12*
-=sys-kernel/vanilla-kernel-5.12*
-=virtual/dist-kernel-5.12*
-
 # Anthony G. Basile <blueness@gentoo.org> (2021-08-27)
 # Masked for removal in 30 days.  Deprecated upstream.
 net-vpn/ipsec-tools
@@ -357,7 +344,6 @@ sys-libs/db:5.1
 # Mask gcc-7 branch (ended upstream support). Please switch
 # to a fresher gcc branch.
 <sys-devel/gcc-8
-<dev-util/nvidia-cuda-sdk-10
 
 # Sergei Trofimovich <slyfox@gentoo.org> (2021-05-16)
 # Mask gcc-6 branch (ended upstream support). Please switch
