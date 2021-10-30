@@ -10,7 +10,7 @@ cups dri infinality natspec ffmpeg -libav melt aac semantic-desktop -nepomuk gpm
 
 btrfs
 
-tracepath traceroute freetds odbc midi timidity vnc
+tracepath traceroute freetds odbc midi timidity vnc gstreamer
 
 cmake rpc lto wayland screencast gles2
 
