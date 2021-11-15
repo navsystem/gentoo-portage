@@ -33,6 +33,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2021-11-14)
+# java packages without consumers, Removal in 30 days.
+dev-java/milton-mail-api
+dev-java/milton-api
+
 # Volkmar W. Pogatzki <gentoo@pogatzki.net> (2021-11-13)
 # java package without consumers,
 # bug_808948 (CVE-2021-37714).  Removal in 30 days.
@@ -234,12 +239,6 @@ sci-libs/libbufr
 # Fails to build with glibc-2.34, uses EAPI 5.
 # Removal on 2021-11-25. Bug #806577.
 sys-fabric/dapl
-
-# Jakov Smolić <jsmolic@gentoo.org> (2021-10-26)
-# Fails to build with glibc-2.34, broken test suite,
-# dead upstream, no revdeps.
-# Removal on 2021-11-25. Bug #806344.
-app-shells/heirloom-sh
 
 # Hans de Graaff <graaff@gentoo.org> (2021-10-26)
 # New rubygems versions check extension installation and will
