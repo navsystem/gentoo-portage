@@ -154,7 +154,7 @@ net-misc/iputils -gcrypt
 sys-apps/dbus user-session
 net-wireless/bluez user-session
 dev-python/PyQt5 designer
-net-libs/nodejs inspector
+net-libs/nodejs inspector -lto
 media-libs/libsdl2 haptic
 app-arch/xz-utils static-libs
 net-dns/dnsmasq script
