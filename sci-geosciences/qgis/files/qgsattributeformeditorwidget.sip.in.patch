@@ -1,9 +1,0 @@
---- qgis-3.2.3_orig/python/gui/auto_generated/qgsattributeformeditorwidget.sip.in	2018-09-14 14:00:19.000000000 +0200
-+++ qgis-3.2.3/python/gui/auto_generated/qgsattributeformeditorwidget.sip.in	2019-03-27 15:53:18.603749652 +0100
-@@ -39,5 +39,5 @@
-     ~QgsAttributeFormEditorWidget();
- 
--    virtual void createSearchWidgetWrappers();
-+    virtual void createSearchWidgetWrappers( const QgsAttributeEditorContext &context = QgsAttributeEditorContext() );
- 
- 

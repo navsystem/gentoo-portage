@@ -1,9 +1,0 @@
---- qgis-3.2.3_orig/src/gui/qgsattributeformrelationeditorwidget.h	2018-09-14 14:00:19.000000000 +0200
-+++ qgis-3.2.3/src/gui/qgsattributeformrelationeditorwidget.h	2019-03-27 15:37:58.924234119 +0100
-@@ -42,5 +42,5 @@
-     explicit QgsAttributeFormRelationEditorWidget( QgsRelationWidgetWrapper *wrapper, QgsAttributeForm *form );
- 
--    void createSearchWidgetWrappers( const QgsAttributeEditorContext &context SIP_PYARGREMOVE = QgsAttributeEditorContext() ) override;
-+    void createSearchWidgetWrappers( const QgsAttributeEditorContext &context = QgsAttributeEditorContext() ) override;
-     QString currentFilterExpression() const override;
- 

@@ -1,9 +1,0 @@
---- qgis-3.2.3_orig/src/gui/qgsattributeformeditorwidget.h	2019-03-27 16:05:50.586935136 +0100
-+++ qgis-3.2.3/src/gui/qgsattributeformeditorwidget.h	2019-03-27 16:03:15.578646463 +0100
-@@ -58,5 +58,5 @@
-     ~QgsAttributeFormEditorWidget() override;
- 
--    void createSearchWidgetWrappers( const QgsAttributeEditorContext &context SIP_PYARGREMOVE = QgsAttributeEditorContext() ) override;
-+    void createSearchWidgetWrappers( const QgsAttributeEditorContext &context = QgsAttributeEditorContext() ) override;
- 
-     /**
