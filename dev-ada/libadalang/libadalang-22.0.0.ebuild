@@ -26,8 +26,9 @@ RDEPEND="dev-python/pyyaml
 	dev-ada/gnatcoll-bindings[${ADA_USEDEP},gmp,iconv,shared?,static-libs?,static-pic?]
 	${ADA_DEPS}
 	${PYTHON_DEPS}
+	dev-ada/langkit[${ADA_USEDEP},shared?,static-libs?,static-pic?]
 	$(python_gen_cond_dep '
-		dev-ada/langkit[${PYTHON_USEDEP},shared?,static-libs?,static-pic?]
+		dev-ada/langkit[${PYTHON_USEDEP}]
 	')"
 DEPEND="${RDEPEND}
 	dev-ada/gprbuild[${ADA_USEDEP}]
@@ -37,6 +38,7 @@ BDEPEND="test? (
 		dev-ml/zarith
 		dev-ml/camomile
 		dev-ml/ocaml-ctypes
+		dev-ada/e3-testsuite
 	)"
 
 pkg_setup() {
@@ -61,13 +63,13 @@ src_configure() {
 
 src_compile() {
 	${EPYTHON} manage.py build -v \
+		--build-mode "prod" \
 		--gargs "-cargs:C ${CFLAGS} -cargs:Ada ${ADAFLAGS}" \
 		--library-types=${libType} || die
 }
 
 src_test() {
-	#eval $(${EPYTHON} ./manage.py setenv)
-	${EPYTHON} manage.py test --restricted-env -j 1 |& > /dev/null
+	${EPYTHON} manage.py test --restricted-env -j 1
 	${EPYTHON} manage.py test --restricted-env -j 1 |& tee libadalang.testOut
 	grep -qw FAIL libadalang.testOut && die
 }
@@ -75,6 +77,7 @@ src_test() {
 src_install() {
 	${EPYTHON} manage.py \
 		install "${D}"/usr \
+		--build-mode "prod" \
 		--library-types=${libType} || die
 	rm -r "${D}"/usr/python || die
 	python_domodule build/python/libadalang
