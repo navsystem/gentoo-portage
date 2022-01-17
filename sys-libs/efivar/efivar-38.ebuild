@@ -29,14 +29,17 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	local PATCHES=(
-		"${FILESDIR}"/${PN}-38-ia64-relro.patch
+		"${FILESDIR}"/efivar-38-ia64-relro.patch
+		"${FILESDIR}"/efivar-38-march-native.patch
+		"${FILESDIR}"/efivar-38-Makefile-dep.patch
 	)
 	default
 }
 
 src_configure() {
-	tc-export CC
-	export CC_FOR_BUILD=$(tc-getBUILD_CC)
+	unset CROSS_COMPILE
+	export COMPILER=$(tc-getCC)
+	export HOSTCC=$(tc-getBUILD_CC)
 
 	tc-ld-disable-gold
 
