@@ -54,7 +54,7 @@ x11-libs/fltk xft
 media-libs/glc-lib
 
 
-app-emulation/wine -xml -vaapi
+app-emulation/wine -xml -vaapi kerberos
 app-text/poppler cairo
 net-libs/webkit-efl curl
 app-portage/layman subversion git mercurial
