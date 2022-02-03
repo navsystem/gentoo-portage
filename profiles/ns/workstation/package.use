@@ -55,6 +55,7 @@ media-libs/glc-lib
 
 
 app-emulation/wine -xml -vaapi kerberos
+app-emulation/wine-vanilla kerberos
 app-text/poppler cairo
 net-libs/webkit-efl curl
 app-portage/layman subversion git mercurial
