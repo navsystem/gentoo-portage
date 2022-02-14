@@ -35,16 +35,17 @@ src_prepare() {
 	cmake_src_prepare
 	# relying on forked http-parser to support some obscure URI form
 	sed -i -e '/empty_port/s:test:_&:' tests/network/url/parse.c || die
+	# https://github.com/libgit2/libgit2/pull/6217
+	sed -i -e 's:HTTP_Parser:HTTPParser:' cmake/SelectHTTPParser.cmake || die
 }
 
 src_configure() {
 	local mycmakeargs=(
-		-DBUILD_CLAR=$(usex test)
-		-DENABLE_TRACE=$(usex trace ON OFF)
-		-DUSE_GSSAPI=$(usex gssapi ON OFF)
+		-DBUILD_TESTS=$(usex test)
 		-DUSE_SSH=$(usex ssh)
-		-DTHREADSAFE=$(usex threads)
+		-DUSE_GSSAPI=$(usex gssapi ON OFF)
 		-DUSE_HTTP_PARSER=system
+		-DREGEX_BACKEND=pcre
 	)
 	cmake_src_configure
 }
