@@ -17,7 +17,7 @@
 =sys-block/megamgr-5.20-r2 amd64 x86
 =sci-geosciences/tilecache-2.11-r1 amd64 x86
 =dev-db/pgpool2-3.6.5 amd64 x86
-=sys-block/megarc-1.11-r2 amd64 x86
+=sys-block/megarc-1.11-r3 amd64 x86
 =dev-python/simple-date-0.4.8 amd64 x86
 =net-im/jitsi-bin-2.5 amd64 x86
 =net-im/psi-1.5 amd64 x86
