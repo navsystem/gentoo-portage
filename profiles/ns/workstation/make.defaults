@@ -21,6 +21,8 @@ scanner
 
 spice lz4 zstd lzo
 
+tkip wep wimax wps
+
 input_devices_evdev video_cards_intel video_cards_nouveau video_cards_radeon video_cards_vesa
 video_cards_r300 video_cards_r600 video_cards_i915 video_cards_i965 video_cards_iris
 -input_devices_acecad -input_devices_aiptek -input_devices_elographics -input_devices_fpit -input_devices_joystick
