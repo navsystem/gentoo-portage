@@ -2,7 +2,6 @@
 dev-db/pgadmin4
 kde-apps/yakuake
 dev-qt/qt-creator
-dev-qt/qt-docs
 sys-apps/net-tools
 dev-db/postgresql
 x11-misc/x11vnc
