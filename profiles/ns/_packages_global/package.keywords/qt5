@@ -44,3 +44,4 @@
 ~dev-qt/qtxml-5.15.3 amd64
 ~dev-qt/qtxmlpatterns-5.15.3 amd64
 ~dev-qt/qtwaylandscanner-5.15.3 amd64
+~dev-qt/qtspeech-5.15.3 amd64
