@@ -5,7 +5,7 @@ EAPI=8
 
 CARGO_OPTIONAL=yes
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{8..10} )
+PYTHON_COMPAT=( python3_{8..10} pypy3 )
 PYTHON_REQ_USE="threads(+)"
 
 CRATES="
@@ -78,8 +78,7 @@ SRC_URI="
 # and some are Apache 2.0 or MIT
 LICENSE="Apache-2.0 MIT BSD"
 SLOT="0"
-# See bug #769482, bug #827350
-#KEYWORDS="~amd64 ~ppc64"
+KEYWORDS="~amd64 ~ppc ~riscv"
 
 RDEPEND="
 	>=dev-libs/openssl-1.0.2o-r6:0=
@@ -104,7 +103,7 @@ BDEPEND="
 "
 
 # Files built without CFLAGS/LDFLAGS, acceptable for rust
-QA_FLAGS_IGNORED="usr/lib.*/py.*/site-packages/cryptography/hazmat/bindings/_rust.abi3.so"
+QA_FLAGS_IGNORED="usr/lib.*/py.*/site-packages/cryptography/hazmat/bindings/_rust.*.so"
 
 PATCHES=(
 	"${FILESDIR}"/${P}-pyo3-bump.patch
