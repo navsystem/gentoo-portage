@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit cmake
+inherit cmake flag-o-matic
 
 DESCRIPTION="Library for reading TIFF files with embedded tags for geographic information"
 HOMEPAGE="https://trac.osgeo.org/geotiff/ https://github.com/OSGeo/libgeotiff"
@@ -14,7 +14,7 @@ SLOT="0/5"
 KEYWORDS="~amd64 ~arm ~arm64 ~ia64 ~ppc ~ppc64 ~riscv ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos"
 IUSE="doc jpeg +tiff zlib"
 
-DEPEND=">=sci-libs/proj-6.0.0:=
+DEPEND="<sci-libs/proj-8.0.0:=
 	jpeg? ( virtual/jpeg:= )
 	tiff? ( >=media-libs/tiff-3.9.1 )
 	zlib? ( sys-libs/zlib )"
@@ -31,6 +31,9 @@ src_configure() {
 		-DWITH_TIFF=$(usex tiff)
 		-DWITH_ZLIB=$(usex zlib)
 	)
+	if has_version ">=sci-libs/proj-6.0.0"; then
+		append-flags "-DACCEPT_USE_OF_DEPRECATED_PROJ_API_H"
+	fi
 
 	cmake_src_configure
 }

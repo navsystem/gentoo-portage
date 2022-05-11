@@ -36,7 +36,8 @@
 =dev-libs/libxml2-2.9.5 x86
 =media-gfx/scour-0.36 amd64 x86
 ~sci-geosciences/qgis-3.22.1 amd64
-=sci-libs/proj-6.2.1 amd64
+=sci-libs/proj-9.0.0 amd64
+=sci-libs/libgeotiff-1.7.1-r1 amd64
 =dev-python/sip-4.19.20 amd64
 =sci-libs/shapelib-1.4.1 amd64
 =dev-python/owslib-0.16.0 amd64
