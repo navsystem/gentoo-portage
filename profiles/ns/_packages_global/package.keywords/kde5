@@ -132,4 +132,4 @@ kde-plasma/xembed-sni-proxy amd64
 <kde-frameworks/syntax-highlighting-6 amd64
 <kde-frameworks/threadweaver-6 amd64
 ~media-video/smplayer-22.2.0 amd64
-
+dev-libs/plasma-wayland-protocols amd64
