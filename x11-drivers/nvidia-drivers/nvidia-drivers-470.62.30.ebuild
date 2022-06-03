@@ -5,7 +5,7 @@ EAPI=8
 
 MODULES_OPTIONAL_USE="driver"
 inherit desktop flag-o-matic linux-mod multilib readme.gentoo-r1 \
-	systemd toolchain-funcs udev unpacker user-info
+	systemd toolchain-funcs unpacker user-info
 
 NV_KERNEL_MAX="5.15"
 NV_PIN="470.103.01"
@@ -164,7 +164,7 @@ src_prepare() {
 }
 
 src_compile() {
-	tc-export AR CC CXX LD OBJCOPY
+	tc-export AR CC CXX LD OBJCOPY OBJDUMP
 
 	NV_ARGS=(
 		PREFIX="${EPREFIX}"/usr
@@ -175,7 +175,22 @@ src_compile() {
 		XNVCTRL_CFLAGS=-fPIC #840389
 	)
 
-	use driver && linux-mod_src_compile
+	if use driver; then
+		if linux_chkconfig_present GCC_PLUGINS; then
+			mkdir "${T}"/plugin-test || die
+			echo "obj-m += test.o" > "${T}"/plugin-test/Kbuild || die
+			> "${T}"/plugin-test/test.c || die
+			if [[ $(LC_ALL=C make -C "${KV_OUT_DIR}" ARCH="$(tc-arch-kernel)" \
+					HOSTCC="$(tc-getBUILD_CC)" M="${T}"/plugin-test 2>&1) \
+				=~ "error: incompatible gcc/plugin version" ]]; then
+				ewarn "Warning: detected kernel was built with different gcc/plugin versions,"
+				ewarn "you may need to 'make clean' and rebuild your kernel with the current"
+				ewarn "gcc version (or re-emerge for distribution kernels, including kernel-bin)."
+			fi
+		fi
+
+		linux-mod_src_compile
+	fi
 
 	emake "${NV_ARGS[@]}" -C nvidia-modprobe
 	use persistenced && emake "${NV_ARGS[@]}" -C nvidia-persistenced
@@ -363,9 +378,6 @@ https://wiki.gentoo.org/wiki/NVIDIA/nvidia-drivers"
 	systemd_dounit systemd/system/nvidia-{hibernate,resume,suspend}.service
 
 	dobin nvidia-bug-report.sh
-
-	# udev rules taken from nvidia's README.txt to help with power management
-	use driver && udev_newrules "${FILESDIR}"/nvidia-470.rules 60-nvidia.rules
 }
 
 pkg_preinst() {
@@ -397,7 +409,6 @@ pkg_preinst() {
 
 pkg_postinst() {
 	linux-mod_pkg_postinst
-	use driver && udev_reload
 
 	readme.gentoo_print_elog
 
@@ -448,9 +459,4 @@ pkg_postinst() {
 		elog "This version of ${PN} only supports EGLStream which is only"
 		elog "supported by a few wayland compositors (e.g. kwin / mutter, not sway)."
 	fi
-}
-
-pkg_postrm() {
-	linux-mod_pkg_postrm
-	use driver && udev_reload
 }

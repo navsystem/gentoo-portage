@@ -6,6 +6,24 @@
 # This file is only for generic masks. For arch-specific masks (i.e.
 # mask everywhere, unmask on arch/*) use arch/base.
 
+# Michał Górny <mgorny@gentoo.org> (2022-06-02)
+# dev-python/jaraco-packaging is masked for removal.  Bug #834534.
+dev-python/jaraco-classes doc
+dev-python/jaraco-collections doc
+dev-python/jaraco-functools doc
+dev-python/jaraco-logging doc
+dev-python/jaraco-stream doc
+dev-python/jaraco-text doc
+dev-python/jsonpickle doc
+dev-python/keyring doc
+dev-python/tempora doc
+
+# Maciej Barć <xgqt@gentoo.org> (2022-05-31)
+# "doc" require old version of dev-python/antlr4-python3-runtime (4.9.3)
+# and dev-python/sphinx (4.4.0), both already removed from the repository tree
+# Upstream bug: https://github.com/coq/coq/issues/15956
+>=sci-mathematics/coq-8.15.0 doc
+
 # Stephan Hartmann <sultan@gentoo.org> (2022-05-29)
 # Not ready for general use.
 >=www-client/chromium-104 pgo
