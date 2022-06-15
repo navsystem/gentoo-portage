@@ -49,6 +49,7 @@ kde-plasma/sddm-kcm amd64
 kde-plasma/systemsettings amd64
 kde-plasma/xdg-desktop-portal-kde amd64
 kde-plasma/xembed-sni-proxy amd64
+kde-plasma/oxygen-sounds amd64
 
 <kde-frameworks/attica-6 amd64
 <kde-frameworks/baloo-6 amd64
