@@ -19,7 +19,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~loong ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86 ~x64-cygwin ~amd64-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha amd64 arm arm64 hppa ~ia64 ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~x64-cygwin ~amd64-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="brotli test"
 RESTRICT="!test? ( test )"
 
@@ -54,11 +54,9 @@ python_test() {
 		return
 	fi
 
-	local EPYTEST_DESELECT=(
-		# TODO?
-		test/contrib/test_pyopenssl.py::TestHTTPS_TLSv1_3::test_verified
-		test/with_dummyserver/test_socketlevel.py::TestSocketClosing::test_timeout_errors_cause_retries
-		test/with_dummyserver/test_proxy_poolmanager.py::TestHTTPProxyManager::test_proxy_verified_warning
+	local EPYTEST_DESELECT=()
+	has "${EPYTHON}" python3.{8..10} && EPYTEST_DESELECT+=(
+		test/contrib/test_pyopenssl.py::TestPyOpenSSLHelpers::test_get_subj_alt_name
 	)
 
 	epytest

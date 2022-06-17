@@ -33,6 +33,24 @@
 
 #--- END OF EXAMPLES ---
 
+# William Hubbs <williamh@gentoo.org> (2022-06-17)
+# Dead upstream, please use dev-util/github-cli
+# Bug #845921
+# Removal: 2022-07-17
+dev-util/cligh
+
+# Ulrich Müller <ulm@gentoo.org> (2022-06-16)
+# Last release in 2002. The distfile cannot be redistributed
+# and is no longer available upstream. Use media-gfx/imagemagick
+# ("convert" with eps2 or eps3 output format) as replacement.
+# Masked for removal in 30 days. Bug #851708.
+media-gfx/jpeg2ps
+
+# John Helmert III <ajak@gentoo.org> (2022-06-15)
+# Open security bug with patches for years. Upstream seems dead since
+# 2020. Removal on 2022-07-15.  Bug #718550.
+sys-cluster/csync2
+
 # Michał Górny <mgorny@gentoo.org> (2022-06-13)
 # Upstream has discontinued the fork.  No revdeps.  They recommend using
 # the original editdistance (not packaged on Gentoo)
@@ -47,13 +65,10 @@ dev-python/editdistance-s
 dev-cpp/commoncpp2
 
 # Michał Górny <mgorny@gentoo.org> (2022-06-08)
-# pyroute2 is pending version bump for over 1.5 years already.
-# The tests are restricted.  pulseaudio-dlna is the only revdep.
 # pulseaudio-dlna has not seen any upstream activity since 2017,
 # and has had its last release in 2016.  It does not feature a non-live
 # ebuild.
 # Removal on 2022-07-08.  Bug #813990.
-dev-python/pyroute2
 net-misc/pulseaudio-dlna
 
 # Andreas K. Hüttel <dilfridge@gentoo.org> (2022-06-05)
@@ -322,12 +337,6 @@ dev-python/unicodecsv
 # offers additional features over whatsapp-desktop-bin
 # Masked for removal in 30 days
 net-im/whatsapp-desktop-bin
-
-# Matt Turner <mattst88@gentoo.org> (2022-05-17)
-# Dead packages. No reverse dependencies.
-# Removal on 2022-06-17
-dev-perl/Gtk2-SourceView2
-dev-perl/Gtk2-Unique
 
 # Michał Górny <mgorny@gentoo.org> (2022-05-16)
 # This was only added for dev-python/nptyping, and nptyping-2.0.0

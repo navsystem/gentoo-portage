@@ -14,7 +14,7 @@ if [[ ${PV} == *9999* ]]; then
 	EGIT_REPO_URI="https://gitlab.com/NTPsec/ntpsec.git"
 else
 	SRC_URI="ftp://ftp.ntpsec.org/pub/releases/${P}.tar.gz"
-	KEYWORDS="~amd64 ~arm ~arm64 ~riscv ~x86"
+	KEYWORDS="amd64 arm arm64 ~riscv ~x86"
 fi
 
 DESCRIPTION="The NTP reference implementation, refactored"
@@ -125,7 +125,6 @@ python_test() {
 
 src_install() {
 	distutils-r1_src_install
-	python_optimize
 
 	# Install heat generating scripts
 	use heat && dosbin "${S}"/contrib/ntpheat{,usb}
@@ -158,6 +157,7 @@ src_install() {
 python_install() {
 	waf-utils_src_install --notests
 	python_fix_shebang "${ED}"
+	python_optimize
 }
 
 pkg_postinst() {
