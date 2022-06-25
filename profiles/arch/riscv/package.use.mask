@@ -1,10 +1,6 @@
 # Copyright 2019-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-# Matt Turner <mattst88@gentoo.org> (2022-06-24)
-# net-libs/libqrtr-glib not keyworded
-net-libs/libqmi qrtr
-
 # Jakov Smolić <jsmolic@gentoo.org> (2022-06-07)
 # riscv has no sanitizers unmasked for the time being, so
 # mask to prevent emerge from erroring out by default
@@ -28,11 +24,6 @@ dev-lisp/clisp berkdb
 # Depends on sys-cluster/ceph which pulls in valgrind, which is
 # unavailable on riscv currently
 sys-block/fio rbd
-
-# Marek Szuba <marecki@gentoo.org> (2022-03-30)
-# Indirectly depends on dev-python/pytest-testinfra, which is currently
-# blocked from being keyworded on this arch by several errors (Bug #835717)
-dev-python/subprocess-tee test-full
 
 # Jakov Smolić <jsmolic@gentoo.org> (2022-03-25)
 # sys-process/criu doesn't support riscv (bug #835975)
