@@ -134,3 +134,9 @@ kde-plasma/oxygen-sounds amd64
 <kde-frameworks/threadweaver-6 amd64
 ~media-video/smplayer-22.2.0 amd64
 dev-libs/plasma-wayland-protocols amd64
+
+kde-apps/yakuake amd64
+kde-apps/konsole amd64
+kde-apps/ksirk amd64
+kde-apps/libkdegames amd64
+
