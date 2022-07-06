@@ -139,4 +139,8 @@ kde-apps/yakuake amd64
 kde-apps/konsole amd64
 kde-apps/ksirk amd64
 kde-apps/libkdegames amd64
+kde-apps/akonadi-contacts amd64
+kde-apps/akonadi amd64
+kde-apps/grantleetheme amd64
+kde-apps/kmime amd64
 

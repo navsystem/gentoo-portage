@@ -40,7 +40,7 @@ video_cards_r300 video_cards_r600 video_cards_i915 video_cards_i965 video_cards_
 -l10n_* l10n_en l10n_en_US l10n_ru l10n_ru_RU
 
 dracut_modules_plymouth dracut_modules_systemd dracut_modules_btrfs
-python_targets_python3_9 python_targets_python2_7 python_single_target_python3_9
+python_targets_python3_10 python_targets_python2_7 python_single_target_python3_10
 
 abi_x86_32
 
