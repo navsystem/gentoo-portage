@@ -132,6 +132,14 @@ kde-plasma/oxygen-sounds amd64
 <kde-frameworks/syndication-6 amd64
 <kde-frameworks/syntax-highlighting-6 amd64
 <kde-frameworks/threadweaver-6 amd64
+<kde-frameworks/breeze-icons-rcc-6 amd64
+<kde-frameworks/kapidox-6 amd64
+<kde-frameworks/kdav-6 amd64
+<kde-frameworks/kdesu-6 amd64
+<kde-frameworks/kross-6 amd64
+<kde-frameworks/networkmanager-qt-6 amd64
+<kde-frameworks/syndication-6 amd64
+
 ~media-video/smplayer-22.2.0 amd64
 dev-libs/plasma-wayland-protocols amd64
 
