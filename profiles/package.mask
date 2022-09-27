@@ -33,6 +33,12 @@
 
 #--- END OF EXAMPLES ---
 
+# Stephan Hartmann <sultan@gentoo.org> (2022-09-26)
+# Dev channel releases are only for people who
+# are developers or want more experimental features
+# and accept a more unstable release.
+>=www-client/chromium-107
+
 # Sam James <sam@gentoo.org> (2022-09-26)
 # Masked for testing. Please report bugs!
 =app-shells/bash-5.2*
@@ -552,6 +558,7 @@ sys-devel/automake:1.11
 # Migration to it is expected for GNOME 42, NOT to be unmasked with GNOME 41.
 >=gnome-extra/gnome-calculator-43
 net-libs/libsoup:3.0
+net-libs/webkit-gtk:4.1
 
 # Thomas Deutschmann <whissi@gentoo.org> (2021-09-07)
 # Masked while being tested and reverse deps aren't fully compatible
