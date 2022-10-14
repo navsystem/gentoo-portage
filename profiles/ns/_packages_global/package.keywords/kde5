@@ -151,4 +151,5 @@ kde-apps/akonadi-contacts amd64
 kde-apps/akonadi amd64
 kde-apps/grantleetheme amd64
 kde-apps/kmime amd64
+kde-plasma/kpipewire amd64
 
