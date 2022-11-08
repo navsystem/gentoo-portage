@@ -4,7 +4,7 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{8..10} )
+PYTHON_COMPAT=( python3_{8..11} )
 
 inherit distutils-r1
 
@@ -28,6 +28,7 @@ BDEPEND="
 		dev-python/mypy[${PYTHON_USEDEP}]
 		dev-python/pylint[${PYTHON_USEDEP}]
 		dev-python/radon[${PYTHON_USEDEP}]
+		dev-python/toml[${PYTHON_USEDEP}]
 		dev-vcs/git
 	)
 "
