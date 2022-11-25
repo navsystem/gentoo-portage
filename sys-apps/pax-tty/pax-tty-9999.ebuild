@@ -3,9 +3,8 @@
 
 EAPI=7
 
-inherit linux-mod udev git-r3
+inherit linux-mod git-r3
 
-MY_P=vhba-module-${PV}
 DESCRIPTION="Kernel module for PAX Pos terminals"
 HOMEPAGE="https://github.com/eegorov/pax-tty/"
 EGIT_REPO_URI="https://github.com/eegorov/pax-tty.git"
@@ -19,3 +18,8 @@ LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
+
+
+src_compile() {
+	linux-mod_src_compile
+}
