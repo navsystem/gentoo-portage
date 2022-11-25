@@ -1,0 +1,12 @@
+diff -ur syscall_intercept-9999_orig/CMakeLists.txt syscall_intercept-9999/CMakeLists.txt
+--- syscall_intercept-9999_orig/CMakeLists.txt	2022-11-25 10:08:08.096252522 +0600
++++ syscall_intercept-9999/CMakeLists.txt	2022-11-25 10:09:07.455522659 +0600
+@@ -196,7 +192,7 @@
+ 
+ configure_file(libsyscall_intercept.pc.in libsyscall_intercept.pc)
+ 
+-install(TARGETS syscall_intercept_shared syscall_intercept_static
++install(TARGETS syscall_intercept_shared
+ 	LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+ 	ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+ 	PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
