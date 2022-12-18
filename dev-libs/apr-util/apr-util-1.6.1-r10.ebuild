@@ -15,7 +15,7 @@ SRC_URI="mirror://apache/apr/${P}.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="1"
-KEYWORDS="~alpha amd64 arm arm64 ~hppa ~ia64 ~loong ~mips ~ppc ~ppc64 ~riscv ~s390 sparc x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha amd64 arm arm64 ~hppa ~ia64 ~loong ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="berkdb doc gdbm ldap mysql nss odbc openssl postgres sqlite static-libs"
 #RESTRICT="test"
 
@@ -96,7 +96,7 @@ src_configure() {
 			# We use $T for the libdir because otherwise it'd simply be the normal
 			# system libdir.  That's pointless as the compiler will search it for
 			# us already.  This makes cross-compiling and such easier.
-			--with-berkeley-db="${SYSROOT}$(db_includedir 2>/dev/null):${T}"
+			--with-berkeley-db="$(db_includedir 2>/dev/null):${T}"
 		)
 	else
 		myconf+=( --without-berkeley-db )
