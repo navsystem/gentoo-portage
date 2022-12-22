@@ -35,6 +35,8 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}"
 
+PATCHES=( "${FILESDIR}"/${P}-unboundLexer.patch )
+
 ocamlnet_use_with() {
 	if use $1; then
 		echo "-with-$2"
@@ -62,6 +64,7 @@ src_configure() {
 		$(ocamlnet_use_enable zip zip) \
 		$(ocamlnet_use_with httpd nethttpd) \
 		-cpp "$(tc-getPROG CPP cpp)" \
+		-equeue-tcl-libs -ltcl \
 		|| die "Error: econf failed!"
 }
 
