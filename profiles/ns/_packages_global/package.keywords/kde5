@@ -153,3 +153,13 @@ kde-apps/grantleetheme amd64
 kde-apps/kmime amd64
 kde-plasma/kpipewire amd64
 
+kde-apps/bovo amd64
+kde-apps/killbots amd64
+kde-apps/knetwalk amd64
+kde-apps/kolf amd64
+kde-apps/ktuberling amd64
+kde-apps/kreversi amd64
+kde-apps/ksudoku amd64
+kde-apps/kubrick amd64
+
+
