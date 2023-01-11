@@ -11,19 +11,18 @@ SRC_URI="https://archive.xfce.org/src/xfce/${PN}/${PV%.*}/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1+"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~riscv ~x86"
 IUSE="+introspection wayland X"
+REQUIRED_USE="|| ( wayland X )"
 
 DEPEND="
 	>=dev-libs/glib-2.68.0
-	>=x11-libs/gtk+-3.24.0:3[introspection?]
+	>=x11-libs/gtk+-3.24.0:3[X?,introspection?,wayland?]
 	>=x11-libs/gdk-pixbuf-2.40.0[introspection?]
 	wayland? (
-		>=x11-libs/gtk+-3.24.0:3[wayland]
 		>=dev-libs/wayland-1.15
 	)
 	X? (
-		>=x11-libs/gtk+-3.24.0:3[X]
 		>=x11-libs/libwnck-3.14:3
 	)
 "
@@ -39,6 +38,10 @@ BDEPEND="
 		>=dev-util/wayland-scanner-1.15
 	)
 "
+
+PATCHES=(
+	"${FILESDIR}"/${P}-no-x.patch
+)
 
 src_configure() {
 	local myconf=(
