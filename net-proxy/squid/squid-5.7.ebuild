@@ -1,4 +1,4 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="8"
@@ -21,7 +21,7 @@ fi
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~riscv ~sparc ~x86"
+KEYWORDS="~alpha amd64 arm ~arm64 ~hppa ~ia64 ~mips ~ppc ppc64 ~riscv ~sparc x86"
 IUSE="caps gnutls pam ldap samba sasl kerberos nis radius ssl snmp selinux logrotate test ecap"
 IUSE+=" esi ssl-crtd mysql postgres sqlite systemd perl qos tproxy +htcp +wccp +wccpv2"
 RESTRICT="!test? ( test )"
@@ -59,7 +59,6 @@ DEPEND="
 	systemd? ( sys-apps/systemd:= )
 "
 RDEPEND="
-	!!<net-proxy/squid-5
 	${DEPEND}
 	mysql? ( dev-perl/DBD-mysql )
 	postgres? ( dev-perl/DBD-Pg )
@@ -83,6 +82,19 @@ pkg_pretend() {
 	if use tproxy; then
 		local CONFIG_CHECK="~NF_CONNTRACK ~NETFILTER_XT_MATCH_SOCKET ~NETFILTER_XT_TARGET_TPROXY"
 		linux-info_pkg_setup
+	fi
+}
+
+pkg_setup() {
+	if [[ -n ${REPLACING_VERSIONS} ]]; then
+		local v
+		for v in ${REPLACING_VERSIONS}; do
+			if ver_test "${v}" -lt 5; then
+				ewarn "Moving ${EROOT}/usr/share/squid/errors out of the way (bug 834503)"
+				mv -v "${EROOT}"/usr/share/squid/errors{,.bak}
+				break
+			fi
+		done
 	fi
 }
 
@@ -359,6 +371,10 @@ src_install() {
 }
 
 pkg_postinst() {
+	if [[ -e ${EROOT}/usr/share/squid/errors.bak ]]; then
+		rm -rv "${EROOT}"/usr/share/squid/errors.bak
+	fi
+
 	elog "A good starting point to debug Squid issues is to use 'squidclient mgr:' commands such as 'squidclient mgr:info'."
 
 	if [[ ${#r} -gt 0 ]]; then
