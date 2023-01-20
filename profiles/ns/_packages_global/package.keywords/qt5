@@ -49,4 +49,5 @@
 ~dev-qt/qtserialbus-5.15.7 amd64
 ~dev-qt/qtplugininfo-5.15.7 amd64
 ~dev-qt/qtquicktimeline-5.15.7 amd64
+<dev-qt/qtquicktimeline-9999 amd64
 
