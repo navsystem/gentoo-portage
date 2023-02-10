@@ -56,11 +56,6 @@ dev-python/tavalidate
 dev-python/tavern
 
 # Michał Górny <mgorny@gentoo.org> (2023-02-03)
-# Uses unmaintained dev-python/future.  No reverse dependencies.
-# Removal on 2023-03-05.  Bug #888283.
-dev-python/textX
-
-# Michał Górny <mgorny@gentoo.org> (2023-02-03)
 # Hacky build system that does not work via PEP517 build backend.
 # No reverse dependencies.
 # Removal on 2023-03-05.  Bug #890321.
@@ -89,12 +84,6 @@ dev-python/google-apitools
 dev-python/google-reauth-python
 dev-python/oauth2client
 net-misc/gsutil
-
-# Marek Szuba <marecki@gentoo.org> (2023-02-03)
-# New major version with breaking changes, mask until 2023-03-03
-# for revdep testing and porting. Bug #893006.
->=dev-cpp/msgpack-cxx-5.0.0
->=dev-libs/msgpack-5.0.0
 
 # Michał Górny <mgorny@gentoo.org> (2023-02-02)
 # dev-python/citeproc-py requires dev-python/nose and is not maintained
@@ -828,19 +817,6 @@ net-p2p/vuze-coreplugins
 # Georgy Yakovlev <gyakovlev@gentoo.org> (2022-12-19)
 # This version currently is not compatible with kernel build (yet)
 ~dev-util/bindgen-0.63.0
-
-# Jaco Kroon <jaco@uls.co.za> (2022-12-14)
-# Multiple open bugs (bug #870910, bug #877731, bug #884815), only one of which
-# is trivial to solve.
-# With more and more SIP traffic using TLS rather than plaintext UDP or TCP
-# this is fast becomming less and less useful.  You should rather use
-# asterisk's res_hep which can also report encrypted SIP and RTP to any HEP
-# compatible reporting tool (including Homer).
-# I'm no longer using this and don't recommend it's use, if you want this to be
-# unmasked again, please contact me so that we can figure out how to approach
-# maintenance thereof. Last-rites bug #885845.
-# Removal on 2023-01-31.
-net-voip/captagent
 
 # Jonas Stein <jstein@gentoo.org> (2022-12-11)
 # Unfetchable and mirror-restricted.
