@@ -163,3 +163,6 @@ kde-apps/ksudoku amd64
 kde-apps/kubrick amd64
 kde-plasma/plasma-welcome amd64
 
+# required by kwin
+x11-libs/libxkbcommon amd64
+
