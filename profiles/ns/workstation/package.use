@@ -161,3 +161,5 @@ app-arch/xz-utils static-libs
 net-dns/dnsmasq script
 app-arch/zstd static-libs
 app-arch/brotli python
+media-video/pipewire extra
+
