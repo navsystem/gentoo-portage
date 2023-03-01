@@ -8,13 +8,13 @@ MAVEN_ID="javax.servlet.jsp:jsp-api:2.2"
 
 inherit java-pkg-2 java-pkg-simple
 
-DESCRIPTION="JavaServer Pages(TM) API"
+DESCRIPTION="JavaServer Pages(TM) API JSR-000152 JSR-000245"
 HOMEPAGE="https://wiki.gentoo.org/wiki/No_homepage"
 SRC_URI="https://repo1.maven.org/maven2/javax/servlet/jsp/jsp-api/${PV}/jsp-api-${PV}-sources.jar"
 
 LICENSE="CDDL GPL-2-with-classpath-exception"
 SLOT="2.2"
-KEYWORDS="~amd64 ~arm ~arm64"
+KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 
 CP_DEPEND="
 	dev-java/javax-el-api:2.2
