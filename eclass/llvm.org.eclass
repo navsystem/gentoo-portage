@@ -30,12 +30,9 @@
 # llvm.org_set_globals
 # @CODE
 
-case "${EAPI:-0}" in
-	7|8)
-		;;
-	*)
-		die "Unsupported EAPI=${EAPI} for ${ECLASS}"
-		;;
+case ${EAPI} in
+	7|8) ;;
+	*) die "${ECLASS}: EAPI ${EAPI:-0} not supported" ;;
 esac
 
 # == version substrings ==
@@ -66,7 +63,7 @@ _LLVM_MASTER_MAJOR=17
 # @INTERNAL
 # @DESCRIPTION:
 # The newest release of LLVM for which manpages were generated.
-_LLVM_NEWEST_MANPAGE_RELEASE=15.0.7
+_LLVM_NEWEST_MANPAGE_RELEASE=16.0.0
 
 # @ECLASS_VARIABLE: _LLVM_SOURCE_TYPE
 # @INTERNAL
@@ -325,8 +322,6 @@ llvm.org_set_globals() {
 
 # == phase functions ==
 
-EXPORT_FUNCTIONS src_unpack src_prepare
-
 # @FUNCTION: llvm.org_src_unpack
 # @DESCRIPTION:
 # Unpack or checkout requested LLVM components.
@@ -449,7 +444,7 @@ get_lit_flags() {
 # Return true (0) if this LLVM version features prebuilt manpage
 # tarball, false (1) otherwise.
 llvm_manpage_dist_available() {
-	[[ ${_LLVM_SOURCE_TYPE} == tar ]] &&
+	[[ ${_LLVM_SOURCE_TYPE} == tar && ${PV} != *_rc* ]] &&
 		ver_test "${PV}" -le "${_LLVM_NEWEST_MANPAGE_RELEASE}"
 }
 
@@ -472,3 +467,5 @@ llvm_install_manpages() {
 		doins "${WORKDIR}/llvm-${PV}-manpages/${LLVM_COMPONENTS[0]}"/*.1
 	fi
 }
+
+EXPORT_FUNCTIONS src_unpack src_prepare
