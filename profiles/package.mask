@@ -33,6 +33,12 @@
 
 #--- END OF EXAMPLES ---
 
+# Jakov Smolić <jsmolic@gentoo.org> (2023-04-21)
+# Does not support python 3.11, uses deprecated dev-python/future,
+# inactive upstream (last commit in 2019).
+# Removal on 2023-05-21. Bugs #897102, #888293
+net-irc/quasselgrep
+
 # Volkmar W. Pogatzki <gentoo@pogatzki.net> (2023-04-21)
 # Unused java libraries. Removal on 2023-05-22
 dev-java/avalon-framework
@@ -183,11 +189,6 @@ net-im/wazzapp-bin
 # upstream has been dead for nearly five years
 # Removal on 2023-05-07
 app-admin/mcollective
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2023-04-08)
-# Long obsolete part of KDE Plasma (merged back into kwin).
-# Removal on 2023-08-22
-kde-plasma/kwayland-server
 
 # John Helmert III <ajak@gentoo.org> (2023-04-08)
 # i3-gaps has been meregd into upstream i3. Use x11-wm/i3 instead.
