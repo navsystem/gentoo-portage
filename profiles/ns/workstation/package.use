@@ -163,4 +163,4 @@ app-arch/zstd static-libs
 app-arch/brotli python
 media-video/pipewire extra jack-client pipewire-alsa sound-server system-service
 media-libs/opus custom-modes
-
+dev-libs/libpcre2 pcre32
