@@ -330,8 +330,11 @@ _distutils_set_globals() {
 
 		if [[ ${DISTUTILS_EXT} ]]; then
 			DEPEND="${PYTHON_DEPS}"
-			IUSE="debug"
 		fi
+	fi
+
+	if [[ ${DISTUTILS_EXT} ]]; then
+		IUSE="debug"
 	fi
 }
 _distutils_set_globals
@@ -1305,6 +1308,7 @@ distutils_pep517_install() {
 	fi
 
 	local root=${1}
+	export BUILD_DIR
 	local -x WHEEL_BUILD_DIR=${BUILD_DIR}/wheel
 	mkdir -p "${WHEEL_BUILD_DIR}" || die
 
@@ -1326,6 +1330,7 @@ distutils_pep517_install() {
 
 						ninjaopts = shlex.split(os.environ["NINJAOPTS"])
 						print(json.dumps({
+							"builddir": "${BUILD_DIR}",
 							"setup-args": sys.argv[1:],
 							"compile-args": ["-v"] + ninjaopts,
 						}))
@@ -1341,6 +1346,7 @@ distutils_pep517_install() {
 
 						ninjaopts = shlex.split(os.environ["NINJAOPTS"])
 						print(json.dumps({
+							"builddir": "${BUILD_DIR}",
 							"setup-args": sys.argv[1:],
 							"compile-args": [
 								"-v",
