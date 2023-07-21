@@ -4,10 +4,11 @@
 EAPI=8
 
 DISTUTILS_SINGLE_IMPL=1
+DISTUTILS_EXT=1
 PYTHON_COMPAT=( python3_{9..11} )
 
 DISTUTILS_USE_PEP517=setuptools
-inherit distutils-r1 multibuild virtualx
+inherit distutils-r1 multibuild multiprocessing virtualx
 
 MY_PV=${PV/_beta/b}
 MY_P=${PN}-${MY_PV}
@@ -56,7 +57,10 @@ BDEPEND="
 	)
 "
 
-PATCHES=( "${FILESDIR}"/${P}-fix-test.patch )
+PATCHES=( "${FILESDIR}"/${P}-fix-test.patch
+		# backports to fix tests with >=PROJ9.2
+		  "${FILESDIR}"/${PN}-0.21.1-fix-test_proj92.patch
+		  "${FILESDIR}"/${PN}-0.21.1-fix-test_proj92_1.patch )
 
 EPYTEST_IGNORE=(
 	# Require network access, not covered by markers
@@ -80,5 +84,5 @@ python_test() {
 	cd "${BUILD_DIR}" || die
 
 	# Drop all tests needing network access
-	virtx epytest -m "not network and not natural_earth" || die "test failed"
+	virtx epytest -n "$(makeopts_jobs)" -m "not network and not natural_earth" || die "test failed"
 }
