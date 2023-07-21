@@ -22,6 +22,7 @@ dev-libs/libgcrypt static-libs
 sys-apps/hal -crypt -X
 virtual/ffmpeg encode
 media-video/ffmpeg gnutls
+net-libs/gnutls pkcs11 tools
 
 dev-qt/qt-creator examples git mercurial perforce qml qtscript -systemd doc subversio -qmldesigner -clang
 dev-qt/qtdeclarative localstorage
