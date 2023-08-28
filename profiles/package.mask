@@ -763,6 +763,7 @@ dev-util/mingw64-runtime
 sys-libs/newlib
 dev-embedded/avr-libc
 sys-devel/nvptx-tools
+sys-devel/clang-crossdev-wrappers
 
 # Egor Y. Egorov
 # Masked live-ebuild.
