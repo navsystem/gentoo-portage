@@ -3,7 +3,8 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{10..12} )
+# No 3.12 yet for bug #912987
+PYTHON_COMPAT=( python3_{10..11} )
 inherit flag-o-matic java-pkg-opt-2 java-ant-2 cmake-multilib python-r1 toolchain-funcs
 
 DESCRIPTION="A collection of algorithms and sample code for various computer vision problems"
@@ -293,6 +294,7 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-4.5.0-link-with-cblas-for-lapack.patch
 	"${FILESDIR}"/${PN}-4.8.0-fix-protobuf.patch
 	"${FILESDIR}"/${PN}-4.8.0-fix-flatbuffer.patch
+	"${FILESDIR}"/${PN}-4.8.0-arm64-fp16.patch
 )
 
 pkg_pretend() {
