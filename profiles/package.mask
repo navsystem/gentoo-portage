@@ -33,6 +33,22 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2023-09-06)
+# dev-libs/sink is unmaintained upstream, in Gentoo, fails to build.
+# Masked for removal on 2023-10-06, together with mail-client/kube and
+# would-be orphan libraries. Bugs #907499, #904876, #872062, #856094
+net-libs/kdav2
+net-libs/kimap2
+dev-libs/kasync
+dev-libs/sink
+mail-client/kube
+
+# David Seifert <soap@gentoo.org> (2023-09-05)
+# OpenSSL 1.1 based, does not work with 3.0+. tpm2-openssl is the
+# spiritual successor for OpenSSL 3.0+, but isn't packaged.
+# Removal on 2023-10-05.
+app-crypt/tpm2-tss-engine
+
 # Florian Schmaus <flow@gentoo.org> (2023-09-03)
 # Became a leaf package after dev-erlang/riak_pb was removed (989c0f55e0).
 # Unmaintained in ::gentoo and upstream since multiple years. Alternative at
@@ -387,6 +403,7 @@ acct-group/spi
 
 # Matt Turner <mattst88@gentoo.org> (2023-07-06)
 # GNOME 45 mask
+>=app-accessibility/orca-45_alpha
 >=app-crypt/libsecret-0.21
 >=app-editors/ghex-45_alpha
 >=app-editors/gnome-text-editor-45_alpha
@@ -396,6 +413,8 @@ acct-group/spi
 >=dev-cpp/gtkmm-4.11
 >=dev-libs/gjs-1.77
 >=dev-libs/glib-2.77
+>=dev-libs/gobject-introspection-1.77
+>=dev-libs/gobject-introspection-common-1.77
 >=dev-libs/libdex-0.3.0
 >=dev-util/gdbus-codegen-2.77
 >=dev-util/glib-utils-2.77
@@ -406,6 +425,7 @@ acct-group/spi
 >=gnome-base/gnome-shell-45_alpha
 >=gnome-base/gsettings-desktop-schemas-45_alpha
 >=gnome-base/nautilus-45_alpha
+>=gnome-extra/gnome-boxes-45_alpha
 >=gnome-extra/gnome-calculator-45_alpha
 >=gnome-extra/gnome-calendar-45_alpha
 >=gnome-extra/gnome-characters-45_alpha
@@ -428,6 +448,7 @@ gnome-extra/tecla
 >=sys-apps/baobab-45_alpha
 >=sys-apps/xdg-desktop-portal-gnome-45_alpha
 >=x11-libs/pango-1.51.0
+>=x11-themes/adwaita-icon-theme-45_alpha
 >=x11-themes/gnome-backgrounds-45_alpha
 >=x11-wm/mutter-45_alpha
 
@@ -515,11 +536,6 @@ gnome-extra/tecla
 # and layman, use app-crypt/gpgme[python] as a proper upstream
 # supported gpg library. Removal on 2023-08-17.
 dev-python/pyGPG
-
-# David Seifert <soap@gentoo.org> (2023-05-19)
-# Abandoned, replaced by 'eselect repository' (app-eselect/eselect-repository),
-# tons of open bugs. Removal on 2023-08-17. Bug #761199.
-app-portage/layman
 
 # Sam James <sam@gentoo.org> (2023-05-10)
 # Lots of package breakage as usual for new versions. Masked until most/all
@@ -786,7 +802,7 @@ app-office/texmacs
 # If you still use one of these old toolchain packages, please upgrade (and
 # switch the compiler / the binutils) ASAP. If you need them for a specific
 # (isolated) use case, feel free to unmask them on your system.
-<sys-libs/glibc-2.36-r5
+<sys-libs/glibc-2.37-r3
 <sys-libs/binutils-libs-2.40
 <sys-devel/binutils-2.40
 <sys-devel/binutils-hppa64-2.40
