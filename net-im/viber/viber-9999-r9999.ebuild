@@ -1,6 +1,6 @@
 # Copyright open-overlay 2015 by Alex
 
-EAPI="7"
+EAPI=6
 
 inherit eutils
 DESCRIPTION="Free calls, text and picture sharing with anyone, anywhere!"
