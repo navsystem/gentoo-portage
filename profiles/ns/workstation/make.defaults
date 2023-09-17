@@ -26,7 +26,7 @@ tkip wep wimax wps
 osmesa 
 -thunar
 
-tkip wep wps iwd clang
+tkip wep wps iwd clang designer qdoc
 
 input_devices_evdev video_cards_intel video_cards_nouveau video_cards_radeon video_cards_vesa
 video_cards_r300 video_cards_r600 video_cards_i915 video_cards_i965 video_cards_iris
