@@ -245,12 +245,6 @@ dev-python/sphinx_ansible_theme
 dev-python/nptyping
 
 # Hans de Graaff <graaff@gentoo.org> (2023-08-19)
-# ruby30-only package without any reverse dependencies. Use
-# dev-ruby/psych if you want to safely load YAML files.
-# Masked for removal on 2023-09-19
-dev-ruby/safe_yaml
-
-# Hans de Graaff <graaff@gentoo.org> (2023-08-19)
 # Ruby 3.0 is not compatible with OpenSSL 3 and consequently will be
 # masked earlier than its upstream EOL date. Please use a newer Ruby
 # version instead. Masked for removal on 2023-09-19.
@@ -264,13 +258,6 @@ dev-lang/ruby:3.0
 # Upstream warns that it is broken and there is no fix since 2010
 # Removal after 2023-10-01.  Bug #912363.
 app-dicts/edictionary
-
-# Hans de Graaff <graaff@gentoo.org> (2023-08-17)
-# The ruby project no longer maintains the elisp ruby-mode with the last
-# changed upstream 5 years ago. ruby-mode is also included in Emacs
-# itself, and this version is still maintained.
-# Masked for removal on 2023-09-17.
-app-emacs/ruby-mode
 
 # Sam James <sam@gentoo.org> (2023-08-04)
 # Stricter behavior which causes some packages to fail, see bug #911721.
@@ -408,6 +395,7 @@ acct-group/spi
 >=games-puzzle/gnome-sudoku-45_alpha
 >=gnome-base/gdm-45_beta
 >=gnome-base/gnome-control-center-45_alpha
+>=gnome-base/gnome-session-45_alpha
 >=gnome-base/gnome-settings-daemon-45_alpha
 >=gnome-base/gnome-shell-45_alpha
 >=gnome-base/gsettings-desktop-schemas-45_alpha
@@ -417,6 +405,7 @@ acct-group/spi
 >=gnome-extra/gnome-calculator-45_alpha
 >=gnome-extra/gnome-calendar-45_alpha
 >=gnome-extra/gnome-characters-45_alpha
+>=gnome-extra/gnome-clocks-45_alpha
 >=gnome-extra/gnome-logs-45_alpha
 >=gnome-extra/gnome-shell-extensions-45_alpha
 >=gnome-extra/gnome-software-45_alpha
@@ -435,6 +424,7 @@ gnome-extra/tecla
 >=sci-geosciences/gnome-maps-45_alpha
 >=sys-apps/baobab-45_alpha
 >=sys-apps/xdg-desktop-portal-gnome-45_alpha
+>=sys-process/gnome-usage-45_alpha
 >=x11-libs/pango-1.51.0
 >=x11-themes/adwaita-icon-theme-45_alpha
 >=x11-themes/gnome-backgrounds-45_alpha
