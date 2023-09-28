@@ -5,7 +5,7 @@ EAPI=8
 
 PYTHON_COMPAT=( python3_{10..11} )
 PYTHON_REQ_USE="xml(+)"
-LLVM_MAX_SLOT=16
+LLVM_MAX_SLOT=17
 
 CHROMIUM_LANGS="af am ar bg bn ca cs da de el en-GB es es-419 et fa fi fil fr gu he
 	hi hr hu id it ja kn ko lt lv ml mr ms nb nl pl pt-BR pt-PT ro ru sk sl sr
@@ -18,8 +18,6 @@ inherit python-any-r1 qmake-utils readme.gentoo-r1 toolchain-funcs virtualx xdg-
 
 DESCRIPTION="Open-source version of Google Chrome web browser"
 HOMEPAGE="https://www.chromium.org/"
-PATCHSET="2"
-PATCHSET_NAME="chromium-116-patchset-${PATCHSET}"
 PATCHSET_PPC64="117.0.5938.62-1raptor0~deb12u1"
 SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/${P}.tar.xz
 	https://gitlab.com/Matt.Jolly/chromium-patches/-/archive/${PV}/chromium-patches-${PV}.tar.bz2
@@ -31,7 +29,7 @@ SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/${P}
 
 LICENSE="BSD"
 SLOT="0/stable"
-KEYWORDS="~amd64 ~arm64 ~ppc64"
+KEYWORDS="amd64 arm64 ~ppc64"
 IUSE_SYSTEM_LIBS="+system-av1 +system-ffmpeg +system-harfbuzz +system-icu +system-png +system-zstd"
 IUSE="+X ${IUSE_SYSTEM_LIBS} component-build cups cpu_flags_arm_neon debug gtk4 +hangouts headless kerberos libcxx lto +official pax-kernel pgo pic +proprietary-codecs pulseaudio qt5 qt6 screencast selinux +suid vaapi wayland widevine"
 REQUIRED_USE="
