@@ -163,4 +163,11 @@ dev-haskell/zlib amd64
 dev-lang/ghc amd64
 app-admin/haskell-updater amd64
 dev-haskell/data-array-byte amd64
-
+dev-haskell/ansi-terminal-types amd64
+dev-haskell/crypton amd64
+dev-haskell/attoparsec-aeson amd64
+dev-haskell/bitvec amd64
+dev-haskell/crypton-connection amd64
+dev-haskell/crypton-x509 amd64
+dev-haskell/crypton-x509-store amd64
+dev-haskell/crypton-x509-validation amd64
