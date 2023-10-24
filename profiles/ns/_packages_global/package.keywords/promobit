@@ -162,3 +162,5 @@ dev-haskell/zip-archive amd64
 dev-haskell/zlib amd64
 dev-lang/ghc amd64
 app-admin/haskell-updater amd64
+dev-haskell/data-array-byte amd64
+
