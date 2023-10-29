@@ -21,7 +21,7 @@ HOMEPAGE="
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~amd64 ~arm ~arm64 ~riscv ~x86"
+KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~riscv ~sparc ~x86"
 IUSE="full-support minimal test X"
 RESTRICT="!test? ( test )"
 
@@ -73,6 +73,7 @@ COMMON_DEPEND="
 "
 BDEPEND="
 	${COMMON_DEPEND}
+	>=dev-util/meson-1.2.1
 	>=dev-python/cython-0.29.33[${PYTHON_USEDEP}]
 	>=dev-python/versioneer-0.28[${PYTHON_USEDEP}]
 	test? (
