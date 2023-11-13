@@ -22,4 +22,4 @@ dev-util/lxqt-build-tools amd64
 x11-themes/lxqt-themes amd64
 gui-libs/xdg-desktop-portal-lxqt amd64
 app-misc/qtxdg-tools amd64
-
+lxqt-base/lxqt-menu-data amd64
