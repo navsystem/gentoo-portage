@@ -55,9 +55,7 @@ DEPEND="
 	)
 	qt6? (
 		dev-qt/qtbase:6
-		dev-qt/qtgui:6
 		dev-qt/qtsvg:6
-		dev-qt/qtwidgets:6
 	)
 	X? (
 		x11-libs/libX11
