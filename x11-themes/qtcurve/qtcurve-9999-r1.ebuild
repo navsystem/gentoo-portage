@@ -54,7 +54,7 @@ DEPEND="
 		X? ( dev-qt/qtx11extras:5 )
 	)
 	qt6? (
-		dev-qt/qtbase:6
+		dev-qt/qtbase:6=[X=,gui,widgets]
 		dev-qt/qtsvg:6
 	)
 	X? (
