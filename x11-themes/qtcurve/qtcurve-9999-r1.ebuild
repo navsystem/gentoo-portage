@@ -19,7 +19,7 @@ if [[ ${KDE_BUILD_TYPE} = release ]] ; then
 fi
 
 EGIT_REPO_URI="https://github.com/eegorov/qtcurve.git"
-EGIT_BRANCH=mr_qt6
+EGIT_BRANCH=master
 
 REQUIRED_USE="gtk? ( X )
 	|| ( gtk qt5 )
