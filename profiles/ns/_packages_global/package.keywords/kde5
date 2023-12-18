@@ -163,6 +163,10 @@ kde-apps/ksudoku amd64
 kde-apps/kubrick amd64
 kde-plasma/plasma-welcome amd64
 kde-apps/kgpg amd64
+kde-plasma/libplasma amd64
+kde-plasma/plasma-activities amd64
+kde-plasma/kwayland amd64
+kde-plasma/plasma-activities-stats amd64
 
 # required by kwin
 x11-libs/libxkbcommon amd64
