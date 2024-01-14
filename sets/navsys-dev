@@ -11,7 +11,7 @@ kde-plasma/plasma-meta
 x11-base/xorg-server
 kde-apps/krdc
 app-editors/vim
-dev-util/valgrind
+dev-debug/valgrind
 net-dialup/minicom
 kde-apps/okular
 app-arch/p7zip
