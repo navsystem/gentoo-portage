@@ -113,6 +113,9 @@ src_install() {
 	done
 
 	#  Moved to courier-common
+	rm "${D}"/usr/sbin/deliverquota || die
+	rm "${D}"/usr/sbin/maildirkw || die
+	rm "${D}"/usr/sbin/makedat || die
 	rm "${D}"/usr/share/man/man1/maildirkw.1 || die
 	rm "${D}"/usr/share/man/man8/deliverquota.8 || die
 
