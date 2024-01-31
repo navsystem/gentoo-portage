@@ -165,3 +165,11 @@ app-arch/brotli python
 media-video/pipewire extra jack-client pipewire-alsa sound-server system-service
 media-libs/opus custom-modes
 dev-libs/libpcre2 pcre32
+sci-libs/hdf5 unsupported fortran
+sci-libs/opencascade vtk
+dev-python/pyside2 webengine
+dev-python/pillow webp
+sci-libs/cgnslib hdf5
+sci-libs/hdf5 hl
+
+
