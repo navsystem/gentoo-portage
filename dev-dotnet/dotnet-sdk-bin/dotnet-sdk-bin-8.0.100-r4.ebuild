@@ -28,7 +28,10 @@ SLOT="${SDK_SLOT}/${RUNTIME_SLOT}"
 
 LICENSE="MIT"
 KEYWORDS="amd64 arm arm64"
-RESTRICT="splitdebug"
+
+# STRIP="llvm-strip" corrupts some executables when using the patchelf hack,
+# bug https://bugs.gentoo.org/923430
+RESTRICT="splitdebug strip"
 
 RDEPEND="
 	app-crypt/mit-krb5:0/0

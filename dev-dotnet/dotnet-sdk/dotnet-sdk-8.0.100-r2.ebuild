@@ -42,6 +42,10 @@ S="${WORKDIR}/${PN}-${RUNTIME_SLOT}"
 LICENSE="MIT"
 KEYWORDS="amd64"
 
+# STRIP="llvm-strip" corrupts some executables when using the patchelf hack,
+# bug https://bugs.gentoo.org/923430
+RESTRICT="splitdebug strip"
+
 CURRENT_NUGETS_DEPEND="
 	~dev-dotnet/dotnet-runtime-nugets-${RUNTIME_SLOT}
 "
