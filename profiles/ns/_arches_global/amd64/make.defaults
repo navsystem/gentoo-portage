@@ -1,4 +1,4 @@
-CFLAGS="-O2 -march=x86-64 -pipe"
+CFLAGS="-O2 -march=x86-64-v3 -pipe"
 CXXFLAGS="${CFLAGS}"
 CHOST="x86_64-pc-linux-gnu"
 USE="${USE} qemu_softmmu_targets_x86_64"
