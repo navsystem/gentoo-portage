@@ -171,5 +171,5 @@ dev-python/pyside2 webengine
 dev-python/pillow webp
 sci-libs/cgnslib hdf5
 sci-libs/hdf5 hl
-
-
+dev-libs/libdbusmenu gtk3
+media-libs/suil gtk2

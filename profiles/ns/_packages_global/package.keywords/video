@@ -1,2 +1,5 @@
 ~x11-libs/libva-intel-driver-1.8.3 amd64 x86
 ~x11-libs/libva-1.8.3 amd64 x86
+~app-misc/radeontop-1.4 amd64
+~media-video/obs-studio-30.0.2 amd64
+
