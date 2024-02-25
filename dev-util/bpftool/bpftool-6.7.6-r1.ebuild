@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{10..11} )
+PYTHON_COMPAT=( python3_{10..12} )
 inherit estack linux-info optfeature python-any-r1 bash-completion-r1 toolchain-funcs
 
 MY_PV="${PV/_/-}"
@@ -26,13 +26,14 @@ S="${S_K}/tools/bpf/bpftool"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~arm64 ~loong ~ppc ~ppc64 ~riscv ~x86"
-IUSE="caps"
+IUSE="caps +llvm"
 
 RDEPEND="
 	sys-libs/binutils-libs:=
 	sys-libs/zlib:=
 	virtual/libelf:=
 	caps? ( sys-libs/libcap:= )
+	llvm? ( sys-devel/llvm:= )
 "
 DEPEND="
 	${RDEPEND}
@@ -88,6 +89,9 @@ src_prepare() {
 
 	# dev-python/docutils installs rst2man.py, not rst2man
 	sed -i -e 's/rst2man/rst2man.py/g' Documentation/Makefile || die
+
+	# remove -Werror (bug 887981)
+	sed -i -e 's/\-Werror//g' ../../lib/bpf/Makefile || die
 }
 
 bpftool_make() {
@@ -100,6 +104,7 @@ bpftool_make() {
 		prefix="${EPREFIX}"/usr \
 		bash_compdir="$(get_bashcompdir)" \
 		feature-libcap="$(usex caps 1 0)" \
+		feature-llvm="$(usex llvm 1 0)" \
 		"$@"
 }
 
