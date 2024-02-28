@@ -173,3 +173,12 @@ sci-libs/cgnslib hdf5
 sci-libs/hdf5 hl
 dev-libs/libdbusmenu gtk3
 media-libs/suil gtk2
+
+media-sound/lmms libgig fluidsynth
+media-libs/ladspa-sdk -abi_x86_32
+media-plugins/swh-plugins -abi_x86_32
+media-libs/liblrdf -abi_x86_32
+media-plugins/caps-plugins -abi_x86_32
+media-plugins/cmt-plugins -abi_x86_32
+media-sound/fluidsynth -abi_x86_32
+media-libs/rubberband -abi_x86_32
