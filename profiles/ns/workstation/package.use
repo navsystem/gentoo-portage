@@ -183,3 +183,5 @@ media-plugins/cmt-plugins -abi_x86_32
 media-sound/fluidsynth -abi_x86_32
 media-libs/rubberband -abi_x86_32
 media-video/ffmpeg -ladspa
+games-fps/quake2-icculus qmax
+
