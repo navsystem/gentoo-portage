@@ -18,7 +18,7 @@ SLOT="0"
 
 # remove keywords until build works:
 # https://github.com/iovisor/bpftrace/issues/2349
-KEYWORDS="~amd64 ~arm64 ~x86"
+KEYWORDS="amd64 ~arm64 ~x86"
 IUSE="fuzzing test"
 
 # lots of fixing needed
@@ -44,8 +44,10 @@ BDEPEND="
 	app-arch/xz-utils
 	app-alternatives/lex
 	app-alternatives/yacc
-	app-editors/vim-core
-	dev-util/pahole
+	test? (
+		app-editors/vim-core
+		dev-util/pahole
+	)
 	virtual/pkgconfig
 "
 
