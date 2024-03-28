@@ -186,4 +186,5 @@ media-libs/opencv -abi_x86_32
 media-plugins/frei0r-plugins -abi_x86_32
 media-video/ffmpeg -ladspa
 games-fps/quake2-icculus qmax
+media-libs/simage -qt6
 
