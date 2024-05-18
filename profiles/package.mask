@@ -33,6 +33,19 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2024-05-18)
+# Another abandoned project in the middle of a line of forks.
+# Broken with Python 3.12, with pytest 8 and with numpy 2.  Last
+# upstream activity in September 2023, but bugs remained unanswered
+# before that.
+# Removal on 2024-06-17.  Bug #929433.
+dev-python/aesara
+
+# Michał Górny <mgorny@gentoo.org> (2024-05-18)
+# Superseded by dev-python/pdm-backend.  No revdeps left.
+# Removal on 2024-06-17.  Bug #932160.
+dev-python/pdm-pep517
+
 # Michał Górny <mgorny@gentoo.org> (2024-05-17)
 # Superseded by dev-python/pathable.  No revdeps.
 # Removal on 2024-06-16.  Bug #932103.
@@ -53,10 +66,6 @@ x11-plugins/pidgintex
 # EAPI=6, no maintainer, fails to compile.
 # Removal on 2024-06-16.  Bugs #932095, #768072, #777747.
 app-forensics/air
-
-# Sam James <sam@gentoo.org> (2024-05-17)
-# Breaks dev-util/pkgcheck at least, masked pending investigation (bug #932093)
-=dev-python/tree-sitter-0.22.2
 
 # Sam James <sam@gentoo.org> (2024-05-17)
 # Needs adaptation to new build system (bug #932092).
