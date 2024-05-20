@@ -188,3 +188,5 @@ media-video/ffmpeg -ladspa
 games-fps/quake2-icculus qmax
 media-libs/simage -qt6
 dev-qt/qttools qtattributionsscanner
+
+app-editors/vim -sound
