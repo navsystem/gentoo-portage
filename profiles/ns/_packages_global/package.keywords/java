@@ -1,3 +1,5 @@
 # #627310
 =dev-java/glassfish-transaction-api-1.1.2.2.04-r1 amd64 x86
 ~dev-java/xerces-2.12.0 amd64
+~www-servers/tomcat-10.1.24 amd64
+
