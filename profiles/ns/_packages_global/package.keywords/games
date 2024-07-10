@@ -7,7 +7,7 @@ games-fps/quake2-textures amd64 x86
 <games-simulation/cannonsmash-9999 amd64 x86
 <games-sports/foobillard-9999 amd64 x86
 ~games-arcade/xbill-2.1 amd64
-~games-fps/eduke32-20240316.10564 amd64
+~games-fps/eduke32-20240619.10591 amd64
 ~games-fps/nexuiz-2.5.2 amd64
 ~games-puzzle/bastet-0.43.2 amd64
 ~games-puzzle/fbg-0.9 amd64
