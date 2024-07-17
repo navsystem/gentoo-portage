@@ -33,6 +33,35 @@
 
 #--- END OF EXAMPLES ---
 
+# Hans de Graaff <graaff@gentoo.org> (2024-07-17)
+# Obsolete slot. Please use a newer slot instead. No reverse
+# dependencies left. Removal on 2024-08-17.
+dev-ruby/rmagick:4
+
+# Eli Schwartz <eschwartz@gentoo.org> (2024-07-15)
+# FreeWnn has no activity upstream on its (very slow!) development site
+# since 2015. Website is gone. Various build failures, fails to build
+# with gcc 14.  All of its reverse dependencies are even more dead, as
+# they do not even have distfiles anymore.
+# Removal on 2024-08-14.  Bug 936129.
+# Bug #829613, #854579, #871603, #874114, #934595.
+app-i18n/freewnn
+app-i18n/im-freewnn
+app-dicts/wnn-ldic
+app-i18n/kinput2
+
+# Hans de Graaff <graaff@gentoo.org> (2024-07-14)
+# Ancient package, last release ca. 2009. Upstream is gone. All
+# improvements are now available in dev-ruby/irb itself.
+# Removal on 2024-08-14.
+dev-ruby/wirble
+
+# Arthur Zamarin <arthurzam@gentoo.org> (2024-07-13)
+# Maintainer-needed, depends on very old gui-libs/wlroots version,
+# no activity upstream since Jan 2022.
+# Removal on 2024-08-12.  Bugs #935921, #867808.
+gui-wm/hikari
+
 # Hans de Graaff <graaff@gentoo.org> (2024-07-12)
 # Test dependency that is no longer maintained, last release in
 # 2019. Broken in various ways. No reverse dependencies left.
@@ -239,12 +268,6 @@ sci-astronomy/predict
 ~dev-vcs/mercurial-6.7.2
 ~dev-vcs/mercurial-6.7.3
 
-# Maciej Barć <xgqt@gentoo.org> (2024-06-14)
-# EAPI=6, now shipped in official gambit and so it fails to merge from file
-# collision. Bug: #832334
-# Removal on 2024-07-14.
-dev-scheme/termite
-
 # Arthur Zamarin <arthurzam@gentoo.org> (2024-06-14)
 # EAPI=6, no reverse dependencies, maintainer-needed, installation
 # blocked by iproute2.
@@ -368,6 +391,7 @@ dev-ml/async:0/0.17
 >=dev-ml/labltk-8.06.14
 dev-ml/patience_diff:0/0.17
 >=dev-ml/ppx_deriving-6.0.2
+dev-ml/ppx_js_style:0/0.17
 
 # Michał Górny <mgorny@gentoo.org> (2024-06-08)
 # Prereleases of Xfce 4.20.  Masking upon popular request, due to

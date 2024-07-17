@@ -4,8 +4,8 @@
 EAPI=8
 
 PVCUT=$(ver_cut 1-2)
-PYTHON_COMPAT=( python3_{10..12} )
-inherit cmake flag-o-matic frameworks.kde.org python-any-r1 xdg
+PYTHON_COMPAT=( python3_{10..13} )
+inherit cmake frameworks.kde.org python-any-r1 xdg
 
 DESCRIPTION="Breeze SVG icon theme"
 
@@ -32,9 +32,6 @@ python_check_deps() {
 }
 
 src_configure() {
-	# bug #931904
-	filter-lto
-
 	local mycmakeargs=(
 		-DPython_EXECUTABLE="${PYTHON}"
 		-DBINARY_ICONS_RESOURCE=ON # TODO: remove when kexi was ported away
