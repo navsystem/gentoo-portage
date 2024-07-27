@@ -1,4 +1,4 @@
-app-admin/testdisk ntfs reiserfs
+pp-admin/testdisk ntfs reiserfs
 media-gfx/splashutils fbcondecor
 net-fs/samba quota gnutls client addc -system-mitkrb5 python 
 sys-libs/ldb python
@@ -190,3 +190,4 @@ media-libs/simage -qt6
 dev-qt/qttools qtattributionsscanner
 
 app-editors/vim -sound
+media-libs/libv4l bpf
