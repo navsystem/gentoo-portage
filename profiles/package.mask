@@ -33,6 +33,21 @@
 
 #--- END OF EXAMPLES ---
 
+# Ionen Wolkens <ionen@gentoo.org> (2024-08-11)
+# >=1.1.14 enables usage of explicit sync (with >=nvidia-drivers-560
+# and compositors that supports like kwin-6), which currently seems
+# to be causing too many problems ranging from application crashes
+# and potential VRAM leaking (even with the fixes in 1.1.15) and may
+# be better left masked for the time being. It can hwoever solve
+# flicking/stutter issues on some setups so users may want to unmask
+# if heavily affected (bug #937773).
+>=gui-libs/egl-wayland-1.1.14
+
+# Arthur Zamarin <arthurzam@gentoo.org> (2024-08-11)
+# HOMEPAGE and SRC_URI return 404, Gentoo is last distribution.
+# Removal on 2024-09-10.  Bugs #937775, #675028.
+media-sound/SmarTagger
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2024-08-10)
 # Mask KF6-based version for now until actual KF6-based consumers
 # also move to ::gentoo.
@@ -206,18 +221,6 @@ app-i18n/kinput2
 # improvements are now available in dev-ruby/irb itself.
 # Removal on 2024-08-14.
 dev-ruby/wirble
-
-# Arthur Zamarin <arthurzam@gentoo.org> (2024-07-13)
-# Maintainer-needed, depends on very old gui-libs/wlroots version,
-# no activity upstream since Jan 2022.
-# Removal on 2024-08-12.  Bugs #935921, #867808.
-gui-wm/hikari
-
-# Hans de Graaff <graaff@gentoo.org> (2024-07-12)
-# Test dependency that is no longer maintained, last release in
-# 2019. Broken in various ways. No reverse dependencies left.
-# Removal on 2024-08-12.
-dev-ruby/rspectacular
 
 # Leonardo Hernández Hernández <leohdz172@proton.me> (2024-07-07)
 # New major ffmpeg version. Tracker bug #928905.
