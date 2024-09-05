@@ -1,2 +1,4 @@
 -postgres_targets_postgres16
 -vst
+-kf6compat
+

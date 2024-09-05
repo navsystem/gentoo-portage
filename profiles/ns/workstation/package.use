@@ -192,3 +192,9 @@ dev-qt/qttools qtattributionsscanner
 
 app-editors/vim -sound
 media-libs/libv4l bpf
+
+net-misc/freerdp server
+dev-qt/qtbase mysql
+dev-qt/qtwebengine pdfium
+kde-frameworks/kio handbook
+
