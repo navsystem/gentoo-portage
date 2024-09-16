@@ -198,3 +198,6 @@ dev-qt/qtbase mysql
 dev-qt/qtwebengine pdfium
 kde-frameworks/kio handbook
 
+sci-libs/vtk -qt5
+dev-python/pyside6 webengine quick
+
