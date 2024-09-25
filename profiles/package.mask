@@ -33,6 +33,12 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2024-09-25)
+# Fails on deprecated config options from eclass, except that if we
+# update them, then all existing packages break.
+# https://github.com/scikit-build/scikit-build-core/issues/912
+=dev-python/rapidfuzz-3.10.0
+
 # Eli Schwartz <eschwartz@gentoo.org> (2024-09-22)
 # Unmaintained, abandoned upstream, does not compile with GCC 14.
 # Removal on 2024-10-22.  Bug #874732.
@@ -266,10 +272,14 @@ kde-misc/latte-dock
 www-apps/haunt
 dev-scheme/guile-commonmark
 >=dev-scheme/guile-reader-0.6.3-r100
+dev-scheme/guile:1.8
 dev-scheme/guile:2.2
 dev-scheme/guile:3.0
 >=dev-build/make-4.4.1-r100
+>=app-emacs/flycheck-guile-0.5-r100
+>=app-emacs/geiser-guile-0.28.3-r100
 >=app-office/gnucash-5.8-r100
+>=app-office/texmacs-2.1-r100
 >=app-shells/gash-0.3.0-r100
 >=dev-build/remake-4.3.1.1.6-r100
 >=dev-debug/gdb-15.1-r100
