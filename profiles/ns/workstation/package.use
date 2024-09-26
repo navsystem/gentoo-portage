@@ -201,3 +201,6 @@ kde-frameworks/kio handbook
 sci-libs/vtk -qt5
 dev-python/pyside6 webengine quick
 
+media-video/ffmpeg vpx
+dev-qt/qtwayland compositor
+
