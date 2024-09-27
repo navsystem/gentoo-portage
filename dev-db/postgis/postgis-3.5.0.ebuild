@@ -3,7 +3,7 @@
 
 EAPI=8
 
-POSTGRES_COMPAT=( {12..16} )
+POSTGRES_COMPAT=( {12..17} )
 POSTGRES_USEDEP="server"
 inherit autotools postgres-multi toolchain-funcs
 
@@ -54,9 +54,6 @@ DEPEND="${RDEPEND}
 
 PATCHES=(
 	"${FILESDIR}/${PN}-3.0.3-try-other-cpp-names.patch"
-	"${FILESDIR}/${PN}-3.4.0-without-gui.patch"
-	# source: https://github.com/google/flatbuffers/pull/7897
-	#"${FILESDIR}/${PN}-3.3.2-flatbuffers-abseil-2023.patch" # bug 905378
 )
 
 src_prepare() {
