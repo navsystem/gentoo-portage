@@ -844,10 +844,11 @@ toolchain_setup_ada() {
 	# GNAT can usually be built using the last major version and
 	# the current version, at least.
 	#
-	# We always prefer the version being built if possible
-	# as it has the greatest chance of success. Failing that,
-	# try GCC 10 and iterate upwards.
-	for ada_candidate in ${SLOT} $(seq 10 ${latest_gcc}) ; do
+	# Order of preference (descending):
+	# 1) Match the version being built;
+	# 2) Iterate downwards from the version being built;
+	# 3) Iterate upwards from the version being built to the greatest version installed.
+	for ada_candidate in ${SLOT} $(seq $((${SLOT} - 1)) -1 10) $(seq $((${SLOT} + 1)) ${latest_gcc}) ; do
 		has_version -b "sys-devel/gcc:${ada_candidate}" || continue
 
 		ebegin "Testing sys-devel/gcc:${ada_candidate} for Ada"
@@ -1005,10 +1006,11 @@ toolchain_setup_d() {
 
 	local d_bootstrap
 	local d_candidate
-	# We always prefer the version being built if possible
-	# as it has the greatest chance of success. Failing that,
-	# try GCC 10 and iterate upwards.
-	for d_candidate in ${SLOT} $(seq 10 ${latest_gcc}) ; do
+	# Order of preference (descending):
+	# 1) Match the version being built;
+	# 2) Iterate downwards from the version being built;
+	# 3) Iterate upwards from the version being built to the greatest version installed.
+	for d_candidate in ${SLOT} $(seq $((${SLOT} - 1)) -1 10) $(seq $((${SLOT} + 1)) ${latest_gcc}) ; do
 		has_version -b "sys-devel/gcc:${d_candidate}" || continue
 
 		ebegin "Testing sys-devel/gcc:${d_candidate} for D"
@@ -1146,7 +1148,15 @@ toolchain_src_configure() {
 		# unless USE=debug. Note that snapshots on stable branches don't count as "non-released"
 		# for these purposes.
 		if grep -q "experimental" gcc/DEV-PHASE ; then
-			# - USE=debug for pre-releases: yes,extra,rtl
+			# Tell users about the non-obvious behavior here so they don't think
+			# e.g. the next GCC release is super slow to compile things.
+			ewarn "Unreleased GCCs default to extra runtime checks even with USE=-debug,"
+			ewarn "matching upstream default behavior. We recommend keeping these enabled."
+			ewarn "The checks (sometimes substantially) increase build time but provide important protection"
+			ewarn "from potential miscompilations (wrong code) by turning them into build-time errors."
+			ewarn "To override (not recommended), set: GCC_CHECKS_LIST=\"release\"."
+
+			# - USE=debug for pre-releases: yes,extra,rtl (stornger than USE=debug for releases)
 			# - USE=-debug for pre-releases: yes,extra (following upstream default)
 			confgcc+=( --enable-checking="${GCC_CHECKS_LIST:-$(usex debug yes,extra,rtl yes,extra)}" )
 		else
