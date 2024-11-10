@@ -11,3 +11,5 @@
 ~dev-util/lxqt-build-tools-2.1.0 amd64
 ~x11-misc/screengrab-2.9.0 amd64
 ~x11-terms/qterminal-2.1.0 amd64
+~dev-libs/libdbusmenu-lxqt-0.2.0 amd64
+
