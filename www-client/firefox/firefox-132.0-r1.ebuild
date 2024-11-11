@@ -6,8 +6,10 @@ EAPI=8
 FIREFOX_PATCHSET="firefox-132-patches-01.tar.xz"
 
 LLVM_COMPAT=( 17 18 19 )
-# This will also filter Rust versions in the non-llvm-r1 case, but this is fine.
+# This will also filter rust versions that don't match LLVM_COMPAT in the non-clang path; this is fine.
 RUST_NEEDS_LLVM=1
+# If not building with clang we need at least rust 1.76
+RUST_MIN_VER=1.77.1
 
 PYTHON_COMPAT=( python3_{10..12} )
 PYTHON_REQ_USE="ncurses,sqlite,ssl"
@@ -465,10 +467,7 @@ pkg_setup() {
 		if tc-is-lto; then
 			use_lto=yes
 			# LTO is handled via configure
-			# -Werror=lto-type-mismatch -Werror=odr are going to fail with GCC,
-			# bmo#1516758, bgo#942288
 			filter-lto
-			filter-flags -Werror=lto-type-mismatch -Werror=odr
 		fi
 
 		if use pgo ; then
@@ -480,6 +479,12 @@ pkg_setup() {
 			if ! has userpriv ${FEATURES} ; then
 				eerror "Building ${PN} with USE=pgo and FEATURES=-userpriv is not supported!"
 			fi
+		fi
+
+		if [[ ${use_lto} = yes ]]; then
+			# -Werror=lto-type-mismatch -Werror=odr are going to fail with GCC,
+			# bmo#1516758, bgo#942288
+			filter-flags -Werror=lto-type-mismatch -Werror=odr
 		fi
 
 		# Ensure we have enough disk space to compile
@@ -494,14 +499,10 @@ pkg_setup() {
 		llvm-r1_pkg_setup
 		rust_pkg_setup
 
-		if [[ ${use_lto} == "yes" ]]; then
-			if use clang; then
-				if ! (tc-ld-is-lld || tc-ld-is-mold) ; then
-					eerror "Building ${PN} with lto and requires the sys-devel/lld or sys-devel/mold linker!"
-					die "Please fix your toolchain configuration."
-				fi
-			else
-				die "Building ${PN} with lto requires clang!"
+		if [[ ${use_lto} == "yes" ]] && use clang; then
+			if ! (tc-ld-is-lld || tc-ld-is-mold) ; then
+				eerror "Building ${PN} with LTO and Clang requires the sys-devel/lld or sys-devel/mold linker!"
+				die "Please fix your toolchain configuration."
 			fi
 		fi
 
