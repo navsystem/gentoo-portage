@@ -63,7 +63,7 @@ media-sound/lmms
 media-sound/pavucontrol
 media-sound/qjackctl
 media-sound/qpwgraph
-media-tv/v4l-utils
+media-libs/libv4l
 media-video/avidemux
 media-video/guvcview
 media-video/mpv

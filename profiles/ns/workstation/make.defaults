@@ -49,8 +49,6 @@ python_targets_python3_11 python_targets_python3_12 python_targets_python2_7 pyt
 
 abi_x86_32
 
-cgroup-hybrid
-
 -postgres_targets_postgres12 -postgres_targets_postgres13 -postgres_targets_postgres14 -postgres_targets_postgres15 postgres_targets_postgres16
 
 harfbuzz libass pipewire geoclue
