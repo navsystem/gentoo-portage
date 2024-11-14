@@ -7,7 +7,7 @@ inherit cmake flag-o-matic
 
 if [[ ${PV} == *9999 ]]; then
 	inherit git-r3
-	EGIT_REPO_URI="https://github.com/FreeRDP/FreeRDP.git"
+	EGIT_REPO_URI="https://github.com/eegorov/FreeRDP.git"
 	case ${PV} in
 		2.*) EGIT_BRANCH="stable-2.0";;
 	esac
@@ -104,7 +104,6 @@ RDEPEND="${COMMON_DEPEND}
 
 src_prepare() {
 	local PATCHES=(
-		"${FILESDIR}/freerdp-2.11.2-clang.patch"
 		"${FILESDIR}/freerdp-2.11-Revert-codec-encode-messages-considering-endianness.patch"
 	)
 	cmake_src_prepare
