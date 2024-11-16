@@ -244,3 +244,6 @@
 ~dev-haskell/text-icu-0.8.0.2 amd64
 ~dev-haskell/some-1.0.5 amd64
 ~dev-haskell/typst-symbols-0.1.4 amd64
+~dev-haskell/stm-2.5.0.1 amd64
+~dev-haskell/parsec-3.1.14.0 amd64
+~dev-haskell/cabal-3.4.1.0 amd64
