@@ -49,7 +49,7 @@ app-arch/p7zip rar wxwidgets
 dev-db/sqlite secure-delete unlock-notify
 
 dev-vcs/git -perl -subversion -gtk
-media-video/vlc -rdp -vaapi
+media-video/vlc -rdp
 x11-libs/fltk xft
 
 media-libs/glc-lib
