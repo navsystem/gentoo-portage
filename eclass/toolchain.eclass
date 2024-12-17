@@ -411,16 +411,29 @@ if tc_has_feature valgrind ; then
 fi
 
 if [[ ${PN} != gnat-gpl ]] && tc_has_feature ada ; then
-	BDEPEND+="
-		ada? (
-			|| (
-				sys-devel/gcc:${SLOT}[ada]
-				<sys-devel/gcc-${SLOT}[ada]
-				<dev-lang/ada-bootstrap-${SLOT}
-				dev-lang/gnat-gpl[ada]
+	if tc_use_major_version_only ; then
+		BDEPEND+="
+			ada? (
+				|| (
+					sys-devel/gcc:${SLOT}[ada]
+					<sys-devel/gcc-${SLOT}[ada]
+					<dev-lang/ada-bootstrap-$((${SLOT} + 1))
+					dev-lang/gnat-gpl[ada]
+				)
 			)
-		)
-	"
+		"
+	else
+                BDEPEND+="
+                        ada? (
+                                || (
+                                        sys-devel/gcc:${SLOT}[ada]
+                                        <sys-devel/gcc-${SLOT}[ada]
+                                        <dev-lang/ada-bootstrap-${SLOT}
+                                        dev-lang/gnat-gpl[ada]
+                                )
+                        )
+                "
+	fi
 fi
 
 # TODO: Add a pkg_setup & pkg_pretend check for whether the active compiler
@@ -970,13 +983,22 @@ toolchain_setup_ada() {
 	# As a penultimate resort, try dev-lang/ada-bootstrap.
 	if ver_test ${ada_bootstrap} -gt ${PV} || [[ -z ${ada_bootstrap} ]] ; then
 		ebegin "Testing fallback dev-lang/ada-bootstrap for Ada"
-		if has_version -b "<dev-lang/ada-bootstrap-${SLOT}" ; then
-			# TODO: Figure out ada-bootstrap versioning/slots
+		# XXX: This can be cleaned up like BDEPEND for tc_use_major_version_only
+		# once we only support such versions.
+		if has_version -b "=dev-lang/ada-bootstrap-${SLOT}*" || has_version -b "<dev-lang/ada-bootstrap-${SLOT}" ; then
+			# Workaround the old scheme
+			if has_version -b "=dev-lang/ada-bootstrap-0_p2021*" ; then
+				ada_bootstrap=10
+			else
+				local latest_ada_bootstrap=$(best_version -b "<dev-lang/ada-bootstrap-${SLOT}")
+				latest_ada_bootstrap="${latest_ada_bootstrap#dev-lang/ada-bootstrap-}"
+				latest_ada_bootstrap=$(ver_cut 1 ${latest_ada_bootstrap})
+				ada_bootstrap="${latest_ada_bootstrap}"
 
-			#local latest_ada_bootstrap=$(best_version -b "<dev-lang/ada-bootstrap-${SLOT}")
-			#latest_ada_bootstrap="${latest_ada_bootstrap#dev-lang/ada-bootstrap-}"
-			#latest_ada_bootstrap=$(ver_cut 1 ${latest_ada_bootstrap})
-			ada_bootstrap="10"
+				export ADA_INCLUDE_PATH="${BROOT}/usr/lib/ada-bootstrap/usr/lib/gcc/${CHOST}/${ada_bootstrap}/adainclude::${ADA_INCLUDE_PATH}"
+				export ADA_OBJECTS_PATH="${BROOT}/usr/lib/ada-bootstrap/usr/lib/gcc/${CHOST}/${ada_bootstrap}/adalib:${ADA_OBJECTS_PATH}"
+			fi
+
 			ada_bootstrap_type=ada-bootstrap
 			ada_bootstrap_bin_dir="${BROOT}/usr/lib/ada-bootstrap/bin"
 
@@ -1316,8 +1338,13 @@ toolchain_src_configure() {
 	confgcc+=( --enable-lto )
 
 	# Build compiler itself using LTO
-	if tc_version_is_at_least 9.1 && _tc_use_if_iuse lto ; then
-		BUILD_CONFIG_TARGETS+=( bootstrap-lto )
+	if _tc_use_if_iuse lto ; then
+		# GCC 11 at least has a -Wlto-type-mismatch issue with Ada
+		if ! tc_version_is_at_least 12.1 && is_ada ; then
+			:;
+		elif tc_version_is_at_least 9.1 ; then
+			BUILD_CONFIG_TARGETS+=( bootstrap-lto )
+		fi
 	fi
 
 	if tc_version_is_at_least 12 && _tc_use_if_iuse cet && [[ -z ${CLANG_DISABLE_CET_HACK} && ${CTARGET} == x86_64-*-gnu* ]] ; then
