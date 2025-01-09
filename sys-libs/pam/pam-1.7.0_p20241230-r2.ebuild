@@ -53,9 +53,9 @@ DEPEND="
 	audit? ( >=sys-process/audit-2.2.2[${MULTILIB_USEDEP}] )
 	berkdb? ( >=sys-libs/db-4.8.30-r1:=[${MULTILIB_USEDEP}] )
 	!berkdb? ( sys-libs/gdbm:=[${MULTILIB_USEDEP}] )
-	elogind? ( sys-auth/elogind )
+	elogind? ( >=sys-auth/elogind-254 )
 	selinux? ( >=sys-libs/libselinux-2.2.2-r4[${MULTILIB_USEDEP}] )
-	systemd? ( sys-apps/systemd:= )
+	systemd? ( >=sys-apps/systemd-254:= )
 	nis? (
 		net-libs/libnsl:=[${MULTILIB_USEDEP}]
 		>=net-libs/libtirpc-0.2.4-r2:=[${MULTILIB_USEDEP}]
@@ -121,7 +121,7 @@ multilib_src_configure() {
 		# probably need a news item.
 		$(meson_native_use_feature systemd logind)
 		$(meson_native_use_feature elogind)
-		-Dpam_lastlog=enabled
+		$(meson_feature !elibc_musl pam_lastlog)
 	)
 
 	# This whole weird has_version libxcrypt block can go once
