@@ -10,7 +10,7 @@ HOMEPAGE="https://invent.kde.org/system/qtcurve"
 
 LICENSE="LGPL-2+"
 SLOT="0"
-IUSE="gtk nls plasma +qt5 qt6 test +X"
+IUSE="gtk nls plasma +qt5 +qt6 test +X"
 
 if [[ ${KDE_BUILD_TYPE} = release ]] ; then
 	SRC_URI="https://github.com/KDE/qtcurve/archive/${PV/_/-}.tar.gz -> ${P}.tar.gz"
@@ -23,26 +23,25 @@ EGIT_BRANCH=master
 
 REQUIRED_USE="gtk? ( X )
 	|| ( gtk qt5 )
-	plasma? ( qt5 )
+	plasma? ( qt6 )
 "
 RESTRICT="test"
 
 DEPEND="
 	gtk? ( x11-libs/gtk+:2 )
 	plasma? (
-		dev-qt/qtprintsupport:5
-		kde-frameworks/frameworkintegration:5
-		kde-frameworks/karchive:5
-		kde-frameworks/kcompletion:5
-		kde-frameworks/kconfig:5
-		kde-frameworks/kconfigwidgets:5
-		kde-frameworks/kcoreaddons:5
-		kde-frameworks/kguiaddons:5
-		kde-frameworks/ki18n:5
-		kde-frameworks/kiconthemes:5
-		kde-frameworks/kio:5
-		kde-frameworks/kwidgetsaddons:5
-		kde-frameworks/kwindowsystem:5
+		kde-frameworks/frameworkintegration:6
+		kde-frameworks/karchive:6
+		kde-frameworks/kcompletion:6
+		kde-frameworks/kconfig:6
+		kde-frameworks/kconfigwidgets:6
+		kde-frameworks/kcoreaddons:6
+		kde-frameworks/kguiaddons:6
+		kde-frameworks/ki18n:6
+		kde-frameworks/kiconthemes:6
+		kde-frameworks/kio:6
+		kde-frameworks/kwidgetsaddons:6
+		kde-frameworks/kwindowsystem:6
 		kde-frameworks/kxmlgui:5
 	)
 	qt5? (
@@ -76,6 +75,7 @@ src_configure() {
 		-DLIB_INSTALL_DIR="$(get_libdir)"
 		-DENABLE_QT4=OFF
 		-DQTC_QT4_ENABLE_KDE=OFF
+		-DQTC_QT5_ENABLE_KDE=OFF
 		-DQTC_KDE4_DEFAULT_HOME=ON
 		-DENABLE_GTK2="$(usex gtk)"
 		-DENABLE_QT5="$(usex qt5)"
@@ -84,7 +84,7 @@ src_configure() {
 		-DQTC_ENABLE_X11="$(usex X)"
 		-DQTC_INSTALL_PO="$(usex nls)"
 	)
-	use qt5 && mycmakeargs+=( -DQTC_QT5_ENABLE_KDE="$(usex plasma)" )
+	use qt6 && mycmakeargs+=( -DQTC_QT6_ENABLE_KDE="$(usex plasma)" )
 
 	cmake_src_configure
 }
