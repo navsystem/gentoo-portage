@@ -33,6 +33,25 @@
 
 #--- END OF EXAMPLES ---
 
+# Ionen Wolkens <ionen@gentoo.org> (2025-02-14)
+# No revdeps left, and serves no purpose on its own.  Formerly used
+# by <=app-emulation/wine-*-7 but <=7.x has been dropped and newer
+# versions of it cross-build their own .dll (PE) version of it
+# leaving the system's .so (ELF) copy unused.
+#
+# In other words, *can* use vkd3d with wine without this package.
+#
+# Not to be confused with app-emulation/vkd3d-proton which builds a
+# .dll usable as an alternative to wine's own.
+#
+# Removal on 2025-03-16.
+app-emulation/vkd3d
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-02-13)
+# Last release 10 years ago, dead upstream, depends on Qt5, no one else
+# packages this. Removal on 2025-03-14.
+x11-misc/kaqaz
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-02-12)
 # Depends on deprecated Qt5Script, gone closed-source upstream, multiple
 # open bugs #912829, #913106, #922304, #922306, #926039, #935772, #935887,
@@ -191,10 +210,11 @@ app-editors/juffed
 # Nowa Ammerlaan <nowa@gentoo.org> (2025-01-23)
 # Sypder-5 requires Qt5, and there are several dead
 # plugins that have not been migrated to Spyder-6.
-# Removal on 2025-02-23
+# Bugs #926687, #926686. Removal on 2025-02-23
 <dev-python/spyder-6
 dev-python/spyder-vim
 dev-python/spyder-terminal
+=dev-python/qtpy-2.4.2
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-01-23)
 # CVE-2025-23050, bug #948573; Removal on 2025-02-22.
@@ -206,19 +226,24 @@ dev-qt/qdbusviewer
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-01-23)
 # Qt5 packages without any revdeps.
+dev-qt/assistant
 dev-qt/pixeltool
 dev-qt/qdbus
 dev-qt/qdoc
+dev-qt/qtdiag
+dev-qt/qtgamepad:5
+dev-qt/qtlocation:5
 dev-qt/qtplugininfo
 dev-qt/qtquicktimeline:5
+dev-qt/qtsensors:5
 dev-qt/qtserialbus:5
 dev-qt/qtvirtualkeyboard:5
 dev-qt/qtwebview:5
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-01-23)
-# Unmaintained in Gentoo, last release from 2022 needs Qt5WebEngine.
-# Bug #926655. Removal on 2025-02-22.
-app-text/bibletime
+# Qt5 package which needs Qt5WebEngine.
+# Bug #926655.
+<app-text/bibletime-3.1.0
 
 # Volkmar W. Pogatzki <gentoo@pogatzki.net> (2025-01-20)
 # Unused Java library. Removal on 2025-02-19.
