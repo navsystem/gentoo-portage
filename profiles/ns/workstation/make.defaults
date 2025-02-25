@@ -57,6 +57,7 @@ jack lv2 vst ladspa stk soundio
 openconnect
 kf6compat
 nginx
+junit
 
 nginx_modules_http_sub
 "
