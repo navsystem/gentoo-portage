@@ -95,7 +95,7 @@ RDEPEND="
 	)
 	ffmpeg? ( media-video/ffmpeg:= )
 	gui? (
-		dev-qt/qtbase:6[gui,widgets]
+		dev-qt/qtbase:6[X,gui,widgets]
 		dev-qt/qtsvg:6
 	)
 	llvm? ( $(llvm_gen_dep 'llvm-core/llvm:${LLVM_SLOT}=') )
@@ -208,6 +208,7 @@ src_configure() {
 		-DENABLE_AUTOUPDATE=OFF
 		-DENABLE_BLUEZ=$(usex bluetooth)
 		-DENABLE_CLI_TOOL=ON
+		-DENABLE_CUBEB=ON
 		-DENABLE_EGL=$(usex egl)
 		-DENABLE_EVDEV=$(usex evdev)
 		-DENABLE_LLVM=$(usex llvm)
