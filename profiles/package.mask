@@ -33,6 +33,25 @@
 
 #--- END OF EXAMPLES ---
 
+# Arthur Zamarin <arthurzam@gentoo.org> (2025-03-22)
+# EAPI=7, uses legacy distutils non-PEP517 build, no reverse
+# dependencies, missing python compat bumps. Unmaintained in
+# Gentoo for more than 3 years.
+# Removal on 2025-04-21.  Bugs #951854, #909910, #929427.
+dev-libs/pigpio
+
+# Michał Górny <mgorny@gentoo.org> (2025-03-22)
+# Depends on deprecated notmuch bindings.  The migration to new bindings
+# have not been finished in 5 years already.  Still uses legacy
+# distutils-r1.eclass mode.
+# Removal on 2025-04-21.  Bug #751541.
+mail-filter/afew
+
+# Michał Górny <mgorny@gentoo.org> (2025-03-22)
+# Stuck on Python 3.10, no reply from maintainer.  No revdeps.
+# Removal on 2025-04-21.  Bug #896608.
+app-office/gtg
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-03-20)
 # Upstream have made clear that they are not going to port to Qt6 and
 # recommend sys-apps/qdirstat (from original k4dirstat author) instead.
@@ -55,6 +74,10 @@ dev-python/simplebayes
 # Xfce 4.22 prereleases.  Masked because they tend to be quite unstable.
 >=xfce-base/exo-4.21
 >=xfce-base/libxfce4ui-4.21
+>=xfce-base/xfce4-panel-4.21
+>=xfce-base/xfce4-power-manager-4.21
+>=xfce-base/xfce4-session-4.21
+>=xfce-base/xfce4-settings-4.21
 
 # Michał Górny <mgorny@gentoo.org> (2025-03-17)
 # A "forever beta" wrapper over dev-python/requests, with no tests,
@@ -270,27 +293,6 @@ dev-python/pyside6-tools
 # Discontinued, please use xournal++ instead.
 # Removal on 2025-03-16. Bug 948200.
 app-text/xournal
-
-# Andrey Grozin <grozin@gentoo.org> (2025-02-15)
-# Last release 6 years ago, depends on Qt5,
-# no one else packages this.
-# Use sci-geosciences/gpxsee instead.
-# Removal on 2025-03-16.
-sci-geosciences/gpxlab
-
-# Andrey Grozin <grozin@gentoo.org> (2025-02-15)
-# Last release 6 years ago, no one else packages this.
-# Bugs #932575, #927671
-# Use app-text/foliate or app-text/crqt-ng.
-# Removal on 2025-03-16.
-app-text/simple-fb2-reader
-
-# Andrey Grozin <grozin@gentoo.org> (2025-02-15)
-# Last release 6 years ago, no one else packages this.
-# Does not seem useful.
-# Bug #729546.
-# Removal on 2025-03-16.
-app-text/fictionup
 
 # Ionen Wolkens <ionen@gentoo.org> (2025-02-14)
 # No revdeps left, and serves no purpose on its own.  Formerly used
