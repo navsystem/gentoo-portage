@@ -33,6 +33,10 @@
 
 #--- END OF EXAMPLES ---
 
+# Sam James <sam@gentoo.org> (2025-03-27)
+# Large-scale breakage (bug #951350).
+=dev-build/cmake-4*
+
 # Viorel Munteanu <ceamac@gentoo.org> (2025-03-26)
 # Segfaults with no clear error message when trying to start a VM with 3D
 # acceleration enabled.
@@ -308,18 +312,6 @@ virtual/perl-Thread-Semaphore
 virtual/perl-threads-shared
 virtual/perl-Tie-RefHash
 virtual/perl-Time-Piece
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-02-26)
-# Last release in 2005, last commit in 2013, dead as can be - does not
-# start, does not build, bugs #914927, #927337, #946657.
-# Removal on 2025-03-26.
-media-sound/jamin
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-02-26)
-# Last release 11 years ago, dead upstream, depends on Qt5 (and even that
-# only by means of downstream patching, no one else packages this.
-# Bug #947631. Removal on 2025-03-26.
-app-mobilephone/qtadb
 
 # Eray Aslan <eras@gentoo.org> (2025-02-24)
 # Mask experimental software
