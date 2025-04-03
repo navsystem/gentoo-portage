@@ -16,7 +16,7 @@ net-dialup/minicom
 kde-apps/okular
 app-arch/p7zip
 kde-apps/kcalc
-kde-apps/spectacle
+kde-plasma/spectacle
 net-libs/gsoap
 net-print/foomatic-db
 net-print/foomatic-db-ppds
