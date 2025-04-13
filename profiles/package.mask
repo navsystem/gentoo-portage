@@ -33,17 +33,17 @@
 
 #--- END OF EXAMPLES ---
 
+# Ionen Wolkens <ionen@gentoo.org> (2025-04-12)
+# >=31 breaks www-client/qutebrowser's tests
+# https://github.com/cucumber/gherkin/issues/373
+# https://github.com/qutebrowser/qutebrowser/commit/12e683826783
+>=dev-python/gherkin-official-31
+
 # Michał Górny <mgorny@gentoo.org> (2025-04-09)
 # Still uses legacy distutils-r1 mode, and lacks Python 3.13 target.
 # No reply from the maintainer for a year now.
 # Removal on 2025-05-09.  Bug #909900.
 app-text/nfoview
-
-# Arthur Zamarin <arthurzam@gentoo.org> (2025-04-04)
-# Temporary mask until handled the usage of shorter SLOT.
-# Bugs #953127, #953103.
-dev-lang/rust:1.86
-dev-lang/rust-bin:1.86
 
 # Matt Turner <mattst88@gentoo.org> (2025-04-04)
 # Package is dead (last release in 1999).
