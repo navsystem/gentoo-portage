@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>e.egorov@pay-lab.ru</email>
+		<name>Egor Y. Egorov</name>
+	</maintainer>
+	<upstream>
+		<remote-id>https://app.ktalk.ru/</remote-id>
+	</upstream>
+</pkgmetadata>
