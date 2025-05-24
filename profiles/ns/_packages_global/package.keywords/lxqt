@@ -2,7 +2,7 @@
 ~gui-libs/xdg-desktop-portal-lxqt-1.1.0 amd64
 ~x11-misc/pcmanfm-qt-2.2.0 amd64
 ~x11-libs/qtermwidget-2.2.0 amd64
-~app-misc/qtxdg-tools-4.1.0 amd64
+~app-misc/qtxdg-tools-4.2.0 amd64
 ~dev-libs/libqtxdg-4.2.0 amd64
 ~x11-misc/qps-2.10.0 amd64
 ~media-gfx/lximage-qt-2.2.0 amd64
@@ -11,5 +11,5 @@
 ~dev-util/lxqt-build-tools-2.2.0 amd64
 ~x11-misc/screengrab-2.9.0 amd64
 ~x11-terms/qterminal-2.2.0 amd64
-~dev-libs/libdbusmenu-lxqt-0.2.0 amd64
+~dev-libs/libdbusmenu-lxqt-0.3.0 amd64
 ~lxqt-base/lxqt-wayland-session-0.2.0 amd64
