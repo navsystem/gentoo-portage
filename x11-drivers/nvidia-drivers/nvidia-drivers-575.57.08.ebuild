@@ -598,4 +598,18 @@ pkg_postinst() {
 		elog "enables the use of the GSP firmware by default. *If* experience regressions,"
 		elog "please see '${EROOT}/etc/modprobe.d/nvidia.conf' to optionally disable."
 	fi
+
+	[[ ${PV} == 575.57.08 ]] || die "TODO: recheck intel+nvidia status & cleanup"
+	if use kernel-open && ver_replacing -lt 575; then
+		ewarn
+		ewarn "WARNING:"
+		ewarn
+		ewarn "*If* using a hybrid Intel+NVIDIA laptop, be warned that users have"
+		ewarn "reported that the GSP firmware could fail to initialize (for some"
+		ewarn "setups) when USE=kernel-open is enabled with ${PN}-575.x."
+		ewarn "*If* X/wayland fails to come up and boot messages have GSP errors,"
+		ewarn "try to either disable USE=kernel-open or stay on ${PN}-570.x"
+		ewarn "for now. Note that blackwell cards (aka 50xx+) require USE=kernel-open,"
+		ewarn "so downgrading will be the only option there for now."
+	fi
 }
