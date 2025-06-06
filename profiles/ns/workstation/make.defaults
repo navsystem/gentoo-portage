@@ -48,6 +48,8 @@ dracut_modules_plymouth dracut_modules_systemd dracut_modules_btrfs
 python_targets_python3_12 python_targets_python3_13 python_targets_python2_7 python_single_target_python3_12 -python_single_target_python3_13
 features2d
 
+-sequoia
+
 abi_x86_32
 
 -postgres_targets_postgres12 -postgres_targets_postgres13 -postgres_targets_postgres14 -postgres_targets_postgres15 postgres_targets_postgres16
