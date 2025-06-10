@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit multilib-minimal toolchain-funcs git-r3
+inherit cmake-multilib git-r3
 
 DESCRIPTION="Extremely fast non-cryptographic hash algorithm"
 HOMEPAGE="https://xxhash.com/"
@@ -16,28 +16,7 @@ SLOT="0"
 KEYWORDS="~alpha amd64 ~arm ~arm64 ~hppa ~loong ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86 ~x64-macos"
 
 src_prepare() {
-	default
-
-	multilib_copy_sources
-}
-
-multilib_src_compile() {
-	emake AR="$(tc-getAR)" CC="$(tc-getCC)"
-}
-
-multilib_src_test() {
-	emake CC="$(tc-getCC)" check
-}
-
-multilib_src_install() {
-	local emakeargs=(
-		DESTDIR="${D}"
-		PREFIX="${EPREFIX}"/usr
-		LIBDIR="${EPREFIX}"/usr/$(get_libdir)
-	)
-
-	emake "${emakeargs[@]}" install
-	einstalldocs
-
-	rm "${ED}"/usr/$(get_libdir)/libxxhash.a || die
+    cp -a ${S}/build/cmake/* ${S}
+    sed -i ${S}/CMakeLists.txt -e 's:set(XXHASH_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../.."):set(XXHASH_DIR "${CMAKE_CURRENT_SOURCE_DIR}"):' || die
+    cmake_src_prepare
 }
