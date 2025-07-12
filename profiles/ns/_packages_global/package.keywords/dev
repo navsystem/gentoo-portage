@@ -56,6 +56,8 @@ media-libs/opencv amd64
 <net-im/telegram-desktop-9999 amd64
 ~dev-cpp/ada-2.9.1 amd64
 ~dev-cpp/cld3-3.0.13_p20220331 amd64
+~dev-libs/qr-code-generator-1.8.0 amd64
+~dev-cpp/expected-1.1.0 amd64
 ~media-libs/libtgvoip-2.4.4_p20240706 amd64
 ~media-libs/tg_owt-0_pre20240804 amd64
 ~dev-cpp/abseil-cpp-20240722.0 amd64
