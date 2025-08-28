@@ -8,7 +8,7 @@ SRC_URI="https://gitlab.promobit.loc/ozeron/${P}/-/tags/v${PV} -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 IUSE=""
 
 RDEPEND="
@@ -17,7 +17,7 @@ RDEPEND="
 	dev-libs/libfmt"
 DEPEND="${RDEPEND}"
 
-S=${WORKDIR}/${P}-v${PV}
+S=${WORKDIR}/${PN}-v${PV}
 
 src_configure() {
 	local -a mycmakeargs=(
