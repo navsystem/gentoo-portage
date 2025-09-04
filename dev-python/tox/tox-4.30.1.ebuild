@@ -17,7 +17,7 @@ HOMEPAGE="
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm arm64 ~hppa ~loong ~mips ppc ppc64 ~riscv ~s390 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~loong ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86"
 
 RDEPEND="
 	dev-python/cachetools[${PYTHON_USEDEP}]
@@ -35,10 +35,7 @@ BDEPEND="
 	test? (
 		dev-python/build[${PYTHON_USEDEP}]
 		dev-python/distlib[${PYTHON_USEDEP}]
-		dev-python/flaky[${PYTHON_USEDEP}]
 		dev-python/psutil[${PYTHON_USEDEP}]
-		dev-python/pytest-mock[${PYTHON_USEDEP}]
-		dev-python/pytest-xdist[${PYTHON_USEDEP}]
 		dev-python/re-assert[${PYTHON_USEDEP}]
 		$(python_gen_cond_dep '
 			dev-python/time-machine[${PYTHON_USEDEP}]
@@ -46,6 +43,8 @@ BDEPEND="
 	)
 "
 
+EPYTEST_PLUGINS=( pytest-{mock,rerunfailures,xdist} )
+# xdist seems to mess up state between successive implementation runs
 distutils_enable_tests pytest
 
 src_prepare() {
@@ -65,6 +64,7 @@ python_test() {
 		# Internet
 		tests/tox_env/python/virtual_env/package/test_package_cmd_builder.py::test_build_wheel_external
 		tests/tox_env/python/virtual_env/package/test_package_cmd_builder.py::test_run_installpkg_targz
+		tests/tox_env/python/virtual_env/package/test_package_pyproject.py::test_pyproject_installpkg_pep517_envs
 	)
 	local EPYTEST_IGNORE=(
 		# requires devpi*
@@ -72,6 +72,9 @@ python_test() {
 	)
 
 	case ${EPYTHON} in
+		python*)
+			local EPYTEST_PLUGINS=( "${EPYTEST_PLUGINS[@]}" time-machine )
+			;;
 		pypy3*)
 			EPYTEST_DESELECT+=(
 				'tests/tox_env/python/pip/test_pip_install.py::test_constrain_package_deps[explicit-True-True]'
@@ -82,13 +85,7 @@ python_test() {
 				'tests/tox_env/python/pip/test_pip_install.py::test_constrain_package_deps[requirements_constraints_indirect-True-True]'
 			)
 			;;
-		python3.13)
-			EPYTEST_DESELECT+=(
-				# https://github.com/tox-dev/tox/issues/3290
-				'tests/config/loader/test_str_convert.py::test_str_convert_ok_py39[1,2-value1-Optional]'
-			)
-			;;
 	esac
 
-	epytest
+	epytest -o addopts=
 }

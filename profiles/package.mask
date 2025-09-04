@@ -284,11 +284,6 @@ dev-ruby/ruby-openid
 # Removal on 2025-09-07.
 dev-java/jide-oss
 
-# Hans de Graaff <graaff@gentoo.org> (2025-07-30)
-# Obsolete slot that is ruby33-only. Use the newer slot instead. Removal
-# on 2025-08-30.
-dev-ruby/tzinfo:1
-
 # Eli Schwartz <eschwartz@gentoo.org> (2025-07-28)
 # Unmaintained, out of date, last upstream release in 2018, last
 # packaged release 2015. Broken with modern system interfaces for
@@ -312,11 +307,6 @@ dev-util/cucumber-messages:24
 # suppor for the old APIs this package needs. Impossible to use anymore.
 # Removal on 2025-08-17.  Bug #927026.
 net-vpn/protonvpn-cli
-
-# Matt Turner <mattst88@gentoo.org> (2025-07-16)
-# Masked for testing
-=dev-util/mesa_clc-25.2*
-=media-libs/mesa-25.2*
 
 # Eli Schwartz <eschwartz@gentoo.org> (2025-07-08)
 # Unmaintained, out of date, QA issues, outstanding bugs for compilation
