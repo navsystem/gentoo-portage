@@ -12,7 +12,7 @@ DESCRIPTION="Time Desktop application"
 HOMEPAGE="https://app.ktalk.ru/"
 
 SRC_URI="
-	amd64? ( https://st.ktalk.host/ktalk-app/linux/ktalk3.0.0amd64.deb )
+	amd64? ( https://st.ktalk.host/ktalk-app/linux/${PN}${PV}amd64.deb )
 "
 S="${WORKDIR}"
 
