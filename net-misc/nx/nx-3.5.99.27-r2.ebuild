@@ -118,7 +118,7 @@ src_compile() {
 	mkdir -p nx-X11/exports/lib/ || die
 	local nxlib
 	for nxlib in libNX_X11.so{,.6{,.3.0}} ; do
-		ln -s ../../lib/src/.libs/${nxlib} nx-X11/exports/lib/${nxlib} || die
+		ln -sf ../../lib/src/.libs/${nxlib} nx-X11/exports/lib/${nxlib} || die
 	done
 
 	emake -C nxcompshad
