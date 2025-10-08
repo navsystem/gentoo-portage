@@ -17,6 +17,6 @@ KEYWORDS="~alpha amd64 ~arm ~arm64 ~hppa ~loong ~mips ~ppc ~ppc64 ~riscv ~s390 ~
 
 src_prepare() {
     cp -a ${S}/build/cmake/* ${S}
-    sed -i ${S}/CMakeLists.txt -e 's:set(XXHASH_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../.."):set(XXHASH_DIR "${CMAKE_CURRENT_SOURCE_DIR}"):' || die
+    sed -i ${S}/CMakeLists.txt -e 's:get_filename_component(XXHASH_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../..":get_filename_component(XXHASH_DIR "${CMAKE_CURRENT_SOURCE_DIR}":' || die
     cmake_src_prepare
 }
