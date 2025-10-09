@@ -36,6 +36,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2025-10-02)
+# Nothing depends on it.
+# Removal: 2025-11-01.  Bug #961199
+net-libs/NativeThread
+
 # Ionen Wolkens <ionen@gentoo.org> (2025-10-07)
 # Masked for testing the new .0 version and leave time for packages
 # to catch up on support. Will likely be kept masked until 6.10.1
@@ -241,13 +246,6 @@ net-misc/ytfzf
 # not just network. See bug #963106.
 =sys-kernel/linux-firmware-20250917
 
-# Ionen Wolkens <ionen@gentoo.org> (2025-09-18)
-# No revdeps left, in-tree version is broken with cmake4, and is a pain
-# to maintain due to its overly custom cmake usage. Also outdated given
-# the latest version was unusable with its old revdep (been breaking API
-# somewhat often). Removal on 2025-10-18. Bug #963014
-dev-cpp/rapidyaml
-
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-09-16)
 # Appears dead upstream w/ last release from 2016, no reponse to Qt5 EOL
 # notice, only sporadic code changes for a long time w/ last commit from
@@ -288,18 +286,6 @@ sys-apps/edid-decode
 # Dead upstream, fails to compile on modern gcc. Bug #919250
 # Removal on 2025-10-12
 net-wireless/mdk
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-09-09)
-# Packaged version is very outdated, was already broken by libxml2-2.12,
-# now once more by libxml2-2.14. Bugs #739362, #829005, #923828, #955798.
-# Removal on 2025-10-09.
-games-rpg/manaplus
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-09-09)
-# Broken by dev-libs/libxml2-2.14.2, abandoned by upstream, almost no one
-# else is packaging this. Bugs #955705, 955817. Removal on 2025-10-09.
-net-news/rsstool
-x11-misc/xcave
 
 # Michał Górny <mgorny@gentoo.org> (2025-09-06)
 # Abandoned.  Incompatible with py3.14.  Last release in 2020.
@@ -419,10 +405,6 @@ virtual/perl-Unicode-Normalize
 # Sam James <sam@gentoo.org> (2025-05-23)
 # Severe memory leak (bug #953874)
 =app-i18n/ibus-anthy-1.5.17
-
-# Sam James <sam@gentoo.org> (2025-05-22)
-# Introduces REQUIRED_USE that needs more discussion (bug #956402)
-=media-gfx/gimp-3.0.2-r2
 
 # Alfred Wingate <parona@protonmail.com> (2025-05-17)
 # Masked for testing
