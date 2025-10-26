@@ -36,6 +36,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Arthur Zamarin <arthurzam@gentoo.org> (2025-10-25)
+# EAPI=7, maintainer-needed, no rev deps, source digest mismatch.
+# Removal on 2025-11-24.  Bugs #965097, #927089.
+dev-libs/eventlog
+
 # Michał Górny <mgorny@gentoo.org> (2025-10-21)
 # Old backport with no revdeps left.
 # Removal on 2025-11-20.  Bug #964780.
@@ -226,10 +231,6 @@ net-misc/grive
 # Bugs #952796, #957240. Removal on 2025-10-29.
 sys-auth/google-authenticator-wrappers
 
-# Jason A. Donenfeld <zx2c4@gentoo.org> (2025-09-30)
-# Upstream is dead, package is broken. Removal on 2025-10-29.
-net-analyzer/speedtest++
-
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-09-30)
 # Unmaintained in ::gentoo, EAPI-7 based, almost no one else is left
 # packaging this. Removal on 2025-10-29.
@@ -267,13 +268,6 @@ x11-terms/roxterm
 # media-video/ccextractor-0.89 is available for ~amd64 and ~x86.
 <media-video/ccextractor-0.89
 
-# Ionen Wolkens <ionen@gentoo.org> (2025-09-23)
-# Abandoned and barely functional, and will just keep getting worse if
-# it does not keep up with website changes. net-misc/youtube-viewer
-# can be used as an alternative albeit it requires a YouTube API key.
-# Removal on 2025-10-23.
-net-misc/ytfzf
-
 # Sam James <sam@gentoo.org> (2025-09-21)
 # Breaks (common) mt7921e WiFi driver with a hang in many cases, affecting
 # not just network. See bug #963106.
@@ -302,25 +296,6 @@ sys-apps/edid-decode
 # Dead upstream, fails to compile on modern gcc. Bug #919250
 # Removal on 2025-10-12
 net-wireless/mdk
-
-# Michał Górny <mgorny@gentoo.org> (2025-09-06)
-# Abandoned.  Incompatible with py3.14.  Last release in 2020.
-# No revdeps left.
-# Removal on 2025-10-06.  Bug #962431.
-dev-python/timeout-decorator
-
-# Michał Górny <mgorny@gentoo.org> (2025-09-06)
-# dev-python/partd is a dep of dask which we removed in 2024.  It
-# test-depends on dev-python/locket which was last updated in 2022.
-# That one in turn test-depends on dev-python/spur which was last
-# updated in 2023 and is pinned to old dev-python/paramiko version.
-# Its SSH part is not tested by us at all, and the "spur.local"
-# alternative without SSH was last released in 2016.
-# These packages have no revdeps outside themselves left.
-# Removal on 2025-10-06.  Bug #962404.
-dev-python/locket
-dev-python/partd
-dev-python/spur
 
 # Eli Schwartz <eschwartz@gentoo.org> (2025-09-01)
 # Effectively unmaintained in Gentoo. Upstream dead for 8 years. Stuck
