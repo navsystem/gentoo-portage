@@ -74,6 +74,7 @@ sys-fs/udev hwdb
 app-misc/2gis-data msk nsk omsk kaluga minvody spb
 
 sys-libs/zlib minizip static-libs
+virtual/zlib minizip static-libs
 sys-libs/glibc -gd # bug #204525
 
 dev-db/postgresql kerberos
