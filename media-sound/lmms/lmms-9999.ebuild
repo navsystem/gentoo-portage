@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit cmake xdg
+inherit bash-completion-r1 cmake xdg
 
 DESCRIPTION="Cross-platform music production software"
 HOMEPAGE="https://lmms.io"
@@ -102,6 +102,7 @@ src_configure() {
 		-DWANT_STK=$(usex stk)
 		-DWANT_VST=$(usex vst)
 		-DWANT_SF2=$(usex fluidsynth)
+		-DBASHCOMP_PKG_PATH=$(get_bashcompdir)
 	)
 
 	cmake_src_configure
