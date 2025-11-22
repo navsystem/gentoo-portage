@@ -59,7 +59,6 @@ PYTHON_SRC_DIR="${S}"
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-0.4.9-docdir.patch
-	"${FILESDIR}"/${PN}-0.4.9-numpy-2.patch
 	"${FILESDIR}"/ffmpeg5.patch
 )
 
