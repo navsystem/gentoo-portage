@@ -68,7 +68,7 @@ DOCS=(
 
 src_install() {
 	if use amd64; then
-		cd time-desktop-linux-x64 || die
+		cd time-desktop-${PV}-linux-x64 || die
 	fi
 	newicon app_icon.png ${MY_PN}.png
 
