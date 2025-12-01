@@ -238,15 +238,18 @@ DEPEND="${RDEPEND}
 DOCS=( AUTHORS THANKS NEWS README doc/fortunes.txt )
 
 PATCHES=(
+	# downstream patches
 	"${FILESDIR}"/${PN}-3.0.22-gettext-version.patch # bug 766549
 	"${FILESDIR}"/${PN}-3.0.22-no-vlc-cache-gen.patch # bugs 564842, 608256
 	"${FILESDIR}"/${PN}-2.1.0-fix-libtremor-libs.patch # build system
 	"${FILESDIR}"/${PN}-3.0.6-fdk-aac-2.0.0.patch # bug 672290
 	"${FILESDIR}"/${PN}-3.0.11.1-configure_lua_version.patch
 	"${FILESDIR}"/${PN}-3.0.18-drop-minizip-dep.patch
+	# 3.0.x branch (in 3.0.22):
+	#"${FILESDIR}"/${PN}-3.0.22_rc2-fixes.patch # relevant bugfixes since 3.0.22_rc2 tag
 	# bug 961436
-	"${FILESDIR}"/${P}-ffmpeg8-1.patch # upstream git master backport
-	"${FILESDIR}"/${P}-ffmpeg8-2.patch # downstream
+	"${FILESDIR}"/${PN}-3.0.22_rc2-ffmpeg8-1.patch # upstream git master backport
+	"${FILESDIR}"/${PN}-3.0.22_rc2-ffmpeg8-2.patch # downstream
 )
 
 pkg_setup() {

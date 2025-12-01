@@ -113,7 +113,6 @@ sys-process/iotop
 sys-process/lsof
 virtual/wine
 www-client/google-chrome
-www-client/opera
 x11-apps/mesa-progs
 x11-apps/xev
 x11-apps/xmodmap
