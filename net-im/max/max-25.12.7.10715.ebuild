@@ -11,7 +11,7 @@ SRC_URI="https://download.max.ru/electron/MAX.deb"
 
 LICENSE=""
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 
 DEPEND="
 	x11-libs/gtk+:3
