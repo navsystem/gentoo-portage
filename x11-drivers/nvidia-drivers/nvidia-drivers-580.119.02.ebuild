@@ -1,7 +1,12 @@
-# Copyright 1999-2025 Gentoo Authors
+# Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
+
+# note: while this 580.119.02 version is not as broken as 580.105.08
+# was (no need to mask), it still seem to be affected by notable
+# regressions compared to 580.95.05 and it should not be considered
+# for stable (e.g. https://forums.developer.nvidia.com/t/355216)
 
 MODULES_OPTIONAL_IUSE=+modules
 inherit desktop dot-a eapi9-pipestatus flag-o-matic linux-mod-r1
@@ -29,7 +34,6 @@ LICENSE="
 SLOT="0/${PV%%.*}"
 KEYWORDS="-* ~amd64 ~arm64"
 IUSE="+X abi_x86_32 abi_x86_64 kernel-open persistenced powerd +static-libs +tools wayland"
-REQUIRED_USE="kernel-open? ( modules )"
 
 COMMON_DEPEND="
 	acct-group/video
@@ -573,7 +577,7 @@ pkg_postinst() {
 		ewarn "[2] https://wiki.gentoo.org/wiki/Nouveau"
 	fi
 
-	if use kernel-open && [[ ! -v NV_HAD_KERNEL_OPEN ]]; then
+	if use kernel-open && use modules && [[ ! -v NV_HAD_KERNEL_OPEN ]]; then
 		ewarn "\nOpen source variant of ${PN} was selected, note that it requires"
 		ewarn "Turing/Ampere+ GPUs (aka GTX 1650+). Try disabling if run into issues."
 		ewarn "Also see: ${EROOT}/usr/share/doc/${PF}/html/kernel_open.html"

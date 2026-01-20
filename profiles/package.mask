@@ -1,4 +1,4 @@
-# Copyright 1999-2025 Gentoo Authors
+# Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 # Uses GLEP 84 format
@@ -36,6 +36,58 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2026-01-18)
+# Masked for testing.
+>=dev-libs/boost-1.90
+
+# Ulrich Müller <ulm@gentoo.org> (2026-01-18)
+# Obsolete since Emacs 29, per upstream README.md. Use the "docker"
+# method from the integrated tramp-container package as replacement.
+# Removal on 2026-02-17. Bug #968938.
+app-emacs/docker-tramp
+
+# Michał Górny <mgorny@gentoo.org> (2026-01-13)
+# LLVM 15 is only required by masked packages.  It will be removed when
+# the reverse dependencies are gone.  Bug #920536.
+<dev-libs/opencl-clang-16
+<dev-ml/llvm-16
+<dev-python/clang-16
+<dev-python/lit-16
+<dev-util/intel-graphics-compiler-2.20
+<dev-util/spirv-llvm-translator-16
+<llvm-core/clang-16
+<llvm-core/clang-common-16
+<llvm-core/clang-toolchain-symlinks-16
+<llvm-core/libclc-16
+<llvm-core/lld-16
+<llvm-core/lld-toolchain-symlinks-16
+<llvm-core/lldb-16
+<llvm-core/llvm-16
+<llvm-core/llvm-common-16
+<llvm-core/llvm-toolchain-symlinks-16
+<llvm-core/llvmgold-16
+<llvm-runtimes/clang-runtime-16
+<llvm-runtimes/compiler-rt-16
+<llvm-runtimes/compiler-rt-sanitizers-16
+<llvm-runtimes/libcxx-16
+<llvm-runtimes/libcxxabi-16
+<llvm-runtimes/libunwind-16
+<llvm-runtimes/openmp-16
+
+# Conrad Kostecki <conikost@gentoo.org> (2026-01-12)
+# Mask legacy intel-compute-runtime because it depends on legacy
+# intel-graphics-compiler, which no longer receives updates,
+# and only supports up to LLVM 15.
+# Bug #920541. Removal on 2026-01-31.
+=dev-libs/intel-compute-runtime-24.35.30872.32-r2
+=dev-libs/intel-compute-runtime-24.35.30872.36
+=dev-util/intel-graphics-compiler-1.0.17791.18-r1
+
+# Fabian Groffen <grobian@gentoo.org> (2026-01-08)
+# Too many issues already.  Further testing is appreciated, but expect
+# breakage.
+=app-portage/portage-utils-0.99
+
 # James Le Cuirot <chewi@gentoo.org> (2025-12-24)
 # The upstream community has forked with the vast majority going to UZDoom, now
 # packaged as games-engines/uzdoom in Gentoo. https://zdoom.org now follows this
@@ -53,11 +105,6 @@ games-fps/gzdoom
 # action. Use at your own risk.
 >=app-text/calibre-8.11.0
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-12-21)
-# Fails to build against Qt 6.10, upstream repository was archived.
-# Bug #966389. Removal on 2026-01-15
-gui-libs/hyprland-qtutils
-
 # Michał Górny <mgorny@gentoo.org> (2025-12-20)
 # Packages that are missing Python 3.12+ support (or in case
 # of dev-lang/julia, all versions are unkeyworded).
@@ -68,7 +115,7 @@ dev-python/happybase
 games-engines/scrap-engine
 games-rpg/pokete
 net-misc/pulseaudio-dlna
-www-client/seamonkey
+<www-client/seamonkey-2.53.23
 
 # Sam James <sam@gentoo.org> (2025-12-18)
 # Another change to multiprocessing broke Portage. >=sys-apps/portage-3.0.73-r2
@@ -87,25 +134,10 @@ www-client/seamonkey
 ~dev-python/python-tests-3.14.2
 ~dev-python/python-tests-0.3.14.2
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-12-15)
-# Last release depends on Qt5, upstream appears dormant. Bug #959826
-# Removal on 2026-01-15
-net-misc/electrum-ltc
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-12-14)
-# Still depends on Qt5 with no upstream activity in years. Bug #960814
-# Removal on 2026-01-15
-media-sound/qmidiroute
-
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-12-14)
 # Still depends on Qt5 with no upstream porting activity. Bug #960220
 # Removal on 2026-01-15
 media-sound/mp3diags
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-12-14)
-# Last release depends on Qt5, upstream appears dormant. Bug #950474
-# Removal on 2026-01-15
-media-gfx/luminance-hdr
 
 # Michał Górny <mgorny@gentoo.org> (2025-12-12)
 # Upstream has switched to LLM-first coding which has already caused
@@ -129,49 +161,21 @@ dev-ruby/twitter
 media-libs/libsvgtiny-pixbuf
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-12-07)
-# Last release depends on Qt5, upstream appears dormant. Several
-# alternatives are available in ::gentoo. Bug #967107
-# Removal on 2026-01-15
-games-fps/doomsday
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-12-07)
-# Depends on PyQt5, stalled porting effort upstream.
-# Needs porting to Python 3.13, but 0.6.5 requires unpackaged dependency.
-# Bugs #948094, #952551. Removal on 2026-01-15
-media-sound/linux-show-player
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-12-07)
 # IUSE qt5 feature sees no porting effort upstream. 2.4.9-r1 remains
 # available with IUSE qt5 removed. Bug #965503
 # Removal on 2026-01-15
 =media-libs/libffado-2.4.9
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-12-05)
-# Depends on Qt5, stalled porting effort upstream. Bug #955277
-# Removal on 2026-01-15
-games-engines/qtads
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-12-05)
 # Depends on Qt5, no signs of porting work upstream. Bug #949881
 # Removal on 2026-01-15
 games-strategy/hedgewars
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-12-05)
-# Broken w/ CMake4, IUSE python stuck on py3.12, Gui stuck on Qt5.
-# Bugs #929093, #952086, #952528, #955277. Removal on 2026-01-04.
-media-gfx/yafaray
 
 # Nowa Ammerlaan <nowa@gentoo.org> (2025-12-05)
 # Stuck on Qt5, no upstream action.
 # Please use the games-action/prismlauncher fork instead.
 # Removal on 2026-01-05. Bug 967108.
 games-action/multimc-bin
-
-# Ulrich Müller <ulm@gentoo.org> (2025-12-04)
-# No longer functional because the Twitter API has been axed.
-# Last release in 2015, last commit to upstream repository in 2018.
-# Removal on 2026-01-03. Bug #965998.
-app-emacs/twittering-mode
 
 # Michał Górny <mgorny@gentoo.org> (2025-12-03)
 # Upstream changed how multiprocessing shares data between processes,
@@ -196,11 +200,6 @@ app-emacs/twittering-mode
 # Open bugs: #929259
 # Removal on 2026-01-02.
 net-proxy/sqtop
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-12-01)
-# Depends on PyQt5, no signs of upstream porting/activity.
-# Bugs #965505, 962256. Removal on 2025-12-31.
-media-video/vidcutter
 
 # David Seifert <soap@gentoo.org> (2025-12-01)
 # Last release over 20 years ago, ancient codebase, lots of QA warnings, no
@@ -230,32 +229,6 @@ sci-libs/djbfft
 # Removal on 2025-12-30.  Bugs #966396, #963998.
 dev-python/readthedocs-sphinx-ext
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-11-27)
-# Depends on Qt5, upstream needs help with porting. Bug #956453
-# Removal on 2025-12-27.
-media-gfx/panini
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-11-27)
-# Dead upstream, depends on Qt5, so it has no future in ::gentoo.
-# Qt6-based alternatives: KDE Plasma, LXQt, liquidshell.
-# Bug #961737. Removal on 2025-12-27.
-x11-wm/lumina
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-11-27)
-# Depends on Qt5, no upstream hopes of porting. Bug #955682
-# Removal on 2025-12-27.
-media-gfx/meshlab
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-11-27)
-# Depends on Qt5, no reply or activity upstream. Bug #961793
-# Removal on 2025-12-27.
-app-i18n/tagainijisho
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-11-27)
-# Unmaintained upstream, depends on Qt5. Bug #953263
-# Removal on 2025-12-27.
-x11-misc/fraqtive
-
 # Sam James <sam@gentoo.org> (2025-11-25)
 # Generates session keys with weak (no) randomness. Please re-encrypt
 # any data/messages using this librnp version. <0.18 is fine as is >=0.18.1.
@@ -267,13 +240,6 @@ x11-misc/fraqtive
 # No reverse dependencies left.
 # Removal on 2025-12-22.  Bug #966327.
 dev-python/fake-py
-
-# orbea <orbea@riseup.net> (2025-11-16)
-# Dead upstream, non-free licenses, depends on libsdl, no revdeps.
-# Use games-emulation/geolith-jg instead.
-# Bugs #744043, #896336, #926370.
-# Removal on 2025-12-16.
-games-emulation/gngeo
 
 # Petr Vaněk <arkamar@gentoo.org> (2025-11-13)
 # The MDEV-38068 issue has been discovered with MariaDB 11.8.4. The issue

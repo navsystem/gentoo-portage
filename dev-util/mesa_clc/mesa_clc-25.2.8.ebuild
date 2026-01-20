@@ -1,9 +1,9 @@
-# Copyright 2023-2025 Gentoo Authors
+# Copyright 2023-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
-LLVM_COMPAT=( {18..20} )
+LLVM_COMPAT=( {18..21} )
 PYTHON_COMPAT=( python3_{11..14} )
 
 inherit llvm-r1 meson python-any-r1
@@ -20,7 +20,7 @@ if [[ ${PV} == 9999 ]]; then
 else
 	S="${WORKDIR}/mesa-${MY_PV}"
 	SRC_URI="https://archive.mesa3d.org/mesa-${MY_PV}.tar.xz"
-	KEYWORDS="~amd64 ~arm ~arm64 ~x86"
+	KEYWORDS="amd64 ~arm ~arm64 ~x86"
 fi
 
 LICENSE="MIT"

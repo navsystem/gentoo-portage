@@ -1,10 +1,9 @@
-# Copyright 2020-2025 Gentoo Authors
+# Copyright 2020-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
 KERNEL_IUSE_GENERIC_UKI=1
-KERNEL_IUSE_MODULES_SIGN=1
 
 inherit kernel-build toolchain-funcs verify-sig
 
@@ -51,7 +50,7 @@ SRC_URI+="
 "
 S=${WORKDIR}/${BASE_P}
 
-KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~loong ~ppc ~ppc64 ~riscv ~sparc ~x86"
+KEYWORDS="amd64 ~arm arm64 ~hppa ~loong ~ppc ppc64 ~riscv ~sparc x86"
 IUSE="debug experimental hardened"
 REQUIRED_USE="
 	arm? ( savedconfig )

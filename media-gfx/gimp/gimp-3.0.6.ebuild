@@ -1,4 +1,4 @@
-# Copyright 1999-2025 Gentoo Authors
+# Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -15,7 +15,7 @@ SRC_URI="mirror://gimp/v$(ver_cut 1-2)/${P}.tar.xz"
 
 LICENSE="GPL-3+ LGPL-3+"
 SLOT="0/3"
-KEYWORDS="~amd64 ~arm ~arm64 ~loong ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~arm ~arm64 ~loong ~ppc ppc64 x86"
 
 IUSE="X aalib alsa doc fits gnome heif javascript jpeg2k jpegxl lua mng openexr openmp postscript test udev unwind vala vector-icons wayland webp wmf xpm"
 REQUIRED_USE="
@@ -110,7 +110,7 @@ DEPEND="
 BDEPEND="
 	>=dev-lang/perl-5.30.3
 	dev-libs/libxslt
-	dev-util/gdbus-codegen
+	>=dev-util/gdbus-codegen-2.80.5-r1
 	>=sys-devel/gettext-0.21
 	doc? (
 		>=dev-libs/gobject-introspection-1.82.0-r2[doctool]
@@ -123,6 +123,7 @@ DOCS=( "AUTHORS" "NEWS" "README" "README.i18n" )
 
 PATCHES=(
 	"${FILESDIR}"/gimp-3.0.6-fix-tests.patch
+	"${FILESDIR}"/gimp-3.0.6-respect-NM.patch
 )
 
 pkg_pretend() {

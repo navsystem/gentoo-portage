@@ -1,4 +1,4 @@
-# Copyright 2019-2025 Gentoo Authors
+# Copyright 2019-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 # @ECLASS: llvm.org.eclass
@@ -57,7 +57,7 @@ LLVM_VERSION=$(ver_cut 1-3)
 # @DESCRIPTION:
 # The major version of current LLVM trunk.  Used to determine
 # the correct branch to use.
-_LLVM_MAIN_MAJOR=22
+_LLVM_MAIN_MAJOR=23
 
 # @ECLASS_VARIABLE: _LLVM_SOURCE_TYPE
 # @INTERNAL
@@ -72,11 +72,14 @@ if [[ -z ${_LLVM_SOURCE_TYPE+1} ]]; then
 			_LLVM_SOURCE_TYPE=snapshot
 
 			case ${PV} in
-				22.0.0_pre20251223)
-					EGIT_COMMIT=a3c8b090c37fb10e8c3aa6cd2e5644033cc8a0e4
+				22.0.0_pre20260113)
+					EGIT_COMMIT=85c3c83ae54c9e81924f1ca048cfddc8d36bbb02
 					;;
-				22.0.0_pre20251127)
-					EGIT_COMMIT=8401a8d0be7671fb5089f850a34dc92ad4a2eb12
+				22.0.0_pre20260106)
+					EGIT_COMMIT=b01c3d6682d2fa5d6ac22d5a964b739009e9db7b
+					;;
+				22.0.0_pre20260103)
+					EGIT_COMMIT=05349a9b43805d3c0b424da99f3a1fa362cd3419
 					;;
 				*)
 					die "Unknown snapshot: ${PV}"
