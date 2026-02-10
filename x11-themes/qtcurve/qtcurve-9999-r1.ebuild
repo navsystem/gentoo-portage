@@ -42,7 +42,7 @@ DEPEND="
 		kde-frameworks/kio:6
 		kde-frameworks/kwidgetsaddons:6
 		kde-frameworks/kwindowsystem:6
-		kde-frameworks/kxmlgui:5
+		kde-frameworks/kxmlgui:6
 	)
 	qt5? (
 		dev-qt/qtcore:5
