@@ -83,7 +83,6 @@ net-fs/sshfs
 net-ftp/atftp
 net-misc/bridge-utils
 net-misc/dhcp
-net-misc/modem-manager-gui
 net-misc/ntp
 net-misc/putty
 net-misc/rdesktop
