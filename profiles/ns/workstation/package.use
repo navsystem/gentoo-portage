@@ -206,3 +206,7 @@ media-video/ffmpeg vpx
 dev-qt/qtwayland compositor
 dev-libs/libxml2 python
 
+net-misc/curl static-libs
+net-dns/libidn2 static-libs
+net-nds/openldap static-libs
+dev-libs/openssl static-libs
