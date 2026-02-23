@@ -36,6 +36,22 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2026-02-22)
+# Obsolete package blocking vdr-2.2 cleanup.
+# Removal on 2026-03-24.
+media-plugins/vdr-peer
+=media-video/vdr-2.2.0*
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2026-02-22)
+# Obsolete package. Use media-plugins/vdr-skinelchihd instead.
+# Bug #945071. Removal on 2026-03-24.
+media-plugins/vdr-skincurses
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2026-02-22)
+# Obsolete package. Use media-video/vdr[demoplugins] instead.
+# Removal on 2026-03-24.
+media-plugins/vdr-skinelchi
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2026-02-15)
 # Masked for testing and possible libvlc revdeps breakage.
 ~media-video/vlc-4.0.0_pre20260215
@@ -289,13 +305,6 @@ net-analyzer/arp-sk
 # See-Also: https://github.com/emersion/slurp/issues/187
 # Bug #969685
 =gui-apps/slurp-1.6.0
-
-# Michał Górny <mgorny@gentoo.org> (2026-01-24)
-# Needs porting to Python 3.13.  Requires old versions of multiple
-# dependencies, and reportedly is already broken with its current
-# dependencies.  The efforts to revive it do not progress.
-# Removal on 2026-02-23.  Bug #944883, #952290, #955765, #968383.
-dev-embedded/platformio
 
 # Maciej Barć <xgqt@gentoo.org> (2026-01-24)
 # Some app-emacs packages that are obsolete since Emacs 29 or much
