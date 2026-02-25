@@ -55,7 +55,7 @@ DEPEND="${COMMON_DEPEND}
 "
 BDEPEND="
 	dev-qt/qtbase:6=[X,gui]
-	dev-qt/linguist-tools:6
+	dev-qt/qttools:6[linguist]
 "
 RDEPEND="${COMMON_DEPEND}
 	media-plugins/calf
