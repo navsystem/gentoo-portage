@@ -51,11 +51,11 @@ COMMON_DEPEND="
 	vst? ( virtual/wine )
 "
 DEPEND="${COMMON_DEPEND}
-	dev-qt/qtx11extras:5
-	test? ( dev-qt/qttest:5 )
+	test? ( dev-qt/qtbase:6 )
 "
 BDEPEND="
-	dev-qt/linguist-tools:5
+	dev-qt/qtbase:6=[X,gui]
+	dev-qt/linguist-tools:6
 "
 RDEPEND="${COMMON_DEPEND}
 	media-plugins/calf

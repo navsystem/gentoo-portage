@@ -1,4 +1,4 @@
-pp-admin/testdisk ntfs reiserfs
+app-admin/testdisk ntfs reiserfs -gui
 media-gfx/splashutils fbcondecor
 net-fs/samba quota gnutls client addc -system-mitkrb5 python 
 sys-libs/ldb python

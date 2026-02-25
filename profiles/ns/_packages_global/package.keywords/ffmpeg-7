@@ -1,4 +1,5 @@
 =net-misc/freerdp-2.9999 amd64
 ~media-libs/gegl-0.4.50 amd64
 ~media-video/vlc-3.0.9999 amd64
+=media-video/vlc-4.0.0_pre20260215 amd64
 ~media-libs/babl-0.1.110 amd64
