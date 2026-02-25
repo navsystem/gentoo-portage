@@ -91,7 +91,7 @@ net-misc/spice-gtk gtk3
 
 kde-apps/kdelibs semantic-desktop
 games-fps/qudos qmax textures
-x11-themes/qtcurve gtk
+x11-themes/qtcurve gtk -qt5
 dev-libs/elfutils static-libs
 
 media-libs/mlt kdenlive
