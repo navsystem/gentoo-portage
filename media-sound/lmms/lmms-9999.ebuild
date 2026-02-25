@@ -8,7 +8,8 @@ inherit bash-completion-r1 cmake xdg
 DESCRIPTION="Cross-platform music production software"
 HOMEPAGE="https://lmms.io"
 if [[ ${PV} == "9999" ]]; then
-	EGIT_REPO_URI="https://github.com/LMMS/lmms.git"
+	EGIT_REPO_URI="https://github.com/eegorov/lmms.git"
+	EGIT_BRANCH="qt6"
 	inherit git-r3
 else
 	SRC_URI="https://github.com/LMMS/lmms/releases/download/v${PV/_/-}/${PN}_${PV/_/-}.tar.xz"
@@ -24,10 +25,7 @@ IUSE="alsa debug fluidsynth jack libgig mp3 ogg portaudio pulseaudio sdl soundio
 RESTRICT="!test? ( test )"
 
 COMMON_DEPEND="
-	dev-qt/qtcore:5
-	dev-qt/qtgui:5
-	dev-qt/qtwidgets:5
-	dev-qt/qtxml:5
+	dev-qt/qtbase:6[gui,widgets,xml]
 	>=media-libs/libsamplerate-0.1.8
 	>=media-libs/libsndfile-1.0.11
 	sci-libs/fftw:3.0
@@ -103,6 +101,7 @@ src_configure() {
 		-DWANT_VST=$(usex vst)
 		-DWANT_SF2=$(usex fluidsynth)
 		-DBASHCOMP_PKG_PATH=$(get_bashcompdir)
+		-DWANT_QT6=ON
 	)
 
 	cmake_src_configure
