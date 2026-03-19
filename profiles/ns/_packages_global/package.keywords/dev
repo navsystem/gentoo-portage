@@ -55,6 +55,7 @@ media-libs/opencv amd64
 =net-libs/tdlib-1.8.49_p20250510 amd64
 <net-im/telegram-desktop-9999 amd64
 <media-libs/tg_owt-9999 amd64
+<dev-cpp/cppgir-3 amd64
 ~dev-cpp/ada-2.9.1 amd64
 ~dev-cpp/cld3-3.0.13_p20220331 amd64
 ~dev-libs/qr-code-generator-1.8.0 amd64
