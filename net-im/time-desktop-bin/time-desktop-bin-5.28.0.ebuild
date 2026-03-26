@@ -66,11 +66,13 @@ DOCS=(
 	README.md
 )
 
+TIME_EXE=Time
+
 src_install() {
 	if use amd64; then
 		cd time-desktop-${PV}-linux-x64 || die
 	fi
-	newicon app_icon.png ${MY_PN}.png
+	newicon app_icon.png ${TIME_EXE}.png
 
 	insinto "/opt/${MY_PN}/locales"
 	doins locales/*.pak
@@ -81,13 +83,13 @@ src_install() {
 	insinto "/opt/${MY_PN}"
 	doins *.pak *.bin *.dat
 	exeinto "/opt/${MY_PN}"
-	doexe *.so *.so.* "${MY_PN}"
+	doexe *.so *.so.* "${TIME_EXE}"
 
-	dosym -r "/opt/${MY_PN}/${MY_PN}" "/usr/bin/${MY_PN}"
+	dosym -r "/opt/${MY_PN}/${TIME_EXE}" "/usr/bin/${TIME_EXE}"
 
 	make_desktop_entry \
-		"${MY_PN} --enable-features=WaylandWindowDecorations --ozone-platform-hint=auto %U" \
-		Time "${MY_PN}" "Network;InstantMessaging;" \
+		"${TIME_EXE} --enable-features=WaylandWindowDecorations --ozone-platform-hint=auto %U" \
+		Time "${TIME_EXE}" "Network;InstantMessaging;" \
 		"MimeType=x-scheme-handler/Time;\nStartupWMClass=Time"
 
 	einstalldocs
