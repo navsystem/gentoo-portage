@@ -90,7 +90,7 @@ src_install() {
 	make_desktop_entry \
 		"${TIME_EXE} --enable-features=WaylandWindowDecorations --ozone-platform-hint=auto %U" \
 		Time "${TIME_EXE}" "Network;InstantMessaging;" \
-		"MimeType=x-scheme-handler/Time;\nStartupWMClass=Time"
+		"MimeType=x-scheme-handler/Time;x-scheme-handler/timeapp;\nStartupWMClass=Time"
 
 	einstalldocs
 }
