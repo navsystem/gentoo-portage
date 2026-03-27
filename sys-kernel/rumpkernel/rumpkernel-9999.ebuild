@@ -3,15 +3,15 @@
 
 EAPI=8
 
-# TODO: check for any automagic dependencies, possible USE flags
-# TODO: make building natively work
-
 inherit flag-o-matic multiprocessing toolchain-funcs
 
 DESCRIPTION="NetBSD's rumpkernel for the Hurd"
 HOMEPAGE="https://salsa.debian.org/hurd-team/rumpkernel https://darnassus.sceen.net/~hurd-web/hurd/rump/ https://rumpkernel.github.io/"
 
 if [[ ${PV} == *9999* ]] ; then
+	# Actual upstream is NetBSD's monorepo, but Debian is the de facto
+	# upstream and there's a lot of Hurd-related patches. But it may
+	# still be useful on occasion to cherry-pick something from NetBSD.
 	EGIT_REPO_URI="https://salsa.debian.org/hurd-team/rumpkernel.git"
 	inherit git-r3
 elif [[ ${PV} == *_pre*_p* ]] ; then
@@ -181,19 +181,19 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/include /usr/lib
+	dodir /usr/include /usr/$(get_libdir)
 
 	# Install logic copied from Debian
 	cp -a "${S}"/buildrump.sh/src/sys/rump/include/rump "${ED}"/usr/include/ || die
 	# Kept "${S}"/buildrump.sh/src/obj separate here as may change to
 	# another builddir.
 	find "${S}"/buildrump.sh/src "${S}"/buildrump.sh/src/obj -type f,l \
-		-name "librump*.so*" -exec cp -a {} "${ED}"/usr/lib/ \; || die
+		-name "librump*.so*" -exec cp -a {} "${ED}"/usr/$(get_libdir)/ \; || die
 	find "${S}"/buildrump.sh/src "${S}"/buildrump.sh/src/obj -type f \
-		-name "librump*.a" -exec cp -a {} "${ED}"/usr/lib/ \; || die
+		-name "librump*.a" -exec cp -a {} "${ED}"/usr/$(get_libdir)/ \; || die
 
 	# rempve non lib files
-	rm -f "${ED}"/usr/lib/*.map || die
+	rm -f "${ED}"/usr/$(get_libdir)/*.map || die
 	#
-	rm -f "${ED}"/usr/lib/librumpkern_z.* || die
+	rm -f "${ED}"/usr/$(get_libdir)/librumpkern_z.* || die
 }
