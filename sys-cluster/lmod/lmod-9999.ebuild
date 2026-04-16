@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -45,7 +45,10 @@ BDEPEND="${RDEPEND}
 	virtual/pkgconfig
 "
 
-PATCHES=( "${FILESDIR}"/${PN}-8.4.19-no-libsandbox.patch )
+PATCHES=(
+	"${FILESDIR}"/${PN}-8.4.19-no-libsandbox.patch
+	"${FILESDIR}"/${PN}-8.7.55-make.patch
+)
 
 pkg_pretend() {
 	elog "You can control the siteName and syshost settings by"
@@ -63,6 +66,18 @@ src_prepare() {
 	rm -r rt/{ck_mtree_syntax,colorize,end2end,help,ifur,settarg} || die
 	hprefixify -w '/#\!\/bin\/tcsh/' rt/csh_swap/csh_swap.tdesc || die
 	eautoreconf
+	sed -i \
+		-e "1s|#!/usr/bin/env lua|#!${LUA}|" \
+		proj_mgmt/joinBase64Results \
+		|| die
+	sed -i \
+		-e "s|@path_to_lua@|${LUA}|" \
+		src/lmod.in.lua \
+		|| die
+	sed -i \
+		-e "s|    lua|    ${LUA}|" \
+		rt/csh_swap/csh_swap.tdesc \
+		|| die
 }
 
 src_configure() {
