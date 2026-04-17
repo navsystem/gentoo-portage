@@ -1,2 +1,2 @@
 #>=sys-libs/glibc-2.39
-
+>=dev-libs/libfmt-12
