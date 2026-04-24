@@ -195,7 +195,7 @@ lxqt-base/lxqt-session amd64
 =dev-util/lxqt-build-tools-2.0.0-r1 amd64
 =x11-libs/qtermwidget-2.0.1 amd64
 =media-gfx/lximage-qt-2.0.1 amd64
-~app-arch/lxqt-archiver-1.0.0 amd64
-~x11-themes/lxqt-themes-2.0.0 amd64
+~app-arch/lxqt-archiver-1.4.0 amd64
+~x11-themes/lxqt-themes-2.4.0 amd64
 
 media-sound/pavucontrol-qt amd64
