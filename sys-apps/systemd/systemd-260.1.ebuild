@@ -20,7 +20,7 @@ else
 	SRC_URI="https://github.com/systemd/${PN}/archive/refs/tags/v${MY_PV}.tar.gz -> ${MY_P}.tar.gz"
 
 	if [[ ${PV} != *rc* ]] ; then
-		KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~loong ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86"
+		KEYWORDS="~alpha amd64 arm arm64 ~hppa ~loong ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc x86"
 	fi
 fi
 
@@ -257,6 +257,7 @@ src_unpack() {
 src_prepare() {
 	local PATCHES=(
 		"${FILESDIR}/systemd-260.1-fuzz-journald.patch"
+		"${FILESDIR}/systemd-260.1-openssl-4.patch"
 	)
 
 	if ! use vanilla; then
@@ -548,8 +549,7 @@ pkg_postinst() {
 
 	# Keep this here in case the database format changes so it gets updated
 	# when required.
-	systemd-hwdb --root="${ROOT}" update
-
+	udev_hwdb_update || FAIL=1
 	udev_reload || FAIL=1
 
 	# Bug 465468, make sure locales are respected, and ensure consistency
