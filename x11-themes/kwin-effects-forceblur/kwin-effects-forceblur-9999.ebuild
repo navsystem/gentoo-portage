@@ -6,7 +6,8 @@ EAPI=8
 inherit cmake git-r3
 
 DESCRIPTION="Better Blur"
-EGIT_REPO_URI="https://github.com/taj-ny/kwin-effects-forceblur.git"
+#EGIT_REPO_URI="https://github.com/taj-ny/kwin-effects-forceblur.git"
+EGIT_REPO_URI="https://github.com/xarblu/kwin-effects-better-blur-dx.git"
 
 KEYWORDS="amd64"
 
