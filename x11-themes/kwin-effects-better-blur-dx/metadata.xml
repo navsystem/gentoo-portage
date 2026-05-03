@@ -6,6 +6,6 @@
 		<name>Egor Y. Egorov</name>
 	</maintainer>
 	<upstream>
-		<remote-id type="github">taj-ny/kwin-effects-forceblur</remote-id>
+		<remote-id type="github">xarblu/kwin-effects-better-blur-dx</remote-id>
 	</upstream>
 </pkgmetadata>
