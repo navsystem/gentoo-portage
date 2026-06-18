@@ -1,4 +1,4 @@
-# Copyright 2021-2024 Gentoo Authors
+# Copyright 2021-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -18,7 +18,7 @@ LICENSE="
 "
 SLOT="0"
 KEYWORDS="amd64 ~riscv x86"
-IUSE="aac alsa cdda converter cover dts ffmpeg flac +hotkeys lastfm libretro libsamplerate mp3 musepack nls notify +nullout opus oss pulseaudio pipewire sc68 shellexec +supereq vorbis wavpack zip"
+IUSE="aac alsa cdda converter dts ffmpeg flac +hotkeys lastfm libretro libsamplerate mp3 musepack nls notify +nullout opus oss pulseaudio pipewire sc68 shellexec +supereq vorbis wavpack zip"
 
 REQUIRED_USE="
 	|| ( alsa oss pulseaudio pipewire nullout )
@@ -29,6 +29,7 @@ DEPEND="
 	dev-libs/glib:2
 	dev-libs/jansson:=
 	dev-libs/libdispatch
+	media-libs/harfbuzz:=
 	net-misc/curl
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf:2
@@ -42,7 +43,6 @@ DEPEND="
 		media-libs/libcddb
 		media-sound/cdparanoia
 	)
-	cover? ( media-libs/imlib2[jpeg,png] )
 	dts? ( media-libs/libdca )
 	ffmpeg? ( media-video/ffmpeg:= )
 	flac? (
@@ -62,7 +62,11 @@ DEPEND="
 	zip? ( dev-libs/libzip:= )
 "
 
-RDEPEND="${DEPEND}"
+RDEPEND="
+	!media-sound/deadbeef-mpris2-plugin
+	${DEPEND}
+"
+
 BDEPEND="
 	dev-util/intltool
 	llvm-core/clang
@@ -72,7 +76,8 @@ BDEPEND="
 "
 
 PATCHES=(
-	"${FILESDIR}"/${PN}-1.9.6-update-gettext.patch
+	"${FILESDIR}"/${PN}-1.10.1-drop-Werror.patch
+	"${FILESDIR}"/${PN}-1.10.1-update-gettext.patch
 )
 
 src_prepare() {
@@ -94,7 +99,6 @@ src_prepare() {
 	}
 
 	plocale_for_each_disabled_locale drop_from_linguas || die
-
 	mkdir ${S}/intl
 	cat <<- EOF > ${S}/intl/Makefile.in
 all: nothing
@@ -134,14 +138,14 @@ src_configure () {
 		"--disable-portable"
 		"--disable-rpath"
 
-		"--disable-libmad"
-		"--disable-gtk2"
 		"--disable-adplug"
+		"--disable-alac"
 		"--disable-coreaudio"
 		"--disable-dumb"
-		"--disable-alac"
 		"--disable-ffap"
 		"--disable-gme"
+		"--disable-gtk2"
+		"--disable-libmad"
 		"--disable-mms"
 		"--disable-mono2stereo"
 		"--disable-psf"
@@ -166,8 +170,6 @@ src_configure () {
 		"$(use_enable cdda)"
 		"$(use_enable cdda cdda-paranoia)"
 		"$(use_enable aac)"
-		"$(use_enable cover artwork)"
-		"$(use_enable cover artwork-network)"
 		"$(use_enable dts dca)"
 		"$(use_enable ffmpeg)"
 		"$(use_enable converter)"
@@ -187,11 +189,14 @@ src_configure () {
 		"$(use_enable zip vfs-zip)"
 
 		"--enable-gtk3"
-		"--enable-vfs-curl"
-		"--enable-shared"
 		"--enable-m3u"
+		"--enable-medialib"
 		"--enable-pltbrowser"
 		"--enable-rgscanner"
+		"--enable-shared"
+		"--enable-vfs-curl"
+		"--enable-artwork"
+		"--enable-artwork-network"
 	)
 
 	econf "${myconf[@]}"
