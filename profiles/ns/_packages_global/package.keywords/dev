@@ -24,7 +24,7 @@
 =net-im/psimedia-9999 amd64 x86
 =net-misc/teamviewer-12.0.85001 amd64 x86
 =app-editors/sublime-text-3103 amd64 x86
-=dev-qt/qt-creator-4.12.3-r1 amd64
+~dev-qt/qt-creator-20.0.0 amd64
 =dev-libs/libclangformat-ide-10.0.0 amd64
 ~sci-libs/gdal-3.11.4 amd64 x86
 =dev-db/spatialite-4.3.0a amd64 x86
@@ -54,6 +54,8 @@ media-libs/opencv amd64
 
 =net-libs/tdlib-1.8.49_p20250510 amd64
 <net-im/telegram-desktop-9999 amd64
+<dev-cpp/toomanycooks-9999 amd64
+<app-text/cmark-gfm-9999 amd64
 <media-libs/tg_owt-9999 amd64
 <dev-cpp/cppgir-3 amd64
 ~dev-cpp/ada-2.9.1 amd64
