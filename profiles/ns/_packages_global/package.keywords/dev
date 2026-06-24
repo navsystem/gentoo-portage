@@ -25,6 +25,7 @@
 =net-misc/teamviewer-12.0.85001 amd64 x86
 =app-editors/sublime-text-3103 amd64 x86
 ~dev-qt/qt-creator-20.0.0 amd64
+~dev-qt/qttasktree-6.11.1 amd64
 =dev-libs/libclangformat-ide-10.0.0 amd64
 ~sci-libs/gdal-3.11.4 amd64 x86
 =dev-db/spatialite-4.3.0a amd64 x86

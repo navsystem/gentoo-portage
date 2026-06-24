@@ -1,4 +1,5 @@
 -postgres_targets_postgres16
 -vst
 -kf6compat
+-llvm_slot_22
 
