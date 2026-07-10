@@ -1,16 +1,13 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
-inherit linux-mod git-r3
+inherit linux-mod-r1 git-r3
 
 DESCRIPTION="Kernel module for PAX Pos terminals"
 HOMEPAGE="https://github.com/eegorov/pax-tty/"
 EGIT_REPO_URI="https://github.com/eegorov/pax-tty.git"
-
-MODULE_NAMES="ttyPos(extra:${S}:${S}"
-BUILD_TARGETS=modules
 
 S=${WORKDIR}/${P}
 
@@ -21,5 +18,6 @@ IUSE=""
 
 
 src_compile() {
-	linux-mod_src_compile
+	local modlist=( ttyPos=extra )
+	linux-mod-r1_src_compile
 }
