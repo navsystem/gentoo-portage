@@ -14,7 +14,7 @@ app-editors/vim
 dev-debug/valgrind
 net-dialup/minicom
 kde-apps/okular
-app-arch/p7zip
+app-arch/7zip
 kde-apps/kcalc
 kde-plasma/spectacle
 net-libs/gsoap
