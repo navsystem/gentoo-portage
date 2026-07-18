@@ -36,6 +36,13 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2026-07-18)
+# Segfaults at least in dev-python/lxml.  Needs investigating.
+=dev-lang/python-3.15.0_beta4
+=dev-lang/python-0.3.15.0_beta4
+=dev-python/python-tests-3.15.0_beta4
+=dev-python/python-tests-0.3.15.0_beta4
+
 # Sam James <sam@gentoo.ogr> (2026-07-16)
 # Broken (bug #978438).
 =app-portage/mirrorselect-2.6.5
@@ -557,12 +564,6 @@ media-plugins/kodi-game-libretro-dosbox
 # <glibc-2.26.
 ~net-libs/libnsl-0
 ~net-libs/rpcsvc-proto-0
-
-# Nicolas Bock <nicolasbock@gentoo.org> (2017-10-31)
-# There are multiple unresolved upstream issues with >=jabref-bin-4.0 (#636036).
-# If you still would like to use this version, please report any issues to
-# upstream.
->=app-text/jabref-bin-4.0
 
 # Andreas K. Hüttel <dilfridge@gentoo.org> (2017-05-21)
 # (and others, updated later)
