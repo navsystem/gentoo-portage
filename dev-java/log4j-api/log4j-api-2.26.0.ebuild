@@ -19,7 +19,7 @@ SRC_URI="mirror://apache/logging/log4j/${PV}/apache-log4j-${PV}-src.zip
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~arm64 ~ppc64"
+KEYWORDS="amd64 ~arm64 ~ppc64"
 
 BDEPEND="
 	app-arch/unzip
@@ -114,16 +114,22 @@ src_test() {
 	JAVA_SRC_DIR="log4j-api-test/src/main/java"
 	java-pkg-simple_src_compile
 
-	# These 2 tests would fail if not run separately or at the beginning.
+	# These 3 tests would fail if not run separately or at the beginning.
 	JAVA_TEST_EXCLUDES=(
 		org.apache.logging.log4j.message.ParameterizedMessageRecursiveFormattingWithoutThreadLocalsTest
 		org.apache.logging.log4j.NoopThreadContextTest
+		org.apache.logging.log4j.ThreadContextTest # bug #979651
 	)
 	junit5_src_test
 
 	JAVA_TEST_RUN_ONLY=(
 		org.apache.logging.log4j.message.ParameterizedMessageRecursiveFormattingWithoutThreadLocalsTest
 		org.apache.logging.log4j.NoopThreadContextTest
+	)
+	junit5_src_test
+
+	JAVA_TEST_RUN_ONLY=(
+		org.apache.logging.log4j.ThreadContextTest
 	)
 	junit5_src_test
 
