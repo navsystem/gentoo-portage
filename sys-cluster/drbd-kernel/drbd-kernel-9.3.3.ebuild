@@ -11,7 +11,7 @@ KEYWORDS="amd64"
 HOMEPAGE="http://www.drbd.org"
 DESCRIPTION="mirror/replicate block-devices across a network-connection"
 #SRC_URI="https://pkg.linbit.com/downloads/drbd/9/drbd-9.3.3.tar.gz"
-SRC_URI="drdb-9.3.3-compat.zip"
+SRC_URI="drbd-9.3.3-compat-2.zip"
 
 IUSE=""
 

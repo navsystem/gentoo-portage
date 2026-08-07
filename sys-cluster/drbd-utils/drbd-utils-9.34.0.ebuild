@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit autotools bash-completion-r1 flag-o-matic linux-info tmpfiles udev
+inherit autotools bash-completion-r1 flag-o-matic linux-info tmpfiles udev systemd
 
 DESCRIPTION="mirror/replicate block-devices across a network-connection"
 HOMEPAGE="https://www.linbit.com/drbd"
@@ -88,6 +88,7 @@ src_configure() {
 		# merged-usr interop
 		PKG_CONFIG=/bin/false
 		--with-systemdunitdir="${EPREFIX}"/usr/lib/systemd/system
+		--with-systemdpresetdir="$(systemd_get_systempresetdir)"
 		--with-bashcompletion
 		--with-distro=gentoo
 		--with-prebuiltman
