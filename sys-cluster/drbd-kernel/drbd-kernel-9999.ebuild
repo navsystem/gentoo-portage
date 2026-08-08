@@ -19,24 +19,24 @@ DEPEND="
 
 SLOT="0"
 
-RESTRICT="network-sandbox"
-
 CONFIG_CHECK="!BLK_DEV_DRBD"
 ERROR_BLK_DEV_DRBD="You need to disable CONFIG_BLK_DEV_DRBD in your kernel"
 
+S=${WORKDIR}/${P}/drbd
+
 src_prepare() {
-	cd ${S}
-	emake drbd/.drbd_git_revision
+	sed -i Kbuild.drbd-module-sources -e "s:ifdef __drbd-module-sources:ifeq (0,1):" || die
+	sed -i Makefile.cocci-sources -e "s:ifdef __git_ls_sources:ifeq (0,1):" || die
 	default
-	rm -fr ${S}/.git
 }
 
 src_compile() {
-	emake -C ${S}/drbd V=1 ARCH=x86_64 KDIR=${KV_OUT_DIR} || die
+	emake V=1 ARCH=x86_64 KDIR=${KV_OUT_DIR} SPAAS="false" || die
 }
 
 src_install() {
-	emake -C ${S}/drbd \
+	emake \
+		V=1 \
 		"${MODULES_MAKEARGS[@]}" \
 		ARCH=x86_64 \
 		DESTDIR="${ED}" \
