@@ -6,11 +6,18 @@ EAPI="8"
 inherit linux-mod-r1
 
 LICENSE="GPL-2"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 
 HOMEPAGE="http://www.drbd.org"
 DESCRIPTION="mirror/replicate block-devices across a network-connection"
-SRC_URI="https://pkg.linbit.com/downloads/drbd/9/${P}.tar.gz"
+
+if [[ ${PV} = *9999* ]]; then
+	EGIT_REPO_URI="https://github.com/LINBIT/drbd"
+	inherit git-r3
+else
+	KEYWORDS="amd64 x86"
+	SRC_URI="https://pkg.linbit.com/downloads/drbd/9/${P}.tar.gz"
+fi
 
 IUSE=""
 
@@ -18,13 +25,20 @@ DEPEND="
 	virtual/linux-sources
 	dev-util/coccinelle
         "
-
 SLOT="0"
 
 CONFIG_CHECK="!BLK_DEV_DRBD"
 ERROR_BLK_DEV_DRBD="You need to disable CONFIG_BLK_DEV_DRBD in your kernel"
 
 S=${WORKDIR}/${P}/${PN}
+
+src_prepare() {
+	if [[ ${PV} = *9999* ]]; then
+		sed -i Kbuild.drbd-module-sources -e "s:ifdef __drbd-module-sources:ifeq (0,1):" || die
+		sed -i Makefile.cocci-sources -e "s:ifdef __git_ls_sources:ifeq (0,1):" || die
+	fi
+	default
+}
 
 src_compile() {
 	emake "${MODULES_MAKEARGS[@]}" KDIR=${KV_OUT_DIR} SPAAS="false" || die
