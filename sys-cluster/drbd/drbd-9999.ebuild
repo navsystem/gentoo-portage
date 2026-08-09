@@ -31,12 +31,11 @@ src_prepare() {
 }
 
 src_compile() {
-	emake V=1 "${MODULES_MAKEARGS[@]}" KDIR=${KV_OUT_DIR} SPAAS="false" || die
+	emake "${MODULES_MAKEARGS[@]}" KDIR=${KV_OUT_DIR} SPAAS="false" || die
 }
 
 src_install() {
 	emake \
-		V=1 \
 		"${MODULES_MAKEARGS[@]}" \
 		DESTDIR="${ED}" \
 		INSTALL_MOD_PATH="${ED}" \

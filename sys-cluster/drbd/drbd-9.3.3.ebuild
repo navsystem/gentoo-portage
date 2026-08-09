@@ -27,12 +27,11 @@ ERROR_BLK_DEV_DRBD="You need to disable CONFIG_BLK_DEV_DRBD in your kernel"
 S=${WORKDIR}/${P}/${PN}
 
 src_compile() {
-	emake V=1 "${MODULES_MAKEARGS[@]}" KDIR=${KV_OUT_DIR} SPAAS="false" || die
+	emake "${MODULES_MAKEARGS[@]}" KDIR=${KV_OUT_DIR} SPAAS="false" || die
 }
 
 src_install() {
 	emake \
-		V=1 \
 		"${MODULES_MAKEARGS[@]}" \
 		DESTDIR="${ED}" \
 		INSTALL_MOD_PATH="${ED}" \
