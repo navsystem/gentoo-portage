@@ -20,6 +20,7 @@ CRATES="
 "
 
 declare -A GIT_CRATES=(
+	[appcontainer_common]='https://github.com/microsoft/mxc;6cd3d58f05d3447e67109cfb75e042803b843ca4;mxc-%commit%/src/backends/appcontainer/common'
 	[crossterm]='https://github.com/openai-oss-forks/crossterm;45fecb9508105988f42fe6ff0441783ed3717f92;crossterm-%commit%'
 	[nucleo-matcher]='https://github.com/helix-editor/nucleo;4253de9faabb4e5c6d81d946a5e35a90f87347ee;nucleo-%commit%/matcher'
 	[nucleo]='https://github.com/helix-editor/nucleo;4253de9faabb4e5c6d81d946a5e35a90f87347ee;nucleo-%commit%'
@@ -71,7 +72,7 @@ LICENSE+="
 	CC0-1.0 CDLA-Permissive-2.0 ISC MIT MPL-2.0 Unicode-3.0 ZLIB
 "
 SLOT="0"
-KEYWORDS="-* ~amd64 ~arm64"
+KEYWORDS="-* amd64 ~arm64"
 # Tests fail due to ring crate conflicts with system OpenSSL
 RESTRICT="test"
 
@@ -109,7 +110,7 @@ src_prepare() {
 	default
 
 	# Fix tokio-tungstenite's git dependency on tungstenite
-	sed -i '/^\[dependencies\.tungstenite\]/,/^$/{
+	sed -i '/^\[dependencies\.tungstenite\]/,/^$/ {
 		s|git = "https://github.com/openai-oss-forks/tungstenite-rs"|path = "'"$(gen_git_crate_dir tungstenite)"'"|
 		/^rev = /d
 	}' "$(gen_git_crate_dir tokio-tungstenite)/Cargo.toml" || die
