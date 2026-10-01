@@ -5,3 +5,4 @@
 =dev-ml/ocaml-sqlite3-5.0.2 amd64
 =dev-ml/hmap-0.8.1 amd64
 =dev-ml/iostream-0.3 amd64
+=dev-ml/cryptokit-1.20.1 amd64
