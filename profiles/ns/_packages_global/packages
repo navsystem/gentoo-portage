@@ -19,6 +19,6 @@
 *app-admin/logrotate
 *net-fs/samba
 *sys-process/iotop
-*net-misc/ntp
+*net-misc/ntpsec
 *sys-apps/pciutils
 *sys-boot/grub
