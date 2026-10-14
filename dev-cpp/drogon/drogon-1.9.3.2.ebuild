@@ -4,7 +4,7 @@ inherit cmake
 
 DESCRIPTION="C++14/17 based HTTP web application framework"
 HOMEPAGE="https://github.com/drogonframework/drogon"
-SRC_URI="https://github.com/drogonframework/drogon/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://gitlab.local/ozeron/${PN}/-/archive/v${PV}/${PN}-v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
@@ -22,7 +22,7 @@ RDEPEND="
 	dev-cpp/yaml-cpp"
 DEPEND="${RDEPEND}"
 
-S=${WORKDIR}/drogon-ozeron-4cbac30
+S=${WORKDIR}/drogon-v${PV}
 
 src_configure() {
 	local -a mycmakeargs=(
