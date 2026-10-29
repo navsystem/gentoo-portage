@@ -61,6 +61,7 @@ openconnect
 kf6compat
 nginx
 junit
+unicode
 
 nginx_modules_http_sub
 "
