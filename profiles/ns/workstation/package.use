@@ -215,4 +215,4 @@ dev-libs/openssl static-libs
 
 net-libs/ngtcp2 gnutls
 lxqt-base/lxqt-meta processviewer
-
+dev-libs/uriparser doc

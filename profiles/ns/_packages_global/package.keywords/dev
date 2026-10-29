@@ -55,6 +55,8 @@ media-libs/opencv amd64
 
 =net-libs/tdlib-1.8.49_p20250510 amd64
 <net-im/telegram-desktop-9999 amd64
+<gui-libs/tlottie-9999 amd64
+<net-libs/wallet-engine-telegram-9999 amd64
 <dev-cpp/toomanycooks-9999 amd64
 <app-text/cmark-gfm-9999 amd64
 <media-libs/tg_owt-9999 amd64
