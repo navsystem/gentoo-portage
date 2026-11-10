@@ -52,6 +52,8 @@ features2d
 
 abi_x86_32
 
+qemu_softmmu_targets_arm qemu_user_targets_arm
+
 -postgres_targets_postgres12 -postgres_targets_postgres13 -postgres_targets_postgres14 -postgres_targets_postgres15 postgres_targets_postgres16
 
 harfbuzz libass pipewire geoclue
