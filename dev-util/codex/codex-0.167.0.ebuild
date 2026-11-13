@@ -39,7 +39,7 @@ RUST_MIN_VER="1.95.0"
 # python3 .github/scripts/rusty_v8_bazel.py resolved-v8-crate-version
 RUSTY_V8_TAG="152.2.0"
 
-inherit cargo check-reqs toolchain-funcs
+inherit cargo check-reqs systemd toolchain-funcs
 
 CHECKREQS_MEMORY="15G"
 CHECKREQS_DISK_BUILD="20G"
@@ -187,6 +187,8 @@ src_install() {
 
 	dosym ../lib/"${PN}"/bin/codex /usr/bin/"${PN}"
 	dosym ../lib/"${PN}"/bin/codex-code-mode-host /usr/bin/codex-code-mode-host
+
+	systemd_douserunit "${FILESDIR}/codex-app-server.service"
 
 	einstalldocs
 }

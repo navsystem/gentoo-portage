@@ -1,0 +1,13 @@
+[Unit]
+Description=Codex app-server
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/codex app-server --listen unix:// --analytics-default-enabled
+Environment=CODEX_HOME=%h/.codex
+Restart=on-failure
+RestartSec=2s
+TimeoutStopSec=90s
+
+[Install]
+WantedBy=default.target
