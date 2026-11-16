@@ -1,0 +1,12 @@
+[Unit]
+Description=Codex app-server socket
+
+[Socket]
+ListenStream=%h/.codex/app-server-control/app-server-control.sock
+SocketMode=0600
+DirectoryMode=0700
+RemoveOnStop=yes
+Service=codex-app-server.service
+
+[Install]
+WantedBy=sockets.target

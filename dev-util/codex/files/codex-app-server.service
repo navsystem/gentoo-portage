@@ -8,6 +8,3 @@ Environment=CODEX_HOME=%h/.codex
 Restart=on-failure
 RestartSec=2s
 TimeoutStopSec=90s
-
-[Install]
-WantedBy=default.target
