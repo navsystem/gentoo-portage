@@ -73,6 +73,15 @@
  pub async fn start_control_socket_acceptor(
      socket_path: AbsolutePathBuf,
      transport_event_tx: mpsc::Sender<TransportEvent>,
+@@ -52,7 +89,7 @@
+ ) -> IoResult<JoinHandle<()>> {
+     let (listener, socket_guard) = bind_private_daemon_socket(socket_path.as_path()).await?;
+     info!(
+-        socket_path = %socket_guard.socket_path.display(),
++        socket_path = %socket_path.display(),
+         "app-server control socket listening"
+     );
+ 
 @@ -71,6 +108,10 @@
  pub async fn bind_private_daemon_socket(
      socket_path: &Path,
@@ -119,7 +128,11 @@
      Ok((listener, socket_guard))
  }
  
-@@ -328,16 +369,37 @@
+@@ -325,19 +366,41 @@
+ pub fn verified_local_daemon_socket(socket_path: &Path) -> IoResult<Option<AbsolutePathBuf>> {
+     #[cfg(unix)]
+     {
++        use std::os::unix::fs::FileTypeExt;
          use std::os::unix::fs::MetadataExt;
  
          let protected = protected_socket_path(socket_path)?;
@@ -164,28 +177,23 @@
          }
          Ok(None)
      }
-@@ -510,32 +572,44 @@
+@@ -510,32 +573,44 @@
  }
  
  /// Owns the socket files and startup lock until the listener is shut down.
 -pub struct DaemonSocketFileGuard {
 -    socket_path: AbsolutePathBuf,
--    #[cfg(unix)]
--    rendezvous_path: AbsolutePathBuf,
--    #[cfg(unix)]
--    _startup_lock: AppServerStartupLock,
--    // Keep the directory pinned until after the socket file is removed in Drop.
--    #[cfg(windows)]
--    _directory_guard: std::os::windows::io::OwnedHandle,
 +pub enum DaemonSocketFileGuard {
 +    Managed {
 +        socket_path: AbsolutePathBuf,
-+        #[cfg(unix)]
-+        rendezvous_path: AbsolutePathBuf,
-+        #[cfg(unix)]
+     #[cfg(unix)]
+     rendezvous_path: AbsolutePathBuf,
+     #[cfg(unix)]
+-    _startup_lock: AppServerStartupLock,
 +        startup_lock: AppServerStartupLock,
-+        // Keep the directory pinned until after the socket file is removed in Drop.
-+        #[cfg(windows)]
+     // Keep the directory pinned until after the socket file is removed in Drop.
+     #[cfg(windows)]
+-    _directory_guard: std::os::windows::io::OwnedHandle,
 +        directory_guard: std::os::windows::io::OwnedHandle,
 +    },
 +    SystemdActivated,
