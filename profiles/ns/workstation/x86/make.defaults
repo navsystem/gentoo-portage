@@ -1,4 +1,4 @@
 PORTAGE_BINHOST="ftp://binhost:binhost@trac/i686-workstation"
 PKGDIR="/var/tmp/packages"
-EMERGE_DEFAULT_OPTS="-j2 -g"
+EMERGE_DEFAULT_OPTS="-j2 -g --binpkg-respect-user-patches=n"
 
