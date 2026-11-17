@@ -3,7 +3,7 @@ Description=Codex app-server
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/codex app-server --listen unix:// --analytics-default-enabled
+ExecStart=/bin/bash -c 'if [ -r "%h/.codex/bashrc" ]; then . "%h/.codex/bashrc"; fi; exec /usr/bin/codex app-server --listen unix:// --analytics-default-enabled'
 Environment=CODEX_HOME=%h/.codex
 Restart=on-failure
 RestartSec=2s

@@ -201,6 +201,10 @@ src_install() {
 }
 
 pkg_postinst() {
+	einfo "Put Codex environment variables in ~/.codex/bashrc, for example:"
+	einfo "    export OPENAI_API_KEY=..."
+	einfo "Source the same file from ~/.bashrc with:"
+	einfo "    [ -r \"\$HOME/.codex/bashrc\" ] && . \"\$HOME/.codex/bashrc\""
 	einfo "Enable the Codex app-server socket with:"
 	einfo "    systemctl --user enable codex-app-server.socket"
 }
